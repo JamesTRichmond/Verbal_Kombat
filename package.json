@@ -1,0 +1,13 @@
+{
+  "name": "verbal-kombat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mortal Kombat-style debate decider: facts land as hits, fallacies get blocked",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0"
+  }
+}

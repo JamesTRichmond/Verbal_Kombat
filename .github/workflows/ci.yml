@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # TODO: enable the real verify steps once the standalone stack is wired up
-      - name: Verify (placeholder)
-        run: echo "verify placeholder — no build step yet"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install
+        run: npm ci
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      - name: E2E (full match to transcript + XSS regression)
+        run: npx playwright test
