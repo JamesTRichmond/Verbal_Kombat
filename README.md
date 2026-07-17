@@ -1,5 +1,8 @@
 # VERBAL KOMBAT 🥊
 
+[![CI](https://github.com/JamesTRichmond/VerbalKombat/actions/workflows/ci.yml/badge.svg)](https://github.com/JamesTRichmond/VerbalKombat/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 *Settle it in the arena of ideas.* A Mortal Kombat–style **debate decider**: pick two
 fighters — Socrates, Einstein, Cleopatra, Kanye, Gordon Ramsay, or anyone you type in —
 give them a question and opposing positions, and let them fight it out over three rounds.
@@ -20,14 +23,35 @@ give them a question and opposing positions, and let them fight it out over thre
 
 ## Play
 
-Open `index.html` in any browser. No install, no build, no server — it's one
-self-contained file. Choose **You control Fighter 1** to play, or **Spectate** to
+Open `index.html` in any browser. No install, no build, no server — the whole game is
+one self-contained file. Choose **You control Fighter 1** to play, or **Spectate** to
 watch the CPU argue with itself.
 
-## Ideas for v2
+## Develop
 
-- Wire the debate lines to the Claude API so any fighter can argue any topic with
-  genuinely fresh arguments (v1 uses a built-in template engine).
-- Two-player hotseat mode.
-- Sound effects and an announcer voice.
-- Tournament brackets: 8 thinkers enter, one opinion leaves.
+The game is plain HTML/CSS/JS in `index.html`. End-to-end tests run the real game in
+headless Chromium:
+
+```bash
+npm ci
+npx playwright install --with-deps chromium
+npx playwright test
+```
+
+The suite plays a full CPU-vs-CPU match through fatality and transcript generation,
+and includes an XSS regression test for custom fighter names.
+
+## Where this is going
+
+See [VISION.md](VISION.md) — the five-phase plan from browser toy to AI-refereed
+argument sport: the Referee Engine (Claude-powered live arguments scored for evidence,
+logic, and fallacies), party mode, the Logic League, and beyond.
+
+## History
+
+Born in the [`agenticubed`](https://github.com/AgentiCubed/agenticubed) monorepo and
+extracted here with full commit history.
+
+## License
+
+[MIT](LICENSE)

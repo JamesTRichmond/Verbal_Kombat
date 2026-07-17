@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # TODO: enable the real verify steps once the standalone stack is wired up
+      - name: Verify (placeholder)
+        run: echo "verify placeholder — no build step yet"
