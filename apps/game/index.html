@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERBAL KOMBAT</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header id="topbar">
+        <h1>VERBAL&nbsp;KOMBAT</h1>
+        <div id="topic"></div>
+      </header>
+      <main id="stage">
+        <section id="arena-wrap">
+          <div id="hud">
+            <div class="hp-block" id="hp-a">
+              <div class="hp-name"></div>
+              <div class="hp-bar"><div class="hp-fill"></div></div>
+              <div class="hp-sub">POSITION INTEGRITY</div>
+            </div>
+            <div id="round-clock">⚔</div>
+            <div class="hp-block right" id="hp-b">
+              <div class="hp-name"></div>
+              <div class="hp-bar"><div class="hp-fill"></div></div>
+              <div class="hp-sub">POSITION INTEGRITY</div>
+            </div>
+          </div>
+          <canvas id="arena" width="960" height="440"></canvas>
+          <div id="controls">
+            <button id="btn-fight">FIGHT</button>
+            <input id="scrub" type="range" min="0" max="100" value="0" step="1" disabled />
+            <span id="scrub-label"></span>
+          </div>
+        </section>
+        <aside id="transcript-panel">
+          <div class="panel-title">LIVE TRANSCRIPT</div>
+          <div id="transcript"></div>
+          <div id="verdict-box">
+            <div class="panel-title">JUDGE</div>
+            <div id="verdict"></div>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "verbal-kombat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A bloody fighting game where the fight is a real-time visualization of a debate between AI minds. Sound logic lands hits; fallacies miss.",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "dev": "npm run dev --workspace=apps/game",
+    "typecheck": "tsc --build"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.1",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
