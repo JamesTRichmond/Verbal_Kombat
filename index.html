@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verbal Kombat</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <h1 class="title">VERBAL&nbsp;<span class="accent">KOMBAT</span></h1>
+      <p class="tagline">Win the argument. Draw blood.</p>
+    </header>
+
+    <canvas id="stage" width="960" height="540" aria-label="Verbal Kombat arena"></canvas>
+
+    <footer id="controls">
+      <p class="hint">
+        Throw an argument:
+        <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
+        &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
+      </p>
+    </footer>
+  </div>
+
+  <!--
+    Classic scripts (no build step, no ES modules) so the game runs by simply
+    opening this file in a browser. Load order matters: each file attaches to
+    the global `VK` namespace, and later files depend on earlier ones.
+  -->
+  <script src="src/core/namespace.js"></script>
+  <script src="src/core/config.js"></script>
+  <script src="src/engine/dataLoader.js"></script>
+  <script src="src/engine/combat.js"></script>
+  <script src="src/engine/state.js"></script>
+  <script src="src/engine/input.js"></script>
+  <script src="src/render/renderer.js"></script>
+  <script src="src/engine/gameLoop.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>

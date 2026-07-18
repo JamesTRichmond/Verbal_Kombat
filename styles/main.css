@@ -1,0 +1,75 @@
+/* Verbal Kombat — presentation layer only. No game logic here. */
+
+:root {
+  --bg: #0b0b10;
+  --panel: #14141d;
+  --ink: #f5f2ea;
+  --muted: #9a94a6;
+  --blood: #c8102e;
+  --accent: #e4b04a;
+  --p1: #4aa3e4;
+  --p2: #c8102e;
+  --font: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% -10%, #1c1420, var(--bg) 60%);
+  color: var(--ink);
+  font-family: var(--font);
+}
+
+#app {
+  width: min(960px, 96vw);
+  padding: 16px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  letter-spacing: 0.12em;
+  text-shadow: 0 2px 0 #000, 0 0 18px rgba(200, 16, 46, 0.5);
+}
+
+.title .accent { color: var(--blood); }
+
+.tagline {
+  margin: 4px 0 12px;
+  color: var(--accent);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+#stage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(#1a1420, #0c0c12);
+  border: 2px solid #2a2536;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+#controls .hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.4em;
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 5px;
+  background: var(--panel);
+  border: 1px solid #333;
+  border-bottom-width: 3px;
+  font-family: inherit;
+  font-size: 0.85em;
+}

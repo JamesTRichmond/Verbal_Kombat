@@ -1,0 +1,10 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Node (only if tooling is added later — none required to run the game)
+node_modules/
+npm-debug.log*
