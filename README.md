@@ -27,6 +27,24 @@ Open `index.html` in any browser. No install, no build, no server — the whole 
 one self-contained file. Choose **You control Fighter 1** to play, or **Spectate** to
 watch the CPU argue with itself.
 
+## Live AI mode — the Referee (Phase 1)
+
+With an Anthropic API key, the game goes live: fighters argue with fresh
+Claude-written lines instead of templates, and **you can type your own arguments**
+— an AI referee classifies each one as evidence, logic, a zinger, or a named
+fallacy, scores its quality, and shows a one-line receipt for every call. Argue
+well and you hit harder; commit a STRAWMAN and you get blocked, by name.
+
+```bash
+npm ci
+cp .env.example .env   # add your ANTHROPIC_API_KEY
+npm run dev            # http://localhost:3141
+```
+
+No key? Everything still works — the game detects the missing referee and falls
+back to the built-in template engine. See [ARCHITECTURE.md](ARCHITECTURE.md) for
+the engine design and API contracts.
+
 ## Develop
 
 The game is plain HTML/CSS/JS in `index.html`. End-to-end tests run the real game in

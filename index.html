@@ -222,6 +222,10 @@
   .movebtn.special .mn{color:var(--violet)}
   .movebtn.special:hover:not([disabled]){box-shadow:0 0 14px rgba(192,92,255,.35)}
   .cpuhint{align-self:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--smoke-dim);padding:.4rem 0}
+  .timer.live{color:var(--jade)}
+  .arguerow{display:flex;gap:10px;align-items:stretch}
+  .arguerow input{flex:1}
+  .arguerow .btn{white-space:nowrap}
   .finishwrap{display:flex;justify-content:center;padding:.4rem 0}
 
   /* ---------- TRANSCRIPT ---------- */
@@ -481,6 +485,7 @@
         <div class="rlabel" id="roundlabel">ROUND 1</div>
         <div class="pips" id="pips"></div>
         <div class="timer">DEBATE IN PROGRESS</div>
+        <div class="timer live" id="livebadge" hidden>● LIVE AI REFEREE</div>
       </div>
       <div class="hpside right">
         <div class="hpname"><span class="namewrap"><span class="medal sm p2" id="hudg2"></span><span class="who2" id="hud-n2"></span></span><span class="cred" id="cred2"></span></div>
@@ -502,6 +507,11 @@
     <div class="ticker" id="ticker" aria-live="polite"></div>
 
     <div class="controls" id="controls"></div>
+    <div class="arguerow" id="arguerow" hidden>
+      <input type="text" id="argue-text" maxlength="280"
+        placeholder="…or argue in your own words — the AI referee will judge it">
+      <button class="btn ghost" id="btn-argue">Make your case</button>
+    </div>
     <div class="cpuhint" id="cpuhint" hidden>opponent is thinking…</div>
     <div class="finishwrap" id="finishwrap" hidden>
       <button class="btn" id="btn-fatality">EXECUTE FATALITY</button>
@@ -693,12 +703,110 @@ const MOVES = {
 /* ---------------- state ---------------- */
 const S = {
   p1:null, p2:null, picking:1, custom:[],
-  topic:"", mode:"play",
+  topic:"", mode:"play", live:false,
   round:1, wins:[0,0], hp:[100,100], meter:[0,0], cred:[100,100],
   turn:0, busy:false, over:false,
   log:[],           // {round, speaker, text, kind, flag}
   usedLines:new Set(),
 };
+
+/* ---------------- live AI mode (Phase 1: the Referee) ----------------
+   When served by server/index.js with Anthropic credentials, the game goes
+   live: CPU lines come from the Persona Engine and the player can type their
+   own arguments for the Referee Engine to judge. Opening index.html directly
+   (file://) or without credentials keeps the offline template engine. */
+async function checkLive(){
+  if(!/^https?:$/.test(location.protocol))return;
+  try{
+    const r=await fetch("/api/health");
+    const j=await r.json();
+    S.live=!!j.live;
+    $("livebadge").hidden=!S.live;
+  }catch(e){ /* no server — offline mode */ }
+}
+
+async function fetchPersona(A,D,m,fallacyName){
+  try{
+    const ctrl=new AbortController();
+    const t=setTimeout(()=>ctrl.abort(),6000);
+    const r=await fetch("/api/persona",{
+      method:"POST",headers:{"Content-Type":"application/json"},signal:ctrl.signal,
+      body:JSON.stringify({
+        fighter:{name:A.name,tag:A.tag,stance:A.stance},
+        opponent:{name:D.name,stance:D.stance},
+        topic:S.topic,move:m.key,fallacy:fallacyName,
+        recent:S.log.filter(e=>e.kind!=="sys").slice(-6).map(e=>e.text),
+      }),
+    });
+    clearTimeout(t);
+    if(!r.ok)return null;
+    const j=await r.json();
+    return (j.line||"").trim()||null;
+  }catch(e){return null}
+}
+
+async function liveArgue(){
+  const text=$("argue-text").value.trim();
+  if(!text||S.busy||S.over)return;
+  S.busy=true;renderControls(false);
+  const ai=S.turn, di=1-ai;
+  const A=ai===0?S.p1:S.p2, D=di===0?S.p1:S.p2;
+  flag("THE REFEREE IS DELIBERATING…","solid");
+  let v=null;
+  try{
+    const r=await fetch("/api/referee",{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({
+        argument:text,topic:S.topic,
+        speaker:A.name,stance:A.stance,
+        opponent:D.name,opponentStance:D.stance,
+      }),
+    });
+    if(r.ok)v=await r.json();
+  }catch(e){}
+  if(!v){
+    // Referee unreachable — treat the typed argument as a standard hook
+    flag("REFEREE OFFLINE — FALLING BACK TO HOUSE RULES","foul");
+    S.busy=false;doMove(MOVES.hook);
+    return;
+  }
+  $("argue-text").value="";
+  applyVerdict(ai,di,A,D,text,v);
+}
+
+function applyVerdict(ai,di,A,D,text,v){
+  const figA=$(ai===0?"fig1":"fig2"), figD=$(di===0?"fig1":"fig2");
+  figA.classList.add("attack");
+  setTimeout(()=>figA.classList.remove("attack"),350);
+  if(v.classification==="fallacy"){
+    const name=v.fallacy_name||"FALLACY";
+    const selfDmg=rand(3,7);
+    S.cred[ai]=Math.max(0,S.cred[ai]-rand(6,12));
+    S.hp[ai]=Math.max(0,S.hp[ai]-selfDmg);
+    addLog(A,text,"foul",`${name} — BLOCKED`);
+    flag(`${name} · ${v.receipt} · BLOCKED — ${selfDmg} CREDIBILITY DAMAGE`,"foul");
+    floatDmg(ai,"BLOCKED","foul");
+    announce(name+"!",false);
+  }else{
+    const base={evidence:10,logic:15,zinger:24}[v.classification]||12;
+    const crit=v.quality>=90;
+    let dmg=Math.round(base*(0.5+v.quality/100));
+    if(crit)dmg=Math.round(dmg*1.3);
+    S.hp[di]=Math.max(0,S.hp[di]-dmg);
+    S.meter[ai]=Math.min(100,S.meter[ai]+20);
+    S.meter[di]=Math.min(100,S.meter[di]+10);
+    const flagTxt={evidence:"VERIFIED FACT",logic:"SOUND LOGIC",zinger:"STYLE POINTS"}[v.classification]||"JUDGED";
+    addLog(A,text,"solid",flagTxt+(crit?" · CRITICAL":""));
+    flag(`${flagTxt}${crit?" — CRITICAL":""} · ${v.receipt} · ${dmg} DAMAGE`,"solid");
+    figD.classList.add("hit");
+    $("stage").classList.add("shake");
+    setTimeout(()=>{figD.classList.remove("hit");$("stage").classList.remove("shake")},420);
+    if(crit){const st=$("stage");st.classList.remove("bighit");void st.offsetWidth;st.classList.add("bighit")}
+    floatDmg(di,"-"+dmg,"solid");
+    if(crit)announce("CRITICAL!",false);
+  }
+  setTimeout(()=>resolveTurn(),950);
+}
 
 const $ = id=>document.getElementById(id);
 const rand=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
@@ -835,6 +943,7 @@ function cpuChoose(i){
 
 function renderControls(active){
   const c=$("controls");c.innerHTML="";
+  $("arguerow").hidden=!(active&&S.live&&!S.over);
   if(S.over){return}
   if(!active){c.innerHTML="";return}
   [MOVES.jab,MOVES.hook,MOVES.zing,MOVES.spec].forEach(m=>{
@@ -862,7 +971,7 @@ function freshLine(fnArr,f,o){
   return pick(fnArr)(f,o,S.topic);
 }
 
-function doMove(m){
+async function doMove(m){
   if(S.busy||S.over)return;
   S.busy=true;renderControls(false);
   const ai=S.turn, di=1-ai;
@@ -872,13 +981,20 @@ function doMove(m){
   // fallacy check — logic stat trims risk
   const risk=m.risk*(1-(A.logic-5)*0.05);
   const whiffed=Math.random()<risk;
+  const fal=whiffed?pick(FALLACIES):null;
+
+  // Live mode: swap the template line for a fresh Persona Engine line that
+  // matches the rolled outcome; the mechanics stay deterministic.
+  let liveLine=null;
+  if(S.live&&m.key!=="spec"){
+    liveLine=await fetchPersona(A,D,m,fal?fal.n:null);
+  }
 
   figA.classList.add("attack");
   setTimeout(()=>figA.classList.remove("attack"),350);
 
   if(whiffed){
-    const fal=pick(FALLACIES);
-    const line=SKELETONS.foul[fal.n](A,D,S.topic);
+    const line=liveLine||SKELETONS.foul[fal.n](A,D,S.topic);
     const selfDmg=rand(3,7);
     S.cred[ai]=Math.max(0,S.cred[ai]-rand(6,12));
     S.hp[ai]=Math.max(0,S.hp[ai]-selfDmg);
@@ -902,7 +1018,7 @@ function doMove(m){
 
   const line=m.key==="spec"
     ? A.special.line(S.topic)
-    : freshLine(SKELETONS[m.key],A,D);
+    : (liveLine||freshLine(SKELETONS[m.key],A,D));
 
   S.hp[di]=Math.max(0,S.hp[di]-dmg);
   const kind=m.key==="spec"?"special":"solid";
@@ -1114,6 +1230,9 @@ $("btn-download").addEventListener("click",()=>{
   a.download="verbal-kombat-transcript.txt";a.click();URL.revokeObjectURL(a.href);
 });
 $("btn-rematch").addEventListener("click",()=>{startFight()});
+$("btn-argue").addEventListener("click",liveArgue);
+$("argue-text").addEventListener("keydown",e=>{if(e.key==="Enter")liveArgue()});
+checkLive();
 (function spawnEmbers(){
   const e=$("embers");
   for(let i=0;i<16;i++){
