@@ -95,9 +95,9 @@ Entries D6 onward record the fighting-game pivot described in [DESIGN-v2.md](./D
 
 **Context.** Combat, CPU behavior, and dialogue line selection all involve randomness. Unseeded randomness would make the e2e smoke test flaky and the balance pass unreproducible.
 
-**Decision.** All randomness flows through a single seeded RNG owned by the match, and the simulation advances on a fixed timestep (an accumulator over `requestAnimationFrame`; rendering may interpolate between steps). This replaces the PR #4 game loop's variable per-frame delta, which would let the same seed and inputs land on different update boundaries and diverge. Ledger timestamps are simulation ticks, not wall-clock time. Given the same seed and input sequence, a match produces an identical ledger — and therefore identical dialogue and an identical verdict.
+**Decision.** All randomness derives from the single match seed, split into independent labeled deterministic streams — combat, CPU behavior, dialogue selection — so draws in one subsystem never shift another's sequence; in particular, dialogue can be replayed from the ledger header's seed and the event records alone, without re-running combat. The simulation advances on a fixed timestep (an accumulator over `requestAnimationFrame`; rendering may interpolate between steps). This replaces the PR #4 game loop's variable per-frame delta, which would let the same seed and inputs land on different update boundaries and diverge. Ledger timestamps are simulation ticks, not wall-clock time. Given the same seed and input sequence, a match produces an identical ledger — and therefore identical dialogue and an identical verdict.
 
-**Consequences.** Playwright can run a fully deterministic match; balance changes can be A/B'd against fixed seeds; bug reports can include a seed. No module may call `Math.random()` directly, and no game rule may read wall-clock time or raw frame deltas.
+**Consequences.** Playwright can run a fully deterministic match; balance changes can be A/B'd against fixed seeds; bug reports can include a seed. No module may call `Math.random()` directly or share another subsystem's stream, and no game rule may read wall-clock time or raw frame deltas.
 
 ## D12. Names and trade dress: original everywhere
 
