@@ -31,6 +31,7 @@
 
     ui.render(current);
     console.log("[VK] Flow ready — start navigating.");
+
   }
 
   if (document.readyState === "loading") {
