@@ -10,7 +10,24 @@
 
   // handlers: { onMove(index), onStart() }
   function attach(handlers) {
+    function isInteractive(el) {
+      if (!el || !el.tagName) return false;
+      var tag = el.tagName;
+      return (
+        tag === "BUTTON" ||
+        tag === "INPUT" ||
+        tag === "TEXTAREA" ||
+        tag === "SELECT" ||
+        tag === "A" ||
+        (el.getAttribute && el.getAttribute("role") === "button")
+      );
+    }
+
     function onKeyDown(e) {
+      // Never swallow keys aimed at an interactive control — Space must still
+      // activate a focused button (native buttons click on Space only if the
+      // keydown default was not prevented).
+      if (isInteractive(e.target)) return;
       if (e.key === " " || e.code === "Space") {
         e.preventDefault();
         handlers.onStart && handlers.onStart();
