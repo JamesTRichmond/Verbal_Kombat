@@ -1,8 +1,12 @@
-# Content data — `fallacies.json`
+# Content data
 
-This is the **authoritative content file** the engine loads at runtime. It's the
-one source of truth for the schema; design/content drafts (authored under
-`/docs`) get transcribed into this shape.
+This directory holds the authoritative content files the engine loads at runtime.
+Each file is the one source of truth for its schema; design/content drafts
+(authored under `/docs`) get transcribed into this shape.
+
+## `fallacies.json`
+
+Argument moves used during combat.
 
 ## Schema
 
@@ -44,3 +48,46 @@ in the console. To load the full file, serve locally:
 python3 -m http.server 8000
 # then open http://localhost:8000
 ```
+
+## `fighters.json`
+
+The roster of original fighters. Each fighter maps an argumentative style to a
+combat style and carries the identity shown on the fighter selection screen.
+
+## Schema
+
+```jsonc
+{
+  "version": 1,
+  "fighters": [
+    {
+      "id": "logician",          // stable, unique, snake_case
+      "name": "The Logician",    // display name
+      "style": "Precise, counter-focused",
+      "description": "...",      // one-paragraph style description
+      "portrait": "Λ",           // text-only portrait stand-in
+      "stats": [                  // exactly two visible stats, 1-10
+        { "label": "Precision", "value": 8 },
+        { "label": "Composure", "value": 7 }
+      ],
+      "special": {               // one named special ability
+        "name": "Socratic Cross-exam",
+        "description": "..."
+      }
+    }
+  ]
+}
+```
+
+### Field rules
+
+- **`id`** — snake_case, unique, stable. Save data and ledger headers reference
+  it.
+- **`stats`** — exactly two entries. `value` is an integer 1–10.
+- **`special`** — a single named ability that expresses the fighter's
+  argumentative/combat style.
+- **`portrait`** — a temporary text glyph until original art is added.
+
+Load order and fallback mirror `fallacies.json`: fetched at runtime, with a
+built-in fallback in `src/engine/fighterLoader.js` so the game still runs when
+opened directly from disk.

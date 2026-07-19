@@ -37,22 +37,17 @@
           '<span class="roster-name">' +
           escapeHtml(f.name) +
           "</span>";
+        // Keyboard focus selects the fighter so the panel always matches
+        // the active control; click also selects for mouse users.
         btn.addEventListener("click", function () {
           selectPlayer(i);
         });
-        btn.addEventListener("mouseenter", function () {
-          previewPlayer(i);
-        });
         btn.addEventListener("focus", function () {
-          previewPlayer(i);
+          selectPlayer(i);
         });
         rosterEl.appendChild(btn);
         return btn;
       });
-    }
-
-    function previewPlayer(index) {
-      renderPanel(fighters[index], fighters[enemyIndex]);
     }
 
     function selectPlayer(index) {
@@ -67,11 +62,17 @@
     }
 
     function cycleEnemy() {
+      var keepFocus = document.activeElement &&
+        document.activeElement.id === "select-rival-cycle";
       enemyIndex = (enemyIndex + 1) % fighters.length;
       if (enemyIndex === playerIndex) {
         enemyIndex = (enemyIndex + 1) % fighters.length;
       }
       renderPanel(fighters[playerIndex], fighters[enemyIndex]);
+      if (keepFocus) {
+        var nextBtn = document.getElementById("select-rival-cycle");
+        if (nextBtn) nextBtn.focus();
+      }
     }
 
     function confirm() {
