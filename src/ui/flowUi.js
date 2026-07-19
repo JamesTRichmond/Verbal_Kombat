@@ -174,7 +174,10 @@
   }
 
   function focusScreen(el) {
-    var target = el.querySelector("h2, h3, button:not([hidden]), input, textarea");
+    var target = el.querySelector("h2[tabindex='-1'], h3[tabindex='-1']");
+    if (!target) {
+      target = el.querySelector("button:not([hidden]), input, textarea");
+    }
     if (target && target.focus) target.focus();
   }
 

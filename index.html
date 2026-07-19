@@ -15,7 +15,7 @@
 
     <main id="flow-app" aria-live="polite">
       <section id="screen-argument" class="vk-screen" aria-labelledby="argument-title">
-        <h2 id="argument-title">Choose the argument</h2>
+        <h2 id="argument-title" tabindex="-1">Choose the argument</h2>
         <p class="screen-hint">Pick a category, or write your own question.</p>
         <div class="option-grid" role="group" aria-label="Debate categories">
           <button type="button" class="option-card" data-category="society" data-question="Should voting be mandatory?">
@@ -44,7 +44,7 @@
 
       <section id="screen-fighter" class="vk-screen" aria-labelledby="fighter-title" hidden>
         <button type="button" class="back-button">Back</button>
-        <h2 id="fighter-title">Choose your fighter</h2>
+        <h2 id="fighter-title" tabindex="-1">Choose your fighter</h2>
         <p class="screen-hint">Each style maps to a different combat approach.</p>
         <div class="option-grid" role="group" aria-label="Fighter roster">
           <button type="button" class="option-card" data-fighter="logician">
@@ -68,7 +68,7 @@
 
       <section id="screen-location" class="vk-screen" aria-labelledby="location-title" hidden>
         <button type="button" class="back-button">Back</button>
-        <h2 id="location-title">Choose the arena</h2>
+        <h2 id="location-title" tabindex="-1">Choose the arena</h2>
         <p class="screen-hint">Each arena has its own look and scripted event.</p>
         <div class="option-grid" role="group" aria-label="Arenas">
           <button type="button" class="option-card" data-location="forum">
@@ -84,7 +84,7 @@
 
       <section id="screen-fight" class="vk-screen" aria-labelledby="fight-title" hidden>
         <button type="button" class="back-button">Back</button>
-        <h2 id="fight-title">Fight</h2>
+        <h2 id="fight-title" tabindex="-1">Fight</h2>
         <p class="screen-hint">Placeholder combat. Keys <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> throw arguments, <kbd>Space</kbd> starts, <kbd>Esc</kbd> goes back.</p>
         <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
         <button type="button" id="fight-end-btn">End fight (placeholder)</button>
@@ -92,7 +92,7 @@
 
       <section id="screen-verdict" class="vk-screen" aria-labelledby="verdict-title" hidden>
         <button type="button" class="back-button">Back</button>
-        <h2 id="verdict-title">Verdict</h2>
+        <h2 id="verdict-title" tabindex="-1">Verdict</h2>
         <p class="screen-hint">Your selections survived the full flow.</p>
         <dl class="verdict-list">
           <dt>Topic</dt>
