@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Argument Select — unit tests</title>
+  <style>
+    body { background: #0b0b10; color: #f5f2ea; font-family: system-ui, sans-serif; padding: 20px; }
+    .pass { color: #7fbe7f; }
+    .fail { color: #e47a7a; }
+    pre { background: #14141d; padding: 10px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Argument Select tests</h1>
+  <div id="output"></div>
+
+  <script src="../src/core/namespace.js"></script>
+  <script src="../src/core/config.js"></script>
+  <script src="../src/utils/sanitize.js"></script>
+  <script src="../src/engine/topicsLoader.js"></script>
+  <script src="../src/ui/argumentSelect.js"></script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var out = document.getElementById("output");
+      var pass = 0;
+      var fail = 0;
+
+      function assert(condition, message) {
+        if (condition) {
+          pass++;
+          out.insertAdjacentHTML("beforeend", '<p class="pass">✓ ' + message + "</p>");
+        } else {
+          fail++;
+          out.insertAdjacentHTML("beforeend", '<p class="fail">✗ ' + message + "</p>");
+        }
+      }
+
+      function assertEqual(actual, expected, message) {
+        assert(actual === expected, message + " (expected: " + JSON.stringify(expected) + ", got: " + JSON.stringify(actual) + ")");
+      }
+
+      // Sanitize tests
+      assertEqual(VK.sanitize.question("  hello   world  "), "hello world", "trims and collapses whitespace");
+      assertEqual(VK.sanitize.question("<script>alert('x')</script>"), "<script>alert('x')</script>", "cleanQuestion preserves raw text (UI uses textContent)");
+      assertEqual(VK.sanitize.escapeHtml("<script>alert('x')</script>"), "&lt;script&gt;alert(&#39;x&#39;)&lt;/script&gt;", "escapeHtml escapes HTML");
+      assertEqual(VK.sanitize.question("a".repeat(200), 140).length, 140, "caps text to maxLength");
+      assertEqual(VK.sanitize.question(""), "", "empty string returns empty");
+      assertEqual(VK.sanitize.question(null), "", "non-string returns empty");
+
+      // Topic loader normalization tests
+      var valid = {
+        version: 1,
+        categories: [
+          { id: "test", name: "Test", lineBank: "test", questions: ["One?", "Two?", "Three?"] },
+        ],
+      };
+      // Mock fetch to avoid network.
+      var originalFetch = window.fetch;
+      window.fetch = function () {
+        return Promise.resolve({
+          ok: true,
+          json: function () { return Promise.resolve(valid); },
+        });
+      };
+
+      VK.loadTopics().then(function (categories) {
+        assertEqual(categories.length, 1, "normalizes valid topics");
+        assertEqual(categories[0].id, "test", "preserves category id");
+        assertEqual(categories[0].questions.length, 3, "preserves three questions");
+
+        // Argument select UI tests
+        var container = document.createElement("div");
+        var selected = null;
+        VK.argumentSelect.mount(container, categories, function (topic) {
+          selected = topic;
+        });
+
+        assert(container.querySelectorAll(".category-chip").length === 1, "renders one chip per category");
+
+        var chip = container.querySelector(".category-chip");
+        chip.click();
+
+        assert(container.querySelector("#question-panel").hidden === false, "clicking chip reveals question panel");
+        assert(container.querySelectorAll(".question-option").length === 3, "renders three question options");
+
+        var options = container.querySelectorAll(".question-option");
+        options[1].click();
+
+        assert(selected !== null, "selecting a question invokes onSelect");
+        assertEqual(selected.categoryId, "test", "selected topic carries category id");
+        assertEqual(selected.categoryName, "Test", "selected topic carries category name");
+        assertEqual(selected.lineBank, "test", "selected topic carries line bank");
+        assertEqual(selected.question, "Two?", "selected topic carries chosen question");
+
+        // Custom question path
+        container = document.createElement("div");
+        selected = null;
+        VK.argumentSelect.mount(container, categories, function (topic) {
+          selected = topic;
+        });
+        container.querySelector(".category-chip").click();
+        var input = container.querySelector("#custom-question-input");
+        var confirm = container.querySelector("#custom-confirm");
+
+        input.value = "  <b>My</b>   custom question?  ";
+        input.dispatchEvent(new Event("input"));
+        confirm.click();
+
+        assert(selected !== null, "confirming custom question invokes onSelect");
+        assertEqual(selected.question, "<b>My</b> custom question?", "custom question is cleaned but not HTML-escaped in stored value");
+        assertEqual(selected.categoryId, "test", "custom question inherits category id");
+        assertEqual(selected.lineBank, "test", "custom question inherits line bank");
+
+        // Empty custom question is blocked
+        container = document.createElement("div");
+        selected = null;
+        VK.argumentSelect.mount(container, categories, function (topic) {
+          selected = topic;
+        });
+        container.querySelector(".category-chip").click();
+        input = container.querySelector("#custom-question-input");
+        confirm = container.querySelector("#custom-confirm");
+        input.value = "     ";
+        input.dispatchEvent(new Event("input"));
+        confirm.click();
+        assert(selected === null, "empty custom question does not invoke onSelect");
+
+        window.fetch = originalFetch;
+
+        out.insertAdjacentHTML("beforeend", "<hr><p><strong>" + pass + " passed, " + fail + " failed</strong></p>");
+      }).catch(function (err) {
+        out.insertAdjacentHTML("beforeend", '<p class="fail">Loader promise rejected: ' + err + "</p>");
+      });
+    })();
+  </script>
+</body>
+</html>

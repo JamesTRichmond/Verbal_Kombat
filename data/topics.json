@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "ethics",
+      "name": "Ethics",
+      "lineBank": "ethics",
+      "questions": [
+        "Is it ever okay to tell a white lie?",
+        "Should animals have legal rights?",
+        "Do the ends ever justify the means?"
+      ]
+    },
+    {
+      "id": "politics",
+      "name": "Politics",
+      "lineBank": "politics",
+      "questions": [
+        "Should voting be mandatory?",
+        "Is term limits for elected officials a good idea?",
+        "Should political campaigns be publicly funded?"
+      ]
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "lineBank": "science",
+      "questions": [
+        "Should genetically modified foods be labeled?",
+        "Is space exploration worth the cost?",
+        "Should humans try to colonize Mars?"
+      ]
+    },
+    {
+      "id": "arts",
+      "name": "Arts",
+      "lineBank": "arts",
+      "questions": [
+        "Should museums return artifacts to their countries of origin?",
+        "Is remixing someone else's art fair use?",
+        "Should public funding support the arts?"
+      ]
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "lineBank": "sports",
+      "questions": [
+        "Should college athletes be paid?",
+        "Is competitive youth sports harmful?",
+        "Should performance-enhancing drugs be allowed in professional sports?"
+      ]
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "lineBank": "technology",
+      "questions": [
+        "Should social media companies regulate misinformation?",
+        "Is artificial intelligence a threat to jobs?",
+        "Should encryption have a government backdoor?"
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "lineBank": "education",
+      "questions": [
+        "Should standardized testing decide college admissions?",
+        "Is homework beneficial for students?",
+        "Should higher education be free?"
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "Environment",
+      "lineBank": "environment",
+      "questions": [
+        "Should single-use plastics be banned?",
+        "Is nuclear energy a good replacement for fossil fuels?",
+        "Should individuals or governments bear more responsibility for climate action?"
+      ]
+    }
+  ]
+}

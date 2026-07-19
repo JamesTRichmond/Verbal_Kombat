@@ -14,24 +14,47 @@
       return;
     }
     var ctx = canvas.getContext("2d");
+    var argumentScreen = document.getElementById("screen-argument");
+    var fightScreen = document.getElementById("screen-fight");
+    var argumentContainer = document.getElementById("argument-select");
 
-    VK.loadData().then(function (moves) {
-      // Single mutable state reference the loop reads and input replaces.
-      var current = VK.state.create(moves);
-      var getState = function () { return current; };
+    if (!argumentScreen || !fightScreen || !argumentContainer) {
+      console.error("[VK] Required screen elements not found.");
+      return;
+    }
 
-      VK.input.attach({
-        onStart: function () { current = VK.state.start(current); },
-        onMove: function (index) { VK.state.playerMove(current, index); },
+    Promise.all([VK.loadData(), VK.loadTopics()])
+      .then(function (results) {
+        var moves = results[0];
+        var categories = results[1];
+
+        var unmountSelect = VK.argumentSelect.mount(
+          argumentContainer,
+          categories,
+          function onSelect(topic) {
+            unmountSelect();
+            argumentScreen.classList.remove("active");
+            fightScreen.classList.add("active");
+
+            // Single mutable state reference the loop reads and input replaces.
+            var current = VK.state.create(moves, topic);
+            var getState = function () { return current; };
+
+            VK.input.attach({
+              onStart: function () { current = VK.state.start(current); },
+              onMove: function (index) { VK.state.playerMove(current, index); },
+            });
+
+            var loop = VK.gameLoop.create(ctx, getState);
+            loop.start();
+
+            console.log("[VK] Ready — " + moves.length + " arguments loaded. Press Space.");
+          }
+        );
+      })
+      .catch(function (err) {
+        console.error("[VK] Boot failed:", err);
       });
-
-      var loop = VK.gameLoop.create(ctx, getState);
-      loop.start();
-
-      console.log("[VK] Ready — " + moves.length + " arguments loaded. Press Space.");
-    }).catch(function (err) {
-      console.error("[VK] Boot failed:", err);
-    });
   }
 
   if (document.readyState === "loading") {

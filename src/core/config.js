@@ -36,5 +36,11 @@
 
     // Path to the authoritative content file. See data/README.md for schema.
     dataUrl: "data/fallacies.json",
+
+    // Path to the argument category / question file.
+    topicsUrl: "data/topics.json",
+
+    // Custom questions are capped to keep the UI tidy and the ledger small.
+    customQuestionMaxLength: 140,
   };
 })(window.VK);

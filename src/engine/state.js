@@ -19,9 +19,10 @@
     };
   }
 
-  function createState(moves) {
+  function createState(moves, topic) {
     return {
       moves: moves,                 // array of fallacy/argument entries
+      topic: topic || null,         // { categoryId, categoryName, lineBank, question }
       phase: "ready",               // "ready" | "fighting" | "ko"
       winner: null,
       fighters: {
@@ -34,7 +35,7 @@
   }
 
   function start(state) {
-    var fresh = createState(state.moves);
+    var fresh = createState(state.moves, state.topic);
     fresh.phase = "fighting";
     return fresh;
   }

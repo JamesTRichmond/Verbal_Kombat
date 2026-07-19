@@ -73,3 +73,151 @@ kbd {
   font-family: inherit;
   font-size: 0.85em;
 }
+
+/* Screen switching */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* Argument selection screen */
+.argument-select {
+  text-align: left;
+  background: var(--panel);
+  border: 1px solid #2a2536;
+  border-radius: 10px;
+  padding: clamp(20px, 4vw, 36px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.screen-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.screen-hint {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-chip {
+  padding: 10px 16px;
+  border: 1px solid #3a3546;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.category-chip:hover,
+.category-chip.selected {
+  background: rgba(200, 16, 46, 0.15);
+  border-color: var(--blood);
+}
+
+.question-panel {
+  border-top: 1px solid #2a2536;
+  padding-top: 20px;
+}
+
+.category-name {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.question-option {
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid #3a3546;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.question-option:hover,
+.question-option[aria-checked="true"] {
+  background: rgba(74, 163, 228, 0.12);
+  border-color: var(--p1);
+}
+
+.custom-question label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.custom-question textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #3a3546;
+  border-radius: 6px;
+  background: #0d0d12;
+  color: var(--ink);
+  font: inherit;
+  resize: vertical;
+}
+
+.custom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.char-count {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+button[type="button"] {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--blood);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button[type="button"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Visible focus indicators for keyboard users (carries into #9). */
+button:focus-visible,
+textarea:focus-visible,
+.category-chip:focus-visible,
+.question-option:focus-visible,
+#custom-confirm:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .custom-footer { flex-direction: column; align-items: flex-start; gap: 8px; }
+}

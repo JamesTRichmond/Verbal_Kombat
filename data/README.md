@@ -44,3 +44,47 @@ in the console. To load the full file, serve locally:
 python3 -m http.server 8000
 # then open http://localhost:8000
 ```
+
+## `topics.json`
+
+Argument categories and seed questions for the selection screen. Custom
+questions are entered inside a selected category and inherit its `lineBank`
+key, per decision D7.
+
+### Schema
+
+```jsonc
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "ethics",           // snake_case, unique, stable
+      "name": "Ethics",         // display label for the category chip
+      "lineBank": "ethics",     // key into the per-category dialogue template bank
+      "questions": [            // exactly three pre-written questions per category
+        "Is it ever okay to tell a white lie?",
+        "...",
+        "..."
+      ]
+    }
+  ]
+}
+```
+
+### Field rules
+
+- **`id`** — snake_case, unique, stable. Referenced by the match ledger and
+  save data, so treat it as permanent once shipped.
+- **`name`** — short, player-facing category label (one or two words).
+- **`lineBank`** — matches the key used by the dialogue engine for that
+  category's template bank. For custom questions this is inherited from the
+  selected category; there is no category-less custom path.
+- **`questions`** — exactly three strings per category in Release 1. They
+  should be debatable, broadly accessible, and free of hateful content.
+
+## How it's loaded
+
+`src/engine/topicsLoader.js` fetches this file. If the fetch fails (for example
+when opening `index.html` from `file://`), it falls back to a small built-in
+set so the argument-selection screen still works. Serve locally to load the
+full file.

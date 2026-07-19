@@ -8,21 +8,27 @@
 </head>
 <body>
   <div id="app">
-    <header id="hud">
-      <h1 class="title">VERBAL&nbsp;<span class="accent">KOMBAT</span></h1>
-      <p class="tagline">Win the argument. Draw blood.</p>
-    </header>
+    <section id="screen-argument" class="screen active" aria-label="Argument selection">
+      <div class="argument-select" id="argument-select"></div>
+    </section>
 
-    <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
+    <section id="screen-fight" class="screen" aria-label="Fight">
+      <header id="hud">
+        <h1 class="title">VERBAL&nbsp;<span class="accent">KOMBAT</span></h1>
+        <p class="tagline">Win the argument. Draw blood.</p>
+      </header>
 
-    <footer id="controls">
-      <p class="hint">
-        Throw an argument:
-        <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
-        &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
-      </p>
-      <p class="hint"><a href="text-version.html">Classic mode</a> — the original typed-argument game (uses ES modules, so it needs a local server: <code>npm start</code>, not <code>file://</code>)</p>
-    </footer>
+      <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
+
+      <footer id="controls">
+        <p class="hint">
+          Throw an argument:
+          <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
+          &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
+        </p>
+        <p class="hint"><a href="text-version.html">Classic mode</a> — the original typed-argument game (uses ES modules, so it needs a local server: <code>npm start</code>, not <code>file://</code>)</p>
+      </footer>
+    </section>
   </div>
 
   <!--
@@ -33,6 +39,9 @@
   <script src="src/core/namespace.js"></script>
   <script src="src/core/config.js"></script>
   <script src="src/engine/dataLoader.js"></script>
+  <script src="src/engine/topicsLoader.js"></script>
+  <script src="src/utils/sanitize.js"></script>
+  <script src="src/ui/argumentSelect.js"></script>
   <script src="src/engine/combat.js"></script>
   <script src="src/engine/state.js"></script>
   <script src="src/engine/input.js"></script>
