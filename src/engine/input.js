@@ -1,19 +1,26 @@
 /*
  * input.js — translate keyboard into game intent.
  *
- * Keys 1–4 throw the corresponding argument move. Space starts or resets a
- * match. Input only signals intent through callbacks; it never touches state
- * or the canvas directly.
+ *   1–4     throw the corresponding argument
+ *   F       rebut the enemy's incoming argument (defense/riposte)
+ *   Space   start / rematch
+ *
+ * Input only signals intent through callbacks; it never touches state or the
+ * canvas directly.
  */
 (function (VK) {
   "use strict";
 
-  // handlers: { onMove(index), onStart() }
+  // handlers: { onMove(index), onDefend(), onStart() }
   function attach(handlers) {
     function onKeyDown(e) {
       if (e.key === " " || e.code === "Space") {
         e.preventDefault();
         handlers.onStart && handlers.onStart();
+        return;
+      }
+      if (e.key === "f" || e.key === "F") {
+        handlers.onDefend && handlers.onDefend();
         return;
       }
       var n = parseInt(e.key, 10);

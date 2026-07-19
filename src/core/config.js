@@ -12,7 +12,7 @@
     stage: { width: 960, height: 540 },
 
     fighter: {
-      maxHealth: 100,     // lose all of this and you're KO'd
+      maxHealth: 100,     // lose all of this and you're KO'd for the round
       maxComposure: 100,  // spent to attack; regenerates slowly
       composureRegen: 8,  // composure regained per second
     },
@@ -26,10 +26,22 @@
       composureCostPerDamage: 1.5,
     },
 
+    // Match structure: first to `roundsToWin` round wins takes the match.
+    rounds: {
+      roundsToWin: 2,      // best of 3
+      roundInterval: 1.6,  // seconds of breather between rounds
+    },
+
+    // The player's active defense. When the enemy telegraphs an argument, the
+    // player has this long to "call it out" (press Defend) and rebut it.
+    riposte: {
+      windowSeconds: 1.1,
+    },
+
     ai: {
       // Seconds between enemy arguments (starter AI is on a simple timer).
-      minDelay: 1.2,
-      maxDelay: 2.4,
+      minDelay: 1.3,
+      maxDelay: 2.6,
     },
 
     // Path to the authoritative content file. See data/README.md for schema.

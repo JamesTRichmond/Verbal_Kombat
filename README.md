@@ -23,7 +23,11 @@ python3 -m http.server 8000
 ## Controls
 
 - **1–4** — throw the matching argument
+- **F** — rebut the enemy's incoming argument (time it inside the window to counter)
 - **Space** — start / rematch
+
+Matches are **best of 3**. Land sound arguments, manage your composure, and
+call out the enemy's telegraphed fallacies to riposte them.
 
 ## Project layout
 

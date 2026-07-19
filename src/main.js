@@ -23,6 +23,7 @@
       VK.input.attach({
         onStart: function () { current = VK.state.start(current); },
         onMove: function (index) { VK.state.playerMove(current, index); },
+        onDefend: function () { VK.state.playerDefend(current); },
       });
 
       var loop = VK.gameLoop.create(ctx, getState);

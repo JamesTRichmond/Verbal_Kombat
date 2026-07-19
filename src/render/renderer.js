@@ -1,8 +1,9 @@
 /*
  * renderer.js — draws the current state to the canvas. Read-only over state.
  *
- * Deliberately simple: two fighters, health + composure bars, a move menu,
- * and the latest combat line. Swap these primitives for sprites/art later
+ * Deliberately simple primitives (no sprites yet): two fighters, health +
+ * composure bars, round pips, the incoming-argument telegraph with its timing
+ * bar, a move menu, and a short combat log. Swap primitives for art later
  * without touching engine logic.
  */
 (function (VK) {
@@ -17,6 +18,8 @@
     health: "#c8102e",
     composure: "#e4b04a",
     track: "#2a2536",
+    warn: "#e4b04a",
+    good: "#5ac86b",
   };
 
   function draw(ctx, state) {
@@ -29,19 +32,25 @@
     var p = state.fighters.player;
     var e = state.fighters.enemy;
 
-    drawFighter(ctx, p, W * 0.28, H * 0.62, COLORS.p1);
-    drawFighter(ctx, e, W * 0.72, H * 0.62, COLORS.p2);
+    drawFighter(ctx, p, W * 0.28, H * 0.62, COLORS.p1, state, "player");
+    drawFighter(ctx, e, W * 0.72, H * 0.62, COLORS.p2, state, "enemy");
 
     drawBars(ctx, p, 24, 24, +1);
     drawBars(ctx, e, W - 24, 24, -1);
+    drawRoundPips(ctx, state, W);
 
     if (state.phase === "ready") {
       banner(ctx, W, H, "PRESS SPACE TO FIGHT", COLORS.ink);
-    } else if (state.phase === "ko") {
+      subBanner(ctx, W, H, "1–4 argue · F rebuts the incoming attack · best of 3");
+    } else if (state.phase === "matchover") {
       banner(ctx, W, H, (state.winner ? state.winner.name.toUpperCase() : "") + " WINS", COLORS.p2);
       subBanner(ctx, W, H, "Space to rematch");
+    } else if (state.phase === "roundover") {
+      banner(ctx, W, H, "ROUND OVER", COLORS.warn);
     } else {
+      // fighting
       drawMoveMenu(ctx, state.moves, W, H);
+      if (state.riposte) drawTelegraph(ctx, state.riposte, W, H);
     }
 
     drawLog(ctx, state.log, W, H);
@@ -53,7 +62,8 @@
   }
 
   // A fighter is a simple stylized figure for now — a stand-in for real art.
-  function drawFighter(ctx, f, x, y, color) {
+  // Flashes when a telegraphed attack is aimed at the player.
+  function drawFighter(ctx, f, x, y, color, state, id) {
     var alive = f.health > 0;
     ctx.save();
     ctx.globalAlpha = alive ? 1 : 0.35;
@@ -91,6 +101,24 @@
     else ctx.fillRect(x + (w - fw), y, fw, h);
   }
 
+  // Round tally as pips under each health bar (best of `roundsToWin` * 2 - 1).
+  function drawRoundPips(ctx, state, W) {
+    var need = state.roundsToWin;
+    drawPips(ctx, state.rounds.player, need, 24, 62, +1);
+    drawPips(ctx, state.rounds.enemy, need, W - 24, 62, -1);
+  }
+
+  function drawPips(ctx, won, need, x, y, dir) {
+    var r = 6, gap = 20;
+    for (var i = 0; i < need; i++) {
+      var cx = dir > 0 ? x + r + i * gap : x - r - i * gap;
+      ctx.beginPath();
+      ctx.arc(cx, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = i < won ? COLORS.good : COLORS.track;
+      ctx.fill();
+    }
+  }
+
   function drawMoveMenu(ctx, moves, W, H) {
     ctx.textAlign = "left";
     ctx.font = "14px Trebuchet MS, sans-serif";
@@ -108,13 +136,42 @@
     });
   }
 
+  // The enemy's incoming argument + a shrinking window to press F.
+  function drawTelegraph(ctx, riposte, W, H) {
+    var pct = Math.max(0, riposte.timeLeft / riposte.windowSeconds);
+    var pw = 420, ph = 74;
+    var x = (W - pw) / 2, y = H * 0.30;
+
+    ctx.fillStyle = COLORS.panel;
+    ctx.fillRect(x, y, pw, ph);
+    ctx.strokeStyle = COLORS.warn;
+    ctx.lineWidth = 2;
+    ctx.strokeRect(x, y, pw, ph);
+
+    ctx.fillStyle = COLORS.warn;
+    ctx.font = "bold 16px Trebuchet MS, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("INCOMING: " + riposte.move.name + " — press F to rebut!", W / 2, y + 24);
+
+    // Timing bar drains left-to-right as the window closes.
+    var barX = x + 20, barW = pw - 40, barY = y + 40;
+    ctx.fillStyle = COLORS.track;
+    ctx.fillRect(barX, barY, barW, 12);
+    ctx.fillStyle = pct > 0.4 ? COLORS.good : COLORS.warn;
+    ctx.fillRect(barX, barY, barW * pct, 12);
+  }
+
   function drawLog(ctx, log, W, H) {
     if (!log.length) return;
-    var last = log[log.length - 1];
-    ctx.fillStyle = COLORS.muted;
-    ctx.font = "italic 15px Trebuchet MS, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText(last.message || "", W / 2, H - 24);
+    var lines = log.slice(-3);
+    for (var i = 0; i < lines.length; i++) {
+      // Oldest of the three is faintest.
+      var alpha = 0.4 + 0.3 * i;
+      ctx.fillStyle = "rgba(154,148,166," + alpha + ")";
+      ctx.font = (i === lines.length - 1 ? "italic 15px" : "italic 13px") + " Trebuchet MS, sans-serif";
+      ctx.fillText(lines[i].message || "", W / 2, H - 42 + i * 16);
+    }
   }
 
   function banner(ctx, W, H, text, color) {

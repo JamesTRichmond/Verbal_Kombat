@@ -1,9 +1,12 @@
 /*
  * state.js — the game's data model and the update tick.
  *
- * Holds fighters, the loaded move list, match phase, and the floating combat
- * log. `update(dt)` advances time-based systems (composure regen, the starter
- * enemy AI). Rendering reads this; it never writes here.
+ * Holds fighters, the loaded move list, match phase, round tally, the pending
+ * enemy telegraph (riposte window), and the combat log. `update(dt)` advances
+ * all time-based systems: composure regen, the enemy AI, the riposte timer,
+ * and the between-rounds breather. Rendering reads this; it never writes here.
+ *
+ * Phases: "ready" -> "fighting" <-> "roundover" -> "matchover"
  */
 (function (VK) {
   "use strict";
@@ -22,12 +25,16 @@
   function createState(moves) {
     return {
       moves: moves,                 // array of fallacy/argument entries
-      phase: "ready",               // "ready" | "fighting" | "ko"
-      winner: null,
+      phase: "ready",               // see header
+      winner: null,                 // fighter who won the match
       fighters: {
         player: makeFighter("player", "You", "left"),
         enemy: makeFighter("enemy", "The Sophist", "right"),
       },
+      rounds: { player: 0, enemy: 0 },
+      roundsToWin: VK.config.rounds.roundsToWin,
+      roundTimer: 0,                // counts down the between-rounds breather
+      riposte: null,                // pending enemy attack the player can rebut
       aiTimer: nextAiDelay(),
       log: [],                      // recent combat events (most recent last)
     };
@@ -41,59 +48,133 @@
 
   // Advance time-based systems by dt seconds.
   function update(state, dt) {
+    // Between-rounds breather.
+    if (state.phase === "roundover") {
+      state.roundTimer -= dt;
+      if (state.roundTimer <= 0) nextRound(state);
+      return;
+    }
     if (state.phase !== "fighting") return;
 
-    var maxC = VK.config.fighter.maxComposure;
-    var regen = VK.config.fighter.composureRegen * dt;
-    eachFighter(state, function (f) {
-      f.composure = VK.combat.clamp(f.composure + regen, 0, maxC);
-    });
+    regenComposure(state, dt);
 
-    // Starter enemy AI: throws a random argument on a timer.
-    state.aiTimer -= dt;
-    if (state.aiTimer <= 0) {
-      throwMove(state, "enemy", "player", randomMove(state));
-      state.aiTimer = nextAiDelay();
+    // A telegraphed enemy attack is on the clock — nothing else starts until
+    // it resolves (player rebuts it, or the window lapses and it lands).
+    if (state.riposte) {
+      state.riposte.timeLeft -= dt;
+      if (state.riposte.timeLeft <= 0) {
+        landTelegraph(state, /* defended */ false);
+      }
+      return;
     }
 
-    checkKO(state);
+    // Enemy winds up a new argument on a timer.
+    state.aiTimer -= dt;
+    if (state.aiTimer <= 0) {
+      openEnemyAttack(state);
+      state.aiTimer = nextAiDelay();
+    }
   }
 
-  // Player-facing helper: throw the move at the given index (0-based).
+  // Player throws the argument at the given index (0-based).
   function playerMove(state, index) {
     if (state.phase !== "fighting") return;
     var move = state.moves[index];
-    if (move) throwMove(state, "player", "enemy", move);
+    if (!move) return;
+    var event = VK.combat.resolveMove(state.fighters.player, state.fighters.enemy, move);
+    pushLog(state, event);
+    checkKO(state);
   }
 
-  function throwMove(state, attackerId, defenderId, move) {
-    if (state.phase !== "fighting" || !move) return;
-    var event = VK.combat.resolveMove(
-      state.fighters[attackerId],
-      state.fighters[defenderId],
-      move
+  // Player calls out the incoming argument. Only lands if a telegraph is open.
+  function playerDefend(state) {
+    if (state.phase !== "fighting" || !state.riposte) return;
+    landTelegraph(state, /* defended */ true);
+  }
+
+  // Resolve the pending enemy telegraph, whether rebutted or not.
+  function landTelegraph(state, defended) {
+    var r = state.riposte;
+    state.riposte = null;
+    var event = VK.combat.resolveTelegraphed(
+      state.fighters[r.attackerId],
+      state.fighters[r.defenderId],
+      r.move,
+      defended
     );
     pushLog(state, event);
     checkKO(state);
   }
 
+  function openEnemyAttack(state) {
+    var enemy = state.fighters.enemy;
+    var move = affordableMove(state, enemy);
+    if (!move) return; // too winded to argue this beat
+    state.riposte = {
+      attackerId: "enemy",
+      defenderId: "player",
+      move: move,
+      timeLeft: VK.config.riposte.windowSeconds,
+      windowSeconds: VK.config.riposte.windowSeconds,
+    };
+    pushLog(state, {
+      type: "telegraph",
+      message: enemy.name + ' winds up: "' + (move.example || move.name) + '"',
+    });
+  }
+
   function checkKO(state) {
+    if (state.phase !== "fighting") return;
     var p = state.fighters.player;
     var e = state.fighters.enemy;
-    if (p.health <= 0 || e.health <= 0) {
-      state.phase = "ko";
-      state.winner = p.health <= 0 ? e : p;
-      pushLog(state, { type: "ko", message: state.winner.name + " wins the argument." });
+    if (p.health > 0 && e.health > 0) return;
+
+    var roundWinner = p.health <= 0 ? e : p;
+    state.rounds[roundWinner.id] += 1;
+    state.riposte = null;
+    pushLog(state, { type: "round", message: roundWinner.name + " takes the round." });
+
+    if (state.rounds[roundWinner.id] >= state.roundsToWin) {
+      state.phase = "matchover";
+      state.winner = roundWinner;
+      pushLog(state, { type: "match", message: roundWinner.name + " wins the match!" });
+    } else {
+      state.phase = "roundover";
+      state.roundTimer = VK.config.rounds.roundInterval;
     }
+  }
+
+  function nextRound(state) {
+    var f = VK.config.fighter;
+    ["player", "enemy"].forEach(function (id) {
+      state.fighters[id].health = f.maxHealth;
+      state.fighters[id].composure = f.maxComposure;
+    });
+    state.riposte = null;
+    state.aiTimer = nextAiDelay();
+    state.phase = "fighting";
+  }
+
+  function regenComposure(state, dt) {
+    var maxC = VK.config.fighter.maxComposure;
+    var regen = VK.config.fighter.composureRegen * dt;
+    eachFighter(state, function (fighter) {
+      fighter.composure = VK.combat.clamp(fighter.composure + regen, 0, maxC);
+    });
+  }
+
+  // A random move the fighter currently has the composure to throw.
+  function affordableMove(state, fighter) {
+    var options = state.moves.filter(function (m) {
+      return fighter.composure >= VK.combat.moveCost(m);
+    });
+    if (!options.length) return null;
+    return options[Math.floor(Math.random() * options.length)];
   }
 
   function pushLog(state, event) {
     state.log.push(event);
-    if (state.log.length > 5) state.log.shift();
-  }
-
-  function randomMove(state) {
-    return state.moves[Math.floor(Math.random() * state.moves.length)];
+    if (state.log.length > 6) state.log.shift();
   }
 
   function nextAiDelay() {
@@ -111,5 +192,6 @@
     start: start,
     update: update,
     playerMove: playerMove,
+    playerDefend: playerDefend,
   };
 })(window.VK);

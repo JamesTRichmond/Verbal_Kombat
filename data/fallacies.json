@@ -36,6 +36,105 @@
       "counter": "That's a false choice — there's a whole spectrum between.",
       "damage": 6,
       "risk": 5
+    },
+    {
+      "id": "circular_reasoning",
+      "name": "Circular Reasoning",
+      "description": "Using the conclusion as one of its own premises.",
+      "example": "It's true because I said so, and I'm right because it's true.",
+      "counter": "That just restates the claim — where's the independent support?",
+      "damage": 5,
+      "risk": 4
+    },
+    {
+      "id": "appeal_to_authority",
+      "name": "Appeal to False Authority",
+      "description": "Citing an authority with no real expertise on the matter.",
+      "example": "A very famous actor agrees with me, so the science is settled.",
+      "counter": "Fame isn't expertise. What do the people who study this say?",
+      "damage": 6,
+      "risk": 6
+    },
+    {
+      "id": "hasty_generalization",
+      "name": "Hasty Generalization",
+      "description": "Drawing a sweeping conclusion from too few examples.",
+      "example": "Two people I met were rude, so everyone from there is rude.",
+      "counter": "Two isn't a sample — it's an anecdote. Broaden the evidence.",
+      "damage": 4,
+      "risk": 5
+    },
+    {
+      "id": "red_herring",
+      "name": "Red Herring",
+      "description": "Introducing an irrelevant point to derail the argument.",
+      "example": "Sure, but have you considered how nice the weather is today?",
+      "counter": "Interesting, but irrelevant. Back to the actual point.",
+      "damage": 5,
+      "risk": 3
+    },
+    {
+      "id": "appeal_to_emotion",
+      "name": "Appeal to Emotion",
+      "description": "Manipulating feelings in place of a valid argument.",
+      "example": "If you had any heart at all, you'd already agree with me.",
+      "counter": "My feelings aren't evidence. Give me a reason, not a guilt trip.",
+      "damage": 7,
+      "risk": 6
+    },
+    {
+      "id": "tu_quoque",
+      "name": "Tu Quoque",
+      "description": "Deflecting criticism by accusing the critic of hypocrisy.",
+      "example": "Oh, so YOU'VE never once been wrong? Then sit down.",
+      "counter": "Whether I'm perfect has nothing to do with whether you're right.",
+      "damage": 6,
+      "risk": 7
+    },
+    {
+      "id": "bandwagon",
+      "name": "Bandwagon",
+      "description": "Claiming something is true because it's popular.",
+      "example": "Everybody already believes this, so you're just behind.",
+      "counter": "Popularity isn't proof. Millions can share the same mistake.",
+      "damage": 4,
+      "risk": 4
+    },
+    {
+      "id": "no_true_scotsman",
+      "name": "No True Scotsman",
+      "description": "Redefining a category on the fly to dodge a counterexample.",
+      "example": "No REAL expert would ever disagree with me, by definition.",
+      "counter": "You're just moving the goalposts to erase the exception.",
+      "damage": 5,
+      "risk": 5
+    },
+    {
+      "id": "appeal_to_ignorance",
+      "name": "Appeal to Ignorance",
+      "description": "Treating a lack of disproof as proof.",
+      "example": "No one has proven me wrong, so I must be right.",
+      "counter": "Absence of a rebuttal isn't evidence. The burden is on you.",
+      "damage": 5,
+      "risk": 6
+    },
+    {
+      "id": "equivocation",
+      "name": "Equivocation",
+      "description": "Sliding between two meanings of the same word mid-argument.",
+      "example": "A feather is light, and light travels fast — so feathers are quick!",
+      "counter": "You switched the meaning of the word halfway through.",
+      "damage": 6,
+      "risk": 4
+    },
+    {
+      "id": "post_hoc",
+      "name": "Post Hoc",
+      "description": "Assuming that because B followed A, A caused B.",
+      "example": "I wore red and we won, so my shirt clearly won the game.",
+      "counter": "Sequence isn't causation. Correlation needs a mechanism.",
+      "damage": 5,
+      "risk": 5
     }
   ]
 }
