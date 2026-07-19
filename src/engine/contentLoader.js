@@ -310,12 +310,12 @@
     var clean = list.filter(dedupeById()).filter(function (c) {
       return (
         c &&
-        typeof c.id === "string" &&
-        typeof c.label === "string" &&
+        isKey(c.id) &&
+        isNonEmptyString(c.label) &&
         Array.isArray(c.questions) &&
         c.questions.length === 3 && // the R1 schema: exactly 3 per category
         c.questions.every(function (q) {
-          return q && isNonEmptyString(q.id) && isNonEmptyString(q.text);
+          return q && isKey(q.id) && isNonEmptyString(q.text);
         }) &&
         // question ids are stable keys for selection state and the ledger —
         // a repeat inside a category makes the pick ambiguous
@@ -355,7 +355,7 @@
     var clean = list.filter(dedupeById()).filter(function (f) {
       return (
         f &&
-        isNonEmptyString(f.id) &&
+        isKey(f.id) &&
         isNonEmptyString(f.name) &&
         isNonEmptyString(f.tagline) &&
         f.style &&
@@ -368,7 +368,10 @@
         isNonEmptyString(f.special.id) &&
         isNonEmptyString(f.special.name) &&
         isNonEmptyString(f.special.description) &&
-        isNonEmptyString(f.lineBank) &&
+        // lineBank is a filename key under data/lines/ — a path-like value
+        // ("../lines/x") would escape the content directory and register the
+        // bank under a non-stable key
+        isKey(f.lineBank) &&
         f.cpu &&
         isValidCpu(f.cpu)
       );
@@ -411,7 +414,7 @@
     var clean = list.filter(dedupeById()).filter(function (l) {
       return (
         l &&
-        isNonEmptyString(l.id) &&
+        isKey(l.id) &&
         isNonEmptyString(l.name) &&
         isNonEmptyString(l.description) &&
         l.palette &&
@@ -439,7 +442,7 @@
     if (!effect) return false;
     if (effect.type === "dialogue_weight") {
       return (
-        isNonEmptyString(effect.target) &&
+        DIALOGUE_WEIGHT_TARGETS.indexOf(effect.target) !== -1 &&
         typeof effect.multiplier === "number" &&
         effect.multiplier > 0
       );
@@ -467,7 +470,9 @@
     while ((match = re.exec(line)) !== null) {
       if (PLACEHOLDERS.indexOf(match[1]) === -1) return false;
     }
-    return true;
+    // A stray unmatched brace ("Unclosed {topic") is template syntax the
+    // ticker would render raw — reject it too.
+    return !/[{}]/.test(line.replace(/\{[^}]*\}/g, ""));
   }
 
   function normalizeBank(json, key) {
@@ -532,9 +537,18 @@
 
   var VOCAB_KEYS = ["stanceFor", "stanceAgainst", "evidence", "expert"];
   var PALETTE_KEYS = ["sky", "backdrop", "floor", "accent"];
+  // Targets the combat/dialogue layers know how to apply. Extend in code
+  // alongside the effect handler, never from content alone.
+  var DIALOGUE_WEIGHT_TARGETS = ["next_landed_point"];
 
   function isNonEmptyString(value) {
     return typeof value === "string" && value.length > 0;
+  }
+
+  // Stable snake_case content keys (ids, lineBank): these end up in URLs,
+  // match state, and the ledger, so they get a strict shape.
+  function isKey(value) {
+    return typeof value === "string" && /^[a-z][a-z0-9_]*$/.test(value);
   }
 
   function isHexColor(value) {

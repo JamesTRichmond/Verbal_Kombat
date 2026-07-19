@@ -434,4 +434,52 @@ assert.ok(!sanitizeCustomQuestion('<img src=x onerror=alert(1)>hi').includes('<'
   assert.ok(!r3.fighters.some((f) => f.id === 'trickster'));
 }
 
+// ---- round-6 rules: stray braces, blank keys, path-like banks, targets ----
+{
+  const config = {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const loadWith = async (overrideFor) => {
+    const vk = {config};
+    const stub = (url) => Promise.resolve({ok: true, json: () => Promise.resolve(
+      overrideFor(url) ?? readJson(url))});
+    const warn = console.warn;
+    console.warn = () => {};
+    new Function('window', 'fetch', src)({VK: vk}, stub);
+    const loaded = await vk.content.load();
+    console.warn = warn;
+    return loaded;
+  };
+
+  // a stray unmatched brace invalidates the line; mute bucket -> bank fallback
+  const strayBrace = structuredClone(readJson('data/lines/logician.json'));
+  strayBrace.events.whiff = ['Unclosed {topic', 'closed} anyway'];
+  const r1 = await loadWith((u) => u === 'data/lines/logician.json' ? strayBrace : undefined);
+  assert.ok(!r1.lines.logician.events.whiff.some((l) => /[{}]/.test(l.replace(/\{[^}]*\}/g, ''))),
+    'stray braces never survive into a loaded bank');
+
+  // blank category label -> category invalid -> fallback topics
+  const blankLabel = structuredClone(readJson('data/topics.json'));
+  blankLabel.categories[4].label = '';
+  const r2 = await loadWith((u) => u === 'data/topics.json' ? blankLabel : undefined);
+  assert.equal(r2.topics.length, 1, 'blank label degrades topics to fallback');
+
+  // path-like lineBank -> fighter invalid -> count shortfall -> fallback fighters
+  const pathBank = structuredClone(readJson('data/fighters.json'));
+  pathBank.fighters[0].lineBank = '../lines/logician';
+  const r3 = await loadWith((u) => u === 'data/fighters.json' ? pathBank : undefined);
+  assert.equal(r3.fighters.length, 2, 'path-like lineBank degrades to fallback roster');
+  assert.ok(Object.keys(r3.lines).every((k) => /^[a-z][a-z0-9_]*$/.test(k)),
+    'no path-like bank keys are ever registered');
+
+  // unknown dialogue_weight target -> arena invalid -> fallback locations
+  const badTarget = structuredClone(readJson('data/locations.json'));
+  badTarget.locations[0].event.effect.target = 'next_point';
+  const r4 = await loadWith((u) => u === 'data/locations.json' ? badTarget : undefined);
+  assert.equal(r4.locations.length, 1, 'unknown effect target degrades locations to fallback');
+}
+
 console.log('Data tests passed.');
