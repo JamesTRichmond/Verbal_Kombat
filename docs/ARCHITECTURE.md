@@ -1,6 +1,6 @@
 # Architecture
 
-VerbalKombat Release 1 is a **dependency-free static web application**. It runs entirely in the browser from static files, with no build step, no bundler, no backend, and no runtime dependencies.
+VerbalKombat Release 1 is intended to be a **dependency-free static web application**. It runs entirely in the browser from static files, with no build step, no bundler, no backend, and no runtime dependencies.
 
 ## Goals
 
