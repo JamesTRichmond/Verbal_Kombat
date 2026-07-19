@@ -13,10 +13,29 @@
       <p class="tagline">Win the argument. Draw blood.</p>
     </header>
 
-    <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
+    <section id="location-select" class="screen" aria-label="Location selection">
+      <h2>Choose your arena</h2>
+      <ul class="arena-list" role="listbox" aria-label="Arenas">
+        <li>
+          <button class="arena-option" data-location="forum" role="option" tabindex="0">
+            <strong>The Forum</strong>
+            <span>Marble amphitheater · Echo doubles the next landed point</span>
+          </button>
+        </li>
+        <li>
+          <button class="arena-option" data-location="studio" role="option" tabindex="-1">
+            <strong>The Studio</strong>
+            <span>Broadcast set · Spotlight restores composure on the next hit</span>
+          </button>
+        </li>
+      </ul>
+      <p class="hint">Use <kbd>↑</kbd><kbd>↓</kbd> to choose, <kbd>Enter</kbd> to confirm.</p>
+    </section>
+
+    <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena" class="screen hidden">Verbal Kombat arena</canvas>
 
     <footer id="controls">
-      <p class="hint">
+      <p class="hint fight-only hidden">
         Throw an argument:
         <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
         &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
@@ -38,6 +57,7 @@
   <script src="src/engine/input.js"></script>
   <script src="src/render/renderer.js"></script>
   <script src="src/engine/gameLoop.js"></script>
+  <script src="src/ui/locationSelect.js"></script>
   <script src="src/main.js"></script>
 </body>
 </html>

@@ -34,7 +34,8 @@
       maxDelay: 2.4,
     },
 
-    // Path to the authoritative content file. See data/README.md for schema.
+    // Paths to authoritative content files. See data/README.md for schema.
     dataUrl: "data/fallacies.json",
+    locationsUrl: "data/locations.json",
   };
 })(window.VK);

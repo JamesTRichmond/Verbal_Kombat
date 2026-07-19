@@ -22,9 +22,12 @@
   function draw(ctx, state) {
     var W = ctx.canvas.width;
     var H = ctx.canvas.height;
+    var palette = state.location && state.location.palette ? state.location.palette : null;
+
     ctx.clearRect(0, 0, W, H);
 
-    drawFloor(ctx, W, H);
+    drawBackdrop(ctx, W, H, palette);
+    drawFloor(ctx, W, H, palette);
 
     var p = state.fighters.player;
     var e = state.fighters.enemy;
@@ -34,6 +37,8 @@
 
     drawBars(ctx, p, 24, 24, +1);
     drawBars(ctx, e, W - 24, 24, -1);
+
+    drawArenaName(ctx, state.location, W, H);
 
     if (state.phase === "ready") {
       banner(ctx, W, H, "PRESS SPACE TO FIGHT", COLORS.ink);
@@ -51,11 +56,58 @@
     }
 
     drawLog(ctx, state.log, W, H);
+    drawArenaEvent(ctx, state.arenaEvent, W, H);
   }
 
-  function drawFloor(ctx, W, H) {
-    ctx.fillStyle = "rgba(0,0,0,0.35)";
+  function drawBackdrop(ctx, W, H, palette) {
+    var grad = ctx.createLinearGradient(0, 0, 0, H * 0.75);
+    if (palette) {
+      grad.addColorStop(0, palette.skyTop);
+      grad.addColorStop(1, palette.skyBottom);
+    } else {
+      grad.addColorStop(0, "#1a1420");
+      grad.addColorStop(1, "#0c0c12");
+    }
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    // Simple parallax suggestion: distant horizontal lines.
+    ctx.save();
+    ctx.globalAlpha = 0.12;
+    ctx.strokeStyle = palette ? palette.accent : COLORS.accent;
+    ctx.lineWidth = 2;
+    for (var i = 0; i < 5; i++) {
+      var y = H * (0.15 + i * 0.1);
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(W, y + Math.sin(i) * 12);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawFloor(ctx, W, H, palette) {
+    ctx.fillStyle = palette ? palette.floor : "rgba(0,0,0,0.35)";
     ctx.fillRect(0, H * 0.7, W, H * 0.3);
+  }
+
+  function drawArenaName(ctx, location, W, H) {
+    if (!location) return;
+    ctx.fillStyle = COLORS.muted;
+    ctx.font = "italic 14px Trebuchet MS, sans-serif";
+    ctx.textAlign = "right";
+    ctx.fillText(location.name, W - 24, H - 24);
+  }
+
+  function drawArenaEvent(ctx, arenaEvent, W, H) {
+    if (!arenaEvent || !arenaEvent.pending) return;
+    ctx.save();
+    ctx.globalAlpha = 0.85;
+    ctx.fillStyle = "#e4b04a";
+    ctx.beginPath();
+    ctx.arc(W - 48, H - 56, 10, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
   }
 
   // A fighter is a simple stylized figure for now — a stand-in for real art.

@@ -19,9 +19,11 @@
     };
   }
 
-  function createState(moves) {
+  function createState(moves, location) {
+    location = location || defaultLocation();
     return {
       moves: moves,                 // array of fallacy/argument entries
+      location: location,           // selected arena
       phase: "ready",               // "ready" | "fighting" | "ko"
       winner: null,
       fighters: {
@@ -30,13 +32,44 @@
       },
       aiTimer: nextAiDelay(),
       log: [],                      // recent combat events (most recent last)
+      ledger: [                     // full match record for judging / replay
+        makeHeaderRecord(moves, location)
+      ],
+      arenaEvent: resetArenaEvent(location),
     };
   }
 
   function start(state) {
-    var fresh = createState(state.moves);
+    var fresh = createState(state.moves, state.location);
     fresh.phase = "fighting";
     return fresh;
+  }
+
+  function defaultLocation() {
+    return {
+      id: "forum",
+      name: "The Forum",
+      palette: { skyTop: "#2b1f3a", skyBottom: "#4a3b5c", floor: "#3d324a", accent: "#e4b04a" },
+      event: { id: "forum_echo", name: "Echo", interval: 8, effect: { type: "dialogueWeightBoost", multiplier: 2, duration: 1 } },
+    };
+  }
+
+  function makeHeaderRecord(moves, location) {
+    return {
+      type: "matchStart",
+      timestamp: 0,
+      location: { id: location.id, name: location.name },
+      moves: moves.length,
+      version: 1,
+    };
+  }
+
+  function resetArenaEvent(location) {
+    return {
+      timer: location.event ? location.event.interval : 0,
+      pending: false,
+      effect: location.event ? location.event.effect : null,
+    };
   }
 
   // Advance time-based systems by dt seconds.
@@ -56,7 +89,30 @@
       state.aiTimer = nextAiDelay();
     }
 
+    tickArenaEvent(state, dt);
     checkKO(state);
+  }
+
+  function tickArenaEvent(state, dt) {
+    var ev = state.arenaEvent;
+    if (!ev || !ev.effect) return;
+    if (ev.pending) return;
+    ev.timer -= dt;
+    if (ev.timer <= 0) {
+      ev.pending = true;
+      pushLog(state, {
+        type: "arenaEvent",
+        eventId: state.location.event.id,
+        name: state.location.event.name,
+        message: state.location.name + " rumbles: " + state.location.event.name + " is ready.",
+      });
+      pushLedger(state, {
+        type: "arenaEventReady",
+        timestamp: now(state),
+        eventId: state.location.event.id,
+        name: state.location.event.name,
+      });
+    }
   }
 
   // Player-facing helper: throw the move at the given index (0-based).
@@ -68,13 +124,61 @@
 
   function throwMove(state, attackerId, defenderId, move) {
     if (state.phase !== "fighting" || !move) return;
-    var event = VK.combat.resolveMove(
-      state.fighters[attackerId],
-      state.fighters[defenderId],
-      move
-    );
+    var attacker = state.fighters[attackerId];
+    var defender = state.fighters[defenderId];
+    var event = VK.combat.resolveMove(attacker, defender, move);
+    applyArenaEventOnHit(state, event, attacker);
     pushLog(state, event);
+    pushLedger(state, eventToLedger(event, state));
     checkKO(state);
+  }
+
+  function applyArenaEventOnHit(state, event, attacker) {
+    var ev = state.arenaEvent;
+    if (!ev || !ev.pending || !ev.effect) return;
+    if (event.type !== "hit") return;
+
+    var effect = ev.effect;
+    if (effect.type === "dialogueWeightBoost") {
+      event.dialogueWeight = (event.dialogueWeight || 1) * effect.multiplier;
+    } else if (effect.type === "composureRestore") {
+      var maxC = VK.config.fighter.maxComposure;
+      attacker.composure = VK.combat.clamp(attacker.composure + effect.amount, 0, maxC);
+    }
+
+    pushLog(state, {
+      type: "arenaEvent",
+      eventId: state.location.event.id,
+      name: state.location.event.name,
+      message: state.location.name + " " + state.location.event.name.toLowerCase() + " boosts " + attacker.name + "!",
+    });
+    pushLedger(state, {
+      type: "arenaEventTriggered",
+      timestamp: now(state),
+      eventId: state.location.event.id,
+      name: state.location.event.name,
+      effect: effect.type,
+      attacker: attacker.id,
+    });
+
+    ev.pending = false;
+    ev.timer = state.location.event.interval;
+  }
+
+  function eventToLedger(event, state) {
+    return {
+      type: event.type,
+      timestamp: now(state),
+      attacker: event.attacker,
+      defender: event.defender,
+      move: event.move ? event.move.id : null,
+      damage: event.damage,
+      dialogueWeight: event.dialogueWeight || 1,
+    };
+  }
+
+  function now(state) {
+    return state.ledger ? state.ledger.length : 0;
   }
 
   function checkKO(state) {
@@ -84,13 +188,24 @@
     if (p.health <= 0 || e.health <= 0) {
       state.phase = "ko";
       state.winner = p.health <= 0 ? e : p;
-      pushLog(state, { type: "ko", message: state.winner.name + " wins the argument." });
+      var koEvent = { type: "ko", message: state.winner.name + " wins the argument." };
+      pushLog(state, koEvent);
+      pushLedger(state, {
+        type: "ko",
+        timestamp: now(state),
+        winner: state.winner.id,
+      });
     }
   }
 
   function pushLog(state, event) {
     state.log.push(event);
     if (state.log.length > 5) state.log.shift();
+  }
+
+  function pushLedger(state, record) {
+    if (!state.ledger) state.ledger = [];
+    state.ledger.push(record);
   }
 
   function randomMove(state) {

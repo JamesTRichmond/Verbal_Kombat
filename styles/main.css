@@ -73,3 +73,56 @@ kbd {
   font-family: inherit;
   font-size: 0.85em;
 }
+
+/* Screen flow */
+.screen.hidden { display: none; }
+
+#location-select h2 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+}
+
+.arena-list {
+  list-style: none;
+  margin: 0 auto 16px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  max-width: 560px;
+}
+
+.arena-option {
+  width: 100%;
+  padding: 16px 20px;
+  text-align: left;
+  background: var(--panel);
+  color: var(--ink);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.arena-option strong {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.arena-option span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.arena-option:hover,
+.arena-option:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(228, 176, 74, 0.35);
+}
+
+.fight-only.hidden { display: none; }

@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "locations": [
+    {
+      "id": "forum",
+      "name": "The Forum",
+      "description": "A marble amphitheater where every landed point reverberates.",
+      "palette": {
+        "skyTop": "#2b1f3a",
+        "skyBottom": "#4a3b5c",
+        "floor": "#3d324a",
+        "accent": "#e4b04a"
+      },
+      "event": {
+        "id": "forum_echo",
+        "name": "Echo",
+        "description": "Doubles the dialogue weight of the next landed point.",
+        "trigger": "periodic",
+        "interval": 8,
+        "effect": {
+          "type": "dialogueWeightBoost",
+          "multiplier": 2,
+          "duration": 1
+        }
+      }
+    },
+    {
+      "id": "studio",
+      "name": "The Studio",
+      "description": "A broadcast set where timing pressure favors the composed.",
+      "palette": {
+        "skyTop": "#0f1a25",
+        "skyBottom": "#1c2f3f",
+        "floor": "#141f2b",
+        "accent": "#4aa3e4"
+      },
+      "event": {
+        "id": "studio_spotlight",
+        "name": "Spotlight",
+        "description": "Restores composure to the fighter who lands the next hit.",
+        "trigger": "periodic",
+        "interval": 10,
+        "effect": {
+          "type": "composureRestore",
+          "amount": 15,
+          "duration": 1
+        }
+      }
+    }
+  ]
+}
