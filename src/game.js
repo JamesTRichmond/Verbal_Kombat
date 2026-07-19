@@ -21,7 +21,16 @@
     }
     ctx = canvas.getContext("2d");
 
+    // Mark the loop as "starting" immediately so repeated calls to start()
+    // don't kick off multiple concurrent boots.
+    loop = { stop: function () {} };
+    var pendingLoop = loop;
+    var pendingCtx = ctx;
+
     VK.loadData().then(function (moves) {
+      // If stop() ran (or a later start() replaced ctx/loop), abort.
+      if (loop !== pendingLoop || ctx !== pendingCtx) return;
+
       var current = VK.state.create(moves);
       var getState = function () { return current; };
 
@@ -35,9 +44,11 @@
 
       console.log("[VK] Fight ready — " + moves.length + " arguments loaded. Press Space.");
     }).catch(function (err) {
+      // If stop() ran, avoid logging a boot error for a screen the user left.
+      if (ctx !== pendingCtx) return;
+      if (loop === pendingLoop) loop = null;
       console.error("[VK] Fight boot failed:", err);
     });
-  }
 
   function stop() {
     if (loop) {
