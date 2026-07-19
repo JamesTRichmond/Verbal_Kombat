@@ -70,6 +70,7 @@
   }
 
   // Select a line. Pure function; deterministic when provided a seeded index.
+  // pickIndex selects among alternates in the bank (for seeded variation).
   function pickLine(event, fighterId, category, pickIndex) {
     var categoryKey = category || eventCategory(event);
     if (!categoryKey) return null;

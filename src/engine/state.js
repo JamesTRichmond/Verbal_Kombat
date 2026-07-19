@@ -137,13 +137,13 @@
     if (event.type === "countered") {
       speakerId = event.defender.id;
     } else if (event.type === "ko") {
-      speakerId = state.winner ? state.winner.id : null;
+      speakerId = event.winner ? event.winner.id : null;
     } else {
       speakerId = event.attacker ? event.attacker.id : null;
     }
     if (!speakerId) return;
 
-    var line = VK.dialogue.pickLine(event, speakerId, category, 0);
+    var line = VK.dialogue.pickLine(event, speakerId, category);
     if (line) VK.ticker.enqueue(state.ticker, line);
   }
 

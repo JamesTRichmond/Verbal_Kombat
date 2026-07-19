@@ -135,10 +135,17 @@
     var measured = ctx.measureText(text).width;
     if (measured > maxWidth) {
       // Trim with ellipsis if a line is unexpectedly long.
-      while (text.length > 0 && ctx.measureText(text + "…").width > maxWidth) {
-        text = text.slice(0, -1);
+      var low = 0;
+      var high = text.length;
+      while (low < high) {
+        var mid = Math.floor((low + high + 1) / 2);
+        if (ctx.measureText(text.slice(0, mid) + "…").width <= maxWidth) {
+          low = mid;
+        } else {
+          high = mid - 1;
+        }
       }
-      text += "…";
+      text = text.slice(0, low) + "…";
     }
 
     ctx.fillStyle = COLORS.panel;
