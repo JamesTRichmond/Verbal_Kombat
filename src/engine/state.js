@@ -78,6 +78,7 @@
   }
 
   function checkKO(state) {
+    if (state.phase === "ko") return;
     var p = state.fighters.player;
     var e = state.fighters.enemy;
     if (p.health <= 0 || e.health <= 0) {

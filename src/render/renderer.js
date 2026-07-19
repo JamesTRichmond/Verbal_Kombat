@@ -38,7 +38,13 @@
     if (state.phase === "ready") {
       banner(ctx, W, H, "PRESS SPACE TO FIGHT", COLORS.ink);
     } else if (state.phase === "ko") {
-      banner(ctx, W, H, (state.winner ? state.winner.name.toUpperCase() : "") + " WINS", COLORS.p2);
+      banner(
+        ctx,
+        W,
+        H,
+        (state.winner ? state.winner.name.toUpperCase() : "") + " WINS",
+        state.winner && state.winner.id === "player" ? COLORS.p1 : COLORS.p2
+      );
       subBanner(ctx, W, H, "Space to rematch");
     } else {
       drawMoveMenu(ctx, state.moves, W, H);

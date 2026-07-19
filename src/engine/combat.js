@@ -30,11 +30,12 @@
     // Does the defender catch the weak point? A high-risk move against a
     // composed defender gets countered. Deterministic for a predictable
     // starter; swap in probability/skill later.
-    var exposed = move.risk >= 6 && defender.composure >= 45;
+    var exposed =
+      move.risk >= cfg.counterRiskThreshold &&
+      defender.composure >= cfg.counterComposureThreshold;
 
     if (exposed) {
       var counterDmg = Math.round(move.risk * cfg.counterMultiplier);
-      defender.health = clamp(defender.health - 0, 0, maxHealth()); // no self-hit
       attacker.health = clamp(attacker.health - counterDmg, 0, maxHealth());
       return {
         type: "countered",

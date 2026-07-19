@@ -64,13 +64,17 @@
         f &&
         typeof f.id === "string" &&
         typeof f.name === "string" &&
-        typeof f.damage === "number" &&
-        typeof f.risk === "number"
+        isValidScore(f.damage) &&
+        isValidScore(f.risk)
       );
     });
     if (clean.length === 0) {
       throw new Error("No valid fallacies in " + source);
     }
     return clean;
+  }
+
+  function isValidScore(value) {
+    return Number.isInteger(value) && value >= 1 && value <= 10;
   }
 })(window.VK);

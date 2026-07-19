@@ -29,6 +29,8 @@
       loop.start();
 
       console.log("[VK] Ready — " + moves.length + " arguments loaded. Press Space.");
+    }).catch(function (err) {
+      console.error("[VK] Boot failed:", err);
     });
   }
 

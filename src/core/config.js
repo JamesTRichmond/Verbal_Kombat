@@ -22,6 +22,8 @@
       // are afterward: if the defender counters, they hit back for
       // risk * counterMultiplier.
       counterMultiplier: 1.4,
+      counterRiskThreshold: 6,
+      counterComposureThreshold: 45,
       // Composure cost to throw a move scales with its damage.
       composureCostPerDamage: 1.5,
     },
