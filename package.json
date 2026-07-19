@@ -1,1 +1,14 @@
-{"name":"verbal-kombat","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node scoring.test.mjs","start":"node serve.js"}}
+{
+  "name": "verbal-kombat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scoring.test.mjs",
+    "test:e2e": "playwright test",
+    "start": "node serve.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  }
+}

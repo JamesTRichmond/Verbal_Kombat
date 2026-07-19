@@ -5,6 +5,10 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Node (only if tooling is added later — none required to run the game)
+# Node (dev-only tooling like Playwright)
 node_modules/
 npm-debug.log*
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
