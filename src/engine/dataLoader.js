@@ -152,6 +152,7 @@
         typeof loc.palette.skyTop === "string" &&
         typeof loc.palette.skyBottom === "string" &&
         typeof loc.palette.floor === "string" &&
+        typeof loc.palette.accent === "string" &&
         loc.event &&
         typeof loc.event.id === "string" &&
         typeof loc.event.interval === "number" &&

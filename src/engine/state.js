@@ -204,7 +204,6 @@
   }
 
   function pushLedger(state, record) {
-    if (!state.ledger) state.ledger = [];
     state.ledger.push(record);
   }
 
