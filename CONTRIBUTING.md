@@ -4,7 +4,7 @@ Thanks for your interest in VerbalKombat — a browser fighting game where attac
 
 ## Project snapshot
 
-VerbalKombat runs entirely in the browser. There is no backend, no build step, and no runtime dependencies. Release 1 is intentionally small (see [Release 1 scope](#release-1-scope) below).
+VerbalKombat Release 1 is intended to run entirely in the browser. There is no backend, no build step, and no runtime dependencies. Release 1 is intentionally small (see [Release 1 scope](#release-1-scope) below).
 
 For architectural context, read [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). For the reasoning behind key product/technical trade-offs, read [`docs/DECISIONS.md`](docs/DECISIONS.md).
 
