@@ -5,7 +5,7 @@ VerbalKombat Release 1 is intended to be a **dependency-free static web applicat
 ## Goals
 
 - A new contributor can read the whole codebase in one sitting.
-- Once implemented, anyone will be able to open `index.html` and play the game — no toolchain required.
+- Once implemented, anyone will be able to serve the project root and open `index.html` to play the game — no build toolchain required.
 - Scoring is transparent and reproducible: same inputs always yield the same score and verdict.
 
 ## High-level shape

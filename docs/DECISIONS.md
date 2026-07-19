@@ -37,7 +37,7 @@ This log records the reasoning behind product and technical choices for VerbalKo
 
 **Decision.** Release 1 uses plain HTML, CSS, and JavaScript with no runtime dependencies, no bundler, and no framework. Tests run in the browser via a tiny inline harness.
 
-**Consequences.** Once gameplay is implemented, cloning the repo and opening `index.html` will be the full setup. There is no `package.json` to audit and no lockfile to keep current. If a future feature genuinely requires a dependency, it must be justified in a new decision entry.
+**Consequences.** Once gameplay is implemented, cloning the repo, serving the project root, and opening `index.html` will be the full setup. There is no `package.json` to audit and no lockfile to keep current. If a future feature genuinely requires a dependency, it must be justified in a new decision entry.
 
 ## D5. No backend, auth, or persistence in Release 1
 
@@ -45,4 +45,4 @@ This log records the reasoning behind product and technical choices for VerbalKo
 
 **Decision.** Release 1 is 100% client-side. Nothing is persisted across a page reload.
 
-**Consequences.** The project can be hosted on any static file host (or none — it works from `file://`). Any future feature that needs state beyond the tab must be introduced with its own decision entry.
+**Consequences.** The project can be hosted on any static file host or served locally with a static file server. Any future feature that needs state beyond the tab must be introduced with its own decision entry.
