@@ -17,7 +17,7 @@ git clone https://github.com/JamesTRichmond/Verbal_Kombat.git
 cd Verbal_Kombat
 ```
 
-To run the game once gameplay is implemented, open `index.html` directly in your browser, or serve the project root with any static file server, for example:
+To run the game, serve the project root with a static file server. The game uses ES modules, so opening `index.html` directly from `file://` is blocked by browser CORS restrictions. For example:
 
 ```bash
 python3 -m http.server 8000
