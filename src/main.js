@@ -100,11 +100,8 @@
 
       inputDetach = VK.input.attach({
         onStart: function () {
-          if (current && currentScreen === SCREEN.FIGHT && current.phase === "ko") {
-            current = VK.state.start(current);
-            if (loop) loop.stop();
-            loop = VK.gameLoop.create(ctx, function () { return current; });
-            loop.start();
+          if (currentScreen === SCREEN.FIGHT && current && current.phase === "ko") {
+            startFight();
           }
         },
         onMove: function (index) {
