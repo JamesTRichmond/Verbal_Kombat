@@ -25,6 +25,7 @@
   }
 
   // handlers: { onMove(index), onStart() }
+  // Returns a detach function that removes the global keydown listener.
   function attach(handlers) {
     function onKeyDown(e) {
       if (isInteractiveTarget(e.target)) return;
