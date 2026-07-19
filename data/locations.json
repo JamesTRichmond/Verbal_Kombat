@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "locations": [
+    {
+      "id": "forum",
+      "name": "The Forum",
+      "description": "A marble amphitheater where every landed point rings twice.",
+      "palette": {
+        "skyTop": "#1a237e",
+        "skyBottom": "#3949ab",
+        "floor": "#e0e0e0",
+        "accent": "#ffd54f"
+      },
+      "environmentalEvent": {
+        "id": "forum_echo",
+        "trigger": "onLightHit",
+        "cooldownSeconds": 20,
+        "effect": {
+          "type": "dialogueWeight",
+          "multiplier": 2.0,
+          "durationSeconds": 3
+        },
+        "announcement": "The Forum echoes your last point across the hall."
+      }
+    },
+    {
+      "id": "studio",
+      "name": "The Studio",
+      "description": "A live-broadcast set where the crowd rewards momentum and punishes silence.",
+      "palette": {
+        "skyTop": "#212121",
+        "skyBottom": "#424242",
+        "floor": "#616161",
+        "accent": "#ff4081"
+      },
+      "environmentalEvent": {
+        "id": "studio_spotlight",
+        "trigger": "onCombo",
+        "cooldownSeconds": 25,
+        "effect": {
+          "type": "composureRegen",
+          "bonusPerSecond": 15,
+          "durationSeconds": 4
+        },
+        "announcement": "The spotlight locks on the combo — momentum surges."
+      }
+    }
+  ]
+}

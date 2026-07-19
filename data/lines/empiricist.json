@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "fighterId": "empiricist",
+  "categories": {
+    "environment": {
+      "lightHit": ["The numbers are not ambiguous on this point.", "One reactor's lifetime output is documented."],
+      "heavyHit": ["You are comparing theoretical risk against measured harm, and the measured harm wins.", "The data spans forty years and three continents."],
+      "counter": ["That citation refers to a mining accident, not a lifecycle study.", "Cherry-picking a single disaster is not an energy policy."],
+      "block": ["Caution is warranted. Exaggeration is not.", "I accept the uncertainty; I do not accept ignoring the range."],
+      "whiff": ["You cited a press release as a peer-reviewed finding.", "That figure has been revised twice."],
+      "combo": ["Baseline, intervention, control, replication — the result is robust."],
+      "special": ["Cite Your Sources: the literature is unanimous."]
+    },
+    "work_future": {
+      "lightHit": ["Pilots exist. Results exist.", "We can measure this instead of theorizing."],
+      "heavyHit": ["The trial cut hours and kept output. That is not ideology; that is observation.", "Every control group told the same story."],
+      "counter": ["You predicted mass layoffs. The trial data show the opposite.", "Anecdote is not a sample."],
+      "block": ["Implementation details matter. The trend still holds.", "One failed rollout does not falsify the pattern."],
+      "whiff": ["You described your own office, not the literature.", "That survey had no control group."],
+      "combo": ["Pilot, measure, adjust, scale — evidence at every step."],
+      "special": ["Cite Your Sources: the productivity data speak for themselves."]
+    },
+    "education": {
+      "lightHit": ["Scores improved where the intervention was implemented.", "Retention data are publicly available."],
+      "heavyHit": ["The districts that adopted it saw gains; the matched controls did not.", "A randomized trial is worth a thousand opinion pieces."],
+      "counter": ["That objection appeared in the literature. It was addressed in the follow-up.", "Correlation is not causation — which is why they ran a controlled study."],
+      "block": ["A single failed classroom is not a failed model.", "Measurement error is real; the effect survives it."],
+      "whiff": ["You quoted a headline, not the paper.", "That statistic is from a promotional brochure."],
+      "combo": ["Diagnose, intervene, measure, iterate — the loop is the lesson."],
+      "special": ["Cite Your Sources: the evidence is in."]
+    }
+  }
+}
