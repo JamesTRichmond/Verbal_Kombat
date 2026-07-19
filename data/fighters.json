@@ -4,121 +4,105 @@
     {
       "id": "logician",
       "name": "The Logician",
-      "style": "Precise, counter-focused. Waits for an overreach, then exposes the flaw.",
-      "stats": {
-        "reach": 7,
-        "speed": 4,
-        "power": 5,
-        "defense": 7
+      "tagline": "Every step follows.",
+      "style": {
+        "argument": "Builds airtight chains of reasoning and waits for the flaw in yours.",
+        "combat": "Precise and counter-focused: modest damage, devastating punishes."
       },
+      "stats": { "power": 5, "speed": 7 },
       "special": {
-        "name": "Q.E.D.",
-        "description": "A perfectly timed rebuttal that converts an opponent's risk into guaranteed damage."
+        "id": "syllogism",
+        "name": "The Syllogism",
+        "description": "A three-part chain the opponent cannot step out of. Heavy damage if all three parts connect."
       },
-      "lineBankKeys": ["tech_ethics", "morality", "education"],
+      "lineBank": "logician",
       "cpu": {
         "aggressionCurve": [
-          { "hpThreshold": 100, "pressure": 0.25 },
-          { "hpThreshold": 60, "pressure": 0.35 },
-          { "hpThreshold": 30, "pressure": 0.45 }
+          { "untilTick": 1200, "aggression": 0.25 },
+          { "untilTick": 2400, "aggression": 0.45 },
+          { "untilTick": 3600, "aggression": 0.7 }
         ],
-        "punishWindows": {
-          "whiff": { "frames": 18, "response": "counter" },
-          "heavyStartup": { "frames": 12, "response": "light" },
-          "blockPushback": { "frames": 8, "response": "grab" }
-        },
-        "preferredRange": "mid",
-        "patience": 0.8
+        "punishWindowTicks": 18,
+        "blockBias": 0.6,
+        "preferredRange": "mid"
       }
     },
     {
       "id": "demagogue",
       "name": "The Demagogue",
-      "style": "Heavy swings, crowd-feeding. Turns every exchange into a spectacle.",
-      "stats": {
-        "reach": 6,
-        "speed": 3,
-        "power": 9,
-        "defense": 4
+      "tagline": "The crowd is already with me.",
+      "style": {
+        "argument": "Sweeping claims delivered loud; feeds on momentum and applause.",
+        "combat": "Heavy swings and forward pressure: huge damage, big openings."
       },
+      "stats": { "power": 9, "speed": 4 },
       "special": {
-        "name": "Soapbox",
-        "description": "A dramatic heavy attack that gains bonus damage after a successful taunt or blocked combo."
+        "id": "rally",
+        "name": "Rally the Crowd",
+        "description": "Whips the audience into a roar. The next heavy that lands carries the crowd's weight with it."
       },
-      "lineBankKeys": ["food_culture", "urban_life", "work_future"],
+      "lineBank": "demagogue",
       "cpu": {
         "aggressionCurve": [
-          { "hpThreshold": 100, "pressure": 0.65 },
-          { "hpThreshold": 60, "pressure": 0.75 },
-          { "hpThreshold": 30, "pressure": 0.9 }
+          { "untilTick": 1200, "aggression": 0.65 },
+          { "untilTick": 2400, "aggression": 0.8 },
+          { "untilTick": 3600, "aggression": 0.9 }
         ],
-        "punishWindows": {
-          "whiff": { "frames": 10, "response": "heavy" },
-          "heavyStartup": { "frames": 6, "response": "heavy" },
-          "blockPushback": { "frames": 12, "response": "heavy" }
-        },
-        "preferredRange": "close",
-        "patience": 0.25
+        "punishWindowTicks": 10,
+        "blockBias": 0.2,
+        "preferredRange": "close"
       }
     },
     {
       "id": "empiricist",
       "name": "The Empiricist",
-      "style": "Jab pressure, evidence combos. Builds a case one hit at a time.",
-      "stats": {
-        "reach": 5,
-        "speed": 8,
-        "power": 4,
-        "defense": 5
+      "tagline": "Show me the data.",
+      "style": {
+        "argument": "Stacks observation on observation until the conclusion is unavoidable.",
+        "combat": "Relentless jab pressure: chips you down and converts jabs into evidence combos."
       },
+      "stats": { "power": 6, "speed": 6 },
       "special": {
-        "name": "Cite Your Sources",
-        "description": "A combo-capping special that adds composure damage and extends the current chain."
+        "id": "weight_of_evidence",
+        "name": "Weight of Evidence",
+        "description": "Drops the accumulated case all at once. Damage scales with hits landed since the last special."
       },
-      "lineBankKeys": ["environment", "work_future", "education"],
+      "lineBank": "empiricist",
       "cpu": {
         "aggressionCurve": [
-          { "hpThreshold": 100, "pressure": 0.5 },
-          { "hpThreshold": 60, "pressure": 0.5 },
-          { "hpThreshold": 30, "pressure": 0.65 }
+          { "untilTick": 1200, "aggression": 0.5 },
+          { "untilTick": 2400, "aggression": 0.6 },
+          { "untilTick": 3600, "aggression": 0.75 }
         ],
-        "punishWindows": {
-          "whiff": { "frames": 14, "response": "combo" },
-          "heavyStartup": { "frames": 10, "response": "combo" },
-          "blockPushback": { "frames": 6, "response": "light" }
-        },
-        "preferredRange": "close",
-        "patience": 0.55
+        "punishWindowTicks": 14,
+        "blockBias": 0.4,
+        "preferredRange": "mid"
       }
     },
     {
       "id": "trickster",
       "name": "The Trickster",
-      "style": "Mobility, interrupts. Never where the argument expects them to be.",
-      "stats": {
-        "reach": 4,
-        "speed": 9,
-        "power": 4,
-        "defense": 5
+      "tagline": "Wrong question.",
+      "style": {
+        "argument": "Reframes, redirects, and answers the question you should have asked.",
+        "combat": "Mobile and slippery: interrupts, sidesteps, and makes whiffs expensive."
       },
+      "stats": { "power": 4, "speed": 9 },
       "special": {
-        "name": "Rhetorical Tumble",
-        "description": "A quick reposition and interrupt that cancels an opponent's startup and steals initiative."
+        "id": "reframe",
+        "name": "The Reframe",
+        "description": "Flips the premise mid-exchange. Swaps positions with the opponent and steals the momentum of their last move."
       },
-      "lineBankKeys": ["sports_games", "morality", "food_culture"],
+      "lineBank": "trickster",
       "cpu": {
         "aggressionCurve": [
-          { "hpThreshold": 100, "pressure": 0.4 },
-          { "hpThreshold": 60, "pressure": 0.55 },
-          { "hpThreshold": 30, "pressure": 0.7 }
+          { "untilTick": 1200, "aggression": 0.4 },
+          { "untilTick": 2400, "aggression": 0.55 },
+          { "untilTick": 3600, "aggression": 0.85 }
         ],
-        "punishWindows": {
-          "whiff": { "frames": 12, "response": "interrupt" },
-          "heavyStartup": { "frames": 16, "response": "interrupt" },
-          "blockPushback": { "frames": 10, "response": "interrupt" }
-        },
-        "preferredRange": "far",
-        "patience": 0.6
+        "punishWindowTicks": 20,
+        "blockBias": 0.3,
+        "preferredRange": "far"
       }
     }
   ]

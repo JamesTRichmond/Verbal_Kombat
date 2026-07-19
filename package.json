@@ -1,1 +1,1 @@
-{"name":"verbal-kombat","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node scoring.test.mjs && node src/engine/dataLoader.test.mjs && node src/engine/htmlEscape.test.mjs","start":"node serve.js"}}
+{"name":"verbal-kombat","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node scoring.test.mjs && node data.test.mjs","start":"node serve.js"}}

@@ -15,8 +15,7 @@
     }
     var ctx = canvas.getContext("2d");
 
-    VK.loadData().then(function (content) {
-      var moves = content.fallacies;
+    VK.loadData().then(function (moves) {
       // Single mutable state reference the loop reads and input replaces.
       var current = VK.state.create(moves);
       var getState = function () { return current; };

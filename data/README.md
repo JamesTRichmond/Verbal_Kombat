@@ -1,24 +1,174 @@
 # Content data
 
-These are the **authoritative content files** the engine loads at runtime. They
-are the one source of truth for each schema; design/content drafts (authored
-under `/docs`) get transcribed into these shapes.
+Authoritative content files the engine loads at runtime. Each file is the one
+source of truth for its schema; design/content drafts (authored under `/docs`)
+get transcribed into these shapes.
 
-All files are loaded through `src/engine/dataLoader.js`, which uses the same
-fetch-and-fallback pattern for each: if `fetch` fails (e.g. Chrome blocks
-`file://`), the game falls back to a tiny built-in demo set and prints a note
-in the console. To load the full files, serve locally:
+Pivot content (Release 1 — "The Fight Writes", see `docs/DESIGN-v2.md`):
 
-```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
+| File | Loaded by | What it holds |
+|---|---|---|
+| `topics.json` | `src/engine/contentLoader.js` | 8 argument categories × 3 questions, plus per-category vocab |
+| `fighters.json` | `src/engine/contentLoader.js` | The 4-fighter roster: stats, style, special, CPU behavior |
+| `locations.json` | `src/engine/contentLoader.js` | The 2 arenas: palette, parallax, scripted environmental event |
+| `lines/<bank>.json` | `src/engine/contentLoader.js` | Per-fighter dialogue template banks keyed by ledger event type |
+| `fallacies.json` | `src/engine/dataLoader.js` | Canvas-prototype argument content (pre-pivot) |
+
+All loading follows the same fallback pattern: fetch the JSON, and if fetch is
+unavailable (e.g. `file://`) fall back to a small built-in set so the game
+still boots. Serve locally (`npm start`) for full content.
+
+Served content is strictly validated, and shortfalls degrade rather than ship:
+a reachable file that is malformed, short of the required Release 1 counts
+(8 categories / 4 fighters / 2 arenas), missing lines for a required event
+type, or using unknown `{placeholders}` falls back to the built-in set (or,
+for a line bank with no built-in fallback, drops the affected fighter from the
+roster). Category overrides are filtered exactly like base lines; an override
+with no valid lines is discarded and the base bucket wins.
+
+## `topics.json`
+
+```jsonc
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "food",              // snake_case, unique, stable
+      "label": "Food",           // category chip text
+      "questions": [             // exactly 3 pre-written questions per category
+        { "id": "pineapple_pizza", "text": "Does pineapple belong on pizza?" }
+      ],
+      "vocab": {                 // interpolated into dialogue templates
+        "stanceFor": "...",      // the affirmative framing
+        "stanceAgainst": "...",  // the negative framing
+        "evidence": "...",       // a category-flavored piece of evidence
+        "expert": "..."          // a category-flavored authority
+      }
+    }
+  ]
+}
 ```
 
-Paths are configured in `src/core/config.js` under `dataUrls`.
+**Custom questions** are player-typed free text entered *within a selected
+category* (decision D7) — they inherit that category's vocab and line banks.
+Custom input must pass through `VK.content.sanitizeCustomQuestion()` (strips
+markup and control characters, collapses whitespace, caps at
+`config.content.maxCustomQuestionLength`) before it enters match state, and is
+only ever rendered via canvas `fillText` or DOM `textContent`, never
+`innerHTML`.
+
+## `fighters.json`
+
+```jsonc
+{
+  "version": 1,
+  "fighters": [
+    {
+      "id": "logician",           // snake_case, unique, stable
+      "name": "The Logician",
+      "tagline": "...",           // one-liner for the identity panel
+      "style": {
+        "argument": "...",        // how they argue (identity panel)
+        "combat": "..."           // how that maps to combat (identity panel)
+      },
+      "stats": { "power": 5, "speed": 7 },   // integers 1–10, shown on select
+      "special": {
+        "id": "syllogism",
+        "name": "The Syllogism",  // the named special on the identity panel
+        "description": "..."
+      },
+      "lineBank": "logician",     // key into data/lines/<key>.json
+      "cpu": {                    // scripted behavior per decision D10
+        "aggressionCurve": [      // piecewise curve over the round, in ticks
+          { "untilTick": 1200, "aggression": 0.25 }   // aggression 0..1
+        ],
+        "punishWindowTicks": 18,  // how long after your whiff the CPU punishes
+        "blockBias": 0.6,         // 0..1 tendency to block under pressure
+        "preferredRange": "mid"   // "close" | "mid" | "far"
+      }
+    }
+  ]
+}
+```
+
+All timing is in **simulation ticks** (fixed timestep, 60/s — decision D11),
+never wall-clock milliseconds.
+
+## `locations.json`
+
+```jsonc
+{
+  "version": 1,
+  "locations": [
+    {
+      "id": "forum",
+      "name": "The Forum",
+      "description": "...",
+      "palette": { "sky": "#...", "backdrop": "#...", "floor": "#...", "accent": "#..." },
+      "parallaxLayers": ["colonnade", "crowd", "dais"],   // back-to-front
+      "event": {                  // the one scripted environmental event (R1)
+        "id": "echo",
+        "name": "The Echo",
+        "trigger": { "atTick": 1800 },
+        "effect": {
+          // "dialogue_weight": multiply the dialogue weight of a target event
+          //   { "type": "dialogue_weight", "target": "next_landed_point", "multiplier": 2 }
+          // "event_weight_bonus": add judge weight to an event type for a window
+          //   { "type": "event_weight_bonus", "eventType": "counter", "bonus": 2, "durationTicks": 600 }
+          "type": "dialogue_weight",
+          "target": "next_landed_point",
+          "multiplier": 2
+        },
+        "announcement": "..."     // ticker line when the event fires (it is
+                                  // itself a ledger event)
+      }
+    }
+  ]
+}
+```
+
+## `lines/<bank>.json` — dialogue template banks
+
+```jsonc
+{
+  "version": 1,
+  "fighter": "logician",          // must match the filename / lineBank key
+  "events": {                     // every ledger event type must be present
+    "lightHit":  ["...", "..."],  // advance a point
+    "heavyHit":  ["..."],         // press a point hard
+    "combo":     ["..."],         // a developed multi-clause argument
+    "special":   ["..."],         // the fighter's signature rhetorical technique
+    "whiff":     ["..."],         // a stumble the opponent can verbally punish
+    "blocked":   ["..."],         // the opponent absorbed the point
+    "counter":   ["..."],         // a direct rebuttal
+    "victory":   ["..."],
+    "defeat":    ["..."]
+  },
+  "categoryOverrides": {          // optional: full per-category replacements
+    "philosophy": { "special": ["..."] }
+  }
+}
+```
+
+Templates may use the placeholders `{topic}`, `{opponent}` (filled from match
+state) and `{stanceFor}`, `{stanceAgainst}`, `{evidence}`, `{expert}` (filled
+from the topic category's `vocab`). Lookup semantics
+(`VK.content.linesFor(bank, categoryId, eventType)`): a category override wins
+when present, otherwise the base `events` bank applies — so every fighter has
+per-category dialogue for all 8 categories via vocab interpolation, and
+categories can be given fully bespoke lines incrementally. Combo/special lines
+should read visibly more developed than jab lines (dialogue-engine AC). Keep
+the tone stylized and playful, not hateful.
+
+Validation: `npm test` runs `data.test.mjs`, which checks all of the above
+shapes, cross-references (lineBank keys → files, override category ids →
+topics), and placeholder usage.
 
 ---
 
-## `fallacies.json` — argument moves
+# Canvas-prototype content — `fallacies.json`
+
+## Schema
 
 ```jsonc
 {
@@ -47,177 +197,14 @@ Paths are configured in `src/core/config.js` under `dataUrls`.
 - Add new entries by appending to the `fallacies` array. No code change needed —
   the engine picks up everything in the file.
 
----
+## How it's loaded
 
-## `topics.json` — debate categories and questions
+`src/engine/dataLoader.js` fetches this file. Opening `index.html` directly from
+disk works in most browsers, but some (e.g. Chrome) block `fetch` on `file://`.
+In that case the game falls back to a tiny built-in demo set and prints a note
+in the console. To load the full file, serve locally:
 
-```jsonc
-{
-  "version": 1,
-  "categories": [
-    {
-      "id": "food_culture",   // stable, unique, snake_case
-      "name": "Food & Culture",
-      "questions": [          // exactly 3 pre-written questions per category in R1
-        "Does pineapple belong on pizza?",
-        "...",
-        "..."
-      ]
-    }
-  ]
-}
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
 ```
-
-### Field rules
-
-- **`id`** — stable snake_case identifier. Used to look up per-category line
-  banks and to group custom questions.
-- **`questions`** — array of question strings. R1 ships exactly 3 per category.
-- Custom questions are always entered inside a selected category (see
-  [DESIGN-v2.md](/docs/DESIGN-v2.md)). They inherit that category's line banks.
-- **Security:** custom question text must never be rendered as raw HTML. Pass it
-  through `VK.htmlEscape` before inserting into the DOM.
-
----
-
-## `fighters.json` — roster stats, specials, and CPU behavior
-
-```jsonc
-{
-  "version": 1,
-  "fighters": [
-    {
-      "id": "logician",       // stable, unique, snake_case
-      "name": "The Logician",
-      "style": "Precise, counter-focused...",
-      "stats": {              // all integers 1–10
-        "reach": 7,
-        "speed": 4,
-        "power": 5,
-        "defense": 7
-      },
-      "special": {
-        "name": "Q.E.D.",
-        "description": "..."
-      },
-      "lineBankKeys": [       // category ids this fighter can draw lines from
-        "tech_ethics",
-        "morality",
-        "education"
-      ],
-      "cpu": {                // scripted opponent behavior per D10
-        "aggressionCurve": [  // hpThreshold descending; pressure 0.0–1.0
-          { "hpThreshold": 100, "pressure": 0.25 },
-          { "hpThreshold": 60, "pressure": 0.35 },
-          { "hpThreshold": 30, "pressure": 0.45 }
-        ],
-        "punishWindows": {    // frame advantage responses per situation
-          "whiff": { "frames": 18, "response": "counter" },
-          "heavyStartup": { "frames": 12, "response": "light" },
-          "blockPushback": { "frames": 8, "response": "grab" }
-        },
-        "preferredRange": "mid", // "close" | "mid" | "far"
-        "patience": 0.8       // 0.0 rushdown, 1.0 wait forever
-      }
-    }
-  ]
-}
-```
-
-### Field rules
-
-- **`id`** — stable snake_case identifier. References line bank files by name
-  (`data/lines/{id}.json`).
-- **`stats`** — four scores 1–10. Balance references are in `src/core/config.js`
-  and `/docs/BALANCE.md`.
-- **`lineBankKeys`** — list of category ids. A fighter only draws lines from
-  categories they know; a missing key means a generic fallback line is used.
-- **`cpu`** — behavior pattern for the Release 1 scripted opponent. See D10 in
-  `docs/DECISIONS.md`.
-
----
-
-## `locations.json` — arenas and environmental events
-
-```jsonc
-{
-  "version": 1,
-  "locations": [
-    {
-      "id": "forum",
-      "name": "The Forum",
-      "description": "A marble amphitheater...",
-      "palette": {            // renderer color hints
-        "skyTop": "#1a237e",
-        "skyBottom": "#3949ab",
-        "floor": "#e0e0e0",
-        "accent": "#ffd54f"
-      },
-      "environmentalEvent": { // one scripted event per arena in R1
-        "id": "forum_echo",
-        "trigger": "onLightHit",
-        "cooldownSeconds": 20,
-        "effect": {
-          "type": "dialogueWeight",
-          "multiplier": 2.0,
-          "durationSeconds": 3
-        },
-        "announcement": "The Forum echoes your last point..."
-      }
-    }
-  ]
-}
-```
-
-### Field rules
-
-- **`palette`** — hints for the renderer; may expand later.
-- **`environmentalEvent.trigger`** — ledger event type that can fire the event.
-  R1 triggers: `onLightHit`, `onCombo`.
-- **`environmentalEvent.effect.type`** — R1 effects: `dialogueWeight`,
-  `composureRegen`.
-
----
-
-## `lines/{fighterId}.json` — per-fighter, per-category dialogue templates
-
-```jsonc
-{
-  "version": 1,
-  "fighterId": "logician",
-  "categories": {
-    "tech_ethics": {
-      "lightHit": ["...", "..."],
-      "heavyHit": ["..."],
-      "counter": ["..."],
-      "block": ["..."],
-      "whiff": ["..."],
-      "combo": ["..."],
-      "special": ["..."]
-    }
-  }
-}
-```
-
-### Field rules
-
-- **`fighterId`** must match the id in `fighters.json` and the file name.
-- Keys under `categories` must match `topics.json` category ids.
-- Each event type holds an array of template lines. The dialogue engine picks
-  one deterministically from the fighter's stream (D11).
-- Templates may reference the current question text; use `VK.htmlEscape` on any
-  interpolated user-provided string before rendering.
-
----
-
-## Custom topic input and XSS safety
-
-Custom questions are typed by the player inside a selected category. They are
-stored as plain strings and must be treated as untrusted HTML whenever they are
-rendered. The engine provides `src/engine/htmlEscape.js`, which exposes
-`VK.htmlEscape(text)`. Always call it before inserting custom text (or any
-text that may contain user input) into the DOM.
-
-`VK.htmlEscape` escapes `&`, `<`, `>`, `"`, and `'`, covering text content and
-attribute contexts. It does not sanitize URLs or allow markup; for Release 1,
-user text is plain text only.

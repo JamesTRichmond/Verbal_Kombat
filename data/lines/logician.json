@@ -1,33 +1,50 @@
 {
   "version": 1,
-  "fighterId": "logician",
-  "categories": {
-    "tech_ethics": {
-      "lightHit": ["That premise assumes facts not in evidence.", "Define the terms first.", "One data point is not a trend."],
-      "heavyHit": ["The argument collapses once you distinguish correlation from mechanism.", "You have imported a hidden assumption and called it logic."],
-      "counter": ["That is precisely the non sequitur I was waiting for.", "Your conclusion does not follow from those premises."],
-      "block": ["I will grant the premise, but not the leap.", "Noted. Continue."],
-      "whiff": ["A swing that wide misses the question entirely.", "Irrelevant — but rhetorically loud."],
-      "combo": ["Point one: the claim. Point two: the support. Point three: the necessary conclusion."],
-      "special": ["Q.E.D. — the structure refutes itself."]
-    },
-    "morality": {
-      "lightHit": ["Principles apply universally, or they are preferences.", "Is that a rule, or an exception you find convenient?"],
-      "heavyHit": ["You are invoking a standard you would not accept in reverse.", "The moral cost is not zero just because it is hidden."],
-      "counter": ["That counter-example is the mirror your rule cannot survive.", "Consistency demands the opposite conclusion."],
-      "block": ["That impulse is understandable; it is not yet an argument.", "I see the appeal. Now show the warrant."],
-      "whiff": ["Moral grandstanding is not moral reasoning.", "You have indicted a straw conscience."],
-      "combo": ["If the principle holds here, it must hold there; if it does not, abandon the principle."],
-      "special": ["Q.E.D. — your maxim contradicts its own application."]
-    },
-    "education": {
-      "lightHit": ["Measurement and learning are not the same thing.", "A proxy is not the goal."],
-      "heavyHit": ["You have optimized for the metric and called it mastery.", "The evidence you cite compares conditions it does not control."],
-      "counter": ["That study shows correlation; you have sold it as causation.", "The exception you dismiss is the rule in every other district."],
-      "block": ["Partial credit — the goal is plausible, the method is not.", "Let us distinguish the tool from the outcome."],
-      "whiff": ["Anecdote is not a curriculum.", "That complaint addresses a different school system entirely."],
-      "combo": ["First, what we measure. Second, what we value. Third, why the first is displacing the second."],
-      "special": ["Q.E.D. — the policy fails its own stated objective."]
+  "fighter": "logician",
+  "events": {
+    "lightHit": [
+      "Premise one: {stanceFor}. Hold that thought.",
+      "Note the point — small, but it follows.",
+      "That's established, then. Moving on."
+    ],
+    "heavyHit": [
+      "And from that premise: {evidence}. The conclusion is closing in on you.",
+      "You accepted the premise. This is what it entails."
+    ],
+    "combo": [
+      "One: {stanceFor}. Two: {evidence}. Three: therefore — and you have no move left.",
+      "Each step granted, each step followed. That was a proof, not a punch."
+    ],
+    "special": [
+      "THE SYLLOGISM. Major premise, minor premise — {topic}? Conclusion: inescapable.",
+      "All that remains is the conclusion. It arrives... now."
+    ],
+    "whiff": [
+      "Hm. A lemma out of order.",
+      "Withdrawn. The argument continues."
+    ],
+    "blocked": [
+      "Anticipated. Your objection was in my notes.",
+      "Blocked — as any valid argument survives a denial."
+    ],
+    "counter": [
+      "There. {opponent} asserts without warrant — and the rebuttal writes itself.",
+      "That was a contradiction. Allow me to point at it, forcefully."
+    ],
+    "victory": [
+      "Q.E.D. On the matter of {topic}, the argument stands.",
+      "Nothing personal. It simply followed."
+    ],
+    "defeat": [
+      "The conclusion is... unsound. Somewhere a premise betrayed me.",
+      "Noted. I will be revising the argument."
+    ]
+  },
+  "categoryOverrides": {
+    "philosophy": {
+      "special": [
+        "THE SYLLOGISM — and on {topic}, of all questions? You brought a paradox to a proof fight."
+      ]
     }
   }
 }

@@ -1,33 +1,50 @@
 {
   "version": 1,
-  "fighterId": "demagogue",
-  "categories": {
-    "food_culture": {
-      "lightHit": ["The people know what they like, and they like this.", "Tradition is just peer pressure from the past."],
-      "heavyHit": ["You call it corruption; millions call it dinner. The scoreboard is clear.", "Every bite is a vote, and the votes have been counted."],
-      "counter": ["They told us this food was wrong. The crowd disagreed.", "Elite taste loses to popular appetite — again."],
-      "block": ["Keep your rules. I'll keep the flavor.", "Nice try. The palate is not impressed."],
-      "whiff": ["You described a war crime. We're talking about lunch.", "That argument needed seasoning."],
-      "combo": ["First, the appetite. Then, the history. Then, the undeniable verdict of the table."],
-      "special": ["Soapbox: I have seen the future, and it is delicious!"]
-    },
-    "urban_life": {
-      "lightHit": ["Cities belong to the people who live in them, not the machines.", "Every parking spot is a vote for the last century."],
-      "heavyHit": ["You want freedom? Try crossing the street without being run over.", "Progress looks like inconvenience to the comfortable."],
-      "counter": ["The private car promised freedom and delivered traffic.", "Small business? Try small lungs."],
-      "block": ["Yes, change is hard. Staying suffocated is harder.", "That concern is real; the conclusion is not."],
-      "whiff": ["You defended suburbia in a debate about a downtown street.", "A moving target, but not a moving argument."],
-      "combo": ["The street, the square, the bus, the bike — one city, one breath, one vote."],
-      "special": ["Soapbox: The people demand it, and the people shall have it!"]
-    },
-    "work_future": {
-      "lightHit": ["Efficiency without rest is just exhaustion with a spreadsheet.", "A job is hours of life, not units sold."],
-      "heavyHit": ["You warn of collapse if we work less — yet collapse is already here.", "Productivity soared; workers were not invited to the banquet."],
-      "counter": ["The economy you defend was built on unpaid overtime and burned people out.", "If four days breaks the system, the system was already broken."],
-      "block": ["Hard work is noble. Pointless work is not.", "I respect the hustle; I mourn the waste."],
-      "whiff": ["You described laziness. No one proposed it.", "The boss's talking points do not suit you."],
-      "combo": ["Less grind, more output, healthier people, stronger demand — the chain is obvious."],
-      "special": ["Soapbox: The workers rise — and the weekend rises with them!"]
+  "fighter": "demagogue",
+  "events": {
+    "lightHit": [
+      "You hear that? That's the sound of everyone agreeing with me!",
+      "The people know it: {stanceAgainst}!",
+      "Even the back row felt that one!"
+    ],
+    "heavyHit": [
+      "EVERYBODY knows {stanceAgainst} — everybody but you!",
+      "That wasn't me — that was the will of the crowd coming through!"
+    ],
+    "combo": [
+      "First they laughed, then they cheered, now they're chanting — because {stanceAgainst}, and deep down you know it too!",
+      "Point after point after point — the momentum is a landslide and you are standing under it!"
+    ],
+    "special": [
+      "RALLY THE CROWD! On your feet! {topic}? The people have ALREADY decided!",
+      "Listen to them roar! You're not arguing with me anymore — you're arguing with everyone!"
+    ],
+    "whiff": [
+      "A pause — for effect! Obviously!",
+      "The crowd gasps! They love a comeback story!"
+    ],
+    "blocked": [
+      "Boo all you want, it still rattled you!",
+      "You can block the words but not the movement!"
+    ],
+    "counter": [
+      "HA! {opponent} stumbles, and the crowd? The crowd never forgets!",
+      "You handed me that one, and I am REGIFTING IT LOUDER!"
+    ],
+    "victory": [
+      "The people have spoken on {topic} — and I merely gave them a microphone!",
+      "History will remember this argument! Briefly! But loudly!"
+    ],
+    "defeat": [
+      "The crowd... turned? THE CROWD TURNED?!",
+      "This isn't a loss, it's — it's a silent majority! They're just very silent!"
+    ]
+  },
+  "categoryOverrides": {
+    "sports": {
+      "special": [
+        "RALLY THE CROWD! This is a STADIUM question — {topic} — and the stadium is CHANTING MY NAME!"
+      ]
     }
   }
 }

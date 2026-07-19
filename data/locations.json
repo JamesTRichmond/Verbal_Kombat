@@ -4,45 +4,48 @@
     {
       "id": "forum",
       "name": "The Forum",
-      "description": "A marble amphitheater where every landed point rings twice.",
+      "description": "Sun-bleached stone, a restless crowd, and acoustics that forgive nothing.",
       "palette": {
-        "skyTop": "#1a237e",
-        "skyBottom": "#3949ab",
-        "floor": "#e0e0e0",
-        "accent": "#ffd54f"
+        "sky": "#e8d5a3",
+        "backdrop": "#b08d57",
+        "floor": "#8a6f45",
+        "accent": "#5b3a29"
       },
-      "environmentalEvent": {
-        "id": "forum_echo",
-        "trigger": "onLightHit",
-        "cooldownSeconds": 20,
+      "parallaxLayers": ["colonnade", "crowd", "dais"],
+      "event": {
+        "id": "echo",
+        "name": "The Echo",
+        "trigger": { "atTick": 1800 },
         "effect": {
-          "type": "dialogueWeight",
-          "multiplier": 2.0,
-          "durationSeconds": 3
+          "type": "dialogue_weight",
+          "target": "next_landed_point",
+          "multiplier": 2
         },
-        "announcement": "The Forum echoes your last point across the hall."
+        "announcement": "The colonnade catches the words — the next point lands twice as loud."
       }
     },
     {
       "id": "studio",
       "name": "The Studio",
-      "description": "A live-broadcast set where the crowd rewards momentum and punishes silence.",
+      "description": "Hot lights, cold coffee, and a debate stage built for television.",
       "palette": {
-        "skyTop": "#212121",
-        "skyBottom": "#424242",
-        "floor": "#616161",
-        "accent": "#ff4081"
+        "sky": "#1a1b2e",
+        "backdrop": "#27304f",
+        "floor": "#3d2f52",
+        "accent": "#e04c6f"
       },
-      "environmentalEvent": {
-        "id": "studio_spotlight",
-        "trigger": "onCombo",
-        "cooldownSeconds": 25,
+      "parallaxLayers": ["light_rig", "audience_silhouettes", "podiums"],
+      "event": {
+        "id": "on_air",
+        "name": "On the Air",
+        "trigger": { "atTick": 2700 },
         "effect": {
-          "type": "composureRegen",
-          "bonusPerSecond": 15,
-          "durationSeconds": 4
+          "type": "event_weight_bonus",
+          "eventType": "counter",
+          "bonus": 2,
+          "durationTicks": 600
         },
-        "announcement": "The spotlight locks on the combo — momentum surges."
+        "announcement": "The ON AIR light snaps on — for the next ten seconds, every rebuttal plays to the cameras."
       }
     }
   ]

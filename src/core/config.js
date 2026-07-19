@@ -34,13 +34,17 @@
       maxDelay: 2.4,
     },
 
-    // Paths to the authoritative content files. See data/README.md for schema.
-    dataUrls: {
-      fallacies: "data/fallacies.json",
-      topics: "data/topics.json",
-      fighters: "data/fighters.json",
-      locations: "data/locations.json",
-      linesBase: "data/lines",
+    // Path to the authoritative content file. See data/README.md for schema.
+    dataUrl: "data/fallacies.json",
+
+    // Pivot content (topics, fighters, locations, line banks) loaded by
+    // src/engine/contentLoader.js. See data/README.md for schemas.
+    content: {
+      topicsUrl: "data/topics.json",
+      fightersUrl: "data/fighters.json",
+      locationsUrl: "data/locations.json",
+      linesUrlPrefix: "data/lines/",
+      maxCustomQuestionLength: 140,
     },
   };
 })(window.VK);
