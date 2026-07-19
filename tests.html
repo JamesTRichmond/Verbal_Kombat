@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verbal Kombat — Tests</title>
+  <style>
+    body { background: #181520; color: #f5f2ea; font-family: Trebuchet MS, sans-serif; padding: 24px; }
+    h1 { margin-top: 0; }
+    .pass { color: #2ecc71; }
+    .fail { color: #c8102e; }
+    pre { background: #201c2b; padding: 12px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Verbal Kombat — Inline Test Harness</h1>
+  <div id="results"></div>
+  <pre id="log"></pre>
+
+  <script src="src/core/namespace.js"></script>
+  <script src="src/core/config.js"></script>
+  <script src="src/core/rng.js"></script>
+  <script src="src/engine/ledger.js"></script>
+  <script src="src/engine/dataLoader.js"></script>
+  <script src="src/engine/combat.js"></script>
+  <script src="src/engine/state.js"></script>
+
+  <script src="tests.js"></script>
+</body>
+</html>

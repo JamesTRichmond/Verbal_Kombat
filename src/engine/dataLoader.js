@@ -74,6 +74,38 @@
       });
   };
 
+  // Load fighter roster.
+  VK.loadFighters = function loadFighters() {
+    return fetch(VK.config.fightersUrl)
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (json) {
+        return (json && json.fighters) || [];
+      })
+      .catch(function (err) {
+        console.warn("[VK] Could not load fighters (" + err.message + ").");
+        return [];
+      });
+  };
+
+  // Load move definitions.
+  VK.loadMoves = function loadMoves() {
+    return fetch(VK.config.movesUrl)
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (json) {
+        return (json && json.moves) || [];
+      })
+      .catch(function (err) {
+        console.warn("[VK] Could not load moves (" + err.message + ").");
+        return [];
+      });
+  };
+
   // Drop malformed entries so the engine can trust what it gets.
   function normalize(json, source) {
     var list = (json && json.fallacies) || [];

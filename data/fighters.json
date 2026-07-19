@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "fighters": [
+    {
+      "id": "logician",
+      "name": "The Logician",
+      "style": "counter-focused",
+      "stats": { "speed": 5, "power": 5, "reach": 5 },
+      "special": "Q.E.D. — a precise strike that pierces guard",
+      "palette": "#4aa3e4",
+      "behavior": {
+        "aggression": [
+          { "until": 15, "value": 0.25 },
+          { "until": 40, "value": 0.55 },
+          { "until": 75, "value": 0.80 },
+          { "until": 999, "value": 0.60 }
+        ],
+        "punchWindow": { "min": 0.6, "max": 1.4 },
+        "punishDistance": 90,
+        "blockPreference": 0.35,
+        "specialAt": 100
+      }
+    },
+    {
+      "id": "demagogue",
+      "name": "The Demagogue",
+      "style": "heavy swings",
+      "stats": { "speed": 3, "power": 8, "reach": 6 },
+      "special": "The Crowd — a dramatic heavy flurry",
+      "palette": "#c8102e",
+      "behavior": {
+        "aggression": [
+          { "until": 10, "value": 0.75 },
+          { "until": 35, "value": 0.60 },
+          { "until": 70, "value": 0.85 },
+          { "until": 999, "value": 0.95 }
+        ],
+        "punchWindow": { "min": 1.0, "max": 2.2 },
+        "punishDistance": 70,
+        "blockPreference": 0.15,
+        "specialAt": 100
+      }
+    },
+    {
+      "id": "empiricist",
+      "name": "The Empiricist",
+      "style": "jab pressure",
+      "stats": { "speed": 7, "power": 4, "reach": 6 },
+      "special": "Cite the Data — rapid evidence barrage",
+      "palette": "#2ecc71",
+      "behavior": {
+        "aggression": [
+          { "until": 12, "value": 0.65 },
+          { "until": 38, "value": 0.45 },
+          { "until": 72, "value": 0.70 },
+          { "until": 999, "value": 0.55 }
+        ],
+        "punchWindow": { "min": 0.45, "max": 1.1 },
+        "punishDistance": 100,
+        "blockPreference": 0.25,
+        "specialAt": 100
+      }
+    },
+    {
+      "id": "trickster",
+      "name": "The Trickster",
+      "style": "mobility and interrupts",
+      "stats": { "speed": 8, "power": 4, "reach": 4 },
+      "special": "False Premise — a teleporting feint into punish",
+      "palette": "#9b59b6",
+      "behavior": {
+        "aggression": [
+          { "until": 8, "value": 0.55 },
+          { "until": 30, "value": 0.35 },
+          { "until": 60, "value": 0.65 },
+          { "until": 999, "value": 0.80 }
+        ],
+        "punchWindow": { "min": 0.5, "max": 1.3 },
+        "punishDistance": 110,
+        "blockPreference": 0.20,
+        "specialAt": 100
+      }
+    }
+  ]
+}

@@ -12,29 +12,41 @@
     stage: { width: 960, height: 540 },
 
     fighter: {
+      width: 44,
+      height: 96,
       maxHealth: 100,     // lose all of this and you're KO'd
-      maxComposure: 100,  // spent to attack; regenerates slowly
-      composureRegen: 8,  // composure regained per second
+      maxMeter: 100,      // special costs 100
+      walkSpeed: 170,     // pixels per second
+      backSpeed: 120,     // retreating is slightly slower
+      gravity: 2000,      // pixels per second^2
+      friction: 0.92,     // horizontal velocity decay per fixed step
+      maxMeter: 100,
+      meterGainOnHit: 12,
+      meterGainOnWhiff: 2,
     },
 
     combat: {
-      // A successful argument deals `damage`. Its `risk` is how exposed you
-      // are afterward: if the defender counters, they hit back for
-      // risk * counterMultiplier.
-      counterMultiplier: 1.4,
-      counterRiskThreshold: 6,
-      counterComposureThreshold: 45,
-      // Composure cost to throw a move scales with its damage.
-      composureCostPerDamage: 1.5,
+      fixedStep: 1 / 60,           // seconds per simulation tick
+      roundTime: 90,               // seconds
+      hitStun: 0.22,               // seconds
+      blockStun: 0.12,             // seconds
+      blockDamageFactor: 0.25,
+      blockKnockbackFactor: 0.35,
+      counterWindow: 6,            // frames before/after an active hitbox
+      comboWindow: 24,             // frames to chain a combo
+      pushbackOnBlock: 40,
+      wallBounce: 0.4,
     },
 
     ai: {
-      // Seconds between enemy arguments (starter AI is on a simple timer).
-      minDelay: 1.2,
-      maxDelay: 2.4,
+      reactionMin: 4,              // minimum frames between CPU decisions
+      reactionMax: 12,
+      safeDistance: 100,
     },
 
-    // Path to the authoritative content file. See data/README.md for schema.
+    // Paths to authoritative content files. See data/README.md for schemas.
     dataUrl: "data/fallacies.json",
+    fightersUrl: "data/fighters.json",
+    movesUrl: "data/moves.json",
   };
 })(window.VK);

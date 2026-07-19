@@ -1,116 +1,207 @@
 /*
- * state.js — the game's data model and the update tick.
+ * state.js — the game's data model and fixed-timestep update tick.
  *
- * Holds fighters, the loaded move list, match phase, and the floating combat
- * log. `update(dt)` advances time-based systems (composure regen, the starter
- * enemy AI). Rendering reads this; it never writes here.
+ * Holds fighters, the match ledger, round timer, and phase. Rendering reads
+ * this; it never writes here. All updates are deterministic given a seed and
+ * input sequence (decision D11).
  */
 (function (VK) {
   "use strict";
 
-  function makeFighter(id, name, side) {
-    var f = VK.config.fighter;
+  function makeMatch(seed, playerDef, enemyDef, arena) {
+    var stageW = VK.config.stage.width;
+    var rng = VK.rng.create(seed);
     return {
-      id: id,
-      name: name,
-      side: side, // "left" | "right"
-      health: f.maxHealth,
-      composure: f.maxComposure,
-    };
-  }
-
-  function createState(moves) {
-    return {
-      moves: moves,                 // array of fallacy/argument entries
-      phase: "ready",               // "ready" | "fighting" | "ko"
+      phase: "ready",               // "ready" | "fighting" | "ended"
       winner: null,
-      fighters: {
-        player: makeFighter("player", "You", "left"),
-        enemy: makeFighter("enemy", "The Sophist", "right"),
+      tick: 0,
+      time: VK.config.combat.roundTime,
+      rng: rng,
+      streams: {
+        combat: rng.stream("combat"),
+        cpu: rng.stream("cpu"),
+        dialogue: rng.stream("dialogue"),
       },
-      aiTimer: nextAiDelay(),
-      log: [],                      // recent combat events (most recent last)
+      fighters: {
+        player: VK.combat.makeFighter(playerDef, "left", stageW * 0.28),
+        enemy: VK.combat.makeFighter(enemyDef, "right", stageW * 0.72),
+      },
+      ledger: VK.ledger.create({
+        seed: seed,
+        player: playerDef,
+        opponent: enemyDef,
+        arena: arena,
+      }),
+      inputs: [],                   // buffered intents for the current tick
+      cpu: {
+        thinkTimer: 0,
+        intent: null,
+      },
     };
   }
 
-  function start(state) {
-    var fresh = createState(state.moves);
+  function start(match) {
+    var fresh = makeMatch(match.ledger.header.seed, match.ledger.header.player, match.ledger.header.opponent, match.ledger.header.arena);
     fresh.phase = "fighting";
     return fresh;
   }
 
-  // Advance time-based systems by dt seconds.
-  function update(state, dt) {
-    if (state.phase !== "fighting") return;
+  // Push a player intent for the next fixed step. Called by input.
+  function bufferInput(match, intent) {
+    if (match.phase !== "fighting") return;
+    match.inputs.push(intent);
+  }
 
-    var maxC = VK.config.fighter.maxComposure;
-    var regen = VK.config.fighter.composureRegen * dt;
-    eachFighter(state, function (f) {
-      f.composure = VK.combat.clamp(f.composure + regen, 0, maxC);
-    });
+  // Advance one fixed timestep. Deterministic: same inputs, same result.
+  function update(match) {
+    if (match.phase !== "fighting") return;
 
-    // Starter enemy AI: throws a random argument on a timer.
-    state.aiTimer -= dt;
-    if (state.aiTimer <= 0) {
-      throwMove(state, "enemy", "player", randomMove(state));
-      state.aiTimer = nextAiDelay();
+    var cfg = VK.config.combat;
+    var step = cfg.fixedStep;
+    match.tick++;
+    match.time = Math.max(0, match.time - step);
+
+    var p = match.fighters.player;
+    var e = match.fighters.enemy;
+
+    applyInputs(match, p);
+    applyCpu(match, e, p);
+
+    VK.combat.updateFighter(p, step);
+    VK.combat.updateFighter(e, step);
+
+    // Resolve both attack directions; attacker advantage when simultaneous.
+    var event = VK.combat.resolveAttacks(p, e, match.tick);
+    if (event) pushLedger(match, event);
+    event = VK.combat.resolveAttacks(e, p, match.tick);
+    if (event) pushLedger(match, event);
+
+    VK.combat.clampWalls(p, VK.config.stage.width);
+    VK.combat.clampWalls(e, VK.config.stage.width);
+
+    var ko = VK.combat.checkKO(p, e, match.tick);
+    if (ko) {
+      // Final hit already emitted a ko event; just end the match.
+      if (match.ledger.events[match.ledger.events.length - 1].type !== "ko") {
+        pushLedger(match, ko);
+      }
+      match.phase = "ended";
+      var koEvent = match.ledger.events[match.ledger.events.length - 1];
+      var winnerId = koEvent.winner || ko.winner;
+      match.winner = winnerId === "player" || winnerId === p.id ? p : e;
+      return;
     }
 
-    checkKO(state);
+    var timeOut = VK.combat.checkTimeOut(match.time, p, e, match.tick);
+    if (timeOut) {
+      pushLedger(match, timeOut);
+      match.phase = "ended";
+      if (timeOut.winner) {
+        match.winner = timeOut.winner === p.id || timeOut.winner === "player" ? p : e;
+      }
+      return;
+    }
+
+    // Clear per-tick input buffer.
+    match.inputs.length = 0;
   }
 
-  // Player-facing helper: throw the move at the given index (0-based).
-  function playerMove(state, index) {
-    if (state.phase !== "fighting") return;
-    var move = state.moves[index];
-    if (move) throwMove(state, "player", "enemy", move);
-  }
-
-  function throwMove(state, attackerId, defenderId, move) {
-    if (state.phase !== "fighting" || !move) return;
-    var event = VK.combat.resolveMove(
-      state.fighters[attackerId],
-      state.fighters[defenderId],
-      move
-    );
-    pushLog(state, event);
-    checkKO(state);
-  }
-
-  function checkKO(state) {
-    if (state.phase === "ko") return;
-    var p = state.fighters.player;
-    var e = state.fighters.enemy;
-    if (p.health <= 0 || e.health <= 0) {
-      state.phase = "ko";
-      state.winner = p.health <= 0 ? e : p;
-      pushLog(state, { type: "ko", message: state.winner.name + " wins the argument." });
+  function applyInputs(match, fighter) {
+    var moves = match.moves || [];
+    for (var i = 0; i < match.inputs.length; i++) {
+      var intent = match.inputs[i];
+      if (intent.type === "move") {
+        fighter.vx = (intent.direction === "left" ? -1 : 1) * VK.config.fighter.walkSpeed;
+        fighter.facing = intent.direction === "left" ? -1 : 1;
+      } else if (intent.type === "retreat") {
+        fighter.vx = (intent.direction === "left" ? -1 : 1) * VK.config.fighter.backSpeed;
+        fighter.facing = intent.direction === "right" ? -1 : 1;
+      } else if (intent.type === "attack") {
+        var id = VK.combat.moveIdForInput(intent.kind);
+        if (id) VK.combat.startAttack(fighter, id, moves);
+      } else if (intent.type === "block") {
+        VK.combat.setBlocking(fighter, intent.active);
+      }
     }
   }
 
-  function pushLog(state, event) {
-    state.log.push(event);
-    if (state.log.length > 5) state.log.shift();
+  function applyCpu(match, cpu, player) {
+    if (cpu.isHitstun > 0 || cpu.isBlockstun > 0) return;
+
+    cpu.attack = cpu.attack; // preserve current attack animation
+    if (cpu.attack) return;
+
+    if (cpu.isBlocking) VK.combat.setBlocking(cpu, false);
+
+    match.cpu.thinkTimer--;
+    if (match.cpu.thinkTimer > 0) return;
+
+    var behavior = cpu.behavior || {};
+    var aggression = lookupAggression(behavior.aggression || [], match.time);
+    var rng = match.streams.cpu;
+    var dist = Math.abs(player.x - cpu.x);
+    var facingPlayer = (player.x - cpu.x) * cpu.facing > 0;
+
+    match.cpu.thinkTimer = Math.round(rng.range(VK.config.ai.reactionMin, VK.config.ai.reactionMax));
+
+    if (!facingPlayer) {
+      cpu.vx = (player.x > cpu.x ? 1 : -1) * VK.config.fighter.walkSpeed;
+      cpu.facing = player.x > cpu.x ? 1 : -1;
+      return;
+    }
+
+    var blockRoll = rng.next();
+    var shouldBlock = blockRoll < (behavior.blockPreference || 0) && dist < (behavior.punishDistance || 90);
+    if (shouldBlock) {
+      VK.combat.setBlocking(cpu, true);
+      return;
+    }
+
+    var punchRoll = rng.next();
+    var inPunchRange = dist <= 100;
+    var inPunishWindow = dist <= (behavior.punishDistance || 110) && player.attack && player.attack.frame >= player.attack.move.startup;
+
+    if (inPunishWindow) {
+      if (punchRoll < 0.75) {
+        VK.combat.startAttack(cpu, VK.combat.moveIdForInput(rng.next() < 0.6 ? "light" : "heavy"), match.moves || []);
+      }
+      return;
+    }
+
+    if (inPunchRange && punchRoll < aggression) {
+      var kind = "light";
+      if (cpu.meter >= VK.config.fighter.maxMeter && rng.next() < 0.4) {
+        kind = "special";
+      } else if (rng.next() < 0.35) {
+        kind = "heavy";
+      }
+      VK.combat.startAttack(cpu, VK.combat.moveIdForInput(kind), match.moves || []);
+      return;
+    }
+
+    if (dist > (behavior.safeDistance || VK.config.ai.safeDistance)) {
+      cpu.vx = (player.x > cpu.x ? 1 : -1) * VK.config.fighter.walkSpeed * (0.6 + rng.range(0, 0.4));
+    } else if (dist < 50) {
+      cpu.vx = (cpu.x > player.x ? 1 : -1) * VK.config.fighter.backSpeed * 0.7;
+    }
   }
 
-  function randomMove(state) {
-    return state.moves[Math.floor(Math.random() * state.moves.length)];
+  function lookupAggression(curve, timeLeft) {
+    var elapsed = VK.config.combat.roundTime - timeLeft;
+    for (var i = 0; i < curve.length; i++) {
+      if (elapsed < curve[i].until) return curve[i].value;
+    }
+    return 0.5;
   }
 
-  function nextAiDelay() {
-    var ai = VK.config.ai;
-    return ai.minDelay + Math.random() * (ai.maxDelay - ai.minDelay);
-  }
-
-  function eachFighter(state, fn) {
-    fn(state.fighters.player);
-    fn(state.fighters.enemy);
+  function pushLedger(match, event) {
+    VK.ledger.push(match.ledger, event);
   }
 
   VK.state = {
-    create: createState,
+    makeMatch: makeMatch,
     start: start,
     update: update,
-    playerMove: playerMove,
+    bufferInput: bufferInput,
   };
 })(window.VK);

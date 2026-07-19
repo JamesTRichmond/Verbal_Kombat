@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "moves": [
+    {
+      "id": "light_jab",
+      "name": "Light Jab",
+      "kind": "light",
+      "damage": 5,
+      "startup": 6,
+      "active": 4,
+      "recovery": 10,
+      "range": 65,
+      "knockback": 25,
+      "meterGain": 5,
+      "soundCue": "quick"
+    },
+    {
+      "id": "heavy_cross",
+      "name": "Heavy Cross",
+      "kind": "heavy",
+      "damage": 12,
+      "startup": 12,
+      "active": 5,
+      "recovery": 20,
+      "range": 80,
+      "knockback": 60,
+      "meterGain": 10,
+      "soundCue": "heavy"
+    },
+    {
+      "id": "special_finisher",
+      "name": "Final Word",
+      "kind": "special",
+      "damage": 22,
+      "startup": 10,
+      "active": 8,
+      "recovery": 28,
+      "range": 95,
+      "knockback": 90,
+      "meterCost": 100,
+      "soundCue": "special"
+    }
+  ]
+}
