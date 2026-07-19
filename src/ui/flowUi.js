@@ -170,15 +170,15 @@
       }
     }
 
-    return { render: render };
-  }
-
-  function focusScreen(el) {
-    var target = el.querySelector('h2[tabindex="-1"]');
-    if (!target) {
-      target = el.querySelector("button:not([hidden]):not([disabled]), input:not([disabled]), textarea:not([disabled])");
+    function focusScreen(el) {
+      var target = el.querySelector('h2[tabindex="-1"]');
+      if (!target) {
+        target = el.querySelector("button:not([hidden]):not([disabled]), input:not([disabled]), textarea:not([disabled])");
+      }
+      if (target && target.focus) target.focus();
     }
-    if (target && target.focus) target.focus();
+
+    return { render: render };
   }
 
   VK.flowUi = { create: createFlowUi };

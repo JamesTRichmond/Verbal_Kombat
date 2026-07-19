@@ -20,7 +20,7 @@
       tag === "TEXTAREA" ||
       tag === "SELECT" ||
       tag === "BUTTON" ||
-      (tag === "A" && target.href)
+      (tag === "A" && target.hasAttribute("href"))
     );
   }
 
