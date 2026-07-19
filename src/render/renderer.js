@@ -16,6 +16,7 @@
     panel: "rgba(20,20,29,0.85)",
     health: "#c8102e",
     composure: "#e4b04a",
+    meter: "#9d4edd",
     track: "#2a2536",
   };
 
@@ -79,11 +80,13 @@
   function drawBars(ctx, f, x, y, dir) {
     var maxH = VK.config.fighter.maxHealth;
     var maxC = VK.config.fighter.maxComposure;
+    var maxM = VK.config.fighter.maxMeter;
     var w = 320;
     var bx = dir > 0 ? x : x - w;
 
     bar(ctx, bx, y, w, 20, f.health / maxH, COLORS.health, dir);
     bar(ctx, bx, y + 26, w, 10, f.composure / maxC, COLORS.composure, dir);
+    bar(ctx, bx, y + 42, w, 8, f.meter / maxM, COLORS.meter, dir);
   }
 
   function bar(ctx, x, y, w, h, pct, color, dir) {

@@ -15,6 +15,7 @@
       maxHealth: 100,     // lose all of this and you're KO'd
       maxComposure: 100,  // spent to attack; regenerates slowly
       composureRegen: 8,  // composure regained per second
+      maxMeter: 100,      // builds on landed hits; spent for a special
     },
 
     combat: {
@@ -26,6 +27,12 @@
       counterComposureThreshold: 45,
       // Composure cost to throw a move scales with its damage.
       composureCostPerDamage: 1.5,
+      // Combo and special-meter tuning.
+      chainLength: 3,
+      meterBuildPerHit: 30,
+      comboMeterBonus: 10,
+      comboBonusDamage: 4,
+      specialDamageMultiplier: 1.5,
     },
 
     ai: {

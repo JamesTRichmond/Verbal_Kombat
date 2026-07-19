@@ -16,6 +16,8 @@
       side: side, // "left" | "right"
       health: f.maxHealth,
       composure: f.maxComposure,
+      meter: 0,
+      chain: 0,
     };
   }
 
