@@ -127,6 +127,15 @@
     });
   };
 
+  // Map the internal data label to the root JSON array key. Most files use the
+  // label as the key, but topics.json uses "categories" for its array.
+  var LABEL_TO_KEY = {
+    fallacies: "fallacies",
+    topics: "categories",
+    fighters: "fighters",
+    locations: "locations",
+  };
+
   function loadJson(url, label, fallbackArray) {
     return fetch(url)
       .then(function (res) {
@@ -138,13 +147,15 @@
           "[VK] Could not load " + url + " (" + err.message + "). Using built-in demo " + label + "."
         );
         var wrapped = { version: 1 };
-        wrapped[label === "topics" ? "categories" : label] = fallbackArray;
+        wrapped[LABEL_TO_KEY[label] || label] = fallbackArray;
         return wrapped;
       });
   }
 
   function loadLines(baseUrl) {
-    var files = ["logician.json", "demagogue.json", "empiricist.json", "trickster.json"];
+    var files = Object.keys(FALLBACK.lines).map(function (fighterId) {
+      return fighterId + ".json";
+    });
     return Promise.all(
       files.map(function (file) {
         return fetch(baseUrl + "/" + file)
