@@ -63,7 +63,7 @@ Entries D6 onward record the fighting-game pivot described in [DESIGN-v2.md](./D
 
 **Context.** Fight dialogue can come from per-fighter template banks (offline, free, deterministic, GitHub Pages-compatible) or live Claude generation (needs the Node server and a key — Pages cannot keep a secret). A persona/referee server already exists in the verbalkombat-standalone lineage.
 
-**Decision.** Release 1 draws every line from per-fighter, per-category template banks keyed by ledger event type. The ledger event format is designed so that swapping the template selector for an AI generator is a drop-in change — the persona/referee server from the staged branch is exactly that future component.
+**Decision.** Release 1 draws every line from per-fighter, per-category template banks keyed by ledger event type. Custom questions are always entered within a selected category and inherit that category's line banks (templates may interpolate the question text); there is no category-less custom path. The ledger event format is designed so that swapping the template selector for an AI generator is a drop-in change — the persona/referee server from the staged branch is exactly that future component.
 
 **Consequences.** Zero server, zero cost, deterministic and testable dialogue; lines will be less varied than generated text, which is accepted for R1. The AI swap, when it comes, gets its own decision entry covering cost, latency, and offline fallback (consistent with D3's constraint that generative AI must never be the sole, unexplainable judge).
 
@@ -71,9 +71,9 @@ Entries D6 onward record the fighting-game pivot described in [DESIGN-v2.md](./D
 
 **Context.** The game's two promises — "every line is earned" and "every verdict is explainable" — could each be implemented ad hoc, or both could be guaranteed by one structural rule.
 
-**Decision.** Every combat event (hit, whiff, block, counter, combo, special, environmental event) is a typed, timestamped record appended to a match ledger. The dialogue engine and the judges read only the ledger — never the live combat state, never each other.
+**Decision.** Every combat event (hit, whiff, block, counter, combo, special, environmental event) is a typed, timestamped record appended to a match ledger. The ledger opens with a match-start header record carrying everything replay needs: the RNG seed (D11), the topic category and question text (including custom questions), both fighters, the arena, and the content/rules version. The dialogue engine and the judges read only the ledger — never the live combat state, never each other.
 
-**Consequences.** No line can appear without a causing event, and any verdict can be recomputed and explained from the ledger alone. This extends D3's explainable-scoring principle to the pivot: judges are weight vectors over ledger events, so the verdict screen's "top contributing moments" fall out of the architecture rather than being bolted on. All new combat features must define their ledger events as part of their design.
+**Consequences.** No line can appear without a causing event; a saved ledger alone reproduces the match's dialogue and verdict with no external state; and any verdict can be recomputed and explained from the ledger. This supersedes D3's scoring mechanism — judges are weight vectors over combat events, not a function over an argument string — while D3's transparency principle (the player always gets an explainable, locally computed verdict) carries over intact. All new combat features must define their ledger events as part of their design.
 
 ## D9. Codebase lineage: build on the PR #4 scaffold
 
@@ -95,9 +95,9 @@ Entries D6 onward record the fighting-game pivot described in [DESIGN-v2.md](./D
 
 **Context.** Combat, CPU behavior, and dialogue line selection all involve randomness. Unseeded randomness would make the e2e smoke test flaky and the balance pass unreproducible.
 
-**Decision.** All randomness flows through a single seeded RNG owned by the match. Given the same seed and inputs, a match produces an identical ledger — and therefore identical dialogue and an identical verdict.
+**Decision.** All randomness flows through a single seeded RNG owned by the match, and the simulation advances on a fixed timestep (an accumulator over `requestAnimationFrame`; rendering may interpolate between steps). This replaces the PR #4 game loop's variable per-frame delta, which would let the same seed and inputs land on different update boundaries and diverge. Ledger timestamps are simulation ticks, not wall-clock time. Given the same seed and input sequence, a match produces an identical ledger — and therefore identical dialogue and an identical verdict.
 
-**Consequences.** Playwright can run a fully deterministic match; balance changes can be A/B'd against fixed seeds; bug reports can include a seed. No module may call `Math.random()` directly.
+**Consequences.** Playwright can run a fully deterministic match; balance changes can be A/B'd against fixed seeds; bug reports can include a seed. No module may call `Math.random()` directly, and no game rule may read wall-clock time or raw frame deltas.
 
 ## D12. Names and trade dress: original everywhere
 
@@ -106,3 +106,11 @@ Entries D6 onward record the fighting-game pivot described in [DESIGN-v2.md](./D
 **Decision.** Everything player-facing is original: no "FATALITY"/"FINISH HIM," no MK logotype styling, original fighter names (the Logician, the Demagogue, the Empiricist, the Trickster), and original judge characters — archetypes inspired by *School of Athens* perspectives (the Idealist, the Empiricist, the Skeptic) with original names and original art, not reproductions, even though the painting itself is public domain. The finisher term is ours: **"THE FINAL WORD."**
 
 **Consequences.** No trademark or trade-dress exposure; all art and copy tasks start from original material. Any future homage that goes beyond structure/pacing reference needs its own decision entry.
+
+## D13. Playwright as a dev-only dependency for the e2e smoke test
+
+**Context.** D4 mandates a dependency-free app with tests in a tiny inline browser harness, and requires a decision entry for any exception. The pivot's Release 1 exit criterion is a headless, scripted-input run of the full flow (issue R1-12), which an inline harness cannot do.
+
+**Decision.** Playwright is permitted as a development-only dependency, installed via a `devDependencies`-only `package.json` and invoked from a test script; it drives the e2e smoke test headlessly using a fixed seed (D11). This supersedes the test-harness portion of D4 only.
+
+**Consequences.** The shipped game remains a dependency-free static site — nothing from `node_modules` is served or bundled, and cloning + serving the root is still the full play-it setup. Unit tests stay in the inline browser harness. Any further dev tooling still needs its own decision entry.

@@ -46,21 +46,22 @@ No `npm install`, no bundler, no toolchain. If a change would require one, open 
 
 ## Release 1 scope
 
-Release 1 is deliberately narrow. In scope:
+> **Note:** the project has pivoted from the typed-argument prototype to a real-time fighting game that writes the argument from combat. The authoritative Release 1 scope is now [`docs/DESIGN-v2.md`](docs/DESIGN-v2.md) (milestone "The Fight Writes", issues #7–#18) together with decisions D6–D13 in [`docs/DECISIONS.md`](docs/DECISIONS.md). The original scope below is kept for the retired text prototype ("Classic mode", decision D9).
 
-- One player and one scripted opponent.
-- One debate prompt with one counterargument.
-- Transparent, deterministic local scoring.
-- Health and damage, a verdict at the end of the round, and a replay control.
-- Text input only.
+In scope for the pivot's Release 1:
+
+- One player vs. one scripted CPU: real-time-lite combat (move, light/heavy attack, block, combo, metered special).
+- Argument, fighter, and location selection screens; 4 fighters; 2 arenas; 8 topic categories plus custom questions.
+- Template-bank dialogue and a 3-judge explainable verdict, both driven solely by the match ledger.
+- Deterministic simulation: seeded RNG, fixed timestep.
 
 Out of scope for Release 1 (do not add these without an explicit issue and decision update):
 
-- Additional prompts, opponents, or rounds.
-- Voice input or speech recognition.
-- Generative-AI judging or any external API calls.
-- Backend services, authentication, or user accounts.
-- Frameworks (React, Vue, etc.), bundlers, or runtime dependencies.
+- Voice input or speech recognition; audio of any kind (crowd, announcer, effects).
+- Generative-AI dialogue or judging, or any external API calls.
+- Backend services, authentication, user accounts, or persistence.
+- Frameworks (React, Vue, etc.), bundlers, or runtime dependencies (Playwright is allowed as dev-only tooling per D13).
+- Multiplayer, campaign, additional fighters/arenas/judges, touch controls.
 - License changes.
 
 If a change you want to make crosses these boundaries, open an issue proposing a scope change before writing code.
