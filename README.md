@@ -4,23 +4,26 @@ A fighting game where the attacks are performed through sound arguments
 and logic. Land a valid argument and you draw blood; commit a fallacy and you
 leave yourself open to a counter.
 
-Built as a **web/HTML5** app — vanilla JavaScript + the Canvas
-API.
+There are currently two prototypes in this repository: an HTML5 Canvas game and a Text-based game.
 
-## Run it
+---
 
-```bash
-npm start
-# then open http://localhost:8000
-```
-*(Node is used to serve the files locally to avoid CORS errors when loading `data/fallacies.json`)*
+## 1. Canvas Prototype (index.html)
 
-## Controls
+Built as a **dependency-free web/HTML5** app — vanilla JavaScript + the Canvas API, no build step.
+
+### Run it
+
+You can simply open `index.html` in a browser to play. 
+
+*(Note: Some browsers block `fetch` on `file://`, so the game falls back to a small built-in argument set. To load the full `data/fallacies.json`, run `npm start` to start a local server and go to `http://localhost:8000/`)*
+
+### Controls
 
 - **1–4** — throw the matching argument
 - **Space** — start / rematch
 
-## Project layout
+### Project layout
 
 ```
 index.html            Entry point; loads scripts in dependency order
@@ -44,25 +47,15 @@ data/
 docs/                 Design & content docs (separate stream)
 ```
 
-## How it fits together
-
-Clear separation of concerns keeps things easy to extend:
-
-- **Content** is data (`data/fallacies.json`) — add arguments without touching code.
-- **Rules** are pure (`src/engine/combat.js`) — easy to reason about and tune.
-- **Rendering** reads state and never mutates it — swap primitives for art freely.
-- **Balance** is centralized (`src/core/config.js`).
-
-Design and content are authored under `/docs` (see `docs/README.md`) and feed
-the data and config files.
-
 ---
 
-## Release 1: Text Prototype
+## 2. Text Prototype (text-version.html)
 
-A text-based prototype of the game is also available.
+A text-based prototype of the game is also available (Release 1).
 
 Included: one player, one scripted opponent, one prompt, text input, transparent scoring, health, damage, a verdict, replay, and a responsive accessible interface.
 
-**Run the text prototype:**
-`npm start`, then open http://localhost:8000/text-version.html. Run `npm test` to verify scoring.
+### Run it
+
+Run `npm start`, then open http://localhost:8000/text-version.html. 
+Run `npm test` to verify scoring.
