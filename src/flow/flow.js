@@ -26,7 +26,7 @@
       playerFighterId: null,
       locationId: null,
       fightResult: null,
-      ...(initial || {}),
+      ...(initial ?? {}),
     };
   }
 

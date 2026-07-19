@@ -218,5 +218,5 @@ kbd {
 @media (max-width: 640px) {
   #flow-app { padding: 16px; }
   .option-grid { grid-template-columns: 1fr; }
-  .custom-field input[type="text"] { width: 100%; }
+  .custom-field input[type="text"] { flex: 1 1 100%; }
 }

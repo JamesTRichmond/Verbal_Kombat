@@ -175,7 +175,7 @@
       if (!target) {
         target = el.querySelector("button:not([hidden]):not([disabled]), input:not([disabled]), textarea:not([disabled])");
       }
-      if (target && target.focus) target.focus();
+      if (target) target.focus();
     }
 
     return { render: render };
