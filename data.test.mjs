@@ -251,4 +251,97 @@ assert.ok(!sanitizeCustomQuestion('<img src=x onerror=alert(1)>hi').includes('<'
   assert.equal(loaded.lines.logician.fighter, 'logician');
 }
 
+// ---- served content short of the R1 counts degrades to fallback ----
+{
+  const vkShort = {config: {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }}};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const shortTopics = {categories: readJson('data/topics.json').categories.slice(0, 2)};
+  const shortFetch = (url) => Promise.resolve({ok: true, json: () => Promise.resolve(
+    url === 'data/topics.json' ? shortTopics : readJson(url))});
+  const warn = console.warn;
+  console.warn = () => {};
+  new Function('window', 'fetch', src)({VK: vkShort}, shortFetch);
+  const loaded = await vkShort.content.load();
+  console.warn = warn;
+  assert.equal(loaded.topics[0].id, 'food');
+  assert.equal(loaded.topics.length, 1,
+    'a valid-but-partial topics payload falls back to the built-in set');
+}
+
+// ---- a fighter whose line bank 404s is dropped, never given fake lines ----
+{
+  const vkMissing = {config: {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }}};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const extraFighters = readJson('data/fighters.json');
+  extraFighters.fighters.push({...extraFighters.fighters[0],
+    id: 'mystery_guest', lineBank: 'mystery'});
+  const missingFetch = (url) =>
+    url === 'data/lines/mystery.json'
+      ? Promise.resolve({ok: false, status: 404})
+      : Promise.resolve({ok: true, json: () => Promise.resolve(
+          url === 'data/fighters.json' ? extraFighters : readJson(url))});
+  const warn = console.warn;
+  console.warn = () => {};
+  new Function('window', 'fetch', src)({VK: vkMissing}, missingFetch);
+  const loaded = await vkMissing.content.load();
+  console.warn = warn;
+  assert.equal(loaded.fighters.length, 4, 'fighter with unloadable bank dropped');
+  assert.ok(!loaded.fighters.some((f) => f.id === 'mystery_guest'));
+  assert.ok(!('mystery' in loaded.lines), 'no synthesized bank for the missing key');
+}
+
+// ---- invalid override lines lose to the base bank ----
+{
+  const vkOverride = {config: {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }}};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const badOverrideBank = structuredClone(readJson('data/lines/logician.json'));
+  badOverrideBank.categoryOverrides.philosophy.special = [42, '', '{expertt} agrees'];
+  const overrideFetch = (url) => Promise.resolve({ok: true, json: () => Promise.resolve(
+    url === 'data/lines/logician.json' ? badOverrideBank : readJson(url))});
+  const warn = console.warn;
+  console.warn = () => {};
+  new Function('window', 'fetch', src)({VK: vkOverride}, overrideFetch);
+  const loaded = await vkOverride.content.load();
+  console.warn = warn;
+  const bank = loaded.lines.logician;
+  assert.ok(!bank.categoryOverrides.philosophy?.special,
+    'override with no valid lines is discarded');
+  assert.deepEqual(vkOverride.content.linesFor(bank, 'philosophy', 'special'),
+    bank.events.special, 'base bank wins over an invalid override');
+}
+
+// ---- a typo'd placeholder invalidates the line; a mute bucket falls back ----
+{
+  const vkTypo = {config: {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }}};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const typoBank = structuredClone(readJson('data/lines/logician.json'));
+  typoBank.events.whiff = ['{expertt} would disagree.'];
+  const typoFetch = (url) => Promise.resolve({ok: true, json: () => Promise.resolve(
+    url === 'data/lines/logician.json' ? typoBank : readJson(url))});
+  const warn = console.warn;
+  console.warn = () => {};
+  new Function('window', 'fetch', src)({VK: vkTypo}, typoFetch);
+  const loaded = await vkTypo.content.load();
+  console.warn = warn;
+  assert.ok(loaded.lines.logician.events.whiff.length > 0,
+    'bank with only-invalid lines for an event degrades to fallback');
+  assert.ok(!loaded.lines.logician.events.whiff[0].includes('{expertt}'));
+}
+
 console.log('Data tests passed.');

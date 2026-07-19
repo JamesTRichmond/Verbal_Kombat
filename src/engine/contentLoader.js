@@ -178,20 +178,41 @@
     return Array.isArray(bank.events[eventType]) ? bank.events[eventType] : [];
   }
 
+  // Release 1 requires the FULL set from served content — 8 categories, 4
+  // fighters, 2 arenas (see data/README.md). A reachable file that validates
+  // but comes up short (say, one surviving category) would leave the
+  // selection screens half-empty, so short payloads degrade to the built-in
+  // fallback instead. The fallback itself is exempt from counts: it is
+  // deliberately minimal, just enough to keep the loop alive.
+  var REQUIRED_COUNTS = { topics: 8, fighters: 4, locations: 2 };
+
   // Loads everything and resolves to { topics, fighters, locations, lines }
-  // where lines is keyed by each fighter's lineBank id.
+  // where lines is keyed by each fighter's lineBank id. Fighters whose line
+  // bank cannot be loaded at all are dropped from the roster — a fighter
+  // with fabricated dialogue would break "every line is earned."
   function load() {
     var urls = VK.config.content;
     return Promise.all([
-      loadPart(urls.topicsUrl, FALLBACK.topics, normalizeTopics),
-      loadPart(urls.fightersUrl, FALLBACK.fighters, normalizeFighters),
-      loadPart(urls.locationsUrl, FALLBACK.locations, normalizeLocations),
+      loadPart(urls.topicsUrl, FALLBACK.topics, normalizeTopics, REQUIRED_COUNTS.topics),
+      loadPart(urls.fightersUrl, FALLBACK.fighters, normalizeFighters, REQUIRED_COUNTS.fighters),
+      loadPart(urls.locationsUrl, FALLBACK.locations, normalizeLocations, REQUIRED_COUNTS.locations),
     ]).then(function (parts) {
       var fighters = parts[1];
       return loadLineBanks(urls, fighters).then(function (lines) {
+        var rostered = fighters.filter(function (f) {
+          if (!lines[f.lineBank]) {
+            console.warn(
+              "[VK] Dropping fighter '" + f.id +
+                "': line bank '" + f.lineBank + "' could not be loaded."
+            );
+            return false;
+          }
+          return true;
+        });
+        if (rostered.length === 0) throw new Error("No fighter has a line bank");
         return {
           topics: parts[0],
-          fighters: fighters,
+          fighters: rostered,
           locations: parts[2],
           lines: lines,
         };
@@ -206,17 +227,21 @@
     }
     return Promise.all(
       keys.map(function (key) {
-        return loadPart(
-          urls.linesUrlPrefix + key + ".json",
-          FALLBACK.lines[key] || minimalBank(key, "..."),
-          function (json) {
-            return normalizeBank(json, key);
-          }
-        );
+        // Only banks this file knows about have a fallback. An unknown key
+        // (new fighter, typo in fighters.json) with an unreachable file must
+        // NOT be synthesized — resolve null and let load() drop the fighter.
+        return loadPart(urls.linesUrlPrefix + key + ".json", FALLBACK.lines[key], function (json) {
+          return normalizeBank(json, key);
+        }).catch(function (err) {
+          console.warn("[VK] No usable line bank for '" + key + "': " + err.message);
+          return null;
+        });
       })
     ).then(function (banks) {
       var byKey = {};
-      for (var i = 0; i < banks.length; i++) byKey[keys[i]] = banks[i];
+      for (var i = 0; i < banks.length; i++) {
+        if (banks[i]) byKey[keys[i]] = banks[i];
+      }
       return byKey;
     });
   }
@@ -224,16 +249,22 @@
   // Fetch + validate, falling back on ANY failure — network, parse, or
   // schema. Validation must sit inside the caught chain (same as
   // dataLoader.js): a reachable-but-malformed file should degrade to the
-  // built-in set, not brick the boot. If the fallback itself fails
-  // validation, the throw propagates — that's a bug in this file, not in
-  // deployed content.
-  function loadPart(url, fallback, normalize) {
+  // built-in set, not brick the boot. minCount applies to served content
+  // only, never the fallback. If the fallback is missing or fails
+  // validation, the throw propagates to the caller.
+  function loadPart(url, fallback, normalize, minCount) {
     return fetch(url)
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.json();
       })
-      .then(normalize)
+      .then(function (json) {
+        var out = normalize(json);
+        if (minCount && out.length < minCount) {
+          throw new Error("expected " + minCount + " valid entries, got " + out.length);
+        }
+        return out;
+      })
       .catch(function (err) {
         console.warn(
           "[VK] Could not load " +
@@ -242,6 +273,7 @@
             err.message +
             "). Using built-in fallback. Serve locally (npm start) for full content."
         );
+        if (fallback === undefined) throw err;
         return normalize(fallback);
       });
   }
@@ -373,6 +405,19 @@
     return false;
   }
 
+  // A usable template is a non-empty string whose {placeholders} all come
+  // from the schema vocabulary — a typo like {expertt} would otherwise reach
+  // the ticker as raw text the interpolation layer cannot fill.
+  function isValidLine(line) {
+    if (typeof line !== "string" || line.length === 0) return false;
+    var match;
+    var re = /\{([a-zA-Z]+)\}/g;
+    while ((match = re.exec(line)) !== null) {
+      if (PLACEHOLDERS.indexOf(match[1]) === -1) return false;
+    }
+    return true;
+  }
+
   function normalizeBank(json, key) {
     if (!json || !json.events) throw new Error("No line bank for " + key);
     if (json.fighter && json.fighter !== key) {
@@ -385,16 +430,43 @@
     for (var i = 0; i < EVENT_TYPES.length; i++) {
       var type = EVENT_TYPES[i];
       var arr = json.events[type];
-      events[type] = Array.isArray(arr)
-        ? arr.filter(function (l) {
-            return typeof l === "string" && l.length > 0;
-          })
-        : [];
+      events[type] = Array.isArray(arr) ? arr.filter(isValidLine) : [];
       if (events[type].length === 0) {
         // Every event type is required (see data/README.md): an empty bucket
         // would leave the fighter mute for that ledger event. Throw so
         // loadPart degrades to the fallback bank instead.
-        throw new Error("Line bank '" + key + "' has no lines for " + type);
+        throw new Error("Line bank '" + key + "' has no usable lines for " + type);
+      }
+    }
+    // Overrides are filtered exactly like base lines. An override that ends
+    // up empty (or names an unknown event type) is discarded so the valid
+    // base bucket wins — overrides can only ever replace dialogue with
+    // equally valid dialogue.
+    var overrides = {};
+    var source = json.categoryOverrides || {};
+    for (var cat in source) {
+      if (!Object.prototype.hasOwnProperty.call(source, cat)) continue;
+      for (var type2 in source[cat]) {
+        if (!Object.prototype.hasOwnProperty.call(source[cat], type2)) continue;
+        if (EVENT_TYPES.indexOf(type2) === -1) {
+          console.warn(
+            "[VK] Line bank '" + key + "' override for unknown event '" +
+              type2 + "' in category '" + cat + "' ignored."
+          );
+          continue;
+        }
+        var kept = Array.isArray(source[cat][type2])
+          ? source[cat][type2].filter(isValidLine)
+          : [];
+        if (kept.length === 0) {
+          console.warn(
+            "[VK] Line bank '" + key + "' override " + cat + "." + type2 +
+              " has no usable lines; base bank wins."
+          );
+          continue;
+        }
+        if (!overrides[cat]) overrides[cat] = {};
+        overrides[cat][type2] = kept;
       }
     }
     return {
@@ -402,7 +474,7 @@
       // field is content error, never authority.
       fighter: key,
       events: events,
-      categoryOverrides: json.categoryOverrides || {},
+      categoryOverrides: overrides,
     };
   }
 

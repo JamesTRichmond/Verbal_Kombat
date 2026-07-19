@@ -18,6 +18,14 @@ All loading follows the same fallback pattern: fetch the JSON, and if fetch is
 unavailable (e.g. `file://`) fall back to a small built-in set so the game
 still boots. Serve locally (`npm start`) for full content.
 
+Served content is strictly validated, and shortfalls degrade rather than ship:
+a reachable file that is malformed, short of the required Release 1 counts
+(8 categories / 4 fighters / 2 arenas), missing lines for a required event
+type, or using unknown `{placeholders}` falls back to the built-in set (or,
+for a line bank with no built-in fallback, drops the affected fighter from the
+roster). Category overrides are filtered exactly like base lines; an override
+with no valid lines is discarded and the base bucket wins.
+
 ## `topics.json`
 
 ```jsonc
