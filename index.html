@@ -13,14 +13,102 @@
       <p class="tagline">Win the argument. Draw blood.</p>
     </header>
 
-    <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
+    <main id="flow-app" aria-live="polite">
+      <section id="screen-argument" class="vk-screen" aria-labelledby="argument-title">
+        <h2 id="argument-title">Choose the argument</h2>
+        <p class="screen-hint">Pick a category, or write your own question.</p>
+        <div class="option-grid" role="group" aria-label="Debate categories">
+          <button type="button" class="option-card" data-category="society" data-question="Should voting be mandatory?">
+            <span class="option-name">Society</span>
+            <span class="option-detail">Should voting be mandatory?</span>
+          </button>
+          <button type="button" class="option-card" data-category="science" data-question="Is genetically modified food safe to eat?">
+            <span class="option-name">Science</span>
+            <span class="option-detail">Is genetically modified food safe?</span>
+          </button>
+          <button type="button" class="option-card" data-category="ethics" data-question="Is it ever right to lie?">
+            <span class="option-name">Ethics</span>
+            <span class="option-detail">Is it ever right to lie?</span>
+          </button>
+          <button type="button" class="option-card" data-category="tech" data-question="Should social media be regulated?">
+            <span class="option-name">Tech</span>
+            <span class="option-detail">Should social media be regulated?</span>
+          </button>
+        </div>
+        <div class="custom-field">
+          <label for="argument-custom">Custom question</label>
+          <input id="argument-custom" type="text" maxlength="120" placeholder="Enter your own debate question..." />
+          <button type="button" id="argument-custom-btn">Use custom question</button>
+        </div>
+      </section>
+
+      <section id="screen-fighter" class="vk-screen" aria-labelledby="fighter-title" hidden>
+        <button type="button" class="back-button">Back</button>
+        <h2 id="fighter-title">Choose your fighter</h2>
+        <p class="screen-hint">Each style maps to a different combat approach.</p>
+        <div class="option-grid" role="group" aria-label="Fighter roster">
+          <button type="button" class="option-card" data-fighter="logician">
+            <span class="option-name">The Logician</span>
+            <span class="option-detail">Precise, counter-focused</span>
+          </button>
+          <button type="button" class="option-card" data-fighter="demagogue">
+            <span class="option-name">The Demagogue</span>
+            <span class="option-detail">Heavy swings, crowd-feeding</span>
+          </button>
+          <button type="button" class="option-card" data-fighter="empiricist">
+            <span class="option-name">The Empiricist</span>
+            <span class="option-detail">Jab pressure, evidence combos</span>
+          </button>
+          <button type="button" class="option-card" data-fighter="trickster">
+            <span class="option-name">The Trickster</span>
+            <span class="option-detail">Mobility, interrupts</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="screen-location" class="vk-screen" aria-labelledby="location-title" hidden>
+        <button type="button" class="back-button">Back</button>
+        <h2 id="location-title">Choose the arena</h2>
+        <p class="screen-hint">Each arena has its own look and scripted event.</p>
+        <div class="option-grid" role="group" aria-label="Arenas">
+          <button type="button" class="option-card" data-location="forum">
+            <span class="option-name">The Forum</span>
+            <span class="option-detail">Public square, echo amplifies the next point</span>
+          </button>
+          <button type="button" class="option-card" data-location="studio">
+            <span class="option-name">The Studio</span>
+            <span class="option-detail">Broadcast stage, disciplined pacing</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="screen-fight" class="vk-screen" aria-labelledby="fight-title" hidden>
+        <button type="button" class="back-button">Back</button>
+        <h2 id="fight-title">Fight</h2>
+        <p class="screen-hint">Placeholder combat. Keys <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> throw arguments, <kbd>Space</kbd> starts, <kbd>Esc</kbd> goes back.</p>
+        <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
+        <button type="button" id="fight-end-btn">End fight (placeholder)</button>
+      </section>
+
+      <section id="screen-verdict" class="vk-screen" aria-labelledby="verdict-title" hidden>
+        <button type="button" class="back-button">Back</button>
+        <h2 id="verdict-title">Verdict</h2>
+        <p class="screen-hint">Your selections survived the full flow.</p>
+        <dl class="verdict-list">
+          <dt>Topic</dt>
+          <dd id="verdict-topic">—</dd>
+          <dt>Fighter</dt>
+          <dd id="verdict-fighter">—</dd>
+          <dt>Location</dt>
+          <dd id="verdict-location">—</dd>
+          <dt>Result</dt>
+          <dd id="verdict-result">—</dd>
+        </dl>
+        <button type="button" id="verdict-restart-btn">Play again</button>
+      </section>
+    </main>
 
     <footer id="controls">
-      <p class="hint">
-        Throw an argument:
-        <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
-        &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
-      </p>
       <p class="hint"><a href="text-version.html">Classic mode</a> — the original typed-argument game (uses ES modules, so it needs a local server: <code>npm start</code>, not <code>file://</code>)</p>
     </footer>
   </div>
@@ -38,6 +126,9 @@
   <script src="src/engine/input.js"></script>
   <script src="src/render/renderer.js"></script>
   <script src="src/engine/gameLoop.js"></script>
+  <script src="src/flow/flow.js"></script>
+  <script src="src/game.js"></script>
+  <script src="src/ui/flowUi.js"></script>
   <script src="src/main.js"></script>
 </body>
 </html>

@@ -1,37 +1,36 @@
 /*
- * main.js — boot sequence. Wires data + canvas + input + loop together.
+ * main.js — Release 1 entry point.
  *
- * This is the only file that reaches across subsystems; everything else stays
- * in its lane. Load content, build state, attach input, start the loop.
+ * Wires the screen-flow state machine to its DOM controller. The canvas
+ * combat loop is started only when the player reaches the fight screen and
+ * stopped when they leave, keeping the fight lifecycle separate from flow
+ * navigation.
  */
 (function (VK) {
   "use strict";
 
   function boot() {
-    var canvas = document.getElementById("stage");
-    if (!canvas) {
-      console.error("[VK] #stage canvas not found.");
+    var root = document.getElementById("flow-app");
+    if (!root) {
+      console.error("[VK] #flow-app container not found.");
       return;
     }
-    var ctx = canvas.getContext("2d");
 
-    VK.loadData().then(function (moves) {
-      // Single mutable state reference the loop reads and input replaces.
-      var current = VK.state.create(moves);
-      var getState = function () { return current; };
+    var current = VK.flow.create();
 
-      VK.input.attach({
-        onStart: function () { current = VK.state.start(current); },
-        onMove: function (index) { VK.state.playerMove(current, index); },
-      });
-
-      var loop = VK.gameLoop.create(ctx, getState);
-      loop.start();
-
-      console.log("[VK] Ready — " + moves.length + " arguments loaded. Press Space.");
-    }).catch(function (err) {
-      console.error("[VK] Boot failed:", err);
+    var ui = VK.flowUi.create({
+      root: root,
+      getFlow: function () { return current; },
+      onChange: function (next) {
+        current = next;
+        ui.render(current);
+      },
+      onStartFight: function () { VK.game.start(); },
+      onStopFight: function () { VK.game.stop(); },
     });
+
+    ui.render(current);
+    console.log("[VK] Flow ready — start navigating.");
   }
 
   if (document.readyState === "loading") {

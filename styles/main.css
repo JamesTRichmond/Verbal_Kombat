@@ -9,6 +9,7 @@
   --accent: #e4b04a;
   --p1: #4aa3e4;
   --p2: #c8102e;
+  --focus: #e4b04a;
   --font: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
 }
 
@@ -46,6 +47,129 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* Screen flow layout */
+
+#flow-app {
+  background: var(--panel);
+  border: 1px solid #2a2536;
+  border-radius: 10px;
+  padding: 24px;
+  margin: 0 auto 16px;
+  text-align: left;
+}
+
+.vk-screen[hidden] { display: none !important; }
+
+.vk-screen h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.screen-hint {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.option-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  padding: 16px;
+  text-align: left;
+  background: #1e1e28;
+  border: 2px solid #2a2536;
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.option-card:hover {
+  border-color: var(--accent);
+  background: #252530;
+}
+
+.option-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.option-detail {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.custom-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #2a2536;
+}
+
+.custom-field label {
+  width: 100%;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.custom-field input[type="text"] {
+  flex: 1 1 220px;
+  padding: 10px 12px;
+  background: #0d0d12;
+  border: 2px solid #2a2536;
+  border-radius: 6px;
+  color: var(--ink);
+  font: inherit;
+}
+
+.back-button {
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  background: transparent;
+  border: 2px solid var(--muted);
+  color: var(--muted);
+}
+
+.back-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.verdict-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  margin: 0 0 20px;
+}
+
+.verdict-list dt {
+  color: var(--muted);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.verdict-list dd {
+  margin: 0;
+}
+
 #stage {
   width: 100%;
   height: auto;
@@ -61,6 +185,23 @@ body {
   font-size: 0.9rem;
 }
 
+/* Visible focus states — keyboard-first navigation. */
+
+button,
+input[type="text"],
+a,
+.option-card {
+  transition: outline-offset 0.05s ease;
+}
+
+button:focus-visible,
+input[type="text"]:focus-visible,
+a:focus-visible,
+.option-card:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
 kbd {
   display: inline-block;
   min-width: 1.4em;
@@ -72,4 +213,10 @@ kbd {
   border-bottom-width: 3px;
   font-family: inherit;
   font-size: 0.85em;
+}
+
+@media (max-width: 640px) {
+  #flow-app { padding: 16px; }
+  .option-grid { grid-template-columns: 1fr; }
+  .custom-field input[type="text"] { width: 100%; }
 }
