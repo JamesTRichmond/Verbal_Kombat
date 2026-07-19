@@ -39,15 +39,105 @@ body {
 #hud { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
 .hp-block { flex: 1; }
 .hp-block.right .hp-name { text-align: right; }
-.hp-block.right .hp-sub { text-align: right; }
-.hp-name { font-family: 'Impact', sans-serif; letter-spacing: 2px; font-size: 15px; margin-bottom: 3px; }
+.hp-name { font-family: 'Impact', sans-serif; letter-spacing: 2px; font-size: 15px; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .hp-bar { height: 18px; background: #241416; border: 1px solid #000; box-shadow: inset 0 0 6px #000; }
 .hp-fill { height: 100%; width: 100%; transition: width 0.35s ease-out; background: linear-gradient(#e3c34c, #9c7a14); }
 #hp-b .hp-fill { background: linear-gradient(#d84a5e, #7c1626); float: right; }
-.hp-sub { font-size: 9px; letter-spacing: 3px; opacity: 0.6; margin-top: 2px; }
+.hp-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 2px; }
+.hp-sub { font-size: 9px; letter-spacing: 3px; opacity: 0.6; }
+.pips i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 1px solid #4a2c2f; margin: 0 2px; background: transparent; }
+.pips i.won { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 6px var(--gold); }
 #round-clock { font-size: 22px; color: var(--blood); }
 
-#arena { width: 100%; flex: 1; background: #000; border: 2px solid #2a1a1c; min-height: 0; }
+#arena-frame { position: relative; flex: 1; min-height: 0; display: flex; }
+#arena { width: 100%; height: 100%; background: #000; border: 2px solid #2a1a1c; }
+
+/* ---- combo popups (MK3 grammar: the structure counter) ---- */
+.combo-popup {
+  position: absolute; top: 60px;
+  font-family: 'Impact', sans-serif; font-size: 22px; letter-spacing: 2px;
+  text-shadow: 0 0 10px #000, 2px 2px 0 #000;
+  pointer-events: none; opacity: 0; transform: scale(0.8);
+  transition: opacity 0.15s, transform 0.15s;
+}
+.combo-popup.left { left: 26px; color: var(--a); }
+.combo-popup.right { right: 26px; color: var(--b); text-align: right; }
+.combo-popup.show { opacity: 1; transform: scale(1); }
+.combo-popup.shatter { animation: shatter 0.6s forwards; }
+@keyframes shatter {
+  0% { opacity: 1; transform: scale(1) rotate(0deg); }
+  30% { transform: scale(1.15) rotate(-4deg); }
+  100% { opacity: 0; transform: scale(0.4) rotate(10deg) translateY(40px); filter: blur(4px); }
+}
+
+/* ---- overlay screens (select / vs / arena card / report) ---- */
+#overlay {
+  position: absolute; inset: 0; z-index: 10; display: none;
+  background: rgba(5, 3, 4, 0.96);
+  overflow-y: auto;
+}
+#overlay.active { display: block; }
+
+.screen { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 18px; text-align: center; }
+.screen h2 { font-family: 'Impact', sans-serif; letter-spacing: 6px; color: var(--gold); font-size: 26px; margin-bottom: 4px; }
+.screen .sub { font-style: italic; opacity: 0.75; margin-bottom: 16px; font-size: 13px; }
+
+/* select */
+.roster-grid { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.fighter-card {
+  width: 176px; background: #120c0e; border: 2px solid #2a1a1c; padding: 10px;
+  cursor: pointer; transition: border-color 0.15s, transform 0.15s; text-align: left;
+}
+.fighter-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.fighter-card.picked-a { border-color: var(--a); box-shadow: 0 0 12px rgba(201, 162, 39, 0.4); }
+.fighter-card.picked-b { border-color: var(--b); box-shadow: 0 0 12px rgba(164, 36, 59, 0.4); }
+.portrait {
+  height: 74px; display: flex; align-items: center; justify-content: center;
+  font-family: 'Impact', sans-serif; font-size: 40px; color: #0b0709; margin-bottom: 8px;
+}
+.fighter-card .f-name { font-family: 'Impact', sans-serif; letter-spacing: 1px; font-size: 14px; }
+.fighter-card .f-title { font-size: 10px; letter-spacing: 2px; opacity: 0.65; margin-bottom: 8px; }
+.trait { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+.trait .t-label { font-size: 8px; letter-spacing: 1px; opacity: 0.6; width: 62px; text-transform: uppercase; }
+.trait .t-bar { flex: 1; height: 6px; background: #2e1c1f; border: 1px solid #000; }
+.trait .t-fill { display: block; height: 100%; background: linear-gradient(90deg, #b3831c, #e8c94f); box-shadow: 0 0 4px rgba(227, 195, 76, 0.5); }
+.risks { margin-top: 6px; font-size: 9px; color: #d84a5e; letter-spacing: 1px; min-height: 12px; }
+
+/* vs screen */
+.vs-row { display: flex; align-items: center; gap: 26px; margin: 10px 0 16px; }
+.vs-side { width: 260px; }
+.vs-side .portrait { height: 110px; font-size: 64px; }
+.vs-side .v-name { font-family: 'Impact', sans-serif; font-size: 20px; letter-spacing: 2px; margin-top: 8px; }
+.vs-side .v-title { font-size: 10px; letter-spacing: 3px; opacity: 0.6; margin-bottom: 8px; }
+.vs-side .v-stance { font-style: italic; font-size: 13px; line-height: 1.4; opacity: 0.9; }
+.vs-mark { font-family: 'Impact', sans-serif; font-size: 64px; color: var(--blood); text-shadow: 0 0 18px rgba(142,26,26,0.8); }
+
+/* arena card */
+.arena-card h2 { font-size: 34px; color: var(--bone); }
+.arena-card .sub { color: var(--gold); }
+
+/* report card */
+.report { width: 100%; max-width: 640px; text-align: left; }
+.report h2 { text-align: center; }
+.report .verdict-line { text-align: center; font-family: 'Impact', sans-serif; letter-spacing: 3px; font-size: 15px; color: var(--gold); margin-bottom: 14px; }
+.report table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 14px; }
+.report th, .report td { padding: 5px 8px; border-bottom: 1px solid #241416; }
+.report th { font-family: 'Impact', sans-serif; letter-spacing: 2px; font-size: 10px; opacity: 0.7; text-align: left; }
+.report td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.report .col-a { color: var(--a); }
+.report .col-b { color: var(--b); }
+.fallacy-list { font-size: 11px; color: #d84a5e; }
+.xp-line { font-size: 12px; opacity: 0.85; }
+
+.btn-row { display: flex; gap: 12px; justify-content: center; margin-top: 12px; }
+button.vk {
+  background: var(--blood); color: var(--bone); border: none;
+  font-family: 'Impact', sans-serif; letter-spacing: 3px; font-size: 15px;
+  padding: 9px 24px; cursor: pointer;
+}
+button.vk:hover { background: #b32424; }
+button.vk.gold { background: #6d5713; }
+button.vk.gold:hover { background: #8a6e18; }
 
 #controls { display: flex; gap: 12px; align-items: center; padding-top: 10px; }
 #btn-fight {

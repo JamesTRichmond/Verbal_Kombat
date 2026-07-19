@@ -39,6 +39,9 @@ export interface SideState {
   momentum: number;
   /** Current combo depth. */
   combo: number;
+  /** Set after a backfire: visibly vulnerable; the next clean hit against
+   *  this side is a punish (bonus damage) and clears the stagger. */
+  staggered: boolean;
   fallaciesCommitted: number;
   cleanHits: number;
 }
@@ -55,7 +58,7 @@ export interface MatchState {
 }
 
 export function newSideState(): SideState {
-  return { integrity: MAX_INTEGRITY, momentum: 0, combo: 0, fallaciesCommitted: 0, cleanHits: 0 };
+  return { integrity: MAX_INTEGRITY, momentum: 0, combo: 0, staggered: false, fallaciesCommitted: 0, cleanHits: 0 };
 }
 
 export function newMatch(config: MatchConfig): MatchState {

@@ -18,16 +18,21 @@
             <div class="hp-block" id="hp-a">
               <div class="hp-name"></div>
               <div class="hp-bar"><div class="hp-fill"></div></div>
-              <div class="hp-sub">POSITION INTEGRITY</div>
+              <div class="hp-foot"><span class="hp-sub">POSITION INTEGRITY</span><span class="pips"><i></i><i></i></span></div>
             </div>
             <div id="round-clock">⚔</div>
             <div class="hp-block right" id="hp-b">
               <div class="hp-name"></div>
               <div class="hp-bar"><div class="hp-fill"></div></div>
-              <div class="hp-sub">POSITION INTEGRITY</div>
+              <div class="hp-foot"><span class="pips"><i></i><i></i></span><span class="hp-sub">POSITION INTEGRITY</span></div>
             </div>
           </div>
-          <canvas id="arena" width="960" height="440"></canvas>
+          <div id="arena-frame">
+            <canvas id="arena" width="960" height="440"></canvas>
+            <div id="combo-a" class="combo-popup left"></div>
+            <div id="combo-b" class="combo-popup right"></div>
+            <div id="overlay"></div>
+          </div>
           <div id="controls">
             <button id="btn-fight">FIGHT</button>
             <input id="scrub" type="range" min="0" max="100" value="0" step="1" disabled />

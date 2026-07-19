@@ -63,7 +63,37 @@ describe('applyVerdict', () => {
     const events = applyVerdict(state, arg('A', 'Second clean point building on it.', 2), verdict());
     expect(events[0]!.type).toBe('combo_hit');
     expect(events[0]!.combo).toBe(2);
-    expect(events[0]!.label).toBe('COMBO x2');
+    expect(events[0]!.label).toBe('2-LINK CHAIN');
+  });
+
+  it('names combo structures: 3 = syllogism, 5 = point case', () => {
+    const state = newMatch(config);
+    applyVerdict(state, arg('A', 'One.', 1), verdict());
+    applyVerdict(state, arg('A', 'Two.', 2), verdict());
+    const third = applyVerdict(state, arg('A', 'Three.', 3), verdict());
+    expect(third[0]!.label).toBe('3-LINK SYLLOGISM');
+    applyVerdict(state, arg('A', 'Four.', 4), verdict());
+    const fifth = applyVerdict(state, arg('A', 'Five.', 5), verdict());
+    expect(fifth[0]!.label).toBe('5-POINT CASE');
+  });
+
+  it('backfire staggers the actor; the next clean hit punishes for bonus damage and clears it', () => {
+    const state = newMatch(config);
+    applyVerdict(
+      state,
+      arg('B', 'Only a fool would believe that.', 1),
+      verdict({ side: 'B', fallacies: ['ad_hominem'], soundness: 0.1 }),
+    );
+    expect(state.sides.B.staggered).toBe(true);
+
+    // Baseline: same hit against an unstaggered opponent.
+    const baseline = newMatch({ ...config, id: 'm2' });
+    const cleanEvents = applyVerdict(baseline, arg('A', 'Short sharp point.', 1), verdict());
+
+    const punishEvents = applyVerdict(state, arg('A', 'Short sharp point.', 2), verdict());
+    expect(punishEvents[0]!.damage).toBeGreaterThan(cleanEvents[0]!.damage);
+    expect(punishEvents[0]!.label).toBe('STAGGER PUNISH');
+    expect(state.sides.B.staggered).toBe(false);
   });
 
   it('turns a strawman into a labeled block with zero damage', () => {

@@ -39,6 +39,20 @@ function eventId(matchId: string): string {
 }
 
 /**
+ * Canon (UI-REFERENCE §2): the combo popup names the STRUCTURE of the
+ * argument, not just a hit count.
+ */
+export function structureLabel(combo: number): string {
+  if (combo <= 1) return '';
+  if (combo === 2) return '2-LINK CHAIN';
+  if (combo === 3) return '3-LINK SYLLOGISM';
+  return `${combo}-POINT CASE`;
+}
+
+/** Bonus multiplier when punishing a staggered opponent. */
+const PUNISH_MULTIPLIER = 1.25;
+
+/**
  * Map one judged argument to combat events and apply them to match state.
  * Mutates `state` (integrity, momentum, combos, counters) and returns the
  * events for the renderer + replay recorder.
@@ -63,6 +77,7 @@ export function applyVerdict(
     actorState.combo = 0;
     actorState.fallaciesCommitted += verdict.fallacies.length;
     actorState.momentum = Math.max(-1, actorState.momentum - 0.3);
+    actorState.staggered = true; // visibly vulnerable until the opponent punishes
 
     // The dominant (first) fallacy decides the failure animation.
     const primaryId = verdict.fallacies[0];
@@ -115,6 +130,13 @@ export function applyVerdict(
   const comboBonus = actorState.combo > 1 ? Math.min(6, (actorState.combo - 1) * 2) : 0;
   let damage = Math.round((base * (0.5 + quality) + comboBonus) * scale);
 
+  // Punish: hitting a staggered opponent lands harder and clears the stagger.
+  const punished = targetState.staggered && damage > 0;
+  if (punished) {
+    damage = Math.round(damage * PUNISH_MULTIPLIER);
+    targetState.staggered = false;
+  }
+
   /* ---- The finisher: only lands when the closer truly synthesizes. ---- */
   if (isCloser && targetState.integrity - damage <= Math.max(12, MAX_INTEGRITY * 0.15)) {
     type = 'finisher';
@@ -133,13 +155,15 @@ export function applyVerdict(
     actor,
     damage,
     selfDamage: 0,
-    ...(type === 'combo_hit' || (type === 'launcher' && actorState.combo > 1)
-      ? { label: `COMBO x${actorState.combo}` }
+    ...(type === 'combo_hit'
+      ? { label: structureLabel(actorState.combo) }
       : type === 'finisher'
         ? { label: 'FATALITY — POSITION DISMANTLED' }
         : type === 'launcher'
           ? { label: 'DEVASTATING REBUTTAL' }
-          : {}),
+          : punished
+            ? { label: 'STAGGER PUNISH' }
+            : {}),
     combo: actorState.combo,
     sourceArgumentId: arg.id,
     t: arg.t,
