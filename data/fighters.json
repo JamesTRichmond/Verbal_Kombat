@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "fighters": [
+    {
+      "id": "logician",
+      "name": "The Logician",
+      "style": "Precise, counter-focused. Waits for an overreach, then exposes the flaw.",
+      "stats": {
+        "reach": 7,
+        "speed": 4,
+        "power": 5,
+        "defense": 7
+      },
+      "special": {
+        "name": "Q.E.D.",
+        "description": "A perfectly timed rebuttal that converts an opponent's risk into guaranteed damage."
+      },
+      "lineBankKeys": ["tech_ethics", "morality", "education"],
+      "cpu": {
+        "aggressionCurve": [
+          { "hpThreshold": 100, "pressure": 0.25 },
+          { "hpThreshold": 60, "pressure": 0.35 },
+          { "hpThreshold": 30, "pressure": 0.45 }
+        ],
+        "punishWindows": {
+          "whiff": { "frames": 18, "response": "counter" },
+          "heavyStartup": { "frames": 12, "response": "light" },
+          "blockPushback": { "frames": 8, "response": "grab" }
+        },
+        "preferredRange": "mid",
+        "patience": 0.8
+      }
+    },
+    {
+      "id": "demagogue",
+      "name": "The Demagogue",
+      "style": "Heavy swings, crowd-feeding. Turns every exchange into a spectacle.",
+      "stats": {
+        "reach": 6,
+        "speed": 3,
+        "power": 9,
+        "defense": 4
+      },
+      "special": {
+        "name": "Soapbox",
+        "description": "A dramatic heavy attack that gains bonus damage after a successful taunt or blocked combo."
+      },
+      "lineBankKeys": ["food_culture", "urban_life", "work_future"],
+      "cpu": {
+        "aggressionCurve": [
+          { "hpThreshold": 100, "pressure": 0.65 },
+          { "hpThreshold": 60, "pressure": 0.75 },
+          { "hpThreshold": 30, "pressure": 0.9 }
+        ],
+        "punishWindows": {
+          "whiff": { "frames": 10, "response": "heavy" },
+          "heavyStartup": { "frames": 6, "response": "heavy" },
+          "blockPushback": { "frames": 12, "response": "heavy" }
+        },
+        "preferredRange": "close",
+        "patience": 0.25
+      }
+    },
+    {
+      "id": "empiricist",
+      "name": "The Empiricist",
+      "style": "Jab pressure, evidence combos. Builds a case one hit at a time.",
+      "stats": {
+        "reach": 5,
+        "speed": 8,
+        "power": 4,
+        "defense": 5
+      },
+      "special": {
+        "name": "Cite Your Sources",
+        "description": "A combo-capping special that adds composure damage and extends the current chain."
+      },
+      "lineBankKeys": ["environment", "work_future", "education"],
+      "cpu": {
+        "aggressionCurve": [
+          { "hpThreshold": 100, "pressure": 0.5 },
+          { "hpThreshold": 60, "pressure": 0.5 },
+          { "hpThreshold": 30, "pressure": 0.65 }
+        ],
+        "punishWindows": {
+          "whiff": { "frames": 14, "response": "combo" },
+          "heavyStartup": { "frames": 10, "response": "combo" },
+          "blockPushback": { "frames": 6, "response": "light" }
+        },
+        "preferredRange": "close",
+        "patience": 0.55
+      }
+    },
+    {
+      "id": "trickster",
+      "name": "The Trickster",
+      "style": "Mobility, interrupts. Never where the argument expects them to be.",
+      "stats": {
+        "reach": 4,
+        "speed": 9,
+        "power": 4,
+        "defense": 5
+      },
+      "special": {
+        "name": "Rhetorical Tumble",
+        "description": "A quick reposition and interrupt that cancels an opponent's startup and steals initiative."
+      },
+      "lineBankKeys": ["sports_games", "morality", "food_culture"],
+      "cpu": {
+        "aggressionCurve": [
+          { "hpThreshold": 100, "pressure": 0.4 },
+          { "hpThreshold": 60, "pressure": 0.55 },
+          { "hpThreshold": 30, "pressure": 0.7 }
+        ],
+        "punishWindows": {
+          "whiff": { "frames": 12, "response": "interrupt" },
+          "heavyStartup": { "frames": 16, "response": "interrupt" },
+          "blockPushback": { "frames": 10, "response": "interrupt" }
+        },
+        "preferredRange": "far",
+        "patience": 0.6
+      }
+    }
+  ]
+}

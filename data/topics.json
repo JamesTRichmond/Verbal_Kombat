@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "tech_ethics",
+      "name": "Tech Ethics",
+      "questions": [
+        "Should social media platforms be held responsible for user-generated misinformation?",
+        "Is it ethical to train AI on publicly available creative work without consent?",
+        "Do predictive policing algorithms do more harm than good?"
+      ]
+    },
+    {
+      "id": "food_culture",
+      "name": "Food & Culture",
+      "questions": [
+        "Does pineapple belong on pizza?",
+        "Is a hot dog a sandwich?",
+        "Should traditional recipes be protected from fusion experimentation?"
+      ]
+    },
+    {
+      "id": "urban_life",
+      "name": "Urban Life",
+      "questions": [
+        "Should cities ban private cars from downtown centers?",
+        "Is rent control an effective way to keep housing affordable?",
+        "Do noise ordinances unfairly limit public expression?"
+      ]
+    },
+    {
+      "id": "work_future",
+      "name": "Work & Future",
+      "questions": [
+        "Should a four-day workweek be the legal standard?",
+        "Is universal basic income a responsible response to automation?",
+        "Do open-plan offices improve collaboration or destroy focus?"
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "questions": [
+        "Should standardized testing be abolished in college admissions?",
+        "Is remote learning as effective as in-person instruction?",
+        "Do schools teach enough practical life skills?"
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "Environment",
+      "questions": [
+        "Should nuclear power be part of a clean-energy future?",
+        "Is individual carbon footprint tracking a distraction from systemic change?",
+        "Do conservation laws go too far in limiting local economies?"
+      ]
+    },
+    {
+      "id": "sports_games",
+      "name": "Sports & Games",
+      "questions": [
+        "Should esports be included in the Olympics?",
+        "Is a salary cap fair to players in professional sports?",
+        "Do video games qualify as art?"
+      ]
+    },
+    {
+      "id": "morality",
+      "name": "Morality",
+      "questions": [
+        "Is it ever acceptable to tell a lie?",
+        "Should celebrities be held to a higher ethical standard?",
+        "Can a good outcome justify a questionable means?"
+      ]
+    }
+  ]
+}

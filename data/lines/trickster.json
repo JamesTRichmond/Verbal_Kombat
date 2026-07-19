@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "fighterId": "trickster",
+  "categories": {
+    "sports_games": {
+      "lightHit": ["Is it athletic? Is it competitive? Then it's sport enough.", "The IOC sells spectacle; this sells tickets."],
+      "heavyHit": ["You want tradition? The marathon started as a road race to a wedding.", "Every 'not a real sport' takes exactly one generation to become one."],
+      "counter": ["Chess is an Olympic sport. Your line moved.", "If archery counts, so does pixel-perfect aim."],
+      "block": ["Cute definition. Now defend why yours wins.", "Keep the gate. I'll keep playing."],
+      "whiff": ["You described outdoor exercise. We were discussing competition.", "That insult landed in the wrong game."],
+      "combo": ["Athlete, team, training, tournament, audience — check every box."],
+      "special": ["Rhetorical Tumble: the goalposts just relocated themselves."]
+    },
+    "morality": {
+      "lightHit": ["Rules are performances too. Watch who benefits.", "Consistency is a costume hypocrites wear to parties."],
+      "heavyHit": ["Your universal principle has a 'except for me' clause written in invisible ink.", "The saint and the scoundrel both quote the same rulebook."],
+      "counter": ["You called out inconsistency while wearing two faces.", "The moral high ground is not a balcony; it is a treadmill."],
+      "block": ["Nice sermon. Is it for everyone, or just your enemies?", "The point is sharp; the target is misplaced."],
+      "whiff": ["You indicted human nature. The question was about one choice.", "That accusation needs a mirror, not a jury."],
+      "combo": ["Intent, rule, exception, beneficiary — pull the thread and the sweater confesses."],
+      "special": ["Rhetorical Tumble: your own rule just tripped you."]
+    },
+    "food_culture": {
+      "lightHit": ["Cuisines mix. Borders don't.", "Your grandmother's recipe already had borrowed spices."],
+      "heavyHit": ["Authenticity is just the first person to write the recipe down.", "Fusion is not corruption; it is the history of flavor."],
+      "counter": ["You mourn tradition while eating a tomato — a New World immigrant.", "Protection for whose tradition? The answer is always power."],
+      "block": ["Respect the source. Don't embalm it.", "Cultural theft is real; this is not it."],
+      "whiff": ["You defended a cuisine that was itself a fusion.", "That example is from a restaurant chain."],
+      "combo": ["Trade, migration, war, marriage — every dish is a map of contact."],
+      "special": ["Rhetorical Tumble: the purist's plate just got cosmopolitan."]
+    }
+  }
+}
