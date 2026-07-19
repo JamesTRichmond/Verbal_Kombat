@@ -1,69 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VerbalKombat — First Bout</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verbal Kombat</title>
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-  <main class="arena">
-    <header class="masthead">
-      <p class="eyebrow">Release 1 prototype</p>
-      <h1>Verbal<span>Kombat</span></h1>
-      <p class="tagline">Words are weapons. Logic draws blood.</p>
+  <div id="app">
+    <header id="hud">
+      <h1 class="title">VERBAL&nbsp;<span class="accent">KOMBAT</span></h1>
+      <p class="tagline">Win the argument. Draw blood.</p>
     </header>
 
-    <section class="fighters" aria-label="Fighter status">
-      <article class="fighter">
-        <div class="portrait" aria-hidden="true">YOU</div>
-        <div class="status">
-          <div class="name-row"><h2>The Challenger</h2><strong id="player-hp-label">100 HP</strong></div>
-          <div class="health"><div id="player-health" class="health-fill"></div></div>
-        </div>
-      </article>
-      <div class="versus" aria-hidden="true">VS</div>
-      <article class="fighter rival">
-        <div class="portrait" aria-hidden="true">AI</div>
-        <div class="status">
-          <div class="name-row"><h2>The Heckler</h2><strong id="rival-hp-label">100 HP</strong></div>
-          <div class="health"><div id="rival-health" class="health-fill"></div></div>
-        </div>
-      </article>
-    </section>
+    <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
 
-    <section class="bout" aria-labelledby="round-title">
-      <div class="round-heading">
-        <p id="round-label" class="eyebrow"></p>
-        <h2 id="round-title"></h2>
-      </div>
-      <blockquote id="opponent-claim"></blockquote>
-      <form id="argument-form">
-        <label for="argument">Deliver your counterargument</label>
-        <textarea id="argument" maxlength="420" rows="5" required placeholder="Make a claim, support it with evidence or an example, and answer the opponent’s point."></textarea>
-        <div class="form-footer">
-          <span id="character-count">0 / 420</span>
-          <button type="submit">Strike with logic</button>
-        </div>
-      </form>
-      <div id="result" class="result" hidden aria-live="polite" tabindex="-1">
-        <p id="verdict" class="verdict"></p>
-        <div id="score-breakdown" class="score-grid"></div>
-        <p id="commentary"></p>
-        <button id="restart-button" type="button">Fight again</button>
-      </div>
-    </section>
+    <footer id="controls">
+      <p class="hint">
+        Throw an argument:
+        <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
+        &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
+      </p>
+    </footer>
+  </div>
 
-    <section class="rules">
-      <h2>How to land a hit</h2>
-      <ul>
-        <li><strong>Claim:</strong> take a clear position.</li>
-        <li><strong>Support:</strong> use evidence, reasons, or examples.</li>
-        <li><strong>Rebuttal:</strong> answer the rival directly.</li>
-        <li><strong>Discipline:</strong> avoid personal attacks.</li>
-      </ul>
-    </section>
-  </main>
-  <script type="module" src="app.js"></script>
+  <!--
+    Classic scripts (no build step, no ES modules) so the game runs by simply
+    opening this file in a browser. Load order matters: each file attaches to
+    the global `VK` namespace, and later files depend on earlier ones.
+  -->
+  <script src="src/core/namespace.js"></script>
+  <script src="src/core/config.js"></script>
+  <script src="src/engine/dataLoader.js"></script>
+  <script src="src/engine/combat.js"></script>
+  <script src="src/engine/state.js"></script>
+  <script src="src/engine/input.js"></script>
+  <script src="src/render/renderer.js"></script>
+  <script src="src/engine/gameLoop.js"></script>
+  <script src="src/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "fallacies": [
+    {
+      "id": "straw_man",
+      "name": "Straw Man",
+      "description": "Misrepresenting an opponent's position to make it easier to attack.",
+      "example": "So you're saying we should just let total chaos reign? Bold.",
+      "counter": "I never claimed that — here's what I actually said.",
+      "damage": 6,
+      "risk": 5
+    },
+    {
+      "id": "ad_hominem",
+      "name": "Ad Hominem",
+      "description": "Attacking the person instead of their argument.",
+      "example": "You'd believe anything — you failed logic class, remember?",
+      "counter": "My grades aren't the claim on the table. Address the claim.",
+      "damage": 7,
+      "risk": 7
+    },
+    {
+      "id": "slippery_slope",
+      "name": "Slippery Slope",
+      "description": "Asserting one small step inevitably leads to a catastrophic chain.",
+      "example": "Allow this once and civilization itself unravels by Tuesday.",
+      "counter": "Name the mechanism. Each step needs its own evidence.",
+      "damage": 5,
+      "risk": 6
+    },
+    {
+      "id": "false_dilemma",
+      "name": "False Dilemma",
+      "description": "Framing a many-optioned question as only two choices.",
+      "example": "Either you agree with me completely, or you're the enemy.",
+      "counter": "That's a false choice — there's a whole spectrum between.",
+      "damage": 6,
+      "risk": 5
+    }
+  ]
+}

@@ -8,14 +8,58 @@ VerbalKombat is a fighting game where attacks are performed through sound argume
 - [Architecture](docs/ARCHITECTURE.md) — the dependency-free static-web design: UI, round state, scoring module, and tests.
 - [Design decisions](docs/DECISIONS.md) — why Release 1 uses text input and deterministic local scoring, and defers voice and generative-AI judging.
 
-## Release 1: smallest playable game
+There are currently two prototypes in this repository: an HTML5 Canvas game and a Text-based game.
 
-Release 1 is complete when a player can open the game in a modern browser and finish one fair, understandable verbal-combat round without setup.
+---
+
+## 1. Canvas Prototype (index.html)
+
+Built as a **dependency-free web/HTML5** app — vanilla JavaScript + the Canvas API, no build step.
+
+### Run it
+
+You can simply open `index.html` in a browser to play. 
+
+*(Note: Some browsers block `fetch` on `file://`, so the game falls back to a small built-in argument set. To load the full `data/fallacies.json`, run `npm start` to start a local server and go to `http://localhost:8000/`)*
+
+### Controls
+
+- **1–4** — throw the matching argument
+- **Space** — start / rematch
+
+### Project layout
+
+```
+index.html            Entry point; loads scripts in dependency order
+styles/main.css       Presentation only
+src/
+  core/
+    namespace.js      Global VK namespace
+    config.js         Tunable constants (balance lives here)
+  engine/
+    dataLoader.js     Loads data/fallacies.json (with fallback)
+    combat.js         Pure combat rules — no DOM/canvas
+    state.js          Game model + update tick
+    input.js          Keyboard -> intent
+    gameLoop.js       requestAnimationFrame heartbeat
+  render/
+    renderer.js       Draws state to the canvas (read-only)
+  main.js             Boot: wires it all together
+data/
+  fallacies.json      Authoritative content (source of truth)
+  README.md           Content schema
+docs/                 Design & content docs (separate stream)
+```
+
+---
+
+## 2. Text Prototype (text-version.html)
+
+A text-based prototype of the game is also available (Release 1).
 
 Included: one player, one scripted opponent, one prompt, text input, transparent scoring, health, damage, a verdict, replay, and a responsive accessible interface.
 
-Deferred: voice input, generative AI judging, multiple opponents, campaign progression, multiplayer, accounts, persistence, cosmetics, and app-store packaging.
+### Run it
 
-## Run
-
-`npm start`, then open http://localhost:8000. Run `npm test` to verify scoring.
+Run `npm start`, then open http://localhost:8000/text-version.html. 
+Run `npm test` to verify scoring.
