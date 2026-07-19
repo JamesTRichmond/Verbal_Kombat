@@ -35,13 +35,11 @@
       var failed = 0;
 
       function assert(condition, message) {
-        if (condition) {
-          passed++;
-          results.insertAdjacentHTML("beforeend", '<p class="pass">✓ ' + escapeHtml(message) + "</p>");
-        } else {
-          failed++;
-          results.insertAdjacentHTML("beforeend", '<p class="fail">✗ ' + escapeHtml(message) + "</p>");
-        }
+        var p = document.createElement("p");
+        p.className = condition ? "pass" : "fail";
+        p.textContent = (condition ? "✓ " : "✗ ") + message;
+        results.appendChild(p);
+        if (condition) passed++; else failed++;
       }
 
       function escapeHtml(text) {

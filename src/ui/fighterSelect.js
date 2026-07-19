@@ -21,6 +21,7 @@
     var playerIndex = 0;
     var enemyIndex = defaultEnemyIndex(fighters, playerIndex);
     var buttons = [];
+    var panelHandler = null;
 
     function renderRoster() {
       rosterEl.innerHTML = "";
@@ -82,6 +83,7 @@
     }
 
     function renderPanel(player, enemy) {
+      var stats = Array.isArray(player.stats) ? player.stats : [];
       panelEl.innerHTML =
         '<div class="identity-primary">' +
         '  <div class="identity-portrait" aria-hidden="true">' +
@@ -94,12 +96,12 @@
         "</div>" +
         '<p class="identity-description">' + escapeHtml(player.description) + "</p>" +
         '<dl class="identity-stats">' +
-        renderStat(player.stats[0]) +
-        renderStat(player.stats[1]) +
+        renderStat(stats[0]) +
+        renderStat(stats[1]) +
         "</dl>" +
         '<div class="identity-special">' +
-        '  <h3>Special: ' + escapeHtml(player.special.name) + "</h3>" +
-        '  <p>' + escapeHtml(player.special.description) + "</p>" +
+        '  <h3>Special: ' + escapeHtml(player.special && player.special.name ? player.special.name : "—") + "</h3>" +
+        '  <p>' + escapeHtml(player.special && player.special.description ? player.special.description : "") + "</p>" +
         "</div>" +
         '<div class="identity-rival">' +
         '  <span class="rival-label">Rival:</span>' +
@@ -111,12 +113,14 @@
         "</div>" +
         '<button type="button" class="confirm-button" id="select-confirm">Enter the arena</button>';
 
-      document
-        .getElementById("select-rival-cycle")
-        .addEventListener("click", cycleEnemy);
-      document
-        .getElementById("select-confirm")
-        .addEventListener("click", confirm);
+      if (panelHandler) {
+        panelEl.removeEventListener("click", panelHandler);
+      }
+      panelHandler = function (e) {
+        if (e.target.id === "select-rival-cycle") cycleEnemy();
+        if (e.target.id === "select-confirm") confirm();
+      };
+      panelEl.addEventListener("click", panelHandler);
     }
 
     function renderPanelEmpty() {
@@ -134,6 +138,10 @@
 
     function hide() {
       container.hidden = true;
+      if (panelHandler) {
+        panelEl.removeEventListener("click", panelHandler);
+        panelHandler = null;
+      }
     }
 
     return { show: show, hide: hide };

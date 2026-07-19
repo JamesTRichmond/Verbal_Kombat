@@ -12,13 +12,13 @@
     var f = VK.config.fighter;
     return {
       id: id,
-      name: template ? template.name : "Fighter",
+      name: template && template.name ? template.name : "Fighter",
       side: side, // "left" | "right"
       health: f.maxHealth,
       composure: f.maxComposure,
       // Preserve identity for renderers, dialogue banks, and future tuning.
-      style: template ? template.style : "",
-      special: template ? template.special : null,
+      style: template && template.style ? template.style : "",
+      special: template && template.special ? template.special : null,
       stats: template && template.stats ? template.stats : [],
     };
   }
