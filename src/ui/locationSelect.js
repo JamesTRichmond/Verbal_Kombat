@@ -55,6 +55,7 @@
     for (var i = 0; i < locations.length; i++) {
       if (locations[i].id === id) return locations[i];
     }
+    console.warn("[VK] Unknown location id '" + id + "'; defaulting to first arena.");
     return locations[0] || null;
   }
 

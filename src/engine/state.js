@@ -20,7 +20,9 @@
   }
 
   function createState(moves, location) {
-    location = location || defaultLocation();
+    if (!location) {
+      throw new Error("createState requires a location");
+    }
     return {
       moves: moves,                 // array of fallacy/argument entries
       location: location,           // selected arena
@@ -43,15 +45,6 @@
     var fresh = createState(state.moves, state.location);
     fresh.phase = "fighting";
     return fresh;
-  }
-
-  function defaultLocation() {
-    return {
-      id: "forum",
-      name: "The Forum",
-      palette: { skyTop: "#2b1f3a", skyBottom: "#4a3b5c", floor: "#3d324a", accent: "#e4b04a" },
-      event: { id: "forum_echo", name: "Echo", interval: 8, effect: { type: "dialogueWeightBoost", multiplier: 2, duration: 1 } },
-    };
   }
 
   function makeHeaderRecord(moves, location) {
