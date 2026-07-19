@@ -30,6 +30,24 @@
         damage: 7,
         risk: 7,
       },
+      {
+        id: "slippery_slope",
+        name: "Slippery Slope",
+        description: "One step inevitably leads to catastrophe.",
+        example: "Allow this once and everything unravels.",
+        counter: "Each step needs its own evidence.",
+        damage: 5,
+        risk: 6,
+      },
+      {
+        id: "false_dilemma",
+        name: "False Dilemma",
+        description: "Framing many options as only two choices.",
+        example: "Agree with me or you're the enemy.",
+        counter: "That's a false choice.",
+        damage: 6,
+        risk: 5,
+      },
     ],
   };
 
