@@ -108,7 +108,7 @@
       });
       pushLedger(state, {
         type: "arenaEventReady",
-        timestamp: now(state),
+        timestamp: getLedgerLength(state),
         eventId: state.location.event.id,
         name: state.location.event.name,
       });
@@ -154,7 +154,7 @@
     });
     pushLedger(state, {
       type: "arenaEventTriggered",
-      timestamp: now(state),
+      timestamp: getLedgerLength(state),
       eventId: state.location.event.id,
       name: state.location.event.name,
       effect: effect.type,
@@ -166,19 +166,20 @@
   }
 
   function eventToLedger(event, state) {
-    return {
+    var record = {
       type: event.type,
-      timestamp: now(state),
+      timestamp: getLedgerLength(state),
       attacker: event.attacker,
       defender: event.defender,
       move: event.move ? event.move.id : null,
-      damage: event.damage,
       dialogueWeight: event.dialogueWeight || 1,
     };
+    if (event.damage !== undefined) record.damage = event.damage;
+    return record;
   }
 
-  function now(state) {
-    return state.ledger ? state.ledger.length : 0;
+  function getLedgerLength(state) {
+    return state.ledger.length;
   }
 
   function checkKO(state) {
@@ -192,7 +193,7 @@
       pushLog(state, koEvent);
       pushLedger(state, {
         type: "ko",
-        timestamp: now(state),
+        timestamp: getLedgerLength(state),
         winner: state.winner.id,
       });
     }
