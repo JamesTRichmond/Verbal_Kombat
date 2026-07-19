@@ -1,24 +1,19 @@
 # VerbalKombat
 
-A bloody fighting game where the attacks are performed through sound arguments
+A fighting game where the attacks are performed through sound arguments
 and logic. Land a valid argument and you draw blood; commit a fallacy and you
 leave yourself open to a counter.
 
-Built as a dependency-free **web/HTML5** app — vanilla JavaScript + the Canvas
-API, no build step.
+Built as a **web/HTML5** app — vanilla JavaScript + the Canvas
+API.
 
 ## Run it
 
-Just open `index.html` in a browser.
-
-Some browsers (e.g. Chrome) block `fetch` on `file://`, so the game falls back
-to a small built-in argument set when opened directly. To load the full
-`data/fallacies.json`, serve locally:
-
 ```bash
-python3 -m http.server 8000
+npm start
 # then open http://localhost:8000
 ```
+*(Node is used to serve the files locally to avoid CORS errors when loading `data/fallacies.json`)*
 
 ## Controls
 
@@ -60,3 +55,14 @@ Clear separation of concerns keeps things easy to extend:
 
 Design and content are authored under `/docs` (see `docs/README.md`) and feed
 the data and config files.
+
+---
+
+## Release 1: Text Prototype
+
+A text-based prototype of the game is also available.
+
+Included: one player, one scripted opponent, one prompt, text input, transparent scoring, health, damage, a verdict, replay, and a responsive accessible interface.
+
+**Run the text prototype:**
+`npm start`, then open http://localhost:8000/text-version.html. Run `npm test` to verify scoring.
