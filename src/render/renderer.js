@@ -116,11 +116,16 @@
 
   function drawLog(ctx, log, W, H) {
     if (!log.length) return;
-    var last = log[log.length - 1];
-    ctx.fillStyle = COLORS.muted;
-    ctx.font = "italic 15px Trebuchet MS, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText(last.message || "", W / 2, H - 24);
+    ctx.font = "italic 15px Trebuchet MS, sans-serif";
+    // Show the last few lines so the player can follow the exchange;
+    // cap at 3 to keep the fight screen readable.
+    var lines = log.slice(-3);
+    var startY = H - 56;
+    lines.forEach(function (entry, i) {
+      ctx.fillStyle = i === lines.length - 1 ? COLORS.ink : COLORS.muted;
+      ctx.fillText(entry.message || "", W / 2, startY + i * 18);
+    });
   }
 
   function banner(ctx, W, H, text, color) {

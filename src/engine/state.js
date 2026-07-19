@@ -90,7 +90,9 @@
 
   function pushLog(state, event) {
     state.log.push(event);
-    if (state.log.length > 5) state.log.shift();
+    // Keep a slightly longer tail so exchanges read as a continuous
+    // argument; the renderer only shows the last 3 lines.
+    if (state.log.length > 12) state.log.shift();
   }
 
   function randomMove(state) {

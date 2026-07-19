@@ -61,6 +61,13 @@ body {
   font-size: 0.9rem;
 }
 
+#controls .rule {
+  margin: 8px 0 0;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 kbd {
   display: inline-block;
   min-width: 1.4em;

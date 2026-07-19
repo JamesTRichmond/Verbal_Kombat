@@ -43,7 +43,7 @@
         defender: defender.id,
         move: move,
         damage: counterDmg,
-        message: defender.name + " counters! " + (move.counter || ""),
+        message: defender.name + ' counters: "' + (move.counter || "") + '"',
       };
     }
 

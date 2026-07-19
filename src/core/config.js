@@ -14,7 +14,7 @@
     fighter: {
       maxHealth: 100,     // lose all of this and you're KO'd
       maxComposure: 100,  // spent to attack; regenerates slowly
-      composureRegen: 8,  // composure regained per second
+      composureRegen: 10, // composure regained per second
     },
 
     combat: {
@@ -30,8 +30,9 @@
 
     ai: {
       // Seconds between enemy arguments (starter AI is on a simple timer).
-      minDelay: 1.2,
-      maxDelay: 2.4,
+      // Tuned so a passive first-time match ends well under 3 minutes.
+      minDelay: 0.9,
+      maxDelay: 1.8,
     },
 
     // Path to the authoritative content file. See data/README.md for schema.
