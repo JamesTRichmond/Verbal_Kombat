@@ -49,7 +49,7 @@
       banner(ctx, W, H, "ROUND OVER", COLORS.warn);
     } else {
       // fighting
-      drawMoveMenu(ctx, state.moves, W, H);
+      drawMoveMenu(ctx, state, W, H);
       if (state.riposte) drawTelegraph(ctx, state.riposte, W, H);
     }
 
@@ -119,19 +119,36 @@
     }
   }
 
-  function drawMoveMenu(ctx, moves, W, H) {
-    ctx.textAlign = "left";
-    ctx.font = "14px Trebuchet MS, sans-serif";
+  // Paginated roster: `pageSize` moves at a time, keyed 1..pageSize.
+  function drawMoveMenu(ctx, state, W, H) {
+    var pageSize = VK.config.moves.pageSize;
+    var pages = VK.state.pageCount(state);
+    var start = state.movePage * pageSize;
+    var page = state.moves.slice(start, start + pageSize);
+
     var x = 24;
-    var y = H - 96;
-    moves.slice(0, 4).forEach(function (m, i) {
+    var rowH = 22;
+    var topY = H - 40 - pageSize * rowH; // grows upward from a fixed bottom
+
+    ctx.textAlign = "left";
+    ctx.font = "bold 13px Trebuchet MS, sans-serif";
+    ctx.fillStyle = COLORS.muted;
+    ctx.fillText(
+      "ARGUMENTS  ·  page " + (state.movePage + 1) + "/" + pages + "  ·  [Q]/[E] switch",
+      x,
+      topY - 8
+    );
+
+    ctx.font = "14px Trebuchet MS, sans-serif";
+    page.forEach(function (m, i) {
+      var y = topY + i * rowH;
       ctx.fillStyle = COLORS.panel;
-      ctx.fillRect(x, y + i * 22 - 14, 360, 20);
+      ctx.fillRect(x, y - 14, 360, 20);
       ctx.fillStyle = COLORS.ink;
       ctx.fillText(
         "[" + (i + 1) + "] " + m.name + "  ·  dmg " + m.damage + " / risk " + m.risk,
         x + 8,
-        y + i * 22
+        y
       );
     });
   }

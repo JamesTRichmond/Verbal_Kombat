@@ -36,6 +36,7 @@
       roundTimer: 0,                // counts down the between-rounds breather
       riposte: null,                // pending enemy attack the player can rebut
       aiTimer: nextAiDelay(),
+      movePage: 0,                  // which page of the roster the keys map to
       log: [],                      // recent combat events (most recent last)
     };
   }
@@ -76,14 +77,26 @@
     }
   }
 
-  // Player throws the argument at the given index (0-based).
-  function playerMove(state, index) {
+  // Player throws the argument in the given slot (0-based) on the current page.
+  function playerMove(state, slot) {
     if (state.phase !== "fighting") return;
-    var move = state.moves[index];
-    if (!move) return;
+    if (slot < 0 || slot >= VK.config.moves.pageSize) return; // not a live slot
+    var move = state.moves[state.movePage * VK.config.moves.pageSize + slot];
+    if (!move) return; // empty slot on the last page
     var event = VK.combat.resolveMove(state.fighters.player, state.fighters.enemy, move);
     pushLog(state, event);
     checkKO(state);
+  }
+
+  // How many pages the roster spans at the configured page size.
+  function pageCount(state) {
+    return Math.max(1, Math.ceil(state.moves.length / VK.config.moves.pageSize));
+  }
+
+  // Cycle the visible page of arguments (wraps). dir is -1 or +1.
+  function changePage(state, dir) {
+    var n = pageCount(state);
+    state.movePage = ((state.movePage + dir) % n + n) % n;
   }
 
   // Player calls out the incoming argument. Only lands if a telegraph is open.
@@ -193,5 +206,7 @@
     update: update,
     playerMove: playerMove,
     playerDefend: playerDefend,
+    changePage: changePage,
+    pageCount: pageCount,
   };
 })(window.VK);

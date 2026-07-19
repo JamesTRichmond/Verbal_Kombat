@@ -22,9 +22,13 @@ python3 -m http.server 8000
 
 ## Controls
 
-- **1–4** — throw the matching argument
+- **1–5** — throw the argument in that slot on the current page
+- **Q / E** (or ← / →) — page through the full roster of arguments
 - **F** — rebut the enemy's incoming argument (time it inside the window to counter)
 - **Space** — start / rematch
+
+The full roster is shown a page at a time (page size is set by
+`moves.pageSize` in `src/core/config.js`); cycle pages to reach every argument.
 
 Matches are **best of 3**. Land sound arguments, manage your composure, and
 call out the enemy's telegraphed fallacies to riposte them.

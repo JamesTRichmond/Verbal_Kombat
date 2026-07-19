@@ -38,6 +38,13 @@
       windowSeconds: 1.1,
     },
 
+    // Move menu paging: the roster is shown `pageSize` at a time, selected by
+    // the number keys. Cycle pages to reach the rest. Set pageSize to cover
+    // however many number keys you want live at once (max 9).
+    moves: {
+      pageSize: 5,
+    },
+
     ai: {
       // Seconds between enemy arguments (starter AI is on a simple timer).
       minDelay: 1.3,

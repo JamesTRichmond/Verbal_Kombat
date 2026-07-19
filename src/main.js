@@ -22,8 +22,10 @@
 
       VK.input.attach({
         onStart: function () { current = VK.state.start(current); },
-        onMove: function (index) { VK.state.playerMove(current, index); },
+        onMove: function (slot) { VK.state.playerMove(current, slot); },
         onDefend: function () { VK.state.playerDefend(current); },
+        onPagePrev: function () { VK.state.changePage(current, -1); },
+        onPageNext: function () { VK.state.changePage(current, +1); },
       });
 
       var loop = VK.gameLoop.create(ctx, getState);
