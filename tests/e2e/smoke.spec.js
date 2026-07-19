@@ -29,7 +29,7 @@ test("R1-12: full flow completes headlessly and verdict renders judge scores", a
   // Fight screen: deterministic seeded match reaches KO.
   await expect(page.locator("canvas#stage")).toBeVisible();
   // The seeded starter match resolves on its own; wait for verdict.
-  await expect(page.locator(".verdict-title")).toBeVisible({ timeout: 60000 });
+  await expect(page.locator(".verdict-title")).toBeVisible();
 
   // Verdict screen renders per-judge scores.
   const scoreCells = page.locator(".judge-card");
