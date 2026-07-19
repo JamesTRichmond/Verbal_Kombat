@@ -155,9 +155,7 @@
   // whitespace, cap the length.
   function sanitizeCustomQuestion(text) {
     if (typeof text !== "string") return "";
-    var max =
-      (VK.config && VK.config.content && VK.config.content.maxCustomQuestionLength) ||
-      140;
+    var max = maxQuestionLength();
     var s = text
       .replace(/[\u0000-\u001f\u007f]/g, " ") // control chars
       .replace(/<[^>]*>/g, " ") // anything tag-shaped
@@ -202,7 +200,9 @@
       var fighters = parts[1];
       return loadLineBanks(urls, fighters).then(function (lines) {
         var rostered = fighters.filter(function (f) {
-          if (!lines[f.lineBank]) {
+          // Own-property check: a bank key like "constructor" must not pass
+          // via inherited Object.prototype members.
+          if (!Object.prototype.hasOwnProperty.call(lines, f.lineBank)) {
             console.warn(
               "[VK] Dropping fighter '" + f.id +
                 "': line bank '" + f.lineBank + "' could not be loaded."
@@ -239,7 +239,7 @@
   // built-in banks, normalized through the same code path as served content.
   function fallbackRoster() {
     var fighters = normalizeFighters(FALLBACK.fighters);
-    var lines = {};
+    var lines = Object.create(null);
     for (var i = 0; i < fighters.length; i++) {
       var key = fighters[i].lineBank;
       lines[key] = normalizeBank(FALLBACK.lines[key], key);
@@ -265,7 +265,9 @@
         });
       })
     ).then(function (banks) {
-      var byKey = {};
+      // Null-prototype map: bank keys are content-provided, and a key like
+      // "constructor" must never collide with inherited object members.
+      var byKey = Object.create(null);
       for (var i = 0; i < banks.length; i++) {
         if (banks[i]) byKey[keys[i]] = banks[i];
       }
@@ -315,7 +317,14 @@
         Array.isArray(c.questions) &&
         c.questions.length === 3 && // the R1 schema: exactly 3 per category
         c.questions.every(function (q) {
-          return q && isKey(q.id) && isNonEmptyString(q.text);
+          // Same length cap as custom questions — served content does not
+          // get to exceed what the input field allows.
+          return (
+            q &&
+            isKey(q.id) &&
+            isNonEmptyString(q.text) &&
+            q.text.length <= maxQuestionLength()
+          );
         }) &&
         // question ids are stable keys for selection state and the ledger —
         // a repeat inside a category makes the pick ambiguous
@@ -498,11 +507,20 @@
     // Overrides are filtered exactly like base lines. An override that ends
     // up empty (or names an unknown event type) is discarded so the valid
     // base bucket wins — overrides can only ever replace dialogue with
-    // equally valid dialogue.
-    var overrides = {};
+    // equally valid dialogue. Null-prototype map + key validation: a
+    // content-provided key like "__proto__" must never reach a property
+    // write, or the event bucket lands on Object.prototype.
+    var overrides = Object.create(null);
     var source = json.categoryOverrides || {};
     for (var cat in source) {
       if (!Object.prototype.hasOwnProperty.call(source, cat)) continue;
+      if (!isKey(cat)) {
+        console.warn(
+          "[VK] Line bank '" + key + "' override category '" + cat +
+            "' is not a valid key; ignored."
+        );
+        continue;
+      }
       for (var type2 in source[cat]) {
         if (!Object.prototype.hasOwnProperty.call(source[cat], type2)) continue;
         if (EVENT_TYPES.indexOf(type2) === -1) {
@@ -522,7 +540,7 @@
           );
           continue;
         }
-        if (!overrides[cat]) overrides[cat] = {};
+        if (!overrides[cat]) overrides[cat] = Object.create(null);
         overrides[cat][type2] = kept;
       }
     }
@@ -543,6 +561,13 @@
 
   function isNonEmptyString(value) {
     return typeof value === "string" && value.length > 0;
+  }
+
+  function maxQuestionLength() {
+    return (
+      (VK.config && VK.config.content && VK.config.content.maxCustomQuestionLength) ||
+      140
+    );
   }
 
   // Stable snake_case content keys (ids, lineBank): these end up in URLs,

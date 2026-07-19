@@ -482,4 +482,56 @@ assert.ok(!sanitizeCustomQuestion('<img src=x onerror=alert(1)>hi').includes('<'
   assert.equal(r4.locations.length, 1, 'unknown effect target degrades locations to fallback');
 }
 
+// ---- round-7 rules: question length cap, prototype-safety ----
+{
+  const config = {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const loadWith = async (overrideFor) => {
+    const vk = {config};
+    const stub = (url) => {
+      const o = overrideFor(url);
+      if (o === '404') return Promise.resolve({ok: false, status: 404});
+      return Promise.resolve({ok: true, json: () => Promise.resolve(o ?? readJson(url))});
+    };
+    const warn = console.warn;
+    console.warn = () => {};
+    new Function('window', 'fetch', src)({VK: vk}, stub);
+    const loaded = await vk.content.load();
+    console.warn = warn;
+    return loaded;
+  };
+
+  // question text over the cap invalidates its category -> fallback
+  const longQ = structuredClone(readJson('data/topics.json'));
+  longQ.categories[0].questions[0].text = 'x'.repeat(200) + '?';
+  const r1 = await loadWith((u) => u === 'data/topics.json' ? longQ : undefined);
+  assert.equal(r1.topics.length, 1, 'over-cap question text degrades topics to fallback');
+
+  // a "__proto__" override category must not pollute Object.prototype
+  const protoBank = structuredClone(readJson('data/lines/logician.json'));
+  protoBank.categoryOverrides = JSON.parse(
+    '{"__proto__": {"lightHit": ["polluted line"]}}');
+  const r2 = await loadWith((u) => u === 'data/lines/logician.json' ? protoBank : undefined);
+  assert.equal(({}).lightHit, undefined, 'Object.prototype not polluted');
+  assert.deepEqual(
+    r2.lines.logician.categoryOverrides.__proto__?.lightHit ?? undefined, undefined,
+    'reserved override key is discarded');
+
+  // a bank key of "constructor" with a missing file must not pass via
+  // inherited properties — the fighter drops and the roster degrades
+  const ctorBank = structuredClone(readJson('data/fighters.json'));
+  ctorBank.fighters[0].lineBank = 'constructor';
+  const r3 = await loadWith((u) => {
+    if (u === 'data/fighters.json') return ctorBank;
+    if (u === 'data/lines/constructor.json') return '404';
+    return undefined;
+  });
+  assert.equal(r3.fighters.length, 2, 'inherited-property bank key never rosters a fighter');
+  assert.ok(!r3.fighters.some((f) => f.lineBank === 'constructor'));
+}
+
 console.log('Data tests passed.');
