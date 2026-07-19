@@ -24,14 +24,19 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-No `npm install`, no bundler, no toolchain. If a change would require one, open an issue first.
+Playing the game requires no install, no bundler, and no toolchain. The one dev-only exception (decision D13): the end-to-end smoke test uses Playwright, installed from `devDependencies` via `npm install` and run with an npm test script — nothing from `node_modules` is ever served or shipped. If a change would require any other tooling, open an issue first.
 
 ## Testing expectations
 
-- The scoring module and round-state logic must be covered by unit tests written in plain JavaScript that run in the browser (a simple `tests.html` harness is sufficient for Release 1).
-- Tests should be deterministic: given the same inputs, the scoring module must always produce the same score and verdict.
-- Before opening a PR, open the test harness in a browser and confirm all assertions pass. Include a short note in the PR describing what you exercised manually (which prompt, which counterargument, expected verdict).
-- Do not introduce a test framework as a production dependency. A tiny inline assertion helper is fine.
+For pivot work (issues #7–#18):
+
+- Combat rules, ledger emission, dialogue selection, and judge math must be covered by unit tests written in plain JavaScript that run in the browser via the inline harness.
+- Tests must be deterministic: a fixed match seed and input sequence must always produce the identical ledger, dialogue, and verdict (decision D11 — seeded RNG streams, fixed timestep).
+- The full-flow e2e smoke test runs headlessly with Playwright as a dev-only dependency (decision D13).
+- Before opening a PR, run the browser harness and (once it exists) the e2e test, and note in the PR what you exercised manually.
+- Do not introduce any test framework as a production dependency. A tiny inline assertion helper is fine.
+
+For Classic mode (the retired text prototype) only: the scoring module and round-state logic keep their existing browser-harness unit tests (`npm test` runs the scoring checks), and manual verification means noting which prompt, counterargument, and expected verdict you exercised.
 
 ## Branch and PR expectations
 
