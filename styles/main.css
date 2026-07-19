@@ -187,6 +187,10 @@ body {
 
 /* Visible focus states — keyboard-first navigation. */
 
+button {
+  font: inherit;
+}
+
 button,
 input[type="text"],
 a,
