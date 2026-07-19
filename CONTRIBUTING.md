@@ -24,14 +24,19 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-No `npm install`, no bundler, no toolchain. If a change would require one, open an issue first.
+Playing the game requires no install, no bundler, and no toolchain. The one dev-only exception (decision D13): the end-to-end smoke test uses Playwright, installed from `devDependencies` via `npm install` and run with an npm test script — nothing from `node_modules` is ever served or shipped. If a change would require any other tooling, open an issue first.
 
 ## Testing expectations
 
-- The scoring module and round-state logic must be covered by unit tests written in plain JavaScript that run in the browser (a simple `tests.html` harness is sufficient for Release 1).
-- Tests should be deterministic: given the same inputs, the scoring module must always produce the same score and verdict.
-- Before opening a PR, open the test harness in a browser and confirm all assertions pass. Include a short note in the PR describing what you exercised manually (which prompt, which counterargument, expected verdict).
-- Do not introduce a test framework as a production dependency. A tiny inline assertion helper is fine.
+For pivot work (issues #7–#18):
+
+- Combat rules, ledger emission, dialogue selection, and judge math must be covered by unit tests written in plain JavaScript that run in the browser via the inline harness.
+- Tests must be deterministic: a fixed match seed and input sequence must always produce the identical ledger, dialogue, and verdict (decision D11 — seeded RNG streams, fixed timestep).
+- The full-flow e2e smoke test runs headlessly with Playwright as a dev-only dependency (decision D13).
+- Before opening a PR, run the browser harness and (once it exists) the e2e test, and note in the PR what you exercised manually.
+- Do not introduce any test framework as a production dependency. A tiny inline assertion helper is fine.
+
+For Classic mode (the retired text prototype) only: the scoring module and round-state logic keep their existing browser-harness unit tests (`npm test` runs the scoring checks), and manual verification means noting which prompt, counterargument, and expected verdict you exercised.
 
 ## Branch and PR expectations
 
@@ -46,21 +51,22 @@ No `npm install`, no bundler, no toolchain. If a change would require one, open 
 
 ## Release 1 scope
 
-Release 1 is deliberately narrow. In scope:
+> **Note:** the project has pivoted from the typed-argument prototype to a real-time fighting game that writes the argument from combat. The authoritative Release 1 scope is now [`docs/DESIGN-v2.md`](docs/DESIGN-v2.md) (milestone "The Fight Writes", issues #7–#18) together with decisions D6–D13 in [`docs/DECISIONS.md`](docs/DECISIONS.md). The original scope below is kept for the retired text prototype ("Classic mode", decision D9).
 
-- One player and one scripted opponent.
-- One debate prompt with one counterargument.
-- Transparent, deterministic local scoring.
-- Health and damage, a verdict at the end of the round, and a replay control.
-- Text input only.
+In scope for the pivot's Release 1:
+
+- One player vs. one scripted CPU: real-time-lite combat (move, light/heavy attack, block, combo, metered special).
+- Argument, fighter, and location selection screens; 4 fighters; 2 arenas; 8 topic categories plus custom questions.
+- Template-bank dialogue and a 3-judge explainable verdict, both driven solely by the match ledger.
+- Deterministic simulation: seeded RNG, fixed timestep.
 
 Out of scope for Release 1 (do not add these without an explicit issue and decision update):
 
-- Additional prompts, opponents, or rounds.
-- Voice input or speech recognition.
-- Generative-AI judging or any external API calls.
-- Backend services, authentication, or user accounts.
-- Frameworks (React, Vue, etc.), bundlers, or runtime dependencies.
+- Voice input or speech recognition; audio of any kind (crowd, announcer, effects).
+- Generative-AI dialogue or judging, or any external API calls.
+- Backend services, authentication, user accounts, or persistence.
+- Frameworks (React, Vue, etc.), bundlers, or runtime dependencies (Playwright is allowed as dev-only tooling per D13).
+- Multiplayer, campaign, additional fighters/arenas/judges, touch controls.
 - License changes.
 
 If a change you want to make crosses these boundaries, open an issue proposing a scope change before writing code.

@@ -1,5 +1,7 @@
 # Release 1 acceptance checklist
 
+> **Status: superseded.** This checklist covered the typed-argument text prototype, now retired behind a "Classic mode" link by the fighting-game pivot (decision D9 in [docs/DECISIONS.md](docs/DECISIONS.md)). The current Release 1 — "The Fight Writes" — is specified in [docs/DESIGN-v2.md](docs/DESIGN-v2.md) and tracked in issues #7–#18. The unchecked items below are no longer scheduled.
+
 - [x] Loads in a modern browser without a build step.
 - [x] Presents one prompt and opponent claim.
 - [x] Accepts and scores a counterargument.

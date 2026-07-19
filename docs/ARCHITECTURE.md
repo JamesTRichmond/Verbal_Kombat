@@ -1,5 +1,7 @@
 # Architecture
 
+> **Status: superseded for new work.** This document describes the original typed-argument text prototype, which the fighting-game pivot retires behind a "Classic mode" link (decision D9). The pivot's authoritative specification is [DESIGN-v2.md](./DESIGN-v2.md) plus decisions D6–D13 in [DECISIONS.md](./DECISIONS.md). The dependency-free static-app constraints below still hold for the pivot (see D4/D13).
+
 VerbalKombat Release 1 is intended to be a **dependency-free static web application**. It is intended to run entirely in the browser from static files, with no build step, no bundler, no backend, and no runtime dependencies.
 
 ## Goals

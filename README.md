@@ -2,13 +2,16 @@
 
 VerbalKombat is a fighting game where attacks are performed through sound arguments and logic.
 
+The project is pivoting from a typed-argument prototype to a real-time fighting game that writes the argument from how you fight. The current Release 1 — "The Fight Writes" — is specified in [docs/DESIGN-v2.md](docs/DESIGN-v2.md) and tracked in issues #7–#18.
+
 ## Documentation
 
+- [Design v2](docs/DESIGN-v2.md) — **the authoritative spec** for the fighting-game pivot: vision, smallest playable loop, and the Release 1 plan.
+- [Design decisions](docs/DECISIONS.md) — the reasoning log; D6–D13 cover the pivot (combat scope, ledger architecture, determinism, and more).
 - [Contributing guide](CONTRIBUTING.md) — local setup, testing, branch/PR expectations, and the Release 1 scope boundary.
-- [Architecture](docs/ARCHITECTURE.md) — the dependency-free static-web design: UI, round state, scoring module, and tests.
-- [Design decisions](docs/DECISIONS.md) — why Release 1 uses text input and deterministic local scoring, and defers voice and generative-AI judging.
+- [Architecture](docs/ARCHITECTURE.md) — describes the retired text prototype ("Classic mode"); its static-app constraints still apply to the pivot.
 
-There are currently two prototypes in this repository: an HTML5 Canvas game and a Text-based game.
+There are currently two prototypes in this repository: an HTML5 Canvas game (the pivot's foundation) and the retired text game (Classic mode).
 
 ---
 
@@ -53,9 +56,9 @@ docs/                 Design & content docs (separate stream)
 
 ---
 
-## 2. Text Prototype (text-version.html)
+## 2. Classic Mode — Text Prototype (text-version.html)
 
-A text-based prototype of the game is also available (Release 1).
+The original typed-argument prototype (formerly "Release 1") is retired from the main flow but kept playable as Classic mode (decision D9).
 
 Included: one player, one scripted opponent, one prompt, text input, transparent scoring, health, damage, a verdict, replay, and a responsive accessible interface.
 
