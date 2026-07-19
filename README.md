@@ -1,5 +1,5 @@
 # VerbalKombat
-A bloody fighting game where the attacks are performed through sound arguments and logic.
+VerbalKombat is a bloody fighting game where the attacks are performed through sound arguments and logic.
 
 ## Documentation
 
