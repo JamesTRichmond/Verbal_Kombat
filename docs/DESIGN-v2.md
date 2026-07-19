@@ -67,7 +67,7 @@ This proves every promise in the vision with 4 fighters, 2 arenas, ~24 topics, t
 6. **Determinism** — seeded RNG from day one, or the e2e tests and balance work get much harder.
 7. **Names and trade dress** — original everywhere: no "FATALITY"/"FINISH HIM," no MK logotype styling, original fighter names, and original judge characters. (The School of Athens itself is public domain, but the judges should be original archetypes inspired by its perspectives — e.g. "The Idealist," "The Empiricist," "The Skeptic" — with original art, not reproductions.) Suggested finisher term that's ours: "THE FINAL WORD."
 
-On copyright (§6, confirmed): everything above uses Mortal Kombat and Raphael only as pacing/structure/atmosphere references — original names, art, UI, and terminology throughout.
+On copyright (confirmed): everything above uses Mortal Kombat and Raphael only as pacing/structure/atmosphere references — original names, art, UI, and terminology throughout.
 
 ---
 
