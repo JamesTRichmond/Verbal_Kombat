@@ -391,7 +391,10 @@
           })
         : [];
       if (events[type].length === 0) {
-        console.warn("[VK] Line bank '" + key + "' has no lines for " + type);
+        // Every event type is required (see data/README.md): an empty bucket
+        // would leave the fighter mute for that ledger event. Throw so
+        // loadPart degrades to the fallback bank instead.
+        throw new Error("Line bank '" + key + "' has no lines for " + type);
       }
     }
     return {

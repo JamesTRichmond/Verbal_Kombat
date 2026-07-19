@@ -227,4 +227,28 @@ assert.ok(!sanitizeCustomQuestion('<img src=x onerror=alert(1)>hi').includes('<'
     'bank key is authoritative over a mismatched fighter field');
 }
 
+// ---- a bank missing a required event type degrades to the fallback bank ----
+{
+  const vkHollow = {config: {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }}};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const hollowBank = structuredClone(readJson('data/lines/logician.json'));
+  delete hollowBank.events.whiff;
+  const hollowFetch = (url) => Promise.resolve({ok: true, json: () => Promise.resolve(
+    url === 'data/lines/logician.json' ? hollowBank : readJson(url))});
+  const warn = console.warn;
+  console.warn = () => {};
+  new Function('window', 'fetch', src)({VK: vkHollow}, hollowFetch);
+  const loaded = await vkHollow.content.load();
+  console.warn = warn;
+  for (const type of EVENT_TYPES) {
+    assert.ok(loaded.lines.logician.events[type].length > 0,
+      `fallback bank fills required event type ${type}`);
+  }
+  assert.equal(loaded.lines.logician.fighter, 'logician');
+}
+
 console.log('Data tests passed.');
