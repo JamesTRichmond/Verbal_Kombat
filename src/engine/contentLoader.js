@@ -473,7 +473,7 @@
   // {stance_for}, {topic1} are all rejected — because any unknown token
   // would reach the ticker as raw text the interpolation layer cannot fill.
   function isValidLine(line) {
-    if (typeof line !== "string" || line.length === 0) return false;
+    if (typeof line !== "string" || line.trim().length === 0) return false;
     var match;
     var re = /\{([^}]*)\}/g;
     while ((match = re.exec(line)) !== null) {

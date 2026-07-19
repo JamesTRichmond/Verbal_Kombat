@@ -455,8 +455,9 @@ assert.ok(!sanitizeCustomQuestion('<img src=x onerror=alert(1)>hi').includes('<'
   };
 
   // a stray unmatched brace invalidates the line; mute bucket -> bank fallback
+  // (whitespace-only lines are equally invalid)
   const strayBrace = structuredClone(readJson('data/lines/logician.json'));
-  strayBrace.events.whiff = ['Unclosed {topic', 'closed} anyway'];
+  strayBrace.events.whiff = ['Unclosed {topic', 'closed} anyway', '   '];
   const r1 = await loadWith((u) => u === 'data/lines/logician.json' ? strayBrace : undefined);
   assert.ok(!r1.lines.logician.events.whiff.some((l) => /[{}]/.test(l.replace(/\{[^}]*\}/g, ''))),
     'stray braces never survive into a loaded bank');
