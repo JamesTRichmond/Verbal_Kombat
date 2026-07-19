@@ -73,3 +73,149 @@ kbd {
   font-family: inherit;
   font-size: 0.85em;
 }
+
+/* Verdict overlay */
+.verdict-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(11, 11, 16, 0.92);
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.verdict-overlay[hidden] { display: none; }
+
+.verdict-dialog {
+  width: min(720px, 96vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  background: var(--panel);
+  border: 2px solid #2a2536;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  text-align: left;
+}
+
+.verdict-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  letter-spacing: 0.04em;
+}
+
+.verdict-closing {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.verdict-scorecards {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.scorecard {
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid #2a2536;
+  border-radius: 8px;
+}
+
+.scorecard h3 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.judge-focus {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.score-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.score-cell {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.score-cell strong {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--ink);
+}
+
+.score-cell span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.score-cell--won {
+  outline: 2px solid var(--accent);
+  background: rgba(228, 176, 74, 0.12);
+}
+
+.scorecard h4 {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.top-moments {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.verdict-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.verdict-button:hover,
+.verdict-button:focus-visible {
+  outline: none;
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 0 0 3px rgba(228, 176, 74, 0.35);
+}
+
+/* Visible focus indicator for all interactive controls */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent);
+}

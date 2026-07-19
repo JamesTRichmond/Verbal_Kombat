@@ -1,5 +1,6 @@
 /*
- * renderer.js — draws the current state to the canvas. Read-only over state.
+ * renderer.js — draws the current state to the canvas and updates the
+ * accessibility / verdict overlay. Read-only over state.
  *
  * Deliberately simple: two fighters, health + composure bars, a move menu,
  * and the latest combat line. Swap these primitives for sprites/art later
@@ -19,6 +20,13 @@
     track: "#2a2536",
   };
 
+  // Lazy-cached overlay DOM node.
+  var overlayEl = null;
+  function overlayNode() {
+    if (!overlayEl) overlayEl = document.getElementById("verdict-overlay");
+    return overlayEl;
+  }
+
   function draw(ctx, state) {
     var W = ctx.canvas.width;
     var H = ctx.canvas.height;
@@ -37,6 +45,7 @@
 
     if (state.phase === "ready") {
       banner(ctx, W, H, "PRESS SPACE TO FIGHT", COLORS.ink);
+      hideOverlay();
     } else if (state.phase === "ko") {
       banner(
         ctx,
@@ -46,11 +55,88 @@
         state.winner && state.winner.id === "player" ? COLORS.p1 : COLORS.p2
       );
       subBanner(ctx, W, H, "Space to rematch");
+      showVerdict(state);
     } else {
       drawMoveMenu(ctx, state.moves, W, H);
+      hideOverlay();
     }
 
     drawLog(ctx, state.log, W, H);
+  }
+
+  function hideOverlay() {
+    var el = overlayNode();
+    if (el) el.hidden = true;
+  }
+
+  function showVerdict(state) {
+    var el = overlayNode();
+    if (!el) return;
+    el.hidden = false;
+    el.innerHTML = renderVerdictHTML(state);
+    var closeBtn = el.querySelector("#verdict-close");
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function renderVerdictHTML(state) {
+    var verdict = VK.judges.scoreMatch(state.ledger);
+    var closing = VK.judges.closingStatement(state.ledger, verdict.winner);
+    var player = state.fighters.player;
+    var enemy = state.fighters.enemy;
+    var winnerColor = verdict.winner.id === "player" ? COLORS.p1 : COLORS.p2;
+
+    var html = '<div class="verdict-dialog" role="dialog" aria-modal="true" aria-labelledby="verdict-title">';
+    html += '<h2 id="verdict-title" class="verdict-title" style="color:' + winnerColor + '">' +
+      escapeHtml(verdict.winner.name) + " wins — " + verdict.playerWins + " to " + verdict.enemyWins +
+      "</h2>";
+    html += '<p class="verdict-closing">' + escapeHtml(closing) + "</p>";
+    html += '<div class="verdict-scorecards">';
+
+    verdict.judges.forEach(function (j) {
+      var won = j.winner.id === player.id;
+      html += '<article class="scorecard">';
+      html += '<h3>' + escapeHtml(j.judge.name) + "</h3>";
+      html += '<p class="judge-focus">' + escapeHtml(j.judge.focus) + "</p>";
+      html += '<div class="score-row">';
+      html += scoreCell(player.name, j.player.total, won);
+      html += scoreCell(enemy.name, j.enemy.total, !won);
+      html += "</div>";
+      html += '<h4>Top moments</h4>';
+      html += '<ol class="top-moments">';
+      j[verdict.winner.id === player.id ? "player" : "enemy"].top.forEach(function (entry) {
+        html += '<li>' + momentLine(entry) + "</li>";
+      });
+      html += "</ol>";
+      html += "</article>";
+    });
+
+    html += "</div>";
+    html += '<button id="verdict-close" type="button" class="verdict-button">Rematch</button>';
+    html += "</div>";
+    return html;
+  }
+
+  function scoreCell(name, score, won) {
+    return '<div class="score-cell' + (won ? " score-cell--won" : "") + '">' +
+      '<strong>' + Math.round(score) + "</strong>" +
+      "<span>" + escapeHtml(name) + "</span>" +
+      "</div>";
+  }
+
+  function momentLine(entry) {
+    var ev = entry.event;
+    var time = VK.ledger.formatTime(ev.timestamp);
+    var move = ev.move && ev.move.name ? ev.move.name : "exchange";
+    var sign = entry.score > 0 ? "+" : "";
+    return escapeHtml(time + " — " + move.toLowerCase() + ", " + sign + Math.round(entry.score));
+  }
+
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
   function drawFloor(ctx, W, H) {

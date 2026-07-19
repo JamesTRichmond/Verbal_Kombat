@@ -1,12 +1,15 @@
 /*
  * state.js — the game's data model and the update tick.
  *
- * Holds fighters, the loaded move list, match phase, and the floating combat
- * log. `update(dt)` advances time-based systems (composure regen, the starter
- * enemy AI). Rendering reads this; it never writes here.
+ * Holds fighters, the loaded move list, match phase, and the match ledger.
+ * `update(dt)` advances time-based systems on a fixed timestep (decision D11):
+ * composure regen and the starter enemy AI. Rendering reads this; it never
+ * writes here.
  */
 (function (VK) {
   "use strict";
+
+  var FIXED_DT = 1 / 60; // seconds per simulation tick
 
   function makeFighter(id, name, side) {
     var f = VK.config.fighter;
@@ -20,6 +23,7 @@
   }
 
   function createState(moves) {
+    var seed = VK.rng.normalizeSeed();
     return {
       moves: moves,                 // array of fallacy/argument entries
       phase: "ready",               // "ready" | "fighting" | "ko"
@@ -28,7 +32,11 @@
         player: makeFighter("player", "You", "left"),
         enemy: makeFighter("enemy", "The Sophist", "right"),
       },
-      aiTimer: nextAiDelay(),
+      rng: VK.rng.create(seed),
+      aiTimer: 0,
+      tick: 0,
+      accumulator: 0,
+      ledger: VK.ledger.create({ seed: seed }),
       log: [],                      // recent combat events (most recent last)
     };
   }
@@ -36,13 +44,23 @@
   function start(state) {
     var fresh = createState(state.moves);
     fresh.phase = "fighting";
+    fresh.aiTimer = nextAiDelay(fresh);
     return fresh;
   }
 
-  // Advance time-based systems by dt seconds.
+  // Advance time-based systems by dt seconds using a fixed timestep accumulator.
   function update(state, dt) {
     if (state.phase !== "fighting") return;
 
+    state.accumulator += dt;
+    while (state.accumulator >= FIXED_DT) {
+      step(state, FIXED_DT);
+      state.accumulator -= FIXED_DT;
+      state.tick += 1;
+    }
+  }
+
+  function step(state, dt) {
     var maxC = VK.config.fighter.maxComposure;
     var regen = VK.config.fighter.composureRegen * dt;
     eachFighter(state, function (f) {
@@ -53,7 +71,7 @@
     state.aiTimer -= dt;
     if (state.aiTimer <= 0) {
       throwMove(state, "enemy", "player", randomMove(state));
-      state.aiTimer = nextAiDelay();
+      state.aiTimer = nextAiDelay(state);
     }
 
     checkKO(state);
@@ -71,9 +89,11 @@
     var event = VK.combat.resolveMove(
       state.fighters[attackerId],
       state.fighters[defenderId],
-      move
+      move,
+      state.tick
     );
     pushLog(state, event);
+    VK.ledger.append(state.ledger, event);
     checkKO(state);
   }
 
@@ -84,7 +104,14 @@
     if (p.health <= 0 || e.health <= 0) {
       state.phase = "ko";
       state.winner = p.health <= 0 ? e : p;
-      pushLog(state, { type: "ko", message: state.winner.name + " wins the argument." });
+      var koEvent = {
+        type: "ko",
+        winner: state.winner.id,
+        timestamp: state.tick,
+        message: state.winner.name + " wins the argument.",
+      };
+      pushLog(state, koEvent);
+      VK.ledger.append(state.ledger, koEvent);
     }
   }
 
@@ -94,12 +121,12 @@
   }
 
   function randomMove(state) {
-    return state.moves[Math.floor(Math.random() * state.moves.length)];
+    return state.rng.pick("combat", state.moves);
   }
 
-  function nextAiDelay() {
+  function nextAiDelay(state) {
     var ai = VK.config.ai;
-    return ai.minDelay + Math.random() * (ai.maxDelay - ai.minDelay);
+    return state.rng.range("ai", Math.round(ai.minDelay * 60), Math.round(ai.maxDelay * 60)) * FIXED_DT;
   }
 
   function eachFighter(state, fn) {

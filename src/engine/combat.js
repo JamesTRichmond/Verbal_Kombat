@@ -11,7 +11,9 @@
 
   // Resolve a single argument. Returns an event object describing the outcome.
   // Mutates attacker.composure / defender.health so state stays in one place.
-  function resolveMove(attacker, defender, move) {
+  // The returned event is ledger-ready: it carries attacker/defender ids, the
+  // move, damage, and a human-readable message.
+  function resolveMove(attacker, defender, move, timestamp) {
     var cfg = VK.config.combat;
     var cost = move.damage * cfg.composureCostPerDamage;
 
@@ -20,7 +22,9 @@
       return {
         type: "fizzle",
         attacker: attacker.id,
+        defender: defender.id,
         move: move,
+        timestamp: timestamp,
         message: attacker.name + " fumbles: not enough composure.",
       };
     }
@@ -43,6 +47,7 @@
         defender: defender.id,
         move: move,
         damage: counterDmg,
+        timestamp: timestamp,
         message: defender.name + " counters! " + (move.counter || ""),
       };
     }
@@ -55,6 +60,7 @@
       defender: defender.id,
       move: move,
       damage: move.damage,
+      timestamp: timestamp,
       message: attacker.name + ': "' + (move.example || move.name) + '"',
     };
   }

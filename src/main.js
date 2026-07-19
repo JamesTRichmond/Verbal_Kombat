@@ -21,9 +21,30 @@
       var getState = function () { return current; };
 
       VK.input.attach({
-        onStart: function () { current = VK.state.start(current); },
+        onStart: function () {
+          // Space while the verdict overlay is open triggers rematch.
+          var overlay = document.getElementById("verdict-overlay");
+          if (overlay && !overlay.hidden) {
+            current = VK.state.start(current);
+            return;
+          }
+          // Start or restart a match from any non-fighting phase.
+          if (current.phase !== "fighting") {
+            current = VK.state.start(current);
+          }
+        },
         onMove: function (index) { VK.state.playerMove(current, index); },
       });
+
+      // Allow mouse/touch users to dismiss the verdict overlay too.
+      var overlay = document.getElementById("verdict-overlay");
+      if (overlay) {
+        overlay.addEventListener("click", function (e) {
+          if (e.target.id === "verdict-close" || e.target.closest(".verdict-dialog") === null) {
+            current = VK.state.start(current);
+          }
+        });
+      }
 
       var loop = VK.gameLoop.create(ctx, getState);
       loop.start();

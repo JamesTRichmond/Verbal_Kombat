@@ -36,5 +36,11 @@
 
     // Path to the authoritative content file. See data/README.md for schema.
     dataUrl: "data/fallacies.json",
+
+    // Simulation timing. Timestamps in the ledger are simulation ticks; the
+    // renderer converts them to human-readable clock time using this tick.
+    time: {
+      tickMs: 1000 / 60,
+    },
   };
 })(window.VK);
