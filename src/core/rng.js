@@ -20,7 +20,7 @@
 
   // Hash a string into a 32-bit unsigned integer.
   function hashString(str) {
-    var h = 2166136261;
+    var h = 2166136261 >>> 0;
     for (var i = 0; i < str.length; i++) {
       h ^= str.charCodeAt(i);
       h = Math.imul(h, 16777619);
@@ -40,6 +40,14 @@
     return hashString(String(seed)) || 123456789;
   }
 
+  // Mix two 32-bit unsigned integers into a single 32-bit unsigned integer.
+  function mix(a, b) {
+    var x = (a ^ b) >>> 0;
+    x = Math.imul(x, 0x9e3779b9);
+    x = (x ^ (x >>> 16)) >>> 0;
+    return x || 1;
+  }
+
   // Create a new generator rooted at a seed. Streams are independent branches
   // so draws in one subsystem cannot shift another's sequence.
   function create(seed) {
@@ -50,7 +58,7 @@
       var n = String(name);
       if (!streams[n]) {
         // Mix the stream label into the base seed to create an independent root.
-        streams[n] = mulberry32(normalizeSeed(base + "_" + n));
+        streams[n] = mulberry32(mix(base, hashString(n)));
       }
       return streams[n];
     }

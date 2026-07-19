@@ -60,11 +60,9 @@ const moves = [
 ];
 
 function runMatch(seed, inputs) {
-  const s = VK.state.create(moves);
+  const s = VK.state.start(VK.state.create(moves));
   s.rng = VK.rng.create(seed);
   s.ledger = VK.ledger.create({ seed });
-  s.phase = 'fighting';
-  s.aiTimer = 1000; // delay enemy moves
   inputs.forEach(({ dt, move }) => {
     VK.state.update(s, dt);
     if (move !== undefined) VK.state.playerMove(s, move);
