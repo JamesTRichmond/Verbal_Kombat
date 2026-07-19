@@ -14,8 +14,9 @@ $('#opponent-claim').textContent=`“${bout.opponent.claim}”`;
 input.addEventListener('input',()=>$('#character-count').textContent=`${input.value.length} / 420`);
 form.addEventListener('submit',event=>{
   event.preventDefault();
-  const score=gradeArgument(input.value);
-  const combat=resolveCombat(score,bout.winThreshold);
+  const text=input.value.trim();
+  if(!text) return input.focus();
+  const score=gradeArgument(text);
   health('rival',combat.opponentHealth);health('player',combat.playerHealth);
   $('#verdict').textContent=combat.verdict;
   $('#score-breakdown').innerHTML=card('Claim',score.claim,25)+card('Support',score.support,30)+card('Rebuttal',score.rebuttal,30)+card('Discipline',score.discipline,15);
