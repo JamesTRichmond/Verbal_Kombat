@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "fighter": "logician",
+  "events": {
+    "lightHit": [
+      "Premise one: {stanceFor}. Hold that thought.",
+      "Note the point — small, but it follows.",
+      "That's established, then. Moving on."
+    ],
+    "heavyHit": [
+      "And from that premise: {evidence}. The conclusion is closing in on you.",
+      "You accepted the premise. This is what it entails."
+    ],
+    "combo": [
+      "One: {stanceFor}. Two: {evidence}. Three: therefore — and you have no move left.",
+      "Each step granted, each step followed. That was a proof, not a punch."
+    ],
+    "special": [
+      "THE SYLLOGISM. Major premise, minor premise — {topic}? Conclusion: inescapable.",
+      "All that remains is the conclusion. It arrives... now."
+    ],
+    "whiff": [
+      "Hm. A lemma out of order.",
+      "Withdrawn. The argument continues."
+    ],
+    "blocked": [
+      "Anticipated. Your objection was in my notes.",
+      "Blocked — as any valid argument survives a denial."
+    ],
+    "counter": [
+      "There. {opponent} asserts without warrant — and the rebuttal writes itself.",
+      "That was a contradiction. Allow me to point at it, forcefully."
+    ],
+    "victory": [
+      "Q.E.D. On the matter of {topic}, the argument stands.",
+      "Nothing personal. It simply followed."
+    ],
+    "defeat": [
+      "The conclusion is... unsound. Somewhere a premise betrayed me.",
+      "Noted. I will be revising the argument."
+    ]
+  },
+  "categoryOverrides": {
+    "philosophy": {
+      "special": [
+        "THE SYLLOGISM — and on {topic}, of all questions? You brought a paradox to a proof fight."
+      ]
+    }
+  }
+}

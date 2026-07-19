@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "fighter": "trickster",
+  "events": {
+    "lightHit": [
+      "Oh, were you defending that? Awkward.",
+      "Quick question — {topic}? Wrong question. Next.",
+      "Tap. Did that count? It counted."
+    ],
+    "heavyHit": [
+      "You walked into the premise AND the punchline.",
+      "See, {stanceFor} — but you knew that. That's why it hurt."
+    ],
+    "combo": [
+      "A feint, a reframe, a flourish — and suddenly you're arguing my side of {topic}. How did that happen?",
+      "One, two, three — and the goalposts? Wherever I left them."
+    ],
+    "special": [
+      "THE REFRAME. New premise, same fight — and somehow you're already losing this one too.",
+      "Let's flip it: you defend {stanceAgainst} now. Oh — too late, you just did."
+    ],
+    "whiff": [
+      "Missed on purpose. Establishing a pattern. You'll see.",
+      "That was rhetorical."
+    ],
+    "blocked": [
+      "Blocking the setup only makes the punchline land harder.",
+      "Fine, keep the door shut. I have windows."
+    ],
+    "counter": [
+      "And THERE'S the overreach — {opponent}, you brought a slogan to a trap.",
+      "Thank you for the momentum. I'll be keeping it."
+    ],
+    "victory": [
+      "The answer to {topic} was 'mu' all along. Look it up. I'll wait.",
+      "I didn't win the argument. I just moved it somewhere you'd already lost it."
+    ],
+    "defeat": [
+      "Okay. That reframe reframed me. Respect.",
+      "I meant to lose. It's a longer con. You'll see. Eventually."
+    ]
+  },
+  "categoryOverrides": {
+    "everyday_life": {
+      "special": [
+        "THE REFRAME — {topic} was never about the house. It was about who you become inside it. Sit with that."
+      ]
+    }
+  }
+}

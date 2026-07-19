@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "fighter": "demagogue",
+  "events": {
+    "lightHit": [
+      "You hear that? That's the sound of everyone agreeing with me!",
+      "The people know it: {stanceAgainst}!",
+      "Even the back row felt that one!"
+    ],
+    "heavyHit": [
+      "EVERYBODY knows {stanceAgainst} — everybody but you!",
+      "That wasn't me — that was the will of the crowd coming through!"
+    ],
+    "combo": [
+      "First they laughed, then they cheered, now they're chanting — because {stanceAgainst}, and deep down you know it too!",
+      "Point after point after point — the momentum is a landslide and you are standing under it!"
+    ],
+    "special": [
+      "RALLY THE CROWD! On your feet! {topic}? The people have ALREADY decided!",
+      "Listen to them roar! You're not arguing with me anymore — you're arguing with everyone!"
+    ],
+    "whiff": [
+      "A pause — for effect! Obviously!",
+      "The crowd gasps! They love a comeback story!"
+    ],
+    "blocked": [
+      "Boo all you want, it still rattled you!",
+      "You can block the words but not the movement!"
+    ],
+    "counter": [
+      "HA! {opponent} stumbles, and the crowd? The crowd never forgets!",
+      "You handed me that one, and I am REGIFTING IT LOUDER!"
+    ],
+    "victory": [
+      "The people have spoken on {topic} — and I merely gave them a microphone!",
+      "History will remember this argument! Briefly! But loudly!"
+    ],
+    "defeat": [
+      "The crowd... turned? THE CROWD TURNED?!",
+      "This isn't a loss, it's — it's a silent majority! They're just very silent!"
+    ]
+  },
+  "categoryOverrides": {
+    "sports": {
+      "special": [
+        "RALLY THE CROWD! This is a STADIUM question — {topic} — and the stadium is CHANTING MY NAME!"
+      ]
+    }
+  }
+}

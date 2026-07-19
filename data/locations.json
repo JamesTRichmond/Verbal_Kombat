@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "locations": [
+    {
+      "id": "forum",
+      "name": "The Forum",
+      "description": "Sun-bleached stone, a restless crowd, and acoustics that forgive nothing.",
+      "palette": {
+        "sky": "#e8d5a3",
+        "backdrop": "#b08d57",
+        "floor": "#8a6f45",
+        "accent": "#5b3a29"
+      },
+      "parallaxLayers": ["colonnade", "crowd", "dais"],
+      "event": {
+        "id": "echo",
+        "name": "The Echo",
+        "trigger": { "atTick": 1800 },
+        "effect": {
+          "type": "dialogue_weight",
+          "target": "next_landed_point",
+          "multiplier": 2
+        },
+        "announcement": "The colonnade catches the words — the next point lands twice as loud."
+      }
+    },
+    {
+      "id": "studio",
+      "name": "The Studio",
+      "description": "Hot lights, cold coffee, and a debate stage built for television.",
+      "palette": {
+        "sky": "#1a1b2e",
+        "backdrop": "#27304f",
+        "floor": "#3d2f52",
+        "accent": "#e04c6f"
+      },
+      "parallaxLayers": ["light_rig", "audience_silhouettes", "podiums"],
+      "event": {
+        "id": "on_air",
+        "name": "On the Air",
+        "trigger": { "atTick": 2700 },
+        "effect": {
+          "type": "event_weight_bonus",
+          "eventType": "counter",
+          "bonus": 2,
+          "durationTicks": 600
+        },
+        "announcement": "The ON AIR light snaps on — for the next ten seconds, every rebuttal plays to the cameras."
+      }
+    }
+  ]
+}

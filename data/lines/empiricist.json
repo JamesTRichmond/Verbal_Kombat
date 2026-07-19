@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "fighter": "empiricist",
+  "events": {
+    "lightHit": [
+      "Data point one. Logged.",
+      "Observation: {evidence}. Filed.",
+      "Small sample, clean result."
+    ],
+    "heavyHit": [
+      "That's not an opinion landing, that's {evidence} — replicated.",
+      "Significant effect. Very significant, from where you're standing."
+    ],
+    "combo": [
+      "Three observations, one trend line, zero outliers — the case for {stanceFor} is now a curve, and you are under it.",
+      "Jab, jab, conclusion. That's what a body of evidence feels like."
+    ],
+    "special": [
+      "WEIGHT OF EVIDENCE. Every point I've landed on {topic}, published at once. Peer-reviewed by your face.",
+      "The full dataset drops — findings: conclusive."
+    ],
+    "whiff": [
+      "Null result. Also informative.",
+      "Interesting. Recording that as an outlier."
+    ],
+    "blocked": [
+      "Blocked — controlling for that variable next time.",
+      "Your skepticism is noted and will be overwhelmed."
+    ],
+    "counter": [
+      "Citation needed — and {opponent} doesn't have one. I do: {expert} agrees.",
+      "Your claim just failed replication. Publicly."
+    ],
+    "victory": [
+      "On {topic}, the results are in: p < whatever you were hoping for.",
+      "The evidence was sufficient. It usually is."
+    ],
+    "defeat": [
+      "The data... supported them? Run it again.",
+      "A flawed methodology. Mine, apparently."
+    ]
+  },
+  "categoryOverrides": {
+    "science": {
+      "special": [
+        "WEIGHT OF EVIDENCE — on {topic}? You picked the one arena where I AM the home team."
+      ]
+    }
+  }
+}

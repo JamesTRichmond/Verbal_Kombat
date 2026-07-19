@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "food",
+      "label": "Food",
+      "questions": [
+        { "id": "pineapple_pizza", "text": "Does pineapple belong on pizza?" },
+        { "id": "cereal_soup", "text": "Is cereal a soup?" },
+        { "id": "best_condiment", "text": "Is ketchup the only condiment anyone actually needs?" }
+      ],
+      "vocab": {
+        "stanceFor": "flavor is about contrast, not tradition",
+        "stanceAgainst": "some pairings are simply mistakes",
+        "evidence": "sweet-and-savory pairings appear in every cuisine on Earth",
+        "expert": "any working chef"
+      }
+    },
+    {
+      "id": "technology",
+      "label": "Technology",
+      "questions": [
+        { "id": "tabs_spaces", "text": "Tabs or spaces?" },
+        { "id": "phones_dinner", "text": "Should phones be banned at the dinner table?" },
+        { "id": "smart_fridge", "text": "Does anyone actually need a smart fridge?" }
+      ],
+      "vocab": {
+        "stanceFor": "tools should adapt to people, not the reverse",
+        "stanceAgainst": "convenience keeps costing more than it gives",
+        "evidence": "every settings menu ever abandoned half-configured",
+        "expert": "anyone who has watched a relative fight a router"
+      }
+    },
+    {
+      "id": "sports",
+      "label": "Sports",
+      "questions": [
+        { "id": "ties_ok", "text": "Is a tie an acceptable way for a game to end?" },
+        { "id": "esports_sport", "text": "Are esports real sports?" },
+        { "id": "hotdog_sandwich_sport", "text": "Is competitive eating an athletic discipline?" }
+      ],
+      "vocab": {
+        "stanceFor": "competition is defined by skill under pressure",
+        "stanceAgainst": "not everything with a scoreboard is a sport",
+        "evidence": "decades of record books and ruined Sundays",
+        "expert": "any referee with a whistle and regrets"
+      }
+    },
+    {
+      "id": "pop_culture",
+      "label": "Pop Culture",
+      "questions": [
+        { "id": "spoilers_statute", "text": "Is there a statute of limitations on spoilers?" },
+        { "id": "reboots", "text": "Should Hollywood stop making reboots?" },
+        { "id": "die_hard_xmas", "text": "Is an action movie set at Christmas a Christmas movie?" }
+      ],
+      "vocab": {
+        "stanceFor": "stories belong to their audiences",
+        "stanceAgainst": "the original context is the whole point",
+        "evidence": "a century of remakes, sequels, and betrayed fandoms",
+        "expert": "every critic with a year-end list"
+      }
+    },
+    {
+      "id": "science",
+      "label": "Science",
+      "questions": [
+        { "id": "pluto_planet", "text": "Should Pluto still be a planet?" },
+        { "id": "five_second_rule", "text": "Is the five-second rule real?" },
+        { "id": "time_travel_ethics", "text": "If time travel existed, should anyone be allowed to use it?" }
+      ],
+      "vocab": {
+        "stanceFor": "categories should serve understanding",
+        "stanceAgainst": "sentiment is not a unit of measurement",
+        "evidence": "the data, which does not care about anyone's feelings",
+        "expert": "the peer reviewers, all three of them"
+      }
+    },
+    {
+      "id": "philosophy",
+      "label": "Philosophy",
+      "questions": [
+        { "id": "ship_theseus", "text": "If you replace every part of a ship, is it the same ship?" },
+        { "id": "hotdog_sandwich", "text": "Is a hot dog a sandwich?" },
+        { "id": "silent_tree", "text": "If a tree falls with no one around, does it make a sound?" }
+      ],
+      "vocab": {
+        "stanceFor": "definitions exist to be tested",
+        "stanceAgainst": "words mean things or nothing does",
+        "evidence": "two thousand years of people arguing in togas",
+        "expert": "a philosopher who has never once been on time"
+      }
+    },
+    {
+      "id": "everyday_life",
+      "label": "Everyday Life",
+      "questions": [
+        { "id": "toilet_paper", "text": "Toilet paper: over or under?" },
+        { "id": "made_bed", "text": "Is making your bed every morning actually worth it?" },
+        { "id": "shoes_inside", "text": "Should shoes ever be worn inside the house?" }
+      ],
+      "vocab": {
+        "stanceFor": "small habits are where character lives",
+        "stanceAgainst": "some rituals are just chores with marketing",
+        "evidence": "every household that has ever kept the peace",
+        "expert": "whoever does the laundry"
+      }
+    },
+    {
+      "id": "animals",
+      "label": "Animals",
+      "questions": [
+        { "id": "cats_dogs", "text": "Cats or dogs?" },
+        { "id": "fish_pets", "text": "Do fish count as real pets?" },
+        { "id": "pigeon_respect", "text": "Do pigeons deserve more respect?" }
+      ],
+      "vocab": {
+        "stanceFor": "loyalty should be earned, not demanded",
+        "stanceAgainst": "companionship means showing up",
+        "evidence": "ten thousand years of domestication receipts",
+        "expert": "any veterinarian at the end of a long shift"
+      }
+    }
+  ]
+}
