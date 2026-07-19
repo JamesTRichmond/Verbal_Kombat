@@ -1,0 +1,234 @@
+/* Verbal Kombat — DOM selection and verdict screens. */
+
+.screen {
+  width: min(960px, 96vw);
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
+
+.screen-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.screen-title {
+  margin: 0;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.chip {
+  min-width: 90px;
+  padding: 10px 16px;
+  border: 1px solid var(--panel);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+}
+
+.chip:hover,
+.chip:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  background: #1f1f2c;
+}
+
+.question-panel {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question-button {
+  padding: 14px 18px;
+  border: 1px solid #2a2536;
+  border-radius: 8px;
+  background: #13131b;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.question-button:hover,
+.question-button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  background: #1b1b26;
+}
+
+.custom-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.custom-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #2a2536;
+  border-radius: 8px;
+  background: #0d0d12;
+  color: var(--ink);
+  font: inherit;
+}
+
+.custom-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.primary-button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: var(--blood);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.fighter-grid,
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.fighter-card,
+.location-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid #2a2536;
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+}
+
+.fighter-card:hover,
+.fighter-card:focus,
+.location-card:hover,
+.location-card:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  background: #1b1b26;
+}
+
+.fighter-card-name,
+.location-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.fighter-detail {
+  width: 100%;
+  max-width: 520px;
+  padding: 20px;
+  border: 1px solid #2a2536;
+  border-radius: 10px;
+  background: #13131b;
+  text-align: left;
+}
+
+.fighter-detail h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.location-event {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.location-desc {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.verdict-body {
+  width: 100%;
+  max-width: 720px;
+}
+
+.verdict-title {
+  margin: 0;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.verdict-average {
+  color: var(--muted);
+  margin: 0;
+}
+
+.judge-board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.judge-card {
+  padding: 18px;
+  border: 1px solid #2a2536;
+  border-radius: 10px;
+  background: var(--panel);
+  text-align: left;
+}
+
+.judge-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.judge-quote {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.judge-moments {
+  padding-left: 18px;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.judge-moments li {
+  margin-bottom: 4px;
+}
+
+#stage,
+#controls {
+  margin: 0 auto;
+  width: min(960px, 96vw);
+}

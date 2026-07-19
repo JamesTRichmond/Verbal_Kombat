@@ -5,25 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verbal Kombat</title>
   <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/screens.css" />
 </head>
 <body>
-  <div id="app">
-    <header id="hud">
-      <h1 class="title">VERBAL&nbsp;<span class="accent">KOMBAT</span></h1>
-      <p class="tagline">Win the argument. Draw blood.</p>
-    </header>
+  <div id="app"></div>
 
-    <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
+  <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena" hidden>Verbal Kombat arena</canvas>
 
-    <footer id="controls">
-      <p class="hint">
-        Throw an argument:
-        <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
-        &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
-      </p>
-      <p class="hint"><a href="text-version.html">Classic mode</a> — the original typed-argument game (uses ES modules, so it needs a local server: <code>npm start</code>, not <code>file://</code>)</p>
-    </footer>
-  </div>
+  <footer id="controls" hidden>
+    <p class="hint">
+      Throw an argument:
+      <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
+      &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
+    </p>
+    <p class="hint"><a href="text-version.html">Classic mode</a> — the original typed-argument game (uses ES modules, so it needs a local server: <code>npm start</code>, not <code>file://</code>)</p>
+  </footer>
 
   <!--
     Classic scripts (no build step, no ES modules) so the game runs by simply
@@ -32,11 +28,15 @@
   -->
   <script src="src/core/namespace.js"></script>
   <script src="src/core/config.js"></script>
+  <script src="src/engine/rng.js"></script>
+  <script src="src/engine/judges.js"></script>
   <script src="src/engine/dataLoader.js"></script>
   <script src="src/engine/combat.js"></script>
   <script src="src/engine/state.js"></script>
   <script src="src/engine/input.js"></script>
+  <script src="src/engine/setupData.js"></script>
   <script src="src/render/renderer.js"></script>
+  <script src="src/render/screens.js"></script>
   <script src="src/engine/gameLoop.js"></script>
   <script src="src/main.js"></script>
 </body>

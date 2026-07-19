@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "food",
+      "name": "Food",
+      "questions": [
+        "Should pineapple belong on pizza?",
+        "Is a hot dog a sandwich?",
+        "Should ketchup go on a hot dog?"
+      ],
+      "bank": "default"
+    },
+    {
+      "id": "tech",
+      "name": "Tech",
+      "questions": [
+        "Should social media require real-name verification?",
+        "Is open-source software always safer?",
+        "Should AI-generated content be watermarked?"
+      ],
+      "bank": "default"
+    },
+    {
+      "id": "society",
+      "name": "Society",
+      "questions": [
+        "Should voting be mandatory?",
+        "Should public transit be free?",
+        "Is a four-day workweek realistic?"
+      ],
+      "bank": "default"
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "questions": [
+        "Should esports be in the Olympics?",
+        "Is a salary cap good for a league?",
+        "Should college athletes be paid?"
+      ],
+      "bank": "default"
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "questions": [
+        "Are remakes ever better than originals?",
+        "Should spoilers have an expiration date?",
+        "Is binge-watching bad for storytelling?"
+      ],
+      "bank": "default"
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "questions": [
+        "Should humans colonize Mars?",
+        "Is nuclear power worth the risk?",
+        "Should gene editing be allowed in humans?"
+      ],
+      "bank": "default"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "questions": [
+        "Should homework be banned?",
+        "Are standardized tests fair?",
+        "Should coding be a required subject?"
+      ],
+      "bank": "default"
+    },
+    {
+      "id": "ethics",
+      "name": "Ethics",
+      "questions": [
+        "Is it okay to tell a white lie?",
+        "Should whistleblowers always be protected?",
+        "Can a good person do bad things?"
+      ],
+      "bank": "default"
+    }
+  ]
+}

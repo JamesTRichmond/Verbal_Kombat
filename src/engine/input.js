@@ -2,18 +2,27 @@
  * input.js — translate keyboard into game intent.
  *
  * Keys 1–4 throw the corresponding argument move. Space starts or resets a
- * match. Input only signals intent through callbacks; it never touches state
- * or the canvas directly.
+ * match. Enter / Escape can be wired by callers for UI confirmation/back.
+ * Input only signals intent through callbacks; it never touches state or the
+ * canvas directly.
  */
 (function (VK) {
   "use strict";
 
-  // handlers: { onMove(index), onStart() }
+  // handlers: { onStart(), onMove(index), onConfirm(), onBack() }
   function attach(handlers) {
     function onKeyDown(e) {
       if (e.key === " " || e.code === "Space") {
         e.preventDefault();
         handlers.onStart && handlers.onStart();
+        return;
+      }
+      if (e.key === "Enter") {
+        handlers.onConfirm && handlers.onConfirm();
+        return;
+      }
+      if (e.key === "Escape") {
+        handlers.onBack && handlers.onBack();
         return;
       }
       var n = parseInt(e.key, 10);

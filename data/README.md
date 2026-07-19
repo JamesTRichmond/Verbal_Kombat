@@ -1,10 +1,10 @@
-# Content data — `fallacies.json`
+# Content data
 
-This is the **authoritative content file** the engine loads at runtime. It's the
-one source of truth for the schema; design/content drafts (authored under
-`/docs`) get transcribed into this shape.
+This directory holds the **authoritative content files** the engine loads at runtime.
+They are the source of truth for their schemas; design/content drafts (authored
+under `/docs`) get transcribed into these shapes.
 
-## Schema
+## `fallacies.json`
 
 ```jsonc
 {
@@ -23,6 +23,58 @@ one source of truth for the schema; design/content drafts (authored under
 }
 ```
 
+## `topics.json`
+
+```jsonc
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "food",           // snake_case, stable
+      "name": "Food",         // display label
+      "questions": [          // three pre-written questions
+        "Should pineapple belong on pizza?",
+        "..."
+      ],
+      "bank": "default"       // dialogue bank key
+    }
+  ]
+}
+```
+
+## `fighters.json`
+
+```jsonc
+{
+  "version": 1,
+  "fighters": [
+    {
+      "id": "logician",       // snake_case, stable
+      "name": "The Logician", // display name
+      "style": "Counter-focused",
+      "stats": { "precision": 8, "pressure": 5 },
+      "special": "Reductio Ad Absurdum"
+    }
+  ]
+}
+```
+
+## `locations.json`
+
+```jsonc
+{
+  "version": 1,
+  "locations": [
+    {
+      "id": "forum",
+      "name": "The Forum",
+      "palette": "warm",
+      "event": { "name": "Echo Chamber", "description": "..." }
+    }
+  ]
+}
+```
+
 ### Field rules
 
 - **`id`** — snake_case, unique, stable. Combat and future save data reference
@@ -35,8 +87,10 @@ one source of truth for the schema; design/content drafts (authored under
 
 ## How it's loaded
 
-`src/engine/dataLoader.js` fetches this file. Opening `index.html` directly from
-disk works in most browsers, but some (e.g. Chrome) block `fetch` on `file://`.
+`src/engine/dataLoader.js` fetches `fallacies.json`; `src/engine/setupData.js`
+fetches the selection content (`topics.json`, `fighters.json`, `locations.json`).
+Opening `index.html` directly from disk works in most browsers, but some
+(e.g. Chrome) block `fetch` on `file://`.
 In that case the game falls back to a tiny built-in demo set and prints a note
 in the console. To load the full file, serve locally:
 

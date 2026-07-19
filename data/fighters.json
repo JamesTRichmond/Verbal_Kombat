@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "fighters": [
+    {
+      "id": "logician",
+      "name": "The Logician",
+      "style": "Counter-focused",
+      "stats": {
+        "precision": 8,
+        "pressure": 5
+      },
+      "special": "Reductio Ad Absurdum"
+    },
+    {
+      "id": "demagogue",
+      "name": "The Demagogue",
+      "style": "Heavy swings, crowd-feeding",
+      "stats": {
+        "precision": 5,
+        "pressure": 8
+      },
+      "special": "The Big Lie"
+    },
+    {
+      "id": "empiricist",
+      "name": "The Empiricist",
+      "style": "Jab pressure, evidence combos",
+      "stats": {
+        "precision": 7,
+        "pressure": 6
+      },
+      "special": "Peer Review"
+    },
+    {
+      "id": "trickster",
+      "name": "The Trickster",
+      "style": "Mobility, interrupts",
+      "stats": {
+        "precision": 6,
+        "pressure": 7
+      },
+      "special": "Straw Man Setup"
+    }
+  ]
+}
