@@ -94,6 +94,7 @@
 
     verdict.judges.forEach(function (j) {
       var won = j.winner.id === player.id;
+      var topSource = won ? j.player : j.enemy;
       html += '<article class="scorecard">';
       html += '<h3>' + escapeHtml(j.judge.name) + "</h3>";
       html += '<p class="judge-focus">' + escapeHtml(j.judge.focus) + "</p>";
@@ -103,7 +104,7 @@
       html += "</div>";
       html += '<h4>Top moments</h4>';
       html += '<ol class="top-moments">';
-      j[verdict.winner.id === player.id ? "player" : "enemy"].top.forEach(function (entry) {
+      topSource.top.forEach(function (entry) {
         html += '<li>' + momentLine(entry) + "</li>";
       });
       html += "</ol>";

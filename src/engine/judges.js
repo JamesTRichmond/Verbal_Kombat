@@ -99,6 +99,7 @@
     var total = entries.reduce(function (sum, e) {
       return sum + e.score;
     }, 0);
+    // Top contributing moments for this fighter: highest absolute impact first.
     var top = entries
       .slice()
       .sort(function (a, b) {
@@ -114,7 +115,8 @@
     var results = JUDGES.map(function (judge) {
       var player = scoreFighter(judge, ledger, playerId);
       var enemy = scoreFighter(judge, ledger, enemyId);
-      var winner = player.total > enemy.total ? ledger.header.player : ledger.header.enemy;
+      var won = player.total > enemy.total;
+      var winner = won ? ledger.header.player : ledger.header.enemy;
       return {
         judge: judge,
         player: player,
@@ -161,6 +163,7 @@
     for (var i = 0; i < events.length; i++) {
       var ev = events[i];
       var attacker = ev.attacker;
+      if (ev.type === "ko") continue;
       if (attacker === winner.id) {
         currentRun.push(ev);
       } else {

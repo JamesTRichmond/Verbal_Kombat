@@ -126,7 +126,8 @@
 
   function nextAiDelay(state) {
     var ai = VK.config.ai;
-    return state.rng.range("ai", Math.round(ai.minDelay * 60), Math.round(ai.maxDelay * 60)) * FIXED_DT;
+    // Range is in ticks; convert back to seconds.
+    return state.rng.range("ai", Math.round(ai.minDelay / FIXED_DT), Math.round(ai.maxDelay / FIXED_DT)) * FIXED_DT;
   }
 
   function eachFighter(state, fn) {
