@@ -47,6 +47,8 @@
           label: "Food",
           questions: [
             { id: "pineapple_pizza", text: "Does pineapple belong on pizza?" },
+            { id: "cereal_soup", text: "Is cereal a soup?" },
+            { id: "best_condiment", text: "Is ketchup the only condiment anyone actually needs?" },
           ],
           vocab: {
             stanceFor: "flavor is about contrast, not tradition",
@@ -280,13 +282,13 @@
 
   function normalizeTopics(json) {
     var list = (json && json.categories) || [];
-    var clean = list.filter(function (c) {
+    var clean = list.filter(dedupeById()).filter(function (c) {
       return (
         c &&
         typeof c.id === "string" &&
         typeof c.label === "string" &&
         Array.isArray(c.questions) &&
-        c.questions.length > 0 &&
+        c.questions.length === 3 && // the R1 schema: exactly 3 per category
         c.questions.every(function (q) {
           return q && isNonEmptyString(q.id) && isNonEmptyString(q.text);
         }) &&
@@ -300,9 +302,25 @@
     return clean;
   }
 
+  // Ids are the stable keys selection state and overrides hang off — a
+  // duplicate makes the reference ambiguous, so only the first occurrence
+  // survives. Downstream count checks then treat the loss as a shortfall.
+  function dedupeById() {
+    var seen = {};
+    return function (entry) {
+      if (!entry || typeof entry.id !== "string") return true; // let shape checks reject it
+      if (seen[entry.id]) {
+        console.warn("[VK] Duplicate id '" + entry.id + "' dropped.");
+        return false;
+      }
+      seen[entry.id] = true;
+      return true;
+    };
+  }
+
   function normalizeFighters(json) {
     var list = (json && json.fighters) || [];
-    var clean = list.filter(function (f) {
+    var clean = list.filter(dedupeById()).filter(function (f) {
       return (
         f &&
         isNonEmptyString(f.id) &&
@@ -358,7 +376,7 @@
 
   function normalizeLocations(json) {
     var list = (json && json.locations) || [];
-    var clean = list.filter(function (l) {
+    var clean = list.filter(dedupeById()).filter(function (l) {
       return (
         l &&
         isNonEmptyString(l.id) &&
@@ -366,7 +384,7 @@
         isNonEmptyString(l.description) &&
         l.palette &&
         PALETTE_KEYS.every(function (key) {
-          return isNonEmptyString(l.palette[key]);
+          return isHexColor(l.palette[key]);
         }) &&
         Array.isArray(l.parallaxLayers) &&
         l.parallaxLayers.length > 0 &&
@@ -406,12 +424,13 @@
   }
 
   // A usable template is a non-empty string whose {placeholders} all come
-  // from the schema vocabulary — a typo like {expertt} would otherwise reach
-  // the ticker as raw text the interpolation layer cannot fill.
+  // from the schema vocabulary. EVERY braced token is checked — {expertt},
+  // {stance_for}, {topic1} are all rejected — because any unknown token
+  // would reach the ticker as raw text the interpolation layer cannot fill.
   function isValidLine(line) {
     if (typeof line !== "string" || line.length === 0) return false;
     var match;
-    var re = /\{([a-zA-Z]+)\}/g;
+    var re = /\{([^}]*)\}/g;
     while ((match = re.exec(line)) !== null) {
       if (PLACEHOLDERS.indexOf(match[1]) === -1) return false;
     }
@@ -483,6 +502,10 @@
 
   function isNonEmptyString(value) {
     return typeof value === "string" && value.length > 0;
+  }
+
+  function isHexColor(value) {
+    return typeof value === "string" && /^#[0-9a-f]{6}$/i.test(value);
   }
 
   function isStat(value) {

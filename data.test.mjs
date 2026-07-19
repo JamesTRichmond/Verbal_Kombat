@@ -344,4 +344,51 @@ assert.ok(!sanitizeCustomQuestion('<img src=x onerror=alert(1)>hi').includes('<'
   assert.ok(!loaded.lines.logician.events.whiff[0].includes('{expertt}'));
 }
 
+// ---- round-4 validation rules: question count, dup ids, hex, braced tokens ----
+{
+  const config = {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const loadWith = async (overrideFor) => {
+    const vk = {config};
+    const stub = (url) => Promise.resolve({ok: true, json: () => Promise.resolve(
+      overrideFor(url) ?? readJson(url))});
+    const warn = console.warn;
+    console.warn = () => {};
+    new Function('window', 'fetch', src)({VK: vk}, stub);
+    const loaded = await vk.content.load();
+    console.warn = warn;
+    return loaded;
+  };
+
+  // a category with only 2 questions invalidates it -> count shortfall -> fallback
+  const twoQuestions = structuredClone(readJson('data/topics.json'));
+  twoQuestions.categories[3].questions.pop();
+  const r1 = await loadWith((u) => u === 'data/topics.json' ? twoQuestions : undefined);
+  assert.equal(r1.topics.length, 1, 'short question list degrades topics to fallback');
+
+  // duplicated category id -> dedupe -> 7 of 8 -> fallback
+  const dupId = structuredClone(readJson('data/topics.json'));
+  dupId.categories[5].id = dupId.categories[2].id;
+  const r2 = await loadWith((u) => u === 'data/topics.json' ? dupId : undefined);
+  assert.equal(r2.topics.length, 1, 'duplicate category id degrades topics to fallback');
+
+  // non-hex palette value invalidates the arena -> 1 of 2 -> fallback
+  const badPalette = structuredClone(readJson('data/locations.json'));
+  badPalette.locations[1].palette.accent = 'notacolor';
+  const r3 = await loadWith((u) => u === 'data/locations.json' ? badPalette : undefined);
+  assert.equal(r3.locations.length, 1, 'non-hex palette degrades locations to fallback');
+  assert.equal(r3.locations[0].id, 'forum');
+
+  // non-alphabetic braced tokens are rejected too
+  const snakeBank = structuredClone(readJson('data/lines/logician.json'));
+  snakeBank.events.whiff = ['{stance_for} was my point.', '{topic1} then.'];
+  const r4 = await loadWith((u) => u === 'data/lines/logician.json' ? snakeBank : undefined);
+  assert.ok(!r4.lines.logician.events.whiff.some((l) => l.includes('{stance_for}')),
+    'non-alphabetic braced tokens invalidate the line; bank falls back');
+}
+
 console.log('Data tests passed.');
