@@ -8,33 +8,40 @@
 (function (VK) {
   "use strict";
 
-  function makeFighter(id, name, side) {
+  function makeFighter(id, template, side) {
     var f = VK.config.fighter;
     return {
       id: id,
-      name: name,
+      name: template ? template.name : "Fighter",
       side: side, // "left" | "right"
       health: f.maxHealth,
       composure: f.maxComposure,
+      // Preserve identity for renderers, dialogue banks, and future tuning.
+      style: template ? template.style : "",
+      special: template ? template.special : null,
+      stats: template && template.stats ? template.stats : [],
     };
   }
 
-  function createState(moves) {
+  function createState(moves, playerFighter, enemyFighter) {
     return {
       moves: moves,                 // array of fallacy/argument entries
       phase: "ready",               // "ready" | "fighting" | "ko"
       winner: null,
       fighters: {
-        player: makeFighter("player", "You", "left"),
-        enemy: makeFighter("enemy", "The Sophist", "right"),
+        player: makeFighter("player", playerFighter, "left"),
+        enemy: makeFighter("enemy", enemyFighter, "right"),
       },
+      // Stash the chosen templates so start()/rematches keep the roster.
+      playerFighter: playerFighter,
+      enemyFighter: enemyFighter,
       aiTimer: nextAiDelay(),
       log: [],                      // recent combat events (most recent last)
     };
   }
 
   function start(state) {
-    var fresh = createState(state.moves);
+    var fresh = createState(state.moves, state.playerFighter, state.enemyFighter);
     fresh.phase = "fighting";
     return fresh;
   }

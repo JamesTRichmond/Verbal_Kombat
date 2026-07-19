@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verbal Kombat — Inline Tests</title>
+  <style>
+    body { background: #0b0b10; color: #f5f2ea; font-family: system-ui, sans-serif; padding: 24px; }
+    .pass { color: #7fdb7f; }
+    .fail { color: #ff7b7b; }
+    pre { background: #14141d; padding: 12px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Verbal Kombat — Inline Tests</h1>
+  <div id="select-screen" hidden>
+    <div id="select-roster"></div>
+    <div id="select-panel"></div>
+  </div>
+  <div id="results"></div>
+
+  <script src="src/core/namespace.js"></script>
+  <script src="src/core/config.js"></script>
+  <script src="src/engine/dataLoader.js"></script>
+  <script src="src/engine/fighterLoader.js"></script>
+  <script src="src/engine/combat.js"></script>
+  <script src="src/engine/state.js"></script>
+  <script src="src/ui/fighterSelect.js"></script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var results = document.getElementById("results");
+      var passed = 0;
+      var failed = 0;
+
+      function assert(condition, message) {
+        if (condition) {
+          passed++;
+          results.insertAdjacentHTML("beforeend", '<p class="pass">✓ ' + escapeHtml(message) + "</p>");
+        } else {
+          failed++;
+          results.insertAdjacentHTML("beforeend", '<p class="fail">✗ ' + escapeHtml(message) + "</p>");
+        }
+      }
+
+      function escapeHtml(text) {
+        var div = document.createElement("div");
+        div.textContent = String(text);
+        return div.innerHTML;
+      }
+
+      var demoFighters = [
+        { id: "a", name: "Alpha", style: "Style A", description: "Desc A", portrait: "A",
+          stats: [{ label: "X", value: 5 }, { label: "Y", value: 7 }],
+          special: { name: "Spec A", description: "Special A" } },
+        { id: "b", name: "Beta", style: "Style B", description: "Desc B", portrait: "B",
+          stats: [{ label: "X", value: 6 }, { label: "Y", value: 8 }],
+          special: { name: "Spec B", description: "Special B" } },
+        { id: "c", name: "Gamma", style: "Style C", description: "Desc C", portrait: "C",
+          stats: [{ label: "X", value: 4 }, { label: "Y", value: 9 }],
+          special: { name: "Spec C", description: "Special C" } },
+      ];
+
+      // Fighter loader tests
+      VK.loadFighters().then(function (fighters) {
+        assert(Array.isArray(fighters), "loadFighters returns an array");
+        assert(fighters.length === 4, "roster contains 4 fighters");
+        var ids = fighters.map(function (f) { return f.id; }).sort();
+        assert(ids.join(",") === "demagogue,empiricist,logician,trickster",
+          "roster contains the four original fighters");
+        fighters.forEach(function (f) {
+          assert(typeof f.name === "string" && f.name.length > 0,
+            f.id + " has a name");
+          assert(typeof f.style === "string" && f.style.length > 0,
+            f.id + " has a style");
+          assert(Array.isArray(f.stats) && f.stats.length >= 2,
+            f.id + " has at least two stats");
+          assert(f.special && typeof f.special.name === "string",
+            f.id + " has a named special");
+        });
+
+        // State creation tests
+        var state = VK.state.create([], fighters[0], fighters[1]);
+        assert(state.fighters.player.name === fighters[0].name,
+          "player fighter name is set from template");
+        assert(state.fighters.enemy.name === fighters[1].name,
+          "enemy fighter name is set from template");
+        assert(state.fighters.player.style === fighters[0].style,
+          "player fighter style is preserved in state");
+
+        var rematch = VK.state.start(state);
+        assert(rematch.fighters.player.name === fighters[0].name,
+          "rematch preserves player fighter selection");
+        assert(rematch.fighters.enemy.name === fighters[1].name,
+          "rematch preserves enemy fighter selection");
+        assert(rematch.phase === "fighting", "rematch starts in fighting phase");
+
+        // Fighter selection UI tests
+        var confirmed = null;
+        var screen = VK.fighterSelect.create(demoFighters, function (player, enemy) {
+          confirmed = { player: player, enemy: enemy };
+        });
+        assert(screen !== null, "fighterSelect.create returns an API");
+        screen.show();
+
+        var roster = document.getElementById("select-roster");
+        var tiles = roster.querySelectorAll(".roster-tile");
+        assert(tiles.length === 3, "roster renders one tile per fighter");
+        assert(tiles[0].getAttribute("aria-pressed") === "true",
+          "first fighter is selected by default");
+
+        var panel = document.getElementById("select-panel");
+        assert(panel.textContent.indexOf(demoFighters[0].name) !== -1,
+          "identity panel shows selected fighter name");
+        assert(panel.textContent.indexOf(demoFighters[0].description) !== -1,
+          "identity panel shows style description");
+        assert(panel.textContent.indexOf(demoFighters[0].special.name) !== -1,
+          "identity panel shows named special");
+        assert(panel.querySelectorAll(".stat").length === 2,
+          "identity panel shows two stats");
+        assert(panel.textContent.indexOf(demoFighters[1].name) !== -1,
+          "identity panel shows default rival");
+
+        // Select third fighter and confirm
+        tiles[2].click();
+        assert(tiles[2].getAttribute("aria-pressed") === "true",
+          "clicking a tile selects that fighter");
+
+        panel.querySelector(".confirm-button").click();
+        assert(confirmed !== null, "confirm button fires onConfirm callback");
+        assert(confirmed.player.id === "c", "confirmed player is the selected fighter");
+        assert(confirmed.enemy.id !== "c", "confirmed enemy is not the same as player");
+
+        // Summary
+        results.insertAdjacentHTML("beforeend",
+          "<p><strong>Done:</strong> " + passed + " passed, " + failed + " failed.</p>");
+      }).catch(function (err) {
+        results.insertAdjacentHTML("beforeend",
+          '<p class="fail">Test suite failed: ' + escapeHtml(err.message) + "</p>");
+      });
+    })();
+  </script>
+</body>
+</html>

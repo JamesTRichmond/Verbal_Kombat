@@ -13,6 +13,16 @@
       <p class="tagline">Win the argument. Draw blood.</p>
     </header>
 
+    <section id="select-screen" class="select-screen" hidden aria-label="Fighter selection">
+      <div class="select-layout">
+        <div class="select-roster-wrap">
+          <h2>Choose your fighter</h2>
+          <div id="select-roster" class="select-roster" role="group" aria-label="Roster"></div>
+        </div>
+        <div id="select-panel" class="select-panel" aria-live="polite"></div>
+      </div>
+    </section>
+
     <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
 
     <footer id="controls">
@@ -33,11 +43,13 @@
   <script src="src/core/namespace.js"></script>
   <script src="src/core/config.js"></script>
   <script src="src/engine/dataLoader.js"></script>
+  <script src="src/engine/fighterLoader.js"></script>
   <script src="src/engine/combat.js"></script>
   <script src="src/engine/state.js"></script>
   <script src="src/engine/input.js"></script>
   <script src="src/render/renderer.js"></script>
   <script src="src/engine/gameLoop.js"></script>
+  <script src="src/ui/fighterSelect.js"></script>
   <script src="src/main.js"></script>
 </body>
 </html>

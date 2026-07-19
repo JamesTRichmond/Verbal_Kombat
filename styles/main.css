@@ -61,6 +61,281 @@ body {
   font-size: 0.9rem;
 }
 
+/* Fighter selection screen */
+.select-screen {
+  background: var(--panel);
+  border: 2px solid #2a2536;
+  border-radius: 10px;
+  padding: clamp(18px, 4vw, 36px);
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.select-screen[hidden] { display: none; }
+
+.select-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(280px, 1.4fr);
+  gap: clamp(18px, 4vw, 36px);
+}
+
+.select-roster-wrap h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.select-roster {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.roster-tile {
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  border: 2px solid #2a2536;
+  border-radius: 8px;
+  background: #1a1a24;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.roster-tile:hover,
+.roster-tile[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: #242430;
+}
+
+.roster-tile:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.roster-portrait {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  aspect-ratio: 1;
+  border: 2px solid var(--blood);
+  border-radius: 50%;
+  background: #0f0f14;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.roster-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.select-panel {
+  background: #0f0f14;
+  border: 1px solid #2a2536;
+  border-radius: 8px;
+  padding: 22px;
+  min-height: 280px;
+}
+
+.identity-placeholder {
+  color: var(--muted);
+  margin: 0;
+}
+
+.identity-primary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.identity-portrait {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  aspect-ratio: 1;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  background: #181820;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.identity-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+.identity-style {
+  margin: 4px 0 0;
+  color: var(--blood);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.identity-description {
+  color: var(--muted);
+  margin: 0 0 18px;
+  line-height: 1.55;
+}
+
+.identity-stats {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 18px;
+}
+
+.stat {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat dt {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.stat dd {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.stat-bar {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, var(--blood), var(--accent));
+  border-radius: 5px;
+  min-width: 4px;
+}
+
+.stat-value {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.identity-special {
+  background: rgba(228, 176, 74, 0.08);
+  border-left: 4px solid var(--accent);
+  padding: 14px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 18px;
+}
+
+.identity-special h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.identity-special p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.identity-rival {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.rival-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.rival-portrait {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  aspect-ratio: 1;
+  border: 2px solid var(--blood);
+  border-radius: 50%;
+  background: #181820;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.rival-name {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.rival-cycle,
+.confirm-button {
+  border: 0;
+  background: var(--blood);
+  color: white;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.rival-cycle:hover,
+.confirm-button:hover {
+  filter: brightness(1.15);
+}
+
+.rival-cycle:focus-visible,
+.confirm-button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.rival-cycle {
+  margin-left: auto;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+}
+
+.confirm-button {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .select-layout {
+    grid-template-columns: 1fr;
+  }
+  .select-roster {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .select-roster {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 kbd {
   display: inline-block;
   min-width: 1.4em;

@@ -1,0 +1,114 @@
+/*
+ * fighterLoader.js — loads the fighter roster content.
+ *
+ * Mirrors dataLoader.js: try to fetch data/fighters.json, fall back to a
+ * built-in demo roster if the fetch fails (e.g. opening index.html over
+ * file://). The JSON file remains the source of truth.
+ */
+(function (VK) {
+  "use strict";
+
+  var FALLBACK = {
+    version: 1,
+    fighters: [
+      {
+        id: "logician",
+        name: "The Logician",
+        style: "Precise, counter-focused",
+        description: "Waits for an overreach, then cuts the legs out from under it. Every exchange is a syllogism with a hidden blade.",
+        portrait: "Λ",
+        stats: [
+          { label: "Precision", value: 8 },
+          { label: "Composure", value: 7 },
+        ],
+        special: {
+          name: "Socratic Cross-exam",
+          description: "A three-step refutation that turns the opponent's own words into damage.",
+        },
+      },
+      {
+        id: "demagogue",
+        name: "The Demagogue",
+        style: "Heavy swings, crowd-feeding",
+        description: "Loud, relentless, and impossible to ignore. The Demagogue wins by keeping the room on their side, not by being right.",
+        portrait: "Δ",
+        stats: [
+          { label: "Power", value: 9 },
+          { label: "Pressure", value: 8 },
+        ],
+        special: {
+          name: "Rabble Rouser",
+          description: "A sweeping appeal that drowns counters in noise and deals heavy stagger damage.",
+        },
+      },
+      {
+        id: "empiricist",
+        name: "The Empiricist",
+        style: "Jab pressure, evidence combos",
+        description: "Never lets a claim stand un-sourced. The Empiricist chips away with small, factual strikes until the case collapses.",
+        portrait: "Σ",
+        stats: [
+          { label: "Evidence", value: 9 },
+          { label: "Tempo", value: 6 },
+        ],
+        special: {
+          name: "Peer Review Barrage",
+          description: "A rapid-fire sequence of citations that locks the opponent in place and racks up combo hits.",
+        },
+      },
+      {
+        id: "trickster",
+        name: "The Trickster",
+        style: "Mobility, interrupts",
+        description: "Ducks responsibility, reframes the debate, and strikes from angles that were not on the map.",
+        portrait: "Θ",
+        stats: [
+          { label: "Mobility", value: 9 },
+          { label: "Guile", value: 8 },
+        ],
+        special: {
+          name: "Red Herring",
+          description: "A sudden change of subject that interrupts the opponent and leaves them arguing into thin air.",
+        },
+      },
+    ],
+  };
+
+  VK.loadFighters = function loadFighters() {
+    return fetch(VK.config.fighterDataUrl || "data/fighters.json")
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (json) {
+        return normalize(json, "data/fighters.json");
+      })
+      .catch(function (err) {
+        console.warn(
+          "[VK] Could not load fighters (" +
+            err.message +
+            "). Using built-in demo roster."
+        );
+        return normalize(FALLBACK, "built-in fallback");
+      });
+  };
+
+  function normalize(json, source) {
+    var list = (json && json.fighters) || [];
+    var clean = list.filter(function (f) {
+      return (
+        f &&
+        typeof f.id === "string" &&
+        typeof f.name === "string" &&
+        Array.isArray(f.stats) &&
+        f.stats.length >= 2 &&
+        f.special &&
+        typeof f.special.name === "string"
+      );
+    });
+    if (clean.length === 0) {
+      throw new Error("No valid fighters in " + source);
+    }
+    return clean;
+  }
+})(window.VK);
