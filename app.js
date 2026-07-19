@@ -4,7 +4,7 @@ import {RELEASE_ONE_BOUT as bout} from './prompts.js';
 
 const $=selector=>document.querySelector(selector);
 const form=$('#argument-form');const input=$('#argument');const result=$('#result');
-const health=(fighter,value)=>{$(`#${fighter}-health`).style.width=`${value}%`;$ (`#${fighter}-hp-label`).textContent=`${value} HP`};
+const health=(fighter,value)=>{$(`#${fighter}-health`).style.width=`${value}%`;$(`#${fighter}-hp-label`).textContent=`${value} HP`};
 const card=(label,value,max)=>`<div class="score-card"><strong>${value}/${max}</strong><span>${label}</span></div>`;
 
 $('#round-label').textContent=`Round ${bout.number} of ${bout.totalRounds}`;
