@@ -153,7 +153,8 @@
 
   function renderStat(stat) {
     if (!stat) return "";
-    var value = Math.max(1, Math.min(10, Number(stat.value) || 1));
+    var raw = stat.value === null || stat.value === undefined ? 1 : Number(stat.value);
+    var value = Math.max(0, Math.min(10, isNaN(raw) ? 1 : raw));
     return (
       '<div class="stat">' +
       '<dt>' + escapeHtml(stat.label) + "</dt>" +
