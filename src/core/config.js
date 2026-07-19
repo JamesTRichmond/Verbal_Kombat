@@ -34,6 +34,13 @@
       maxDelay: 2.4,
     },
 
+    ticker: {
+      // Max one dialogue line displayed every N seconds.
+      interval: 2.5,
+      // Drop older undisplayed lines if the queue grows this large.
+      maxQueue: 8,
+    },
+
     // Path to the authoritative content file. See data/README.md for schema.
     dataUrl: "data/fallacies.json",
   };

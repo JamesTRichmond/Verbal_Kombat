@@ -30,6 +30,17 @@
       },
       aiTimer: nextAiDelay(),
       log: [],                      // recent combat events (most recent last)
+      ticker: VK.ticker.create(
+        VK.config.ticker.interval,
+        VK.config.ticker.maxQueue
+      ),
+      // Simple combo detector: consecutive hits by the same fighter.
+      combo: {
+        attackerId: null,
+        count: 0,
+        windowSeconds: 2.0,
+        decay: 0,
+      },
     };
   }
 
@@ -48,6 +59,18 @@
     eachFighter(state, function (f) {
       f.composure = VK.combat.clamp(f.composure + regen, 0, maxC);
     });
+
+    // Decay combo window.
+    if (state.combo.count > 0) {
+      state.combo.decay -= dt;
+      if (state.combo.decay <= 0) {
+        state.combo.count = 0;
+        state.combo.attackerId = null;
+      }
+    }
+
+    // Advance the dialogue ticker.
+    VK.ticker.update(state.ticker, dt);
 
     // Starter enemy AI: throws a random argument on a timer.
     state.aiTimer -= dt;
@@ -73,8 +96,55 @@
       state.fighters[defenderId],
       move
     );
+
+    // Light hit → jab; three hits by the same fighter within the window → combo.
+    if (event.type === "hit") {
+      if (state.combo.attackerId === attackerId) {
+        state.combo.count += 1;
+      } else {
+        state.combo.attackerId = attackerId;
+        state.combo.count = 1;
+      }
+      state.combo.decay = state.combo.windowSeconds;
+
+      if (state.combo.count >= 3) {
+        event = {
+          type: "combo",
+          attacker: state.fighters[attackerId],
+          defender: state.fighters[defenderId],
+          move: move,
+          damage: event.damage,
+        };
+        state.combo.count = 0;
+        state.combo.attackerId = null;
+      }
+    } else if (event.type !== "fizzle") {
+      // Counters and whiffs break an opposing combo chain.
+      state.combo.count = 0;
+      state.combo.attackerId = null;
+    }
+
     pushLog(state, event);
+    enqueueDialogue(state, event);
     checkKO(state);
+  }
+
+  function enqueueDialogue(state, event) {
+    var category = VK.dialogue.eventCategory(event);
+    if (!category) return;
+
+    var speakerId;
+    if (event.type === "countered") {
+      speakerId = event.defender.id;
+    } else if (event.type === "ko") {
+      speakerId = state.winner ? state.winner.id : null;
+    } else {
+      speakerId = event.attacker ? event.attacker.id : null;
+    }
+    if (!speakerId) return;
+
+    var line = VK.dialogue.pickLine(event, speakerId, category, 0);
+    if (line) VK.ticker.enqueue(state.ticker, line);
   }
 
   function checkKO(state) {
@@ -84,7 +154,13 @@
     if (p.health <= 0 || e.health <= 0) {
       state.phase = "ko";
       state.winner = p.health <= 0 ? e : p;
-      pushLog(state, { type: "ko", message: state.winner.name + " wins the argument." });
+      var event = {
+        type: "ko",
+        winner: state.winner,
+        message: state.winner.name + " wins the argument.",
+      };
+      pushLog(state, event);
+      enqueueDialogue(state, event);
     }
   }
 

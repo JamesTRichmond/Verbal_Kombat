@@ -50,7 +50,7 @@
       drawMoveMenu(ctx, state.moves, W, H);
     }
 
-    drawLog(ctx, state.log, W, H);
+    drawTicker(ctx, state.ticker, W, H);
   }
 
   function drawFloor(ctx, W, H) {
@@ -121,6 +121,32 @@
     ctx.font = "italic 15px Trebuchet MS, sans-serif";
     ctx.textAlign = "center";
     ctx.fillText(last.message || "", W / 2, H - 24);
+  }
+
+  // Bottom ticker: one earned line at a time, throttled so combat stays readable.
+  function drawTicker(ctx, ticker, W, H) {
+    var line = VK.ticker.currentLine(ticker);
+    if (!line) return;
+
+    var text = line.text;
+    var padding = 16;
+    ctx.font = "italic 15px Trebuchet MS, sans-serif";
+    var maxWidth = W - padding * 2;
+    var measured = ctx.measureText(text).width;
+    if (measured > maxWidth) {
+      // Trim with ellipsis if a line is unexpectedly long.
+      while (text.length > 0 && ctx.measureText(text + "…").width > maxWidth) {
+        text = text.slice(0, -1);
+      }
+      text += "…";
+    }
+
+    ctx.fillStyle = COLORS.panel;
+    ctx.fillRect(padding, H - 56, W - padding * 2, 36);
+
+    ctx.fillStyle = COLORS.ink;
+    ctx.textAlign = "center";
+    ctx.fillText(text, W / 2, H - 32);
   }
 
   function banner(ctx, W, H, text, color) {
