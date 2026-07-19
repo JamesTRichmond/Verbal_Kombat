@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {gradeArgument} from './scoring.js';
+import {resolveCombat} from './combat.js';
+import {RELEASE_ONE_BOUT} from './prompts.js';
+
+const strong=gradeArgument('Pineapple belongs on pizza because sweetness balances salty cheese. For example, sweet and savory pairings are common. However, saying everyone dislikes it is not evidence.');
+const weak=gradeArgument('No.');
+const abusive=gradeArgument('You are a stupid loser, but pineapple is fine.');
+assert.ok(strong.total>=55);
+assert.ok(weak.total<55);
+assert.equal(abusive.discipline,0);
+assert.equal(strong.total,strong.claim+strong.support+strong.rebuttal+strong.discipline);
+const victory=resolveCombat(strong,RELEASE_ONE_BOUT.winThreshold);
+const defeat=resolveCombat(weak,RELEASE_ONE_BOUT.winThreshold);
+assert.equal(victory.won,true);
+assert.ok(victory.opponentHealth<100);
+assert.equal(victory.playerHealth,100);
+assert.equal(defeat.won,false);
+assert.ok(defeat.playerHealth<100);
+assert.equal(defeat.opponentHealth,100);
+console.log('Scoring tests passed.');
