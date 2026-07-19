@@ -103,7 +103,7 @@
     if (!arenaEvent || !arenaEvent.pending) return;
     ctx.save();
     ctx.globalAlpha = 0.85;
-    ctx.fillStyle = "#e4b04a";
+    ctx.fillStyle = COLORS.accent;
     ctx.beginPath();
     ctx.arc(W - 48, H - 56, 10, 0, Math.PI * 2);
     ctx.fill();
