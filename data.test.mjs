@@ -176,4 +176,55 @@ assert.ok(!sanitizeCustomQuestion('<img src=x onerror=alert(1)>hi').includes('<'
   }
 }
 
+// ---- reachable-but-malformed content must fall back, not brick the boot ----
+{
+  const vkBad = {config: {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }}};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  // topics.json is served but garbage; fighters get one invalid entry (bad
+  // aggression curve) alongside the real ones; everything else is real.
+  const badFighters = readJson('data/fighters.json');
+  badFighters.fighters = [
+    ...badFighters.fighters,
+    {...badFighters.fighters[0], id: 'broken',
+      cpu: {...badFighters.fighters[0].cpu,
+        aggressionCurve: [{untilTick: 100, aggression: 0.5}, {untilTick: 50, aggression: 2}]}},
+  ];
+  const mixedFetch = (url) => Promise.resolve({ok: true, json: () => Promise.resolve(
+    url === 'data/topics.json' ? {categories: [{id: 'no_vocab'}]} :
+    url === 'data/fighters.json' ? badFighters : readJson(url))});
+  const warn = console.warn;
+  console.warn = () => {};
+  new Function('window', 'fetch', src)({VK: vkBad}, mixedFetch);
+  const mixed = await vkBad.content.load();
+  console.warn = warn;
+  assert.ok(mixed.topics.length >= 1, 'malformed topics.json degrades to fallback');
+  assert.equal(mixed.topics[0].id, 'food', 'fallback topics served');
+  assert.equal(mixed.fighters.length, 4, 'invalid fighter entry dropped, valid ones kept');
+  assert.ok(!mixed.fighters.some((f) => f.id === 'broken'));
+}
+
+// ---- bank fighter field never overrides the bank key ----
+{
+  const vkBank = {config: {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }}};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const lyingBank = {...readJson('data/lines/logician.json'), fighter: 'impostor'};
+  const bankFetch = (url) => Promise.resolve({ok: true, json: () => Promise.resolve(
+    url === 'data/lines/logician.json' ? lyingBank : readJson(url))});
+  const warn = console.warn;
+  console.warn = () => {};
+  new Function('window', 'fetch', src)({VK: vkBank}, bankFetch);
+  const loaded = await vkBank.content.load();
+  console.warn = warn;
+  assert.equal(loaded.lines.logician.fighter, 'logician',
+    'bank key is authoritative over a mismatched fighter field');
+}
+
 console.log('Data tests passed.');

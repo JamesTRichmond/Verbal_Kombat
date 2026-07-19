@@ -183,9 +183,9 @@
   function load() {
     var urls = VK.config.content;
     return Promise.all([
-      fetchJson(urls.topicsUrl, FALLBACK.topics).then(normalizeTopics),
-      fetchJson(urls.fightersUrl, FALLBACK.fighters).then(normalizeFighters),
-      fetchJson(urls.locationsUrl, FALLBACK.locations).then(normalizeLocations),
+      loadPart(urls.topicsUrl, FALLBACK.topics, normalizeTopics),
+      loadPart(urls.fightersUrl, FALLBACK.fighters, normalizeFighters),
+      loadPart(urls.locationsUrl, FALLBACK.locations, normalizeLocations),
     ]).then(function (parts) {
       var fighters = parts[1];
       return loadLineBanks(urls, fighters).then(function (lines) {
@@ -206,12 +206,13 @@
     }
     return Promise.all(
       keys.map(function (key) {
-        return fetchJson(
+        return loadPart(
           urls.linesUrlPrefix + key + ".json",
-          FALLBACK.lines[key] || minimalBank(key, "...")
-        ).then(function (json) {
-          return normalizeBank(json, key);
-        });
+          FALLBACK.lines[key] || minimalBank(key, "..."),
+          function (json) {
+            return normalizeBank(json, key);
+          }
+        );
       })
     ).then(function (banks) {
       var byKey = {};
@@ -220,12 +221,19 @@
     });
   }
 
-  function fetchJson(url, fallback) {
+  // Fetch + validate, falling back on ANY failure — network, parse, or
+  // schema. Validation must sit inside the caught chain (same as
+  // dataLoader.js): a reachable-but-malformed file should degrade to the
+  // built-in set, not brick the boot. If the fallback itself fails
+  // validation, the throw propagates — that's a bug in this file, not in
+  // deployed content.
+  function loadPart(url, fallback, normalize) {
     return fetch(url)
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.json();
       })
+      .then(normalize)
       .catch(function (err) {
         console.warn(
           "[VK] Could not load " +
@@ -234,7 +242,7 @@
             err.message +
             "). Using built-in fallback. Serve locally (npm start) for full content."
         );
-        return fallback;
+        return normalize(fallback);
       });
   }
 
@@ -248,10 +256,12 @@
         Array.isArray(c.questions) &&
         c.questions.length > 0 &&
         c.questions.every(function (q) {
-          return q && typeof q.id === "string" && typeof q.text === "string";
+          return q && isNonEmptyString(q.id) && isNonEmptyString(q.text);
         }) &&
         c.vocab &&
-        typeof c.vocab === "object"
+        VOCAB_KEYS.every(function (key) {
+          return isNonEmptyString(c.vocab[key]);
+        })
       );
     });
     if (clean.length === 0) throw new Error("No valid topic categories");
@@ -263,22 +273,55 @@
     var clean = list.filter(function (f) {
       return (
         f &&
-        typeof f.id === "string" &&
-        typeof f.name === "string" &&
+        isNonEmptyString(f.id) &&
+        isNonEmptyString(f.name) &&
+        isNonEmptyString(f.tagline) &&
+        f.style &&
+        isNonEmptyString(f.style.argument) &&
+        isNonEmptyString(f.style.combat) &&
         f.stats &&
         isStat(f.stats.power) &&
         isStat(f.stats.speed) &&
         f.special &&
-        typeof f.special.id === "string" &&
-        typeof f.special.name === "string" &&
-        typeof f.lineBank === "string" &&
+        isNonEmptyString(f.special.id) &&
+        isNonEmptyString(f.special.name) &&
+        isNonEmptyString(f.special.description) &&
+        isNonEmptyString(f.lineBank) &&
         f.cpu &&
-        Array.isArray(f.cpu.aggressionCurve) &&
-        f.cpu.aggressionCurve.length > 0
+        isValidCpu(f.cpu)
       );
     });
     if (clean.length === 0) throw new Error("No valid fighters");
     return clean;
+  }
+
+  function isValidCpu(cpu) {
+    if (!Array.isArray(cpu.aggressionCurve) || cpu.aggressionCurve.length === 0) {
+      return false;
+    }
+    var prevTick = 0;
+    for (var i = 0; i < cpu.aggressionCurve.length; i++) {
+      var seg = cpu.aggressionCurve[i];
+      if (
+        !seg ||
+        !Number.isInteger(seg.untilTick) ||
+        seg.untilTick <= prevTick || // ticks must be strictly ascending
+        typeof seg.aggression !== "number" ||
+        seg.aggression < 0 ||
+        seg.aggression > 1
+      ) {
+        return false;
+      }
+      prevTick = seg.untilTick;
+    }
+    return (
+      Number.isInteger(cpu.punishWindowTicks) &&
+      cpu.punishWindowTicks > 0 &&
+      typeof cpu.blockBias === "number" &&
+      cpu.blockBias >= 0 &&
+      cpu.blockBias <= 1 &&
+      ["close", "mid", "far"].indexOf(cpu.preferredRange) !== -1
+    );
   }
 
   function normalizeLocations(json) {
@@ -286,22 +329,58 @@
     var clean = list.filter(function (l) {
       return (
         l &&
-        typeof l.id === "string" &&
-        typeof l.name === "string" &&
+        isNonEmptyString(l.id) &&
+        isNonEmptyString(l.name) &&
+        isNonEmptyString(l.description) &&
         l.palette &&
+        PALETTE_KEYS.every(function (key) {
+          return isNonEmptyString(l.palette[key]);
+        }) &&
+        Array.isArray(l.parallaxLayers) &&
+        l.parallaxLayers.length > 0 &&
+        l.parallaxLayers.every(isNonEmptyString) &&
         l.event &&
+        isNonEmptyString(l.event.id) &&
+        isNonEmptyString(l.event.name) &&
+        isNonEmptyString(l.event.announcement) &&
         l.event.trigger &&
         Number.isInteger(l.event.trigger.atTick) &&
-        l.event.effect &&
-        typeof l.event.effect.type === "string"
+        l.event.trigger.atTick > 0 &&
+        isValidEffect(l.event.effect)
       );
     });
     if (clean.length === 0) throw new Error("No valid locations");
     return clean;
   }
 
+  function isValidEffect(effect) {
+    if (!effect) return false;
+    if (effect.type === "dialogue_weight") {
+      return (
+        isNonEmptyString(effect.target) &&
+        typeof effect.multiplier === "number" &&
+        effect.multiplier > 0
+      );
+    }
+    if (effect.type === "event_weight_bonus") {
+      return (
+        EVENT_TYPES.indexOf(effect.eventType) !== -1 &&
+        typeof effect.bonus === "number" &&
+        Number.isInteger(effect.durationTicks) &&
+        effect.durationTicks > 0
+      );
+    }
+    return false;
+  }
+
   function normalizeBank(json, key) {
     if (!json || !json.events) throw new Error("No line bank for " + key);
+    if (json.fighter && json.fighter !== key) {
+      console.warn(
+        "[VK] Line bank '" + key + "' declares fighter '" + json.fighter +
+          "'; using the bank key."
+      );
+    }
     var events = {};
     for (var i = 0; i < EVENT_TYPES.length; i++) {
       var type = EVENT_TYPES[i];
@@ -316,10 +395,19 @@
       }
     }
     return {
-      fighter: json.fighter || key,
+      // Banks are addressed by lineBank key/filename; a mismatched `fighter`
+      // field is content error, never authority.
+      fighter: key,
       events: events,
       categoryOverrides: json.categoryOverrides || {},
     };
+  }
+
+  var VOCAB_KEYS = ["stanceFor", "stanceAgainst", "evidence", "expert"];
+  var PALETTE_KEYS = ["sky", "backdrop", "floor", "accent"];
+
+  function isNonEmptyString(value) {
+    return typeof value === "string" && value.length > 0;
   }
 
   function isStat(value) {
