@@ -18,8 +18,8 @@
     var app = document.getElementById("app");
     var canvas = document.getElementById("stage");
     var controls = document.getElementById("controls");
-    if (!app || !canvas) {
-      console.error("[VK] #app or #stage not found.");
+    if (!app || !canvas || !controls) {
+      console.error("[VK] #app, #stage, or #controls not found.");
       return;
     }
     var ctx = canvas.getContext("2d");
