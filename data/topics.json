@@ -7,7 +7,7 @@
       "questions": [
         { "id": "pineapple_pizza", "text": "Does pineapple belong on pizza?" },
         { "id": "cereal_soup", "text": "Is cereal a soup?" },
-        { "id": "best_condiment", "text": "Is ketchup the only condiment anyone actually needs?" }
+        { "id": "fusion_recipes", "text": "Should traditional recipes be protected from fusion experimentation?" }
       ],
       "vocab": {
         "stanceFor": "flavor is about contrast, not tradition",
@@ -22,7 +22,7 @@
       "questions": [
         { "id": "tabs_spaces", "text": "Tabs or spaces?" },
         { "id": "phones_dinner", "text": "Should phones be banned at the dinner table?" },
-        { "id": "smart_fridge", "text": "Does anyone actually need a smart fridge?" }
+        { "id": "platform_responsibility", "text": "Should social media platforms be held responsible for user-generated misinformation?" }
       ],
       "vocab": {
         "stanceFor": "tools should adapt to people, not the reverse",
