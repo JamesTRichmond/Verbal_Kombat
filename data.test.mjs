@@ -391,4 +391,47 @@ assert.ok(!sanitizeCustomQuestion('<img src=x onerror=alert(1)>hi').includes('<'
     'non-alphabetic braced tokens invalidate the line; bank falls back');
 }
 
+// ---- round-5 rules: dup question ids, positive bonus, roster completeness ----
+{
+  const config = {content: {
+    topicsUrl: 'data/topics.json', fightersUrl: 'data/fighters.json',
+    locationsUrl: 'data/locations.json', linesUrlPrefix: 'data/lines/',
+    maxCustomQuestionLength: 140,
+  }};
+  const src = readFileSync(join(root, 'src/engine/contentLoader.js'), 'utf8');
+  const loadWith = async (overrideFor) => {
+    const vk = {config};
+    const stub = (url) => {
+      const o = overrideFor(url);
+      if (o === '404') return Promise.resolve({ok: false, status: 404});
+      return Promise.resolve({ok: true, json: () => Promise.resolve(o ?? readJson(url))});
+    };
+    const warn = console.warn;
+    console.warn = () => {};
+    new Function('window', 'fetch', src)({VK: vk}, stub);
+    const loaded = await vk.content.load();
+    console.warn = warn;
+    return loaded;
+  };
+
+  // duplicate question id inside a category invalidates it -> fallback
+  const dupQ = structuredClone(readJson('data/topics.json'));
+  dupQ.categories[0].questions[2].id = dupQ.categories[0].questions[0].id;
+  const r1 = await loadWith((u) => u === 'data/topics.json' ? dupQ : undefined);
+  assert.equal(r1.topics.length, 1, 'duplicate question id degrades topics to fallback');
+
+  // zero/negative event bonus invalidates the arena -> fallback
+  const noopBonus = structuredClone(readJson('data/locations.json'));
+  noopBonus.locations[1].event.effect.bonus = 0;
+  const r2 = await loadWith((u) => u === 'data/locations.json' ? noopBonus : undefined);
+  assert.equal(r2.locations.length, 1, 'non-positive bonus degrades locations to fallback');
+
+  // a required fighter's bank 404s -> roster would be 3 -> fallback roster
+  const r3 = await loadWith((u) => u === 'data/lines/trickster.json' ? '404' : undefined);
+  assert.equal(r3.fighters.length, 2, 'short roster swaps to the fallback roster');
+  assert.ok(r3.fighters.every((f) => r3.lines[f.lineBank]),
+    'every fallback-roster fighter has a bank');
+  assert.ok(!r3.fighters.some((f) => f.id === 'trickster'));
+}
+
 console.log('Data tests passed.');

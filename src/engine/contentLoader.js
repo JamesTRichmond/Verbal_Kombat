@@ -211,6 +211,19 @@
           }
           return true;
         });
+        // Dropping fighters happens after the served-content count check, so
+        // it can leave the roster below the R1 requirement (a required bank
+        // 404'd). An incomplete roster is worse than a degraded one: swap in
+        // the built-in fallback roster + banks wholesale.
+        if (rostered.length < fighters.length && rostered.length < REQUIRED_COUNTS.fighters) {
+          console.warn(
+            "[VK] Roster incomplete after dropping fighters with unloadable " +
+              "banks; using the built-in fallback roster."
+          );
+          var fb = fallbackRoster();
+          rostered = fb.fighters;
+          lines = fb.lines;
+        }
         if (rostered.length === 0) throw new Error("No fighter has a line bank");
         return {
           topics: parts[0],
@@ -220,6 +233,18 @@
         };
       });
     });
+  }
+
+  // The known-good roster of last resort: fallback fighters with their
+  // built-in banks, normalized through the same code path as served content.
+  function fallbackRoster() {
+    var fighters = normalizeFighters(FALLBACK.fighters);
+    var lines = {};
+    for (var i = 0; i < fighters.length; i++) {
+      var key = fighters[i].lineBank;
+      lines[key] = normalizeBank(FALLBACK.lines[key], key);
+    }
+    return { fighters: fighters, lines: lines };
   }
 
   function loadLineBanks(urls, fighters) {
@@ -292,6 +317,13 @@
         c.questions.every(function (q) {
           return q && isNonEmptyString(q.id) && isNonEmptyString(q.text);
         }) &&
+        // question ids are stable keys for selection state and the ledger —
+        // a repeat inside a category makes the pick ambiguous
+        new Set(
+          c.questions.map(function (q) {
+            return q.id;
+          })
+        ).size === c.questions.length &&
         c.vocab &&
         VOCAB_KEYS.every(function (key) {
           return isNonEmptyString(c.vocab[key]);
@@ -416,6 +448,7 @@
       return (
         EVENT_TYPES.indexOf(effect.eventType) !== -1 &&
         typeof effect.bonus === "number" &&
+        effect.bonus > 0 && // a bonus of 0 (no-op) or negative (penalty) is a content typo
         Number.isInteger(effect.durationTicks) &&
         effect.durationTicks > 0
       );
