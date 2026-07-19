@@ -10,17 +10,15 @@
   <div id="app">
     <header id="hud">
       <h1 class="title">VERBAL&nbsp;<span class="accent">KOMBAT</span></h1>
-      <p class="tagline">Win the argument. Draw blood.</p>
+      <p class="tagline">Win the argument through the way you fight.</p>
     </header>
 
-    <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena">Verbal Kombat arena</canvas>
+    <main id="screens" aria-live="polite"></main>
+
+    <canvas id="stage" width="960" height="540" role="img" aria-label="Verbal Kombat arena" hidden>Verbal Kombat arena</canvas>
 
     <footer id="controls">
-      <p class="hint">
-        Throw an argument:
-        <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
-        &nbsp;·&nbsp; <kbd>Space</kbd> to start / reset
-      </p>
+      <p class="hint"><kbd>Tab</kbd> to move · <kbd>Enter</kbd> to choose · <kbd>Esc</kbd> to go back</p>
       <p class="hint"><a href="text-version.html">Classic mode</a> — the original typed-argument game (uses ES modules, so it needs a local server: <code>npm start</code>, not <code>file://</code>)</p>
     </footer>
   </div>
@@ -37,8 +35,10 @@
   <script src="src/engine/combat.js"></script>
   <script src="src/engine/state.js"></script>
   <script src="src/engine/input.js"></script>
+  <script src="src/engine/screenFlow.js"></script>
   <script src="src/render/renderer.js"></script>
   <script src="src/engine/gameLoop.js"></script>
+  <script src="src/ui/screens.js"></script>
   <script src="src/main.js"></script>
 </body>
 </html>

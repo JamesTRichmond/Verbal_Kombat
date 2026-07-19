@@ -73,3 +73,157 @@ kbd {
   font-family: inherit;
   font-size: 0.85em;
 }
+
+/* ---- screen flow ---- */
+
+/* Keyboard-first is a Release 1 must-have: every control gets a loud,
+   unmistakable focus ring. */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.screen { text-align: center; }
+
+.screen-title {
+  margin: 8px 0 2px;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+}
+.screen-title:focus { outline: none; }
+
+.screen-subtitle {
+  margin: 2px 0 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.screen button {
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid #2a2536;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.screen button:hover { border-color: var(--accent); }
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.chip[aria-pressed="true"],
+.roster-card[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: #241d2e;
+  box-shadow: 0 0 12px rgba(228, 176, 74, 0.35);
+}
+
+.question-list {
+  display: grid;
+  gap: 8px;
+  max-width: 620px;
+  margin: 0 auto 14px;
+}
+
+.custom-question label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.custom-question input {
+  display: block;
+  width: min(480px, 90%);
+  margin: 6px auto;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid #2a2536;
+  border-radius: 8px;
+}
+
+.select-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+  text-align: left;
+  margin-bottom: 14px;
+}
+@media (max-width: 700px) { .select-layout { grid-template-columns: 1fr; } }
+
+.roster-grid { display: grid; gap: 8px; align-content: start; }
+
+.identity-panel {
+  background: var(--panel);
+  border: 1px solid #2a2536;
+  border-radius: 10px;
+  padding: 14px 16px;
+  min-height: 220px;
+}
+.panel-name { margin: 0 0 2px; }
+.panel-tagline { color: var(--accent); font-style: italic; margin: 0 0 10px; }
+.panel-stats { color: var(--muted); }
+.panel-special { font-size: 0.92rem; }
+.panel-opponent { color: var(--muted); font-size: 0.9rem; }
+.panel-hint { color: var(--muted); }
+
+.arena-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+@media (max-width: 700px) { .arena-row { grid-template-columns: 1fr; } }
+
+.arena-card {
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 14px;
+  text-align: left;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.arena-name { font-size: 1.2rem; font-weight: bold; letter-spacing: 0.05em; }
+.arena-desc { font-size: 0.88rem; }
+
+.matchup { color: var(--accent); margin: 0 0 10px; }
+
+.fight-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.confirm {
+  border-color: var(--accent);
+  font-weight: bold;
+}
+
+.back-button { color: var(--muted); }
+
+.verdict-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  max-width: 560px;
+  margin: 0 auto 16px;
+  text-align: left;
+  background: var(--panel);
+  border: 1px solid #2a2536;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+.verdict-card dt { color: var(--muted); }
+.verdict-card dd { margin: 0; }
