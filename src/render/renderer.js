@@ -19,6 +19,7 @@
     composure: "#e4b04a",
     track: "#2a2536",
     warn: "#e4b04a",
+    accent: "#e4b04a",
     good: "#5ac86b",
   };
 
@@ -142,9 +143,15 @@
     ctx.font = "14px Trebuchet MS, sans-serif";
     page.forEach(function (m, i) {
       var y = topY + i * rowH;
-      ctx.fillStyle = COLORS.panel;
+      var active = m.id === state.lastMoveId; // last argument the player threw
+      ctx.fillStyle = active ? "rgba(228,176,74,0.22)" : COLORS.panel;
       ctx.fillRect(x, y - 14, 360, 20);
-      ctx.fillStyle = COLORS.ink;
+      if (active) {
+        // Accent bar on the left edge to mark the last-pressed move.
+        ctx.fillStyle = COLORS.accent;
+        ctx.fillRect(x, y - 14, 3, 20);
+      }
+      ctx.fillStyle = active ? COLORS.accent : COLORS.ink;
       ctx.fillText(
         "[" + (i + 1) + "] " + m.name + "  ·  dmg " + m.damage + " / risk " + m.risk,
         x + 8,

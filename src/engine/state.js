@@ -37,6 +37,7 @@
       riposte: null,                // pending enemy attack the player can rebut
       aiTimer: nextAiDelay(),
       movePage: 0,                  // which page of the roster the keys map to
+      lastMoveId: null,             // id of the argument the player last threw
       log: [],                      // recent combat events (most recent last)
     };
   }
@@ -83,6 +84,7 @@
     if (slot < 0 || slot >= VK.config.moves.pageSize) return; // not a live slot
     var move = state.moves[state.movePage * VK.config.moves.pageSize + slot];
     if (!move) return; // empty slot on the last page
+    state.lastMoveId = move.id;
     var event = VK.combat.resolveMove(state.fighters.player, state.fighters.enemy, move);
     pushLog(state, event);
     checkKO(state);
