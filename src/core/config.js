@@ -43,7 +43,12 @@
     // however many number keys you want live at once (max 9).
     moves: {
       pageSize: 5,
-      highlightFade: 0.9, // seconds for the last-pressed-move glow to fade out
+      // Last-pressed-move highlight. On press the glow spikes to highlightPeak
+      // (a bright flash > full), snaps back down to 1 over flashFade seconds,
+      // then eases from 1 to 0 over highlightFade seconds.
+      highlightPeak: 1.7,
+      flashFade: 0.18,
+      highlightFade: 0.9,
     },
 
     ai: {

@@ -143,15 +143,16 @@
     ctx.font = "14px Trebuchet MS, sans-serif";
     page.forEach(function (m, i) {
       var y = topY + i * rowH;
-      // Glow fades from 1 to 0 after the move is thrown (0 = no highlight).
+      // Glow spikes above 1 on press (overshoot flash), then fades to 0.
       var glow = m.id === state.lastMoveId ? state.lastMoveGlow : 0;
+      var lit = Math.min(1, glow); // the settled highlight portion
 
       ctx.fillStyle = COLORS.panel;
       ctx.fillRect(x, y - 14, 360, 20);
 
-      if (glow > 0) {
+      if (lit > 0) {
         ctx.save();
-        ctx.globalAlpha = glow;
+        ctx.globalAlpha = lit;
         // Accent tint over the row + a bar on the left edge.
         ctx.fillStyle = "rgba(228,176,74,0.28)";
         ctx.fillRect(x, y - 14, 360, 20);
@@ -160,8 +161,21 @@
         ctx.restore();
       }
 
+      // Overshoot flash: a bright pop over the row for the glow above full.
+      if (glow > 1) {
+        var peak = VK.config.moves.highlightPeak;
+        var flashT = peak > 1 ? (glow - 1) / (peak - 1) : 0; // 1 at peak -> 0 at full
+        ctx.save();
+        ctx.globalAlpha = Math.min(1, flashT);
+        ctx.fillStyle = "rgba(255,246,222,0.55)";
+        ctx.fillRect(x, y - 14, 360, 20);
+        ctx.fillStyle = "#fff8e6";
+        ctx.fillRect(x, y - 14, 4, 20); // brighter, slightly wider bar
+        ctx.restore();
+      }
+
       // Text eases from the accent color back to normal ink as the glow fades.
-      ctx.fillStyle = mix(COLORS.ink, COLORS.accent, glow);
+      ctx.fillStyle = mix(COLORS.ink, COLORS.accent, lit);
       ctx.fillText(
         "[" + (i + 1) + "] " + m.name + "  ·  dmg " + m.damage + " / risk " + m.risk,
         x + 8,

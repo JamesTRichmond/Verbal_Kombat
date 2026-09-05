@@ -38,7 +38,7 @@
       aiTimer: nextAiDelay(),
       movePage: 0,                  // which page of the roster the keys map to
       lastMoveId: null,             // id of the argument the player last threw
-      lastMoveGlow: 0,              // 1 on press, fades to 0 (menu highlight)
+      lastMoveGlow: 0,              // spikes to highlightPeak on press, fades to 0
       log: [],                      // recent combat events (most recent last)
     };
   }
@@ -87,7 +87,7 @@
     var move = state.moves[state.movePage * VK.config.moves.pageSize + slot];
     if (!move) return; // empty slot on the last page
     state.lastMoveId = move.id;
-    state.lastMoveGlow = 1; // full highlight; fades over time in update()
+    state.lastMoveGlow = VK.config.moves.highlightPeak; // overshoot flash; fades in update()
     var event = VK.combat.resolveMove(state.fighters.player, state.fighters.enemy, move);
     pushLog(state, event);
     checkKO(state);
@@ -173,12 +173,21 @@
     state.phase = "fighting";
   }
 
-  // Fade the last-pressed-move highlight toward 0 over highlightFade seconds.
+  // Fade the last-pressed-move highlight. Above full (the overshoot flash) it
+  // snaps back to 1 quickly; below full it eases out to 0.
   function decayHighlight(state, dt) {
-    if (state.lastMoveGlow <= 0) return;
-    var fade = VK.config.moves.highlightFade;
-    var step = fade > 0 ? dt / fade : 1;
-    state.lastMoveGlow = Math.max(0, state.lastMoveGlow - step);
+    var g = state.lastMoveGlow;
+    if (g <= 0) return;
+    var m = VK.config.moves;
+    if (g > 1) {
+      // Traverse the flash region (peak -> 1) over flashFade seconds.
+      var span = m.highlightPeak - 1;
+      var fStep = m.flashFade > 0 ? (span * dt) / m.flashFade : span;
+      state.lastMoveGlow = Math.max(1, g - fStep);
+    } else {
+      var step = m.highlightFade > 0 ? dt / m.highlightFade : 1;
+      state.lastMoveGlow = Math.max(0, g - step);
+    }
   }
 
   function regenComposure(state, dt) {
