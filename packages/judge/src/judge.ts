@@ -35,6 +35,9 @@ const FALLACY_MARKERS: Partial<Record<FallacyId, RegExp[]>> = {
   appeal_to_emotion: [/\bimagine the (horror|suffering|tears)\b/i, /\bhow would you feel\b/i],
   slippery_slope: [/\bnext thing you know\b/i, /\binevitably lead to\b/i],
   false_dilemma: [/\beither .* or .*, there is no\b/i, /\bthe only two (options|choices)\b/i],
+  no_true_scotsman: [/\bno true \w+ would\b/i, /\bany real \w+ would (never|not)\b/i],
+  appeal_to_ignorance: [/\bno one has (ever )?(proven|disproved|disproven|shown)\b/i, /\b(can'?t|cannot) be disproven\b/i],
+  false_cause: [/\b(ever since|after) .*,? (so|therefore|that'?s why)\b/i, /\bmust have caused\b/i],
 };
 
 const EVIDENCE_MARKERS = [
