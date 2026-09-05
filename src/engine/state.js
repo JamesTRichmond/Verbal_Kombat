@@ -38,6 +38,7 @@
       aiTimer: nextAiDelay(),
       movePage: 0,                  // which page of the roster the keys map to
       lastMoveId: null,             // id of the argument the player last threw
+      lastMoveGlow: 0,              // 1 on press, fades to 0 (menu highlight)
       log: [],                      // recent combat events (most recent last)
     };
   }
@@ -59,6 +60,7 @@
     if (state.phase !== "fighting") return;
 
     regenComposure(state, dt);
+    decayHighlight(state, dt);
 
     // A telegraphed enemy attack is on the clock — nothing else starts until
     // it resolves (player rebuts it, or the window lapses and it lands).
@@ -85,6 +87,7 @@
     var move = state.moves[state.movePage * VK.config.moves.pageSize + slot];
     if (!move) return; // empty slot on the last page
     state.lastMoveId = move.id;
+    state.lastMoveGlow = 1; // full highlight; fades over time in update()
     var event = VK.combat.resolveMove(state.fighters.player, state.fighters.enemy, move);
     pushLog(state, event);
     checkKO(state);
@@ -168,6 +171,14 @@
     state.riposte = null;
     state.aiTimer = nextAiDelay();
     state.phase = "fighting";
+  }
+
+  // Fade the last-pressed-move highlight toward 0 over highlightFade seconds.
+  function decayHighlight(state, dt) {
+    if (state.lastMoveGlow <= 0) return;
+    var fade = VK.config.moves.highlightFade;
+    var step = fade > 0 ? dt / fade : 1;
+    state.lastMoveGlow = Math.max(0, state.lastMoveGlow - step);
   }
 
   function regenComposure(state, dt) {

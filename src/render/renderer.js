@@ -143,21 +143,51 @@
     ctx.font = "14px Trebuchet MS, sans-serif";
     page.forEach(function (m, i) {
       var y = topY + i * rowH;
-      var active = m.id === state.lastMoveId; // last argument the player threw
-      ctx.fillStyle = active ? "rgba(228,176,74,0.22)" : COLORS.panel;
+      // Glow fades from 1 to 0 after the move is thrown (0 = no highlight).
+      var glow = m.id === state.lastMoveId ? state.lastMoveGlow : 0;
+
+      ctx.fillStyle = COLORS.panel;
       ctx.fillRect(x, y - 14, 360, 20);
-      if (active) {
-        // Accent bar on the left edge to mark the last-pressed move.
+
+      if (glow > 0) {
+        ctx.save();
+        ctx.globalAlpha = glow;
+        // Accent tint over the row + a bar on the left edge.
+        ctx.fillStyle = "rgba(228,176,74,0.28)";
+        ctx.fillRect(x, y - 14, 360, 20);
         ctx.fillStyle = COLORS.accent;
         ctx.fillRect(x, y - 14, 3, 20);
+        ctx.restore();
       }
-      ctx.fillStyle = active ? COLORS.accent : COLORS.ink;
+
+      // Text eases from the accent color back to normal ink as the glow fades.
+      ctx.fillStyle = mix(COLORS.ink, COLORS.accent, glow);
       ctx.fillText(
         "[" + (i + 1) + "] " + m.name + "  ·  dmg " + m.damage + " / risk " + m.risk,
         x + 8,
         y
       );
     });
+  }
+
+  // Linear blend between two hex colors; t=0 -> a, t=1 -> b.
+  function mix(a, b, t) {
+    t = Math.max(0, Math.min(1, t));
+    var ca = hexToRgb(a);
+    var cb = hexToRgb(b);
+    var r = Math.round(ca[0] + (cb[0] - ca[0]) * t);
+    var g = Math.round(ca[1] + (cb[1] - ca[1]) * t);
+    var bl = Math.round(ca[2] + (cb[2] - ca[2]) * t);
+    return "rgb(" + r + "," + g + "," + bl + ")";
+  }
+
+  function hexToRgb(hex) {
+    var h = hex.replace("#", "");
+    return [
+      parseInt(h.substring(0, 2), 16),
+      parseInt(h.substring(2, 4), 16),
+      parseInt(h.substring(4, 6), 16),
+    ];
   }
 
   // The enemy's incoming argument + a shrinking window to press F.

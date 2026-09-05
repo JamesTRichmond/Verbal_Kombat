@@ -43,6 +43,7 @@
     // however many number keys you want live at once (max 9).
     moves: {
       pageSize: 5,
+      highlightFade: 0.9, // seconds for the last-pressed-move glow to fade out
     },
 
     ai: {
