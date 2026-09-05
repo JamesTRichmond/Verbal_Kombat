@@ -30,6 +30,9 @@ const FALLACY_IDS: FallacyId[] = [
   'appeal_to_popularity',
   'moving_goalposts',
   'begging_the_question',
+  'no_true_scotsman',
+  'appeal_to_ignorance',
+  'false_cause',
 ];
 
 const SYSTEM_PROMPT = [
