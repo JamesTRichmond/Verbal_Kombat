@@ -33,8 +33,9 @@
     var p = state.fighters.player;
     var e = state.fighters.enemy;
 
-    drawFighter(ctx, p, W * 0.28, H * 0.62, COLORS.p1, state, "player");
-    drawFighter(ctx, e, W * 0.72, H * 0.62, COLORS.p2, state, "enemy");
+    // Fighters sit in the arena band, clear of the bottom menu band.
+    drawFighter(ctx, p, W * 0.28, H * 0.50, COLORS.p1, state, "player");
+    drawFighter(ctx, e, W * 0.72, H * 0.50, COLORS.p2, state, "enemy");
 
     drawBars(ctx, p, 24, 24, +1);
     drawBars(ctx, e, W - 24, 24, -1);
@@ -42,7 +43,7 @@
 
     if (state.phase === "ready") {
       banner(ctx, W, H, "PRESS SPACE TO FIGHT", COLORS.ink);
-      subBanner(ctx, W, H, "1–4 argue · F rebuts the incoming attack · best of 3");
+      subBanner(ctx, W, H, "1–5 argue · Q/E page · F rebuts the incoming attack · best of 3");
     } else if (state.phase === "matchover") {
       banner(ctx, W, H, (state.winner ? state.winner.name.toUpperCase() : "") + " WINS", COLORS.p2);
       subBanner(ctx, W, H, "Space to rematch");
@@ -59,7 +60,7 @@
 
   function drawFloor(ctx, W, H) {
     ctx.fillStyle = "rgba(0,0,0,0.35)";
-    ctx.fillRect(0, H * 0.7, W, H * 0.3);
+    ctx.fillRect(0, H * 0.60, W, H * 0.40);
   }
 
   // A fighter is a simple stylized figure for now — a stand-in for real art.
@@ -137,7 +138,7 @@
     ctx.fillText(
       "ARGUMENTS  ·  page " + (state.movePage + 1) + "/" + pages + "  ·  [Q]/[E] switch",
       x,
-      topY - 8
+      topY - 20
     );
 
     ctx.font = "14px Trebuchet MS, sans-serif";
@@ -208,7 +209,8 @@
   function drawTelegraph(ctx, riposte, W, H) {
     var pct = Math.max(0, riposte.timeLeft / riposte.windowSeconds);
     var pw = 420, ph = 74;
-    var x = (W - pw) / 2, y = H * 0.30;
+    // Sits in the gap between the top bars and the fighters' heads.
+    var x = (W - pw) / 2, y = H * 0.15;
 
     ctx.fillStyle = COLORS.panel;
     ctx.fillRect(x, y, pw, ph);
@@ -242,18 +244,20 @@
     }
   }
 
+  // Banners live in the lower band (empty when the menu is hidden) so they
+  // never sit on top of the fighters.
   function banner(ctx, W, H, text, color) {
     ctx.fillStyle = color;
     ctx.font = "bold 40px Trebuchet MS, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText(text, W / 2, H / 2);
+    ctx.fillText(text, W / 2, H * 0.80);
   }
 
   function subBanner(ctx, W, H, text) {
     ctx.fillStyle = COLORS.muted;
     ctx.font = "18px Trebuchet MS, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText(text, W / 2, H / 2 + 34);
+    ctx.fillText(text, W / 2, H * 0.80 + 30);
   }
 
   VK.renderer = { draw: draw };
