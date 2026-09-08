@@ -59,8 +59,10 @@ const scrub = $('#scrub') as unknown as HTMLInputElement;
 const scrubLabel = $('#scrub-label');
 const overlay = $('#overlay');
 const comboEls: Record<Side, HTMLElement> = { A: $('#combo-a'), B: $('#combo-b') };
+const clockEl = $('#round-clock');
 
 $('#topic').textContent = `“${FREE_WILL.topic}”`;
+clockEl.setAttribute('aria-label', 'Debate clock');
 
 /* ------------------------------------------------------------------ */
 /* Selection state                                                     */
@@ -536,7 +538,10 @@ async function playFight(): Promise<void> {
   banner = { text: 'ROUND 1', sub: 'ARGUE!', t: 1600, big: true, color: '#c9a227' };
   await sleep(1700);
 
-  for (const entry of replay.entries) {
+  const total = replay.entries.length;
+  for (let i = 0; i < total; i++) {
+    const entry = replay.entries[i]!;
+    clockEl.textContent = String(i + 1);
     appendLine(entry);
     verdictEl.textContent = entry.verdict.rationale;
     enactCombat(entry);
@@ -544,6 +549,7 @@ async function playFight(): Promise<void> {
     applyEntryDamage(entry);
     await sleep(EXCHANGE_MS - 300);
   }
+  clockEl.textContent = '⚔';
 
   await sleep(1200);
   if (replay.winner) {
@@ -591,9 +597,9 @@ function screenReport(): void {
           ${row('Damage dealt', replay.stats.A.totalDamageDealt, replay.stats.B.totalDamageDealt)}
           ${row('Position integrity left', replay.finalIntegrity.A, replay.finalIntegrity.B)}
           ${row('Fallacies committed', replay.stats.A.fallacies, replay.stats.B.fallacies)}
+          ${row('Fallacies', fallacyNames('A'), fallacyNames('B'))}
         </table>
-        <div class="fallacy-list"><span class="col-a">${chosen.A.name}:</span> ${fallacyNames('A')} &nbsp;&nbsp; <span class="col-b">${chosen.B.name}:</span> ${fallacyNames('B')}</div>
-        <div class="xp-line" style="margin-top:10px">XP — ${chosen.A.name}: +${xpA.total} &nbsp;&nbsp; ${chosen.B.name}: +${xpB.total}</div>
+        <div class="xp-line">XP — ${chosen.A.name}: +${xpA.total} &nbsp;&nbsp; ${chosen.B.name}: +${xpB.total}</div>
         <div class="btn-row">
           <button class="vk gold" id="btn-study">STUDY THE TRANSCRIPT</button>
           <button class="vk" id="btn-refight">NEW MATCH</button>
