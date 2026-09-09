@@ -1,0 +1,97 @@
+/* Steel-pit skin. Does not replace the blood/gold tokens — it plates them. */
+
+body {
+  background:
+    radial-gradient(1200px 500px at 50% -10%, rgba(140, 30, 30, 0.18), transparent 55%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0 1px, transparent 1px 3px),
+    #090706;
+}
+
+#topbar {
+  background: linear-gradient(#2a2220, #100c0c);
+  border-bottom: 3px solid #4a4038;
+  box-shadow: inset 0 -1px 0 #8a7a6a, 0 4px 18px #000;
+}
+
+#topbar h1 {
+  color: #e8dcc8;
+  text-shadow:
+    0 1px 0 #000,
+    0 0 18px rgba(180, 40, 40, 0.55);
+  letter-spacing: 8px;
+}
+
+.hp-bar {
+  height: 16px;
+  background: linear-gradient(#1a1414, #0a0707);
+  border: 2px solid #5c534a;
+  box-shadow:
+    inset 0 0 8px #000,
+    0 0 0 1px #1a1614;
+}
+
+.hp-fill {
+  background: linear-gradient(#f0d36a, #b8860b 55%, #6a4e0a);
+}
+#hp-b .hp-fill {
+  background: linear-gradient(#e25a6a, #8e1a1a 55%, #4a0c12);
+}
+
+#round-clock {
+  min-width: 64px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#1c1816, #0a0808);
+  border: 2px solid #6a6056;
+  box-shadow: inset 0 0 10px #000, 0 0 0 1px #2a2420;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #f3e6c8;
+  text-shadow: 0 0 10px rgba(200, 40, 40, 0.65);
+}
+#clock-num { font-variant-numeric: tabular-nums; }
+
+#arena-frame {
+  border: 3px solid #6a6058;
+  box-shadow:
+    inset 0 0 0 2px #1a1614,
+    0 0 0 1px #9a8e80,
+    0 12px 40px #000;
+  background: #000;
+}
+#arena { border: 0; }
+
+#transcript-panel {
+  background: linear-gradient(#161210, #0c0a09);
+  border-left: 3px solid #5a5048;
+}
+.panel-title {
+  color: #d8c48a;
+  letter-spacing: 5px;
+}
+
+button.vk, #btn-fight {
+  background: linear-gradient(#6a1818, #3a0c0c);
+  border: 1px solid #8a6a4a;
+  box-shadow: inset 0 1px 0 rgba(255,220,180,0.25), 0 2px 0 #1a0a0a;
+  letter-spacing: 4px;
+}
+button.vk:hover, #btn-fight:hover {
+  background: linear-gradient(#8a2020, #4a1010);
+}
+button.vk.gold {
+  background: linear-gradient(#8a6e18, #4a3a0c);
+  border-color: #c9a227;
+}
+
+.fighter-card {
+  background: linear-gradient(#1a1412, #0e0b0a);
+  border-color: #4a4038;
+}
+.vs-mark {
+  color: #e8dcc8;
+  text-shadow: 0 0 22px rgba(180, 30, 30, 0.85), 2px 2px 0 #000;
+}
