@@ -21,7 +21,10 @@ export type FallacyId =
   | 'equivocation'
   | 'appeal_to_popularity'
   | 'moving_goalposts'
-  | 'begging_the_question';
+  | 'begging_the_question'
+  | 'no_true_scotsman'
+  | 'appeal_to_ignorance'
+  | 'false_cause';
 
 /** How a fallacy renders in combat when the judge catches it. */
 export type FallacyFailureMode =
@@ -143,6 +146,27 @@ export const FALLACIES: Record<FallacyId, FallacyDef> = {
     label: 'BEGGING THE QUESTION',
     description: 'Assuming the very point under dispute.',
     failureMode: 'labeled_block',
+    backfireDamage: 0,
+  },
+  no_true_scotsman: {
+    id: 'no_true_scotsman',
+    label: 'NO TRUE SCOTSMAN',
+    description: 'Redefining a category on the fly to exclude a damaging counterexample.',
+    failureMode: 'labeled_block',
+    backfireDamage: 0,
+  },
+  appeal_to_ignorance: {
+    id: 'appeal_to_ignorance',
+    label: 'APPEAL TO IGNORANCE',
+    description: 'Treating the absence of disproof as proof (or the reverse).',
+    failureMode: 'whiff',
+    backfireDamage: 0,
+  },
+  false_cause: {
+    id: 'false_cause',
+    label: 'FALSE CAUSE',
+    description: 'Assuming that because one event followed another, the first caused the second (post hoc).',
+    failureMode: 'whiff',
     backfireDamage: 0,
   },
 };

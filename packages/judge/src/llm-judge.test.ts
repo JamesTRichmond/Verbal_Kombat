@@ -37,7 +37,8 @@ describe('LlmJudge', () => {
     );
     const judge = new LlmJudge(client);
     const v = await judge.evaluate(arg(), []);
-    expect(v.kind).toBeUndefined();
+    // A verdict carries no `kind` — that belongs to the Judge, not its output.
+    expect((v as { kind?: unknown }).kind).toBeUndefined();
     expect(v.argumentId).toBe('a1');
     expect(v.side).toBe('A');
     expect(v.soundness).toBe(0.15);
