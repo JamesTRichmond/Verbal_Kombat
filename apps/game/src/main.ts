@@ -59,8 +59,20 @@ const scrub = $('#scrub') as unknown as HTMLInputElement;
 const scrubLabel = $('#scrub-label');
 const overlay = $('#overlay');
 const comboEls: Record<Side, HTMLElement> = { A: $('#combo-a'), B: $('#combo-b') };
+const clockNum = $('#clock-num');
+const roundClock = $('#round-clock');
 
 $('#topic').textContent = `“${FREE_WILL.topic}”`;
+
+function setDebateClock(exchange: number | null): void {
+  if (exchange === null) {
+    clockNum.textContent = '⚔';
+    roundClock.setAttribute('aria-label', 'Debate clock');
+  } else {
+    clockNum.textContent = String(exchange);
+    roundClock.setAttribute('aria-label', `Exchange ${exchange}`);
+  }
+}
 
 /* ------------------------------------------------------------------ */
 /* Selection state                                                     */
@@ -533,10 +545,12 @@ async function playFight(): Promise<void> {
 
   replay = await computeMatch({ A: chosen.A.id, B: chosen.B.id });
 
+  setDebateClock(null);
   banner = { text: 'ROUND 1', sub: 'ARGUE!', t: 1600, big: true, color: '#c9a227' };
   await sleep(1700);
 
   for (const entry of replay.entries) {
+    setDebateClock(entry.argument.seq);
     appendLine(entry);
     verdictEl.textContent = entry.verdict.rationale;
     enactCombat(entry);
@@ -550,6 +564,7 @@ async function playFight(): Promise<void> {
     const pip = document.querySelector(`#hp-${replay.winner.toLowerCase()} .pips i`);
     pip?.classList.add('won');
   }
+  setDebateClock(null);
   screenReport();
   playing = false;
 }
@@ -587,8 +602,8 @@ function screenReport(): void {
           <tr><th></th><th class="col-a">${chosen.A.name.toUpperCase()}</th><th class="col-b">${chosen.B.name.toUpperCase()}</th></tr>
           ${row('Arguments made', replay.stats.A.arguments, replay.stats.B.arguments)}
           ${row('Clean hits', replay.stats.A.cleanHits, replay.stats.B.cleanHits)}
-          ${row('Avg soundness', `${Math.round(replay.stats.A.avgSoundness * 100)}%`, `${Math.round(replay.stats.B.avgSoundness * 100)}%`)}
           ${row('Damage dealt', replay.stats.A.totalDamageDealt, replay.stats.B.totalDamageDealt)}
+          ${row('Avg soundness', (replay.stats.A.avgSoundness * 100).toFixed(0) + '%', (replay.stats.B.avgSoundness * 100).toFixed(0) + '%')}
           ${row('Position integrity left', replay.finalIntegrity.A, replay.finalIntegrity.B)}
           ${row('Fallacies committed', replay.stats.A.fallacies, replay.stats.B.fallacies)}
         </table>
@@ -631,6 +646,7 @@ function resetForNewMatch(): void {
   setHp('A', 100); setHp('B', 100);
   fighters.A.pose = 'idle'; fighters.B.pose = 'idle';
   fighters.A.staggered = false; fighters.B.staggered = false;
+  setDebateClock(null);
   btnFight.textContent = 'FIGHT';
   btnFight.disabled = true;
 }
@@ -646,6 +662,7 @@ function scrubTo(index: number): void {
     line.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }
   verdictEl.textContent = entry.verdict.rationale;
+  setDebateClock(entry.argument.seq);
   enactCombat(entry);
   scrubLabel.textContent = `exchange ${index + 1}/${replay.entries.length} — t=${(entry.argument.t / 1000).toFixed(1)}s`;
 }
