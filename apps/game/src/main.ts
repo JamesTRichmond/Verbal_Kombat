@@ -602,6 +602,7 @@ function screenReport(): void {
           <tr><th></th><th class="col-a">${chosen.A.name.toUpperCase()}</th><th class="col-b">${chosen.B.name.toUpperCase()}</th></tr>
           ${row('Arguments made', replay.stats.A.arguments, replay.stats.B.arguments)}
           ${row('Clean hits', replay.stats.A.cleanHits, replay.stats.B.cleanHits)}
+          ${row('Damage dealt', replay.stats.A.totalDamageDealt, replay.stats.B.totalDamageDealt)}
           ${row('Avg soundness', (replay.stats.A.avgSoundness * 100).toFixed(0) + '%', (replay.stats.B.avgSoundness * 100).toFixed(0) + '%')}
           ${row('Position integrity left', replay.finalIntegrity.A, replay.finalIntegrity.B)}
           ${row('Fallacies committed', replay.stats.A.fallacies, replay.stats.B.fallacies)}
