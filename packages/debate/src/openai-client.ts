@@ -9,7 +9,7 @@
  * secrets; this module never reads process.env itself so tests stay pure.
  */
 
-import type { ChatClient, ChatMessage } from './llm.js';
+import type { ChatCallOptions, ChatClient, ChatMessage } from './llm.js';
 
 export interface OpenAiChatClientOptions {
   apiKey: string;
@@ -22,7 +22,7 @@ export interface OpenAiChatClientOptions {
 }
 
 interface ChatCompletionResponse {
-  choices?: Array<{ message?: { content?: string | null } }>;
+  choices?: Array<{ message?: { content?: string | null }; delta?: { content?: string | null } }>;
   error?: { message?: string };
 }
 
@@ -37,25 +37,90 @@ export class OpenAiChatClient implements ChatClient {
     this.fetchFn = opts.fetch ?? fetch;
   }
 
-  async complete(
-    messages: ChatMessage[],
-    callOpts?: { maxTokens?: number; temperature?: number },
-  ): Promise<string> {
-    const url = `${this.baseUrl}/chat/completions`;
-    const body = {
-      model: this.opts.model,
-      messages: messages.map((m) => ({ role: m.role, content: m.content })),
-      max_tokens: callOpts?.maxTokens ?? 300,
-      temperature: callOpts?.temperature ?? 0.8,
-    };
+  async complete(messages: ChatMessage[], callOpts?: ChatCallOptions): Promise<string> {
+    const data = await this.post(messages, callOpts, false);
+    const content = data.choices?.[0]?.message?.content;
+    if (typeof content !== 'string') {
+      throw new Error('OpenAI chat completion returned empty content');
+    }
+    return content;
+  }
 
+  async *stream(messages: ChatMessage[], callOpts?: ChatCallOptions): AsyncIterable<string> {
+    const url = `${this.baseUrl}/chat/completions`;
     const res = await this.fetchFn(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${this.opts.apiKey}`,
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify(this.body(messages, callOpts, true)),
+    });
+
+    if (!res.ok) {
+      let msg = res.statusText;
+      try {
+        const data = (await res.json()) as ChatCompletionResponse;
+        msg = data.error?.message ?? msg;
+      } catch {
+        /* keep statusText */
+      }
+      throw new Error(`OpenAI chat completion failed (${res.status}): ${msg}`);
+    }
+
+    if (!res.body) {
+      throw new Error('OpenAI chat completion stream returned no body');
+    }
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() ?? '';
+      for (const raw of lines) {
+        const line = raw.trim();
+        if (!line.startsWith('data:')) continue;
+        const payload = line.slice(5).trim();
+        if (payload === '[DONE]') return;
+        let parsed: ChatCompletionResponse;
+        try {
+          parsed = JSON.parse(payload) as ChatCompletionResponse;
+        } catch {
+          continue;
+        }
+        const delta = parsed.choices?.[0]?.delta?.content;
+        if (typeof delta === 'string' && delta.length > 0) yield delta;
+      }
+    }
+  }
+
+  private body(messages: ChatMessage[], callOpts: ChatCallOptions | undefined, stream: boolean) {
+    return {
+      model: this.opts.model,
+      messages: messages.map((m) => ({ role: m.role, content: m.content })),
+      max_tokens: callOpts?.maxTokens ?? 300,
+      temperature: callOpts?.temperature ?? 0.8,
+      stream,
+    };
+  }
+
+  private async post(
+    messages: ChatMessage[],
+    callOpts: ChatCallOptions | undefined,
+    stream: boolean,
+  ): Promise<ChatCompletionResponse> {
+    const url = `${this.baseUrl}/chat/completions`;
+    const res = await this.fetchFn(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${this.opts.apiKey}`,
+      },
+      body: JSON.stringify(this.body(messages, callOpts, stream)),
     });
 
     const data = (await res.json()) as ChatCompletionResponse;
@@ -64,11 +129,6 @@ export class OpenAiChatClient implements ChatClient {
       const msg = data.error?.message ?? res.statusText;
       throw new Error(`OpenAI chat completion failed (${res.status}): ${msg}`);
     }
-
-    const content = data.choices?.[0]?.message?.content;
-    if (typeof content !== 'string') {
-      throw new Error('OpenAI chat completion returned empty content');
-    }
-    return content;
+    return data;
   }
 }

@@ -40,6 +40,7 @@ describe('OpenAiChatClient', () => {
     expect(body.model).toBe('gpt-4o-mini');
     expect(body.max_tokens).toBe(100);
     expect(body.temperature).toBe(0.5);
+    expect(body.stream).toBe(false);
     expect(body.messages).toEqual(messages);
   });
 
@@ -91,5 +92,37 @@ describe('OpenAiChatClient', () => {
     });
 
     await expect(client.complete(messages)).rejects.toThrow(/empty content/);
+  });
+
+  it('streams SSE deltas then stops at [DONE]', async () => {
+    const sse =
+      'data: {"choices":[{"delta":{"content":"Free "}}]}\n\n' +
+      'data: {"choices":[{"delta":{"content":"will."}}]}\n\n' +
+      'data: [DONE]\n\n';
+    const encoder = new TextEncoder();
+    const body = new ReadableStream({
+      start(controller) {
+        controller.enqueue(encoder.encode(sse));
+        controller.close();
+      },
+    });
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      body,
+    });
+
+    const client = new OpenAiChatClient({
+      apiKey: 'k',
+      model: 'm',
+      fetch: fetchMock as unknown as typeof fetch,
+    });
+
+    const chunks: string[] = [];
+    for await (const c of client.stream(messages)) chunks.push(c);
+    expect(chunks).toEqual(['Free ', 'will.']);
+
+    const bodySent = JSON.parse(fetchMock.mock.calls[0]![1].body as string);
+    expect(bodySent.stream).toBe(true);
   });
 });
