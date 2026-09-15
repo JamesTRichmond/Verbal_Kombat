@@ -18,8 +18,18 @@ export interface ChatMessage {
   content: string;
 }
 
+export interface ChatCallOptions {
+  maxTokens?: number;
+  temperature?: number;
+}
+
 export interface ChatClient {
-  complete(messages: ChatMessage[], opts?: { maxTokens?: number; temperature?: number }): Promise<string>;
+  complete(messages: ChatMessage[], opts?: ChatCallOptions): Promise<string>;
+  /**
+   * Optional token stream. Clients that only implement complete() still work;
+   * LlmAgent falls back to a single final yield.
+   */
+  stream?(messages: ChatMessage[], opts?: ChatCallOptions): AsyncIterable<string>;
 }
 
 export function styleSystemPrompt(ctx: DebateContext): string {
@@ -53,6 +63,35 @@ export class LlmAgent implements DebateAgent {
   ) {}
 
   async nextArgument(ctx: DebateContext): Promise<string | null> {
+    const messages = this.buildMessages(ctx);
+    if (!messages) return null;
+    const text = await this.client.complete(messages, { maxTokens: 300, temperature: 0.8 });
+    return text.trim() || null;
+  }
+
+  /**
+   * Yield partial utterance text as the model generates, then the final string.
+   * Demo clients can roar the transcript live; MatchRunner still uses nextArgument.
+   */
+  async *nextArgumentStream(ctx: DebateContext): AsyncIterable<string> {
+    const messages = this.buildMessages(ctx);
+    if (!messages) return;
+    const opts = { maxTokens: 300, temperature: 0.8 };
+    if (this.client.stream) {
+      let acc = '';
+      for await (const chunk of this.client.stream(messages, opts)) {
+        acc += chunk;
+        yield acc;
+      }
+      const trimmed = acc.trim();
+      if (trimmed) yield trimmed;
+      return;
+    }
+    const text = (await this.client.complete(messages, opts)).trim();
+    if (text) yield text;
+  }
+
+  private buildMessages(ctx: DebateContext): ChatMessage[] | null {
     const ownTurns = ctx.history.filter((h) => h.side === ctx.side).length;
     if (ownTurns >= (this.opts.maxTurns ?? 12)) return null;
 
@@ -68,8 +107,6 @@ export class LlmAgent implements DebateAgent {
     if (messages.length === 1) {
       messages.push({ role: 'user', content: 'Present your opening argument.' });
     }
-
-    const text = await this.client.complete(messages, { maxTokens: 300, temperature: 0.8 });
-    return text.trim() || null;
+    return messages;
   }
 }
