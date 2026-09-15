@@ -57,7 +57,7 @@ describe('mergeVerdicts', () => {
     expect(merged.relevance).toBeCloseTo(0.5);
     expect(merged.fallacies).toEqual(['ad_hominem']);
     expect(merged.fallacies).not.toContain('strawman');
-  };
+  });
 });
 
 describe('EnsembleJudge', () => {
