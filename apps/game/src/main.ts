@@ -3,7 +3,7 @@
  *
  * Flow (the MK ceremony, re-derived for debate — docs/UI-REFERENCE.md):
  *   CHOOSE FIGHTERS → VS (stances as tale-of-the-tape) → ARENA CARD
- *   → ROUND 1 → ARGUE! → the fight → FINISH THE ARGUMENT → FATALITY
+ *   → ROUND 1 → ARGUE! → the fight → FINISH THE ARGUMENT → DISMANTLED
  *   → REPORT CARD → STUDY THE TRANSCRIPT (replay scrubber)
  */
 
@@ -516,7 +516,7 @@ function enactCombat(entry: TranscriptEntry): void {
         setPose(target, 'ko');
         spawnBlood(tf.homeX, GROUND - 90, 60);
         shake = 500;
-        banner = { text: 'FATALITY', sub: 'POSITION DISMANTLED', t: 4200, big: true, color: '#c22a2a' };
+        banner = { text: 'DISMANTLED', sub: 'POSITION BROKEN', t: 4200, big: true, color: '#c22a2a' };
         setPose(actor, 'victory');
       }, 900);
       break;

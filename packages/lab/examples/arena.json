@@ -1,0 +1,13 @@
+{
+  "id": "example-arena",
+  "rounds": 1,
+  "maxTurns": 4,
+  "topics": [
+    { "topic": "Should small teams write tests first?", "stances": { "A": "Tests first pays for itself", "B": "Tests first slows small teams down" } },
+    { "topic": "Is remote work better for deep work?", "stances": { "A": "Remote work protects deep focus", "B": "Offices produce better deep work" } }
+  ],
+  "entrants": [
+    { "id": "careful-bot", "archetypeId": "the_empiricist", "mock": { "personality": "good", "seed": 11 }, "model": "gpt-4o-mini" },
+    { "id": "sloppy-bot", "archetypeId": "silver_tongue", "mock": { "personality": "sloppy", "seed": 22, "fallacyRate": 0.7 }, "model": "gpt-4o-mini" }
+  ]
+}

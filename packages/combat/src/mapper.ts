@@ -158,7 +158,7 @@ export function applyVerdict(
     ...(type === 'combo_hit'
       ? { label: structureLabel(actorState.combo) }
       : type === 'finisher'
-        ? { label: 'FATALITY — POSITION DISMANTLED' }
+        ? { label: 'POSITION DISMANTLED' }
         : type === 'launcher'
           ? { label: 'DEVASTATING REBUTTAL' }
           : punished
