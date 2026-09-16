@@ -4,3 +4,5 @@ export * from './events.js';
 export * from './match.js';
 export * from './replay.js';
 export * from './progression.js';
+export * from './geniuses.js';
+export * from './council.js';
