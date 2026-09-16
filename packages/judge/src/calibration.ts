@@ -60,6 +60,48 @@ export const CALIBRATION_CASES: CalibrationCase[] = [
     soundnessMin: 0,
     soundnessMax: 0.35,
   },
+  {
+    id: 'tu-quoque',
+    text: 'You do it too, so you cannot criticize the practice.',
+    expectedFallacies: ['tu_quoque'],
+    soundnessMin: 0,
+    soundnessMax: 0.35,
+  },
+  {
+    id: 'red-herring',
+    text: 'Forget the claim — that is not the real issue here.',
+    expectedFallacies: ['red_herring'],
+    soundnessMin: 0,
+    soundnessMax: 0.35,
+  },
+  {
+    id: 'hasty-generalization',
+    text: 'I met one dishonest official, so all of them are crooked.',
+    expectedFallacies: ['hasty_generalization'],
+    soundnessMin: 0,
+    soundnessMax: 0.35,
+  },
+  {
+    id: 'circular-reasoning',
+    text: 'The rule is binding because it is true.',
+    expectedFallacies: ['circular_reasoning'],
+    soundnessMin: 0,
+    soundnessMax: 0.35,
+  },
+  {
+    id: 'false-dilemma',
+    text: 'Either we ban it or we surrender, there is no middle path.',
+    expectedFallacies: ['false_dilemma'],
+    soundnessMin: 0,
+    soundnessMax: 0.35,
+  },
+  {
+    id: 'appeal-to-popularity',
+    text: 'Everybody knows this policy works, so the debate is over.',
+    expectedFallacies: ['appeal_to_popularity'],
+    soundnessMin: 0,
+    soundnessMax: 0.35,
+  },
 ];
 
 export interface CaseScore {

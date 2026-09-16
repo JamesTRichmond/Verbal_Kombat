@@ -28,6 +28,16 @@ describe('HeuristicJudge fallacy detection', () => {
     expect(v.fallacies).toContain('false_cause');
   });
 
+  it('flags tu quoque, red herring, and hasty generalization', async () => {
+    const tq = await judge.evaluate(arg('You do it too, so you cannot criticize the practice.'), []);
+    expect(tq.fallacies).toContain('tu_quoque');
+    const rh = await judge.evaluate(arg('Forget the claim — that is not the real issue here.'), []);
+    expect(rh.fallacies).toContain('red_herring');
+    expect(rh.relevance).toBeLessThan(0.3);
+    const hg = await judge.evaluate(arg('I met one dishonest official, so all of them are crooked.'), []);
+    expect(hg.fallacies).toContain('hasty_generalization');
+  });
+
   it('leaves a clean, structured argument unflagged', async () => {
     const v = await judge.evaluate(
       arg('The data shows lower recidivism; therefore the program reduces harm.'),

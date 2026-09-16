@@ -38,6 +38,12 @@ const FALLACY_MARKERS: Partial<Record<FallacyId, RegExp[]>> = {
   no_true_scotsman: [/\bno true \w+ would\b/i, /\bany real \w+ would (never|not)\b/i],
   appeal_to_ignorance: [/\bno one has (ever )?(proven|disproved|disproven|shown)\b/i, /\b(can'?t|cannot) be disproven\b/i],
   false_cause: [/\b(ever since|after) .*,? (so|therefore|that'?s why)\b/i, /\bmust have caused\b/i],
+  tu_quoque: [/\byou (do|did) (it|the same) too\b/i, /\bwhat about when you\b/i],
+  red_herring: [/\bforget (the|that) (claim|issue|point)\b/i, /\bthat'?s not the real issue\b/i],
+  hasty_generalization: [/\b(one|a single) .+, so all\b/i, /\bI met one .+ so all\b/i],
+  circular_reasoning: [/\bbecause it is (true|so)\b/i, /\bit'?s true because I said\b/i],
+  begging_the_question: [/\bobviously true by definition\b/i, /\bmust be true because it is defined\b/i],
+  moving_goalposts: [/\bthat still isn'?t enough\b/i, /\bnow you also have to (show|prove)\b/i],
 };
 
 const EVIDENCE_MARKERS = [
