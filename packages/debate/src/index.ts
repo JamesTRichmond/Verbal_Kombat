@@ -4,3 +4,4 @@ export * from './llm.js';
 export * from './openai-client.js';
 export * from './problem.js';
 export { FREE_WILL } from './scripts/free-will.js';
+export * from './proposer.js';

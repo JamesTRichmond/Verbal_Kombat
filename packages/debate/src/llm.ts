@@ -48,6 +48,11 @@ export function styleSystemPrompt(ctx: DebateContext): string {
     `Debate topic: ${ctx.topic}`,
     `Your stance, which you must defend: ${ctx.stance}`,
     `Your method: ${ctx.archetype!.description}`,
+    ...(ctx.archetype.id.startsWith('genius:')
+      ? [
+          'You fight with this thinker\'s METHOD applied to the live problem. Never quote them, never speak as them, never claim they would endorse your conclusion.',
+        ]
+      : []),
     ...emphases,
     'Rules: argue soundly. Logical fallacies are punished — they cause your attacks to miss.',
     'Respond with a single argumentative move (1-4 sentences). Directly engage the most recent opposing point when one exists.',

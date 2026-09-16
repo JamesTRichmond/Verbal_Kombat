@@ -36,6 +36,12 @@
 - Synthesis judge for `resolveProblemOutcome`: the match ends only when sound reasoning exists
 - Deliverable: the reasoned conclusion + the annotated transcript that earned it
 
+## Phase 4.5 — Swarm Mode (Council of Geniuses)
+
+- 186 genius fighters across 12 wings; council seating rules (done — see `docs/SWARM-MODE.md`)
+- Proposals scored by owner-weighted EV; fights calibrate credibility; crown by calibrated EV (done)
+- Council setup UI, bracket + EV leaderboard, live LLM wiring, proposal-aware judge (next)
+
 ## Phase 5 — Arena of others
 
 - User-created opponents; sharing; ladders
