@@ -4,6 +4,7 @@
  * Runs N judges on the same utterance and merges verdicts:
  *   - numeric scores: mean, clamped to [0, 1]
  *   - fallacies: majority vote (more than half of the panel)
+ *   - rebuttal direction: strict panel majority, otherwise unclear
  *   - rationale: short summary of the vote
  *
  * Pair with ScriptAwareJudge / annotated fixtures when scoring a candidate.
@@ -37,6 +38,7 @@ export function mergeVerdicts(
       structure: 0,
       fallacies: [],
       rebuttalForce: 0,
+      rebuttalDirection: 'unclear',
       rationale: 'Empty ensemble.',
     };
   }
@@ -52,6 +54,9 @@ export function mergeVerdicts(
     .filter(([, n]) => n > threshold)
     .map(([id]) => id)
     .sort();
+  const rebuttalDirection = (['supports', 'challenges'] as const)
+    .find((direction) => verdicts.filter((v) => v.rebuttalDirection === direction).length > threshold)
+    ?? 'unclear';
 
   return {
     argumentId,
@@ -62,6 +67,7 @@ export function mergeVerdicts(
     structure: clamp01(mean(verdicts.map((v) => v.structure))),
     fallacies,
     rebuttalForce: clamp01(mean(verdicts.map((v) => v.rebuttalForce))),
+    rebuttalDirection,
     rationale:
       fallacies.length > 0
         ? `Ensemble majority: ${fallacies.join(', ')} (${verdicts.length} judges).`

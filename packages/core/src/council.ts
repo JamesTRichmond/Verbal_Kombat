@@ -140,7 +140,12 @@ export function scoreProposal(
     const oc = clamp(outcomeCredibility?.[i] ?? 1, 0, 2);
     const riskSupport = m < 0 ? clamp(oc - 1, 0, 1) : 0;
     const c = clamp(seatC * Math.min(oc, 1), 0, 1);
-    const baseProbability = c * p + (1 - c) * skepticalPrior;
+    const outcomeProbability = c * p + (1 - c) * skepticalPrior;
+    // Dismissing a harm must not raise its probability above the seat-only
+    // calibration when the claim is below the skeptical prior.
+    const baseProbability = m < 0 && oc < 1
+      ? Math.min(outcomeProbability, seatC * p + (1 - seatC) * skepticalPrior)
+      : outcomeProbability;
     const baseMatters = c * m;
     return {
       ...o,
@@ -245,10 +250,10 @@ export function outcomeCredibilitiesFrom(
         const direction = e.verdict.rebuttalDirection === 'supports' || e.verdict.rebuttalDirection === 'challenges'
           ? e.verdict.rebuttalDirection
           : challengesOutcome(transcript, tokens) ? 'challenges' : 'supports';
-        c = harmful && direction === 'supports' ? clamp(c * (1 + hit), 0, 2) : clamp(c * (1 - hit), 0, 2);
+        c *= harmful && direction === 'supports' ? 1 + hit : 1 - hit;
       }
     }
-    return c;
+    return clamp(c, 0, 2);
   });
 }
 
