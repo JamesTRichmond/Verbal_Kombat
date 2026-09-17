@@ -234,7 +234,7 @@ export function outcomeCredibilitiesFrom(
         if (e.verdict.fallacies.length > 0) continue;
         const force = e.verdict.rebuttalForce;
         if (!(force > 0)) continue;
-        const transcript = `${e.argument.text} ${e.verdict.rationale}`;
+        const transcript = e.argument.text;
         const hay = outcomeTokens(transcript);
         const hits = [...new Set(hay.filter((t) => tok.has(t)))];
         // Shared proposal vocabulary (for example "contract") cannot identify
