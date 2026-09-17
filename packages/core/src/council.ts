@@ -215,7 +215,6 @@ export function outcomeCredibilitiesFrom(
     if (tokens.length === 0) return 1;
     const tok = new Set(tokens);
     const harmful = mattersScore(profile, o.impacts) < 0;
-    const challengePatterns = harmful ? challengePatternsFor(tokens) : [];
     let c = 1;
     for (const { replay, side } of bouts) {
       for (const e of replay.entries) {
@@ -227,7 +226,7 @@ export function outcomeCredibilitiesFrom(
         const hay = outcomeTokens(transcript);
         if (!hay.some((t) => tok.has(t))) continue;
         const hit = 0.6 * clamp(force, 0, 1);
-        const challenges = harmful && challengesOutcome(transcript, challengePatterns);
+        const challenges = harmful && challengesOutcome(transcript, tokens);
         c = harmful && !challenges ? clamp(c * (1 + hit), 0, 2) : clamp(c * (1 - hit), 0, 2);
       }
     }
@@ -364,24 +363,51 @@ function clamp(x: number, lo: number, hi: number): number {
   return Number.isFinite(x) ? Math.min(hi, Math.max(lo, x)) : lo;
 }
 
-function challengesOutcome(text: string, patterns: RegExp[]): boolean {
-  const lower = text.toLowerCase();
-  return patterns.some((pattern) => pattern.test(lower));
+function challengesOutcome(text: string, tokens: string[]): boolean {
+  const words = outcomeWords(text);
+  if (words.length === 0) return false;
+  const hits = words.flatMap((word, i) => tokens.includes(word) ? [i] : []);
+  return hits.some((i) => OUTCOME_CHALLENGE_PHRASES.some((phrase) => phraseNear(words, phrase, i)));
 }
 
-const OUTCOME_CHALLENGE_PATTERN =
-  "unlikely|implausible|improbable|avoid|avoids|prevent|prevents|prevented|reduce|reduces|reduced|mitigate|mitigates|mitigated|doubtful|false|fantasy|wrong|not|never|no|less likely|not supported";
+const OUTCOME_CHALLENGE_PHRASES = [
+  ['unlikely'],
+  ['implausible'],
+  ['improbable'],
+  ['avoid'],
+  ['avoids'],
+  ['prevent'],
+  ['prevents'],
+  ['prevented'],
+  ['reduce'],
+  ['reduces'],
+  ['reduced'],
+  ['mitigate'],
+  ['mitigates'],
+  ['mitigated'],
+  ['doubtful'],
+  ['false'],
+  ['fantasy'],
+  ['wrong'],
+  ['not'],
+  ['never'],
+  ['no'],
+  ['cannot'],
+  ['less', 'likely'],
+  ['not', 'supported'],
+];
 
-function challengePatternsFor(tokens: string[]): RegExp[] {
-  return tokens.flatMap((token) => {
-    const t = escapeRegex(token);
-    return [
-      new RegExp(`\\b${t}\\b[\\s\\S]{0,40}\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b`),
-      new RegExp(`\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b[\\s\\S]{0,40}\\b${t}\\b`),
-    ];
-  });
+const OUTCOME_CHALLENGE_TOKEN_WINDOW = 6;
+
+function phraseNear(words: string[], phrase: string[], center: number): boolean {
+  const lo = Math.max(0, center - OUTCOME_CHALLENGE_TOKEN_WINDOW - phrase.length + 1);
+  const hi = Math.min(words.length - phrase.length, center + OUTCOME_CHALLENGE_TOKEN_WINDOW);
+  for (let start = lo; start <= hi; start++) {
+    if (phrase.every((part, i) => words[start + i] === part)) return true;
+  }
+  return false;
 }
 
-function escapeRegex(text: string): string {
-  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function outcomeWords(text: string): string[] {
+  return text.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
 }
