@@ -112,7 +112,9 @@ export async function runDecision(config: DecisionConfig): Promise<DecisionResul
     credibility[p.seat] = prior === undefined ? fought : (1 - w) * fought + w * clamp01(prior);
   }
 
-  const statusQuo = config.statusQuo ?? defaultStatusQuo();
+  const statusQuo = config.statusQuo === undefined
+    ? defaultStatusQuo()
+    : { ...config.statusQuo, seat: STATUS_QUO_SEAT };
   const standings = rank(council.proposals, config.profile, credibility);
   const champion = standings[0]!;
   const baseline = scoreProposal(statusQuo, config.profile, STATUS_QUO_CREDIBILITY);
