@@ -32,7 +32,7 @@ problem ──▶ seatCouncil ──▶ Proposer (per seat) ──▶ Proposal {
                                                      │
             round robin: every pair fights, stance = own proposal
                                                      │
-            runMatch ──▶ replays ──▶ credibilityFrom ──▶ scoreProposal ──▶ crownCouncil
+            runMatch ──▶ replays ──▶ credibilityFrom × outcomeCredibilitiesFrom ──▶ scoreProposal ──▶ crownCouncil
 ```
 
 Seating follows the swarm's rules: quick = 3 seats, council = 7, full = 12 (one per wing). Always a Questioner, a reality tether (Experimenter), the human side (Awakener), and a wildcard from the wing farthest from the problem's home field. No two seats from the same wing.
@@ -43,12 +43,13 @@ For each outcome a proposal predicts:
 
 - `p` = the seat's claimed probability
 - `m` = how much it matters to the owner = Σ (criterion weight × impact), impacts −1..1
-- `c` = credibility the seat earned in its fights (integrity kept, bouts won, fallacies avoided)
+- `c_seat` = credibility the seat earned in its fights (integrity kept, bouts won, fallacies avoided)
+- `c_k` = `c_seat` × per-outcome credibility. A clean opponent rebuttal that names that outcome multiplies `c_k` down; other outcomes stay on seat credibility alone. Fallacious swings do not count.
 
 Calibration:
 
-- `p' = c·p + (1−c)·0.2` — a broken position's odds regress toward doubt
-- `m' = c·m` — a broken position can't vouch for its own stakes
+- `p' = c_k·p + (1−c_k)·0.2` — a broken *outcome* regresses toward doubt
+- `m' = c_k·m` — a broken outcome can't vouch for its own stakes
 - **EV = Σ p' × m'** — highest wins
 
 `fightsChangedTheAnswer` flags when the loudest raw claim lost the crown. That flag is the product's proof of value.
@@ -67,6 +68,7 @@ Calibration:
 
 - `@vk/core/geniuses.ts` — 12 wings, 186 geniuses, `geniusArchetype()`
 - `@vk/core/council.ts` — value profile, EV math, credibility, seating, round robin, crown
+- `@vk/core/council.ts` — `outcomeCredibilitiesFrom`: targeted clean rebuttals discount that outcome, not the whole position
 - `@vk/debate/proposer.ts` — `ProposalAgent`, `ScriptedProposer`, `LlmProposer`, tolerant JSON parsing
 - `@vk/replay/council-runner.ts` — `runCouncil` orchestrator with `onProposal / onBoutStart / onExchange / onBout` hooks
 - Tests for all of the above
@@ -77,5 +79,4 @@ Calibration:
 1. Game UI: council setup screen (problem, mode, value weights), bracket view, EV leaderboard that moves as bouts resolve.
 2. Live wiring: `LlmProposer` + `LlmAgent` + judge ensemble through the existing OpenAI client.
 3. Bout budget: council mode is 21 bouts — add a cap / Swiss pairing option.
-4. Proposal-aware judge: rebuttals that target a specific outcome's probability should hit that outcome's credibility, not the whole position.
-5. Synthesis finisher: the champion's closing argument must absorb the strongest dissent (feeds `resolveProblemOutcome`).
+4. Synthesis finisher: the champion's closing argument must absorb the strongest dissent (feeds `resolveProblemOutcome`).
