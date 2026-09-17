@@ -21,7 +21,7 @@
 
 - Match setup flow: pick topic, assign stances, pick fighters
 - Art pass: real fighter animation sets keyed to CombatEventType, arena themes per topic domain
-- Sound design; announcer ("FINISH HIM" → closing argument)
+- Sound design; announcer with original callouts (closing argument cue)
 - Persistence: fighter profiles, XP, match history; post-match annotated transcript viewer
 
 ## Phase 3 — The loop closes (RL)

@@ -5,6 +5,7 @@
     { "path": "packages/debate" },
     { "path": "packages/judge" },
     { "path": "packages/combat" },
-    { "path": "packages/replay" }
+    { "path": "packages/replay" },
+    { "path": "packages/lab" }
   ]
 }

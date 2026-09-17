@@ -12,7 +12,8 @@
     "build": "npm run build --workspaces --if-present",
     "test": "vitest run",
     "dev": "npm run dev --workspace=apps/game",
-    "typecheck": "tsc --build"
+    "typecheck": "tsc --build && tsc --project apps/game/tsconfig.arcade.json",
+    "lab": "tsx packages/lab/src/cli.ts"
   },
   "devDependencies": {
     "tsx": "^4.23.1",

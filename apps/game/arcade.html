@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERBAL KOMBAT — Arcade</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
+    <link rel="stylesheet" href="/src/arcade/arcade.css" />
+  </head>
+  <body>
+    <p id="arcade-help" class="sr-only">
+      Verbal Kombat arcade. Use arrow keys to move selections, Enter or Space to confirm, Escape to go back, and P to pause.
+    </p>
+    <canvas
+      id="screen"
+      width="320"
+      height="224"
+      tabindex="0"
+      role="application"
+      aria-label="Verbal Kombat arcade screen"
+      aria-describedby="arcade-help arcade-status"
+    ></canvas>
+    <p id="arcade-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Loading arcade.</p>
+    <script type="module" src="/src/arcade/main.ts"></script>
+  </body>
+</html>

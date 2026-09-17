@@ -1,0 +1,25 @@
+{
+  "id": "example-portfolio-decision",
+  "problem": "Should I ship Verbal Kombat Council Mode as a portfolio piece this month, or keep polishing?",
+  "mode": "quick",
+  "maxTurns": 3,
+  "profile": {
+    "ownerId": "owner",
+    "ownerName": "James",
+    "criteria": [
+      { "id": "career", "label": "Moves the pivot into applied AI work forward", "weight": 3 },
+      { "id": "income", "label": "Income and stability", "weight": 3 },
+      { "id": "energy", "label": "Time and energy cost is sustainable", "weight": 2 },
+      { "id": "craft", "label": "Creative and intellectual fulfillment", "weight": 2 },
+      { "id": "people", "label": "Good for the people he cares about", "weight": 2 }
+    ]
+  },
+  "statusQuo": {
+    "answer": "Keep polishing privately; ship nothing this month.",
+    "reasoning": "Baseline: the cost of not acting.",
+    "outcomes": [
+      { "description": "Nothing changes; momentum fades a little", "probability": 0.8, "impacts": { "career": -0.1, "craft": 0.2 } },
+      { "description": "Polish pays off later", "probability": 0.2, "impacts": { "craft": 0.4 } }
+    ]
+  }
+}
