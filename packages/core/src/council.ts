@@ -104,6 +104,8 @@ export interface ScoredOutcome extends ProposalOutcome {
   calibratedMatters: number;
   /** Seat credibility × targeted-rebuttal discount for this outcome. */
   credibility: number;
+  /** Extra corroborating evidence that pushes a harmful risk upward (0..1). */
+  riskSupport: number;
 }
 
 export interface ProposalScore {
@@ -136,13 +138,19 @@ export function scoreProposal(
     const p = clamp(o.probability, 0, 1);
     const m = mattersScore(profile, o.impacts);
     const oc = clamp(outcomeCredibility?.[i] ?? 1, 0, 2);
-    const c = clamp(seatC * oc, 0, 1);
+    const riskSupport = m < 0 ? clamp(oc - 1, 0, 1) : 0;
+    const c = clamp(seatC * Math.min(oc, 1), 0, 1);
+    const baseProbability = c * p + (1 - c) * skepticalPrior;
+    const baseMatters = c * m;
     return {
       ...o,
       matters: m,
       credibility: c,
-      calibratedProbability: c * p + (1 - c) * skepticalPrior,
-      calibratedMatters: c * m,
+      riskSupport,
+      // Corroborated downside moves monotonically toward greater risk and
+      // full stakes, even when the claimed p is below the skeptical prior.
+      calibratedProbability: baseProbability + riskSupport * (1 - baseProbability),
+      calibratedMatters: baseMatters + riskSupport * (m - baseMatters),
     };
   });
   return {
@@ -210,8 +218,11 @@ export function outcomeCredibilitiesFrom(
   profile: ValueProfile,
   bouts: BoutRecord[],
 ): number[] {
-  return proposal.outcomes.map((o) => {
-    const tokens = outcomeTokens(o.description);
+  const tokenFrequency = new Map<string, number>();
+  const allTokens = proposal.outcomes.map((o) => [...new Set(outcomeTokens(o.description))]);
+  for (const tokens of allTokens) for (const token of tokens) tokenFrequency.set(token, (tokenFrequency.get(token) ?? 0) + 1);
+  return proposal.outcomes.map((o, outcomeIndex) => {
+    const tokens = allTokens[outcomeIndex]!;
     if (tokens.length === 0) return 1;
     const tok = new Set(tokens);
     const harmful = mattersScore(profile, o.impacts) < 0;
@@ -225,10 +236,15 @@ export function outcomeCredibilitiesFrom(
         if (!(force > 0)) continue;
         const transcript = `${e.argument.text} ${e.verdict.rationale}`;
         const hay = outcomeTokens(transcript);
-        if (!hay.some((t) => tok.has(t))) continue;
+        const hits = [...new Set(hay.filter((t) => tok.has(t)))];
+        // Shared proposal vocabulary (for example "contract") cannot identify
+        // an outcome by itself. Require a discriminating token or two matches.
+        if (!hits.some((t) => tokenFrequency.get(t) === 1) && hits.length < 2) continue;
         const hit = 0.6 * clamp(force, 0, 1);
-        const challenges = harmful && challengesOutcome(transcript, tokens);
-        c = harmful && !challenges ? clamp(c * (1 + hit), 0, 2) : clamp(c * (1 - hit), 0, 2);
+        const direction = e.verdict.rebuttalDirection === 'supports' || e.verdict.rebuttalDirection === 'challenges'
+          ? e.verdict.rebuttalDirection
+          : challengesOutcome(transcript, tokens) ? 'challenges' : 'supports';
+        c = harmful && direction === 'supports' ? clamp(c * (1 + hit), 0, 2) : clamp(c * (1 - hit), 0, 2);
       }
     }
     return c;

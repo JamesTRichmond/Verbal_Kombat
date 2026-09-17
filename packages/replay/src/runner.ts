@@ -69,6 +69,7 @@ export async function runMatch(
       matchId: config.id,
       topic: config.topic,
       stance: config.stances[current],
+      opposingStance: config.stances[current === 'A' ? 'B' : 'A'],
       side: current,
       ...(archetype !== undefined ? { archetype } : {}),
       ...(lessons !== undefined ? { lessons } : {}),

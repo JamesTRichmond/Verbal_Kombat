@@ -18,6 +18,8 @@ export interface DebateContext {
   matchId: string;
   topic: string;
   stance: string;
+  /** The opposing position, supplied separately so it is not mistaken for the stance to defend. */
+  opposingStance?: string;
   side: Side;
   /** Present when the caller carries archetypes (LlmAgent requires it). */
   archetype?: FighterArchetype;

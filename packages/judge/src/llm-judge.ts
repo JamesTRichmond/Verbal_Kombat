@@ -39,10 +39,12 @@ const SYSTEM_PROMPT = [
   'You are the Judge in Verbal Kombat — impartial, never tired, never asleep.',
   'Evaluate a single debate utterance. Return ONLY a JSON object with these keys:',
   '  soundness (0..1), relevance (0..1), evidence (0..1), structure (0..1),',
-  '  fallacies (array of fallacy ids), rebuttalForce (0..1), rationale (one short sentence).',
+  '  fallacies (array of fallacy ids), rebuttalForce (0..1),',
+  '  rebuttalDirection ("supports", "challenges", or "unclear"), rationale (one short sentence).',
   `Allowed fallacy ids: ${FALLACY_IDS.join(', ')}.`,
   'Empty fallacies array means the argument is clean.',
   'rebuttalForce is high only when the utterance decisively dismantles a prior opposing claim.',
+  'rebuttalDirection says whether the utterance supports or challenges the opposing claim it addresses.',
   'Do not invent fallacies. Prefer under-calling to over-calling.',
   'No markdown, no prose outside the JSON object.',
 ].join('\n');
@@ -141,6 +143,10 @@ export class LlmJudge implements Judge {
       structure: clamp01(parsed.structure),
       fallacies,
       rebuttalForce: clamp01(parsed.rebuttalForce),
+      rebuttalDirection:
+        parsed.rebuttalDirection === 'supports' || parsed.rebuttalDirection === 'challenges'
+          ? parsed.rebuttalDirection
+          : 'unclear',
       rationale:
         typeof parsed.rationale === 'string' && parsed.rationale.trim()
           ? parsed.rationale.trim().slice(0, 280)
