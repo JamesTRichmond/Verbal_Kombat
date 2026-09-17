@@ -83,11 +83,16 @@ export interface CouncilOptions extends Omit<RunnerOptions, 'archetypes' | 'onEx
   onProposal?: (proposal: Proposal) => void | Promise<void>;
   onBoutStart?: (bout: { id: string; A: Genius; B: Genius }) => void | Promise<void>;
   onExchange?: (boutId: string, exchange: Exchange) => void | Promise<void>;
-  onBout?: (bout: { id: string; A: Genius; B: Genius; replay: MatchReplay }) => void | Promise<void>;
+  onBout?: (bout: { id: string; A: Genius; B: Genius; replay: MatchReplay; resumed?: boolean }) => void | Promise<void>;
   /** Fired for each fighter after it learns from a bout. */
   onLearn?: (learning: BoutLearning) => void | Promise<void>;
   /** Timestamp source for log entries (tests pass a fixed clock). */
   now?: () => Date;
+  /**
+   * Resume an interrupted council: reuse saved proposals and finished bouts.
+   * Resumed bouts are not re-learned (their growth was saved when they ran).
+   */
+  resume?: { proposals?: Proposal[]; bouts?: { id: string; replay: MatchReplay }[] };
 }
 
 export interface CouncilResult {
@@ -114,8 +119,9 @@ export async function runCouncil(
   const proposals: Proposal[] = [];
   for (const seat of seats) {
     const rec = store ? await store.get(seat.slug) : undefined;
+    const cached = opts.resume?.proposals?.find((x) => x.seat === seat.slug);
     const lessons = rec ? lessonsForPrompt(rec) : [];
-    const p = await deps.proposer.propose({
+    const p = cached ?? await deps.proposer.propose({
       problem: config.problem,
       seat: seat.slug,
       profile: config.profile,
@@ -141,6 +147,13 @@ export async function runCouncil(
       mode: 'problem',
       problemStatement: config.problem,
     };
+    const done = opts.resume?.bouts?.find((x) => x.id === id);
+    if (done) {
+      records.push({ seat: a.slug, replay: done.replay, side: 'A' }, { seat: b.slug, replay: done.replay, side: 'B' });
+      bouts.push({ id, A: a.slug, B: b.slug, replay: done.replay });
+      await opts.onBout?.({ id, A: a, B: b, replay: done.replay, resumed: true });
+      continue;
+    }
     await opts.onBoutStart?.({ id, A: a, B: b });
     const recA = store ? await store.get(a.slug) : undefined;
     const recB = store ? await store.get(b.slug) : undefined;

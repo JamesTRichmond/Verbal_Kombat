@@ -139,3 +139,29 @@ describe('lab CLI (offline)', () => {
     }
   });
 });
+
+describe('decide checkpoints', () => {
+  it('writes a checkpoint and resumes without re-running finished bouts', async () => {
+    const { mkdtempSync, writeFileSync, readFileSync, existsSync } = await import('node:fs');
+    const { tmpdir } = await import('node:os');
+    const { join } = await import('node:path');
+    const { main } = await import('./cli.js');
+    const dir = mkdtempSync(join(tmpdir(), 'vk-ckpt-'));
+    const problem = join(dir, 'p.json');
+    writeFileSync(problem, readFileSync(fileURLToPath(new URL('../examples/problem.json', import.meta.url)), 'utf8'));
+    const out = join(dir, 'r.md');
+    const logs: string[] = [];
+    const io = { log: (l: string) => void logs.push(l), error: (l: string) => void logs.push(l), env: {}, now: () => new Date('2026-09-17T00:00:00Z') };
+    expect(await main(['decide', problem, '--offline', '--out', out], io)).toBe(0);
+    const ckpt = JSON.parse(readFileSync(`${out}.checkpoint.json`, 'utf8'));
+    expect(ckpt.proposals.length).toBe(3);
+    expect(ckpt.bouts.length).toBe(3);
+    const first = readFileSync(out, 'utf8');
+    logs.length = 0;
+    expect(await main(['decide', problem, '--offline', '--out', out], io)).toBe(0);
+    expect(logs.some((l) => l.includes('resuming from'))).toBe(true);
+    expect(logs.filter((l) => l.includes('(resumed)')).length).toBe(3);
+    expect(readFileSync(out, 'utf8')).toBe(first);
+    expect(existsSync(out)).toBe(true);
+  });
+});
