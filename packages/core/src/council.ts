@@ -217,8 +217,9 @@ export function outcomeCredibilitiesFrom(
     const harmful = mattersScore(profile, o.impacts) < 0;
     let c = 1;
     for (const { replay, side } of bouts) {
+      const opponentSide: Side = side === 'A' ? 'B' : 'A';
       for (const e of replay.entries) {
-        if (e.argument.side === side) continue;
+        if (e.argument.side !== opponentSide) continue;
         if (e.verdict.fallacies.length > 0) continue;
         const force = e.verdict.rebuttalForce;
         if (!(force > 0)) continue;
