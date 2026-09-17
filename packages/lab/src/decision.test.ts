@@ -155,6 +155,11 @@ describe('runDecision', () => {
     const councilSocrates = r.council.verdict.standings.find((s) => s.seat === 'socrates')!;
     const decisionCurie = r.standings.find((s) => s.seat === 'marie-curie')!;
     const decisionSocrates = r.standings.find((s) => s.seat === 'socrates')!;
+    expect(councilSocrates.outcomes[0]!.credibility).toBeLessThan(councilSocrates.credibility);
+    expect(councilSocrates.outcomes[1]!.credibility).toBe(councilSocrates.credibility);
+    expect(decisionSocrates.outcomes.map((o) => o.credibility)).toEqual(
+      councilSocrates.outcomes.map((o) => o.credibility),
+    );
     expect(councilCurie.calibratedEV > councilSocrates.calibratedEV).toBe(true);
     expect(decisionCurie.calibratedEV > decisionSocrates.calibratedEV).toBe(true);
     expect(r.champion.seat).toBe(r.council.verdict.champion.seat);

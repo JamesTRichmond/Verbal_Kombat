@@ -200,14 +200,21 @@ export function outcomeTokens(description: string): string[] {
  * Per-outcome credibility starts at 1. An opponent utterance that names
  * tokens from that outcome and lands a clean rebuttal (rebuttalForce > 0,
  * no fallacy) multiplies that outcome's credibility — the rest of the
- * proposal is left to seat-level credibilityFrom.
+ * proposal is left to seat-level credibilityFrom. Harmful outcomes are
+ * identified from the active value profile, so sensitivity passes can
+ * re-evaluate whether a targeted clean hit is warning-confirming or
+ * warning-dismissing.
  */
-export function outcomeCredibilitiesFrom(proposal: Proposal, bouts: BoutRecord[]): number[] {
+export function outcomeCredibilitiesFrom(
+  proposal: Proposal,
+  profile: ValueProfile,
+  bouts: BoutRecord[],
+): number[] {
   return proposal.outcomes.map((o) => {
     const tokens = outcomeTokens(o.description);
     if (tokens.length === 0) return 1;
     const tok = new Set(tokens);
-    const harmful = averageImpact(o.impacts) < 0;
+    const harmful = mattersScore(profile, o.impacts) < 0;
     let c = 1;
     for (const { replay, side } of bouts) {
       for (const e of replay.entries) {
@@ -215,10 +222,12 @@ export function outcomeCredibilitiesFrom(proposal: Proposal, bouts: BoutRecord[]
         if (e.verdict.fallacies.length > 0) continue;
         const force = e.verdict.rebuttalForce;
         if (!(force > 0)) continue;
-        const hay = outcomeTokens(`${e.argument.text} ${e.verdict.rationale}`);
+        const transcript = `${e.argument.text} ${e.verdict.rationale}`;
+        const hay = outcomeTokens(transcript);
         if (!hay.some((t) => tok.has(t))) continue;
         const hit = 0.6 * clamp(force, 0, 1);
-        c = harmful ? clamp(c * (1 + hit), 0, 2) : clamp(c * (1 - hit), 0, 2);
+        const challenges = harmful && challengesOutcome(transcript, tokens);
+        c = harmful && !challenges ? clamp(c * (1 + hit), 0, 2) : clamp(c * (1 - hit), 0, 2);
       }
     }
     return c;
@@ -336,7 +345,7 @@ export function crownCouncil(
         profile,
         credibilityFrom(mine),
         skepticalPrior,
-        outcomeCredibilitiesFrom(p, mine),
+        outcomeCredibilitiesFrom(p, profile, mine),
       );
     })
     .sort((a, b) => b.calibratedEV - a.calibratedEV);
@@ -354,8 +363,18 @@ function clamp(x: number, lo: number, hi: number): number {
   return Number.isFinite(x) ? Math.min(hi, Math.max(lo, x)) : lo;
 }
 
-function averageImpact(impacts: Record<string, number>): number {
-  const keys = Object.keys(impacts);
-  if (keys.length === 0) return 0;
-  return keys.reduce((s, k) => s + clamp(impacts[k] ?? 0, -1, 1), 0) / keys.length;
+function challengesOutcome(text: string, tokens: string[]): boolean {
+  const lower = text.toLowerCase();
+  return tokens.some((token) => {
+    const t = escapeRegex(token);
+    return new RegExp(`\\b${t}\\b.{0,40}\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b`).test(lower)
+      || new RegExp(`\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b.{0,40}\\b${t}\\b`).test(lower);
+  });
+}
+
+const OUTCOME_CHALLENGE_PATTERN =
+  "unlikely|implausible|improbable|avoid|avoids|prevent|prevents|prevented|reduce|reduces|reduced|mitigate|mitigates|mitigated|doubtful|false|fantasy|wrong|not|never|no|less likely|not supported";
+
+function escapeRegex(text: string): string {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }

@@ -8,6 +8,7 @@ import {
   getGenius,
   grownArchetype,
   opponent,
+  outcomeCredibilitiesFrom,
   scoreProposal,
   type BoutRecord,
   type GeniusFighterRecord,
@@ -123,7 +124,13 @@ export function evSnapshot(play: CouncilPlay, played: number): ProposalScore[] {
     records.push({ seat: b.A.slug, replay: b.replay, side: 'A' }, { seat: b.B.slug, replay: b.replay, side: 'B' });
   }
   return play.result.proposals.map((p) =>
-    scoreProposal(p, COUNCIL_PROFILE, credibilityFrom(records.filter((r) => r.seat === p.seat))),
+    scoreProposal(
+      p,
+      COUNCIL_PROFILE,
+      credibilityFrom(records.filter((r) => r.seat === p.seat)),
+      undefined,
+      outcomeCredibilitiesFrom(p, COUNCIL_PROFILE, records.filter((r) => r.seat === p.seat)),
+    ),
   );
 }
 
