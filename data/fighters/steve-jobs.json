@@ -3,14 +3,14 @@
   "slug": "steve-jobs",
   "name": "Steve Jobs",
   "wing": "artists",
-  "xp": 342,
-  "level": 1,
+  "xp": 2413,
+  "level": 3,
   "record": {
-    "matches": 1,
-    "wins": 0,
-    "losses": 1,
+    "matches": 7,
+    "wins": 4,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 1
+    "fallaciesCommitted": 9
   },
   "lessons": [
     {
@@ -66,17 +66,200 @@
       "learnedFrom": "camp-2026-09-16-s42-b54",
       "learnedAt": "2026-09-16T12:00:53.000Z",
       "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_authority",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to authority (Citing status rather than evidence or reasoning). It cost you against Socrates.",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout3",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:dcoeam",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Socrates broke through with \"To focus on AgentiCubed and onto, we need to establish what constitutes a \"fastest path\" to James's goal. A fastest path implies a high pro…\" (The argument clarifies the goal and proposes a structured approach to achieve it).",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout3",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:193cz3u",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Socrates broke through with \"You've clarified James's intent behind \"passive\" income and raised a valid point about onto's established prototype and market demand. I ag…\" (A nuanced argument that challenges the opponent's assumptions and offers alternative perspectives).",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout3",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:43qv6c",
+      "kind": "technique",
+      "text": "Your winning pattern: \"You're trying to establish a clear definition of a \"fastest path\" and clarify the intent behind \"passive\" income. However, I'd like to poin…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout3",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:equivocation",
+      "kind": "avoid_fallacy",
+      "text": "Never use equivocation (Shifting the meaning of a key term mid-argument). It cost you against Chien-Shiung Wu.",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout8",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13hx6ek",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Chien-Shiung Wu broke through with \"To determine James's fastest path to a steady passive or recurring income, we must first define what \"fastest\" and \"steady\" mean in this co…\" (Clear definitions and criteria are proposed, but evidence is mostly anecdotal).",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout8",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mgi3es",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Chien-Shiung Wu broke through with \"A most astute observation. You're right to point out the importance of a quick development cycle and market demand for onto's events app, w…\" (CovenantWatch's stable revenue stream and growing user base make it a more viable option than onto).",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout8",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13kegpy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Chien-Shiung Wu broke through with \"You're suggesting that Civic Signal can complement onto's events app to address its revenue growth issues, and that this synergy would enab…\" (The proposal to integrate Civic Signal with onto's events app is questioned by citing the struggles of similar platforms).",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout8",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:13kegpy",
+      "kind": "technique",
+      "text": "Borrow this pattern from Chien-Shiung Wu: \"You're suggesting that Civic Signal can complement onto's events app to address its revenue growth issues, and that this synergy would enab…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout8",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:za1j77",
+      "kind": "blind_spot",
+      "text": "Your moves against Chien-Shiung Wu were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout8",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:false_dilemma",
+      "kind": "avoid_fallacy",
+      "text": "Never use false dilemma (Presenting two options as the only options). It cost you against Seneca.",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout12",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 3
+    },
+    {
+      "id": "counter:1y5fa5e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Seneca broke through with \"James is eager to leave his day job and focus on building, but his goal of achieving $2,000/month of steady passive or recurring income can…\" (The argument provides a nuanced and contextual approach to James's goal, but could benefit from more concrete evidence to support the proposed options).",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout12",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1phw1un",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Seneca broke through with \"Your emphasis on market creation and monopoly potential is astute, but let's not overlook the fact that onto and Civic Signal are still rel…\" (The speaker effectively counters the opposing claim by highlighting the feasibility and immediate benefits of CovenantWatch).",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout12",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1wj3pw1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Seneca broke through with \"You make a strong case for onto's momentum and market potential, but let's not overlook the fact that onto's events app is still a relative…\" (The argument effectively counters the opposing claim by providing a more stable revenue stream and leveraging existing relationships).",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout12",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1phw1un",
+      "kind": "technique",
+      "text": "Borrow this pattern from Seneca: \"Your emphasis on market creation and monopoly potential is astute, but let's not overlook the fact that onto and Civic Signal are still rel…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout12",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1k03f7h",
+      "kind": "blind_spot",
+      "text": "Your moves against Seneca were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout12",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:vfq0ca",
+      "kind": "technique",
+      "text": "Your winning pattern: \"\"But, I'd argue that onto's prototype, although still in development, has a clear potential for scalability and growth, whereas a podcast l…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "thomas-edison",
+      "learnedFrom": "live-council-001-2k-passive-bout16",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:yix6o5",
+      "kind": "technique",
+      "text": "Your winning pattern: \"A wise counterpoint. While it's true that onto and Civic Signal are ambitious undertakings, I'd argue that their potential for scalability…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sun-tzu",
+      "learnedFrom": "live-council-001-2k-passive-bout17",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1mbihc7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Blaise Pascal broke through with \"Premise 1: onto (events app) and Civic Signal (political-market intelligence) are viable candidates for achieving $2,000/month of steady pa…\" (The argument presents a nuanced consideration of James's constraints and proposes a feasible solution).",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout18",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:w1tuhz",
+      "kind": "technique",
+      "text": "Your winning pattern: \"I'll cut to the few products worth perfecting, design from the experience backward, and control the whole. To achieve $2,000/month of stead…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout18",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
-      "appeal_to_ignorance": 0.05
+      "appeal_to_ignorance": 0.05,
+      "appeal_to_authority": 0.1,
+      "equivocation": 0.05,
+      "false_dilemma": 0.15000000000000002
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015,
-      "patience": 0.015
+      "empiricism": 0.065,
+      "formalism": 0.065,
+      "interrogation": 0.055,
+      "patience": 0.06
     }
   },
   "log": [
@@ -107,6 +290,166 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout3",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "socrates",
+      "side": "B",
+      "result": "win",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Civic Signal and onto app",
+      "finalIntegrity": 72,
+      "opponentIntegrity": 66,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "appeal_to_authority"
+      ],
+      "bestMove": "You're trying to establish a clear definition of a \"fastest path\" and clarify the intent behind \"passive\" income. However, I'd like to poin…",
+      "xpGained": 410,
+      "lessonsGained": [
+        "avoid:appeal_to_authority",
+        "counter:dcoeam",
+        "counter:193cz3u",
+        "technique:43qv6c"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout8",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "chien-shiung-wu",
+      "side": "B",
+      "result": "loss",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Civic Signal and onto app",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "equivocation",
+        "equivocation"
+      ],
+      "bestMove": "You've done the due diligence of clarifying the criteria, but let's not get lost in the trees. A fastest path implies not just growth poten…",
+      "xpGained": 325,
+      "lessonsGained": [
+        "avoid:equivocation",
+        "counter:13hx6ek",
+        "counter:mgi3es",
+        "counter:13kegpy",
+        "technique:13kegpy",
+        "blind:za1j77"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout12",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "seneca",
+      "side": "B",
+      "result": "loss",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Civic Signal and onto app",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.767,
+      "fallacies": [
+        "false_dilemma",
+        "false_dilemma"
+      ],
+      "bestMove": "You're right that onto and Civic Signal require significant resources to scale, and I'll acknowledge that a working prototype is essential…",
+      "xpGained": 322,
+      "lessonsGained": [
+        "avoid:false_dilemma",
+        "counter:1y5fa5e",
+        "counter:1phw1un",
+        "counter:1wj3pw1",
+        "technique:1phw1un",
+        "blind:1k03f7h"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout16",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "thomas-edison",
+      "side": "A",
+      "result": "win",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Civic Signal and onto app",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 70,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "appeal_to_authority"
+      ],
+      "bestMove": "\"But, I'd argue that onto's prototype, although still in development, has a clear potential for scalability and growth, whereas a podcast l…",
+      "xpGained": 328,
+      "lessonsGained": [
+        "technique:vfq0ca"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_authority"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout17",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "sun-tzu",
+      "side": "A",
+      "result": "win",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Civic Signal and onto app",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 69,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "false_dilemma"
+      ],
+      "bestMove": "A wise counterpoint. While it's true that onto and Civic Signal are ambitious undertakings, I'd argue that their potential for scalability…",
+      "xpGained": 328,
+      "lessonsGained": [
+        "technique:yix6o5"
+      ],
+      "lessonsReinforced": [
+        "avoid:false_dilemma"
+      ],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout18",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "blaise-pascal",
+      "side": "A",
+      "result": "win",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Civic Signal and onto app",
+      "finalIntegrity": 84,
+      "opponentIntegrity": 72,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "false_dilemma"
+      ],
+      "bestMove": "I'll cut to the few products worth perfecting, design from the experience backward, and control the whole. To achieve $2,000/month of stead…",
+      "xpGained": 358,
+      "lessonsGained": [
+        "counter:1mbihc7",
+        "technique:w1tuhz"
+      ],
+      "lessonsReinforced": [
+        "avoid:false_dilemma"
+      ],
+      "levelAfter": 3
     }
   ]
 }

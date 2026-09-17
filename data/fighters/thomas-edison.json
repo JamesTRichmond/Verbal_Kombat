@@ -3,14 +3,14 @@
   "slug": "thomas-edison",
   "name": "Thomas Edison",
   "wing": "builders",
-  "xp": 732,
-  "level": 1,
+  "xp": 2786,
+  "level": 3,
   "record": {
-    "matches": 2,
-    "wins": 2,
-    "losses": 0,
+    "matches": 8,
+    "wins": 4,
+    "losses": 4,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 9
   },
   "lessons": [
     {
@@ -30,15 +30,262 @@
       "learnedFrom": "camp-2026-09-16-s42-b44",
       "learnedAt": "2026-09-16T12:00:43.000Z",
       "seen": 1
+    },
+    {
+      "id": "avoid:false_dilemma",
+      "kind": "avoid_fallacy",
+      "text": "Never use false dilemma (Presenting two options as the only options). It cost you against Socrates.",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout4",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 4
+    },
+    {
+      "id": "avoid:appeal_to_authority",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to authority (Citing status rather than evidence or reasoning). It cost you against Socrates.",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout4",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 2
+    },
+    {
+      "id": "avoid:equivocation",
+      "kind": "avoid_fallacy",
+      "text": "Never use equivocation (Shifting the meaning of a key term mid-argument). It cost you against Socrates.",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout4",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1usttvd",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Socrates broke through with \"To determine James's fastest path to $2,000/month of steady passive or recurring income, let's first clarify what we mean by \"steady.\" Is i…\" (A clear and well-structured opening argument that effectively sets the stage for discussion).",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout4",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1057260",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Socrates broke through with \"You've introduced a pertinent study that highlights the potential drawbacks of event-based business models. However, let's not assume that…\" (The speaker effectively counters the opposing argument by highlighting the potential for onto's model to adapt and thrive in an unpredictable market).",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout4",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1057260",
+      "kind": "technique",
+      "text": "Borrow this pattern from Socrates: \"You've introduced a pertinent study that highlights the potential drawbacks of event-based business models. However, let's not assume that…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout4",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:9tqz5k",
+      "kind": "blind_spot",
+      "text": "Your moves against Socrates were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout4",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:10fi8pr",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Chien-Shiung Wu broke through with \"To determine the fastest path to a steady passive or recurring income for James, we must first acknowledge the importance of his downside t…\" (The argument presents a clear and structured plan for achieving a steady passive income, but lacks concrete evidence for its feasibility).",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout9",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1q722ad",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Chien-Shiung Wu broke through with \"A compelling counterpoint. You're right to highlight the market size and growth rate of the covenant monitoring segment, which does pose ch…\" (The speaker effectively counters the opposing claim by highlighting the limitations of onto's revenue model and the stability of CovenantWatch's subscription-based model).",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout9",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:t7n9bu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Chien-Shiung Wu broke through with \"A well-researched point that highlights the importance of customer retention for onto's events app. The Gartner report does indeed suggest…\" (CovenantWatch's scalability is more efficient due to its revenue growth tied to covenant monitoring).",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout9",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:t7n9bu",
+      "kind": "technique",
+      "text": "Borrow this pattern from Chien-Shiung Wu: \"A well-researched point that highlights the importance of customer retention for onto's events app. The Gartner report does indeed suggest…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout9",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:nybymp",
+      "kind": "blind_spot",
+      "text": "Your moves against Chien-Shiung Wu were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "chien-shiung-wu",
+      "learnedFrom": "live-council-001-2k-passive-bout9",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:xjpoo5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Seneca broke through with \"To begin, let's reexamine James's assumption that his goal is to generate $2,000/month of steady passive or recurring income, unconditional…\" (The argument effectively challenges the opponent's assumption and expands the scope of the discussion).",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout13",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1naxh40",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Seneca broke through with \"A perceptive challenge, one that highlights the importance of parsimony in business-building. However, I'd like to introduce a counterpoint…\" (The speaker effectively counters the opposing argument with evidence from a credible source, but the rebuttal is not entirely convincing due to some inconsistencies in the comparison).",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout13",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:qfh1iw",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Seneca broke through with \"A compelling argument that highlights the importance of diversification and market size. However, I'd like to push back with a question: do…\" (The speaker effectively counters the opposing argument with a nuanced critique, but falls short of decisively dismantling it).",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout13",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:qfh1iw",
+      "kind": "technique",
+      "text": "Borrow this pattern from Seneca: \"A compelling argument that highlights the importance of diversification and market size. However, I'd like to push back with a question: do…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout13",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1lfgd1n",
+      "kind": "blind_spot",
+      "text": "Your moves against Seneca were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout13",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:zvkws6",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Steve Jobs broke through with \"\"Let's focus on what truly matters: James's freedom to build. He's stuck in a day job, but with the right strategy, he can break free and u…\" (A well-structured plan to achieve financial independence through a strategic combination of existing products).",
+      "opponent": "steve-jobs",
+      "learnedFrom": "live-council-001-2k-passive-bout16",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:vfq0ca",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Steve Jobs broke through with \"\"But, I'd argue that onto's prototype, although still in development, has a clear potential for scalability and growth, whereas a podcast l…\" (The argument effectively counters the opposing claim by highlighting onto's scalability and growth potential, as well as its tangible revenue streams).",
+      "opponent": "steve-jobs",
+      "learnedFrom": "live-council-001-2k-passive-bout16",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:vfq0ca",
+      "kind": "technique",
+      "text": "Borrow this pattern from Steve Jobs: \"\"But, I'd argue that onto's prototype, although still in development, has a clear potential for scalability and growth, whereas a podcast l…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "steve-jobs",
+      "learnedFrom": "live-council-001-2k-passive-bout16",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1v3zke6",
+      "kind": "blind_spot",
+      "text": "Your moves against Steve Jobs were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "steve-jobs",
+      "learnedFrom": "live-council-001-2k-passive-bout16",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:9tge4i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sun Tzu broke through with \"You'd like to bundle Brain Fog and AgentiCubed as the winning combination, but I must point out that your podcast, Brain Fog, is listed as…\" (Utterance effectively challenges the opponent's proposal by pointing out a critical weakness in their plan).",
+      "opponent": "sun-tzu",
+      "learnedFrom": "live-council-001-2k-passive-bout19",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:qulcbe",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sun Tzu broke through with \"Your integration plan sounds plausible, but I still have concerns about the predictability and stability of income from podcast advertising…\" (The argument raises valid concerns about the volatility of podcast advertising revenue, but fails to decisively dismantle the opposing claim).",
+      "opponent": "sun-tzu",
+      "learnedFrom": "live-council-001-2k-passive-bout19",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1u8t1h4",
+      "kind": "technique",
+      "text": "Your winning pattern: \"A well-reasoned counterpoint, highlighting the potential volatility of podcast advertising revenue. However, I'd like to point out that Cov…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sun-tzu",
+      "learnedFrom": "live-council-001-2k-passive-bout19",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:18mj6lw",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Blaise Pascal broke through with \"Premise 1: You accurately highlight the potential unpredictability of revenue for a platform like Verbal Kombat, relying on user engagement…\" (The argument attempts to address the unpredictability of Verbal Kombat's revenue model by proposing the integration of AI-powered content generation, but fails to provide concrete evidence of its feasibility and effectiveness).",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout20",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1rp4h1k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Blaise Pascal broke through with \"Premise 1: While it's true that developing and launching Verbal Kombat requires significant upfront effort and resources, Premise 2: Invest…\" (The argument presents a nuanced and incremental approach to developing Verbal Kombat, addressing potential drawbacks and offering a more stable revenue stream).",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout20",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:fk9ze1",
+      "kind": "technique",
+      "text": "Your winning pattern: \"I disagree. While it's true that James wants financial stability and flexibility, I'd argue that a platform like Verbal Kombat, although it…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout20",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
     }
   ],
   "strengths": {
-    "fallacyWards": {},
+    "fallacyWards": {
+      "false_dilemma": 0.2,
+      "appeal_to_authority": 0.1,
+      "equivocation": 0.1
+    },
     "traitGains": {
-      "empiricism": 0.01,
-      "formalism": 0.01,
-      "interrogation": 0.005,
-      "patience": 0.01
+      "empiricism": 0.08,
+      "formalism": 0.08,
+      "interrogation": 0.075,
+      "patience": 0.08
     }
   },
   "log": [
@@ -83,6 +330,172 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout4",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "socrates",
+      "side": "B",
+      "result": "loss",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Create and launch a successful podcast, Brain Fog, and develop a niche-specific AI-powered content generation tool, AgentiCubed, to complement it.",
+      "finalIntegrity": 69,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.767,
+      "fallacies": [
+        "false_dilemma",
+        "appeal_to_authority",
+        "false_dilemma",
+        "equivocation"
+      ],
+      "xpGained": 297,
+      "lessonsGained": [
+        "avoid:false_dilemma",
+        "avoid:appeal_to_authority",
+        "avoid:equivocation",
+        "counter:1usttvd",
+        "counter:1057260",
+        "technique:1057260",
+        "blind:9tqz5k"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout9",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "chien-shiung-wu",
+      "side": "B",
+      "result": "loss",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Create and launch a successful podcast, Brain Fog, and develop a niche-specific AI-powered content generation tool, AgentiCubed, to complement it.",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 70,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "false_dilemma"
+      ],
+      "bestMove": "However, your premise assumes that CovenantWatch can indeed tap into a lucrative market niche, but I'd like to point out that the market fo…",
+      "xpGained": 338,
+      "lessonsGained": [
+        "counter:10fi8pr",
+        "counter:1q722ad",
+        "counter:t7n9bu",
+        "technique:t7n9bu",
+        "blind:nybymp"
+      ],
+      "lessonsReinforced": [
+        "avoid:false_dilemma"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout13",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "seneca",
+      "side": "B",
+      "result": "loss",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Create and launch a successful podcast, Brain Fog, and develop a niche-specific AI-powered content generation tool, AgentiCubed, to complement it.",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 69,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "false_dilemma"
+      ],
+      "bestMove": "I'd like to challenge this assumption by pointing out that the need for scalability and growth doesn't necessarily imply that a more comple…",
+      "xpGained": 338,
+      "lessonsGained": [
+        "counter:xjpoo5",
+        "counter:1naxh40",
+        "counter:qfh1iw",
+        "technique:qfh1iw",
+        "blind:1lfgd1n"
+      ],
+      "lessonsReinforced": [
+        "avoid:false_dilemma"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout16",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "steve-jobs",
+      "side": "B",
+      "result": "loss",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Create and launch a successful podcast, Brain Fog, and develop a niche-specific AI-powered content generation tool, AgentiCubed, to complement it.",
+      "finalIntegrity": 70,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.767,
+      "fallacies": [
+        "false_dilemma",
+        "appeal_to_authority",
+        "equivocation"
+      ],
+      "xpGained": 251,
+      "lessonsGained": [
+        "counter:zvkws6",
+        "counter:vfq0ca",
+        "technique:vfq0ca",
+        "blind:1v3zke6"
+      ],
+      "lessonsReinforced": [
+        "avoid:false_dilemma",
+        "avoid:appeal_to_authority",
+        "avoid:equivocation"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout19",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "sun-tzu",
+      "side": "A",
+      "result": "win",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Create and launch a successful podcast, Brain Fog, and develop a niche-specific AI-powered content generation tool, AgentiCubed, to complement it.",
+      "finalIntegrity": 72,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [],
+      "bestMove": "A well-reasoned counterpoint, highlighting the potential volatility of podcast advertising revenue. However, I'd like to point out that Cov…",
+      "xpGained": 415,
+      "lessonsGained": [
+        "counter:9tge4i",
+        "counter:qulcbe",
+        "technique:1u8t1h4"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout20",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "blaise-pascal",
+      "side": "A",
+      "result": "win",
+      "topic": "What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?",
+      "stance": "Create and launch a successful podcast, Brain Fog, and develop a niche-specific AI-powered content generation tool, AgentiCubed, to complement it.",
+      "finalIntegrity": 73,
+      "opponentIntegrity": 56,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [],
+      "bestMove": "I disagree. While it's true that James wants financial stability and flexibility, I'd argue that a platform like Verbal Kombat, although it…",
+      "xpGained": 415,
+      "lessonsGained": [
+        "counter:18mj6lw",
+        "counter:1rp4h1k",
+        "technique:fk9ze1"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }
