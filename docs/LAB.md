@@ -21,6 +21,7 @@ npm run lab -- train --offline [--bouts N] [--seed S] [--pairing random|weakest-
 - Without `--offline` the lab calls an OpenAI-compatible endpoint (`OpenAiChatClient`), configured through these environment variables:
   - `VK_API_KEY` (or `OPENAI_API_KEY`)
   - `VK_BASE_URL` (or `OPENAI_BASE_URL`)
+  - `VK_REASONING_TOKENS` — extended-thinking budget per call, added on top of each answer (OpenRouter `reasoning`); `VK_PROPOSER_REASONING_TOKENS` sets it for proposals only
   - `VK_PROPOSER_MODEL` — optional stronger model used only for the proposals (the bouts keep `VK_MODEL`)
   - `VK_MODEL` (or `OPENAI_MODEL`, default `gpt-4o-mini`)
   - `VK_JUDGE_MODELS`: a comma-separated list. Naming more than one model creates an `EnsembleJudge` of `LlmJudge`s.

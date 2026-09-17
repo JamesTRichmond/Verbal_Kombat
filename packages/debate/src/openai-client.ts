@@ -19,6 +19,13 @@ export interface OpenAiChatClientOptions {
   model: string;
   /** Optional fetch override (tests inject a mock). */
   fetch?: typeof fetch;
+  /**
+   * Extended thinking (OpenRouter / Anthropic-style `reasoning`). The budget
+   * is added on top of every call's max_tokens so the answer is never
+   * squeezed out by the thinking, and temperature is dropped because
+   * reasoning models fix it.
+   */
+  reasoning?: { maxTokens?: number; effort?: 'low' | 'medium' | 'high' | 'xhigh' };
 }
 
 interface ChatCompletionResponse {
@@ -99,11 +106,26 @@ export class OpenAiChatClient implements ChatClient {
   }
 
   private body(messages: ChatMessage[], callOpts: ChatCallOptions | undefined, stream: boolean) {
+    const answerTokens = callOpts?.maxTokens ?? 300;
+    const reasoning = this.opts.reasoning;
+    if (!reasoning) {
+      return {
+        model: this.opts.model,
+        messages: messages.map((m) => ({ role: m.role, content: m.content })),
+        max_tokens: answerTokens,
+        temperature: callOpts?.temperature ?? 0.8,
+        stream,
+      };
+    }
+    const budget = reasoning.maxTokens ?? 0;
     return {
       model: this.opts.model,
       messages: messages.map((m) => ({ role: m.role, content: m.content })),
-      max_tokens: callOpts?.maxTokens ?? 300,
-      temperature: callOpts?.temperature ?? 0.8,
+      max_tokens: answerTokens + budget,
+      reasoning: {
+        ...(reasoning.maxTokens !== undefined ? { max_tokens: reasoning.maxTokens } : {}),
+        ...(reasoning.effort !== undefined ? { effort: reasoning.effort } : {}),
+      },
       stream,
     };
   }
