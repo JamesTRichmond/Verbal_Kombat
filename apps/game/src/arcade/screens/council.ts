@@ -231,7 +231,9 @@ export class CrownScreen implements Screen {
       text(g, desc, x + 6, y, { color: C.white });
       text(
         g,
-        `C_K=${c.toFixed(2)}  P'=${c.toFixed(2)}*${o.probability.toFixed(2)}+${(1 - c).toFixed(2)}*${SKEPTICAL_PRIOR}=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`,
+        o.riskSupport > 0
+          ? `C_K=${c.toFixed(2)}  RISK SUPPORT=${o.riskSupport.toFixed(2)}  P'=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`
+          : `C_K=${c.toFixed(2)}  P'=${c.toFixed(2)}*${o.probability.toFixed(2)}+${(1 - c).toFixed(2)}*${SKEPTICAL_PRIOR}=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`,
         x + 10,
         y + 7,
         { color: C.grey },

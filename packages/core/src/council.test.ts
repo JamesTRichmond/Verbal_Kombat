@@ -29,7 +29,12 @@ function replay(intA: number, intB: number, fallA = 0, entries: TranscriptEntry[
   };
 }
 
-function hit(text: string, force: number, fallacies: TranscriptEntry['verdict']['fallacies'] = []): TranscriptEntry {
+function hit(
+  text: string,
+  force: number,
+  fallacies: TranscriptEntry['verdict']['fallacies'] = [],
+  rebuttalDirection?: TranscriptEntry['verdict']['rebuttalDirection'],
+): TranscriptEntry {
   return {
     argument: { id: 'u1', matchId: 'r', side: 'B', text, seq: 1, t: 1 },
     verdict: {
@@ -41,6 +46,7 @@ function hit(text: string, force: number, fallacies: TranscriptEntry['verdict'][
       structure: 0.7,
       fallacies,
       rebuttalForce: force,
+      ...(rebuttalDirection ? { rebuttalDirection } : {}),
       rationale: text,
     },
     combat: [],
@@ -182,8 +188,40 @@ describe('proposal-aware outcome credibility', () => {
     const plain = scoreProposal(p, OWNER_DRAFT_PROFILE, 0.2, 0.2, [1]);
     const warned = scoreProposal(p, OWNER_DRAFT_PROFILE, 0.2, 0.2, oc);
     expect(oc[0]).toBeGreaterThan(1);
-    expect(warned.outcomes[0]!.credibility).toBeGreaterThan(plain.outcomes[0]!.credibility);
+    expect(warned.outcomes[0]!.riskSupport).toBeGreaterThan(0);
     expect(warned.calibratedEV).toBeLessThan(plain.calibratedEV);
+  });
+
+  it('keeps corroborated low-probability harms monotonic', () => {
+    const p: Proposal = {
+      seat: 's', answer: 'a', reasoning: 'r',
+      outcomes: [{ description: 'rare regulatory fine', probability: 0.05, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the rare regulatory fine is a genuine risk', 0.8, [], 'supports')]);
+    const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(scoreProposal(p, OWNER_DRAFT_PROFILE, 0.8, 0.2, oc).calibratedEV)
+      .toBeLessThan(scoreProposal(p, OWNER_DRAFT_PROFILE, 0.8, 0.2, [1]).calibratedEV);
+  });
+
+  it('uses the judge direction when a harmful outcome is explicitly challenged', () => {
+    const p: Proposal = {
+      seat: 's', answer: 'a', reasoning: 'r',
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.8, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the regulatory fine risk is real', 0.8, [], 'challenges')]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])[0]).toBeLessThan(1);
+  });
+
+  it('does not target sibling outcomes using only shared proposal vocabulary', () => {
+    const p: Proposal = {
+      seat: 's', answer: 'a', reasoning: 'r',
+      outcomes: [
+        { description: 'Contract converts to a full-time AI role', probability: 0.5, impacts: { career: 1 } },
+        { description: 'Contract ends with no follow-on', probability: 0.5, impacts: { income: -1 } },
+      ],
+    };
+    const r = replay(70, 40, 0, [hit('however, this contract premise is weak', 0.8)]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1, 1]);
   });
 
   it('clean rebuttals that dispute harmful outcomes cut their credibility instead of reinforcing them', () => {

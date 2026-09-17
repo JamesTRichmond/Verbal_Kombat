@@ -44,12 +44,13 @@ For each outcome a proposal predicts:
 - `p` = the seat's claimed probability
 - `m` = how much it matters to the owner = Σ (criterion weight × impact), impacts −1..1
 - `c_seat` = credibility the seat earned in its fights (integrity kept, bouts won, fallacies avoided)
-- `c_k` = `c_seat` × per-outcome credibility. Clean opponent rebuttals that name an outcome adjust only that outcome: beneficial outcomes are discounted, while harmful outcomes can be reinforced (so warnings about risk do not accidentally reward the proposal). Fallacious swings do not count.
+- `c_k` = `c_seat` × per-outcome credibility. Clean opponent rebuttals that name an outcome adjust only that outcome. The judge records whether a rebuttal supports or challenges the claim: challenges discount it, while corroborating harmful-outcome warnings add risk support. Fallacious swings do not count.
 
 Calibration:
 
 - `p' = c_k·p + (1−c_k)·0.2` — a broken *outcome* regresses toward doubt
 - `m' = c_k·m` — a broken outcome can't vouch for its own stakes
+- Corroborated downside separately moves both `p'` and `m'` toward full risk, so a warning remains harmful even when the claimed probability is below the skeptical prior.
 - **EV = Σ p' × m'** — highest wins
 
 `fightsChangedTheAnswer` flags when the loudest raw claim lost the crown. That flag is the product's proof of value.
