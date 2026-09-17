@@ -109,16 +109,29 @@ export interface ProposalScore {
   credibility: number;
   calibratedEV: number;
   outcomes: ScoredOutcome[];
+  /** Raw probabilities summed above 1 and were scaled down — the seat overclaimed. */
+  probabilityOverflow?: number;
+}
+
+/**
+ * A proposal's outcomes are alternatives, so their probabilities cannot sum
+ * above 1. Models routinely break that (three outcomes at 0.6/0.4/0.1), which
+ * inflates EV. Scale them back proportionally and report the overflow rather
+ * than silently trusting arithmetic that cannot be true.
+ */
+export function normalizedProbabilities(outcomes: ProposalOutcome[]): { probabilities: number[]; overflow: number } {
+  const raw = outcomes.map((o) => clamp(o.probability, 0, 1));
+  const total = raw.reduce((s, p) => s + p, 0);
+  if (total <= 1) return { probabilities: raw, overflow: 0 };
+  return { probabilities: raw.map((p) => p / total), overflow: round(total - 1, 3) };
 }
 
 export const SKEPTICAL_PRIOR = 0.2;
 
 /** Σ p × m — the owner-weighted expected value the proposal claims for itself. */
 export function claimedExpectedValue(proposal: Proposal, profile: ValueProfile): number {
-  return proposal.outcomes.reduce(
-    (s, o) => s + clamp(o.probability, 0, 1) * mattersScore(profile, o.impacts),
-    0,
-  );
+  const { probabilities } = normalizedProbabilities(proposal.outcomes);
+  return proposal.outcomes.reduce((s, o, i) => s + probabilities[i]! * mattersScore(profile, o.impacts), 0);
 }
 
 export function scoreProposal(
@@ -128,8 +141,9 @@ export function scoreProposal(
   skepticalPrior = SKEPTICAL_PRIOR,
 ): ProposalScore {
   const c = clamp(credibility, 0, 1);
-  const outcomes: ScoredOutcome[] = proposal.outcomes.map((o) => {
-    const p = clamp(o.probability, 0, 1);
+  const { probabilities, overflow } = normalizedProbabilities(proposal.outcomes);
+  const outcomes: ScoredOutcome[] = proposal.outcomes.map((o, i) => {
+    const p = probabilities[i]!;
     const m = mattersScore(profile, o.impacts);
     return {
       ...o,
@@ -144,6 +158,7 @@ export function scoreProposal(
     credibility: c,
     calibratedEV: outcomes.reduce((s, o) => s + o.calibratedProbability * o.calibratedMatters, 0),
     outcomes,
+    ...(overflow > 0 ? { probabilityOverflow: overflow } : {}),
   };
 }
 
@@ -290,6 +305,11 @@ export function crownCouncil(
     loudestClaim: loudest.seat,
     fightsChangedTheAnswer: loudest.seat !== champion.seat,
   };
+}
+
+function round(x: number, d = 3): number {
+  const m = 10 ** d;
+  return Math.round(x * m) / m;
 }
 
 function clamp(x: number, lo: number, hi: number): number {

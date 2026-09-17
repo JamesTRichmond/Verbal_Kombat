@@ -111,3 +111,26 @@ describe('expected value for the owner', () => {
     expect(v.fightsChangedTheAnswer).toBe(true);
   });
 });
+
+describe('probabilities that cannot be true', () => {
+  const p = (probs: number[]): Proposal => ({
+    seat: 's', answer: 'a', reasoning: '',
+    outcomes: probs.map((probability, i) => ({ description: `o${i}`, probability, impacts: { passive: 1 } })),
+  });
+
+  it('scales overclaimed probabilities back to 1 and flags the overflow', () => {
+    const honest = scoreProposal(p([0.6, 0.3]), OWNER_DRAFT_PROFILE, 1);
+    const inflated = scoreProposal(p([0.6, 0.4, 0.1]), OWNER_DRAFT_PROFILE, 1);
+    expect(honest.probabilityOverflow).toBeUndefined();
+    expect(inflated.probabilityOverflow).toBeCloseTo(0.1);
+    const total = inflated.outcomes.reduce((s, o) => s + o.calibratedProbability, 0);
+    expect(total).toBeCloseTo(1);
+    // The inflated claim no longer outscores an honest one purely by arithmetic.
+    expect(inflated.claimedEV).toBeLessThanOrEqual(1);
+  });
+
+  it('leaves honest proposals untouched', () => {
+    const s = scoreProposal(p([0.5, 0.2]), OWNER_DRAFT_PROFILE, 1);
+    expect(s.outcomes.map((o) => o.calibratedProbability)).toEqual([0.5, 0.2]);
+  });
+});
