@@ -3,19 +3,311 @@
   "slug": "jean-jacques-rousseau",
   "name": "Jean-Jacques Rousseau",
   "wing": "society_shapers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1408,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
+    "losses": 5,
+    "draws": 1,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:bbetqf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Katherine Johnson broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b32",
+      "learnedAt": "2026-09-17T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16zbtl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Katherine Johnson broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b32",
+      "learnedAt": "2026-09-17T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:bbetqf",
+      "kind": "technique",
+      "text": "Borrow this pattern from Katherine Johnson: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b32",
+      "learnedAt": "2026-09-17T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:17ow2h4",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Katherine Johnson was \"I just feel a four-day week keeps output and improves lives, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b32",
+      "learnedAt": "2026-09-17T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:10u7iwr",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Isaac Asimov broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b71",
+      "learnedAt": "2026-09-17T12:01:10.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:10u7iwr",
+      "kind": "technique",
+      "text": "Borrow this pattern from Isaac Asimov: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b71",
+      "learnedAt": "2026-09-17T12:01:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1r8e03i",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Isaac Asimov was \"Honestly renewables and storage are the better path.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b71",
+      "learnedAt": "2026-09-17T12:01:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:x03o21",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Emmy Noether broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "emmy-noether",
+      "learnedFrom": "camp-2026-09-17-s2026-b170",
+      "learnedAt": "2026-09-17T12:02:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mmqi93",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Emmy Noether broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "emmy-noether",
+      "learnedFrom": "camp-2026-09-17-s2026-b170",
+      "learnedAt": "2026-09-17T12:02:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:x03o21",
+      "kind": "technique",
+      "text": "Borrow this pattern from Emmy Noether: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "emmy-noether",
+      "learnedFrom": "camp-2026-09-17-s2026-b170",
+      "learnedAt": "2026-09-17T12:02:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1lbmue7",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Emmy Noether was \"I just feel personal finance should be required, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "emmy-noether",
+      "learnedFrom": "camp-2026-09-17-s2026-b170",
+      "learnedAt": "2026-09-17T12:02:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:14uvbqd",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Venkatraman Ramakrishnan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance should be required, the docume…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b220",
+      "learnedAt": "2026-09-17T12:03:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gfnuuy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Venkatraman Ramakrishnan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b220",
+      "learnedAt": "2026-09-17T12:03:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1gfnuuy",
+      "kind": "technique",
+      "text": "Borrow this pattern from Venkatraman Ramakrishnan: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b220",
+      "learnedAt": "2026-09-17T12:03:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:9kdaub",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Venkatraman Ramakrishnan was \"Honestly personal finance does not need its own required course.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b220",
+      "learnedAt": "2026-09-17T12:03:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:lfoyp7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marcus Aurelius: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-17-s2026-b361",
+      "learnedAt": "2026-09-17T12:06:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1wjwxpo",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Marcus Aurelius was \"I just feel homework adds little beyond class time, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-17-s2026-b361",
+      "learnedAt": "2026-09-17T12:06:00.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.075,
+      "formalism": 0.075,
+      "interrogation": 0.06,
+      "patience": 0.075
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b32",
+      "at": "2026-09-17T12:00:31.000Z",
+      "opponent": "creola-katherine-johnson",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 72,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:bbetqf",
+        "counter:16zbtl",
+        "technique:bbetqf",
+        "blind:17ow2h4"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b71",
+      "at": "2026-09-17T12:01:10.000Z",
+      "opponent": "isaac-asimov",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 43,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 253,
+      "lessonsGained": [
+        "counter:10u7iwr",
+        "technique:10u7iwr",
+        "blind:1r8e03i"
+      ],
+      "lessonsReinforced": [
+        "counter:10u7iwr"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b170",
+      "at": "2026-09-17T12:02:49.000Z",
+      "opponent": "emmy-noether",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:x03o21",
+        "counter:mmqi93",
+        "technique:x03o21",
+        "blind:1lbmue7"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b220",
+      "at": "2026-09-17T12:03:39.000Z",
+      "opponent": "venkatraman-ramakrishnan",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:14uvbqd",
+        "counter:1gfnuuy",
+        "technique:1gfnuuy",
+        "blind:9kdaub"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b361",
+      "at": "2026-09-17T12:06:00.000Z",
+      "opponent": "marcus-aurelius",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 215,
+      "lessonsGained": [
+        "technique:lfoyp7",
+        "blind:1wjwxpo"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b449",
+      "at": "2026-09-17T12:07:28.000Z",
+      "opponent": "segenet-kelemu",
+      "side": "B",
+      "result": "draw",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

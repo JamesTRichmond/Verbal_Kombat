@@ -3,13 +3,13 @@
   "slug": "segenet-kelemu",
   "name": "Segenet Kelemu",
   "wing": "experimenters",
-  "xp": 275,
-  "level": 1,
+  "xp": 1408,
+  "level": 2,
   "record": {
-    "matches": 1,
+    "matches": 6,
     "wins": 0,
-    "losses": 1,
-    "draws": 0,
+    "losses": 5,
+    "draws": 1,
     "fallaciesCommitted": 0
   },
   "lessons": [
@@ -48,14 +48,132 @@
       "learnedFrom": "camp-2026-09-16-s42-b59",
       "learnedAt": "2026-09-16T12:00:58.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:y9aa26",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jane Goodall broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework builds lasting mastery, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jane-goodall",
+      "learnedFrom": "camp-2026-09-17-s2026-b89",
+      "learnedAt": "2026-09-17T12:01:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:lfoyp7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jane Goodall broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jane-goodall",
+      "learnedFrom": "camp-2026-09-17-s2026-b89",
+      "learnedAt": "2026-09-17T12:01:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:lfoyp7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Jane Goodall: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jane-goodall",
+      "learnedFrom": "camp-2026-09-17-s2026-b89",
+      "learnedAt": "2026-09-17T12:01:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:2egke9",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Jane Goodall was \"I just feel homework adds little beyond class time, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "jane-goodall",
+      "learnedFrom": "camp-2026-09-17-s2026-b89",
+      "learnedAt": "2026-09-17T12:01:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1a65jkk",
+      "kind": "technique",
+      "text": "Borrow this pattern from Benjamin Banneker: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-banneker",
+      "learnedFrom": "camp-2026-09-17-s2026-b207",
+      "learnedAt": "2026-09-17T12:03:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:k4h854",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Benjamin Banneker was \"Honestly offices produce better deep work.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "benjamin-banneker",
+      "learnedFrom": "camp-2026-09-17-s2026-b207",
+      "learnedAt": "2026-09-17T12:03:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:8wsog8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Simone de Beauvoir broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-17-s2026-b294",
+      "learnedAt": "2026-09-17T12:04:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:8wsog8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Simone de Beauvoir: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-17-s2026-b294",
+      "learnedAt": "2026-09-17T12:04:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1pzgu0d",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Simone de Beauvoir was \"I just feel a four-day week costs more than it returns, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-17-s2026-b294",
+      "learnedAt": "2026-09-17T12:04:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:kr4klv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Aristotle broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "aristotle",
+      "learnedFrom": "camp-2026-09-17-s2026-b321",
+      "learnedAt": "2026-09-17T12:05:20.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:6h5qbp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Aristotle broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "aristotle",
+      "learnedFrom": "camp-2026-09-17-s2026-b321",
+      "learnedAt": "2026-09-17T12:05:20.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:6h5qbp",
+      "kind": "technique",
+      "text": "Borrow this pattern from Aristotle: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "aristotle",
+      "learnedFrom": "camp-2026-09-17-s2026-b321",
+      "learnedAt": "2026-09-17T12:05:20.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:h7x7fb",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Aristotle was \"I just feel nuclear power belongs in a clean grid, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "aristotle",
+      "learnedFrom": "camp-2026-09-17-s2026-b321",
+      "learnedAt": "2026-09-17T12:05:20.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {},
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015
+      "empiricism": 0.075,
+      "formalism": 0.075,
+      "interrogation": 0.045,
+      "patience": 0.06
     }
   },
   "log": [
@@ -81,6 +199,115 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b89",
+      "at": "2026-09-17T12:01:28.000Z",
+      "opponent": "jane-goodall",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:y9aa26",
+        "counter:lfoyp7",
+        "technique:lfoyp7",
+        "blind:2egke9"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b207",
+      "at": "2026-09-17T12:03:26.000Z",
+      "opponent": "benjamin-banneker",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 83,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 215,
+      "lessonsGained": [
+        "technique:1a65jkk",
+        "blind:k4h854"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b294",
+      "at": "2026-09-17T12:04:53.000Z",
+      "opponent": "simone-de-beauvoir",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 69,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:8wsog8",
+        "technique:8wsog8",
+        "blind:1pzgu0d"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b321",
+      "at": "2026-09-17T12:05:20.000Z",
+      "opponent": "aristotle",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 283,
+      "lessonsGained": [
+        "counter:kr4klv",
+        "counter:6h5qbp",
+        "technique:6h5qbp",
+        "blind:h7x7fb"
+      ],
+      "lessonsReinforced": [
+        "counter:kr4klv"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b449",
+      "at": "2026-09-17T12:07:28.000Z",
+      "opponent": "jean-jacques-rousseau",
+      "side": "A",
+      "result": "draw",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 2
     }
   ]
 }

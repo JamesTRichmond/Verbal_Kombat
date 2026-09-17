@@ -3,19 +3,309 @@
   "slug": "kant",
   "name": "Immanuel Kant",
   "wing": "questioners",
-  "xp": 0,
-  "level": 1,
+  "xp": 2222,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
-    "draws": 0,
+    "matches": 6,
+    "wins": 4,
+    "losses": 1,
+    "draws": 1,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:kr4klv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Wolfgang Amadeus Mozart broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "mozart",
+      "learnedFrom": "camp-2026-09-17-s2026-b12",
+      "learnedAt": "2026-09-17T12:00:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gavq4z",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Wolfgang Amadeus Mozart broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "mozart",
+      "learnedFrom": "camp-2026-09-17-s2026-b12",
+      "learnedAt": "2026-09-17T12:00:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:szk3kb",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "mozart",
+      "learnedFrom": "camp-2026-09-17-s2026-b12",
+      "learnedAt": "2026-09-17T12:00:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15t1oe9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hedy Lamarr broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b123",
+      "learnedAt": "2026-09-17T12:02:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:3yck6m",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because homework builds lasting mastery, the documented cases sho…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b123",
+      "learnedAt": "2026-09-17T12:02:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7tjsga",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b172",
+      "learnedAt": "2026-09-17T12:02:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:sgipul",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tool lending belongs in libraries, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b172",
+      "learnedAt": "2026-09-17T12:02:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1d9zdjl",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b172",
+      "learnedAt": "2026-09-17T12:02:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:6jg2g5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Voltaire broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance should be required, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-17-s2026-b265",
+      "learnedAt": "2026-09-17T12:04:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:182c2r7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Voltaire broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-17-s2026-b265",
+      "learnedAt": "2026-09-17T12:04:24.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:182c2r7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Voltaire: \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-17-s2026-b265",
+      "learnedAt": "2026-09-17T12:04:24.000Z",
+      "seen": 2
+    },
+    {
+      "id": "blind:dagci8",
+      "kind": "blind_spot",
+      "text": "Your moves against Voltaire were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-17-s2026-b265",
+      "learnedAt": "2026-09-17T12:04:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:q1269g",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bennet Omalu broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-17-s2026-b352",
+      "learnedAt": "2026-09-17T12:05:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pavtnn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bennet Omalu broke through with \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-17-s2026-b352",
+      "learnedAt": "2026-09-17T12:05:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:i0wybb",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-17-s2026-b352",
+      "learnedAt": "2026-09-17T12:05:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:9cwrna",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Barbara McClintock broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-17-s2026-b477",
+      "learnedAt": "2026-09-17T12:07:56.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "patience": 0.05,
+      "interrogation": 0.04
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b12",
+      "at": "2026-09-17T12:00:11.000Z",
+      "opponent": "mozart",
+      "side": "A",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 60,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 429,
+      "lessonsGained": [
+        "counter:kr4klv",
+        "counter:1gavq4z",
+        "technique:szk3kb"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b123",
+      "at": "2026-09-17T12:02:02.000Z",
+      "opponent": "hedy-lamarr",
+      "side": "A",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 77,
+      "opponentIntegrity": 61,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because homework builds lasting mastery, the documented cases sho…",
+      "xpGained": 393,
+      "lessonsGained": [
+        "counter:15t1oe9",
+        "technique:3yck6m"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b172",
+      "at": "2026-09-17T12:02:51.000Z",
+      "opponent": "hypatia",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 58,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:7tjsga",
+        "counter:sgipul",
+        "technique:1d9zdjl"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b265",
+      "at": "2026-09-17T12:04:24.000Z",
+      "opponent": "voltaire",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…",
+      "xpGained": 337,
+      "lessonsGained": [
+        "counter:6jg2g5",
+        "counter:182c2r7",
+        "technique:182c2r7",
+        "blind:dagci8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b352",
+      "at": "2026-09-17T12:05:51.000Z",
+      "opponent": "bennet-ifeakandu-omalu",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 44,
+      "opponentIntegrity": 42,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:q1269g",
+        "counter:1pavtnn",
+        "technique:i0wybb"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b477",
+      "at": "2026-09-17T12:07:56.000Z",
+      "opponent": "barbara-mcclintock",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 53,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…",
+      "xpGained": 223,
+      "lessonsGained": [
+        "counter:9cwrna"
+      ],
+      "lessonsReinforced": [
+        "counter:182c2r7",
+        "technique:182c2r7"
+      ],
+      "levelAfter": 3
+    }
+  ]
 }

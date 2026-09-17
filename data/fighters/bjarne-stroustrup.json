@@ -3,14 +3,14 @@
   "slug": "bjarne-stroustrup",
   "name": "Bjarne Stroustrup",
   "wing": "builders",
-  "xp": 1318,
-  "level": 2,
+  "xp": 2083,
+  "level": 3,
   "record": {
-    "matches": 4,
-    "wins": 4,
-    "losses": 0,
+    "matches": 6,
+    "wins": 5,
+    "losses": 1,
     "draws": 0,
-    "fallaciesCommitted": 5
+    "fallaciesCommitted": 6
   },
   "lessons": [
     {
@@ -93,19 +93,101 @@
       "learnedFrom": "camp-2026-09-16-s42-b57",
       "learnedAt": "2026-09-16T12:00:56.000Z",
       "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Judit Polgár.",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b368",
+      "learnedAt": "2026-09-17T12:06:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13p8hj3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Judit Polgár broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b368",
+      "learnedAt": "2026-09-17T12:06:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tyaiuz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Judit Polgár broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b368",
+      "learnedAt": "2026-09-17T12:06:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Judit Polgár broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b368",
+      "learnedAt": "2026-09-17T12:06:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:13p8hj3",
+      "kind": "technique",
+      "text": "Borrow this pattern from Judit Polgár: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b368",
+      "learnedAt": "2026-09-17T12:06:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:urjad0",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Judit Polgár was \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b368",
+      "learnedAt": "2026-09-17T12:06:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:6jg2g5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ibn Battuta broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance should be required, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b436",
+      "learnedAt": "2026-09-17T12:07:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:182c2r7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ibn Battuta broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b436",
+      "learnedAt": "2026-09-17T12:07:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:x03o21",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b436",
+      "learnedAt": "2026-09-17T12:07:15.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
       "slippery_slope": 0.05,
       "appeal_to_ignorance": 0.15000000000000002,
-      "appeal_to_popularity": 0.05
+      "appeal_to_popularity": 0.05,
+      "appeal_to_emotion": 0.05
     },
     "traitGains": {
-      "empiricism": 0.02,
-      "formalism": 0.02,
-      "interrogation": 0.02,
-      "patience": 0.01
+      "empiricism": 0.04,
+      "formalism": 0.04,
+      "interrogation": 0.04,
+      "patience": 0.03
     }
   },
   "log": [
@@ -210,6 +292,57 @@
         "avoid:appeal_to_ignorance"
       ],
       "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b368",
+      "at": "2026-09-17T12:06:07.000Z",
+      "opponent": "judit-polgar",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 69,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 342,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:13p8hj3",
+        "counter:tyaiuz",
+        "counter:19pgg8q",
+        "technique:13p8hj3",
+        "blind:urjad0"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b436",
+      "at": "2026-09-17T12:07:15.000Z",
+      "opponent": "ibn-battuta",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 30,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:6jg2g5",
+        "counter:182c2r7",
+        "technique:x03o21"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }

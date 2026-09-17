@@ -3,19 +3,239 @@
   "slug": "daniel-afedzi-akyeampong",
   "name": "Daniel Afedzi Akyeampong",
   "wing": "pattern_seers",
-  "xp": 0,
-  "level": 1,
+  "xp": 2278,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
+    "matches": 6,
+    "wins": 6,
     "losses": 0,
     "draws": 0,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "paul-morphy",
+      "learnedFrom": "camp-2026-09-17-s2026-b28",
+      "learnedAt": "2026-09-17T12:00:27.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:f1cx9n",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Archimedes broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "archimedes",
+      "learnedFrom": "camp-2026-09-17-s2026-b101",
+      "learnedAt": "2026-09-17T12:01:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:5kvt6",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Archimedes broke through with \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week keeps output and improves lives, the docu…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "archimedes",
+      "learnedFrom": "camp-2026-09-17-s2026-b101",
+      "learnedAt": "2026-09-17T12:01:40.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:170c1bx",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "archimedes",
+      "learnedFrom": "camp-2026-09-17-s2026-b101",
+      "learnedAt": "2026-09-17T12:01:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1a65jkk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Magnus Carlsen broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b151",
+      "learnedAt": "2026-09-17T12:02:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:16zat2p",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b151",
+      "learnedAt": "2026-09-17T12:02:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1jki1u2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Plato broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week keeps output and improves lives…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "plato",
+      "learnedFrom": "camp-2026-09-17-s2026-b218",
+      "learnedAt": "2026-09-17T12:03:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:5bpx14",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week costs more than it returns, the…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "plato",
+      "learnedFrom": "camp-2026-09-17-s2026-b218",
+      "learnedAt": "2026-09-17T12:03:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t52uzl",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "johann-wolfgang-von-goethe",
+      "learnedFrom": "camp-2026-09-17-s2026-b462",
+      "learnedAt": "2026-09-17T12:07:41.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.03,
+      "formalism": 0.03,
+      "interrogation": 0.03,
+      "patience": 0.03
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b28",
+      "at": "2026-09-17T12:00:27.000Z",
+      "opponent": "paul-morphy",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 33,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:7s46gj"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b101",
+      "at": "2026-09-17T12:01:40.000Z",
+      "opponent": "archimedes",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 47,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:f1cx9n",
+        "counter:5kvt6",
+        "technique:170c1bx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b151",
+      "at": "2026-09-17T12:02:30.000Z",
+      "opponent": "magnus-carlsen",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 79,
+      "opponentIntegrity": 47,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 399,
+      "lessonsGained": [
+        "counter:1a65jkk",
+        "technique:16zat2p"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b218",
+      "at": "2026-09-17T12:03:37.000Z",
+      "opponent": "plato",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week costs more than it returns, the…",
+      "xpGained": 395,
+      "lessonsGained": [
+        "counter:1jki1u2",
+        "technique:5bpx14"
+      ],
+      "lessonsReinforced": [
+        "counter:5kvt6"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b351",
+      "at": "2026-09-17T12:05:50.000Z",
+      "opponent": "william-james-sidis",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 84,
+      "opponentIntegrity": 49,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…",
+      "xpGained": 335,
+      "lessonsGained": [],
+      "lessonsReinforced": [
+        "technique:7s46gj"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b462",
+      "at": "2026-09-17T12:07:41.000Z",
+      "opponent": "johann-wolfgang-von-goethe",
+      "side": "A",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:1t52uzl"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

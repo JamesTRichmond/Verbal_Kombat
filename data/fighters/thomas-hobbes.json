@@ -3,14 +3,14 @@
   "slug": "thomas-hobbes",
   "name": "Thomas Hobbes",
   "wing": "society_shapers",
-  "xp": 238,
-  "level": 1,
+  "xp": 1940,
+  "level": 2,
   "record": {
-    "matches": 1,
-    "wins": 0,
+    "matches": 6,
+    "wins": 4,
     "losses": 1,
-    "draws": 0,
-    "fallaciesCommitted": 3
+    "draws": 1,
+    "fallaciesCommitted": 6
   },
   "lessons": [
     {
@@ -29,7 +29,7 @@
       "opponent": "rumi",
       "learnedFrom": "camp-2026-09-16-s42-b56",
       "learnedAt": "2026-09-16T12:00:55.000Z",
-      "seen": 1
+      "seen": 2
     },
     {
       "id": "counter:1wc5s54",
@@ -66,18 +66,119 @@
       "learnedFrom": "camp-2026-09-16-s42-b56",
       "learnedAt": "2026-09-16T12:00:55.000Z",
       "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Shing-Tung Yau.",
+      "opponent": "shing-tung-yau",
+      "learnedFrom": "camp-2026-09-17-s2026-b87",
+      "learnedAt": "2026-09-17T12:01:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:i0wybb",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "shing-tung-yau",
+      "learnedFrom": "camp-2026-09-17-s2026-b87",
+      "learnedAt": "2026-09-17T12:01:26.000Z",
+      "seen": 2
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Carl Sagan.",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b140",
+      "learnedAt": "2026-09-17T12:02:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcopew",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Sagan broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b140",
+      "learnedAt": "2026-09-17T12:02:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:k52x2j",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Sagan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b140",
+      "learnedAt": "2026-09-17T12:02:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:wcopew",
+      "kind": "technique",
+      "text": "Borrow this pattern from Carl Sagan: \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b140",
+      "learnedAt": "2026-09-17T12:02:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1j9dze5",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "amartya-kumar-sen",
+      "learnedFrom": "camp-2026-09-17-s2026-b230",
+      "learnedAt": "2026-09-17T12:03:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7tjsga",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Aryabhata broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "aryabhata",
+      "learnedFrom": "camp-2026-09-17-s2026-b341",
+      "learnedAt": "2026-09-17T12:05:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:gcrwcq",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terence Tao broke through with \"Yet your position leaves the strongest counter-example untouched. Because tests first pays for itself, the documented cases show the benefi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terence-chi-shen-tao",
+      "learnedFrom": "camp-2026-09-17-s2026-b413",
+      "learnedAt": "2026-09-17T12:06:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1rbol23",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terence Tao broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "terence-chi-shen-tao",
+      "learnedFrom": "camp-2026-09-17-s2026-b413",
+      "learnedAt": "2026-09-17T12:06:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1u5z5np",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "terence-chi-shen-tao",
+      "learnedFrom": "camp-2026-09-17-s2026-b413",
+      "learnedAt": "2026-09-17T12:06:52.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
       "slippery_slope": 0.05,
-      "ad_hominem": 0.05
+      "ad_hominem": 0.1,
+      "appeal_to_emotion": 0.05,
+      "no_true_scotsman": 0.05
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015,
-      "patience": 0.015
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "interrogation": 0.045,
+      "patience": 0.05
     }
   },
   "log": [
@@ -111,6 +212,127 @@
         "counter:1qr0fuv"
       ],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b87",
+      "at": "2026-09-17T12:01:26.000Z",
+      "opponent": "shing-tung-yau",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 50,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 332,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "technique:i0wybb"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b140",
+      "at": "2026-09-17T12:02:19.000Z",
+      "opponent": "sagan",
+      "side": "B",
+      "result": "draw",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 248,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:wcopew",
+        "counter:k52x2j",
+        "technique:wcopew"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b230",
+      "at": "2026-09-17T12:03:49.000Z",
+      "opponent": "amartya-kumar-sen",
+      "side": "A",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 96,
+      "opponentIntegrity": 79,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 316,
+      "lessonsGained": [
+        "technique:1j9dze5"
+      ],
+      "lessonsReinforced": [
+        "avoid:ad_hominem"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b341",
+      "at": "2026-09-17T12:05:40.000Z",
+      "opponent": "aryabhata",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 33,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 377,
+      "lessonsGained": [
+        "counter:7tjsga"
+      ],
+      "lessonsReinforced": [
+        "technique:i0wybb"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b413",
+      "at": "2026-09-17T12:06:52.000Z",
+      "opponent": "terence-chi-shen-tao",
+      "side": "B",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 50,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 429,
+      "lessonsGained": [
+        "counter:gcrwcq",
+        "counter:1rbol23",
+        "technique:1u5z5np"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
     }
   ]
 }

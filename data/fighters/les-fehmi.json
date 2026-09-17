@@ -3,19 +3,415 @@
   "slug": "les-fehmi",
   "name": "Les Fehmi",
   "wing": "mind_mappers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1974,
+  "level": 2,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 2,
+    "losses": 4,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 6
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Sigmund Freud.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b44",
+      "learnedAt": "2026-09-17T12:00:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcjev6",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b44",
+      "learnedAt": "2026-09-17T12:00:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tgii8e",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b44",
+      "learnedAt": "2026-09-17T12:00:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Marvin Minsky.",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b57",
+      "learnedAt": "2026-09-17T12:00:56.000Z",
+      "seen": 2
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Marvin Minsky.",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b57",
+      "learnedAt": "2026-09-17T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:11j7utt",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marvin Minsky broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b57",
+      "learnedAt": "2026-09-17T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mh1b6d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marvin Minsky broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b57",
+      "learnedAt": "2026-09-17T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:mh1b6d",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marvin Minsky: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b57",
+      "learnedAt": "2026-09-17T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:h4eybb",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Marvin Minsky was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b57",
+      "learnedAt": "2026-09-17T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcopew",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Imhotep broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "imhotep",
+      "learnedFrom": "camp-2026-09-17-s2026-b194",
+      "learnedAt": "2026-09-17T12:03:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1hluoob",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Imhotep broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "imhotep",
+      "learnedFrom": "camp-2026-09-17-s2026-b194",
+      "learnedAt": "2026-09-17T12:03:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1hluoob",
+      "kind": "technique",
+      "text": "Borrow this pattern from Imhotep: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "imhotep",
+      "learnedFrom": "camp-2026-09-17-s2026-b194",
+      "learnedAt": "2026-09-17T12:03:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1poujre",
+      "kind": "blind_spot",
+      "text": "Your moves against Imhotep were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "imhotep",
+      "learnedFrom": "camp-2026-09-17-s2026-b194",
+      "learnedAt": "2026-09-17T12:03:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Lise Meitner.",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b267",
+      "learnedAt": "2026-09-17T12:04:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Lise Meitner broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b267",
+      "learnedAt": "2026-09-17T12:04:26.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1r32bai",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Lise Meitner broke through with \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b267",
+      "learnedAt": "2026-09-17T12:04:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1r32bai",
+      "kind": "technique",
+      "text": "Borrow this pattern from Lise Meitner: \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b267",
+      "learnedAt": "2026-09-17T12:04:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1958va",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Lise Meitner was \"Start from the premise we can check. Because remote work protects deep focus, the documented cases show the benefit holds when the conditio…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b267",
+      "learnedAt": "2026-09-17T12:04:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Hypatia of Alexandria.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b308",
+      "learnedAt": "2026-09-17T12:05:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:i0wybb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b308",
+      "learnedAt": "2026-09-17T12:05:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:qpro38",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because libraries should stick to books and media, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b308",
+      "learnedAt": "2026-09-17T12:05:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1d9zdjl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b308",
+      "learnedAt": "2026-09-17T12:05:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:i0wybb",
+      "kind": "technique",
+      "text": "Borrow this pattern from Hypatia of Alexandria: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b308",
+      "learnedAt": "2026-09-17T12:05:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:8xswid",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Hypatia of Alexandria was \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b308",
+      "learnedAt": "2026-09-17T12:05:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1wc5s54",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "julian-jaynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b396",
+      "learnedAt": "2026-09-17T12:06:35.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "no_true_scotsman": 0.05,
+      "appeal_to_ignorance": 0.1,
+      "appeal_to_popularity": 0.05,
+      "slippery_slope": 0.05,
+      "appeal_to_emotion": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.07,
+      "formalism": 0.07,
+      "interrogation": 0.07,
+      "patience": 0.07
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b44",
+      "at": "2026-09-17T12:00:43.000Z",
+      "opponent": "sigmund-freud",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 73,
+      "opponentIntegrity": 65,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 368,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:wcjev6",
+        "technique:tgii8e"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b57",
+      "at": "2026-09-17T12:00:56.000Z",
+      "opponent": "marvin-minsky",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 47,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_ignorance",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week costs more than it returns, the…",
+      "xpGained": 286,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "avoid:appeal_to_popularity",
+        "counter:11j7utt",
+        "counter:mh1b6d",
+        "technique:mh1b6d",
+        "blind:h4eybb"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b194",
+      "at": "2026-09-17T12:03:13.000Z",
+      "opponent": "imhotep",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 43,
+      "opponentIntegrity": 48,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 337,
+      "lessonsGained": [
+        "counter:wcopew",
+        "counter:1hluoob",
+        "technique:1hluoob",
+        "blind:1poujre"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b267",
+      "at": "2026-09-17T12:04:26.000Z",
+      "opponent": "lise-meitner",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 38,
+      "opponentIntegrity": 92,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "slippery_slope",
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 272,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:msxpis",
+        "counter:1r32bai",
+        "technique:1r32bai",
+        "blind:1958va"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance",
+        "counter:msxpis"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b308",
+      "at": "2026-09-17T12:05:07.000Z",
+      "opponent": "hypatia",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 49,
+      "opponentIntegrity": 69,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…",
+      "xpGained": 342,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:i0wybb",
+        "counter:qpro38",
+        "counter:1d9zdjl",
+        "technique:i0wybb",
+        "blind:8xswid"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b396",
+      "at": "2026-09-17T12:06:35.000Z",
+      "opponent": "julian-jaynes",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 50,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:1wc5s54"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

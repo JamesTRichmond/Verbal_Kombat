@@ -3,19 +3,330 @@
   "slug": "geoffrey-hinton",
   "name": "Geoffrey Hinton",
   "wing": "mind_mappers",
-  "xp": 0,
-  "level": 1,
+  "xp": 2007,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 5
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:1fm5z01",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Bloom broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b39",
+      "learnedAt": "2026-09-17T12:00:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:4mnp70",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b39",
+      "learnedAt": "2026-09-17T12:00:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1b2nyfg",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "william-james",
+      "learnedFrom": "camp-2026-09-17-s2026-b104",
+      "learnedAt": "2026-09-17T12:01:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tgii8e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "william-james",
+      "learnedFrom": "camp-2026-09-17-s2026-b104",
+      "learnedAt": "2026-09-17T12:01:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1d6p1ru",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "william-james",
+      "learnedFrom": "camp-2026-09-17-s2026-b104",
+      "learnedAt": "2026-09-17T12:01:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1b2nyfg",
+      "kind": "technique",
+      "text": "Borrow this pattern from William James: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "william-james",
+      "learnedFrom": "camp-2026-09-17-s2026-b104",
+      "learnedAt": "2026-09-17T12:01:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:hw8p10",
+      "kind": "blind_spot",
+      "text": "Your moves against William James were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "william-james",
+      "learnedFrom": "camp-2026-09-17-s2026-b104",
+      "learnedAt": "2026-09-17T12:01:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Tim Berners-Lee.",
+      "opponent": "tim-berners-lee",
+      "learnedFrom": "camp-2026-09-17-s2026-b135",
+      "learnedAt": "2026-09-17T12:02:14.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:irko2k",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tim-berners-lee",
+      "learnedFrom": "camp-2026-09-17-s2026-b135",
+      "learnedAt": "2026-09-17T12:02:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tgii8e",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "siddhartha-gautama",
+      "learnedFrom": "camp-2026-09-17-s2026-b234",
+      "learnedAt": "2026-09-17T12:03:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Tim Berners-Lee.",
+      "opponent": "tim-berners-lee",
+      "learnedFrom": "camp-2026-09-17-s2026-b348",
+      "learnedAt": "2026-09-17T12:05:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Tim Berners-Lee.",
+      "opponent": "tim-berners-lee",
+      "learnedFrom": "camp-2026-09-17-s2026-b348",
+      "learnedAt": "2026-09-17T12:05:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1u5z5np",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tim-berners-lee",
+      "learnedFrom": "camp-2026-09-17-s2026-b348",
+      "learnedAt": "2026-09-17T12:05:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:aiwyf2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Stuart Mill broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b447",
+      "learnedAt": "2026-09-17T12:07:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pavtnn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Stuart Mill broke through with \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b447",
+      "learnedAt": "2026-09-17T12:07:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Stuart Mill: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b447",
+      "learnedAt": "2026-09-17T12:07:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:o86wif",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Stuart Mill was \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b447",
+      "learnedAt": "2026-09-17T12:07:26.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "no_true_scotsman": 0.1,
+      "ad_hominem": 0.05,
+      "appeal_to_popularity": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "interrogation": 0.05,
+      "patience": 0.04
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b39",
+      "at": "2026-09-17T12:00:38.000Z",
+      "opponent": "benjamin-bloom",
+      "side": "A",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 78,
+      "opponentIntegrity": 40,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 393,
+      "lessonsGained": [
+        "counter:1fm5z01",
+        "technique:4mnp70"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b104",
+      "at": "2026-09-17T12:01:43.000Z",
+      "opponent": "william-james",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 50,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 379,
+      "lessonsGained": [
+        "counter:1b2nyfg",
+        "counter:tgii8e",
+        "counter:1d6p1ru",
+        "technique:1b2nyfg",
+        "blind:hw8p10"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b135",
+      "at": "2026-09-17T12:02:14.000Z",
+      "opponent": "tim-berners-lee",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "no_true_scotsman",
+        "no_true_scotsman"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…",
+      "xpGained": 276,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "technique:irko2k"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b234",
+      "at": "2026-09-17T12:03:53.000Z",
+      "opponent": "siddhartha-gautama",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 57,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:tgii8e"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b348",
+      "at": "2026-09-17T12:05:47.000Z",
+      "opponent": "tim-berners-lee",
+      "side": "B",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 96,
+      "opponentIntegrity": 79,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "ad_hominem",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 306,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "avoid:appeal_to_popularity",
+        "technique:1u5z5np"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b447",
+      "at": "2026-09-17T12:07:26.000Z",
+      "opponent": "john-stuart-mill",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 49,
+      "opponentIntegrity": 62,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…",
+      "xpGained": 290,
+      "lessonsGained": [
+        "counter:aiwyf2",
+        "counter:1pavtnn",
+        "technique:1pavtnn",
+        "blind:o86wif"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman"
+      ],
+      "levelAfter": 3
+    }
+  ]
 }

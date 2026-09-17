@@ -3,19 +3,438 @@
   "slug": "fyodor-dostoevsky",
   "name": "Fyodor Dostoevsky",
   "wing": "artists",
-  "xp": 0,
-  "level": 1,
+  "xp": 2326,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 7,
+    "wins": 4,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 8
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Napoleon Bonaparte.",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b47",
+      "learnedAt": "2026-09-17T12:00:46.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:j9l1rk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Napoleon Bonaparte broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because renewables and storage are the better path, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b47",
+      "learnedAt": "2026-09-17T12:00:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1xw7ote",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Napoleon Bonaparte broke through with \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b47",
+      "learnedAt": "2026-09-17T12:00:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:6h5qbp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Napoleon Bonaparte broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b47",
+      "learnedAt": "2026-09-17T12:00:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:6h5qbp",
+      "kind": "technique",
+      "text": "Borrow this pattern from Napoleon Bonaparte: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b47",
+      "learnedAt": "2026-09-17T12:00:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1r564cy",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Napoleon Bonaparte was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b47",
+      "learnedAt": "2026-09-17T12:00:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Jean Piaget.",
+      "opponent": "jean-piaget",
+      "learnedFrom": "camp-2026-09-17-s2026-b60",
+      "learnedAt": "2026-09-17T12:00:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19uu6s7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jean Piaget broke through with \"But note what just happened: your argument skipped the evidence entirely. Because remote work protects deep focus, the documented cases sho…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jean-piaget",
+      "learnedFrom": "camp-2026-09-17-s2026-b60",
+      "learnedAt": "2026-09-17T12:00:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1a65jkk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jean Piaget broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "jean-piaget",
+      "learnedFrom": "camp-2026-09-17-s2026-b60",
+      "learnedAt": "2026-09-17T12:00:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19uu6s7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Jean Piaget: \"But note what just happened: your argument skipped the evidence entirely. Because remote work protects deep focus, the documented cases sho…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jean-piaget",
+      "learnedFrom": "camp-2026-09-17-s2026-b60",
+      "learnedAt": "2026-09-17T12:00:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:vpn558",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Jean Piaget was \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "jean-piaget",
+      "learnedFrom": "camp-2026-09-17-s2026-b60",
+      "learnedAt": "2026-09-17T12:00:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Yann LeCun.",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b130",
+      "learnedAt": "2026-09-17T12:02:09.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:g8g747",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yann LeCun broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b130",
+      "learnedAt": "2026-09-17T12:02:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yann LeCun broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b130",
+      "learnedAt": "2026-09-17T12:02:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t0wkr5",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b130",
+      "learnedAt": "2026-09-17T12:02:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h7563f",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "yang-chen-ning",
+      "learnedFrom": "camp-2026-09-17-s2026-b238",
+      "learnedAt": "2026-09-17T12:03:57.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:jilts8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Evangelos Katsioulis broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b385",
+      "learnedAt": "2026-09-17T12:06:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:s56t90",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Evangelos Katsioulis broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b385",
+      "learnedAt": "2026-09-17T12:06:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:16zat2p",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b385",
+      "learnedAt": "2026-09-17T12:06:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tl1aof",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ilya Sutskever broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ilya-sutskever",
+      "learnedFrom": "camp-2026-09-17-s2026-b398",
+      "learnedAt": "2026-09-17T12:06:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:46mrja",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ilya Sutskever broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ilya-sutskever",
+      "learnedFrom": "camp-2026-09-17-s2026-b398",
+      "learnedAt": "2026-09-17T12:06:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:182c2r7",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ilya-sutskever",
+      "learnedFrom": "camp-2026-09-17-s2026-b398",
+      "learnedAt": "2026-09-17T12:06:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h7563f",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b489",
+      "learnedAt": "2026-09-17T12:08:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:cw5su8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework adds little beyond class time, the doc…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b489",
+      "learnedAt": "2026-09-17T12:08:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:12kpoah",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Nicolaus Copernicus was \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b489",
+      "learnedAt": "2026-09-17T12:08:08.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "ad_hominem": 0.1,
+      "appeal_to_popularity": 0.05,
+      "appeal_to_emotion": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.06,
+      "formalism": 0.065,
+      "interrogation": 0.05,
+      "patience": 0.045
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b47",
+      "at": "2026-09-17T12:00:46.000Z",
+      "opponent": "bonaparte",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 15,
+      "opponentIntegrity": 92,
+      "arguments": 3,
+      "avgSoundness": 0.467,
+      "fallacies": [
+        "ad_hominem",
+        "ad_hominem"
+      ],
+      "bestMove": "Start from the premise we can check. When the measured results are compared across studies, then the pattern is consistent, so it follows t…",
+      "xpGained": 292,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:j9l1rk",
+        "counter:1xw7ote",
+        "counter:6h5qbp",
+        "technique:6h5qbp",
+        "blind:1r564cy"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b60",
+      "at": "2026-09-17T12:00:59.000Z",
+      "opponent": "jean-piaget",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 61,
+      "opponentIntegrity": 79,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_popularity",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…",
+      "xpGained": 256,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "counter:19uu6s7",
+        "counter:1a65jkk",
+        "technique:19uu6s7",
+        "blind:vpn558"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b130",
+      "at": "2026-09-17T12:02:09.000Z",
+      "opponent": "yann-lecun",
+      "side": "A",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 50,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…",
+      "xpGained": 398,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:g8g747",
+        "counter:msxpis",
+        "technique:1t0wkr5"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b238",
+      "at": "2026-09-17T12:03:57.000Z",
+      "opponent": "yang-chen-ning",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 79,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "ad_hominem",
+        "ad_hominem"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 254,
+      "lessonsGained": [
+        "technique:1h7563f"
+      ],
+      "lessonsReinforced": [
+        "avoid:ad_hominem"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b385",
+      "at": "2026-09-17T12:06:24.000Z",
+      "opponent": "evangelos-katsioulis",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 28,
+      "arguments": 3,
+      "avgSoundness": 1,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 435,
+      "lessonsGained": [
+        "counter:jilts8",
+        "counter:s56t90",
+        "technique:16zat2p"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b398",
+      "at": "2026-09-17T12:06:37.000Z",
+      "opponent": "ilya-sutskever",
+      "side": "A",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:tl1aof",
+        "counter:46mrja",
+        "technique:182c2r7"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b489",
+      "at": "2026-09-17T12:08:08.000Z",
+      "opponent": "copernicus",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 60,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 274,
+      "lessonsGained": [
+        "counter:1h7563f",
+        "counter:cw5su8",
+        "blind:12kpoah"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_emotion",
+        "technique:1h7563f"
+      ],
+      "levelAfter": 3
+    }
+  ]
 }

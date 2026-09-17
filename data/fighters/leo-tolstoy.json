@@ -3,14 +3,14 @@
   "slug": "leo-tolstoy",
   "name": "Leo Tolstoy",
   "wing": "artists",
-  "xp": 305,
-  "level": 1,
+  "xp": 1407,
+  "level": 2,
   "record": {
-    "matches": 1,
+    "matches": 6,
     "wins": 0,
-    "losses": 1,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "losses": 5,
+    "draws": 1,
+    "fallaciesCommitted": 1
   },
   "lessons": [
     {
@@ -57,15 +57,143 @@
       "learnedFrom": "camp-2026-09-16-s42-b52",
       "learnedAt": "2026-09-16T12:00:51.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:2rojog",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Bloom broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b81",
+      "learnedAt": "2026-09-17T12:01:20.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:2rojog",
+      "kind": "technique",
+      "text": "Borrow this pattern from Benjamin Bloom: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b81",
+      "learnedAt": "2026-09-17T12:01:20.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:4ofg2e",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Benjamin Bloom was \"Honestly car bans make downtowns worse.\" (soundness 0.45). State its premises and evidence before you use it again.",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b81",
+      "learnedAt": "2026-09-17T12:01:20.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ugdpl3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Claude Shannon broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "claude-shannon",
+      "learnedFrom": "camp-2026-09-17-s2026-b136",
+      "learnedAt": "2026-09-17T12:02:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ugdpl3",
+      "kind": "technique",
+      "text": "Borrow this pattern from Claude Shannon: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "claude-shannon",
+      "learnedFrom": "camp-2026-09-17-s2026-b136",
+      "learnedAt": "2026-09-17T12:02:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:6cjd2h",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Claude Shannon was \"It is obvious that tool lending belongs in libraries.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "claude-shannon",
+      "learnedFrom": "camp-2026-09-17-s2026-b136",
+      "learnedAt": "2026-09-17T12:02:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1cv6vs5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sir Richard Francis Burton broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-17-s2026-b300",
+      "learnedAt": "2026-09-17T12:04:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7p0ydc",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sir Richard Francis Burton broke through with \"But note what just happened: your argument skipped the evidence entirely. Because nuclear power belongs in a clean grid, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-17-s2026-b300",
+      "learnedAt": "2026-09-17T12:04:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7p0ydc",
+      "kind": "technique",
+      "text": "Borrow this pattern from Sir Richard Francis Burton: \"But note what just happened: your argument skipped the evidence entirely. Because nuclear power belongs in a clean grid, the documented cas…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-17-s2026-b300",
+      "learnedAt": "2026-09-17T12:04:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:11l3anh",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Sir Richard Francis Burton was \"It is obvious that renewables and storage are the better path.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-17-s2026-b300",
+      "learnedAt": "2026-09-17T12:04:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Douglas Harding.",
+      "opponent": "douglas-harding",
+      "learnedFrom": "camp-2026-09-17-s2026-b334",
+      "learnedAt": "2026-09-17T12:05:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:181ygjf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: B. F. Skinner broke through with \"Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b470",
+      "learnedAt": "2026-09-17T12:07:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:181ygjf",
+      "kind": "technique",
+      "text": "Borrow this pattern from B. F. Skinner: \"Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b470",
+      "learnedAt": "2026-09-17T12:07:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:mik6ww",
+      "kind": "blind_spot",
+      "text": "Your weakest move against B. F. Skinner was \"Honestly car bans make downtowns worse.\" (soundness 0.45). State its premises and evidence before you use it again.",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b470",
+      "learnedAt": "2026-09-17T12:07:49.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
-    "fallacyWards": {},
+    "fallacyWards": {
+      "appeal_to_emotion": 0.05
+    },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015,
-      "patience": 0.015
+      "empiricism": 0.06,
+      "formalism": 0.075,
+      "interrogation": 0.06,
+      "patience": 0.06
     }
   },
   "log": [
@@ -92,6 +220,119 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b81",
+      "at": "2026-09-17T12:01:20.000Z",
+      "opponent": "benjamin-bloom",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 79,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.517,
+      "fallacies": [],
+      "xpGained": 232,
+      "lessonsGained": [
+        "counter:2rojog",
+        "technique:2rojog",
+        "blind:4ofg2e"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b136",
+      "at": "2026-09-17T12:02:15.000Z",
+      "opponent": "claude-shannon",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 84,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:ugdpl3",
+        "technique:ugdpl3",
+        "blind:6cjd2h"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b300",
+      "at": "2026-09-17T12:04:59.000Z",
+      "opponent": "captain-sir-richard-francis-burton",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1cv6vs5",
+        "counter:7p0ydc",
+        "technique:7p0ydc",
+        "blind:11l3anh"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b334",
+      "at": "2026-09-17T12:05:33.000Z",
+      "opponent": "douglas-harding",
+      "side": "A",
+      "result": "draw",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 110,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b470",
+      "at": "2026-09-17T12:07:49.000Z",
+      "opponent": "b-f-skinner",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.517,
+      "fallacies": [],
+      "xpGained": 240,
+      "lessonsGained": [
+        "counter:181ygjf",
+        "technique:181ygjf",
+        "blind:mik6ww"
+      ],
+      "lessonsReinforced": [
+        "counter:2rojog"
+      ],
+      "levelAfter": 2
     }
   ]
 }

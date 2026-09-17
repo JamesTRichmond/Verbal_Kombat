@@ -3,19 +3,405 @@
   "slug": "edward-witten",
   "name": "Edward Witten",
   "wing": "lawfinders",
-  "xp": 0,
-  "level": 1,
+  "xp": 1580,
+  "level": 2,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 1,
+    "losses": 5,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 6
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Confucius.",
+      "opponent": "confucius",
+      "learnedFrom": "camp-2026-09-17-s2026-b22",
+      "learnedAt": "2026-09-17T12:00:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Confucius.",
+      "opponent": "confucius",
+      "learnedFrom": "camp-2026-09-17-s2026-b22",
+      "learnedAt": "2026-09-17T12:00:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Kim Ung-yong.",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b84",
+      "learnedAt": "2026-09-17T12:01:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Kim Ung-yong.",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b84",
+      "learnedAt": "2026-09-17T12:01:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1cv6vs5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kim Ung-yong broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b84",
+      "learnedAt": "2026-09-17T12:01:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pllh85",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kim Ung-yong broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b84",
+      "learnedAt": "2026-09-17T12:01:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Borrow this pattern from Kim Ung-yong: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b84",
+      "learnedAt": "2026-09-17T12:01:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ypwyfl",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Kim Ung-yong was \"It is obvious that renewables and storage are the better path. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b84",
+      "learnedAt": "2026-09-17T12:01:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against René Descartes.",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b210",
+      "learnedAt": "2026-09-17T12:03:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:119wej",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: René Descartes broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b210",
+      "learnedAt": "2026-09-17T12:03:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1f40lgl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: René Descartes broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b210",
+      "learnedAt": "2026-09-17T12:03:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:119wej",
+      "kind": "technique",
+      "text": "Borrow this pattern from René Descartes: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b210",
+      "learnedAt": "2026-09-17T12:03:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:6ykepn",
+      "kind": "blind_spot",
+      "text": "Your weakest move against René Descartes was \"I just feel renewables and storage are the better path, that is all. No one has ever proven otherwise.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b210",
+      "learnedAt": "2026-09-17T12:03:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:aiwyf2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Maynard Keynes broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b225",
+      "learnedAt": "2026-09-17T12:03:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:aiwyf2",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Maynard Keynes: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b225",
+      "learnedAt": "2026-09-17T12:03:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1suc1n5",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Maynard Keynes was \"It is obvious that libraries should stick to books and media.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b225",
+      "learnedAt": "2026-09-17T12:03:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:6jg2g5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michelangelo Buonarroti broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance should be required, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "michelangelo-buonarroti",
+      "learnedFrom": "camp-2026-09-17-s2026-b357",
+      "learnedAt": "2026-09-17T12:05:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gfnuuy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michelangelo Buonarroti broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "michelangelo-buonarroti",
+      "learnedFrom": "camp-2026-09-17-s2026-b357",
+      "learnedAt": "2026-09-17T12:05:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1gfnuuy",
+      "kind": "technique",
+      "text": "Borrow this pattern from Michelangelo Buonarroti: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "michelangelo-buonarroti",
+      "learnedFrom": "camp-2026-09-17-s2026-b357",
+      "learnedAt": "2026-09-17T12:05:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:tbud6i",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Michelangelo Buonarroti was \"It is obvious that personal finance does not need its own required course.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "michelangelo-buonarroti",
+      "learnedFrom": "camp-2026-09-17-s2026-b357",
+      "learnedAt": "2026-09-17T12:05:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1oo1st8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b480",
+      "learnedAt": "2026-09-17T12:07:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tpn58x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b480",
+      "learnedAt": "2026-09-17T12:07:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:jtdfyp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b480",
+      "learnedAt": "2026-09-17T12:07:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1oo1st8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Nicolaus Copernicus: \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b480",
+      "learnedAt": "2026-09-17T12:07:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:awqr5c",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Nicolaus Copernicus was \"It is obvious that personal finance should be required.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b480",
+      "learnedAt": "2026-09-17T12:07:59.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "slippery_slope": 0.05,
+      "appeal_to_emotion": 0.05,
+      "ad_hominem": 0.05,
+      "no_true_scotsman": 0.05,
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "patience": 0.08,
+      "empiricism": 0.075,
+      "formalism": 0.075,
+      "interrogation": 0.045
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b22",
+      "at": "2026-09-17T12:00:21.000Z",
+      "opponent": "confucius",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "slippery_slope",
+        "appeal_to_emotion"
+      ],
+      "xpGained": 255,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "avoid:appeal_to_emotion"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b84",
+      "at": "2026-09-17T12:01:23.000Z",
+      "opponent": "kim-ung-yong",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 40,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "ad_hominem",
+        "no_true_scotsman"
+      ],
+      "xpGained": 265,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "avoid:no_true_scotsman",
+        "counter:1cv6vs5",
+        "counter:pllh85",
+        "technique:pllh85",
+        "blind:1ypwyfl"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b210",
+      "at": "2026-09-17T12:03:29.000Z",
+      "opponent": "descartes",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 60,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "appeal_to_ignorance",
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 235,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:119wej",
+        "counter:1f40lgl",
+        "technique:119wej",
+        "blind:6ykepn"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b225",
+      "at": "2026-09-17T12:03:44.000Z",
+      "opponent": "jean-maynard-keynes",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 78,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:aiwyf2",
+        "technique:aiwyf2",
+        "blind:1suc1n5"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b357",
+      "at": "2026-09-17T12:05:56.000Z",
+      "opponent": "michelangelo-buonarroti",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:6jg2g5",
+        "counter:1gfnuuy",
+        "technique:1gfnuuy",
+        "blind:tbud6i"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b480",
+      "at": "2026-09-17T12:07:59.000Z",
+      "opponent": "copernicus",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 59,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:1oo1st8",
+        "counter:tpn58x",
+        "counter:jtdfyp",
+        "technique:1oo1st8",
+        "blind:awqr5c"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

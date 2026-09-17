@@ -3,19 +3,418 @@
   "slug": "al-farabi",
   "name": "Al-Farabi",
   "wing": "society_shapers",
-  "xp": 0,
-  "level": 1,
+  "xp": 2875,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 7,
+    "wins": 5,
+    "losses": 2,
     "draws": 0,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:1aeao7x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Francis Allotey broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "francis-kofi-ampenyin-allotey",
+      "learnedFrom": "camp-2026-09-17-s2026-b21",
+      "learnedAt": "2026-09-17T12:00:20.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:b1fhfu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Francis Allotey broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "francis-kofi-ampenyin-allotey",
+      "learnedFrom": "camp-2026-09-17-s2026-b21",
+      "learnedAt": "2026-09-17T12:00:20.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:i0wybb",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "francis-kofi-ampenyin-allotey",
+      "learnedFrom": "camp-2026-09-17-s2026-b21",
+      "learnedAt": "2026-09-17T12:00:20.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16zat2p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tu Youyou broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b91",
+      "learnedAt": "2026-09-17T12:01:30.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1h3s00d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tu Youyou broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b91",
+      "learnedAt": "2026-09-17T12:01:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:16zat2p",
+      "kind": "technique",
+      "text": "Borrow this pattern from Tu Youyou: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b91",
+      "learnedAt": "2026-09-17T12:01:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1t8d4vw",
+      "kind": "blind_spot",
+      "text": "Your moves against Tu Youyou were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b91",
+      "learnedAt": "2026-09-17T12:01:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:9cwrna",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Leonhard Euler broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "leonhard-euler",
+      "learnedFrom": "camp-2026-09-17-s2026-b165",
+      "learnedAt": "2026-09-17T12:02:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:64mppy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Leonhard Euler broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "leonhard-euler",
+      "learnedFrom": "camp-2026-09-17-s2026-b165",
+      "learnedAt": "2026-09-17T12:02:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:46mrja",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "leonhard-euler",
+      "learnedFrom": "camp-2026-09-17-s2026-b165",
+      "learnedAt": "2026-09-17T12:02:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:jilts8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marshall McLuhan broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marshall-mcluhan",
+      "learnedFrom": "camp-2026-09-17-s2026-b271",
+      "learnedAt": "2026-09-17T12:04:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:s56t90",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marshall McLuhan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "marshall-mcluhan",
+      "learnedFrom": "camp-2026-09-17-s2026-b271",
+      "learnedAt": "2026-09-17T12:04:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1r32bai",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marshall-mcluhan",
+      "learnedFrom": "camp-2026-09-17-s2026-b271",
+      "learnedAt": "2026-09-17T12:04:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Jung broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b349",
+      "learnedAt": "2026-09-17T12:05:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:g8g747",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Jung broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b349",
+      "learnedAt": "2026-09-17T12:05:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1lxgnv7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Jung broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b349",
+      "learnedAt": "2026-09-17T12:05:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Borrow this pattern from Carl Jung: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b349",
+      "learnedAt": "2026-09-17T12:05:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ssas6m",
+      "kind": "blind_spot",
+      "text": "Your moves against Carl Jung were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b349",
+      "learnedAt": "2026-09-17T12:05:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1ggook1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Emmy Noether broke through with \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "emmy-noether",
+      "learnedFrom": "camp-2026-09-17-s2026-b437",
+      "learnedAt": "2026-09-17T12:07:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:181ygjf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Emmy Noether broke through with \"Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "emmy-noether",
+      "learnedFrom": "camp-2026-09-17-s2026-b437",
+      "learnedAt": "2026-09-17T12:07:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1b2nyfg",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "emmy-noether",
+      "learnedFrom": "camp-2026-09-17-s2026-b437",
+      "learnedAt": "2026-09-17T12:07:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:flz2hp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Omar Khayyam broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b481",
+      "learnedAt": "2026-09-17T12:08:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:2ga3hg",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Omar Khayyam broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b481",
+      "learnedAt": "2026-09-17T12:08:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13is16i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Omar Khayyam broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b481",
+      "learnedAt": "2026-09-17T12:08:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:2rojog",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b481",
+      "learnedAt": "2026-09-17T12:08:00.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.055,
+      "formalism": 0.055,
+      "interrogation": 0.055,
+      "patience": 0.055
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b21",
+      "at": "2026-09-17T12:00:20.000Z",
+      "opponent": "francis-kofi-ampenyin-allotey",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 48,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:1aeao7x",
+        "counter:b1fhfu",
+        "technique:i0wybb"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b91",
+      "at": "2026-09-17T12:01:30.000Z",
+      "opponent": "tu-youyou",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 40,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 351,
+      "lessonsGained": [
+        "counter:16zat2p",
+        "counter:1h3s00d",
+        "technique:16zat2p",
+        "blind:1t8d4vw"
+      ],
+      "lessonsReinforced": [
+        "counter:16zat2p"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b165",
+      "at": "2026-09-17T12:02:44.000Z",
+      "opponent": "leonhard-euler",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 45,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:9cwrna",
+        "counter:64mppy",
+        "technique:46mrja"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b271",
+      "at": "2026-09-17T12:04:30.000Z",
+      "opponent": "marshall-mcluhan",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 45,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:jilts8",
+        "counter:s56t90",
+        "technique:1r32bai"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b349",
+      "at": "2026-09-17T12:05:48.000Z",
+      "opponent": "carl-jung",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 46,
+      "opponentIntegrity": 62,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 379,
+      "lessonsGained": [
+        "counter:msxpis",
+        "counter:g8g747",
+        "counter:1lxgnv7",
+        "technique:g8g747",
+        "blind:1ssas6m"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b437",
+      "at": "2026-09-17T12:07:16.000Z",
+      "opponent": "emmy-noether",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 43,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 429,
+      "lessonsGained": [
+        "counter:1ggook1",
+        "counter:181ygjf",
+        "technique:1b2nyfg"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b481",
+      "at": "2026-09-17T12:08:00.000Z",
+      "opponent": "omar-khayyam",
+      "side": "A",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 453,
+      "lessonsGained": [
+        "counter:flz2hp",
+        "counter:2ga3hg",
+        "counter:13is16i",
+        "technique:2rojog"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

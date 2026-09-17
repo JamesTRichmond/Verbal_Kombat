@@ -3,19 +3,422 @@
   "slug": "satyendra-nath-bose",
   "name": "Satyendra Nath Bose",
   "wing": "lawfinders",
-  "xp": 0,
-  "level": 1,
+  "xp": 1714,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 7,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "losses": 6,
+    "draws": 1,
+    "fallaciesCommitted": 3
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against John Carmack.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b43",
+      "learnedAt": "2026-09-17T12:00:42.000Z",
+      "seen": 2
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against John Carmack.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b43",
+      "learnedAt": "2026-09-17T12:00:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:vi8sbf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Carmack broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b43",
+      "learnedAt": "2026-09-17T12:00:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ma8z53",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Carmack broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b43",
+      "learnedAt": "2026-09-17T12:00:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ma8z53",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Carmack: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b43",
+      "learnedAt": "2026-09-17T12:00:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1y9dv7j",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Carmack was \"I just feel tests first slows small teams down, that is all. Everybody knows this already.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b43",
+      "learnedAt": "2026-09-17T12:00:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:s56t90",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: C. V. Raman broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b65",
+      "learnedAt": "2026-09-17T12:01:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:91jzpz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: C. V. Raman broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because remote work protects deep focus, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b65",
+      "learnedAt": "2026-09-17T12:01:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:s56t90",
+      "kind": "technique",
+      "text": "Borrow this pattern from C. V. Raman: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b65",
+      "learnedAt": "2026-09-17T12:01:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:p36r0g",
+      "kind": "blind_spot",
+      "text": "Your weakest move against C. V. Raman was \"I just feel offices produce better deep work, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b65",
+      "learnedAt": "2026-09-17T12:01:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:szk3kb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Douglas Hofstadter broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b197",
+      "learnedAt": "2026-09-17T12:03:16.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:szk3kb",
+      "kind": "technique",
+      "text": "Borrow this pattern from Douglas Hofstadter: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b197",
+      "learnedAt": "2026-09-17T12:03:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ix0cm6",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Douglas Hofstadter was \"I just feel renewables and storage are the better path, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b197",
+      "learnedAt": "2026-09-17T12:03:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nashwa Abo Alhassan Eassa broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "nashwa-abo-alhassan-eassa",
+      "learnedFrom": "camp-2026-09-17-s2026-b302",
+      "learnedAt": "2026-09-17T12:05:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1x9j1yw",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nashwa Abo Alhassan Eassa broke through with \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "nashwa-abo-alhassan-eassa",
+      "learnedFrom": "camp-2026-09-17-s2026-b302",
+      "learnedAt": "2026-09-17T12:05:01.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1x9j1yw",
+      "kind": "technique",
+      "text": "Borrow this pattern from Nashwa Abo Alhassan Eassa: \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "nashwa-abo-alhassan-eassa",
+      "learnedFrom": "camp-2026-09-17-s2026-b302",
+      "learnedAt": "2026-09-17T12:05:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1kxbivh",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Nashwa Abo Alhassan Eassa was \"It is obvious that tests first pays for itself.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "nashwa-abo-alhassan-eassa",
+      "learnedFrom": "camp-2026-09-17-s2026-b302",
+      "learnedAt": "2026-09-17T12:05:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1t52uzl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yann LeCun broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b465",
+      "learnedAt": "2026-09-17T12:07:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:k52x2j",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yann LeCun broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b465",
+      "learnedAt": "2026-09-17T12:07:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t52uzl",
+      "kind": "technique",
+      "text": "Borrow this pattern from Yann LeCun: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b465",
+      "learnedAt": "2026-09-17T12:07:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:csoyuc",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Yann LeCun was \"Honestly homework adds little beyond class time. Everybody knows this already.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b465",
+      "learnedAt": "2026-09-17T12:07:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pavtnn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Isaac Newton broke through with \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sir-isaac-newton",
+      "learnedFrom": "camp-2026-09-17-s2026-b483",
+      "learnedAt": "2026-09-17T12:08:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:cu073y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Isaac Newton broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "sir-isaac-newton",
+      "learnedFrom": "camp-2026-09-17-s2026-b483",
+      "learnedAt": "2026-09-17T12:08:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Borrow this pattern from Isaac Newton: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sir-isaac-newton",
+      "learnedFrom": "camp-2026-09-17-s2026-b483",
+      "learnedAt": "2026-09-17T12:08:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1hwpsy8",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Isaac Newton was \"I just feel libraries should stick to books and media, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "sir-isaac-newton",
+      "learnedFrom": "camp-2026-09-17-s2026-b483",
+      "learnedAt": "2026-09-17T12:08:02.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_popularity": 0.1,
+      "slippery_slope": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "interrogation": 0.06,
+      "patience": 0.105
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b43",
+      "at": "2026-09-17T12:00:42.000Z",
+      "opponent": "john-carmack",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "appeal_to_popularity",
+        "slippery_slope"
+      ],
+      "xpGained": 265,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "avoid:slippery_slope",
+        "counter:vi8sbf",
+        "counter:ma8z53",
+        "technique:ma8z53",
+        "blind:1y9dv7j"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b65",
+      "at": "2026-09-17T12:01:04.000Z",
+      "opponent": "c-v-raman",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:s56t90",
+        "counter:91jzpz",
+        "technique:s56t90",
+        "blind:p36r0g"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b197",
+      "at": "2026-09-17T12:03:16.000Z",
+      "opponent": "douglas-hofstadter",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 253,
+      "lessonsGained": [
+        "counter:szk3kb",
+        "technique:szk3kb",
+        "blind:1ix0cm6"
+      ],
+      "lessonsReinforced": [
+        "counter:szk3kb"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b302",
+      "at": "2026-09-17T12:05:01.000Z",
+      "opponent": "nashwa-abo-alhassan-eassa",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 37,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 283,
+      "lessonsGained": [
+        "counter:19pgg8q",
+        "counter:1x9j1yw",
+        "technique:1x9j1yw",
+        "blind:1kxbivh"
+      ],
+      "lessonsReinforced": [
+        "counter:1x9j1yw"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b337",
+      "at": "2026-09-17T12:05:36.000Z",
+      "opponent": "vincent-van-gogh",
+      "side": "A",
+      "result": "draw",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b465",
+      "at": "2026-09-17T12:07:44.000Z",
+      "opponent": "yann-lecun",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "xpGained": 248,
+      "lessonsGained": [
+        "counter:1t52uzl",
+        "counter:k52x2j",
+        "technique:1t52uzl",
+        "blind:csoyuc"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_popularity"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b483",
+      "at": "2026-09-17T12:08:02.000Z",
+      "opponent": "sir-isaac-newton",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1pavtnn",
+        "counter:cu073y",
+        "technique:1pavtnn",
+        "blind:1hwpsy8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

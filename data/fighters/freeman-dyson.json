@@ -3,19 +3,359 @@
   "slug": "freeman-dyson",
   "name": "Freeman Dyson",
   "wing": "imaginers",
-  "xp": 0,
-  "level": 1,
+  "xp": 2709,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 7,
+    "wins": 5,
+    "losses": 2,
     "draws": 0,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "technique:mmqi93",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "avicenna-ibn-sina",
+      "learnedFrom": "camp-2026-09-17-s2026-b8",
+      "learnedAt": "2026-09-17T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:irko2k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Garry Kasparov broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "garry-kimovich-kasparov",
+      "learnedFrom": "camp-2026-09-17-s2026-b76",
+      "learnedAt": "2026-09-17T12:01:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:46mrja",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Garry Kasparov broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "garry-kimovich-kasparov",
+      "learnedFrom": "camp-2026-09-17-s2026-b76",
+      "learnedAt": "2026-09-17T12:01:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:x03o21",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Garry Kasparov broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "garry-kimovich-kasparov",
+      "learnedFrom": "camp-2026-09-17-s2026-b76",
+      "learnedAt": "2026-09-17T12:01:15.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:x03o21",
+      "kind": "technique",
+      "text": "Borrow this pattern from Garry Kasparov: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "garry-kimovich-kasparov",
+      "learnedFrom": "camp-2026-09-17-s2026-b76",
+      "learnedAt": "2026-09-17T12:01:15.000Z",
+      "seen": 2
+    },
+    {
+      "id": "blind:18lex2d",
+      "kind": "blind_spot",
+      "text": "Your moves against Garry Kasparov were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "garry-kimovich-kasparov",
+      "learnedFrom": "camp-2026-09-17-s2026-b76",
+      "learnedAt": "2026-09-17T12:01:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1g2hbeo",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Barbara McClintock broke through with \"But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-17-s2026-b198",
+      "learnedAt": "2026-09-17T12:03:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1k6lvmn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Barbara McClintock broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-17-s2026-b198",
+      "learnedAt": "2026-09-17T12:03:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:wcopew",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-17-s2026-b198",
+      "learnedAt": "2026-09-17T12:03:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pvjf7k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because nuclear power belongs in a clean grid, the docu…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b245",
+      "learnedAt": "2026-09-17T12:04:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:szk3kb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b245",
+      "learnedAt": "2026-09-17T12:04:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19m8vnv",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b245",
+      "learnedAt": "2026-09-17T12:04:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tl1aof",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jagadish Chandra Bose broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jagadish-chandra-bose",
+      "learnedFrom": "camp-2026-09-17-s2026-b327",
+      "learnedAt": "2026-09-17T12:05:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1oo1st8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jagadish Chandra Bose broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jagadish-chandra-bose",
+      "learnedFrom": "camp-2026-09-17-s2026-b327",
+      "learnedAt": "2026-09-17T12:05:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:2gj1it",
+      "kind": "blind_spot",
+      "text": "Your moves against Jagadish Chandra Bose were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "jagadish-chandra-bose",
+      "learnedFrom": "camp-2026-09-17-s2026-b327",
+      "learnedAt": "2026-09-17T12:05:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:s9jcn8",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "niels-bohr",
+      "learnedFrom": "camp-2026-09-17-s2026-b435",
+      "learnedAt": "2026-09-17T12:07:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1cv6vs5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Stephen Hawking broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "stephen-william-hawking",
+      "learnedFrom": "camp-2026-09-17-s2026-b482",
+      "learnedAt": "2026-09-17T12:08:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:119wej",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Stephen Hawking broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "stephen-william-hawking",
+      "learnedFrom": "camp-2026-09-17-s2026-b482",
+      "learnedAt": "2026-09-17T12:08:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1xw7ote",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "stephen-william-hawking",
+      "learnedFrom": "camp-2026-09-17-s2026-b482",
+      "learnedAt": "2026-09-17T12:08:01.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.05,
+      "formalism": 0.055,
+      "interrogation": 0.055,
+      "patience": 0.055
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b8",
+      "at": "2026-09-17T12:00:07.000Z",
+      "opponent": "avicenna-ibn-sina",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 49,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:mmqi93"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b76",
+      "at": "2026-09-17T12:01:15.000Z",
+      "opponent": "garry-kimovich-kasparov",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 36,
+      "opponentIntegrity": 41,
+      "arguments": 3,
+      "avgSoundness": 1,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 385,
+      "lessonsGained": [
+        "counter:irko2k",
+        "counter:46mrja",
+        "counter:x03o21",
+        "technique:x03o21",
+        "blind:18lex2d"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b198",
+      "at": "2026-09-17T12:03:17.000Z",
+      "opponent": "barbara-mcclintock",
+      "side": "A",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 72,
+      "opponentIntegrity": 49,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:1g2hbeo",
+        "counter:1k6lvmn",
+        "technique:wcopew"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b245",
+      "at": "2026-09-17T12:04:04.000Z",
+      "opponent": "copernicus",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 52,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:1pvjf7k",
+        "counter:szk3kb",
+        "technique:19m8vnv"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b327",
+      "at": "2026-09-17T12:05:26.000Z",
+      "opponent": "jagadish-chandra-bose",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 41,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 323,
+      "lessonsGained": [
+        "counter:tl1aof",
+        "counter:1oo1st8",
+        "blind:2gj1it"
+      ],
+      "lessonsReinforced": [
+        "counter:x03o21",
+        "technique:x03o21"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b435",
+      "at": "2026-09-17T12:07:14.000Z",
+      "opponent": "niels-bohr",
+      "side": "A",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 49,
+      "arguments": 3,
+      "avgSoundness": 1,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 375,
+      "lessonsGained": [
+        "technique:s9jcn8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b482",
+      "at": "2026-09-17T12:08:01.000Z",
+      "opponent": "stephen-william-hawking",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 46,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:1cv6vs5",
+        "counter:119wej",
+        "technique:1xw7ote"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

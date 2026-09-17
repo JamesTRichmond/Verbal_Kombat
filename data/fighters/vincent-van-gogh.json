@@ -3,13 +3,13 @@
   "slug": "vincent-van-gogh",
   "name": "Vincent van Gogh",
   "wing": "artists",
-  "xp": 490,
-  "level": 1,
+  "xp": 1446,
+  "level": 2,
   "record": {
-    "matches": 2,
+    "matches": 6,
     "wins": 0,
-    "losses": 2,
-    "draws": 0,
+    "losses": 5,
+    "draws": 1,
     "fallaciesCommitted": 0
   },
   "lessons": [
@@ -66,14 +66,123 @@
       "learnedFrom": "camp-2026-09-16-s42-b26",
       "learnedAt": "2026-09-16T12:00:25.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:ugdpl3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: M. C. Escher broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b181",
+      "learnedAt": "2026-09-17T12:03:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1d9zdjl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: M. C. Escher broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b181",
+      "learnedAt": "2026-09-17T12:03:00.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:ugdpl3",
+      "kind": "technique",
+      "text": "Borrow this pattern from M. C. Escher: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b181",
+      "learnedAt": "2026-09-17T12:03:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:nycjp6",
+      "kind": "blind_spot",
+      "text": "Your weakest move against M. C. Escher was \"Honestly tool lending belongs in libraries.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b181",
+      "learnedAt": "2026-09-17T12:03:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:qpro38",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terrence Deacon broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because libraries should stick to books and media, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-17-s2026-b224",
+      "learnedAt": "2026-09-17T12:03:43.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:i0wybb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terrence Deacon broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-17-s2026-b224",
+      "learnedAt": "2026-09-17T12:03:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:i0wybb",
+      "kind": "technique",
+      "text": "Borrow this pattern from Terrence Deacon: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-17-s2026-b224",
+      "learnedAt": "2026-09-17T12:03:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1d4ib8a",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Terrence Deacon was \"It is obvious that tool lending belongs in libraries.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-17-s2026-b224",
+      "learnedAt": "2026-09-17T12:03:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:182c2r7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ahmad Baba al-Timbukti broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ahmad-baba-al-timbukti",
+      "learnedFrom": "camp-2026-09-17-s2026-b455",
+      "learnedAt": "2026-09-17T12:07:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gfnuuy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ahmad Baba al-Timbukti broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ahmad-baba-al-timbukti",
+      "learnedFrom": "camp-2026-09-17-s2026-b455",
+      "learnedAt": "2026-09-17T12:07:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:182c2r7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Ahmad Baba al-Timbukti: \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ahmad-baba-al-timbukti",
+      "learnedFrom": "camp-2026-09-17-s2026-b455",
+      "learnedAt": "2026-09-17T12:07:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:15sk3jo",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Ahmad Baba al-Timbukti was \"I just feel personal finance does not need its own required course, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "ahmad-baba-al-timbukti",
+      "learnedFrom": "camp-2026-09-17-s2026-b455",
+      "learnedAt": "2026-09-17T12:07:34.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {},
     "traitGains": {
-      "formalism": 0.03,
-      "interrogation": 0.03,
-      "empiricism": 0.015
+      "formalism": 0.075,
+      "interrogation": 0.075,
+      "empiricism": 0.06,
+      "patience": 0.06
     }
   },
   "log": [
@@ -120,6 +229,97 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b181",
+      "at": "2026-09-17T12:03:00.000Z",
+      "opponent": "m-c-escher",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 283,
+      "lessonsGained": [
+        "counter:ugdpl3",
+        "counter:1d9zdjl",
+        "technique:ugdpl3",
+        "blind:nycjp6"
+      ],
+      "lessonsReinforced": [
+        "counter:1d9zdjl"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b224",
+      "at": "2026-09-17T12:03:43.000Z",
+      "opponent": "terrence-deacon",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 283,
+      "lessonsGained": [
+        "counter:qpro38",
+        "counter:i0wybb",
+        "technique:i0wybb",
+        "blind:1d4ib8a"
+      ],
+      "lessonsReinforced": [
+        "counter:qpro38"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b337",
+      "at": "2026-09-17T12:05:36.000Z",
+      "opponent": "satyendra-nath-bose",
+      "side": "B",
+      "result": "draw",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b455",
+      "at": "2026-09-17T12:07:34.000Z",
+      "opponent": "ahmad-baba-al-timbukti",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:182c2r7",
+        "counter:1gfnuuy",
+        "technique:182c2r7",
+        "blind:15sk3jo"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
     }
   ]
 }

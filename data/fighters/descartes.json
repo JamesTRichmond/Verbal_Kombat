@@ -3,12 +3,12 @@
   "slug": "descartes",
   "name": "René Descartes",
   "wing": "questioners",
-  "xp": 792,
-  "level": 1,
+  "xp": 2242,
+  "level": 3,
   "record": {
-    "matches": 2,
-    "wins": 2,
-    "losses": 0,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
     "draws": 0,
     "fallaciesCommitted": 0
   },
@@ -48,15 +48,114 @@
       "learnedFrom": "camp-2026-09-16-s42-b52",
       "learnedAt": "2026-09-16T12:00:51.000Z",
       "seen": 1
+    },
+    {
+      "id": "technique:119wej",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "edward-witten",
+      "learnedFrom": "camp-2026-09-17-s2026-b210",
+      "learnedAt": "2026-09-17T12:03:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1ldsbqu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Franklin broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b269",
+      "learnedAt": "2026-09-17T12:04:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:12x6kj9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Franklin broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b269",
+      "learnedAt": "2026-09-17T12:04:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1g2hbeo",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Franklin broke through with \"But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b269",
+      "learnedAt": "2026-09-17T12:04:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:12x6kj9",
+      "kind": "technique",
+      "text": "Borrow this pattern from Benjamin Franklin: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b269",
+      "learnedAt": "2026-09-17T12:04:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:gmkcwx",
+      "kind": "blind_spot",
+      "text": "Your moves against Benjamin Franklin were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b269",
+      "learnedAt": "2026-09-17T12:04:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ud6bdv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: C. V. Raman broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b316",
+      "learnedAt": "2026-09-17T12:05:15.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:170c1bx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: C. V. Raman broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b316",
+      "learnedAt": "2026-09-17T12:05:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ud6bdv",
+      "kind": "technique",
+      "text": "Borrow this pattern from C. V. Raman: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b316",
+      "learnedAt": "2026-09-17T12:05:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ox2rdy",
+      "kind": "blind_spot",
+      "text": "Your moves against C. V. Raman were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b316",
+      "learnedAt": "2026-09-17T12:05:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tl1aof",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jose-raul-capablanca",
+      "learnedFrom": "camp-2026-09-17-s2026-b399",
+      "learnedAt": "2026-09-17T12:06:38.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {},
     "traitGains": {
-      "empiricism": 0.01,
-      "formalism": 0.01,
-      "interrogation": 0.01,
-      "patience": 0.01
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "interrogation": 0.045,
+      "patience": 0.05
     }
   },
   "log": [
@@ -103,6 +202,99 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b210",
+      "at": "2026-09-17T12:03:29.000Z",
+      "opponent": "edward-witten",
+      "side": "A",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 60,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:119wej"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b269",
+      "at": "2026-09-17T12:04:28.000Z",
+      "opponent": "benjamin-franklin",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 41,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…",
+      "xpGained": 367,
+      "lessonsGained": [
+        "counter:1ldsbqu",
+        "counter:12x6kj9",
+        "counter:1g2hbeo",
+        "technique:12x6kj9",
+        "blind:gmkcwx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b316",
+      "at": "2026-09-17T12:05:15.000Z",
+      "opponent": "c-v-raman",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 30,
+      "opponentIntegrity": 53,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "counter:ud6bdv",
+        "counter:170c1bx",
+        "technique:ud6bdv",
+        "blind:ox2rdy"
+      ],
+      "lessonsReinforced": [
+        "counter:ud6bdv"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b399",
+      "at": "2026-09-17T12:06:38.000Z",
+      "opponent": "jose-raul-capablanca",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 37,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:tl1aof"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }

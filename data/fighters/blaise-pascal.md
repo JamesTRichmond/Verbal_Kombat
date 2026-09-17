@@ -1,9 +1,9 @@
 # Blaise Pascal
 
-Wing: The Formalizers · Level 3 · XP 2108 (892 to next)
-Record: 3-3-0 in 6 bouts · fallacies committed 8
+Wing: The Formalizers · Level 3 · XP 2408 (592 to next)
+Record: 3-4-0 in 7 bouts · fallacies committed 9
 
-## Lessons (24)
+## Lessons (30)
 
 - [avoid_fallacy] Never use false dilemma (Presenting two options as the only options). It cost you against Socrates. (x3)
 - [counter] Prepare an answer before you assert: Socrates broke through with "Let us examine the assumption that building a steady passive or recurring income is a requirement for James to spend all his time building.…" (Challenges opponent's assumption with a nuanced consideration of James's financial situation).
@@ -29,19 +29,28 @@ Record: 3-3-0 in 6 bouts · fallacies committed 8
 - [counter] Prepare an answer before you assert: Sun Tzu broke through with "Let us examine the assumption that James's most efficient path to $2,000/month of steady passive or recurring income is to combine onto (ev…" (The argument presents a coherent alternative to the initial assumption, but lacks concrete evidence to support its claims).
 - [counter] Prepare an answer before you assert: Sun Tzu broke through with "Your introduction of Verbal Kombat as a potential source of passive income is intriguing, but I'd like to caution that while it may provide…" (The argument effectively counters the opponent's claim by highlighting the uncertain long-term sustainability of Verbal Kombat and the potential diversion of resources away from the core goal).
 - [technique] Your winning pattern: "I understand the concern about the time and resources required to develop Verbal Kombat, but I'd like to propose a compromise: instead of b…" — it carried evidence, its premises led cleanly to the conclusion.
+- [avoid_fallacy] Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Rosalind Franklin.
+- [counter] Prepare an answer before you assert: Rosalind Franklin broke through with "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…" (Clean argument. structure=1.00, evidence=0.50).
+- [counter] Prepare an answer before you assert: Rosalind Franklin broke through with "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…" (Clean argument. structure=1.00, evidence=0.50).
+- [counter] Prepare an answer before you assert: Rosalind Franklin broke through with "Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…" (Clean argument. structure=0.50, evidence=1.00).
+- [technique] Borrow this pattern from Rosalind Franklin: "Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.
+- [blind_spot] Your weakest move against Rosalind Franklin was "It is obvious that tests first pays for itself. Imagine the suffering if we ignore this." (soundness 0.20). State its premises and evidence before you use it again.
 
 ## Earned strengths
 
 - Ward vs false_dilemma: 15%
 - Ward vs appeal_to_authority: 5%
 - Ward vs equivocation: 20%
-- empiricism: +0.060
-- formalism: +0.060
-- interrogation: +0.045
-- patience: +0.050
+- Ward vs appeal_to_emotion: 5%
+- empiricism: +0.075
+- formalism: +0.075
+- interrogation: +0.060
+- patience: +0.065
 
-## Bout log (6)
+## Bout log (7)
 
+- 2026-09-17 · LOSS vs Rosalind Franklin · 41-100 · +300 XP · Lv 3 · learned 6 · fallacies: appeal_to_emotion
+  - Topic: Should small teams write tests first?
 - 2026-09-17 · WIN vs Sun Tzu · 72-66 · +388 XP · Lv 3 · learned 3 · fallacies: equivocation
   - Topic: What is James's fastest path to $2,000/month of steady passive or recurring income, so he can spend all his time building? Candidates: onto (events app), Civic Signal (political-market intelligence), Wild Mates, AgentiCubed (agent orchestration platform), Verbal Kombat (debate game + decision lab), Brain Fog podcast, poetry collection publication, sci-fi book publication (AI and pyramids), CovenantWatch (covenant monitoring for fractional CFOs), Preincarnation, flexible contract/gig work (AI contracting, freelancing), and rideshare driving (Uber/Lyft). Answers may combine at most 2-3 of these. Context: he builds 4pm-midnight on top of a day job he wants to leave soon; a guaranteed monthly income floor covers basics, so downside tolerance is high; he can invest $500-$5,000+ and 15-30 hours/week; solo plus AI agents only (no big team); a working prototype plus conviction is enough evidence to keep investing; 90-day win = a shipped public product; long-term goal = something sellable at a $1M+ valuation. Hard line: nothing that could harm people. Score by expected utility: probability x how much each outcome matters to James. — which answer should James act on?
 - 2026-09-17 · LOSS vs Thomas Edison · 56-73 · +338 XP · Lv 2 · learned 5 · fallacies: equivocation

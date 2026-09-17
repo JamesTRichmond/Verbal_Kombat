@@ -3,14 +3,14 @@
   "slug": "ramanuja",
   "name": "Ramanuja",
   "wing": "awakeners",
-  "xp": 550,
-  "level": 1,
+  "xp": 1615,
+  "level": 2,
   "record": {
-    "matches": 2,
+    "matches": 6,
     "wins": 0,
-    "losses": 2,
+    "losses": 6,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 1
   },
   "lessons": [
     {
@@ -84,15 +84,161 @@
       "learnedFrom": "camp-2026-09-16-s42-b20",
       "learnedAt": "2026-09-16T12:00:19.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:10u7iwr",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jiddu Krishnamurti broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b209",
+      "learnedAt": "2026-09-17T12:03:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1cv6vs5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jiddu Krishnamurti broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b209",
+      "learnedAt": "2026-09-17T12:03:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:10u7iwr",
+      "kind": "technique",
+      "text": "Borrow this pattern from Jiddu Krishnamurti: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b209",
+      "learnedAt": "2026-09-17T12:03:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:jmqgzt",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Jiddu Krishnamurti was \"It is obvious that renewables and storage are the better path.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b209",
+      "learnedAt": "2026-09-17T12:03:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1vr3ddw",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Carmack broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tests first pays for itself, the documented cases show th…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b296",
+      "learnedAt": "2026-09-17T12:04:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1er08j1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Carmack broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b296",
+      "learnedAt": "2026-09-17T12:04:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1er08j1",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Carmack: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b296",
+      "learnedAt": "2026-09-17T12:04:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:170l37q",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Carmack was \"I just feel tests first slows small teams down, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b296",
+      "learnedAt": "2026-09-17T12:04:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alexander Grothendieck broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b325",
+      "learnedAt": "2026-09-17T12:05:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1r32bai",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alexander Grothendieck broke through with \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b325",
+      "learnedAt": "2026-09-17T12:05:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1r32bai",
+      "kind": "technique",
+      "text": "Borrow this pattern from Alexander Grothendieck: \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b325",
+      "learnedAt": "2026-09-17T12:05:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:12ls60d",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Alexander Grothendieck was \"It is obvious that remote work protects deep focus.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b325",
+      "learnedAt": "2026-09-17T12:05:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against David Hilbert.",
+      "opponent": "david-hilbert",
+      "learnedFrom": "camp-2026-09-17-s2026-b464",
+      "learnedAt": "2026-09-17T12:07:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1aeao7x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: David Hilbert broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "david-hilbert",
+      "learnedFrom": "camp-2026-09-17-s2026-b464",
+      "learnedAt": "2026-09-17T12:07:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1aeao7x",
+      "kind": "technique",
+      "text": "Borrow this pattern from David Hilbert: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "david-hilbert",
+      "learnedFrom": "camp-2026-09-17-s2026-b464",
+      "learnedAt": "2026-09-17T12:07:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:s5nbgk",
+      "kind": "blind_spot",
+      "text": "Your weakest move against David Hilbert was \"I just feel libraries should stick to books and media, that is all. Imagine the suffering if we ignore this.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "david-hilbert",
+      "learnedFrom": "camp-2026-09-17-s2026-b464",
+      "learnedAt": "2026-09-17T12:07:43.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
-    "fallacyWards": {},
+    "fallacyWards": {
+      "appeal_to_emotion": 0.05
+    },
     "traitGains": {
-      "empiricism": 0.03,
-      "formalism": 0.03,
-      "interrogation": 0.015,
-      "patience": 0.03
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "interrogation": 0.045,
+      "patience": 0.075
     }
   },
   "log": [
@@ -141,6 +287,100 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b209",
+      "at": "2026-09-17T12:03:28.000Z",
+      "opponent": "krishnamurti",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:10u7iwr",
+        "counter:1cv6vs5",
+        "technique:10u7iwr",
+        "blind:jmqgzt"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b296",
+      "at": "2026-09-17T12:04:55.000Z",
+      "opponent": "john-carmack",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1vr3ddw",
+        "counter:1er08j1",
+        "technique:1er08j1",
+        "blind:170l37q"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b325",
+      "at": "2026-09-17T12:05:24.000Z",
+      "opponent": "alexander-grothendieck",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:msxpis",
+        "counter:1r32bai",
+        "technique:1r32bai",
+        "blind:12ls60d"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b464",
+      "at": "2026-09-17T12:07:43.000Z",
+      "opponent": "david-hilbert",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 73,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 240,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:1aeao7x",
+        "technique:1aeao7x",
+        "blind:s5nbgk"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
     }
   ]
 }

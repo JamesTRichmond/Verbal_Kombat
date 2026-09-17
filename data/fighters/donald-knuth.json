@@ -3,19 +3,432 @@
   "slug": "donald-knuth",
   "name": "Donald Knuth",
   "wing": "formalizers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1562,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
+    "losses": 6,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 6
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against B. F. Skinner.",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b51",
+      "learnedAt": "2026-09-17T12:00:50.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:7vc6op",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: B. F. Skinner broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b51",
+      "learnedAt": "2026-09-17T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7vc6op",
+      "kind": "technique",
+      "text": "Borrow this pattern from B. F. Skinner: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b51",
+      "learnedAt": "2026-09-17T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:eqg08r",
+      "kind": "blind_spot",
+      "text": "Your weakest move against B. F. Skinner was \"I just feel a four-day week keeps output and improves lives, that is all. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b51",
+      "learnedAt": "2026-09-17T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against John McCarthy.",
+      "opponent": "john-mccarthy",
+      "learnedFrom": "camp-2026-09-17-s2026-b98",
+      "learnedAt": "2026-09-17T12:01:37.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1ewhc5i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John McCarthy broke through with \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-mccarthy",
+      "learnedFrom": "camp-2026-09-17-s2026-b98",
+      "learnedAt": "2026-09-17T12:01:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15zel1t",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John McCarthy broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-mccarthy",
+      "learnedFrom": "camp-2026-09-17-s2026-b98",
+      "learnedAt": "2026-09-17T12:01:37.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1ewhc5i",
+      "kind": "technique",
+      "text": "Borrow this pattern from John McCarthy: \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-mccarthy",
+      "learnedFrom": "camp-2026-09-17-s2026-b98",
+      "learnedAt": "2026-09-17T12:01:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1eogsoo",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John McCarthy was \"I just feel tool lending belongs in libraries, that is all. No true expert would disagree.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "john-mccarthy",
+      "learnedFrom": "camp-2026-09-17-s2026-b98",
+      "learnedAt": "2026-09-17T12:01:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:3yck6m",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"But note what just happened: your argument skipped the evidence entirely. Because homework builds lasting mastery, the documented cases sho…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b154",
+      "learnedAt": "2026-09-17T12:02:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:21i9d5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b154",
+      "learnedAt": "2026-09-17T12:02:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:21i9d5",
+      "kind": "technique",
+      "text": "Borrow this pattern from Noam Chomsky: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b154",
+      "learnedAt": "2026-09-17T12:02:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1tq29m",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Noam Chomsky was \"I just feel homework adds little beyond class time, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b154",
+      "learnedAt": "2026-09-17T12:02:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1aeao7x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Turing broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b232",
+      "learnedAt": "2026-09-17T12:03:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pavtnn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Turing broke through with \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b232",
+      "learnedAt": "2026-09-17T12:03:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Borrow this pattern from Alan Turing: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b232",
+      "learnedAt": "2026-09-17T12:03:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1byibfw",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Alan Turing was \"Honestly libraries should stick to books and media. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b232",
+      "learnedAt": "2026-09-17T12:03:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Thomas Jefferson.",
+      "opponent": "thomas-jefferson",
+      "learnedFrom": "camp-2026-09-17-s2026-b350",
+      "learnedAt": "2026-09-17T12:05:49.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1s9qe2c",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Jefferson broke through with \"But note what just happened: your argument skipped the evidence entirely. Because offices produce better deep work, the documented cases sh…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thomas-jefferson",
+      "learnedFrom": "camp-2026-09-17-s2026-b350",
+      "learnedAt": "2026-09-17T12:05:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1r32bai",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Jefferson broke through with \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thomas-jefferson",
+      "learnedFrom": "camp-2026-09-17-s2026-b350",
+      "learnedAt": "2026-09-17T12:05:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Jefferson broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thomas-jefferson",
+      "learnedFrom": "camp-2026-09-17-s2026-b350",
+      "learnedAt": "2026-09-17T12:05:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1r32bai",
+      "kind": "technique",
+      "text": "Borrow this pattern from Thomas Jefferson: \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "thomas-jefferson",
+      "learnedFrom": "camp-2026-09-17-s2026-b350",
+      "learnedAt": "2026-09-17T12:05:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1sziqln",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Thomas Jefferson was \"I just feel remote work protects deep focus, that is all. Imagine the suffering if we ignore this.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "thomas-jefferson",
+      "learnedFrom": "camp-2026-09-17-s2026-b350",
+      "learnedAt": "2026-09-17T12:05:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:119wej",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michel Foucault broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "michel-foucault",
+      "learnedFrom": "camp-2026-09-17-s2026-b409",
+      "learnedAt": "2026-09-17T12:06:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pllh85",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michel Foucault broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "michel-foucault",
+      "learnedFrom": "camp-2026-09-17-s2026-b409",
+      "learnedAt": "2026-09-17T12:06:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Borrow this pattern from Michel Foucault: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "michel-foucault",
+      "learnedFrom": "camp-2026-09-17-s2026-b409",
+      "learnedAt": "2026-09-17T12:06:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:17k9qvn",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Michel Foucault was \"Honestly renewables and storage are the better path. No true expert would disagree.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "michel-foucault",
+      "learnedFrom": "camp-2026-09-17-s2026-b409",
+      "learnedAt": "2026-09-17T12:06:48.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "ad_hominem": 0.1,
+      "no_true_scotsman": 0.1,
+      "appeal_to_emotion": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "interrogation": 0.075,
+      "patience": 0.075
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b51",
+      "at": "2026-09-17T12:00:50.000Z",
+      "opponent": "b-f-skinner",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 81,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "xpGained": 240,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:7vc6op",
+        "technique:7vc6op",
+        "blind:eqg08r"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b98",
+      "at": "2026-09-17T12:01:37.000Z",
+      "opponent": "john-mccarthy",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "xpGained": 278,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:1ewhc5i",
+        "counter:15zel1t",
+        "technique:1ewhc5i",
+        "blind:1eogsoo"
+      ],
+      "lessonsReinforced": [
+        "counter:15zel1t"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b154",
+      "at": "2026-09-17T12:02:33.000Z",
+      "opponent": "noam-chomsky",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:3yck6m",
+        "counter:21i9d5",
+        "technique:21i9d5",
+        "blind:1tq29m"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b232",
+      "at": "2026-09-17T12:03:51.000Z",
+      "opponent": "alan-turing",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 51,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "xpGained": 248,
+      "lessonsGained": [
+        "counter:1aeao7x",
+        "counter:1pavtnn",
+        "technique:1pavtnn",
+        "blind:1byibfw"
+      ],
+      "lessonsReinforced": [
+        "avoid:ad_hominem"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b350",
+      "at": "2026-09-17T12:05:49.000Z",
+      "opponent": "thomas-jefferson",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 300,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:1s9qe2c",
+        "counter:1r32bai",
+        "counter:msxpis",
+        "technique:1r32bai",
+        "blind:1sziqln"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b409",
+      "at": "2026-09-17T12:06:48.000Z",
+      "opponent": "michel-foucault",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 45,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "no_true_scotsman",
+        "appeal_to_emotion"
+      ],
+      "xpGained": 221,
+      "lessonsGained": [
+        "counter:119wej",
+        "counter:pllh85",
+        "technique:pllh85",
+        "blind:17k9qvn"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman",
+        "avoid:appeal_to_emotion"
+      ],
+      "levelAfter": 2
+    }
+  ]
 }

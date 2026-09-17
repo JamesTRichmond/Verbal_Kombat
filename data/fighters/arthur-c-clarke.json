@@ -3,19 +3,368 @@
   "slug": "arthur-c-clarke",
   "name": "Arthur C. Clarke",
   "wing": "imaginers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1448,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "losses": 5,
+    "draws": 1,
+    "fallaciesCommitted": 3
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Niels Bohr.",
+      "opponent": "niels-bohr",
+      "learnedFrom": "camp-2026-09-17-s2026-b37",
+      "learnedAt": "2026-09-17T12:00:36.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:zz2lgu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Lise Meitner broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b121",
+      "learnedAt": "2026-09-17T12:02:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1wc5s54",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Lise Meitner broke through with \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b121",
+      "learnedAt": "2026-09-17T12:02:00.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:zz2lgu",
+      "kind": "technique",
+      "text": "Borrow this pattern from Lise Meitner: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b121",
+      "learnedAt": "2026-09-17T12:02:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:nl1c5g",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Lise Meitner was \"I just feel a four-day week keeps output and improves lives, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "lise-meitner",
+      "learnedFrom": "camp-2026-09-17-s2026-b121",
+      "learnedAt": "2026-09-17T12:02:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tgii8e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Bardeen broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "john-bardeen",
+      "learnedFrom": "camp-2026-09-17-s2026-b203",
+      "learnedAt": "2026-09-17T12:03:22.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:15wy74e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Bardeen broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "john-bardeen",
+      "learnedFrom": "camp-2026-09-17-s2026-b203",
+      "learnedAt": "2026-09-17T12:03:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tgii8e",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Bardeen: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-bardeen",
+      "learnedFrom": "camp-2026-09-17-s2026-b203",
+      "learnedAt": "2026-09-17T12:03:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ig86kv",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Bardeen was \"I just feel car-free downtowns make cities better, that is all. Imagine the suffering if we ignore this.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "john-bardeen",
+      "learnedFrom": "camp-2026-09-17-s2026-b203",
+      "learnedAt": "2026-09-17T12:03:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ma60bc",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Locke broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "john-locke",
+      "learnedFrom": "camp-2026-09-17-s2026-b298",
+      "learnedAt": "2026-09-17T12:04:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:d6iuqe",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Locke broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "john-locke",
+      "learnedFrom": "camp-2026-09-17-s2026-b298",
+      "learnedAt": "2026-09-17T12:04:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ma60bc",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Locke: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "john-locke",
+      "learnedFrom": "camp-2026-09-17-s2026-b298",
+      "learnedAt": "2026-09-17T12:04:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1jeokce",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Locke was \"Honestly car bans make downtowns worse.\" (soundness 0.45). State its premises and evidence before you use it again.",
+      "opponent": "john-locke",
+      "learnedFrom": "camp-2026-09-17-s2026-b298",
+      "learnedAt": "2026-09-17T12:04:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Benjamin Franklin.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b303",
+      "learnedAt": "2026-09-17T12:05:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:b1fhfu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Franklin broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b303",
+      "learnedAt": "2026-09-17T12:05:02.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:b1fhfu",
+      "kind": "technique",
+      "text": "Borrow this pattern from Benjamin Franklin: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b303",
+      "learnedAt": "2026-09-17T12:05:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:gtevs2",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Benjamin Franklin was \"Honestly libraries should stick to books and media. No one has ever proven otherwise.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-17-s2026-b303",
+      "learnedAt": "2026-09-17T12:05:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:j9l1rk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because renewables and storage are the better path, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b415",
+      "learnedAt": "2026-09-17T12:06:54.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:19m8vnv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b415",
+      "learnedAt": "2026-09-17T12:06:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19m8vnv",
+      "kind": "technique",
+      "text": "Borrow this pattern from Sigmund Freud: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b415",
+      "learnedAt": "2026-09-17T12:06:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1crw5g",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Sigmund Freud was \"It is obvious that nuclear power belongs in a clean grid.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b415",
+      "learnedAt": "2026-09-17T12:06:54.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_emotion": 0.1,
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "patience": 0.09,
+      "empiricism": 0.075,
+      "formalism": 0.075,
+      "interrogation": 0.06
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b37",
+      "at": "2026-09-17T12:00:36.000Z",
+      "opponent": "niels-bohr",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 110,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b121",
+      "at": "2026-09-17T12:02:00.000Z",
+      "opponent": "lise-meitner",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 283,
+      "lessonsGained": [
+        "counter:zz2lgu",
+        "counter:1wc5s54",
+        "technique:zz2lgu",
+        "blind:nl1c5g"
+      ],
+      "lessonsReinforced": [
+        "counter:1wc5s54"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b203",
+      "at": "2026-09-17T12:03:22.000Z",
+      "opponent": "john-bardeen",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 256,
+      "lessonsGained": [
+        "counter:tgii8e",
+        "counter:15wy74e",
+        "technique:tgii8e",
+        "blind:ig86kv"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_emotion",
+        "counter:tgii8e"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b298",
+      "at": "2026-09-17T12:04:57.000Z",
+      "opponent": "john-locke",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.583,
+      "fallacies": [],
+      "xpGained": 268,
+      "lessonsGained": [
+        "counter:ma60bc",
+        "counter:d6iuqe",
+        "technique:ma60bc",
+        "blind:1jeokce"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b303",
+      "at": "2026-09-17T12:05:02.000Z",
+      "opponent": "benjamin-franklin",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 248,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:b1fhfu",
+        "technique:b1fhfu",
+        "blind:gtevs2"
+      ],
+      "lessonsReinforced": [
+        "counter:b1fhfu"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b415",
+      "at": "2026-09-17T12:06:54.000Z",
+      "opponent": "sigmund-freud",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 283,
+      "lessonsGained": [
+        "counter:j9l1rk",
+        "counter:19m8vnv",
+        "technique:19m8vnv",
+        "blind:1crw5g"
+      ],
+      "lessonsReinforced": [
+        "counter:j9l1rk"
+      ],
+      "levelAfter": 2
+    }
+  ]
 }

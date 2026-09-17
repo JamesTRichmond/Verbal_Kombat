@@ -1,16 +1,50 @@
 # Freeman Dyson
 
-Wing: The Imaginers · Level 1 · XP 0 (1000 to next)
-Record: 0-0-0 in 0 bouts · fallacies committed 0
+Wing: The Imaginers · Level 3 · XP 2709 (291 to next)
+Record: 5-2-0 in 7 bouts · fallacies committed 0
 
-## Lessons (0)
+## Lessons (19)
 
-None yet.
+- [technique] Your winning pattern: "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…" — it carried evidence, its premises led cleanly to the conclusion.
+- [counter] Prepare an answer before you assert: Garry Kasparov broke through with "However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…" (Clean argument. structure=0.50, evidence=1.00).
+- [counter] Prepare an answer before you assert: Garry Kasparov broke through with "Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…" (Clean argument. structure=0.50, evidence=1.00).
+- [counter] Prepare an answer before you assert: Garry Kasparov broke through with "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…" (Clean argument. structure=1.00, evidence=0.50). (x2)
+- [technique] Borrow this pattern from Garry Kasparov: "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…" — it answered the opponent directly, its premises led cleanly to the conclusion. (x2)
+- [blind_spot] Your moves against Garry Kasparov were sound but not enough. Answer their strongest point directly before advancing your own.
+- [counter] Prepare an answer before you assert: Barbara McClintock broke through with "But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…" (Clean argument. structure=0.50, evidence=1.00).
+- [counter] Prepare an answer before you assert: Barbara McClintock broke through with "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…" (Clean argument. structure=1.00, evidence=0.50).
+- [technique] Your winning pattern: "Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.
+- [counter] Prepare an answer before you assert: Nicolaus Copernicus broke through with "However, your premise assumes what it needs to prove, and the data shows otherwise. Because nuclear power belongs in a clean grid, the docu…" (Clean argument. structure=0.50, evidence=1.00).
+- [counter] Prepare an answer before you assert: Nicolaus Copernicus broke through with "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…" (Clean argument. structure=1.00, evidence=0.50).
+- [technique] Your winning pattern: "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.
+- [counter] Prepare an answer before you assert: Jagadish Chandra Bose broke through with "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…" (Clean argument. structure=0.50, evidence=1.00).
+- [counter] Prepare an answer before you assert: Jagadish Chandra Bose broke through with "But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…" (Clean argument. structure=0.50, evidence=1.00).
+- [blind_spot] Your moves against Jagadish Chandra Bose were sound but not enough. Answer their strongest point directly before advancing your own.
+- [technique] Your winning pattern: "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…" — it answered the opponent directly, its premises led cleanly to the conclusion.
+- [counter] Prepare an answer before you assert: Stephen Hawking broke through with "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…" (Clean argument. structure=0.50, evidence=1.00).
+- [counter] Prepare an answer before you assert: Stephen Hawking broke through with "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…" (Clean argument. structure=1.00, evidence=1.00).
+- [technique] Your winning pattern: "Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.
 
 ## Earned strengths
 
-None yet.
+- empiricism: +0.050
+- formalism: +0.055
+- interrogation: +0.055
+- patience: +0.055
 
-## Bout log (0)
+## Bout log (7)
 
-No bouts yet.
+- 2026-09-17 · WIN vs Stephen Hawking · 64-46 · +423 XP · Lv 3 · learned 3
+  - Topic: Is nuclear power a sensible part of a clean grid?
+- 2026-09-17 · WIN vs Niels Bohr · 100-49 · +375 XP · Lv 3 · learned 1
+  - Topic: Should schools teach personal finance as a required course?
+- 2026-09-17 · LOSS vs Jagadish Chandra Bose · 41-55 · +323 XP · Lv 2 · learned 3
+  - Topic: Should schools teach personal finance as a required course?
+- 2026-09-17 · WIN vs Nicolaus Copernicus · 64-52 · +423 XP · Lv 2 · learned 3
+  - Topic: Is nuclear power a sensible part of a clean grid?
+- 2026-09-17 · WIN vs Barbara McClintock · 72-49 · +417 XP · Lv 2 · learned 3
+  - Topic: Is homework worth assigning?
+- 2026-09-17 · LOSS vs Garry Kasparov · 36-41 · +385 XP · Lv 1 · learned 5
+  - Topic: Should schools teach personal finance as a required course?
+- 2026-09-17 · WIN vs Avicenna (Ibn Sina) · 100-49 · +363 XP · Lv 1 · learned 1
+  - Topic: Should schools teach personal finance as a required course?

@@ -3,14 +3,14 @@
   "slug": "copernicus",
   "name": "Nicolaus Copernicus",
   "wing": "imaginers",
-  "xp": 316,
-  "level": 1,
+  "xp": 2337,
+  "level": 3,
   "record": {
-    "matches": 1,
-    "wins": 0,
-    "losses": 1,
+    "matches": 7,
+    "wins": 3,
+    "losses": 4,
     "draws": 0,
-    "fallaciesCommitted": 2
+    "fallaciesCommitted": 6
   },
   "lessons": [
     {
@@ -20,7 +20,7 @@
       "opponent": "linus-torvalds",
       "learnedFrom": "camp-2026-09-16-s42-b37",
       "learnedAt": "2026-09-16T12:00:36.000Z",
-      "seen": 1
+      "seen": 2
     },
     {
       "id": "avoid:slippery_slope",
@@ -75,18 +75,190 @@
       "learnedFrom": "camp-2026-09-16-s42-b37",
       "learnedAt": "2026-09-16T12:00:36.000Z",
       "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Edward Bernays.",
+      "opponent": "edward-bernays",
+      "learnedFrom": "camp-2026-09-17-s2026-b58",
+      "learnedAt": "2026-09-17T12:00:57.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1f40lgl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Edward Bernays broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "edward-bernays",
+      "learnedFrom": "camp-2026-09-17-s2026-b58",
+      "learnedAt": "2026-09-17T12:00:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:10u7iwr",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Edward Bernays broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "edward-bernays",
+      "learnedFrom": "camp-2026-09-17-s2026-b58",
+      "learnedAt": "2026-09-17T12:00:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:10u7iwr",
+      "kind": "technique",
+      "text": "Borrow this pattern from Edward Bernays: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "edward-bernays",
+      "learnedFrom": "camp-2026-09-17-s2026-b58",
+      "learnedAt": "2026-09-17T12:00:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:q727xy",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Edward Bernays was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "edward-bernays",
+      "learnedFrom": "camp-2026-09-17-s2026-b58",
+      "learnedAt": "2026-09-17T12:00:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ud6bdv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Judit Polgár broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b193",
+      "learnedAt": "2026-09-17T12:03:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:mh1b6d",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b193",
+      "learnedAt": "2026-09-17T12:03:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19m8vnv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Freeman Dyson broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b245",
+      "learnedAt": "2026-09-17T12:04:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gavq4z",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Freeman Dyson broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b245",
+      "learnedAt": "2026-09-17T12:04:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:j9l1rk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Freeman Dyson broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because renewables and storage are the better path, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b245",
+      "learnedAt": "2026-09-17T12:04:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19m8vnv",
+      "kind": "technique",
+      "text": "Borrow this pattern from Freeman Dyson: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b245",
+      "learnedAt": "2026-09-17T12:04:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:q092ac",
+      "kind": "blind_spot",
+      "text": "Your moves against Freeman Dyson were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b245",
+      "learnedAt": "2026-09-17T12:04:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pllh85",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ram Dass broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "ram-dass",
+      "learnedFrom": "camp-2026-09-17-s2026-b346",
+      "learnedAt": "2026-09-17T12:05:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7p0ydc",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ram Dass broke through with \"But note what just happened: your argument skipped the evidence entirely. Because nuclear power belongs in a clean grid, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ram-dass",
+      "learnedFrom": "camp-2026-09-17-s2026-b346",
+      "learnedAt": "2026-09-17T12:05:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Borrow this pattern from Ram Dass: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "ram-dass",
+      "learnedFrom": "camp-2026-09-17-s2026-b346",
+      "learnedAt": "2026-09-17T12:05:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1hwywgh",
+      "kind": "blind_spot",
+      "text": "Your moves against Ram Dass were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "ram-dass",
+      "learnedFrom": "camp-2026-09-17-s2026-b346",
+      "learnedAt": "2026-09-17T12:05:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1oo1st8",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "edward-witten",
+      "learnedFrom": "camp-2026-09-17-s2026-b480",
+      "learnedAt": "2026-09-17T12:07:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1hluoob",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Fyodor Dostoevsky broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "fyodor-dostoevsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b489",
+      "learnedAt": "2026-09-17T12:08:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h7563f",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "fyodor-dostoevsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b489",
+      "learnedAt": "2026-09-17T12:08:08.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
-      "appeal_to_ignorance": 0.05,
-      "slippery_slope": 0.05
+      "appeal_to_ignorance": 0.1,
+      "slippery_slope": 0.05,
+      "appeal_to_popularity": 0.1
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015,
-      "patience": 0.015
+      "empiricism": 0.075,
+      "formalism": 0.075,
+      "interrogation": 0.075,
+      "patience": 0.065
     }
   },
   "log": [
@@ -119,6 +291,156 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b58",
+      "at": "2026-09-17T12:00:57.000Z",
+      "opponent": "edward-bernays",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 45,
+      "opponentIntegrity": 84,
+      "arguments": 3,
+      "avgSoundness": 0.467,
+      "fallacies": [
+        "appeal_to_popularity",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 262,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "counter:1f40lgl",
+        "counter:10u7iwr",
+        "technique:10u7iwr",
+        "blind:q727xy"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b193",
+      "at": "2026-09-17T12:03:12.000Z",
+      "opponent": "judit-polgar",
+      "side": "A",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 74,
+      "opponentIntegrity": 62,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 340,
+      "lessonsGained": [
+        "counter:ud6bdv",
+        "technique:mh1b6d"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b245",
+      "at": "2026-09-17T12:04:04.000Z",
+      "opponent": "freeman-dyson",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 52,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 379,
+      "lessonsGained": [
+        "counter:19m8vnv",
+        "counter:1gavq4z",
+        "counter:j9l1rk",
+        "technique:19m8vnv",
+        "blind:q092ac"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b346",
+      "at": "2026-09-17T12:05:45.000Z",
+      "opponent": "ram-dass",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 58,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 343,
+      "lessonsGained": [
+        "counter:pllh85",
+        "counter:7p0ydc",
+        "technique:pllh85",
+        "blind:1hwywgh"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b480",
+      "at": "2026-09-17T12:07:59.000Z",
+      "opponent": "edward-witten",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:1oo1st8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b489",
+      "at": "2026-09-17T12:08:08.000Z",
+      "opponent": "fyodor-dostoevsky",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 60,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 340,
+      "lessonsGained": [
+        "counter:1hluoob",
+        "technique:1h7563f"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_popularity"
+      ],
+      "levelAfter": 3
     }
   ]
 }

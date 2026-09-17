@@ -3,19 +3,290 @@
   "slug": "ram-dass",
   "name": "Ram Dass",
   "wing": "awakeners",
-  "xp": 0,
-  "level": 1,
+  "xp": 2360,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 5,
+    "losses": 1,
     "draws": 0,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "technique:1p7ux5t",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "carl-rogers",
+      "learnedFrom": "camp-2026-09-17-s2026-b53",
+      "learnedAt": "2026-09-17T12:00:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tpn58x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ada Lovelace broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b110",
+      "learnedAt": "2026-09-17T12:01:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tl1aof",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ada Lovelace broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b110",
+      "learnedAt": "2026-09-17T12:01:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:s9jcn8",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b110",
+      "learnedAt": "2026-09-17T12:01:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:170c1bx",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "maimonides",
+      "learnedFrom": "camp-2026-09-17-s2026-b168",
+      "learnedAt": "2026-09-17T12:02:47.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:ugdpl3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: C. V. Raman broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b275",
+      "learnedAt": "2026-09-17T12:04:34.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:nm5zw4",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: C. V. Raman broke through with \"But note what just happened: your argument skipped the evidence entirely. Because libraries should stick to books and media, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b275",
+      "learnedAt": "2026-09-17T12:04:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ugdpl3",
+      "kind": "technique",
+      "text": "Borrow this pattern from C. V. Raman: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b275",
+      "learnedAt": "2026-09-17T12:04:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:28993r",
+      "kind": "blind_spot",
+      "text": "Your moves against C. V. Raman were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "c-v-raman",
+      "learnedFrom": "camp-2026-09-17-s2026-b275",
+      "learnedAt": "2026-09-17T12:04:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1yb1ih1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b346",
+      "learnedAt": "2026-09-17T12:05:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gavq4z",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b346",
+      "learnedAt": "2026-09-17T12:05:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:j9l1rk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because renewables and storage are the better path, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b346",
+      "learnedAt": "2026-09-17T12:05:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-17-s2026-b346",
+      "learnedAt": "2026-09-17T12:05:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1jki1u2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Katherine Johnson broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week keeps output and improves lives…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b408",
+      "learnedAt": "2026-09-17T12:06:47.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.04,
+      "formalism": 0.04,
+      "interrogation": 0.04,
+      "patience": 0.04
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b53",
+      "at": "2026-09-17T12:00:52.000Z",
+      "opponent": "carl-rogers",
+      "side": "A",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 37,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:1p7ux5t"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b110",
+      "at": "2026-09-17T12:01:49.000Z",
+      "opponent": "lovelace",
+      "side": "A",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 48,
+      "arguments": 3,
+      "avgSoundness": 1,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 435,
+      "lessonsGained": [
+        "counter:tpn58x",
+        "counter:tl1aof",
+        "technique:s9jcn8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b168",
+      "at": "2026-09-17T12:02:47.000Z",
+      "opponent": "maimonides",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 36,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:170c1bx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b275",
+      "at": "2026-09-17T12:04:34.000Z",
+      "opponent": "c-v-raman",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 57,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "counter:ugdpl3",
+        "counter:nm5zw4",
+        "technique:ugdpl3",
+        "blind:28993r"
+      ],
+      "lessonsReinforced": [
+        "counter:ugdpl3"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b346",
+      "at": "2026-09-17T12:05:45.000Z",
+      "opponent": "copernicus",
+      "side": "A",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 453,
+      "lessonsGained": [
+        "counter:1yb1ih1",
+        "counter:1gavq4z",
+        "counter:j9l1rk",
+        "technique:pllh85"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b408",
+      "at": "2026-09-17T12:06:47.000Z",
+      "opponent": "creola-katherine-johnson",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 77,
+      "opponentIntegrity": 43,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 377,
+      "lessonsGained": [
+        "counter:1jki1u2"
+      ],
+      "lessonsReinforced": [
+        "technique:170c1bx"
+      ],
+      "levelAfter": 3
+    }
+  ]
 }

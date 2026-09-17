@@ -3,12 +3,12 @@
   "slug": "leonhard-euler",
   "name": "Leonhard Euler",
   "wing": "pattern_seers",
-  "xp": 694,
-  "level": 1,
+  "xp": 2162,
+  "level": 3,
   "record": {
-    "matches": 2,
-    "wins": 0,
-    "losses": 2,
+    "matches": 6,
+    "wins": 2,
+    "losses": 4,
     "draws": 0,
     "fallaciesCommitted": 0
   },
@@ -84,15 +84,114 @@
       "learnedFrom": "camp-2026-09-16-s42-b47",
       "learnedAt": "2026-09-16T12:00:46.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:mmqi93",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Al-Farabi broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "al-farabi",
+      "learnedFrom": "camp-2026-09-17-s2026-b165",
+      "learnedAt": "2026-09-17T12:02:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:jtdfyp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Al-Farabi broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "al-farabi",
+      "learnedFrom": "camp-2026-09-17-s2026-b165",
+      "learnedAt": "2026-09-17T12:02:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:46mrja",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Al-Farabi broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "al-farabi",
+      "learnedFrom": "camp-2026-09-17-s2026-b165",
+      "learnedAt": "2026-09-17T12:02:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:46mrja",
+      "kind": "technique",
+      "text": "Borrow this pattern from Al-Farabi: \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "al-farabi",
+      "learnedFrom": "camp-2026-09-17-s2026-b165",
+      "learnedAt": "2026-09-17T12:02:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:wkicf1",
+      "kind": "blind_spot",
+      "text": "Your moves against Al-Farabi were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "al-farabi",
+      "learnedFrom": "camp-2026-09-17-s2026-b165",
+      "learnedAt": "2026-09-17T12:02:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:y9aa26",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: David Hume broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework builds lasting mastery, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "david-hume",
+      "learnedFrom": "camp-2026-09-17-s2026-b263",
+      "learnedAt": "2026-09-17T12:04:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:12x6kj9",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "david-hume",
+      "learnedFrom": "camp-2026-09-17-s2026-b263",
+      "learnedAt": "2026-09-17T12:04:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:s56t90",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Grigori Perelman broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b326",
+      "learnedAt": "2026-09-17T12:05:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1t0wkr5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Grigori Perelman broke through with \"Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b326",
+      "learnedAt": "2026-09-17T12:05:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t0wkr5",
+      "kind": "technique",
+      "text": "Borrow this pattern from Grigori Perelman: \"Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b326",
+      "learnedAt": "2026-09-17T12:05:25.000Z",
+      "seen": 2
+    },
+    {
+      "id": "blind:1rm8510",
+      "kind": "blind_spot",
+      "text": "Your moves against Grigori Perelman were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b326",
+      "learnedAt": "2026-09-17T12:05:25.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {},
     "traitGains": {
-      "empiricism": 0.03,
-      "formalism": 0.03,
-      "interrogation": 0.03,
-      "patience": 0.03
+      "empiricism": 0.07,
+      "formalism": 0.07,
+      "interrogation": 0.07,
+      "patience": 0.07
     }
   },
   "log": [
@@ -145,6 +244,98 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b165",
+      "at": "2026-09-17T12:02:44.000Z",
+      "opponent": "al-farabi",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 45,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 1,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 385,
+      "lessonsGained": [
+        "counter:mmqi93",
+        "counter:jtdfyp",
+        "counter:46mrja",
+        "technique:46mrja",
+        "blind:wkicf1"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b263",
+      "at": "2026-09-17T12:04:22.000Z",
+      "opponent": "david-hume",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 77,
+      "opponentIntegrity": 24,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 393,
+      "lessonsGained": [
+        "counter:y9aa26",
+        "technique:12x6kj9"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b326",
+      "at": "2026-09-17T12:05:25.000Z",
+      "opponent": "grigori-perelman",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 349,
+      "lessonsGained": [
+        "counter:s56t90",
+        "counter:1t0wkr5",
+        "technique:1t0wkr5",
+        "blind:1rm8510"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b421",
+      "at": "2026-09-17T12:07:00.000Z",
+      "opponent": "ibn-khaldun",
+      "side": "A",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…",
+      "xpGained": 341,
+      "lessonsGained": [],
+      "lessonsReinforced": [
+        "technique:1t0wkr5"
+      ],
+      "levelAfter": 3
     }
   ]
 }

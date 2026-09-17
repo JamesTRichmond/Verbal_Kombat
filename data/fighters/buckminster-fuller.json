@@ -3,14 +3,14 @@
   "slug": "buckminster-fuller",
   "name": "Buckminster Fuller",
   "wing": "builders",
-  "xp": 1163,
-  "level": 2,
+  "xp": 2752,
+  "level": 3,
   "record": {
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
+    "matches": 7,
+    "wins": 4,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 1
   },
   "lessons": [
     {
@@ -129,15 +129,143 @@
       "learnedFrom": "camp-2026-09-16-s42-b58",
       "learnedAt": "2026-09-16T12:00:57.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:1cv6vs5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-17-s2026-b257",
+      "learnedAt": "2026-09-17T12:04:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:10u7iwr",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-17-s2026-b257",
+      "learnedAt": "2026-09-17T12:04:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19m8vnv",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-17-s2026-b257",
+      "learnedAt": "2026-09-17T12:04:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:b48u21",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Watts broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "alan-watts",
+      "learnedFrom": "camp-2026-09-17-s2026-b387",
+      "learnedAt": "2026-09-17T12:06:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:k52x2j",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Watts broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alan-watts",
+      "learnedFrom": "camp-2026-09-17-s2026-b387",
+      "learnedAt": "2026-09-17T12:06:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ldsbqu",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "alan-watts",
+      "learnedFrom": "camp-2026-09-17-s2026-b387",
+      "learnedAt": "2026-09-17T12:06:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:2rojog",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Judit Polgár broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b444",
+      "learnedAt": "2026-09-17T12:07:23.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:tgii8e",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b444",
+      "learnedAt": "2026-09-17T12:07:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Baruch Spinoza.",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b497",
+      "learnedAt": "2026-09-17T12:08:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Baruch Spinoza broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b497",
+      "learnedAt": "2026-09-17T12:08:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mdog6y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Baruch Spinoza broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tests first slows small teams down, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b497",
+      "learnedAt": "2026-09-17T12:08:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tyaiuz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Baruch Spinoza broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b497",
+      "learnedAt": "2026-09-17T12:08:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19pgg8q",
+      "kind": "technique",
+      "text": "Borrow this pattern from Baruch Spinoza: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b497",
+      "learnedAt": "2026-09-17T12:08:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:9eo17y",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Baruch Spinoza was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b497",
+      "learnedAt": "2026-09-17T12:08:16.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
-    "fallacyWards": {},
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05
+    },
     "traitGains": {
-      "empiricism": 0.035,
-      "formalism": 0.035,
-      "interrogation": 0.035,
-      "patience": 0.035
+      "empiricism": 0.065,
+      "formalism": 0.065,
+      "interrogation": 0.065,
+      "patience": 0.065
     }
   },
   "log": [
@@ -213,6 +341,104 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b257",
+      "at": "2026-09-17T12:04:16.000Z",
+      "opponent": "carl-gauss",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 48,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:1cv6vs5",
+        "counter:10u7iwr",
+        "technique:19m8vnv"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b387",
+      "at": "2026-09-17T12:06:26.000Z",
+      "opponent": "alan-watts",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 30,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:b48u21",
+        "counter:k52x2j",
+        "technique:1ldsbqu"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b444",
+      "at": "2026-09-17T12:07:23.000Z",
+      "opponent": "judit-polgar",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 47,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 401,
+      "lessonsGained": [
+        "counter:2rojog",
+        "technique:tgii8e"
+      ],
+      "lessonsReinforced": [
+        "counter:2rojog"
+      ],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b497",
+      "at": "2026-09-17T12:08:16.000Z",
+      "opponent": "baruch-spinoza",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 76,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because tests first pays for itself, the documented cases show th…",
+      "xpGained": 348,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:19pgg8q",
+        "counter:mdog6y",
+        "counter:tyaiuz",
+        "technique:19pgg8q",
+        "blind:9eo17y"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }

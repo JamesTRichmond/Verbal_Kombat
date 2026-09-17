@@ -3,19 +3,310 @@
   "slug": "evangelos-katsioulis",
   "name": "Evangelos Katsioulis",
   "wing": "mind_mappers",
-  "xp": 0,
-  "level": 1,
+  "xp": 2288,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
     "draws": 0,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ludwig van Beethoven broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ludwig-van-beethoven",
+      "learnedFrom": "camp-2026-09-17-s2026-b11",
+      "learnedAt": "2026-09-17T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ludwig van Beethoven broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ludwig-van-beethoven",
+      "learnedFrom": "camp-2026-09-17-s2026-b11",
+      "learnedAt": "2026-09-17T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tyaiuz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ludwig van Beethoven broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ludwig-van-beethoven",
+      "learnedFrom": "camp-2026-09-17-s2026-b11",
+      "learnedAt": "2026-09-17T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ma8z53",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ludwig-van-beethoven",
+      "learnedFrom": "camp-2026-09-17-s2026-b11",
+      "learnedAt": "2026-09-17T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1o49xu9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Watts broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car-free downtowns make cities better, the docu…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alan-watts",
+      "learnedFrom": "camp-2026-09-17-s2026-b97",
+      "learnedAt": "2026-09-17T12:01:36.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "alan-watts",
+      "learnedFrom": "camp-2026-09-17-s2026-b97",
+      "learnedAt": "2026-09-17T12:01:36.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:8wsog8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bennet Omalu broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-17-s2026-b185",
+      "learnedAt": "2026-09-17T12:03:04.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:170c1bx",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-17-s2026-b185",
+      "learnedAt": "2026-09-17T12:03:04.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:2ga3hg",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b253",
+      "learnedAt": "2026-09-17T12:04:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13is16i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b253",
+      "learnedAt": "2026-09-17T12:04:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:flz2hp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b253",
+      "learnedAt": "2026-09-17T12:04:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:2ga3hg",
+      "kind": "technique",
+      "text": "Borrow this pattern from Jocelyn Bell Burnell: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b253",
+      "learnedAt": "2026-09-17T12:04:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1rautcx",
+      "kind": "blind_spot",
+      "text": "Your moves against Jocelyn Bell Burnell were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b253",
+      "learnedAt": "2026-09-17T12:04:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16zat2p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Fyodor Dostoevsky broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "fyodor-dostoevsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b385",
+      "learnedAt": "2026-09-17T12:06:24.000Z",
+      "seen": 3
+    },
+    {
+      "id": "technique:16zat2p",
+      "kind": "technique",
+      "text": "Borrow this pattern from Fyodor Dostoevsky: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "fyodor-dostoevsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b385",
+      "learnedAt": "2026-09-17T12:06:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:r68oji",
+      "kind": "blind_spot",
+      "text": "Your moves against Fyodor Dostoevsky were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "fyodor-dostoevsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b385",
+      "learnedAt": "2026-09-17T12:06:24.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.035,
+      "formalism": 0.05,
+      "interrogation": 0.05,
+      "patience": 0.05
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b11",
+      "at": "2026-09-17T12:00:10.000Z",
+      "opponent": "ludwig-van-beethoven",
+      "side": "A",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 59,
+      "opponentIntegrity": 53,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 459,
+      "lessonsGained": [
+        "counter:14czikb",
+        "counter:19pgg8q",
+        "counter:tyaiuz",
+        "technique:ma8z53"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b97",
+      "at": "2026-09-17T12:01:36.000Z",
+      "opponent": "alan-watts",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 80,
+      "opponentIntegrity": 25,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…",
+      "xpGained": 387,
+      "lessonsGained": [
+        "counter:1o49xu9",
+        "technique:7s46gj"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b185",
+      "at": "2026-09-17T12:03:04.000Z",
+      "opponent": "bennet-ifeakandu-omalu",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 71,
+      "opponentIntegrity": 41,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 393,
+      "lessonsGained": [
+        "counter:8wsog8",
+        "technique:170c1bx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b253",
+      "at": "2026-09-17T12:04:12.000Z",
+      "opponent": "jocelyn-bell-burnell",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:2ga3hg",
+        "counter:13is16i",
+        "counter:flz2hp",
+        "technique:2ga3hg",
+        "blind:1rautcx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b385",
+      "at": "2026-09-17T12:06:24.000Z",
+      "opponent": "fyodor-dostoevsky",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 28,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 327,
+      "lessonsGained": [
+        "counter:16zat2p",
+        "technique:16zat2p",
+        "blind:r68oji"
+      ],
+      "lessonsReinforced": [
+        "counter:16zat2p"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b414",
+      "at": "2026-09-17T12:06:53.000Z",
+      "opponent": "alan-watts",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 69,
+      "opponentIntegrity": 33,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 349,
+      "lessonsGained": [],
+      "lessonsReinforced": [
+        "counter:8wsog8",
+        "technique:170c1bx"
+      ],
+      "levelAfter": 3
+    }
+  ]
 }

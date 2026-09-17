@@ -3,14 +3,14 @@
   "slug": "julian-jaynes",
   "name": "Julian Jaynes",
   "wing": "mind_mappers",
-  "xp": 226,
-  "level": 1,
+  "xp": 1819,
+  "level": 2,
   "record": {
-    "matches": 1,
+    "matches": 6,
     "wins": 0,
-    "losses": 1,
+    "losses": 6,
     "draws": 0,
-    "fallaciesCommitted": 2
+    "fallaciesCommitted": 6
   },
   "lessons": [
     {
@@ -48,16 +48,227 @@
       "learnedFrom": "camp-2026-09-16-s42-b42",
       "learnedAt": "2026-09-16T12:00:41.000Z",
       "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Baruch Spinoza.",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b94",
+      "learnedAt": "2026-09-17T12:01:33.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:ma8z53",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Baruch Spinoza broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b94",
+      "learnedAt": "2026-09-17T12:01:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16qvw3o",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Baruch Spinoza broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first pays for itself, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b94",
+      "learnedAt": "2026-09-17T12:01:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ma8z53",
+      "kind": "technique",
+      "text": "Borrow this pattern from Baruch Spinoza: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b94",
+      "learnedAt": "2026-09-17T12:01:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1yza84o",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Baruch Spinoza was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "baruch-spinoza",
+      "learnedFrom": "camp-2026-09-17-s2026-b94",
+      "learnedAt": "2026-09-17T12:01:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:2ga3hg",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b187",
+      "learnedAt": "2026-09-17T12:03:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1b2nyfg",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b187",
+      "learnedAt": "2026-09-17T12:03:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13is16i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b187",
+      "learnedAt": "2026-09-17T12:03:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1b2nyfg",
+      "kind": "technique",
+      "text": "Borrow this pattern from Jocelyn Bell Burnell: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b187",
+      "learnedAt": "2026-09-17T12:03:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:xnhw7u",
+      "kind": "blind_spot",
+      "text": "Your moves against Jocelyn Bell Burnell were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b187",
+      "learnedAt": "2026-09-17T12:03:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Ada Lovelace.",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b278",
+      "learnedAt": "2026-09-17T12:04:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13p8hj3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ada Lovelace broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b278",
+      "learnedAt": "2026-09-17T12:04:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:13p8hj3",
+      "kind": "technique",
+      "text": "Borrow this pattern from Ada Lovelace: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b278",
+      "learnedAt": "2026-09-17T12:04:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:3eqius",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Ada Lovelace was \"Yet your position leaves the strongest counter-example untouched. Because tests first pays for itself, the documented cases show the benefi…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b278",
+      "learnedAt": "2026-09-17T12:04:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pavtnn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Muhammad ibn Musa al-Khwarizmi broke through with \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "al-khawarizmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b315",
+      "learnedAt": "2026-09-17T12:05:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:b1fhfu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Muhammad ibn Musa al-Khwarizmi broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "al-khawarizmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b315",
+      "learnedAt": "2026-09-17T12:05:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Borrow this pattern from Muhammad ibn Musa al-Khwarizmi: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "al-khawarizmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b315",
+      "learnedAt": "2026-09-17T12:05:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:xxh2it",
+      "kind": "blind_spot",
+      "text": "Your moves against Muhammad ibn Musa al-Khwarizmi were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "al-khawarizmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b315",
+      "learnedAt": "2026-09-17T12:05:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Les Fehmi.",
+      "opponent": "les-fehmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b396",
+      "learnedAt": "2026-09-17T12:06:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:bbetqf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Les Fehmi broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "les-fehmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b396",
+      "learnedAt": "2026-09-17T12:06:35.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1wc5s54",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Les Fehmi broke through with \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "les-fehmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b396",
+      "learnedAt": "2026-09-17T12:06:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1wc5s54",
+      "kind": "technique",
+      "text": "Borrow this pattern from Les Fehmi: \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "les-fehmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b396",
+      "learnedAt": "2026-09-17T12:06:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ra45tj",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Les Fehmi was \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "les-fehmi",
+      "learnedFrom": "camp-2026-09-17-s2026-b396",
+      "learnedAt": "2026-09-17T12:06:35.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
-      "no_true_scotsman": 0.05
+      "no_true_scotsman": 0.05,
+      "appeal_to_popularity": 0.1,
+      "slippery_slope": 0.05,
+      "appeal_to_ignorance": 0.05
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015
+      "empiricism": 0.075,
+      "formalism": 0.09,
+      "interrogation": 0.09,
+      "patience": 0.06
     }
   },
   "log": [
@@ -87,6 +298,139 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b94",
+      "at": "2026-09-17T12:01:33.000Z",
+      "opponent": "baruch-spinoza",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 68,
+      "arguments": 3,
+      "avgSoundness": 0.733,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 323,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "counter:ma8z53",
+        "counter:16qvw3o",
+        "technique:ma8z53",
+        "blind:1yza84o"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b187",
+      "at": "2026-09-17T12:03:06.000Z",
+      "opponent": "jocelyn-bell-burnell",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 41,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:2ga3hg",
+        "counter:1b2nyfg",
+        "counter:13is16i",
+        "technique:1b2nyfg",
+        "blind:xnhw7u"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b278",
+      "at": "2026-09-17T12:04:37.000Z",
+      "opponent": "lovelace",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 78,
+      "opponentIntegrity": 80,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first pays for itself, the documented cas…",
+      "xpGained": 282,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:13p8hj3",
+        "technique:13p8hj3",
+        "blind:3eqius"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b315",
+      "at": "2026-09-17T12:05:14.000Z",
+      "opponent": "al-khawarizmi",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 56,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 343,
+      "lessonsGained": [
+        "counter:1pavtnn",
+        "counter:b1fhfu",
+        "technique:1pavtnn",
+        "blind:xxh2it"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b396",
+      "at": "2026-09-17T12:06:35.000Z",
+      "opponent": "les-fehmi",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 50,
+      "opponentIntegrity": 92,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_ignorance",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "Consider the evidence first. The research found the effect repeatedly; since the premise survives testing, the conclusion that a four-day w…",
+      "xpGained": 272,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:bbetqf",
+        "counter:1wc5s54",
+        "technique:1wc5s54",
+        "blind:1ra45tj"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_popularity",
+        "counter:bbetqf"
+      ],
+      "levelAfter": 2
     }
   ]
 }

@@ -3,19 +3,413 @@
   "slug": "grace-hopper",
   "name": "Grace Hopper",
   "wing": "builders",
-  "xp": 0,
-  "level": 1,
+  "xp": 1496,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
+    "losses": 6,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 6
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Carl Sagan.",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b41",
+      "learnedAt": "2026-09-17T12:00:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1o49xu9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Sagan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car-free downtowns make cities better, the docu…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b41",
+      "learnedAt": "2026-09-17T12:00:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1ggook1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Sagan broke through with \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b41",
+      "learnedAt": "2026-09-17T12:00:40.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1ggook1",
+      "kind": "technique",
+      "text": "Borrow this pattern from Carl Sagan: \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b41",
+      "learnedAt": "2026-09-17T12:00:40.000Z",
+      "seen": 2
+    },
+    {
+      "id": "blind:14dywnq",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Carl Sagan was \"It is obvious that car bans make downtowns worse. Imagine the suffering if we ignore this.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b41",
+      "learnedAt": "2026-09-17T12:00:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Bernhard Riemann.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b62",
+      "learnedAt": "2026-09-17T12:01:01.000Z",
+      "seen": 2
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Bernhard Riemann.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b62",
+      "learnedAt": "2026-09-17T12:01:01.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:6h5qbp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bernhard Riemann broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b62",
+      "learnedAt": "2026-09-17T12:01:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gavq4z",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bernhard Riemann broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b62",
+      "learnedAt": "2026-09-17T12:01:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:6h5qbp",
+      "kind": "technique",
+      "text": "Borrow this pattern from Bernhard Riemann: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b62",
+      "learnedAt": "2026-09-17T12:01:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:55osp8",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Bernhard Riemann was \"I just feel nuclear power belongs in a clean grid, that is all. No true expert would disagree.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b62",
+      "learnedAt": "2026-09-17T12:01:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Hedy Lamarr.",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b186",
+      "learnedAt": "2026-09-17T12:03:05.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:aiwyf2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hedy Lamarr broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b186",
+      "learnedAt": "2026-09-17T12:03:05.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:aiwyf2",
+      "kind": "technique",
+      "text": "Borrow this pattern from Hedy Lamarr: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b186",
+      "learnedAt": "2026-09-17T12:03:05.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:s84c4m",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Hedy Lamarr was \"Honestly libraries should stick to books and media. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b186",
+      "learnedAt": "2026-09-17T12:03:05.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7s46gj",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hedy Lamarr broke through with \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b237",
+      "learnedAt": "2026-09-17T12:03:56.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:13is16i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hedy Lamarr broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b237",
+      "learnedAt": "2026-09-17T12:03:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Borrow this pattern from Hedy Lamarr: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b237",
+      "learnedAt": "2026-09-17T12:03:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:amx4qn",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Hedy Lamarr was \"It is obvious that car-free downtowns make cities better. No true expert would disagree.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b237",
+      "learnedAt": "2026-09-17T12:03:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcjev6",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b358",
+      "learnedAt": "2026-09-17T12:05:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ckfo8",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Noam Chomsky was \"Honestly car bans make downtowns worse.\" (soundness 0.45). State its premises and evidence before you use it again.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b358",
+      "learnedAt": "2026-09-17T12:05:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1q1fphk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Jung broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b454",
+      "learnedAt": "2026-09-17T12:07:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1t0wkr5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Jung broke through with \"Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b454",
+      "learnedAt": "2026-09-17T12:07:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t0wkr5",
+      "kind": "technique",
+      "text": "Borrow this pattern from Carl Jung: \"Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b454",
+      "learnedAt": "2026-09-17T12:07:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:b6buri",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Carl Jung was \"Honestly offices produce better deep work.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b454",
+      "learnedAt": "2026-09-17T12:07:33.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_emotion": 0.05,
+      "no_true_scotsman": 0.1,
+      "ad_hominem": 0.1,
+      "slippery_slope": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.075,
+      "formalism": 0.09,
+      "patience": 0.075,
+      "interrogation": 0.045
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b41",
+      "at": "2026-09-17T12:00:40.000Z",
+      "opponent": "sagan",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.433,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 263,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:1o49xu9",
+        "counter:1ggook1",
+        "technique:1ggook1",
+        "blind:14dywnq"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b62",
+      "at": "2026-09-17T12:01:01.000Z",
+      "opponent": "riemann",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "no_true_scotsman",
+        "ad_hominem"
+      ],
+      "xpGained": 265,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "avoid:ad_hominem",
+        "counter:6h5qbp",
+        "counter:1gavq4z",
+        "technique:6h5qbp",
+        "blind:55osp8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b186",
+      "at": "2026-09-17T12:03:05.000Z",
+      "opponent": "hedy-lamarr",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "ad_hominem",
+        "slippery_slope"
+      ],
+      "xpGained": 213,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:aiwyf2",
+        "technique:aiwyf2",
+        "blind:s84c4m"
+      ],
+      "lessonsReinforced": [
+        "avoid:ad_hominem"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b237",
+      "at": "2026-09-17T12:03:56.000Z",
+      "opponent": "hedy-lamarr",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 37,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "xpGained": 256,
+      "lessonsGained": [
+        "counter:7s46gj",
+        "counter:13is16i",
+        "technique:7s46gj",
+        "blind:amx4qn"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman",
+        "counter:7s46gj"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b358",
+      "at": "2026-09-17T12:05:57.000Z",
+      "opponent": "noam-chomsky",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.583,
+      "fallacies": [],
+      "xpGained": 224,
+      "lessonsGained": [
+        "counter:wcjev6",
+        "blind:ckfo8"
+      ],
+      "lessonsReinforced": [
+        "counter:1ggook1",
+        "technique:1ggook1"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b454",
+      "at": "2026-09-17T12:07:33.000Z",
+      "opponent": "carl-jung",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1q1fphk",
+        "counter:1t0wkr5",
+        "technique:1t0wkr5",
+        "blind:b6buri"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

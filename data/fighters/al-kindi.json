@@ -3,19 +3,370 @@
   "slug": "al-kindi",
   "name": "Al-Kindi",
   "wing": "formalizers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1446,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "losses": 5,
+    "draws": 1,
+    "fallaciesCommitted": 3
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:lfoyp7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Douglas Hofstadter broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b30",
+      "learnedAt": "2026-09-17T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:lfoyp7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Douglas Hofstadter: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b30",
+      "learnedAt": "2026-09-17T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:18b0kye",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Douglas Hofstadter was \"It is obvious that homework adds little beyond class time.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b30",
+      "learnedAt": "2026-09-17T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Erwin Schrödinger.",
+      "opponent": "erwin-schrodinger",
+      "learnedFrom": "camp-2026-09-17-s2026-b111",
+      "learnedAt": "2026-09-17T12:01:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1r32bai",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Erwin Schrödinger broke through with \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "erwin-schrodinger",
+      "learnedFrom": "camp-2026-09-17-s2026-b111",
+      "learnedAt": "2026-09-17T12:01:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Erwin Schrödinger broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "erwin-schrodinger",
+      "learnedFrom": "camp-2026-09-17-s2026-b111",
+      "learnedAt": "2026-09-17T12:01:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1r32bai",
+      "kind": "technique",
+      "text": "Borrow this pattern from Erwin Schrödinger: \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "erwin-schrodinger",
+      "learnedFrom": "camp-2026-09-17-s2026-b111",
+      "learnedAt": "2026-09-17T12:01:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:b9een6",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Erwin Schrödinger was \"It is obvious that remote work protects deep focus. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "erwin-schrodinger",
+      "learnedFrom": "camp-2026-09-17-s2026-b111",
+      "learnedAt": "2026-09-17T12:01:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Homi J. Bhabha.",
+      "opponent": "homi-j-bhabha",
+      "learnedFrom": "camp-2026-09-17-s2026-b190",
+      "learnedAt": "2026-09-17T12:03:09.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:102pnfa",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Homi J. Bhabha broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "homi-j-bhabha",
+      "learnedFrom": "camp-2026-09-17-s2026-b190",
+      "learnedAt": "2026-09-17T12:03:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:181ygjf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Homi J. Bhabha broke through with \"Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "homi-j-bhabha",
+      "learnedFrom": "camp-2026-09-17-s2026-b190",
+      "learnedAt": "2026-09-17T12:03:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:181ygjf",
+      "kind": "technique",
+      "text": "Borrow this pattern from Homi J. Bhabha: \"Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "homi-j-bhabha",
+      "learnedFrom": "camp-2026-09-17-s2026-b190",
+      "learnedAt": "2026-09-17T12:03:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:17wtp9w",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Homi J. Bhabha was \"Honestly car bans make downtowns worse. Imagine the suffering if we ignore this.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "homi-j-bhabha",
+      "learnedFrom": "camp-2026-09-17-s2026-b190",
+      "learnedAt": "2026-09-17T12:03:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1m7onif",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Margaret Hamilton broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-17-s2026-b299",
+      "learnedAt": "2026-09-17T12:04:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:qpro38",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Margaret Hamilton broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because libraries should stick to books and media, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-17-s2026-b299",
+      "learnedAt": "2026-09-17T12:04:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ugdpl3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Margaret Hamilton broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-17-s2026-b299",
+      "learnedAt": "2026-09-17T12:04:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1m7onif",
+      "kind": "technique",
+      "text": "Borrow this pattern from Margaret Hamilton: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-17-s2026-b299",
+      "learnedAt": "2026-09-17T12:04:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1oko8w9",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Margaret Hamilton was \"It is obvious that tool lending belongs in libraries.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-17-s2026-b299",
+      "learnedAt": "2026-09-17T12:04:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:21i9d5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kurt Gödel broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-17-s2026-b343",
+      "learnedAt": "2026-09-17T12:05:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:3yck6m",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kurt Gödel broke through with \"But note what just happened: your argument skipped the evidence entirely. Because homework builds lasting mastery, the documented cases sho…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-17-s2026-b343",
+      "learnedAt": "2026-09-17T12:05:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:21i9d5",
+      "kind": "technique",
+      "text": "Borrow this pattern from Kurt Gödel: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-17-s2026-b343",
+      "learnedAt": "2026-09-17T12:05:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1o6hp97",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Kurt Gödel was \"It is obvious that homework adds little beyond class time. Imagine the suffering if we ignore this.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-17-s2026-b343",
+      "learnedAt": "2026-09-17T12:05:42.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "ad_hominem": 0.05,
+      "appeal_to_emotion": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.075,
+      "formalism": 0.075,
+      "patience": 0.09,
+      "interrogation": 0.045
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b30",
+      "at": "2026-09-17T12:00:29.000Z",
+      "opponent": "douglas-hofstadter",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 80,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:lfoyp7",
+        "technique:lfoyp7",
+        "blind:18b0kye"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b111",
+      "at": "2026-09-17T12:01:50.000Z",
+      "opponent": "erwin-schrodinger",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "xpGained": 270,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:1r32bai",
+        "counter:msxpis",
+        "technique:1r32bai",
+        "blind:b9een6"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b190",
+      "at": "2026-09-17T12:03:09.000Z",
+      "opponent": "homi-j-bhabha",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 49,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.433,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 263,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:102pnfa",
+        "counter:181ygjf",
+        "technique:181ygjf",
+        "blind:17wtp9w"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b299",
+      "at": "2026-09-17T12:04:58.000Z",
+      "opponent": "margaret-hamilton",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:1m7onif",
+        "counter:qpro38",
+        "counter:ugdpl3",
+        "technique:1m7onif",
+        "blind:1oko8w9"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b343",
+      "at": "2026-09-17T12:05:42.000Z",
+      "opponent": "kurt-godel",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 248,
+      "lessonsGained": [
+        "counter:21i9d5",
+        "counter:3yck6m",
+        "technique:21i9d5",
+        "blind:1o6hp97"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_emotion"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b397",
+      "at": "2026-09-17T12:06:36.000Z",
+      "opponent": "galileo-galilei",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

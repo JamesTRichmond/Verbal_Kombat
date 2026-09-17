@@ -3,19 +3,368 @@
   "slug": "hannah-arendt",
   "name": "Hannah Arendt",
   "wing": "society_shapers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1326,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "losses": 5,
+    "draws": 1,
+    "fallaciesCommitted": 6
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against John Maynard Keynes.",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b18",
+      "learnedAt": "2026-09-17T12:00:17.000Z",
+      "seen": 2
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against John Maynard Keynes.",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b18",
+      "learnedAt": "2026-09-17T12:00:17.000Z",
+      "seen": 2
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against John Maynard Keynes.",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b18",
+      "learnedAt": "2026-09-17T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcopew",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Maynard Keynes broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b18",
+      "learnedAt": "2026-09-17T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:y9aa26",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Maynard Keynes broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework builds lasting mastery, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b18",
+      "learnedAt": "2026-09-17T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:wcopew",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Maynard Keynes: \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b18",
+      "learnedAt": "2026-09-17T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1k7ol0z",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Maynard Keynes was \"Honestly homework adds little beyond class time. Everybody knows this already.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "jean-maynard-keynes",
+      "learnedFrom": "camp-2026-09-17-s2026-b18",
+      "learnedAt": "2026-09-17T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pllh85",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b61",
+      "learnedAt": "2026-09-17T12:01:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Borrow this pattern from Sigmund Freud: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b61",
+      "learnedAt": "2026-09-17T12:01:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:380n0z",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Sigmund Freud was \"It is obvious that renewables and storage are the better path. No one has ever proven otherwise.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b61",
+      "learnedAt": "2026-09-17T12:01:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15wy74e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James Sidis broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-17-s2026-b236",
+      "learnedAt": "2026-09-17T12:03:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:flz2hp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James Sidis broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-17-s2026-b236",
+      "learnedAt": "2026-09-17T12:03:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:flz2hp",
+      "kind": "technique",
+      "text": "Borrow this pattern from William James Sidis: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-17-s2026-b236",
+      "learnedAt": "2026-09-17T12:03:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:8y3owg",
+      "kind": "blind_spot",
+      "text": "Your weakest move against William James Sidis was \"I just feel car-free downtowns make cities better, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-17-s2026-b236",
+      "learnedAt": "2026-09-17T12:03:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:irko2k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: George Washington Carver broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b354",
+      "learnedAt": "2026-09-17T12:05:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:x03o21",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: George Washington Carver broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b354",
+      "learnedAt": "2026-09-17T12:05:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:x03o21",
+      "kind": "technique",
+      "text": "Borrow this pattern from George Washington Carver: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b354",
+      "learnedAt": "2026-09-17T12:05:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1u5x5nf",
+      "kind": "blind_spot",
+      "text": "Your weakest move against George Washington Carver was \"Honestly personal finance should be required. Everybody knows this already.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b354",
+      "learnedAt": "2026-09-17T12:05:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Tu Youyou.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b438",
+      "learnedAt": "2026-09-17T12:07:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:xqncmm",
+      "kind": "technique",
+      "text": "Borrow this pattern from Tu Youyou: \"Start from the premise we can check. When the measured results are compared across studies, then the pattern is consistent, so it follows t…\" — its premises led cleanly to the conclusion.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b438",
+      "learnedAt": "2026-09-17T12:07:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:fhutno",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Tu Youyou was \"Honestly libraries should stick to books and media. Allow the other view and the next thing you know nothing works at all.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b438",
+      "learnedAt": "2026-09-17T12:07:17.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_popularity": 0.1,
+      "appeal_to_ignorance": 0.1,
+      "appeal_to_emotion": 0.05,
+      "slippery_slope": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.06,
+      "formalism": 0.075,
+      "interrogation": 0.06,
+      "patience": 0.06
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b18",
+      "at": "2026-09-17T12:00:17.000Z",
+      "opponent": "jean-maynard-keynes",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 45,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.2,
+      "fallacies": [
+        "appeal_to_popularity",
+        "appeal_to_ignorance",
+        "appeal_to_emotion"
+      ],
+      "xpGained": 260,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "avoid:appeal_to_ignorance",
+        "avoid:appeal_to_emotion",
+        "counter:wcopew",
+        "counter:y9aa26",
+        "technique:wcopew",
+        "blind:1k7ol0z"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b61",
+      "at": "2026-09-17T12:01:00.000Z",
+      "opponent": "sigmund-freud",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 70,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 218,
+      "lessonsGained": [
+        "counter:pllh85",
+        "technique:pllh85",
+        "blind:380n0z"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b156",
+      "at": "2026-09-17T12:02:35.000Z",
+      "opponent": "niels-bohr",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b236",
+      "at": "2026-09-17T12:03:55.000Z",
+      "opponent": "william-james-sidis",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:15wy74e",
+        "counter:flz2hp",
+        "technique:flz2hp",
+        "blind:8y3owg"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b354",
+      "at": "2026-09-17T12:05:53.000Z",
+      "opponent": "george-washington-carver",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 57,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "xpGained": 248,
+      "lessonsGained": [
+        "counter:irko2k",
+        "counter:x03o21",
+        "technique:x03o21",
+        "blind:1u5x5nf"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_popularity"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b438",
+      "at": "2026-09-17T12:07:17.000Z",
+      "opponent": "tu-youyou",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "xpGained": 210,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "technique:xqncmm",
+        "blind:fhutno"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

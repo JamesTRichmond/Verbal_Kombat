@@ -3,19 +3,375 @@
   "slug": "eckhart-tolle",
   "name": "Eckhart Tolle",
   "wing": "awakeners",
-  "xp": 0,
-  "level": 1,
+  "xp": 1866,
+  "level": 2,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "matches": 6,
+    "wins": 2,
+    "losses": 3,
+    "draws": 1,
+    "fallaciesCommitted": 5
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against James Clerk Maxwell.",
+      "opponent": "james-clerk-maxwell",
+      "learnedFrom": "camp-2026-09-17-s2026-b46",
+      "learnedAt": "2026-09-17T12:00:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1r32bai",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: James Clerk Maxwell broke through with \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "james-clerk-maxwell",
+      "learnedFrom": "camp-2026-09-17-s2026-b46",
+      "learnedAt": "2026-09-17T12:00:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:g8g747",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: James Clerk Maxwell broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "james-clerk-maxwell",
+      "learnedFrom": "camp-2026-09-17-s2026-b46",
+      "learnedAt": "2026-09-17T12:00:45.000Z",
+      "seen": 3
+    },
+    {
+      "id": "technique:1r32bai",
+      "kind": "technique",
+      "text": "Borrow this pattern from James Clerk Maxwell: \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "james-clerk-maxwell",
+      "learnedFrom": "camp-2026-09-17-s2026-b46",
+      "learnedAt": "2026-09-17T12:00:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:11qb52w",
+      "kind": "blind_spot",
+      "text": "Your weakest move against James Clerk Maxwell was \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "james-clerk-maxwell",
+      "learnedFrom": "camp-2026-09-17-s2026-b46",
+      "learnedAt": "2026-09-17T12:00:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Aristotle broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "aristotle",
+      "learnedFrom": "camp-2026-09-17-s2026-b99",
+      "learnedAt": "2026-09-17T12:01:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:r7da8p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Aristotle broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "aristotle",
+      "learnedFrom": "camp-2026-09-17-s2026-b99",
+      "learnedAt": "2026-09-17T12:01:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1p7ux5t",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "aristotle",
+      "learnedFrom": "camp-2026-09-17-s2026-b99",
+      "learnedAt": "2026-09-17T12:01:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Borrow this pattern from Richard Lang: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "richard-lang",
+      "learnedFrom": "camp-2026-09-17-s2026-b196",
+      "learnedAt": "2026-09-17T12:03:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Linus Torvalds.",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-17-s2026-b258",
+      "learnedAt": "2026-09-17T12:04:17.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1q2ycnx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Linus Torvalds broke through with \"But note what just happened: your argument skipped the evidence entirely. Because car bans make downtowns worse, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-17-s2026-b258",
+      "learnedAt": "2026-09-17T12:04:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1d6p1ru",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Linus Torvalds broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-17-s2026-b258",
+      "learnedAt": "2026-09-17T12:04:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1b2nyfg",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Linus Torvalds broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-17-s2026-b258",
+      "learnedAt": "2026-09-17T12:04:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1b2nyfg",
+      "kind": "technique",
+      "text": "Borrow this pattern from Linus Torvalds: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-17-s2026-b258",
+      "learnedAt": "2026-09-17T12:04:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:19jp2a",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Linus Torvalds was \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-17-s2026-b258",
+      "learnedAt": "2026-09-17T12:04:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Peter Higgs.",
+      "opponent": "peter-higgs",
+      "learnedFrom": "camp-2026-09-17-s2026-b363",
+      "learnedAt": "2026-09-17T12:06:02.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1g2hbeo",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "peter-higgs",
+      "learnedFrom": "camp-2026-09-17-s2026-b363",
+      "learnedAt": "2026-09-17T12:06:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7tjsga",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John von Neumann broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-von-neumann",
+      "learnedFrom": "camp-2026-09-17-s2026-b429",
+      "learnedAt": "2026-09-17T12:07:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:cu073y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John von Neumann broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "john-von-neumann",
+      "learnedFrom": "camp-2026-09-17-s2026-b429",
+      "learnedAt": "2026-09-17T12:07:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7tjsga",
+      "kind": "technique",
+      "text": "Borrow this pattern from John von Neumann: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-von-neumann",
+      "learnedFrom": "camp-2026-09-17-s2026-b429",
+      "learnedAt": "2026-09-17T12:07:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ya4cc8",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John von Neumann was \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "john-von-neumann",
+      "learnedFrom": "camp-2026-09-17-s2026-b429",
+      "learnedAt": "2026-09-17T12:07:08.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "slippery_slope": 0.05,
+      "ad_hominem": 0.1,
+      "appeal_to_emotion": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.07,
+      "formalism": 0.07,
+      "interrogation": 0.055,
+      "patience": 0.065
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b46",
+      "at": "2026-09-17T12:00:45.000Z",
+      "opponent": "james-clerk-maxwell",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 38,
+      "opponentIntegrity": 77,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because remote work protects deep focus, the documented cases sho…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:1r32bai",
+        "counter:g8g747",
+        "technique:1r32bai",
+        "blind:11qb52w"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b99",
+      "at": "2026-09-17T12:01:38.000Z",
+      "opponent": "aristotle",
+      "side": "A",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 43,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:19pgg8q",
+        "counter:r7da8p",
+        "technique:1p7ux5t"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b196",
+      "at": "2026-09-17T12:03:15.000Z",
+      "opponent": "richard-lang",
+      "side": "A",
+      "result": "draw",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 44,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…",
+      "xpGained": 215,
+      "lessonsGained": [
+        "technique:g8g747"
+      ],
+      "lessonsReinforced": [
+        "counter:g8g747"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b258",
+      "at": "2026-09-17T12:04:17.000Z",
+      "opponent": "linus-torvalds",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 36,
+      "opponentIntegrity": 80,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 342,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:1q2ycnx",
+        "counter:1d6p1ru",
+        "counter:1b2nyfg",
+        "technique:1b2nyfg",
+        "blind:19jp2a"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b363",
+      "at": "2026-09-17T12:06:02.000Z",
+      "opponent": "peter-higgs",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 96,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "ad_hominem",
+        "appeal_to_emotion"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…",
+      "xpGained": 284,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "technique:1g2hbeo"
+      ],
+      "lessonsReinforced": [
+        "avoid:ad_hominem"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b429",
+      "at": "2026-09-17T12:07:08.000Z",
+      "opponent": "john-von-neumann",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 73,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 290,
+      "lessonsGained": [
+        "counter:7tjsga",
+        "counter:cu073y",
+        "technique:7tjsga",
+        "blind:1ya4cc8"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_emotion"
+      ],
+      "levelAfter": 2
+    }
+  ]
 }

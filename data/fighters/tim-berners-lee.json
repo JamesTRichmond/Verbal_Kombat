@@ -3,14 +3,14 @@
   "slug": "tim-berners-lee",
   "name": "Tim Berners-Lee",
   "wing": "builders",
-  "xp": 243,
-  "level": 1,
+  "xp": 1393,
+  "level": 2,
   "record": {
-    "matches": 1,
+    "matches": 6,
     "wins": 0,
-    "losses": 1,
-    "draws": 0,
-    "fallaciesCommitted": 2
+    "losses": 5,
+    "draws": 1,
+    "fallaciesCommitted": 3
   },
   "lessons": [
     {
@@ -57,17 +57,154 @@
       "learnedFrom": "camp-2026-09-16-s42-b44",
       "learnedAt": "2026-09-16T12:00:43.000Z",
       "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Andrew Yang.",
+      "opponent": "andrew-yang",
+      "learnedFrom": "camp-2026-09-17-s2026-b109",
+      "learnedAt": "2026-09-17T12:01:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:irko2k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Geoffrey Hinton broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "geoffrey-hinton",
+      "learnedFrom": "camp-2026-09-17-s2026-b135",
+      "learnedAt": "2026-09-17T12:02:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:irko2k",
+      "kind": "technique",
+      "text": "Borrow this pattern from Geoffrey Hinton: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "geoffrey-hinton",
+      "learnedFrom": "camp-2026-09-17-s2026-b135",
+      "learnedAt": "2026-09-17T12:02:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:5i8aao",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Geoffrey Hinton was \"Honestly personal finance should be required.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "geoffrey-hinton",
+      "learnedFrom": "camp-2026-09-17-s2026-b135",
+      "learnedAt": "2026-09-17T12:02:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pavtnn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tu Youyou broke through with \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b235",
+      "learnedAt": "2026-09-17T12:03:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:sgipul",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tu Youyou broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tool lending belongs in libraries, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b235",
+      "learnedAt": "2026-09-17T12:03:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Borrow this pattern from Tu Youyou: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b235",
+      "learnedAt": "2026-09-17T12:03:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:miwje",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Tu Youyou was \"It is obvious that libraries should stick to books and media.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b235",
+      "learnedAt": "2026-09-17T12:03:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1u5z5np",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Geoffrey Hinton broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "geoffrey-hinton",
+      "learnedFrom": "camp-2026-09-17-s2026-b348",
+      "learnedAt": "2026-09-17T12:05:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1u5z5np",
+      "kind": "technique",
+      "text": "Borrow this pattern from Geoffrey Hinton: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "geoffrey-hinton",
+      "learnedFrom": "camp-2026-09-17-s2026-b348",
+      "learnedAt": "2026-09-17T12:05:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:z8zz68",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Geoffrey Hinton was \"I just feel tests first pays for itself, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "geoffrey-hinton",
+      "learnedFrom": "camp-2026-09-17-s2026-b348",
+      "learnedAt": "2026-09-17T12:05:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13is16i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Simone de Beauvoir broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-17-s2026-b431",
+      "learnedAt": "2026-09-17T12:07:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7s46gj",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Simone de Beauvoir broke through with \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-17-s2026-b431",
+      "learnedAt": "2026-09-17T12:07:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Borrow this pattern from Simone de Beauvoir: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-17-s2026-b431",
+      "learnedAt": "2026-09-17T12:07:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ucecic",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Simone de Beauvoir was \"It is obvious that car-free downtowns make cities better.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-17-s2026-b431",
+      "learnedAt": "2026-09-17T12:07:10.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
       "appeal_to_ignorance": 0.05,
-      "appeal_to_popularity": 0.05
+      "appeal_to_popularity": 0.05,
+      "appeal_to_emotion": 0.05
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "patience": 0.015
+      "empiricism": 0.075,
+      "formalism": 0.075,
+      "patience": 0.045,
+      "interrogation": 0.06
     }
   },
   "log": [
@@ -99,6 +236,118 @@
         "counter:s56t90"
       ],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b109",
+      "at": "2026-09-17T12:01:48.000Z",
+      "opponent": "andrew-yang",
+      "side": "A",
+      "result": "draw",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 110,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b135",
+      "at": "2026-09-17T12:02:14.000Z",
+      "opponent": "geoffrey-hinton",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:irko2k",
+        "technique:irko2k",
+        "blind:5i8aao"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b235",
+      "at": "2026-09-17T12:03:54.000Z",
+      "opponent": "tu-youyou",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1pavtnn",
+        "counter:sgipul",
+        "technique:1pavtnn",
+        "blind:miwje"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b348",
+      "at": "2026-09-17T12:05:47.000Z",
+      "opponent": "geoffrey-hinton",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 79,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:1u5z5np",
+        "technique:1u5z5np",
+        "blind:z8zz68"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b431",
+      "at": "2026-09-17T12:07:10.000Z",
+      "opponent": "simone-de-beauvoir",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:13is16i",
+        "counter:7s46gj",
+        "technique:7s46gj",
+        "blind:ucecic"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
     }
   ]
 }

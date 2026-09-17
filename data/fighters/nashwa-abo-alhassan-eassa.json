@@ -3,14 +3,14 @@
   "slug": "nashwa-abo-alhassan-eassa",
   "name": "Nashwa Abo Alhassan Eassa",
   "wing": "builders",
-  "xp": 230,
-  "level": 1,
+  "xp": 1937,
+  "level": 2,
   "record": {
-    "matches": 1,
-    "wins": 0,
-    "losses": 1,
+    "matches": 6,
+    "wins": 3,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 3
+    "fallaciesCommitted": 7
   },
   "lessons": [
     {
@@ -20,7 +20,7 @@
       "opponent": "richard-feynman",
       "learnedFrom": "camp-2026-09-16-s42-b48",
       "learnedAt": "2026-09-16T12:00:47.000Z",
-      "seen": 1
+      "seen": 2
     },
     {
       "id": "avoid:appeal_to_ignorance",
@@ -66,18 +66,164 @@
       "learnedFrom": "camp-2026-09-16-s42-b48",
       "learnedAt": "2026-09-16T12:00:47.000Z",
       "seen": 1
+    },
+    {
+      "id": "technique:6h5qbp",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "siddhartha-gautama",
+      "learnedFrom": "camp-2026-09-17-s2026-b63",
+      "learnedAt": "2026-09-17T12:01:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Grigori Perelman.",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b132",
+      "learnedAt": "2026-09-17T12:02:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Grigori Perelman.",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b132",
+      "learnedAt": "2026-09-17T12:02:11.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:7p0ydc",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Grigori Perelman broke through with \"But note what just happened: your argument skipped the evidence entirely. Because nuclear power belongs in a clean grid, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b132",
+      "learnedAt": "2026-09-17T12:02:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:10u7iwr",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Grigori Perelman broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b132",
+      "learnedAt": "2026-09-17T12:02:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:10u7iwr",
+      "kind": "technique",
+      "text": "Borrow this pattern from Grigori Perelman: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b132",
+      "learnedAt": "2026-09-17T12:02:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:mcu9t2",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Grigori Perelman was \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "grigori-perelman",
+      "learnedFrom": "camp-2026-09-17-s2026-b132",
+      "learnedAt": "2026-09-17T12:02:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:11j7utt",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b227",
+      "learnedAt": "2026-09-17T12:03:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1y8w8rz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b227",
+      "learnedAt": "2026-09-17T12:03:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ud6bdv",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b227",
+      "learnedAt": "2026-09-17T12:03:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1x9j1yw",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "satyendra-nath-bose",
+      "learnedFrom": "camp-2026-09-17-s2026-b302",
+      "learnedAt": "2026-09-17T12:05:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jiddu Krishnamurti broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b424",
+      "learnedAt": "2026-09-17T12:07:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13p8hj3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jiddu Krishnamurti broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b424",
+      "learnedAt": "2026-09-17T12:07:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jiddu Krishnamurti broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b424",
+      "learnedAt": "2026-09-17T12:07:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:13p8hj3",
+      "kind": "technique",
+      "text": "Borrow this pattern from Jiddu Krishnamurti: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b424",
+      "learnedAt": "2026-09-17T12:07:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:19kcyd",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Jiddu Krishnamurti was \"Consider the evidence first. When the measured results are compared across studies, then the pattern is consistent, so it follows that test…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "krishnamurti",
+      "learnedFrom": "camp-2026-09-17-s2026-b424",
+      "learnedAt": "2026-09-17T12:07:03.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
-      "no_true_scotsman": 0.05,
-      "appeal_to_ignorance": 0.05
+      "no_true_scotsman": 0.1,
+      "appeal_to_ignorance": 0.05,
+      "appeal_to_emotion": 0.05,
+      "appeal_to_popularity": 0.1
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015,
-      "patience": 0.015
+      "empiricism": 0.06,
+      "formalism": 0.06,
+      "interrogation": 0.06,
+      "patience": 0.06
     }
   },
   "log": [
@@ -109,6 +255,131 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b63",
+      "at": "2026-09-17T12:01:02.000Z",
+      "opponent": "siddhartha-gautama",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 30,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:6h5qbp"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b132",
+      "at": "2026-09-17T12:02:11.000Z",
+      "opponent": "grigori-perelman",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 46,
+      "opponentIntegrity": 79,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_emotion",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…",
+      "xpGained": 286,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "avoid:appeal_to_popularity",
+        "counter:7p0ydc",
+        "counter:10u7iwr",
+        "technique:10u7iwr",
+        "blind:mcu9t2"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b227",
+      "at": "2026-09-17T12:03:46.000Z",
+      "opponent": "hypatia",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 51,
+      "opponentIntegrity": 46,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:11j7utt",
+        "counter:1y8w8rz",
+        "technique:ud6bdv"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b302",
+      "at": "2026-09-17T12:05:01.000Z",
+      "opponent": "satyendra-nath-bose",
+      "side": "B",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 37,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:1x9j1yw"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b424",
+      "at": "2026-09-17T12:07:03.000Z",
+      "opponent": "krishnamurti",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 39,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "no_true_scotsman",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because tests first pays for itself, the documented cases show th…",
+      "xpGained": 272,
+      "lessonsGained": [
+        "counter:19pgg8q",
+        "counter:13p8hj3",
+        "counter:14czikb",
+        "technique:13p8hj3",
+        "blind:19kcyd"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman",
+        "avoid:appeal_to_popularity"
+      ],
+      "levelAfter": 2
     }
   ]
 }

@@ -3,19 +3,284 @@
   "slug": "sagan",
   "name": "Carl Sagan",
   "wing": "imaginers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1980,
+  "level": 2,
   "record": {
-    "matches": 0,
-    "wins": 0,
+    "matches": 6,
+    "wins": 4,
     "losses": 0,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "draws": 2,
+    "fallaciesCommitted": 2
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "technique:1ggook1",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "grace-hopper",
+      "learnedFrom": "camp-2026-09-17-s2026-b41",
+      "learnedAt": "2026-09-17T12:00:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Jorge Luis Borges.",
+      "opponent": "jorge-luis-borges",
+      "learnedFrom": "camp-2026-09-17-s2026-b119",
+      "learnedAt": "2026-09-17T12:01:58.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1147vwt",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jorge Luis Borges broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jorge-luis-borges",
+      "learnedFrom": "camp-2026-09-17-s2026-b119",
+      "learnedAt": "2026-09-17T12:01:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h3s00d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jorge Luis Borges broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jorge-luis-borges",
+      "learnedFrom": "camp-2026-09-17-s2026-b119",
+      "learnedAt": "2026-09-17T12:01:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h3s00d",
+      "kind": "technique",
+      "text": "Borrow this pattern from Jorge Luis Borges: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jorge-luis-borges",
+      "learnedFrom": "camp-2026-09-17-s2026-b119",
+      "learnedAt": "2026-09-17T12:01:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h7563f",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Hobbes broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b140",
+      "learnedAt": "2026-09-17T12:02:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:12x6kj9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Hobbes broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b140",
+      "learnedAt": "2026-09-17T12:02:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:12x6kj9",
+      "kind": "technique",
+      "text": "Borrow this pattern from Thomas Hobbes: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b140",
+      "learnedAt": "2026-09-17T12:02:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ozx7ky",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because nuclear power belongs in a clean grid, the documented cases show…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "bobby-fischer",
+      "learnedFrom": "camp-2026-09-17-s2026-b280",
+      "learnedAt": "2026-09-17T12:04:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:182c2r7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Archimedes broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "archimedes",
+      "learnedFrom": "camp-2026-09-17-s2026-b370",
+      "learnedAt": "2026-09-17T12:06:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:9cwrna",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Archimedes broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "archimedes",
+      "learnedFrom": "camp-2026-09-17-s2026-b370",
+      "learnedAt": "2026-09-17T12:06:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:x03o21",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "archimedes",
+      "learnedFrom": "camp-2026-09-17-s2026-b370",
+      "learnedAt": "2026-09-17T12:06:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:11j7utt",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "learnedFrom": "camp-2026-09-17-s2026-b446",
+      "learnedAt": "2026-09-17T12:07:25.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "no_true_scotsman": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "patience": 0.05,
+      "interrogation": 0.045
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b41",
+      "at": "2026-09-17T12:00:40.000Z",
+      "opponent": "grace-hopper",
+      "side": "A",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 66,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:1ggook1"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b119",
+      "at": "2026-09-17T12:01:58.000Z",
+      "opponent": "jorge-luis-borges",
+      "side": "A",
+      "result": "draw",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 78,
+      "opponentIntegrity": 78,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 248,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:1147vwt",
+        "counter:1h3s00d",
+        "technique:1h3s00d"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b140",
+      "at": "2026-09-17T12:02:19.000Z",
+      "opponent": "thomas-hobbes",
+      "side": "A",
+      "result": "draw",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…",
+      "xpGained": 267,
+      "lessonsGained": [
+        "counter:1h7563f",
+        "counter:12x6kj9",
+        "technique:12x6kj9"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b280",
+      "at": "2026-09-17T12:04:39.000Z",
+      "opponent": "bobby-fischer",
+      "side": "A",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 43,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because nuclear power belongs in a clean grid, the documented cases show…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:1ozx7ky"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b370",
+      "at": "2026-09-17T12:06:09.000Z",
+      "opponent": "archimedes",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 30,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:182c2r7",
+        "counter:9cwrna",
+        "technique:x03o21"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b446",
+      "at": "2026-09-17T12:07:25.000Z",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "side": "A",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 71,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 316,
+      "lessonsGained": [
+        "technique:11j7utt"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman"
+      ],
+      "levelAfter": 2
+    }
+  ]
 }
