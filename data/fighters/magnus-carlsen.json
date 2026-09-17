@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "slug": "magnus-carlsen",
+  "name": "Magnus Carlsen",
+  "wing": "strategists",
+  "xp": 398,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against William James Sidis.",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ma8z53",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James Sidis broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1er08j1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James Sidis broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:13p8hj3",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "slippery_slope": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.005,
+      "formalism": 0.005,
+      "interrogation": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b30",
+      "at": "2026-09-16T12:00:29.000Z",
+      "opponent": "william-james-sidis",
+      "side": "B",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 47,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 398,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:ma8z53",
+        "counter:1er08j1",
+        "technique:13p8hj3"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

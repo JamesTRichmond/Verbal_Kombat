@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "slug": "richard-feynman",
+  "name": "Richard Feynman",
+  "wing": "questioners",
+  "xp": 686,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 1,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Simone de Beauvoir.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b39",
+      "learnedAt": "2026-09-16T12:00:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1aeao7x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Simone de Beauvoir broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b39",
+      "learnedAt": "2026-09-16T12:00:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:aiwyf2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Simone de Beauvoir broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b39",
+      "learnedAt": "2026-09-16T12:00:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:aiwyf2",
+      "kind": "technique",
+      "text": "Borrow this pattern from Simone de Beauvoir: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b39",
+      "learnedAt": "2026-09-16T12:00:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:8yy29v",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Simone de Beauvoir was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b39",
+      "learnedAt": "2026-09-16T12:00:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:glf0",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "nashwa-abo-alhassan-eassa",
+      "learnedFrom": "camp-2026-09-16-s42-b48",
+      "learnedAt": "2026-09-16T12:00:47.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "ad_hominem": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.02,
+      "formalism": 0.02,
+      "patience": 0.02,
+      "interrogation": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b39",
+      "at": "2026-09-16T12:00:38.000Z",
+      "opponent": "simone-de-beauvoir",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 60,
+      "opponentIntegrity": 68,
+      "arguments": 3,
+      "avgSoundness": 0.733,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 323,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:1aeao7x",
+        "counter:aiwyf2",
+        "technique:aiwyf2",
+        "blind:8yy29v"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b48",
+      "at": "2026-09-16T12:00:47.000Z",
+      "opponent": "nashwa-abo-alhassan-eassa",
+      "side": "A",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:glf0"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

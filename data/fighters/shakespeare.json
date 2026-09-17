@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "slug": "shakespeare",
+  "name": "William Shakespeare",
+  "wing": "artists",
+  "xp": 732,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "technique:aiwyf2",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ramanuja",
+      "learnedFrom": "camp-2026-09-16-s42-b20",
+      "learnedAt": "2026-09-16T12:00:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:170c1bx",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "siddhartha-gautama",
+      "learnedFrom": "camp-2026-09-16-s42-b21",
+      "learnedAt": "2026-09-16T12:00:20.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.01,
+      "formalism": 0.01,
+      "patience": 0.01,
+      "interrogation": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b20",
+      "at": "2026-09-16T12:00:19.000Z",
+      "opponent": "ramanuja",
+      "side": "A",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:aiwyf2"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b21",
+      "at": "2026-09-16T12:00:20.000Z",
+      "opponent": "siddhartha-gautama",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 41,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:170c1bx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

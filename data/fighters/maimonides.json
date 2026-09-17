@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "slug": "maimonides",
+  "name": "Maimonides",
+  "wing": "society_shapers",
+  "xp": 765,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 1,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "counter:1x9j1yw",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b40",
+      "learnedAt": "2026-09-16T12:00:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:r7da8p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b40",
+      "learnedAt": "2026-09-16T12:00:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b40",
+      "learnedAt": "2026-09-16T12:00:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1x9j1yw",
+      "kind": "technique",
+      "text": "Borrow this pattern from Carl Friedrich Gauss: \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b40",
+      "learnedAt": "2026-09-16T12:00:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1apsw6f",
+      "kind": "blind_spot",
+      "text": "Your moves against Carl Friedrich Gauss were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b40",
+      "learnedAt": "2026-09-16T12:00:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Philip Emeagwali.",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-16-s42-b51",
+      "learnedAt": "2026-09-16T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1oo1st8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Philip Emeagwali broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-16-s42-b51",
+      "learnedAt": "2026-09-16T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:irko2k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Philip Emeagwali broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-16-s42-b51",
+      "learnedAt": "2026-09-16T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:glf0",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-16-s42-b51",
+      "learnedAt": "2026-09-16T12:00:50.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "no_true_scotsman": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.02,
+      "formalism": 0.02,
+      "interrogation": 0.02,
+      "patience": 0.02
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b40",
+      "at": "2026-09-16T12:00:39.000Z",
+      "opponent": "carl-gauss",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 51,
+      "opponentIntegrity": 53,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:1x9j1yw",
+        "counter:r7da8p",
+        "counter:14czikb",
+        "technique:1x9j1yw",
+        "blind:1apsw6f"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b51",
+      "at": "2026-09-16T12:00:50.000Z",
+      "opponent": "philip-emeagwali",
+      "side": "A",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 70,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 392,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:1oo1st8",
+        "counter:irko2k",
+        "technique:glf0"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

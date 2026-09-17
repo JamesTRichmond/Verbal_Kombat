@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "slug": "viktor-frankl",
+  "name": "Viktor Frankl",
+  "wing": "awakeners",
+  "xp": 367,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:1m7onif",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Arthur Schopenhauer broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b23",
+      "learnedAt": "2026-09-16T12:00:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:nm5zw4",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Arthur Schopenhauer broke through with \"But note what just happened: your argument skipped the evidence entirely. Because libraries should stick to books and media, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b23",
+      "learnedAt": "2026-09-16T12:00:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15zel1t",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Arthur Schopenhauer broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b23",
+      "learnedAt": "2026-09-16T12:00:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1m7onif",
+      "kind": "technique",
+      "text": "Borrow this pattern from Arthur Schopenhauer: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b23",
+      "learnedAt": "2026-09-16T12:00:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:3axyhg",
+      "kind": "blind_spot",
+      "text": "Your moves against Arthur Schopenhauer were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b23",
+      "learnedAt": "2026-09-16T12:00:22.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b23",
+      "at": "2026-09-16T12:00:22.000Z",
+      "opponent": "arthur-schopenhauer",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 66,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…",
+      "xpGained": 367,
+      "lessonsGained": [
+        "counter:1m7onif",
+        "counter:nm5zw4",
+        "counter:15zel1t",
+        "technique:1m7onif",
+        "blind:3axyhg"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

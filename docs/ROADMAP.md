@@ -41,6 +41,7 @@
 - 186 genius fighters across 12 wings; council seating rules (done — see `docs/SWARM-MODE.md`)
 - Proposals scored by owner-weighted EV; fights calibrate credibility; crown by calibrated EV (done)
 - Council setup UI, bracket + EV leaderboard, live LLM wiring, proposal-aware judge (next)
+- Fighter growth: persistent careers for all 186 geniuses, additive lessons in the system prompt, lab training camps and `data/fighters` roster (done — see `docs/GROWTH.md`)
 
 ## Phase 5 — Arena of others
 

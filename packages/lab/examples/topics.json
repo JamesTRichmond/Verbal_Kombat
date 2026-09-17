@@ -1,0 +1,10 @@
+[
+  { "topic": "Should cities ban cars from downtown cores?", "stances": { "A": "Car-free downtowns make cities better", "B": "Car bans make downtowns worse" } },
+  { "topic": "Is homework worth assigning?", "stances": { "A": "Homework builds lasting mastery", "B": "Homework adds little beyond class time" } },
+  { "topic": "Should small teams write tests first?", "stances": { "A": "Tests first pays for itself", "B": "Tests first slows small teams down" } },
+  { "topic": "Is remote work better for deep work?", "stances": { "A": "Remote work protects deep focus", "B": "Offices produce better deep work" } },
+  { "topic": "Should public libraries lend tools as well as books?", "stances": { "A": "Tool lending belongs in libraries", "B": "Libraries should stick to books and media" } },
+  { "topic": "Is a four-day work week a good default?", "stances": { "A": "A four-day week keeps output and improves lives", "B": "A four-day week costs more than it returns" } },
+  { "topic": "Should schools teach personal finance as a required course?", "stances": { "A": "Personal finance should be required", "B": "Personal finance does not need its own required course" } },
+  { "topic": "Is nuclear power a sensible part of a clean grid?", "stances": { "A": "Nuclear power belongs in a clean grid", "B": "Renewables and storage are the better path" } }
+]

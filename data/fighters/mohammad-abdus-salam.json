@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "slug": "mohammad-abdus-salam",
+  "name": "Abdus Salam",
+  "wing": "lawfinders",
+  "xp": 110,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 0,
+    "draws": 1,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Omar Khayyam.",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-16-s42-b7",
+      "learnedAt": "2026-09-16T12:00:06.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_popularity": 0.05
+    },
+    "traitGains": {
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b7",
+      "at": "2026-09-16T12:00:06.000Z",
+      "opponent": "omar-khayyam",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "xpGained": 110,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

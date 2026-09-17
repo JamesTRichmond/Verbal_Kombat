@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "slug": "tshilidzi-marwala",
+  "name": "Tshilidzi Marwala",
+  "wing": "society_shapers",
+  "xp": 348,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Carl Friedrich Gauss.",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b29",
+      "learnedAt": "2026-09-16T12:00:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tpn58x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b29",
+      "learnedAt": "2026-09-16T12:00:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1oo1st8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b29",
+      "learnedAt": "2026-09-16T12:00:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1xjr92f",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b29",
+      "learnedAt": "2026-09-16T12:00:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tpn58x",
+      "kind": "technique",
+      "text": "Borrow this pattern from Carl Friedrich Gauss: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b29",
+      "learnedAt": "2026-09-16T12:00:28.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:x9mejg",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Carl Friedrich Gauss was \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b29",
+      "learnedAt": "2026-09-16T12:00:28.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "no_true_scotsman": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b29",
+      "at": "2026-09-16T12:00:28.000Z",
+      "opponent": "carl-gauss",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 77,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 348,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:tpn58x",
+        "counter:1oo1st8",
+        "counter:1xjr92f",
+        "technique:tpn58x",
+        "blind:x9mejg"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

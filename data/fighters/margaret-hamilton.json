@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "slug": "margaret-hamilton",
+  "name": "Margaret Hamilton",
+  "wing": "builders",
+  "xp": 755,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Vincent van Gogh.",
+      "opponent": "vincent-van-gogh",
+      "learnedFrom": "camp-2026-09-16-s42-b26",
+      "learnedAt": "2026-09-16T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h7563f",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "vincent-van-gogh",
+      "learnedFrom": "camp-2026-09-16-s42-b26",
+      "learnedAt": "2026-09-16T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:4mnp70",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Muhammad ibn Musa al-Khwarizmi broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "al-khawarizmi",
+      "learnedFrom": "camp-2026-09-16-s42-b46",
+      "learnedAt": "2026-09-16T12:00:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7tjsga",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Muhammad ibn Musa al-Khwarizmi broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "al-khawarizmi",
+      "learnedFrom": "camp-2026-09-16-s42-b46",
+      "learnedAt": "2026-09-16T12:00:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1fm5z01",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "al-khawarizmi",
+      "learnedFrom": "camp-2026-09-16-s42-b46",
+      "learnedAt": "2026-09-16T12:00:45.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "ad_hominem": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.01,
+      "formalism": 0.01,
+      "interrogation": 0.01,
+      "patience": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b26",
+      "at": "2026-09-16T12:00:25.000Z",
+      "opponent": "vincent-van-gogh",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 96,
+      "opponentIntegrity": 58,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 332,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "technique:1h7563f"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b46",
+      "at": "2026-09-16T12:00:45.000Z",
+      "opponent": "al-khawarizmi",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 52,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:4mnp70",
+        "counter:7tjsga",
+        "technique:1fm5z01"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

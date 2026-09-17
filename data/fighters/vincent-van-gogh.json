@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "slug": "vincent-van-gogh",
+  "name": "Vincent van Gogh",
+  "wing": "artists",
+  "xp": 490,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 0,
+    "losses": 2,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "technique:1b9is2b",
+      "kind": "technique",
+      "text": "Borrow this pattern from Albert Einstein: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b9",
+      "learnedAt": "2026-09-16T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:zq1jgo",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Albert Einstein was \"Honestly remote work protects deep focus.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b9",
+      "learnedAt": "2026-09-16T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h7563f",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Margaret Hamilton broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-16-s42-b26",
+      "learnedAt": "2026-09-16T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1ldsbqu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Margaret Hamilton broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-16-s42-b26",
+      "learnedAt": "2026-09-16T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h7563f",
+      "kind": "technique",
+      "text": "Borrow this pattern from Margaret Hamilton: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-16-s42-b26",
+      "learnedAt": "2026-09-16T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:y80rgi",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Margaret Hamilton was \"I just feel homework builds lasting mastery, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "margaret-hamilton",
+      "learnedFrom": "camp-2026-09-16-s42-b26",
+      "learnedAt": "2026-09-16T12:00:25.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "formalism": 0.03,
+      "interrogation": 0.03,
+      "empiricism": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b9",
+      "at": "2026-09-16T12:00:08.000Z",
+      "opponent": "albert-einstein",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 215,
+      "lessonsGained": [
+        "technique:1b9is2b",
+        "blind:zq1jgo"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b26",
+      "at": "2026-09-16T12:00:25.000Z",
+      "opponent": "margaret-hamilton",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1h7563f",
+        "counter:1ldsbqu",
+        "technique:1h7563f",
+        "blind:y80rgi"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

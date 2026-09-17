@@ -8,8 +8,12 @@
  */
 
 import {
+  GENIUS_ID_PREFIX,
   ROSTER,
   geniusArchetype,
+  grownArchetype,
+  learnFromBout,
+  lessonsForPrompt,
   rewardSignal,
   type FighterArchetype,
   type MatchConfig,
@@ -18,7 +22,7 @@ import {
 } from '@vk/core';
 import { LlmAgent, type ChatClient } from '@vk/debate';
 import type { Judge } from '@vk/judge';
-import { runMatch } from '@vk/replay';
+import { runMatch, type FighterStore } from '@vk/replay';
 import { Ladder } from './elo.js';
 
 export interface ArenaEntrant {
@@ -45,6 +49,14 @@ export interface ArenaConfig {
   k?: number;
   /** Prefix for match ids. Default "arena". */
   id?: string;
+  /**
+   * Persist growth: `genius:<slug>` entrants fight as their grown selves
+   * (earned traits, wards, lessons in the prompt) and learn after every match.
+   * Other entrants are unaffected.
+   */
+  fighters?: FighterStore;
+  /** Timestamp source for fighter log entries. */
+  now?: () => Date;
   onMatch?: (m: ArenaMatch) => void | Promise<void>;
 }
 
@@ -77,6 +89,12 @@ export interface ArenaResult {
   /** Sorted by Elo, then win rate, then id. */
   scorecards: Scorecard[];
   matches: ArenaMatch[];
+}
+
+/** The genius slug an entrant fights as, if any. */
+export function geniusSlugOf(entrant: Pick<ArenaEntrant, 'id' | 'archetypeId'>): string | undefined {
+  const want = entrant.archetypeId ?? (entrant.id.startsWith(GENIUS_ID_PREFIX) ? entrant.id : undefined);
+  return want?.startsWith(GENIUS_ID_PREFIX) ? want.slice(GENIUS_ID_PREFIX.length) : undefined;
 }
 
 export function resolveArchetype(entrant: Pick<ArenaEntrant, 'id' | 'archetypeId'>): FighterArchetype {
@@ -139,15 +157,41 @@ export async function benchmarkAgents(config: ArenaConfig): Promise<ArenaResult>
               fighters: { A: archetypes.get(a.id)!.id, B: archetypes.get(b.id)!.id },
               mode: 'ranked',
             };
+            const store = config.fighters;
+            const slugA = store ? geniusSlugOf(a) : undefined;
+            const slugB = store ? geniusSlugOf(b) : undefined;
+            const recA = store && slugA ? await store.get(slugA) : undefined;
+            const recB = store && slugB ? await store.get(slugB) : undefined;
+            const oppKey = (e: ArenaEntrant, slug: string | undefined) => slug ?? e.id;
+            const lessons = {
+              ...(recA ? { A: lessonsForPrompt(recA, { opponent: oppKey(b, slugB) }) } : {}),
+              ...(recB ? { B: lessonsForPrompt(recB, { opponent: oppKey(a, slugA) }) } : {}),
+            };
             const { replay } = await runMatch(
               match,
               { A: new LlmAgent(a.client, { maxTurns }), B: new LlmAgent(b.client, { maxTurns }) },
               judge,
               {
                 maxTurns: maxTurns * 2,
-                archetypes: { A: archetypes.get(a.id)!, B: archetypes.get(b.id)! },
+                archetypes: {
+                  A: recA ? grownArchetype(recA) : archetypes.get(a.id)!,
+                  B: recB ? grownArchetype(recB) : archetypes.get(b.id)!,
+                },
+                ...(recA || recB ? { lessons } : {}),
               },
             );
+            if (store) {
+              const at = (config.now ?? (() => new Date()))().toISOString();
+              for (const [slug, side, opp] of [
+                [slugA, 'A', oppKey(b, slugB)],
+                [slugB, 'B', oppKey(a, slugA)],
+              ] as const) {
+                if (!slug) continue;
+                // Re-read: the same genius may sit on both sides.
+                const learning = learnFromBout(await store.get(slug), { replay, side, opponentSlug: opp, boutId: id, at });
+                await store.put(learning.record);
+              }
+            }
             const winner = replay.winner === 'A' ? a.id : replay.winner === 'B' ? b.id : null;
             ladder.record(a.id, b.id, winner);
             tallyMatch(tallies.get(a.id)!, replay, 'A');

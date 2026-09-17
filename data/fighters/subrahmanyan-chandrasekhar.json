@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "slug": "subrahmanyan-chandrasekhar",
+  "name": "Subrahmanyan Chandrasekhar",
+  "wing": "lawfinders",
+  "xp": 393,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:qpro38",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Turing broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because libraries should stick to books and media, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-16-s42-b2",
+      "learnedAt": "2026-09-16T12:00:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1aeao7x",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-16-s42-b2",
+      "learnedAt": "2026-09-16T12:00:01.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.005,
+      "formalism": 0.005,
+      "patience": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b2",
+      "at": "2026-09-16T12:00:01.000Z",
+      "opponent": "alan-turing",
+      "side": "A",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 62,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…",
+      "xpGained": 393,
+      "lessonsGained": [
+        "counter:qpro38",
+        "technique:1aeao7x"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

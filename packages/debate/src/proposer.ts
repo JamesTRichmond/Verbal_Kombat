@@ -19,6 +19,8 @@ export interface ProposalContext {
   problem: string;
   seat: string; // genius slug
   profile: ValueProfile;
+  /** Lessons this seat has learned in earlier bouts. */
+  lessons?: string[];
 }
 
 export interface ProposalAgent {
@@ -50,6 +52,9 @@ export function proposalSystemPrompt(ctx: ProposalContext): string {
     `Your move: ${w.move}. Your question: ${w.question}`,
     `Your method: ${g.method}${g.contested ? ' This is a contested lens — say so if it carries weight.' : ''}`,
     GENIUS_GUARDRAIL,
+    ...(ctx.lessons && ctx.lessons.length > 0
+      ? ['Lessons from your earlier bouts (apply them):', ...ctx.lessons.map((l) => `- ${l}`)]
+      : []),
     `You are answering for ${ctx.profile.ownerName}. What matters to them:`,
     criteria,
     'Return ONLY JSON: {"answer": string (1-2 lines), "reasoning": string (how your move produced it, 1-3 lines),',

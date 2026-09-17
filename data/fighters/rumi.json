@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "slug": "rumi",
+  "name": "Rumi",
+  "wing": "awakeners",
+  "xp": 1143,
+  "level": 2,
+  "record": {
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:1ewhc5i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Buckminster Fuller broke through with \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b4",
+      "learnedAt": "2026-09-16T12:00:03.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1d9zdjl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Buckminster Fuller broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b4",
+      "learnedAt": "2026-09-16T12:00:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ewhc5i",
+      "kind": "technique",
+      "text": "Borrow this pattern from Buckminster Fuller: \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b4",
+      "learnedAt": "2026-09-16T12:00:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:l7pzc0",
+      "kind": "blind_spot",
+      "text": "Your moves against Buckminster Fuller were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b4",
+      "learnedAt": "2026-09-16T12:00:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1qr0fuv",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-16-s42-b56",
+      "learnedAt": "2026-09-16T12:00:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19uu6s7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kim Ung-yong broke through with \"But note what just happened: your argument skipped the evidence entirely. Because remote work protects deep focus, the documented cases sho…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-16-s42-b60",
+      "learnedAt": "2026-09-16T12:00:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:91jzpz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kim Ung-yong broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because remote work protects deep focus, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-16-s42-b60",
+      "learnedAt": "2026-09-16T12:00:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-16-s42-b60",
+      "learnedAt": "2026-09-16T12:00:59.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.025,
+      "formalism": 0.025,
+      "interrogation": 0.025,
+      "patience": 0.025
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b4",
+      "at": "2026-09-16T12:00:03.000Z",
+      "opponent": "buckminster-fuller",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "counter:1ewhc5i",
+        "counter:1d9zdjl",
+        "technique:1ewhc5i",
+        "blind:l7pzc0"
+      ],
+      "lessonsReinforced": [
+        "counter:1ewhc5i"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b56",
+      "at": "2026-09-16T12:00:55.000Z",
+      "opponent": "thomas-hobbes",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 35,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:1qr0fuv"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b60",
+      "at": "2026-09-16T12:00:59.000Z",
+      "opponent": "kim-ung-yong",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 48,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:19uu6s7",
+        "counter:91jzpz",
+        "technique:g8g747"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
+}

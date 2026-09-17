@@ -40,6 +40,8 @@ export interface RunnerOptions {
   isCloser?: (arg: ArgumentEvent) => boolean;
   /** Archetypes per side, forwarded to agents that need them (LlmAgent). */
   archetypes?: Partial<Record<Side, FighterArchetype>>;
+  /** Learned lessons per side, forwarded to agents (growth memory). */
+  lessons?: Partial<Record<Side, string[]>>;
   onExchange?: (exchange: Exchange) => void | Promise<void>;
 }
 
@@ -62,12 +64,14 @@ export async function runMatch(
   while (state.phase !== 'complete' && seq < maxTurns && consecutivePasses < 2) {
     const agent = agents[current];
     const archetype = opts.archetypes?.[current];
+    const lessons = opts.lessons?.[current];
     const text = await agent.nextArgument({
       matchId: config.id,
       topic: config.topic,
       stance: config.stances[current],
       side: current,
       ...(archetype !== undefined ? { archetype } : {}),
+      ...(lessons !== undefined ? { lessons } : {}),
       history,
     });
 

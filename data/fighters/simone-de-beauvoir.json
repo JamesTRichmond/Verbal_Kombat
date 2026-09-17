@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "slug": "simone-de-beauvoir",
+  "name": "Simone de Beauvoir",
+  "wing": "questioners",
+  "xp": 799,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Albert Einstein.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b31",
+      "learnedAt": "2026-09-16T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1f40lgl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b31",
+      "learnedAt": "2026-09-16T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pvjf7k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because nuclear power belongs in a clean grid, the docu…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b31",
+      "learnedAt": "2026-09-16T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1xw7ote",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b31",
+      "learnedAt": "2026-09-16T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1m7onif",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Richard Feynman broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "richard-feynman",
+      "learnedFrom": "camp-2026-09-16-s42-b39",
+      "learnedAt": "2026-09-16T12:00:38.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:aiwyf2",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "richard-feynman",
+      "learnedFrom": "camp-2026-09-16-s42-b39",
+      "learnedAt": "2026-09-16T12:00:38.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.01,
+      "formalism": 0.01,
+      "interrogation": 0.005,
+      "patience": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b31",
+      "at": "2026-09-16T12:00:30.000Z",
+      "opponent": "albert-einstein",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 61,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…",
+      "xpGained": 398,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:1f40lgl",
+        "counter:1pvjf7k",
+        "technique:1xw7ote"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b39",
+      "at": "2026-09-16T12:00:38.000Z",
+      "opponent": "richard-feynman",
+      "side": "A",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 68,
+      "opponentIntegrity": 60,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 401,
+      "lessonsGained": [
+        "counter:1m7onif",
+        "technique:aiwyf2"
+      ],
+      "lessonsReinforced": [
+        "counter:1m7onif"
+      ],
+      "levelAfter": 1
+    }
+  ]
+}

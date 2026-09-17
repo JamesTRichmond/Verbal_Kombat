@@ -4,7 +4,7 @@
  * M toggles mute.
  */
 
-export type Sfx = 'hit' | 'heavy' | 'block' | 'whiff' | 'backfire' | 'shatter' | 'move' | 'confirm' | 'back' | 'ko' | 'splat';
+export type Sfx = 'hit' | 'heavy' | 'block' | 'whiff' | 'backfire' | 'shatter' | 'move' | 'confirm' | 'back' | 'ko' | 'splat' | 'levelup' | 'xp';
 
 export class Audio {
   private ctx: AudioContext | null = null;
@@ -121,6 +121,13 @@ export class Audio {
         break;
       case 'back':
         this.tone('square', 440, 300, 0.08, 0.08);
+        break;
+      case 'xp':
+        this.tone('square', 1320, 1320, 0.025, 0.04);
+        break;
+      case 'levelup':
+        [523, 659, 784, 1047, 1319].forEach((f, i) => this.tone('square', f, f, 0.12, 0.12, i * 0.07));
+        this.tone('triangle', 1047, 2093, 0.5, 0.1, 0.35);
         break;
     }
   }

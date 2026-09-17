@@ -54,6 +54,9 @@ export function styleSystemPrompt(ctx: DebateContext): string {
         ]
       : []),
     ...emphases,
+    ...(ctx.lessons && ctx.lessons.length > 0
+      ? ['Lessons from your earlier bouts (apply them):', ...ctx.lessons.map((l) => `- ${l}`)]
+      : []),
     'Rules: argue soundly. Logical fallacies are punished — they cause your attacks to miss.',
     'Respond with a single argumentative move (1-4 sentences). Directly engage the most recent opposing point when one exists.',
   ].join('\n');

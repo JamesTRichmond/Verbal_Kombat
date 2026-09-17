@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "slug": "yi-sun-sin",
+  "name": "Yi Sun-sin",
+  "wing": "strategists",
+  "xp": 286,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 2
+  },
+  "lessons": [
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Benjamin Franklin.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b35",
+      "learnedAt": "2026-09-16T12:00:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Benjamin Franklin.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b35",
+      "learnedAt": "2026-09-16T12:00:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1f40lgl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Franklin broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b35",
+      "learnedAt": "2026-09-16T12:00:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1cv6vs5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Franklin broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b35",
+      "learnedAt": "2026-09-16T12:00:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1f40lgl",
+      "kind": "technique",
+      "text": "Borrow this pattern from Benjamin Franklin: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b35",
+      "learnedAt": "2026-09-16T12:00:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:143rmhh",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Benjamin Franklin was \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b35",
+      "learnedAt": "2026-09-16T12:00:34.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "no_true_scotsman": 0.05,
+      "ad_hominem": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b35",
+      "at": "2026-09-16T12:00:34.000Z",
+      "opponent": "benjamin-franklin",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 59,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "no_true_scotsman",
+        "ad_hominem"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 286,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "avoid:ad_hominem",
+        "counter:1f40lgl",
+        "counter:1cv6vs5",
+        "technique:1f40lgl",
+        "blind:143rmhh"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

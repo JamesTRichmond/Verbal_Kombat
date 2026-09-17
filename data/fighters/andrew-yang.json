@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "slug": "andrew-yang",
+  "name": "Andrew Yang",
+  "wing": "society_shapers",
+  "xp": 305,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:13is16i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Edison broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b14",
+      "learnedAt": "2026-09-16T12:00:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1b2nyfg",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Edison broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b14",
+      "learnedAt": "2026-09-16T12:00:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1q2ycnx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Edison broke through with \"But note what just happened: your argument skipped the evidence entirely. Because car bans make downtowns worse, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b14",
+      "learnedAt": "2026-09-16T12:00:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1b2nyfg",
+      "kind": "technique",
+      "text": "Borrow this pattern from Thomas Edison: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b14",
+      "learnedAt": "2026-09-16T12:00:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1mp9dt0",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Thomas Edison was \"It is obvious that car-free downtowns make cities better.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b14",
+      "learnedAt": "2026-09-16T12:00:13.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b14",
+      "at": "2026-09-16T12:00:13.000Z",
+      "opponent": "thomas-edison",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 47,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:13is16i",
+        "counter:1b2nyfg",
+        "counter:1q2ycnx",
+        "technique:1b2nyfg",
+        "blind:1mp9dt0"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

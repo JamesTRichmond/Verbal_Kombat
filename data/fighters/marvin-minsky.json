@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "slug": "marvin-minsky",
+  "name": "Marvin Minsky",
+  "wing": "mind_mappers",
+  "xp": 306,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 2
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Chen-Ning Yang.",
+      "opponent": "yang-chen-ning",
+      "learnedFrom": "camp-2026-09-16-s42-b34",
+      "learnedAt": "2026-09-16T12:00:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Chen-Ning Yang.",
+      "opponent": "yang-chen-ning",
+      "learnedFrom": "camp-2026-09-16-s42-b34",
+      "learnedAt": "2026-09-16T12:00:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ggook1",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "yang-chen-ning",
+      "learnedFrom": "camp-2026-09-16-s42-b34",
+      "learnedAt": "2026-09-16T12:00:33.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_popularity": 0.05,
+      "appeal_to_emotion": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.005,
+      "formalism": 0.005,
+      "interrogation": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b34",
+      "at": "2026-09-16T12:00:33.000Z",
+      "opponent": "yang-chen-ning",
+      "side": "A",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_popularity",
+        "appeal_to_emotion"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…",
+      "xpGained": 306,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "avoid:appeal_to_emotion",
+        "technique:1ggook1"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

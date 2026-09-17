@@ -1,0 +1,199 @@
+{
+  "version": 1,
+  "slug": "arthur-schopenhauer",
+  "name": "Arthur Schopenhauer",
+  "wing": "questioners",
+  "xp": 963,
+  "level": 1,
+  "record": {
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 4
+  },
+  "lessons": [
+    {
+      "id": "counter:1aeao7x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Viktor Frankl broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "viktor-frankl",
+      "learnedFrom": "camp-2026-09-16-s42-b23",
+      "learnedAt": "2026-09-16T12:00:22.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1m7onif",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "viktor-frankl",
+      "learnedFrom": "camp-2026-09-16-s42-b23",
+      "learnedAt": "2026-09-16T12:00:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Marie Curie.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-16-s42-b24",
+      "learnedAt": "2026-09-16T12:00:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Marie Curie.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-16-s42-b24",
+      "learnedAt": "2026-09-16T12:00:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marie Curie broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-16-s42-b24",
+      "learnedAt": "2026-09-16T12:00:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marie Curie broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-16-s42-b24",
+      "learnedAt": "2026-09-16T12:00:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19pgg8q",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marie Curie: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-16-s42-b24",
+      "learnedAt": "2026-09-16T12:00:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:a821aj",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Marie Curie was \"Start from the premise we can check. When the measured results are compared across studies, then the pattern is consistent, so it follows t…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-16-s42-b24",
+      "learnedAt": "2026-09-16T12:00:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Leonardo da Vinci.",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "learnedFrom": "camp-2026-09-16-s42-b33",
+      "learnedAt": "2026-09-16T12:00:32.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:8wsog8",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "learnedFrom": "camp-2026-09-16-s42-b33",
+      "learnedAt": "2026-09-16T12:00:32.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_popularity": 0.05,
+      "ad_hominem": 0.05,
+      "appeal_to_emotion": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.025,
+      "formalism": 0.025,
+      "interrogation": 0.025,
+      "patience": 0.01
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b23",
+      "at": "2026-09-16T12:00:22.000Z",
+      "opponent": "viktor-frankl",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 56,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 401,
+      "lessonsGained": [
+        "counter:1aeao7x",
+        "technique:1m7onif"
+      ],
+      "lessonsReinforced": [
+        "counter:1aeao7x"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b24",
+      "at": "2026-09-16T12:00:23.000Z",
+      "opponent": "marie-curie",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.2,
+      "fallacies": [
+        "appeal_to_popularity",
+        "ad_hominem",
+        "ad_hominem"
+      ],
+      "xpGained": 230,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "avoid:ad_hominem",
+        "counter:19pgg8q",
+        "counter:14czikb",
+        "technique:19pgg8q",
+        "blind:a821aj"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b33",
+      "at": "2026-09-16T12:00:32.000Z",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "side": "A",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 62,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…",
+      "xpGained": 332,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "technique:8wsog8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

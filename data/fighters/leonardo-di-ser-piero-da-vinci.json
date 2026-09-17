@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "slug": "leonardo-di-ser-piero-da-vinci",
+  "name": "Leonardo da Vinci",
+  "wing": "imaginers",
+  "xp": 270,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Arthur Schopenhauer.",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b33",
+      "learnedAt": "2026-09-16T12:00:32.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:8wsog8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Arthur Schopenhauer broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b33",
+      "learnedAt": "2026-09-16T12:00:32.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:f1cx9n",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Arthur Schopenhauer broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b33",
+      "learnedAt": "2026-09-16T12:00:32.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:8wsog8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Arthur Schopenhauer: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b33",
+      "learnedAt": "2026-09-16T12:00:32.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:19pxlt",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Arthur Schopenhauer was \"I just feel a four-day week costs more than it returns, that is all. Allow the other view and the next thing you know nothing works at all.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-16-s42-b33",
+      "learnedAt": "2026-09-16T12:00:32.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "slippery_slope": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b33",
+      "at": "2026-09-16T12:00:32.000Z",
+      "opponent": "arthur-schopenhauer",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "xpGained": 270,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:8wsog8",
+        "counter:f1cx9n",
+        "technique:8wsog8",
+        "blind:19pxlt"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

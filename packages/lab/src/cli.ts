@@ -4,6 +4,12 @@
  *   npm run lab -- decide <problem.json> [--mode quick|council|full] [--offline] [--out report.md] [--journal journal.json]
  *   npm run lab -- arena  <arena.json>  [--offline]
  *   npm run lab -- brier  <journal.json>
+ *   npm run lab -- roster init [--dir data/fighters]
+ *   npm run lab -- roster [--dir data/fighters] [--top N]
+ *   npm run lab -- fighter <slug> [--dir data/fighters]
+ *   npm run lab -- train [--bouts N] [--seed S] [--pairing random|weakest-vs-strongest|wing-rivals] [--offline] [--dir data/fighters] [--now ISO] [--topics topics.json] [--turns N]
+ *
+ * decide and arena take --roster <dir> to persist fighter growth there.
  *
  * Online configuration (OpenAI-compatible endpoint) comes from env:
  *   VK_API_KEY   (or OPENAI_API_KEY)   required online
@@ -14,9 +20,10 @@
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
   getGenius,
+  renderFighterLog,
   type CouncilMode,
   type Genius,
   type Proposal,
@@ -29,6 +36,8 @@ import { benchmarkAgents, renderScorecards, type ArenaEntrant, type ArenaTopic }
 import { decisionRecord, renderDecisionMarkdown, runDecision } from './decision.js';
 import { DecisionJournal } from './journal.js';
 import { MockChatClient, type MockChatClientOptions } from './mock-client.js';
+import { DEFAULT_ROSTER_DIR, FileFighterStore, renderStandingsTable } from './roster-store.js';
+import { PAIRINGS, renderTrainingSummary, trainingCamp, type Pairing } from './training.js';
 
 export interface CliIo {
   log: (line: string) => void;
@@ -70,9 +79,13 @@ export interface ArenaFile {
 
 const USAGE = [
   'usage:',
-  '  npm run lab -- decide <problem.json> [--mode quick|council|full] [--offline] [--out report.md] [--journal journal.json]',
-  '  npm run lab -- arena <arena.json> [--offline]',
+  '  npm run lab -- decide <problem.json> [--mode quick|council|full] [--offline] [--out report.md] [--journal journal.json] [--roster <dir>]',
+  '  npm run lab -- arena <arena.json> [--offline] [--roster <dir>]',
   '  npm run lab -- brier <journal.json>',
+  '  npm run lab -- roster init [--dir data/fighters]',
+  '  npm run lab -- roster [--dir data/fighters] [--top N]',
+  '  npm run lab -- fighter <slug> [--dir data/fighters]',
+  `  npm run lab -- train [--bouts N] [--seed S] [--pairing ${PAIRINGS.join('|')}] [--offline] [--dir data/fighters] [--now ISO] [--topics topics.json] [--turns N]`,
 ].join('\n');
 
 export async function main(argv: string[], io: Partial<CliIo> = {}): Promise<number> {
@@ -88,6 +101,10 @@ export async function main(argv: string[], io: Partial<CliIo> = {}): Promise<num
     if (command === 'decide' && file) return await decide(file, flags, out);
     if (command === 'arena' && file) return await arena(file, flags, out);
     if (command === 'brier' && file) return brier(file, out);
+    if (command === 'roster' && file === 'init') return rosterInit(flags, out);
+    if (command === 'roster' && file === undefined) return roster(flags, out);
+    if (command === 'fighter' && file) return fighter(file, flags, out);
+    if (command === 'train' && file === undefined) return await train(flags, out);
     out.error(USAGE);
     return 2;
   } catch (err) {
@@ -125,6 +142,7 @@ async function decide(file: string, flags: Flags, io: CliIo): Promise<number> {
   }
 
   const seats = spec.seats?.map(getGenius);
+  const store = rosterStore(flags);
   const result = await runDecision({
     id: spec.id ?? `decision-${now.toISOString().replace(/[:.]/g, '-')}`,
     problem: spec.problem,
@@ -138,8 +156,10 @@ async function decide(file: string, flags: Flags, io: CliIo): Promise<number> {
     ...(spec.prefer ? { prefer: spec.prefer } : {}),
     ...(spec.homeWing ? { homeWing: spec.homeWing } : {}),
     ...(journal ? { credibilityPriors: journal.credibilityPriors() } : {}),
+    ...(store ? { fighters: store } : {}),
     runner: {
       maxTurns: maxTurns * 2,
+      now: () => now,
       onBout: (b) => {
         const w = b.replay.winner === 'A' ? b.A.name : b.replay.winner === 'B' ? b.B.name : 'draw';
         io.log(`  bout ${b.id}: ${b.A.name} vs ${b.B.name} → ${w}`);
@@ -159,6 +179,10 @@ async function decide(file: string, flags: Flags, io: CliIo): Promise<number> {
     journal.add(record);
     journal.save(journalPath);
     io.log(`journaled ${record.id} → ${journalPath}`);
+  }
+  if (store) {
+    store.writeIndex();
+    io.log(`fighter growth saved → ${store.root}`);
   }
   return 0;
 }
@@ -180,8 +204,10 @@ async function arena(file: string, flags: Flags, io: CliIo): Promise<number> {
           ...(e.apiKeyEnv !== undefined ? { apiKeyEnv: e.apiKeyEnv } : {}),
         }),
   }));
+  const store = rosterStore(flags);
   const result = await benchmarkAgents({
     entrants,
+    ...(store ? { fighters: store, now: io.now } : {}),
     topics: spec.topics,
     judge: offline ? new HeuristicJudge() : onlineJudge(io.env),
     ...(spec.rounds !== undefined ? { rounds: spec.rounds } : {}),
@@ -191,6 +217,10 @@ async function arena(file: string, flags: Flags, io: CliIo): Promise<number> {
   });
   io.log('');
   io.log(renderScorecards(result.scorecards));
+  if (store) {
+    store.writeIndex();
+    io.log(`fighter growth saved → ${store.root}`);
+  }
   return 0;
 }
 
@@ -206,6 +236,106 @@ function brier(file: string, io: CliIo): number {
   }
   io.log(`${journal.pending().length} prediction(s) awaiting resolution.`);
   return 0;
+}
+
+function rosterInit(flags: Flags, io: CliIo): number {
+  const store = new FileFighterStore(flagString(flags, 'dir') ?? DEFAULT_ROSTER_DIR);
+  const created = store.ensureAll();
+  const index = store.writeIndex();
+  const total = store.all().length;
+  io.log(`roster ready: ${total} fighters in ${store.root} (${created} created, ${total - created} kept)`);
+  io.log(`standings → ${index}`);
+  return 0;
+}
+
+function roster(flags: Flags, io: CliIo): number {
+  const store = new FileFighterStore(flagString(flags, 'dir') ?? DEFAULT_ROSTER_DIR);
+  const topFlag = flagString(flags, 'top');
+  const top = topFlag !== undefined ? parsePositiveInt(topFlag, '--top') : undefined;
+  io.log(renderStandingsTable(store.standings(), top));
+  return 0;
+}
+
+function fighter(slug: string, flags: Flags, io: CliIo): number {
+  getGenius(slug); // throws a clear error for unknown slugs
+  const store = new FileFighterStore(flagString(flags, 'dir') ?? DEFAULT_ROSTER_DIR);
+  io.log(renderFighterLog(store.get(slug)).trimEnd());
+  return 0;
+}
+
+async function train(flags: Flags, io: CliIo): Promise<number> {
+  const store = new FileFighterStore(flagString(flags, 'dir') ?? DEFAULT_ROSTER_DIR);
+  const bouts = parsePositiveInt(flagString(flags, 'bouts') ?? '20', '--bouts');
+  const seed = parsePositiveInt(flagString(flags, 'seed') ?? '1', '--seed');
+  const turns = parsePositiveInt(flagString(flags, 'turns') ?? '3', '--turns');
+  const pairing = (flagString(flags, 'pairing') ?? 'random') as Pairing;
+  if (!PAIRINGS.includes(pairing)) throw new Error(`--pairing must be one of ${PAIRINGS.join(', ')} (got ${pairing})`);
+  const nowFlag = flagString(flags, 'now');
+  const start = nowFlag !== undefined ? new Date(nowFlag) : io.now();
+  if (Number.isNaN(start.getTime())) throw new Error(`--now must be an ISO date (got ${nowFlag})`);
+  const topics = readJson<ArenaTopic[]>(flagString(flags, 'topics') ?? DEFAULT_TOPICS);
+  const offline = flags.offline === true;
+
+  let clientFor: (slug: string, boutId: string) => ChatClient;
+  let judge: Judge;
+  if (offline) {
+    clientFor = (slug, boutId) => new MockChatClient({ seed: hash(`${slug}|${boutId}`), ...offlinePersonality(slug) });
+    judge = new HeuristicJudge();
+  } else {
+    const client = onlineClient(io.env);
+    clientFor = () => client;
+    judge = onlineJudge(io.env);
+  }
+
+  store.ensureAll();
+  const summary = await trainingCamp({
+    store,
+    bouts,
+    seed,
+    pairing,
+    judge,
+    clientFor,
+    topics,
+    maxTurns: turns,
+    id: `camp-${start.toISOString().slice(0, 10)}-s${seed}`,
+    now: () => start,
+    onBout: (b) => {
+      const w = b.winner ? getGenius(b.winner).name : 'draw';
+      io.log(`  ${b.id}: ${getGenius(b.A).name} vs ${getGenius(b.B).name} → ${w}`);
+    },
+  });
+  store.writeIndex();
+  io.log('');
+  io.log(renderTrainingSummary(summary));
+  io.log(`careers saved → ${store.root}`);
+  return 0;
+}
+
+const DEFAULT_TOPICS = fileURLToPath(new URL('../examples/topics.json', import.meta.url));
+
+/**
+ * Offline stand-in minds: a deterministic temperament per genius, so some
+ * fighters start sloppier than others and training has something to fix.
+ */
+export function offlinePersonality(slug: string): MockChatClientOptions {
+  const h = hash(`temperament:${slug}`);
+  return {
+    personality: h % 6 === 0 ? 'sloppy' : 'good',
+    fallacyRate: [0, 0.1, 0.25, 0.4, 0.55][h % 5]!,
+  };
+}
+
+function rosterStore(flags: Flags): FileFighterStore | undefined {
+  const v = flags.roster;
+  if (v === undefined) return undefined;
+  if (v === true) throw new Error('--roster needs a directory, e.g. --roster data/fighters');
+  return new FileFighterStore(v);
+}
+
+function parsePositiveInt(v: string, name: string): number {
+  const n = Number(v);
+  if (!Number.isInteger(n) || n < 1) throw new Error(`${name} must be a positive integer (got ${v})`);
+  return n;
 }
 
 /* ------------------------------------------------------------------ */

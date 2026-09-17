@@ -21,6 +21,8 @@ export interface DebateContext {
   side: Side;
   /** Present when the caller carries archetypes (LlmAgent requires it). */
   archetype?: FighterArchetype;
+  /** Lessons this fighter has learned in earlier bouts (additive memory). */
+  lessons?: string[];
   /** Full debate so far, both sides, in order. */
   history: ArgumentEvent[];
 }

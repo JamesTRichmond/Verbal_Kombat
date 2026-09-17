@@ -45,6 +45,9 @@ syncLiveStatus();
   get screen() {
     return game.screenName;
   },
+  get current() {
+    return game.current;
+  },
   get tick() {
     return game.tick;
   },

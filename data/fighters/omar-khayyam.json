@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "slug": "omar-khayyam",
+  "name": "Omar Khayyam",
+  "wing": "awakeners",
+  "xp": 70,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 0,
+    "draws": 1,
+    "fallaciesCommitted": 3
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Abdus Salam.",
+      "opponent": "mohammad-abdus-salam",
+      "learnedFrom": "camp-2026-09-16-s42-b7",
+      "learnedAt": "2026-09-16T12:00:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Abdus Salam.",
+      "opponent": "mohammad-abdus-salam",
+      "learnedFrom": "camp-2026-09-16-s42-b7",
+      "learnedAt": "2026-09-16T12:00:06.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05,
+      "no_true_scotsman": 0.05
+    },
+    "traitGains": {
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b7",
+      "at": "2026-09-16T12:00:06.000Z",
+      "opponent": "mohammad-abdus-salam",
+      "side": "A",
+      "result": "draw",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.2,
+      "fallacies": [
+        "appeal_to_ignorance",
+        "no_true_scotsman",
+        "no_true_scotsman"
+      ],
+      "xpGained": 70,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "avoid:no_true_scotsman"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

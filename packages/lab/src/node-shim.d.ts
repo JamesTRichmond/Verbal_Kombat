@@ -9,6 +9,8 @@ declare module 'node:fs' {
   export function existsSync(path: string): boolean;
   export function mkdirSync(path: string, opts?: { recursive?: boolean }): void;
   export function mkdtempSync(prefix: string): string;
+  export function renameSync(from: string, to: string): void;
+  export function readdirSync(path: string): string[];
   export function rmSync(path: string, opts?: { recursive?: boolean; force?: boolean }): void;
 }
 

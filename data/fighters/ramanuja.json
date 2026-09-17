@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "slug": "ramanuja",
+  "name": "Ramanuja",
+  "wing": "awakeners",
+  "xp": 550,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 0,
+    "losses": 2,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:1wc5s54",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bjarne Stroustrup broke through with \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b13",
+      "learnedAt": "2026-09-16T12:00:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ud6bdv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bjarne Stroustrup broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b13",
+      "learnedAt": "2026-09-16T12:00:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ud6bdv",
+      "kind": "technique",
+      "text": "Borrow this pattern from Bjarne Stroustrup: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b13",
+      "learnedAt": "2026-09-16T12:00:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:cyntmf",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Bjarne Stroustrup was \"Honestly a four-day week keeps output and improves lives.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b13",
+      "learnedAt": "2026-09-16T12:00:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:aiwyf2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William Shakespeare broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "shakespeare",
+      "learnedFrom": "camp-2026-09-16-s42-b20",
+      "learnedAt": "2026-09-16T12:00:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:cu073y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William Shakespeare broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "shakespeare",
+      "learnedFrom": "camp-2026-09-16-s42-b20",
+      "learnedAt": "2026-09-16T12:00:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:aiwyf2",
+      "kind": "technique",
+      "text": "Borrow this pattern from William Shakespeare: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "shakespeare",
+      "learnedFrom": "camp-2026-09-16-s42-b20",
+      "learnedAt": "2026-09-16T12:00:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:msrxn8",
+      "kind": "blind_spot",
+      "text": "Your weakest move against William Shakespeare was \"It is obvious that libraries should stick to books and media.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "shakespeare",
+      "learnedFrom": "camp-2026-09-16-s42-b20",
+      "learnedAt": "2026-09-16T12:00:19.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.03,
+      "formalism": 0.03,
+      "interrogation": 0.015,
+      "patience": 0.03
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b13",
+      "at": "2026-09-16T12:00:12.000Z",
+      "opponent": "bjarne-stroustrup",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1wc5s54",
+        "counter:ud6bdv",
+        "technique:ud6bdv",
+        "blind:cyntmf"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b20",
+      "at": "2026-09-16T12:00:19.000Z",
+      "opponent": "shakespeare",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:aiwyf2",
+        "counter:cu073y",
+        "technique:aiwyf2",
+        "blind:msrxn8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

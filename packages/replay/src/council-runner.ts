@@ -15,6 +15,12 @@
 import {
   crownCouncil,
   geniusArchetype,
+  grownArchetype,
+  learnFromBout,
+  lessonsForPrompt,
+  newFighterRecord,
+  type BoutLearning,
+  type GeniusFighterRecord,
   roundRobin,
   seatCouncil,
   type BoutRecord,
@@ -43,11 +49,34 @@ export interface CouncilConfig {
   seats?: Genius[];
 }
 
+/**
+ * Where fighter careers live. The runner reads a record before a seat
+ * proposes and fights, and writes it back after every bout, so XP, lessons,
+ * and logs persist across councils (file store in @vk/lab, localStorage in
+ * the arcade, in-memory in tests).
+ */
+export interface FighterStore {
+  get(slug: string): GeniusFighterRecord | Promise<GeniusFighterRecord>;
+  put(record: GeniusFighterRecord): void | Promise<void>;
+}
+
+export class MemoryFighterStore implements FighterStore {
+  readonly records = new Map<string, GeniusFighterRecord>();
+  get(slug: string): GeniusFighterRecord {
+    return this.records.get(slug) ?? newFighterRecord(slug);
+  }
+  put(record: GeniusFighterRecord): void {
+    this.records.set(record.slug, record);
+  }
+}
+
 export interface CouncilDeps {
   proposer: ProposalAgent;
   /** Builds the debating mind for one seat in one bout. */
   debater: (seat: Genius, proposal: Proposal, boutId: string) => DebateAgent;
   judge: Judge;
+  /** Persist growth: when present, fighters fight as their grown selves and learn from every bout. */
+  fighters?: FighterStore;
 }
 
 export interface CouncilOptions extends Omit<RunnerOptions, 'archetypes' | 'onExchange'> {
@@ -55,6 +84,10 @@ export interface CouncilOptions extends Omit<RunnerOptions, 'archetypes' | 'onEx
   onBoutStart?: (bout: { id: string; A: Genius; B: Genius }) => void | Promise<void>;
   onExchange?: (boutId: string, exchange: Exchange) => void | Promise<void>;
   onBout?: (bout: { id: string; A: Genius; B: Genius; replay: MatchReplay }) => void | Promise<void>;
+  /** Fired for each fighter after it learns from a bout. */
+  onLearn?: (learning: BoutLearning) => void | Promise<void>;
+  /** Timestamp source for log entries (tests pass a fixed clock). */
+  now?: () => Date;
 }
 
 export interface CouncilResult {
@@ -76,9 +109,18 @@ export async function runCouncil(
       ...(config.prefer !== undefined ? { prefer: config.prefer } : {}),
     });
 
+  const store = deps.fighters;
+  const now = opts.now ?? (() => new Date());
   const proposals: Proposal[] = [];
   for (const seat of seats) {
-    const p = await deps.proposer.propose({ problem: config.problem, seat: seat.slug, profile: config.profile });
+    const rec = store ? await store.get(seat.slug) : undefined;
+    const lessons = rec ? lessonsForPrompt(rec) : [];
+    const p = await deps.proposer.propose({
+      problem: config.problem,
+      seat: seat.slug,
+      profile: config.profile,
+      ...(lessons.length > 0 ? { lessons } : {}),
+    });
     proposals.push(p);
     await opts.onProposal?.(p);
   }
@@ -100,17 +142,41 @@ export async function runCouncil(
       problemStatement: config.problem,
     };
     await opts.onBoutStart?.({ id, A: a, B: b });
+    const recA = store ? await store.get(a.slug) : undefined;
+    const recB = store ? await store.get(b.slug) : undefined;
     const { replay } = await runMatch(
       match,
       { A: deps.debater(a, pa, id), B: deps.debater(b, pb, id) },
       deps.judge,
       {
         ...opts,
-        archetypes: { A: geniusArchetype(a.slug), B: geniusArchetype(b.slug) },
+        archetypes: {
+          A: recA ? grownArchetype(recA) : geniusArchetype(a.slug),
+          B: recB ? grownArchetype(recB) : geniusArchetype(b.slug),
+        },
+        ...(recA && recB
+          ? {
+              lessons: {
+                A: lessonsForPrompt(recA, { opponent: b.slug }),
+                B: lessonsForPrompt(recB, { opponent: a.slug }),
+              },
+            }
+          : {}),
         onExchange: (ex) => opts.onExchange?.(id, ex),
       },
     );
     records.push({ seat: a.slug, replay, side: 'A' }, { seat: b.slug, replay, side: 'B' });
+    if (store && recA && recB) {
+      const at = now().toISOString();
+      for (const [rec, side, opp] of [
+        [recA, 'A', b.slug],
+        [recB, 'B', a.slug],
+      ] as const) {
+        const learning = learnFromBout(rec, { replay, side, opponentSlug: opp, boutId: id, at });
+        await store.put(learning.record);
+        await opts.onLearn?.(learning);
+      }
+    }
     bouts.push({ id, A: a.slug, B: b.slug, replay });
     await opts.onBout?.({ id, A: a, B: b, replay });
   }

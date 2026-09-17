@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "slug": "voltaire",
+  "name": "Voltaire",
+  "wing": "questioners",
+  "xp": 675,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 0,
+    "losses": 2,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "counter:1s9qe2c",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bennet Omalu broke through with \"But note what just happened: your argument skipped the evidence entirely. Because offices produce better deep work, the documented cases sh…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-16-s42-b25",
+      "learnedAt": "2026-09-16T12:00:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16zat2p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bennet Omalu broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-16-s42-b25",
+      "learnedAt": "2026-09-16T12:00:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:g8g747",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bennet Omalu broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-16-s42-b25",
+      "learnedAt": "2026-09-16T12:00:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Borrow this pattern from Bennet Omalu: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-16-s42-b25",
+      "learnedAt": "2026-09-16T12:00:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:7eccdd",
+      "kind": "blind_spot",
+      "text": "Your moves against Bennet Omalu were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-16-s42-b25",
+      "learnedAt": "2026-09-16T12:00:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Kurt Gödel.",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-16-s42-b43",
+      "learnedAt": "2026-09-16T12:00:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1a65jkk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kurt Gödel broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-16-s42-b43",
+      "learnedAt": "2026-09-16T12:00:42.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1a65jkk",
+      "kind": "technique",
+      "text": "Borrow this pattern from Kurt Gödel: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-16-s42-b43",
+      "learnedAt": "2026-09-16T12:00:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:cwfhiw",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Kurt Gödel was \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-16-s42-b43",
+      "learnedAt": "2026-09-16T12:00:42.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_emotion": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.03,
+      "formalism": 0.03,
+      "interrogation": 0.015,
+      "patience": 0.03
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b25",
+      "at": "2026-09-16T12:00:24.000Z",
+      "opponent": "bennet-ifeakandu-omalu",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 36,
+      "opponentIntegrity": 53,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 379,
+      "lessonsGained": [
+        "counter:1s9qe2c",
+        "counter:16zat2p",
+        "counter:g8g747",
+        "technique:g8g747",
+        "blind:7eccdd"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b43",
+      "at": "2026-09-16T12:00:42.000Z",
+      "opponent": "kurt-godel",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 65,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 296,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:1a65jkk",
+        "technique:1a65jkk",
+        "blind:cwfhiw"
+      ],
+      "lessonsReinforced": [
+        "counter:1a65jkk"
+      ],
+      "levelAfter": 1
+    }
+  ]
+}

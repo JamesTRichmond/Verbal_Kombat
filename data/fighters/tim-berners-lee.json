@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "slug": "tim-berners-lee",
+  "name": "Tim Berners-Lee",
+  "wing": "builders",
+  "xp": 243,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 2
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Thomas Edison.",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b44",
+      "learnedAt": "2026-09-16T12:00:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Thomas Edison.",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b44",
+      "learnedAt": "2026-09-16T12:00:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:s56t90",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Edison broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b44",
+      "learnedAt": "2026-09-16T12:00:43.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:s56t90",
+      "kind": "technique",
+      "text": "Borrow this pattern from Thomas Edison: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b44",
+      "learnedAt": "2026-09-16T12:00:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1pvjpz8",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Thomas Edison was \"It is obvious that offices produce better deep work. No one has ever proven otherwise.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "thomas-edison",
+      "learnedFrom": "camp-2026-09-16-s42-b44",
+      "learnedAt": "2026-09-16T12:00:43.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05,
+      "appeal_to_popularity": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b44",
+      "at": "2026-09-16T12:00:43.000Z",
+      "opponent": "thomas-edison",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "appeal_to_ignorance",
+        "appeal_to_popularity"
+      ],
+      "xpGained": 243,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "avoid:appeal_to_popularity",
+        "counter:s56t90",
+        "technique:s56t90",
+        "blind:1pvjpz8"
+      ],
+      "lessonsReinforced": [
+        "counter:s56t90"
+      ],
+      "levelAfter": 1
+    }
+  ]
+}

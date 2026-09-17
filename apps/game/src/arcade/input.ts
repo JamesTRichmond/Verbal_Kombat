@@ -20,6 +20,8 @@ const REPEAT_RATE = 5;
 export class Input {
   private queued = new Set<Action>();
   private now = new Set<Action>();
+  private queuedCodes = new Set<string>();
+  private nowCodes = new Set<string>();
   private padHeld = new Map<Action, number>();
   private unlocked = false;
   private unlockHandlers: (() => void)[] = [];
@@ -28,6 +30,8 @@ export class Input {
     target.addEventListener('keydown', (e) => {
       const a = KEYMAP[e.code];
       this.unlock();
+      if (!e.repeat || a) this.queuedCodes.add(e.code);
+      if (e.code === 'Tab') e.preventDefault();
       if (!a) return;
       e.preventDefault();
       this.queued.add(a);
@@ -51,11 +55,18 @@ export class Input {
   poll(): void {
     this.now = this.queued;
     this.queued = new Set();
+    this.nowCodes = this.queuedCodes;
+    this.queuedCodes = new Set();
     this.pollPad();
   }
 
   pressed(a: Action): boolean {
     return this.now.has(a);
+  }
+
+  /** Raw key (KeyboardEvent.code) pressed this update, e.g. 'Tab', 'KeyI'. */
+  key(code: string): boolean {
+    return this.nowCodes.has(code);
   }
 
   /** Confirm-like: confirm or start. */

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "slug": "rosalind-franklin",
+  "name": "Rosalind Franklin",
+  "wing": "experimenters",
+  "xp": 220,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 3
+  },
+  "lessons": [
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Bennet Omalu.",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-16-s42-b15",
+      "learnedAt": "2026-09-16T12:00:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Bennet Omalu.",
+      "opponent": "bennet-ifeakandu-omalu",
+      "learnedFrom": "camp-2026-09-16-s42-b15",
+      "learnedAt": "2026-09-16T12:00:14.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "no_true_scotsman": 0.05,
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "patience": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b15",
+      "at": "2026-09-16T12:00:14.000Z",
+      "opponent": "bennet-ifeakandu-omalu",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.2,
+      "fallacies": [
+        "no_true_scotsman",
+        "no_true_scotsman",
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 220,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "avoid:appeal_to_ignorance"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

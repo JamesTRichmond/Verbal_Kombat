@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "slug": "shing-tung-yau",
+  "name": "Shing-Tung Yau",
+  "wing": "pattern_seers",
+  "xp": 286,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 2
+  },
+  "lessons": [
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Albert Einstein.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b28",
+      "learnedAt": "2026-09-16T12:00:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15t1oe9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b28",
+      "learnedAt": "2026-09-16T12:00:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1g2hbeo",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b28",
+      "learnedAt": "2026-09-16T12:00:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:cw5su8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework adds little beyond class time, the doc…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b28",
+      "learnedAt": "2026-09-16T12:00:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:cw5su8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Albert Einstein: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework adds little beyond class time, the doc…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b28",
+      "learnedAt": "2026-09-16T12:00:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:19c324d",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Albert Einstein was \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b28",
+      "learnedAt": "2026-09-16T12:00:27.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "no_true_scotsman": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b28",
+      "at": "2026-09-16T12:00:27.000Z",
+      "opponent": "albert-einstein",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 52,
+      "opponentIntegrity": 92,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "no_true_scotsman",
+        "no_true_scotsman"
+      ],
+      "bestMove": "Start from the premise we can check. Because homework builds lasting mastery, the documented cases show the benefit holds when the conditio…",
+      "xpGained": 286,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:15t1oe9",
+        "counter:1g2hbeo",
+        "counter:cw5su8",
+        "technique:cw5su8",
+        "blind:19c324d"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

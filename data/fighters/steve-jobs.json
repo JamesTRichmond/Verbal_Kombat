@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "slug": "steve-jobs",
+  "name": "Steve Jobs",
+  "wing": "artists",
+  "xp": 342,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Terrence Deacon.",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b54",
+      "learnedAt": "2026-09-16T12:00:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terrence Deacon broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b54",
+      "learnedAt": "2026-09-16T12:00:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tyaiuz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terrence Deacon broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b54",
+      "learnedAt": "2026-09-16T12:00:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1x9j1yw",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terrence Deacon broke through with \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b54",
+      "learnedAt": "2026-09-16T12:00:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1x9j1yw",
+      "kind": "technique",
+      "text": "Borrow this pattern from Terrence Deacon: \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b54",
+      "learnedAt": "2026-09-16T12:00:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:156ixt7",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Terrence Deacon was \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b54",
+      "learnedAt": "2026-09-16T12:00:53.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b54",
+      "at": "2026-09-16T12:00:53.000Z",
+      "opponent": "terrence-deacon",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 80,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 342,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:19pgg8q",
+        "counter:tyaiuz",
+        "counter:1x9j1yw",
+        "technique:1x9j1yw",
+        "blind:156ixt7"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}
