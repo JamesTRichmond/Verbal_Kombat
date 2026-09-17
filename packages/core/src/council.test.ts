@@ -193,7 +193,7 @@ describe('proposal-aware outcome credibility', () => {
       reasoning: 'r',
       outcomes: [{ description: 'regulatory fine risk', probability: 0.9, impacts: { income: -1 } }],
     };
-    const r = replay(70, 40, 0, [hit('the regulatory fine risk is implausible', 0.8)]);
+    const r = replay(70, 40, 0, [hit('the regulatory\nfine risk for this plan is implausible', 0.8)]);
     const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
     expect(oc[0]).toBeLessThan(1);
   });
