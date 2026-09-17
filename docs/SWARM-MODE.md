@@ -50,6 +50,7 @@ Calibration:
 
 - `p' = c_k·p + (1−c_k)·0.2` — a broken *outcome* regresses toward doubt
 - `m' = c_k·m` — a broken outcome can't vouch for its own stakes
+- Challenged harmful outcomes cap `p'` at the seat-only calibrated probability, so dismissing even a rare risk cannot increase its harm.
 - Corroborated downside separately moves both `p'` and `m'` toward full risk, so a warning remains harmful even when the claimed probability is below the skeptical prior.
 - **EV = Σ p' × m'** — highest wins
 
