@@ -106,6 +106,60 @@ describe('runDecision', () => {
     expect(primed.credibility['marie-curie']).toBe(plain.credibility['marie-curie']);
   });
 
+  it('preserves per-outcome rebuttal discounts in decision standings', async () => {
+    const tuned: Record<string, Omit<Proposal, 'seat'>> = {
+      socrates: {
+        answer: 'Go all in on the moonshot.',
+        reasoning: 'High upside is worth concentration.',
+        outcomes: [
+          { description: 'Moonshot windfall', probability: 0.95, impacts: { income: 1, career: 1 } },
+          { description: 'Execution drag', probability: 0.3, impacts: { energy: -0.4 } },
+        ],
+      },
+      'marie-curie': {
+        answer: 'Run a measured pilot first.',
+        reasoning: 'Test and iterate from evidence.',
+        outcomes: [{ description: 'Steady measurable progress', probability: 0.7, impacts: { career: 0.6, income: 0.5, energy: 0.2 } }],
+      },
+      'siddhartha-gautama': {
+        answer: 'Slow down and preserve optionality.',
+        reasoning: 'Avoid reactive over-commitment.',
+        outcomes: [{ description: 'Calmer baseline', probability: 0.8, impacts: { energy: 0.7 } }],
+      },
+    };
+    const rebuttalDebater = (seat: unknown, proposal: Proposal): DebateAgent => {
+      const isCurie = (seat as { slug?: string }).slug === 'marie-curie';
+      const lines = isCurie
+        ? [
+            `My position: ${proposal.answer} Because pilot evidence beats speculation, this approach is sturdier.`,
+            'However, your premise on moonshot windfall is not supported by evidence from comparable launches.',
+          ]
+        : [
+            `My position: ${proposal.answer} Because the data from comparable cases shows this path holds up, therefore it is the sound choice.`,
+            `However, your premise ignores the evidence; therefore ${proposal.outcomes[0]?.description.toLowerCase()} is the likely result.`,
+          ];
+      let i = 0;
+      return { kind: 'test', nextArgument: async () => lines[i++] ?? null };
+    };
+    const r = await runDecision({
+      id: 'd2',
+      problem: PROBLEM,
+      profile: OWNER_DRAFT_PROFILE,
+      mode: 'quick',
+      seats,
+      proposer: new ScriptedProposer(tuned),
+      debater: rebuttalDebater,
+      judge: new HeuristicJudge(),
+    });
+    const councilCurie = r.council.verdict.standings.find((s) => s.seat === 'marie-curie')!;
+    const councilSocrates = r.council.verdict.standings.find((s) => s.seat === 'socrates')!;
+    const decisionCurie = r.standings.find((s) => s.seat === 'marie-curie')!;
+    const decisionSocrates = r.standings.find((s) => s.seat === 'socrates')!;
+    expect(councilCurie.calibratedEV > councilSocrates.calibratedEV).toBe(true);
+    expect(decisionCurie.calibratedEV > decisionSocrates.calibratedEV).toBe(true);
+    expect(r.champion.seat).toBe(r.council.verdict.champion.seat);
+  });
+
   it('produces a JSON-serializable record and a markdown report', async () => {
     const r = await decide();
     const rec = decisionRecord(r, new Date('2026-01-02T03:04:05Z'));

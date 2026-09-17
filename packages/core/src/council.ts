@@ -135,7 +135,7 @@ export function scoreProposal(
   const outcomes: ScoredOutcome[] = proposal.outcomes.map((o, i) => {
     const p = clamp(o.probability, 0, 1);
     const m = mattersScore(profile, o.impacts);
-    const oc = clamp(outcomeCredibility?.[i] ?? 1, 0, 1);
+    const oc = clamp(outcomeCredibility?.[i] ?? 1, 0, 2);
     const c = clamp(seatC * oc, 0, 1);
     return {
       ...o,
@@ -206,6 +206,8 @@ export function outcomeCredibilitiesFrom(proposal: Proposal, bouts: BoutRecord[]
   return proposal.outcomes.map((o) => {
     const tokens = outcomeTokens(o.description);
     if (tokens.length === 0) return 1;
+    const tok = new Set(tokens);
+    const harmful = averageImpact(o.impacts) < 0;
     let c = 1;
     for (const { replay, side } of bouts) {
       for (const e of replay.entries) {
@@ -213,9 +215,10 @@ export function outcomeCredibilitiesFrom(proposal: Proposal, bouts: BoutRecord[]
         if (e.verdict.fallacies.length > 0) continue;
         const force = e.verdict.rebuttalForce;
         if (!(force > 0)) continue;
-        const hay = `${e.argument.text} ${e.verdict.rationale}`.toLowerCase();
-        if (!tokens.some((t) => hay.includes(t))) continue;
-        c = clamp(c * (1 - 0.6 * clamp(force, 0, 1)), 0, 1);
+        const hay = outcomeTokens(`${e.argument.text} ${e.verdict.rationale}`);
+        if (!hay.some((t) => tok.has(t))) continue;
+        const hit = 0.6 * clamp(force, 0, 1);
+        c = harmful ? clamp(c * (1 + hit), 0, 2) : clamp(c * (1 - hit), 0, 2);
       }
     }
     return c;
@@ -349,4 +352,10 @@ export function crownCouncil(
 
 function clamp(x: number, lo: number, hi: number): number {
   return Number.isFinite(x) ? Math.min(hi, Math.max(lo, x)) : lo;
+}
+
+function averageImpact(impacts: Record<string, number>): number {
+  const keys = Object.keys(impacts);
+  if (keys.length === 0) return 0;
+  return keys.reduce((s, k) => s + clamp(impacts[k] ?? 0, -1, 1), 0) / keys.length;
 }
