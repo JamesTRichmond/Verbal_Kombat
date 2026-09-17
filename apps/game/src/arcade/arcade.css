@@ -17,6 +17,21 @@ body {
   background: #07060a;
   box-shadow: 0 0 0 1px #1a1420, 0 0 60px rgba(120, 40, 20, 0.25);
 }
+#screen:focus-visible {
+  outline: 2px solid #f2c14e;
+  outline-offset: 2px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 #vk-pause {
   position: fixed;
   inset: 0;

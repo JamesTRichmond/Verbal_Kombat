@@ -10,7 +10,19 @@
     <link rel="stylesheet" href="/src/arcade/arcade.css" />
   </head>
   <body>
-    <canvas id="screen" width="320" height="224" aria-label="Verbal Kombat arcade screen"></canvas>
+    <p id="arcade-help" class="sr-only">
+      Verbal Kombat arcade. Use arrow keys to move selections, Enter or Space to confirm, Escape to go back, and P to pause.
+    </p>
+    <canvas
+      id="screen"
+      width="320"
+      height="224"
+      tabindex="0"
+      role="application"
+      aria-label="Verbal Kombat arcade screen"
+      aria-describedby="arcade-help arcade-status"
+    ></canvas>
+    <p id="arcade-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Loading arcade.</p>
     <script type="module" src="/src/arcade/main.ts"></script>
   </body>
 </html>
