@@ -61,6 +61,8 @@ const REBUTTAL_MARKERS = [
   /\b(cuts against you|untouched|no such thing|is not)\b/i,
 ];
 
+const CHALLENGE_MARKERS = /\b(not|never|cannot|unlikely|implausible|improbable|false|wrong|prevent(?:s|ed)?|reduc(?:e|es|ed)|mitigat(?:e|es|ed)|less likely)\b/i;
+
 function scoreAgainst(text: string, patterns: RegExp[]): number {
   let hits = 0;
   for (const p of patterns) if (p.test(text)) hits++;
@@ -94,6 +96,9 @@ export class HeuristicJudge implements Judge {
       structure,
       fallacies,
       rebuttalForce: fallacies.length > 0 ? 0 : engagesOpponent * 0.8,
+      rebuttalDirection: engagesOpponent === 0
+        ? 'unclear'
+        : CHALLENGE_MARKERS.test(arg.text) ? 'challenges' : 'supports',
       rationale:
         fallacies.length > 0
           ? `Fallacies detected: ${fallacies.join(', ')}.`

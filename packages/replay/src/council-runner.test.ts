@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { OWNER_DRAFT_PROFILE, getGenius, type Proposal } from '@vk/core';
+import type { DebateContext } from '@vk/debate';
 import { ScriptedProposer, parseProposal, proposalSystemPrompt, type DebateAgent } from '@vk/debate';
 import { HeuristicJudge } from '@vk/judge';
 import { runCouncil } from './council-runner.js';
@@ -58,7 +59,27 @@ describe('runCouncil', () => {
     expect([...evs].sort((a, b) => b - a)).toEqual(evs);
     expect(result.verdict.champion.seat).toBe(result.verdict.standings[0]!.seat);
     // Fighters' stances are their own proposals.
-    expect(result.bouts[0]!.replay.config.stances.A).toBe(proposals.socrates!.answer);
+    expect(result.bouts[0]!.replay.config.stances.A).toContain(proposals.socrates!.answer);
+    expect(result.bouts[0]!.replay.config.stances.A).toContain('Predicted outcomes:');
+    expect(result.bouts[0]!.replay.config.stances.A).toContain(
+      proposals.socrates!.outcomes[0]!.description,
+    );
+  });
+
+  it('gives each debater the opposing proposal and outcomes as separate context', async () => {
+    const seats = ['socrates', 'marie-curie', 'siddhartha-gautama'].map(getGenius);
+    const contexts: DebateContext[] = [];
+    const observingDebater = (): DebateAgent => ({
+      kind: 'test',
+      nextArgument: async (ctx) => { contexts.push(ctx); return null; },
+    });
+    await runCouncil(
+      { id: 'context', problem: PROBLEM, profile: OWNER_DRAFT_PROFILE, mode: 'quick', seats },
+      { proposer: new ScriptedProposer(proposals), debater: observingDebater, judge: new HeuristicJudge() },
+    );
+    expect(contexts[0]!.stance).toContain(proposals.socrates!.answer);
+    expect(contexts[0]!.opposingStance).toContain(proposals['marie-curie']!.answer);
+    expect(contexts[0]!.opposingStance).toContain(proposals['marie-curie']!.outcomes[0]!.description);
   });
 });
 

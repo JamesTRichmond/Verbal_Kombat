@@ -12,9 +12,10 @@
  * fighter standing.
  *
  *   EV(proposal) = Σ_k  p'_k × m'_k
- *   p'_k = c·p_k + (1−c)·skepticalPrior       (broken positions regress toward doubt)
- *   m'_k = c·m_k                              (broken positions can't vouch for their stakes)
- *   c    = credibility earned in the fights (0..1)
+ *   p'_k = c_k·p_k + (1−c_k)·skepticalPrior
+ *   m'_k = c_k·m_k
+ *   c_k  = seat credibility × per-outcome credibility
+ *          (a rebuttal that names one outcome hits that outcome, not the rest)
  */
 
 import type { MatchReplay } from './replay.js';
@@ -101,6 +102,10 @@ export interface ScoredOutcome extends ProposalOutcome {
   matters: number;
   calibratedProbability: number;
   calibratedMatters: number;
+  /** Seat credibility × targeted-rebuttal discount for this outcome. */
+  credibility: number;
+  /** Extra corroborating evidence that pushes a harmful risk upward (0..1). */
+  riskSupport: number;
 }
 
 export interface ProposalScore {
@@ -126,22 +131,37 @@ export function scoreProposal(
   profile: ValueProfile,
   credibility: number,
   skepticalPrior = SKEPTICAL_PRIOR,
+  outcomeCredibility?: number[],
 ): ProposalScore {
-  const c = clamp(credibility, 0, 1);
-  const outcomes: ScoredOutcome[] = proposal.outcomes.map((o) => {
+  const seatC = clamp(credibility, 0, 1);
+  const outcomes: ScoredOutcome[] = proposal.outcomes.map((o, i) => {
     const p = clamp(o.probability, 0, 1);
     const m = mattersScore(profile, o.impacts);
+    const oc = clamp(outcomeCredibility?.[i] ?? 1, 0, 2);
+    const riskSupport = m < 0 ? clamp(oc - 1, 0, 1) : 0;
+    const c = clamp(seatC * Math.min(oc, 1), 0, 1);
+    const outcomeProbability = c * p + (1 - c) * skepticalPrior;
+    // Dismissing a harm must not raise its probability above the seat-only
+    // calibration when the claim is below the skeptical prior.
+    const baseProbability = m < 0 && oc < 1
+      ? Math.min(outcomeProbability, seatC * p + (1 - seatC) * skepticalPrior)
+      : outcomeProbability;
+    const baseMatters = c * m;
     return {
       ...o,
       matters: m,
-      calibratedProbability: c * p + (1 - c) * skepticalPrior,
-      calibratedMatters: c * m,
+      credibility: c,
+      riskSupport,
+      // Corroborated downside moves monotonically toward greater risk and
+      // full stakes, even when the claimed p is below the skeptical prior.
+      calibratedProbability: baseProbability + riskSupport * (1 - baseProbability),
+      calibratedMatters: baseMatters + riskSupport * (m - baseMatters),
     };
   });
   return {
     seat: proposal.seat,
     claimedEV: claimedExpectedValue(proposal, profile),
-    credibility: c,
+    credibility: seatC,
     calibratedEV: outcomes.reduce((s, o) => s + o.calibratedProbability * o.calibratedMatters, 0),
     outcomes,
   };
@@ -172,6 +192,69 @@ export function credibilityFrom(bouts: BoutRecord[]): number {
     return clamp(integrity * 0.85 + winBonus + 0.05 - fallacies * 0.05, 0, 1);
   });
   return per.reduce((s, x) => s + x, 0) / per.length;
+}
+
+const OUTCOME_STOPWORDS = new Set([
+  'that', 'this', 'with', 'from', 'into', 'onto', 'over', 'under', 'than',
+  'then', 'when', 'what', 'which', 'while', 'have', 'will', 'would', 'could',
+  'should', 'about', 'after', 'before', 'their', 'there', 'these', 'those',
+  'them', 'they', 'just', 'only', 'also', 'very', 'more', 'most', 'some',
+]);
+
+/** Tokens from an outcome description that a rebuttal can name. */
+export function outcomeTokens(description: string): string[] {
+  return description
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length >= 4 && !OUTCOME_STOPWORDS.has(w));
+}
+
+/**
+ * Per-outcome credibility starts at 1. An opponent utterance that names
+ * tokens from that outcome and lands a clean rebuttal (rebuttalForce > 0,
+ * no fallacy) multiplies that outcome's credibility — the rest of the
+ * proposal is left to seat-level credibilityFrom. Harmful outcomes are
+ * identified from the active value profile, so sensitivity passes can
+ * re-evaluate whether a targeted clean hit is warning-confirming or
+ * warning-dismissing.
+ */
+export function outcomeCredibilitiesFrom(
+  proposal: Proposal,
+  profile: ValueProfile,
+  bouts: BoutRecord[],
+): number[] {
+  const tokenFrequency = new Map<string, number>();
+  const allTokens = proposal.outcomes.map((o) => [...new Set(outcomeTokens(o.description))]);
+  for (const tokens of allTokens) for (const token of tokens) tokenFrequency.set(token, (tokenFrequency.get(token) ?? 0) + 1);
+  return proposal.outcomes.map((o, outcomeIndex) => {
+    const tokens = allTokens[outcomeIndex]!;
+    if (tokens.length === 0) return 1;
+    const tok = new Set(tokens);
+    const harmful = mattersScore(profile, o.impacts) < 0;
+    let c = 1;
+    for (const { replay, side } of bouts) {
+      const opponentSide: Side = side === 'A' ? 'B' : 'A';
+      for (const e of replay.entries) {
+        if (e.argument.side !== opponentSide) continue;
+        if (e.verdict.fallacies.length > 0) continue;
+        const force = e.verdict.rebuttalForce;
+        if (!(force > 0)) continue;
+        const transcript = e.argument.text;
+        const hay = outcomeTokens(transcript);
+        const hits = [...new Set(hay.filter((t) => tok.has(t)))];
+        // Shared proposal vocabulary (for example "contract") cannot identify
+        // an outcome by itself. Require a discriminating token or two matches.
+        if (!hits.some((t) => tokenFrequency.get(t) === 1) && hits.length < 2) continue;
+        const hit = 0.6 * clamp(force, 0, 1);
+        if (e.verdict.rebuttalDirection === 'unclear') continue;
+        const direction = e.verdict.rebuttalDirection === 'supports' || e.verdict.rebuttalDirection === 'challenges'
+          ? e.verdict.rebuttalDirection
+          : challengesOutcome(transcript, tokens) ? 'challenges' : 'supports';
+        c *= harmful && direction === 'supports' ? 1 + hit : 1 - hit;
+      }
+    }
+    return clamp(c, 0, 2);
+  });
 }
 
 /* ------------------------------------------------------------------ */
@@ -278,9 +361,16 @@ export function crownCouncil(
 ): CouncilVerdict {
   if (proposals.length === 0) throw new Error('A council needs at least one proposal');
   const standings = proposals
-    .map((p) =>
-      scoreProposal(p, profile, credibilityFrom(bouts.filter((b) => b.seat === p.seat)), skepticalPrior),
-    )
+    .map((p) => {
+      const mine = bouts.filter((b) => b.seat === p.seat);
+      return scoreProposal(
+        p,
+        profile,
+        credibilityFrom(mine),
+        skepticalPrior,
+        outcomeCredibilitiesFrom(p, profile, mine),
+      );
+    })
     .sort((a, b) => b.calibratedEV - a.calibratedEV);
   const loudest = [...standings].sort((a, b) => b.claimedEV - a.claimedEV)[0]!;
   const champion = standings[0]!;
@@ -294,4 +384,53 @@ export function crownCouncil(
 
 function clamp(x: number, lo: number, hi: number): number {
   return Number.isFinite(x) ? Math.min(hi, Math.max(lo, x)) : lo;
+}
+
+function challengesOutcome(text: string, tokens: string[]): boolean {
+  const words = outcomeWords(text);
+  if (words.length === 0) return false;
+  const hits = words.flatMap((word, i) => tokens.includes(word) ? [i] : []);
+  return hits.some((i) => OUTCOME_CHALLENGE_PHRASES.some((phrase) => phraseNear(words, phrase, i)));
+}
+
+const OUTCOME_CHALLENGE_PHRASES = [
+  ['unlikely'],
+  ['implausible'],
+  ['improbable'],
+  ['avoid'],
+  ['avoids'],
+  ['prevent'],
+  ['prevents'],
+  ['prevented'],
+  ['reduce'],
+  ['reduces'],
+  ['reduced'],
+  ['mitigate'],
+  ['mitigates'],
+  ['mitigated'],
+  ['doubtful'],
+  ['false'],
+  ['fantasy'],
+  ['wrong'],
+  ['not'],
+  ['never'],
+  ['no'],
+  ['cannot'],
+  ['less', 'likely'],
+  ['not', 'supported'],
+];
+
+const OUTCOME_CHALLENGE_TOKEN_WINDOW = 6;
+
+function phraseNear(words: string[], phrase: string[], center: number): boolean {
+  const lo = Math.max(0, center - OUTCOME_CHALLENGE_TOKEN_WINDOW - phrase.length + 1);
+  const hi = Math.min(words.length - phrase.length, center + OUTCOME_CHALLENGE_TOKEN_WINDOW);
+  for (let start = lo; start <= hi; start++) {
+    if (phrase.every((part, i) => words[start + i] === part)) return true;
+  }
+  return false;
+}
+
+function outcomeWords(text: string): string[] {
+  return text.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
 }

@@ -223,15 +223,19 @@ export class CrownScreen implements Screen {
     ans.forEach((l, i) => text(g, l, x + 6, 33 + i * 7, { color: C.white }));
     wrap(`MOVE: ${proposal.reasoning}`, W - x - 16).slice(0, 2).forEach((l, i) => text(g, l, x + 6, 35 + ans.length * 7 + i * 7, { color: C.grey }));
     frame(g, x, 66, W - x - 4, 62, '#0e0c10');
-    const c = champ.credibility;
-    text(g, `CREDIBILITY C = ${c.toFixed(2)}`, x + 6, 70, { color: C.cyan });
+    text(g, `SEAT CREDIBILITY C_SEAT = ${champ.credibility.toFixed(2)}`, x + 6, 70, { color: C.cyan });
     champ.outcomes.slice(0, 3).forEach((o, i) => {
       const y = 79 + i * 15;
+      const c = o.credibility;
       const desc = o.description.length > 44 ? `${o.description.slice(0, 43)}.` : o.description;
       text(g, desc, x + 6, y, { color: C.white });
       text(
         g,
-        `P'=${c.toFixed(2)}*${o.probability.toFixed(2)}+${(1 - c).toFixed(2)}*${SKEPTICAL_PRIOR}=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`,
+        o.riskSupport > 0
+          ? `C_K=${c.toFixed(2)}  RISK SUPPORT=${o.riskSupport.toFixed(2)}  P'=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`
+          : o.matters < 0 && c < champ.credibility
+          ? `C_K=${c.toFixed(2)}  P'=MIN(OUTCOME,SEAT)=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`
+          : `C_K=${c.toFixed(2)}  P'=${c.toFixed(2)}*${o.probability.toFixed(2)}+${(1 - c).toFixed(2)}*${SKEPTICAL_PRIOR}=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`,
         x + 10,
         y + 7,
         { color: C.grey },

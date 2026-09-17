@@ -32,6 +32,7 @@ describe('LlmJudge', () => {
         structure: 0.3,
         fallacies: ['ad_hominem'],
         rebuttalForce: 0,
+        rebuttalDirection: 'challenges',
         rationale: 'Attacks the person, not the claim.',
       }),
     );
@@ -43,6 +44,7 @@ describe('LlmJudge', () => {
     expect(v.side).toBe('A');
     expect(v.soundness).toBe(0.15);
     expect(v.fallacies).toEqual(['ad_hominem']);
+    expect(v.rebuttalDirection).toBe('challenges');
     expect(v.rationale).toContain('person');
   });
 

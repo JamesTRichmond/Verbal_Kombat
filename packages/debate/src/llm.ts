@@ -47,6 +47,7 @@ export function styleSystemPrompt(ctx: DebateContext): string {
     `You are ${ctx.archetype!.name}, "${ctx.archetype!.title}" — a debate fighter in Verbal Kombat.`,
     `Debate topic: ${ctx.topic}`,
     `Your stance, which you must defend: ${ctx.stance}`,
+    ...(ctx.opposingStance ? [`Your opponent's stance, which you must test and rebut: ${ctx.opposingStance}`] : []),
     `Your method: ${ctx.archetype!.description}`,
     ...(ctx.archetype.id.startsWith('genius:')
       ? [

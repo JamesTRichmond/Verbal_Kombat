@@ -42,6 +42,8 @@ export interface JudgeVerdict {
   fallacies: FallacyId[];
   /** If this successfully dismantles a prior argument, how decisively (0..1). */
   rebuttalForce: number;
+  /** Whether the rebuttal supports or challenges the opposing claim it addresses. */
+  rebuttalDirection?: 'supports' | 'challenges' | 'unclear';
   /** One-line explanation, shown in the annotated transcript. */
   rationale: string;
 }
