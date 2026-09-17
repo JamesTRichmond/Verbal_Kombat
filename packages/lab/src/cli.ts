@@ -214,7 +214,9 @@ function onlineClient(
   env: Record<string, string | undefined>,
   o: { model?: string; baseUrl?: string; apiKeyEnv?: string } = {},
 ): OpenAiChatClient {
-  const apiKey = (o.apiKeyEnv ? env[o.apiKeyEnv] : undefined) ?? env.VK_API_KEY ?? env.OPENAI_API_KEY;
+  const apiKey = o.apiKeyEnv !== undefined
+    ? env[o.apiKeyEnv]
+    : env.VK_API_KEY ?? env.OPENAI_API_KEY;
   if (!apiKey) {
     throw new Error(
       `No API key: set ${o.apiKeyEnv ?? 'VK_API_KEY'} (or OPENAI_API_KEY), or pass --offline to use mock agents.`,
