@@ -1,13 +1,13 @@
 /**
  * vk lab CLI.
  *
- *   npm run lab -- decide <problem.json> [--mode quick|council|full] [--offline] [--out report.md] [--journal journal.json]
+ *   npm run lab -- decide <problem.json> [--mode quick|council|full] [--offline] [--out report.md] [--checkpoint file] [--journal journal.json]
  *   npm run lab -- arena  <arena.json>  [--offline]
  *   npm run lab -- brier  <journal.json>
  *   npm run lab -- roster init [--dir data/fighters]
  *   npm run lab -- roster [--dir data/fighters] [--top N]
  *   npm run lab -- fighter <slug> [--dir data/fighters]
- *   npm run lab -- train [--bouts N] [--seed S] [--pairing random|weakest-vs-strongest|wing-rivals] [--offline] [--dir data/fighters] [--now ISO] [--topics topics.json] [--turns N]
+ *   npm run lab -- train [--bouts N] [--seed S] [--pairing random|weakest-vs-strongest|wing-rivals|least-fought] [--offline] [--dir data/fighters] [--now ISO] [--topics topics.json] [--turns N]
  *
  * decide and arena take --roster <dir> to persist fighter growth there.
  *
@@ -18,7 +18,7 @@
  *   VK_JUDGE_MODELS  comma-separated; >1 model → EnsembleJudge
  */
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
@@ -26,6 +26,7 @@ import {
   renderFighterLog,
   type CouncilMode,
   type Genius,
+  type MatchReplay,
   type Proposal,
   type ValueProfile,
   type WingId,
@@ -79,7 +80,7 @@ export interface ArenaFile {
 
 const USAGE = [
   'usage:',
-  '  npm run lab -- decide <problem.json> [--mode quick|council|full] [--offline] [--out report.md] [--journal journal.json] [--roster <dir>]',
+  '  npm run lab -- decide <problem.json> [--mode quick|council|full] [--offline] [--out report.md] [--checkpoint file] [--journal journal.json] [--roster <dir>]',
   '  npm run lab -- arena <arena.json> [--offline] [--roster <dir>]',
   '  npm run lab -- brier <journal.json>',
   '  npm run lab -- roster init [--dir data/fighters]',
@@ -143,6 +144,18 @@ async function decide(file: string, flags: Flags, io: CliIo): Promise<number> {
 
   const seats = spec.seats?.map(getGenius);
   const store = rosterStore(flags);
+  // Checkpoint after every proposal and bout so a crash never loses a live council.
+  // Only when a report path (or an explicit --checkpoint) is given, so examples stay clean.
+  const outFlag = flagString(flags, 'out');
+  const checkpointPath = flagString(flags, 'checkpoint') ?? (outFlag ? `${outFlag}.checkpoint.json` : undefined);
+  const checkpoint: { proposals: Proposal[]; bouts: { id: string; replay: MatchReplay }[] } =
+    checkpointPath && existsSync(checkpointPath) ? readJson(checkpointPath) : { proposals: [], bouts: [] };
+  if (checkpointPath && (checkpoint.proposals.length || checkpoint.bouts.length)) {
+    io.log(`resuming from ${checkpointPath}: ${checkpoint.proposals.length} proposal(s), ${checkpoint.bouts.length} bout(s) already done`);
+  }
+  const saveCheckpoint = () => {
+    if (checkpointPath) writeFileSync(checkpointPath, JSON.stringify(checkpoint) + '\n', 'utf8');
+  };
   const result = await runDecision({
     id: spec.id ?? `decision-${now.toISOString().replace(/[:.]/g, '-')}`,
     problem: spec.problem,
@@ -160,9 +173,21 @@ async function decide(file: string, flags: Flags, io: CliIo): Promise<number> {
     runner: {
       maxTurns: maxTurns * 2,
       now: () => now,
+      resume: checkpoint,
+      onProposal: (p) => {
+        if (!checkpoint.proposals.some((x) => x.seat === p.seat)) {
+          checkpoint.proposals.push(p);
+          saveCheckpoint();
+          io.log(`  proposal ${getGenius(p.seat).name}: ${p.answer}`);
+        }
+      },
       onBout: (b) => {
         const w = b.replay.winner === 'A' ? b.A.name : b.replay.winner === 'B' ? b.B.name : 'draw';
-        io.log(`  bout ${b.id}: ${b.A.name} vs ${b.B.name} → ${w}`);
+        if (!b.resumed) {
+          checkpoint.bouts.push({ id: b.id, replay: b.replay });
+          saveCheckpoint();
+        }
+        io.log(`  bout ${b.id}: ${b.A.name} vs ${b.B.name} → ${w}${b.resumed ? ' (resumed)' : ''}`);
       },
     },
   });

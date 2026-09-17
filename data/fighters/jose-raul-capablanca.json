@@ -3,19 +3,328 @@
   "slug": "jose-raul-capablanca",
   "name": "José Raúl Capablanca",
   "wing": "strategists",
-  "xp": 0,
-  "level": 1,
+  "xp": 1420,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
+    "losses": 4,
+    "draws": 2,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:1yb1ih1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Banneker broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-banneker",
+      "learnedFrom": "camp-2026-09-17-s2026-b69",
+      "learnedAt": "2026-09-17T12:01:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:kr4klv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Banneker broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "benjamin-banneker",
+      "learnedFrom": "camp-2026-09-17-s2026-b69",
+      "learnedAt": "2026-09-17T12:01:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gavq4z",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Banneker broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "benjamin-banneker",
+      "learnedFrom": "camp-2026-09-17-s2026-b69",
+      "learnedAt": "2026-09-17T12:01:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:kr4klv",
+      "kind": "technique",
+      "text": "Borrow this pattern from Benjamin Banneker: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-banneker",
+      "learnedFrom": "camp-2026-09-17-s2026-b69",
+      "learnedAt": "2026-09-17T12:01:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ck2wk7",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Benjamin Banneker was \"I just feel nuclear power belongs in a clean grid, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "benjamin-banneker",
+      "learnedFrom": "camp-2026-09-17-s2026-b69",
+      "learnedAt": "2026-09-17T12:01:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1t52uzl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Isaac Asimov broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b243",
+      "learnedAt": "2026-09-17T12:04:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1hluoob",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Isaac Asimov broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b243",
+      "learnedAt": "2026-09-17T12:04:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1hluoob",
+      "kind": "technique",
+      "text": "Borrow this pattern from Isaac Asimov: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b243",
+      "learnedAt": "2026-09-17T12:04:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:pjuh36",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Isaac Asimov was \"Honestly homework adds little beyond class time.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b243",
+      "learnedAt": "2026-09-17T12:04:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tyaiuz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Srinivasa Ramanujan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b377",
+      "learnedAt": "2026-09-17T12:06:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Srinivasa Ramanujan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b377",
+      "learnedAt": "2026-09-17T12:06:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:o8ivyx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Srinivasa Ramanujan broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b377",
+      "learnedAt": "2026-09-17T12:06:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tyaiuz",
+      "kind": "technique",
+      "text": "Borrow this pattern from Srinivasa Ramanujan: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b377",
+      "learnedAt": "2026-09-17T12:06:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1hjswn0",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Srinivasa Ramanujan was \"It is obvious that tests first pays for itself.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b377",
+      "learnedAt": "2026-09-17T12:06:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:irko2k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: René Descartes broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b399",
+      "learnedAt": "2026-09-17T12:06:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:46mrja",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: René Descartes broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b399",
+      "learnedAt": "2026-09-17T12:06:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tl1aof",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: René Descartes broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b399",
+      "learnedAt": "2026-09-17T12:06:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tl1aof",
+      "kind": "technique",
+      "text": "Borrow this pattern from René Descartes: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b399",
+      "learnedAt": "2026-09-17T12:06:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:14jwya4",
+      "kind": "blind_spot",
+      "text": "Your weakest move against René Descartes was \"Honestly personal finance should be required.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-17-s2026-b399",
+      "learnedAt": "2026-09-17T12:06:38.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "patience": 0.09,
+      "empiricism": 0.06,
+      "formalism": 0.06,
+      "interrogation": 0.06
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b14",
+      "at": "2026-09-17T12:00:13.000Z",
+      "opponent": "johann-wolfgang-von-goethe",
+      "side": "A",
+      "result": "draw",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b69",
+      "at": "2026-09-17T12:01:08.000Z",
+      "opponent": "benjamin-banneker",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:1yb1ih1",
+        "counter:kr4klv",
+        "counter:1gavq4z",
+        "technique:kr4klv",
+        "blind:1ck2wk7"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b195",
+      "at": "2026-09-17T12:03:14.000Z",
+      "opponent": "johann-wolfgang-von-goethe",
+      "side": "B",
+      "result": "draw",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b243",
+      "at": "2026-09-17T12:04:02.000Z",
+      "opponent": "isaac-asimov",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 43,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1t52uzl",
+        "counter:1hluoob",
+        "technique:1hluoob",
+        "blind:pjuh36"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b377",
+      "at": "2026-09-17T12:06:16.000Z",
+      "opponent": "srinivasa-ramanujan",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:tyaiuz",
+        "counter:19pgg8q",
+        "counter:o8ivyx",
+        "technique:tyaiuz",
+        "blind:1hjswn0"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b399",
+      "at": "2026-09-17T12:06:38.000Z",
+      "opponent": "descartes",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 37,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:irko2k",
+        "counter:46mrja",
+        "counter:tl1aof",
+        "technique:tl1aof",
+        "blind:14jwya4"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

@@ -3,19 +3,336 @@
   "slug": "benjamin-banneker",
   "name": "Benjamin Banneker",
   "wing": "builders",
-  "xp": 0,
-  "level": 1,
+  "xp": 2170,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 3
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Paul Dirac.",
+      "opponent": "paul-dirac",
+      "learnedFrom": "camp-2026-09-17-s2026-b26",
+      "learnedAt": "2026-09-17T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1xjr92f",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Paul Dirac broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "paul-dirac",
+      "learnedFrom": "camp-2026-09-17-s2026-b26",
+      "learnedAt": "2026-09-17T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:46mrja",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Paul Dirac broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "paul-dirac",
+      "learnedFrom": "camp-2026-09-17-s2026-b26",
+      "learnedAt": "2026-09-17T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:46mrja",
+      "kind": "technique",
+      "text": "Borrow this pattern from Paul Dirac: \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "paul-dirac",
+      "learnedFrom": "camp-2026-09-17-s2026-b26",
+      "learnedAt": "2026-09-17T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:bi1gt3",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Paul Dirac was \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "paul-dirac",
+      "learnedFrom": "camp-2026-09-17-s2026-b26",
+      "learnedAt": "2026-09-17T12:00:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:kr4klv",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jose-raul-capablanca",
+      "learnedFrom": "camp-2026-09-17-s2026-b69",
+      "learnedAt": "2026-09-17T12:01:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Segenet Kelemu.",
+      "opponent": "segenet-kelemu",
+      "learnedFrom": "camp-2026-09-17-s2026-b207",
+      "learnedAt": "2026-09-17T12:03:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1a65jkk",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "segenet-kelemu",
+      "learnedFrom": "camp-2026-09-17-s2026-b207",
+      "learnedAt": "2026-09-17T12:03:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Noam Chomsky.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b214",
+      "learnedAt": "2026-09-17T12:03:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1a65jkk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b214",
+      "learnedAt": "2026-09-17T12:03:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:k0bcty",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b214",
+      "learnedAt": "2026-09-17T12:03:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:k0bcty",
+      "kind": "technique",
+      "text": "Borrow this pattern from Noam Chomsky: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b214",
+      "learnedAt": "2026-09-17T12:03:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:jxvz2x",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Noam Chomsky was \"But note what just happened: your argument skipped the evidence entirely. Because offices produce better deep work, the documented cases sh…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-17-s2026-b214",
+      "learnedAt": "2026-09-17T12:03:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:21i9d5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yann LeCun broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b382",
+      "learnedAt": "2026-09-17T12:06:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:12x6kj9",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b382",
+      "learnedAt": "2026-09-17T12:06:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1w1ywtn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kim Ung-yong broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b468",
+      "learnedAt": "2026-09-17T12:07:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:11j7utt",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kim Ung-yong broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b468",
+      "learnedAt": "2026-09-17T12:07:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:170c1bx",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "kim-ung-yong",
+      "learnedFrom": "camp-2026-09-17-s2026-b468",
+      "learnedAt": "2026-09-17T12:07:47.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_emotion": 0.05,
+      "no_true_scotsman": 0.05,
+      "ad_hominem": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "interrogation": 0.045,
+      "patience": 0.045
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b26",
+      "at": "2026-09-17T12:00:25.000Z",
+      "opponent": "paul-dirac",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 57,
+      "opponentIntegrity": 66,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:1xjr92f",
+        "counter:46mrja",
+        "technique:46mrja",
+        "blind:bi1gt3"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b69",
+      "at": "2026-09-17T12:01:08.000Z",
+      "opponent": "jose-raul-capablanca",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 56,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:kr4klv"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b207",
+      "at": "2026-09-17T12:03:26.000Z",
+      "opponent": "segenet-kelemu",
+      "side": "A",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 83,
+      "arguments": 3,
+      "avgSoundness": 0.733,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 343,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "technique:1a65jkk"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b214",
+      "at": "2026-09-17T12:03:33.000Z",
+      "opponent": "noam-chomsky",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 46,
+      "opponentIntegrity": 72,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 318,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:1a65jkk",
+        "counter:k0bcty",
+        "technique:k0bcty",
+        "blind:jxvz2x"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b382",
+      "at": "2026-09-17T12:06:21.000Z",
+      "opponent": "yann-lecun",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 78,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 1,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 405,
+      "lessonsGained": [
+        "counter:21i9d5",
+        "technique:12x6kj9"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b468",
+      "at": "2026-09-17T12:07:47.000Z",
+      "opponent": "kim-ung-yong",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 47,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:1w1ywtn",
+        "counter:11j7utt",
+        "technique:170c1bx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

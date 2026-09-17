@@ -3,14 +3,14 @@
   "slug": "john-h-conway",
   "name": "John Horton Conway",
   "wing": "pattern_seers",
-  "xp": 373,
-  "level": 1,
+  "xp": 2331,
+  "level": 3,
   "record": {
-    "matches": 1,
-    "wins": 0,
-    "losses": 1,
+    "matches": 6,
+    "wins": 3,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 2
   },
   "lessons": [
     {
@@ -57,15 +57,207 @@
       "learnedFrom": "camp-2026-09-16-s42-b49",
       "learnedAt": "2026-09-16T12:00:48.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:102pnfa",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Cheikh Anta Diop broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b100",
+      "learnedAt": "2026-09-17T12:01:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1ggook1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Cheikh Anta Diop broke through with \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b100",
+      "learnedAt": "2026-09-17T12:01:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:flz2hp",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b100",
+      "learnedAt": "2026-09-17T12:01:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tyaiuz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marilyn vos Savant broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marilyn-vos-savant",
+      "learnedFrom": "camp-2026-09-17-s2026-b146",
+      "learnedAt": "2026-09-17T12:02:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mdog6y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marilyn vos Savant broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tests first slows small teams down, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marilyn-vos-savant",
+      "learnedFrom": "camp-2026-09-17-s2026-b146",
+      "learnedAt": "2026-09-17T12:02:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marilyn vos Savant broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marilyn-vos-savant",
+      "learnedFrom": "camp-2026-09-17-s2026-b146",
+      "learnedAt": "2026-09-17T12:02:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:gcrwcq",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because tests first pays for itself, the documented cases show the benefi…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marilyn-vos-savant",
+      "learnedFrom": "camp-2026-09-17-s2026-b146",
+      "learnedAt": "2026-09-17T12:02:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Magnus Carlsen.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b293",
+      "learnedAt": "2026-09-17T12:04:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1q2ycnx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Magnus Carlsen broke through with \"But note what just happened: your argument skipped the evidence entirely. Because car bans make downtowns worse, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b293",
+      "learnedAt": "2026-09-17T12:04:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tgii8e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Magnus Carlsen broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b293",
+      "learnedAt": "2026-09-17T12:04:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15wy74e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Magnus Carlsen broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b293",
+      "learnedAt": "2026-09-17T12:04:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tgii8e",
+      "kind": "technique",
+      "text": "Borrow this pattern from Magnus Carlsen: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b293",
+      "learnedAt": "2026-09-17T12:04:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1i82p1n",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Magnus Carlsen was \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b293",
+      "learnedAt": "2026-09-17T12:04:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tl1aof",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Christopher Hirata broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b364",
+      "learnedAt": "2026-09-17T12:06:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tpn58x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Christopher Hirata broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b364",
+      "learnedAt": "2026-09-17T12:06:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:9cwrna",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b364",
+      "learnedAt": "2026-09-17T12:06:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Benjamin Bloom.",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b474",
+      "learnedAt": "2026-09-17T12:07:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:182c2r7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Bloom broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b474",
+      "learnedAt": "2026-09-17T12:07:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:64mppy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Bloom broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b474",
+      "learnedAt": "2026-09-17T12:07:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:182c2r7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Benjamin Bloom: \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b474",
+      "learnedAt": "2026-09-17T12:07:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1av5zdr",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Benjamin Bloom was \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "benjamin-bloom",
+      "learnedFrom": "camp-2026-09-17-s2026-b474",
+      "learnedAt": "2026-09-17T12:07:53.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
-    "fallacyWards": {},
+    "fallacyWards": {
+      "appeal_to_popularity": 0.05,
+      "slippery_slope": 0.05
+    },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015,
-      "patience": 0.015
+      "empiricism": 0.06,
+      "formalism": 0.06,
+      "interrogation": 0.055,
+      "patience": 0.06
     }
   },
   "log": [
@@ -93,6 +285,131 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b100",
+      "at": "2026-09-17T12:01:39.000Z",
+      "opponent": "cheikh-anta-diop",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 58,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:102pnfa",
+        "counter:1ggook1",
+        "technique:flz2hp"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b146",
+      "at": "2026-09-17T12:02:25.000Z",
+      "opponent": "marilyn-vos-savant",
+      "side": "A",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 59,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tests first pays for itself, the documented cases show the benefi…",
+      "xpGained": 447,
+      "lessonsGained": [
+        "counter:tyaiuz",
+        "counter:mdog6y",
+        "counter:14czikb",
+        "technique:gcrwcq"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b293",
+      "at": "2026-09-17T12:04:52.000Z",
+      "opponent": "magnus-carlsen",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 52,
+      "opponentIntegrity": 78,
+      "arguments": 3,
+      "avgSoundness": 0.733,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 353,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "counter:1q2ycnx",
+        "counter:tgii8e",
+        "counter:15wy74e",
+        "technique:tgii8e",
+        "blind:1i82p1n"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b364",
+      "at": "2026-09-17T12:06:03.000Z",
+      "opponent": "christopher-michael-hirata",
+      "side": "A",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 67,
+      "opponentIntegrity": 61,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:tl1aof",
+        "counter:tpn58x",
+        "technique:9cwrna"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b474",
+      "at": "2026-09-17T12:07:53.000Z",
+      "opponent": "benjamin-bloom",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 56,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:182c2r7",
+        "counter:64mppy",
+        "technique:182c2r7",
+        "blind:1av5zdr"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }

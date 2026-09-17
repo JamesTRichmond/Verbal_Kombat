@@ -25,8 +25,8 @@ import type { ArenaTopic } from './arena.js';
 import { seededRandom } from './mock-client.js';
 import { rankFighters } from './roster-store.js';
 
-export type Pairing = 'random' | 'weakest-vs-strongest' | 'wing-rivals';
-export const PAIRINGS: Pairing[] = ['random', 'weakest-vs-strongest', 'wing-rivals'];
+export type Pairing = 'random' | 'weakest-vs-strongest' | 'wing-rivals' | 'least-fought';
+export const PAIRINGS: Pairing[] = ['random', 'weakest-vs-strongest', 'wing-rivals', 'least-fought'];
 
 export interface TrainingConfig {
   store: FighterStore;
@@ -107,6 +107,20 @@ export async function trainingCamp(config: TrainingConfig): Promise<TrainingSumm
       const weak = pick(ranked.slice(-q).filter((r) => r.slug !== strong.slug));
       const bySlug = (s: string) => pool.find((g) => g.slug === s)!;
       return [bySlug(weak.slug), bySlug(strong.slug)];
+    }
+    if (pairing === 'least-fought') {
+      // Whole-roster leveling: the two fighters with the fewest bouts meet
+      // (ties broken at random), so nobody is left behind.
+      const recs: GeniusFighterRecord[] = [];
+      for (const g of pool) recs.push(await store.get(g.slug));
+      const fewest = Math.min(...recs.map((r) => r.record.matches));
+      const low = recs.filter((r) => r.record.matches === fewest);
+      const bySlug = (s: string) => pool.find((g) => g.slug === s)!;
+      const a = pick(low);
+      const rest = recs.filter((r) => r.slug !== a.slug);
+      const next = Math.min(...rest.map((r) => r.record.matches));
+      const b = pick(rest.filter((r) => r.record.matches === next));
+      return [bySlug(a.slug), bySlug(b.slug)];
     }
     if (pairing === 'wing-rivals') {
       const wings = WING_ORDER.filter((w) => pool.some((g) => g.wing === w));

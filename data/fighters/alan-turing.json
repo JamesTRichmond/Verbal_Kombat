@@ -3,14 +3,14 @@
   "slug": "alan-turing",
   "name": "Alan Turing",
   "wing": "formalizers",
-  "xp": 286,
-  "level": 1,
+  "xp": 2053,
+  "level": 3,
   "record": {
-    "matches": 1,
-    "wins": 0,
+    "matches": 6,
+    "wins": 5,
     "losses": 1,
     "draws": 0,
-    "fallaciesCommitted": 2
+    "fallaciesCommitted": 4
   },
   "lessons": [
     {
@@ -20,7 +20,7 @@
       "opponent": "subrahmanyan-chandrasekhar",
       "learnedFrom": "camp-2026-09-16-s42-b2",
       "learnedAt": "2026-09-16T12:00:01.000Z",
-      "seen": 1
+      "seen": 2
     },
     {
       "id": "avoid:appeal_to_popularity",
@@ -66,17 +66,82 @@
       "learnedFrom": "camp-2026-09-16-s42-b2",
       "learnedAt": "2026-09-16T12:00:01.000Z",
       "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Judit Polgár.",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b114",
+      "learnedAt": "2026-09-17T12:01:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:6jg2g5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Judit Polgár broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance should be required, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b114",
+      "learnedAt": "2026-09-17T12:01:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:irko2k",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "judit-polgar",
+      "learnedFrom": "camp-2026-09-17-s2026-b114",
+      "learnedAt": "2026-09-17T12:01:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1oo1st8",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "learnedFrom": "camp-2026-09-17-s2026-b138",
+      "learnedAt": "2026-09-17T12:02:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "donald-knuth",
+      "learnedFrom": "camp-2026-09-17-s2026-b232",
+      "learnedAt": "2026-09-17T12:03:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:tl1aof",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "stephen-william-hawking",
+      "learnedFrom": "camp-2026-09-17-s2026-b314",
+      "learnedAt": "2026-09-17T12:05:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "amartya-kumar-sen",
+      "learnedFrom": "camp-2026-09-17-s2026-b422",
+      "learnedAt": "2026-09-17T12:07:01.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
-      "appeal_to_emotion": 0.05,
-      "appeal_to_popularity": 0.05
+      "appeal_to_emotion": 0.1,
+      "appeal_to_popularity": 0.05,
+      "appeal_to_ignorance": 0.05
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "patience": 0.015
+      "empiricism": 0.04,
+      "formalism": 0.04,
+      "patience": 0.035,
+      "interrogation": 0.025
     }
   },
   "log": [
@@ -108,6 +173,119 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b114",
+      "at": "2026-09-17T12:01:53.000Z",
+      "opponent": "judit-polgar",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 66,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…",
+      "xpGained": 362,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:6jg2g5",
+        "technique:irko2k"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b138",
+      "at": "2026-09-17T12:02:17.000Z",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 70,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…",
+      "xpGained": 310,
+      "lessonsGained": [
+        "technique:1oo1st8"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_emotion"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b232",
+      "at": "2026-09-17T12:03:51.000Z",
+      "opponent": "donald-knuth",
+      "side": "A",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 51,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:1pavtnn"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b314",
+      "at": "2026-09-17T12:05:13.000Z",
+      "opponent": "stephen-william-hawking",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 84,
+      "opponentIntegrity": 41,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:tl1aof"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b422",
+      "at": "2026-09-17T12:07:01.000Z",
+      "opponent": "amartya-kumar-sen",
+      "side": "A",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 52,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:pllh85"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }

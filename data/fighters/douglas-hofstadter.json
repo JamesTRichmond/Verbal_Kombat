@@ -3,19 +3,404 @@
   "slug": "douglas-hofstadter",
   "name": "Douglas Hofstadter",
   "wing": "pattern_seers",
-  "xp": 0,
-  "level": 1,
+  "xp": 2395,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 7,
+    "wins": 4,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 5
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Al-Kindi.",
+      "opponent": "al-kindi",
+      "learnedFrom": "camp-2026-09-17-s2026-b30",
+      "learnedAt": "2026-09-17T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:lfoyp7",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "al-kindi",
+      "learnedFrom": "camp-2026-09-17-s2026-b30",
+      "learnedAt": "2026-09-17T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Maryam Mirzakhani.",
+      "opponent": "maryam-mirzakhani",
+      "learnedFrom": "camp-2026-09-17-s2026-b116",
+      "learnedAt": "2026-09-17T12:01:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Maryam Mirzakhani.",
+      "opponent": "maryam-mirzakhani",
+      "learnedFrom": "camp-2026-09-17-s2026-b116",
+      "learnedAt": "2026-09-17T12:01:55.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:8pxmk0",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Maryam Mirzakhani broke through with \"But note what just happened: your argument skipped the evidence entirely. Because renewables and storage are the better path, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "maryam-mirzakhani",
+      "learnedFrom": "camp-2026-09-17-s2026-b116",
+      "learnedAt": "2026-09-17T12:01:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:8pxmk0",
+      "kind": "technique",
+      "text": "Borrow this pattern from Maryam Mirzakhani: \"But note what just happened: your argument skipped the evidence entirely. Because renewables and storage are the better path, the documente…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "maryam-mirzakhani",
+      "learnedFrom": "camp-2026-09-17-s2026-b116",
+      "learnedAt": "2026-09-17T12:01:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:cys45u",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Maryam Mirzakhani was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "maryam-mirzakhani",
+      "learnedFrom": "camp-2026-09-17-s2026-b116",
+      "learnedAt": "2026-09-17T12:01:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:szk3kb",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "satyendra-nath-bose",
+      "learnedFrom": "camp-2026-09-17-s2026-b197",
+      "learnedAt": "2026-09-17T12:03:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:5bpx14",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michel Foucault broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week costs more than it returns, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "michel-foucault",
+      "learnedFrom": "camp-2026-09-17-s2026-b259",
+      "learnedAt": "2026-09-17T12:04:18.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:170c1bx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michel Foucault broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "michel-foucault",
+      "learnedFrom": "camp-2026-09-17-s2026-b259",
+      "learnedAt": "2026-09-17T12:04:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:8wsog8",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "michel-foucault",
+      "learnedFrom": "camp-2026-09-17-s2026-b259",
+      "learnedAt": "2026-09-17T12:04:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:b1fhfu",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "avicenna-ibn-sina",
+      "learnedFrom": "camp-2026-09-17-s2026-b344",
+      "learnedAt": "2026-09-17T12:05:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mh1b6d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Magnus Carlsen broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b419",
+      "learnedAt": "2026-09-17T12:06:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:yoswb5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Magnus Carlsen broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b419",
+      "learnedAt": "2026-09-17T12:06:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:mh1b6d",
+      "kind": "technique",
+      "text": "Borrow this pattern from Magnus Carlsen: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b419",
+      "learnedAt": "2026-09-17T12:06:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:upc7cg",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Magnus Carlsen was \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-17-s2026-b419",
+      "learnedAt": "2026-09-17T12:06:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Nikola Tesla.",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b493",
+      "learnedAt": "2026-09-17T12:08:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1147vwt",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nikola Tesla broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b493",
+      "learnedAt": "2026-09-17T12:08:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h3s00d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nikola Tesla broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b493",
+      "learnedAt": "2026-09-17T12:08:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1lxgnv7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nikola Tesla broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b493",
+      "learnedAt": "2026-09-17T12:08:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1lxgnv7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Nikola Tesla: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b493",
+      "learnedAt": "2026-09-17T12:08:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1t96ges",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Nikola Tesla was \"Consider the evidence first. Because remote work protects deep focus, the documented cases show the benefit holds when the conditions are m…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b493",
+      "learnedAt": "2026-09-17T12:08:12.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "no_true_scotsman": 0.05,
+      "appeal_to_popularity": 0.05,
+      "appeal_to_ignorance": 0.1,
+      "appeal_to_emotion": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.065,
+      "formalism": 0.065,
+      "patience": 0.05,
+      "interrogation": 0.05
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b30",
+      "at": "2026-09-17T12:00:29.000Z",
+      "opponent": "al-kindi",
+      "side": "A",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 80,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 332,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "technique:lfoyp7"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b116",
+      "at": "2026-09-17T12:01:55.000Z",
+      "opponent": "maryam-mirzakhani",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 92,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_popularity",
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Start from the premise we can check. Because nuclear power belongs in a clean grid, the documented cases show the benefit holds when the co…",
+      "xpGained": 256,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "avoid:appeal_to_ignorance",
+        "counter:8pxmk0",
+        "technique:8pxmk0",
+        "blind:cys45u"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b197",
+      "at": "2026-09-17T12:03:16.000Z",
+      "opponent": "satyendra-nath-bose",
+      "side": "A",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:szk3kb"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b259",
+      "at": "2026-09-17T12:04:18.000Z",
+      "opponent": "michel-foucault",
+      "side": "A",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 47,
+      "opponentIntegrity": 43,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…",
+      "xpGained": 431,
+      "lessonsGained": [
+        "counter:5bpx14",
+        "counter:170c1bx",
+        "technique:8wsog8"
+      ],
+      "lessonsReinforced": [
+        "counter:5bpx14"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b344",
+      "at": "2026-09-17T12:05:43.000Z",
+      "opponent": "avicenna-ibn-sina",
+      "side": "A",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 65,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:b1fhfu"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b419",
+      "at": "2026-09-17T12:06:58.000Z",
+      "opponent": "magnus-carlsen",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 49,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 296,
+      "lessonsGained": [
+        "counter:mh1b6d",
+        "counter:yoswb5",
+        "technique:mh1b6d",
+        "blind:upc7cg"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance"
+      ],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b493",
+      "at": "2026-09-17T12:08:12.000Z",
+      "opponent": "tesla",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 72,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 348,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:1147vwt",
+        "counter:1h3s00d",
+        "counter:1lxgnv7",
+        "technique:1lxgnv7",
+        "blind:1t96ges"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

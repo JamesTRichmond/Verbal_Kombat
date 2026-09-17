@@ -3,12 +3,12 @@
   "slug": "rumi",
   "name": "Rumi",
   "wing": "awakeners",
-  "xp": 1143,
-  "level": 2,
+  "xp": 2362,
+  "level": 3,
   "record": {
-    "matches": 3,
-    "wins": 2,
-    "losses": 1,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
     "draws": 0,
     "fallaciesCommitted": 0
   },
@@ -84,15 +84,114 @@
       "learnedFrom": "camp-2026-09-16-s42-b60",
       "learnedAt": "2026-09-16T12:00:59.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:gcrwcq",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: David Hilbert broke through with \"Yet your position leaves the strongest counter-example untouched. Because tests first pays for itself, the documented cases show the benefi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "david-hilbert",
+      "learnedFrom": "camp-2026-09-17-s2026-b284",
+      "learnedAt": "2026-09-17T12:04:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1j9dze5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: David Hilbert broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "david-hilbert",
+      "learnedFrom": "camp-2026-09-17-s2026-b284",
+      "learnedAt": "2026-09-17T12:04:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1x9j1yw",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "david-hilbert",
+      "learnedFrom": "camp-2026-09-17-s2026-b284",
+      "learnedAt": "2026-09-17T12:04:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:lfoyp7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Homi J. Bhabha broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "homi-j-bhabha",
+      "learnedFrom": "camp-2026-09-17-s2026-b322",
+      "learnedAt": "2026-09-17T12:05:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:k52x2j",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Homi J. Bhabha broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "homi-j-bhabha",
+      "learnedFrom": "camp-2026-09-17-s2026-b322",
+      "learnedAt": "2026-09-17T12:05:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h7563f",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "homi-j-bhabha",
+      "learnedFrom": "camp-2026-09-17-s2026-b322",
+      "learnedAt": "2026-09-17T12:05:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marshall McLuhan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marshall-mcluhan",
+      "learnedFrom": "camp-2026-09-17-s2026-b417",
+      "learnedAt": "2026-09-17T12:06:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1r32bai",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marshall McLuhan broke through with \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marshall-mcluhan",
+      "learnedFrom": "camp-2026-09-17-s2026-b417",
+      "learnedAt": "2026-09-17T12:06:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h3s00d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marshall McLuhan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marshall-mcluhan",
+      "learnedFrom": "camp-2026-09-17-s2026-b417",
+      "learnedAt": "2026-09-17T12:06:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1r32bai",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marshall McLuhan: \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marshall-mcluhan",
+      "learnedFrom": "camp-2026-09-17-s2026-b417",
+      "learnedAt": "2026-09-17T12:06:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:iqfgrq",
+      "kind": "blind_spot",
+      "text": "Your moves against Marshall McLuhan were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "marshall-mcluhan",
+      "learnedFrom": "camp-2026-09-17-s2026-b417",
+      "learnedAt": "2026-09-17T12:06:56.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {},
     "traitGains": {
-      "empiricism": 0.025,
-      "formalism": 0.025,
-      "interrogation": 0.025,
-      "patience": 0.025
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "interrogation": 0.05,
+      "patience": 0.05
     }
   },
   "log": [
@@ -165,6 +264,77 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b284",
+      "at": "2026-09-17T12:04:43.000Z",
+      "opponent": "david-hilbert",
+      "side": "B",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 42,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:gcrwcq",
+        "counter:1j9dze5",
+        "technique:1x9j1yw"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b322",
+      "at": "2026-09-17T12:05:21.000Z",
+      "opponent": "homi-j-bhabha",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 429,
+      "lessonsGained": [
+        "counter:lfoyp7",
+        "counter:k52x2j",
+        "technique:1h7563f"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b417",
+      "at": "2026-09-17T12:06:56.000Z",
+      "opponent": "marshall-mcluhan",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:msxpis",
+        "counter:1r32bai",
+        "counter:1h3s00d",
+        "technique:1r32bai",
+        "blind:iqfgrq"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }

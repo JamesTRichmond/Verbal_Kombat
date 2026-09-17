@@ -3,19 +3,298 @@
   "slug": "homi-j-bhabha",
   "name": "Homi J. Bhabha",
   "wing": "builders",
-  "xp": 0,
-  "level": 1,
+  "xp": 2631,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 7,
+    "wins": 6,
+    "losses": 1,
     "draws": 0,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "technique:1oo1st8",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hedy-lamarr",
+      "learnedFrom": "camp-2026-09-17-s2026-b48",
+      "learnedAt": "2026-09-17T12:00:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:4mnp70",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Paul Dirac broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "paul-dirac",
+      "learnedFrom": "camp-2026-09-17-s2026-b74",
+      "learnedAt": "2026-09-17T12:01:13.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1fm5z01",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "paul-dirac",
+      "learnedFrom": "camp-2026-09-17-s2026-b74",
+      "learnedAt": "2026-09-17T12:01:13.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:181ygjf",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "al-kindi",
+      "learnedFrom": "camp-2026-09-17-s2026-b190",
+      "learnedAt": "2026-09-17T12:03:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1a2smwx",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "arthur-schopenhauer",
+      "learnedFrom": "camp-2026-09-17-s2026-b286",
+      "learnedAt": "2026-09-17T12:04:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ezi1i7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Rumi broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-17-s2026-b322",
+      "learnedAt": "2026-09-17T12:05:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h7563f",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Rumi broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-17-s2026-b322",
+      "learnedAt": "2026-09-17T12:05:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1k6lvmn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Rumi broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-17-s2026-b322",
+      "learnedAt": "2026-09-17T12:05:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h7563f",
+      "kind": "technique",
+      "text": "Borrow this pattern from Rumi: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-17-s2026-b322",
+      "learnedAt": "2026-09-17T12:05:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:o9v6bt",
+      "kind": "blind_spot",
+      "text": "Your moves against Rumi were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-17-s2026-b322",
+      "learnedAt": "2026-09-17T12:05:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pavtnn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Venkatraman Ramakrishnan broke through with \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b439",
+      "learnedAt": "2026-09-17T12:07:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:aiwyf2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Venkatraman Ramakrishnan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b439",
+      "learnedAt": "2026-09-17T12:07:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1p7ux5t",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "confucius",
+      "learnedFrom": "camp-2026-09-17-s2026-b498",
+      "learnedAt": "2026-09-17T12:08:17.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.045,
+      "formalism": 0.045,
+      "interrogation": 0.045,
+      "patience": 0.045
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b48",
+      "at": "2026-09-17T12:00:47.000Z",
+      "opponent": "hedy-lamarr",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 48,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:1oo1st8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b74",
+      "at": "2026-09-17T12:01:13.000Z",
+      "opponent": "paul-dirac",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 68,
+      "opponentIntegrity": 42,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 399,
+      "lessonsGained": [
+        "counter:4mnp70",
+        "technique:1fm5z01"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b190",
+      "at": "2026-09-17T12:03:09.000Z",
+      "opponent": "al-kindi",
+      "side": "A",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 49,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:181ygjf"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b286",
+      "at": "2026-09-17T12:04:45.000Z",
+      "opponent": "arthur-schopenhauer",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:1a2smwx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b322",
+      "at": "2026-09-17T12:05:21.000Z",
+      "opponent": "rumi",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 44,
+      "opponentIntegrity": 65,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:ezi1i7",
+        "counter:1h7563f",
+        "counter:1k6lvmn",
+        "technique:1h7563f",
+        "blind:o9v6bt"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b439",
+      "at": "2026-09-17T12:07:18.000Z",
+      "opponent": "venkatraman-ramakrishnan",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 52,
+      "opponentIntegrity": 46,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 407,
+      "lessonsGained": [
+        "counter:1pavtnn",
+        "counter:aiwyf2"
+      ],
+      "lessonsReinforced": [
+        "technique:1fm5z01"
+      ],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b498",
+      "at": "2026-09-17T12:08:17.000Z",
+      "opponent": "confucius",
+      "side": "A",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:1p7ux5t"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

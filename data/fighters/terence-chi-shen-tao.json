@@ -3,14 +3,14 @@
   "slug": "terence-chi-shen-tao",
   "name": "Terence Tao",
   "wing": "pattern_seers",
-  "xp": 318,
-  "level": 1,
+  "xp": 1753,
+  "level": 2,
   "record": {
-    "matches": 1,
+    "matches": 6,
     "wins": 0,
-    "losses": 1,
+    "losses": 6,
     "draws": 0,
-    "fallaciesCommitted": 1
+    "fallaciesCommitted": 7
   },
   "lessons": [
     {
@@ -20,7 +20,7 @@
       "opponent": "linus-torvalds",
       "learnedFrom": "camp-2026-09-16-s42-b45",
       "learnedAt": "2026-09-16T12:00:44.000Z",
-      "seen": 1
+      "seen": 3
     },
     {
       "id": "counter:1gfnuuy",
@@ -57,16 +57,200 @@
       "learnedFrom": "camp-2026-09-16-s42-b45",
       "learnedAt": "2026-09-16T12:00:44.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:8wsog8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Stuart Mill broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b64",
+      "learnedAt": "2026-09-17T12:01:03.000Z",
+      "seen": 3
+    },
+    {
+      "id": "technique:8wsog8",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Stuart Mill: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b64",
+      "learnedAt": "2026-09-17T12:01:03.000Z",
+      "seen": 2
+    },
+    {
+      "id": "blind:9uwhhp",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Stuart Mill was \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b64",
+      "learnedAt": "2026-09-17T12:01:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against John Stuart Mill.",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b166",
+      "learnedAt": "2026-09-17T12:02:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against John Stuart Mill.",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b166",
+      "learnedAt": "2026-09-17T12:02:45.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:r7da8p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Stuart Mill broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b166",
+      "learnedAt": "2026-09-17T12:02:45.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:mdog6y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Stuart Mill broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tests first slows small teams down, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b166",
+      "learnedAt": "2026-09-17T12:02:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:r7da8p",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Stuart Mill: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b166",
+      "learnedAt": "2026-09-17T12:02:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:a6amhc",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Stuart Mill was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "john-stuart-mill",
+      "learnedFrom": "camp-2026-09-17-s2026-b166",
+      "learnedAt": "2026-09-17T12:02:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7s46gj",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ibn Battuta broke through with \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b250",
+      "learnedAt": "2026-09-17T12:04:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tgii8e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ibn Battuta broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b250",
+      "learnedAt": "2026-09-17T12:04:09.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Borrow this pattern from Ibn Battuta: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b250",
+      "learnedAt": "2026-09-17T12:04:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1rydcud",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Ibn Battuta was \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b250",
+      "learnedAt": "2026-09-17T12:04:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Abraham Maslow.",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-17-s2026-b372",
+      "learnedAt": "2026-09-17T12:06:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:5kvt6",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Abraham Maslow broke through with \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week keeps output and improves lives, the docu…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-17-s2026-b372",
+      "learnedAt": "2026-09-17T12:06:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:8riuho",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Abraham Maslow was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-17-s2026-b372",
+      "learnedAt": "2026-09-17T12:06:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1u5z5np",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Hobbes broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b413",
+      "learnedAt": "2026-09-17T12:06:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:o8ivyx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Hobbes broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b413",
+      "learnedAt": "2026-09-17T12:06:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1u5z5np",
+      "kind": "technique",
+      "text": "Borrow this pattern from Thomas Hobbes: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b413",
+      "learnedAt": "2026-09-17T12:06:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:j0mj0m",
+      "kind": "blind_spot",
+      "text": "Your moves against Thomas Hobbes were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b413",
+      "learnedAt": "2026-09-17T12:06:52.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
-      "no_true_scotsman": 0.05
+      "no_true_scotsman": 0.15000000000000002,
+      "appeal_to_emotion": 0.05,
+      "appeal_to_ignorance": 0.1,
+      "slippery_slope": 0.05
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "patience": 0.015
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "patience": 0.075,
+      "interrogation": 0.075
     }
   },
   "log": [
@@ -96,6 +280,148 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b64",
+      "at": "2026-09-17T12:01:03.000Z",
+      "opponent": "john-stuart-mill",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 38,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 274,
+      "lessonsGained": [
+        "counter:8wsog8",
+        "technique:8wsog8",
+        "blind:9uwhhp"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman",
+        "counter:8wsog8"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b166",
+      "at": "2026-09-17T12:02:45.000Z",
+      "opponent": "john-stuart-mill",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 92,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_emotion",
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Start from the premise we can check. The research found the effect repeatedly; since the premise survives testing, the conclusion that test…",
+      "xpGained": 286,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "avoid:appeal_to_ignorance",
+        "counter:r7da8p",
+        "counter:mdog6y",
+        "technique:r7da8p",
+        "blind:a6amhc"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b250",
+      "at": "2026-09-17T12:04:09.000Z",
+      "opponent": "ibn-battuta",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 45,
+      "opponentIntegrity": 71,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…",
+      "xpGained": 298,
+      "lessonsGained": [
+        "counter:7s46gj",
+        "counter:tgii8e",
+        "technique:7s46gj",
+        "blind:1rydcud"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman",
+        "counter:tgii8e"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b372",
+      "at": "2026-09-17T12:06:11.000Z",
+      "opponent": "abraham-maslow",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 51,
+      "opponentIntegrity": 78,
+      "arguments": 3,
+      "avgSoundness": 0.467,
+      "fallacies": [
+        "appeal_to_ignorance",
+        "slippery_slope"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 226,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:5kvt6",
+        "blind:8riuho"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance",
+        "counter:8wsog8",
+        "technique:8wsog8"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b413",
+      "at": "2026-09-17T12:06:52.000Z",
+      "opponent": "thomas-hobbes",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 50,
+      "opponentIntegrity": 53,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tests first pays for itself, the documented cases show the benefi…",
+      "xpGained": 351,
+      "lessonsGained": [
+        "counter:1u5z5np",
+        "counter:o8ivyx",
+        "technique:1u5z5np",
+        "blind:j0mj0m"
+      ],
+      "lessonsReinforced": [
+        "counter:r7da8p"
+      ],
+      "levelAfter": 2
     }
   ]
 }

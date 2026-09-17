@@ -118,3 +118,27 @@ describe('trainingCamp', () => {
     await expect(camp(new MemoryFighterStore(), 1, 'nope' as Pairing)).rejects.toThrow(/Unknown pairing/);
   });
 });
+
+describe('least-fought pairing', () => {
+  it('spreads bouts evenly so every fighter fights', async () => {
+    const { mkdtempSync } = await import('node:fs');
+    const { tmpdir } = await import('node:os');
+    const { join } = await import('node:path');
+    const { FileFighterStore } = await import('./roster-store.js');
+    const { trainingCamp } = await import('./training.js');
+    const { MockChatClient } = await import('./mock-client.js');
+    const { HeuristicJudge } = await import('@vk/judge');
+    const { GENIUSES } = await import('@vk/core');
+    const store = new FileFighterStore(mkdtempSync(join(tmpdir(), 'vk-least-')));
+    const pool = GENIUSES.slice(0, 10);
+    await trainingCamp({
+      store, pool, bouts: 10, seed: 3, pairing: 'least-fought', judge: new HeuristicJudge(),
+      clientFor: (slug) => new MockChatClient({ seed: slug.length }),
+      topics: [{ topic: 'Is homework useful?', stances: { A: 'Yes', B: 'No' } }],
+      now: () => new Date('2026-09-17T00:00:00Z'),
+    });
+    const counts = pool.map((g) => store.get(g.slug).record.matches);
+    expect(Math.min(...counts)).toBe(2);
+    expect(Math.max(...counts)).toBe(2);
+  });
+});

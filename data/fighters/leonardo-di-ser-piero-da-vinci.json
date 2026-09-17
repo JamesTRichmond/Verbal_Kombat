@@ -3,14 +3,14 @@
   "slug": "leonardo-di-ser-piero-da-vinci",
   "name": "Leonardo da Vinci",
   "wing": "imaginers",
-  "xp": 270,
-  "level": 1,
+  "xp": 1675,
+  "level": 2,
   "record": {
-    "matches": 1,
+    "matches": 7,
     "wins": 0,
-    "losses": 1,
-    "draws": 0,
-    "fallaciesCommitted": 1
+    "losses": 6,
+    "draws": 1,
+    "fallaciesCommitted": 2
   },
   "lessons": [
     {
@@ -57,17 +57,189 @@
       "learnedFrom": "camp-2026-09-16-s42-b33",
       "learnedAt": "2026-09-16T12:00:32.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:1aeao7x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Roger Penrose broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b59",
+      "learnedAt": "2026-09-17T12:00:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1aeao7x",
+      "kind": "technique",
+      "text": "Borrow this pattern from Roger Penrose: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b59",
+      "learnedAt": "2026-09-17T12:00:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1810bw0",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Roger Penrose was \"It is obvious that libraries should stick to books and media.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b59",
+      "learnedAt": "2026-09-17T12:00:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1oo1st8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Turing broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b138",
+      "learnedAt": "2026-09-17T12:02:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:irko2k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Turing broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b138",
+      "learnedAt": "2026-09-17T12:02:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1oo1st8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Alan Turing: \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b138",
+      "learnedAt": "2026-09-17T12:02:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:haq3ve",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Alan Turing was \"Honestly personal finance should be required.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b138",
+      "learnedAt": "2026-09-17T12:02:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:9cwrna",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ilya Sutskever broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "ilya-sutskever",
+      "learnedFrom": "camp-2026-09-17-s2026-b360",
+      "learnedAt": "2026-09-17T12:05:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:9cwrna",
+      "kind": "technique",
+      "text": "Borrow this pattern from Ilya Sutskever: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ilya-sutskever",
+      "learnedFrom": "camp-2026-09-17-s2026-b360",
+      "learnedAt": "2026-09-17T12:05:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1najffx",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Ilya Sutskever was \"Honestly personal finance does not need its own required course.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "ilya-sutskever",
+      "learnedFrom": "camp-2026-09-17-s2026-b360",
+      "learnedAt": "2026-09-17T12:05:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1jki1u2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Sagan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week keeps output and improves lives…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b446",
+      "learnedAt": "2026-09-17T12:07:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:11j7utt",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Sagan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b446",
+      "learnedAt": "2026-09-17T12:07:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:11j7utt",
+      "kind": "technique",
+      "text": "Borrow this pattern from Carl Sagan: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b446",
+      "learnedAt": "2026-09-17T12:07:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:16pogny",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Carl Sagan was \"It is obvious that a four-day week costs more than it returns.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "sagan",
+      "learnedFrom": "camp-2026-09-17-s2026-b446",
+      "learnedAt": "2026-09-17T12:07:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against George Washington Carver.",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b500",
+      "learnedAt": "2026-09-17T12:08:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:k52x2j",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: George Washington Carver broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b500",
+      "learnedAt": "2026-09-17T12:08:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1t52uzl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: George Washington Carver broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b500",
+      "learnedAt": "2026-09-17T12:08:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t52uzl",
+      "kind": "technique",
+      "text": "Borrow this pattern from George Washington Carver: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b500",
+      "learnedAt": "2026-09-17T12:08:19.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:13h9nes",
+      "kind": "blind_spot",
+      "text": "Your weakest move against George Washington Carver was \"It is obvious that homework adds little beyond class time. No true expert would disagree.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "george-washington-carver",
+      "learnedFrom": "camp-2026-09-17-s2026-b500",
+      "learnedAt": "2026-09-17T12:08:19.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
-      "slippery_slope": 0.05
+      "slippery_slope": 0.05,
+      "no_true_scotsman": 0.05
     },
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015,
-      "patience": 0.015
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "interrogation": 0.06,
+      "patience": 0.06
     }
   },
   "log": [
@@ -96,6 +268,140 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b59",
+      "at": "2026-09-17T12:00:58.000Z",
+      "opponent": "roger-penrose",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 77,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:1aeao7x",
+        "technique:1aeao7x",
+        "blind:1810bw0"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b138",
+      "at": "2026-09-17T12:02:17.000Z",
+      "opponent": "alan-turing",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 70,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1oo1st8",
+        "counter:irko2k",
+        "technique:1oo1st8",
+        "blind:haq3ve"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b217",
+      "at": "2026-09-17T12:03:36.000Z",
+      "opponent": "douglas-harding",
+      "side": "A",
+      "result": "draw",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.45,
+      "fallacies": [],
+      "xpGained": 95,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b360",
+      "at": "2026-09-17T12:05:59.000Z",
+      "opponent": "ilya-sutskever",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 74,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:9cwrna",
+        "technique:9cwrna",
+        "blind:1najffx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b446",
+      "at": "2026-09-17T12:07:25.000Z",
+      "opponent": "sagan",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 71,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1jki1u2",
+        "counter:11j7utt",
+        "technique:11j7utt",
+        "blind:16pogny"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b500",
+      "at": "2026-09-17T12:08:19.000Z",
+      "opponent": "george-washington-carver",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "xpGained": 270,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:k52x2j",
+        "counter:1t52uzl",
+        "technique:1t52uzl",
+        "blind:13h9nes"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
     }
   ]
 }

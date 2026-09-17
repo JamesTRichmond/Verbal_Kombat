@@ -3,19 +3,318 @@
   "slug": "john-locke",
   "name": "John Locke",
   "wing": "society_shapers",
-  "xp": 0,
-  "level": 1,
+  "xp": 2103,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 3
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Christopher Hirata.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b9",
+      "learnedAt": "2026-09-17T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1jdypxe",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Christopher Hirata broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b9",
+      "learnedAt": "2026-09-17T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:2rojog",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Christopher Hirata broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b9",
+      "learnedAt": "2026-09-17T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:2rojog",
+      "kind": "technique",
+      "text": "Borrow this pattern from Christopher Hirata: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b9",
+      "learnedAt": "2026-09-17T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1oloyzz",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Christopher Hirata was \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b9",
+      "learnedAt": "2026-09-17T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1lxgnv7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sir Richard Francis Burton broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-17-s2026-b83",
+      "learnedAt": "2026-09-17T12:01:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sir Richard Francis Burton broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-17-s2026-b83",
+      "learnedAt": "2026-09-17T12:01:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1q1fphk",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-17-s2026-b83",
+      "learnedAt": "2026-09-17T12:01:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Siddhartha Gautama (the Buddha).",
+      "opponent": "siddhartha-gautama",
+      "learnedFrom": "camp-2026-09-17-s2026-b178",
+      "learnedAt": "2026-09-17T12:02:57.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:y9aa26",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework builds lasting mastery, the documented…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "siddhartha-gautama",
+      "learnedFrom": "camp-2026-09-17-s2026-b178",
+      "learnedAt": "2026-09-17T12:02:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ma60bc",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "arthur-c-clarke",
+      "learnedFrom": "camp-2026-09-17-s2026-b298",
+      "learnedAt": "2026-09-17T12:04:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1x9j1yw",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "yang-chen-ning",
+      "learnedFrom": "camp-2026-09-17-s2026-b304",
+      "learnedAt": "2026-09-17T12:05:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1d9zdjl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Voltaire broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-17-s2026-b452",
+      "learnedAt": "2026-09-17T12:07:31.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1ewhc5i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Voltaire broke through with \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-17-s2026-b452",
+      "learnedAt": "2026-09-17T12:07:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ewhc5i",
+      "kind": "technique",
+      "text": "Borrow this pattern from Voltaire: \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-17-s2026-b452",
+      "learnedAt": "2026-09-17T12:07:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1gvpryv",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Voltaire was \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-17-s2026-b452",
+      "learnedAt": "2026-09-17T12:07:31.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "ad_hominem": 0.05,
+      "no_true_scotsman": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "interrogation": 0.045,
+      "patience": 0.05
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b9",
+      "at": "2026-09-17T12:00:08.000Z",
+      "opponent": "christopher-michael-hirata",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 45,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:1jdypxe",
+        "counter:2rojog",
+        "technique:2rojog",
+        "blind:1oloyzz"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b83",
+      "at": "2026-09-17T12:01:22.000Z",
+      "opponent": "captain-sir-richard-francis-burton",
+      "side": "A",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 67,
+      "opponentIntegrity": 57,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:1lxgnv7",
+        "counter:msxpis",
+        "technique:1q1fphk"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b178",
+      "at": "2026-09-17T12:02:57.000Z",
+      "opponent": "siddhartha-gautama",
+      "side": "A",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 73,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework builds lasting mastery, the documented…",
+      "xpGained": 332,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "technique:y9aa26"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b298",
+      "at": "2026-09-17T12:04:57.000Z",
+      "opponent": "arthur-c-clarke",
+      "side": "A",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 53,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 369,
+      "lessonsGained": [
+        "technique:ma60bc"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b304",
+      "at": "2026-09-17T12:05:03.000Z",
+      "opponent": "yang-chen-ning",
+      "side": "B",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 46,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:1x9j1yw"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b452",
+      "at": "2026-09-17T12:07:31.000Z",
+      "opponent": "voltaire",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 80,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…",
+      "xpGained": 304,
+      "lessonsGained": [
+        "counter:1d9zdjl",
+        "counter:1ewhc5i",
+        "technique:1ewhc5i",
+        "blind:1gvpryv"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman",
+        "counter:1d9zdjl"
+      ],
+      "levelAfter": 3
+    }
+  ]
 }

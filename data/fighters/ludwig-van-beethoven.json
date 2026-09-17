@@ -3,19 +3,407 @@
   "slug": "ludwig-van-beethoven",
   "name": "Ludwig van Beethoven",
   "wing": "artists",
-  "xp": 0,
-  "level": 1,
+  "xp": 2202,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 2,
+    "losses": 4,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 2
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:1rbol23",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Evangelos Katsioulis broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b11",
+      "learnedAt": "2026-09-17T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ma8z53",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Evangelos Katsioulis broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b11",
+      "learnedAt": "2026-09-17T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ma8z53",
+      "kind": "technique",
+      "text": "Borrow this pattern from Evangelos Katsioulis: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b11",
+      "learnedAt": "2026-09-17T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:11ox88r",
+      "kind": "blind_spot",
+      "text": "Your moves against Evangelos Katsioulis were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b11",
+      "learnedAt": "2026-09-17T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Alexander Grothendieck.",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b92",
+      "learnedAt": "2026-09-17T12:01:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:r7da8p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alexander Grothendieck broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b92",
+      "learnedAt": "2026-09-17T12:01:31.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:r7da8p",
+      "kind": "technique",
+      "text": "Borrow this pattern from Alexander Grothendieck: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b92",
+      "learnedAt": "2026-09-17T12:01:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:x7bvf4",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Alexander Grothendieck was \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b92",
+      "learnedAt": "2026-09-17T12:01:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Friedrich Nietzsche.",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b164",
+      "learnedAt": "2026-09-17T12:02:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h3s00d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Friedrich Nietzsche broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b164",
+      "learnedAt": "2026-09-17T12:02:43.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:16zat2p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Friedrich Nietzsche broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b164",
+      "learnedAt": "2026-09-17T12:02:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:16zat2p",
+      "kind": "technique",
+      "text": "Borrow this pattern from Friedrich Nietzsche: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b164",
+      "learnedAt": "2026-09-17T12:02:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:omnfkd",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Friedrich Nietzsche was \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because remote work protects deep focus, the documented…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b164",
+      "learnedAt": "2026-09-17T12:02:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1a65jkk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tshilidzi Marwala broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "tshilidzi-marwala",
+      "learnedFrom": "camp-2026-09-17-s2026-b281",
+      "learnedAt": "2026-09-17T12:04:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:91jzpz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tshilidzi Marwala broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because remote work protects deep focus, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tshilidzi-marwala",
+      "learnedFrom": "camp-2026-09-17-s2026-b281",
+      "learnedAt": "2026-09-17T12:04:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tshilidzi-marwala",
+      "learnedFrom": "camp-2026-09-17-s2026-b281",
+      "learnedAt": "2026-09-17T12:04:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:6h5qbp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marie Curie broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b323",
+      "learnedAt": "2026-09-17T12:05:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:861nr9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marie Curie broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b323",
+      "learnedAt": "2026-09-17T12:05:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gavq4z",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marie Curie broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b323",
+      "learnedAt": "2026-09-17T12:05:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:6h5qbp",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marie Curie: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b323",
+      "learnedAt": "2026-09-17T12:05:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1j2xlof",
+      "kind": "blind_spot",
+      "text": "Your moves against Marie Curie were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b323",
+      "learnedAt": "2026-09-17T12:05:22.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1d9zdjl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michelangelo Buonarroti broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "michelangelo-buonarroti",
+      "learnedFrom": "camp-2026-09-17-s2026-b407",
+      "learnedAt": "2026-09-17T12:06:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ugdpl3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michelangelo Buonarroti broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "michelangelo-buonarroti",
+      "learnedFrom": "camp-2026-09-17-s2026-b407",
+      "learnedAt": "2026-09-17T12:06:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:nm5zw4",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Michelangelo Buonarroti broke through with \"But note what just happened: your argument skipped the evidence entirely. Because libraries should stick to books and media, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "michelangelo-buonarroti",
+      "learnedFrom": "camp-2026-09-17-s2026-b407",
+      "learnedAt": "2026-09-17T12:06:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "michelangelo-buonarroti",
+      "learnedFrom": "camp-2026-09-17-s2026-b407",
+      "learnedAt": "2026-09-17T12:06:46.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "slippery_slope": 0.05,
+      "no_true_scotsman": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.07,
+      "formalism": 0.07,
+      "interrogation": 0.07,
+      "patience": 0.07
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b11",
+      "at": "2026-09-17T12:00:10.000Z",
+      "opponent": "evangelos-katsioulis",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 337,
+      "lessonsGained": [
+        "counter:1rbol23",
+        "counter:ma8z53",
+        "technique:ma8z53",
+        "blind:11ox88r"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b92",
+      "at": "2026-09-17T12:01:31.000Z",
+      "opponent": "alexander-grothendieck",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 68,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 296,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:r7da8p",
+        "technique:r7da8p",
+        "blind:x7bvf4"
+      ],
+      "lessonsReinforced": [
+        "counter:r7da8p"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b164",
+      "at": "2026-09-17T12:02:43.000Z",
+      "opponent": "friedrich-nietzsche",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 40,
+      "opponentIntegrity": 68,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 326,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:1h3s00d",
+        "counter:16zat2p",
+        "technique:16zat2p",
+        "blind:omnfkd"
+      ],
+      "lessonsReinforced": [
+        "counter:1h3s00d"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b281",
+      "at": "2026-09-17T12:04:40.000Z",
+      "opponent": "tshilidzi-marwala",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 41,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:1a65jkk",
+        "counter:91jzpz",
+        "technique:g8g747"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b323",
+      "at": "2026-09-17T12:05:22.000Z",
+      "opponent": "marie-curie",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 51,
+      "opponentIntegrity": 66,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because nuclear power belongs in a clean grid, the docu…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:6h5qbp",
+        "counter:861nr9",
+        "counter:1gavq4z",
+        "technique:6h5qbp",
+        "blind:1j2xlof"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b407",
+      "at": "2026-09-17T12:06:46.000Z",
+      "opponent": "michelangelo-buonarroti",
+      "side": "A",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…",
+      "xpGained": 447,
+      "lessonsGained": [
+        "counter:1d9zdjl",
+        "counter:ugdpl3",
+        "counter:nm5zw4",
+        "technique:1pavtnn"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

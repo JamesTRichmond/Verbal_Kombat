@@ -3,19 +3,316 @@
   "slug": "ibn-battuta",
   "name": "Ibn Battuta",
   "wing": "experimenters",
-  "xp": 0,
-  "level": 1,
+  "xp": 2294,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
     "draws": 0,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "douglas-harding",
+      "learnedFrom": "camp-2026-09-17-s2026-b10",
+      "learnedAt": "2026-09-17T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcopew",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Christopher Hirata broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b78",
+      "learnedAt": "2026-09-17T12:01:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1hluoob",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Christopher Hirata broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b78",
+      "learnedAt": "2026-09-17T12:01:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1hluoob",
+      "kind": "technique",
+      "text": "Borrow this pattern from Christopher Hirata: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b78",
+      "learnedAt": "2026-09-17T12:01:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:138f1f1",
+      "kind": "blind_spot",
+      "text": "Your moves against Christopher Hirata were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b78",
+      "learnedAt": "2026-09-17T12:01:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15t1oe9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Abraham Maslow broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-17-s2026-b159",
+      "learnedAt": "2026-09-17T12:02:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1g2hbeo",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Abraham Maslow broke through with \"But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-17-s2026-b159",
+      "learnedAt": "2026-09-17T12:02:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1k6lvmn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Abraham Maslow broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-17-s2026-b159",
+      "learnedAt": "2026-09-17T12:02:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t52uzl",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-17-s2026-b159",
+      "learnedAt": "2026-09-17T12:02:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:181ygjf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terence Tao broke through with \"Yet your position leaves the strongest counter-example untouched. Because car-free downtowns make cities better, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terence-chi-shen-tao",
+      "learnedFrom": "camp-2026-09-17-s2026-b250",
+      "learnedAt": "2026-09-17T12:04:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "terence-chi-shen-tao",
+      "learnedFrom": "camp-2026-09-17-s2026-b250",
+      "learnedAt": "2026-09-17T12:04:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ma60bc",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "galileo-galilei",
+      "learnedFrom": "camp-2026-09-17-s2026-b336",
+      "learnedAt": "2026-09-17T12:05:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:46mrja",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bjarne Stroustrup broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-17-s2026-b436",
+      "learnedAt": "2026-09-17T12:07:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tl1aof",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bjarne Stroustrup broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-17-s2026-b436",
+      "learnedAt": "2026-09-17T12:07:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:x03o21",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bjarne Stroustrup broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-17-s2026-b436",
+      "learnedAt": "2026-09-17T12:07:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:x03o21",
+      "kind": "technique",
+      "text": "Borrow this pattern from Bjarne Stroustrup: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-17-s2026-b436",
+      "learnedAt": "2026-09-17T12:07:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1uutdz9",
+      "kind": "blind_spot",
+      "text": "Your moves against Bjarne Stroustrup were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-17-s2026-b436",
+      "learnedAt": "2026-09-17T12:07:15.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "interrogation": 0.05,
+      "patience": 0.05
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b10",
+      "at": "2026-09-17T12:00:09.000Z",
+      "opponent": "douglas-harding",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 37,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:g8g747"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b78",
+      "at": "2026-09-17T12:01:17.000Z",
+      "opponent": "christopher-michael-hirata",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 57,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 343,
+      "lessonsGained": [
+        "counter:wcopew",
+        "counter:1hluoob",
+        "technique:1hluoob",
+        "blind:138f1f1"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b159",
+      "at": "2026-09-17T12:02:38.000Z",
+      "opponent": "abraham-maslow",
+      "side": "A",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 43,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 453,
+      "lessonsGained": [
+        "counter:15t1oe9",
+        "counter:1g2hbeo",
+        "counter:1k6lvmn",
+        "technique:1t52uzl"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b250",
+      "at": "2026-09-17T12:04:09.000Z",
+      "opponent": "terence-chi-shen-tao",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 71,
+      "opponentIntegrity": 45,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…",
+      "xpGained": 399,
+      "lessonsGained": [
+        "counter:181ygjf",
+        "technique:7s46gj"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b336",
+      "at": "2026-09-17T12:05:35.000Z",
+      "opponent": "galileo-galilei",
+      "side": "A",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 52,
+      "arguments": 3,
+      "avgSoundness": 1,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 375,
+      "lessonsGained": [
+        "technique:ma60bc"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b436",
+      "at": "2026-09-17T12:07:15.000Z",
+      "opponent": "bjarne-stroustrup",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 30,
+      "opponentIntegrity": 55,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…",
+      "xpGained": 367,
+      "lessonsGained": [
+        "counter:46mrja",
+        "counter:tl1aof",
+        "counter:x03o21",
+        "technique:x03o21",
+        "blind:1uutdz9"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

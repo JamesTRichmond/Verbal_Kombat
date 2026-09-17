@@ -3,19 +3,390 @@
   "slug": "peter-higgs",
   "name": "Peter Higgs",
   "wing": "lawfinders",
-  "xp": 0,
-  "level": 1,
+  "xp": 1421,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
+    "losses": 6,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 6
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Venkatraman Ramakrishnan.",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b4",
+      "learnedAt": "2026-09-17T12:00:03.000Z",
+      "seen": 2
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Venkatraman Ramakrishnan.",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b4",
+      "learnedAt": "2026-09-17T12:00:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:z5pm5w",
+      "kind": "technique",
+      "text": "Borrow this pattern from Venkatraman Ramakrishnan: \"Start from the premise we can check. Because tests first pays for itself, the documented cases show the benefit holds when the conditions a…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b4",
+      "learnedAt": "2026-09-17T12:00:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1qrs4i7",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Venkatraman Ramakrishnan was \"I just feel tests first slows small teams down, that is all. Everybody knows this already.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "venkatraman-ramakrishnan",
+      "learnedFrom": "camp-2026-09-17-s2026-b4",
+      "learnedAt": "2026-09-17T12:00:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Philip Emeagwali.",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-17-s2026-b96",
+      "learnedAt": "2026-09-17T12:01:35.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:jtdfyp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Philip Emeagwali broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-17-s2026-b96",
+      "learnedAt": "2026-09-17T12:01:35.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:irko2k",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Philip Emeagwali broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-17-s2026-b96",
+      "learnedAt": "2026-09-17T12:01:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:irko2k",
+      "kind": "technique",
+      "text": "Borrow this pattern from Philip Emeagwali: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because personal finance does not need its own required…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-17-s2026-b96",
+      "learnedAt": "2026-09-17T12:01:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:g1b22k",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Philip Emeagwali was \"Honestly personal finance should be required. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "philip-emeagwali",
+      "learnedFrom": "camp-2026-09-17-s2026-b96",
+      "learnedAt": "2026-09-17T12:01:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:170c1bx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tshilidzi Marwala broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "tshilidzi-marwala",
+      "learnedFrom": "camp-2026-09-17-s2026-b144",
+      "learnedAt": "2026-09-17T12:02:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:bbetqf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tshilidzi Marwala broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "tshilidzi-marwala",
+      "learnedFrom": "camp-2026-09-17-s2026-b144",
+      "learnedAt": "2026-09-17T12:02:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ud6bdv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tshilidzi Marwala broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tshilidzi-marwala",
+      "learnedFrom": "camp-2026-09-17-s2026-b144",
+      "learnedAt": "2026-09-17T12:02:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ud6bdv",
+      "kind": "technique",
+      "text": "Borrow this pattern from Tshilidzi Marwala: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tshilidzi-marwala",
+      "learnedFrom": "camp-2026-09-17-s2026-b144",
+      "learnedAt": "2026-09-17T12:02:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:12nua69",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Tshilidzi Marwala was \"I just feel a four-day week keeps output and improves lives, that is all. Everybody knows this already.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "tshilidzi-marwala",
+      "learnedFrom": "camp-2026-09-17-s2026-b144",
+      "learnedAt": "2026-09-17T12:02:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:8wsog8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: M. C. Escher broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b228",
+      "learnedAt": "2026-09-17T12:03:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mh1b6d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: M. C. Escher broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b228",
+      "learnedAt": "2026-09-17T12:03:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:mh1b6d",
+      "kind": "technique",
+      "text": "Borrow this pattern from M. C. Escher: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b228",
+      "learnedAt": "2026-09-17T12:03:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ekf7p0",
+      "kind": "blind_spot",
+      "text": "Your weakest move against M. C. Escher was \"Honestly a four-day week costs more than it returns. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b228",
+      "learnedAt": "2026-09-17T12:03:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1g2hbeo",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Eckhart Tolle broke through with \"But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "eckhart-tolle",
+      "learnedFrom": "camp-2026-09-17-s2026-b363",
+      "learnedAt": "2026-09-17T12:06:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1g2hbeo",
+      "kind": "technique",
+      "text": "Borrow this pattern from Eckhart Tolle: \"But note what just happened: your argument skipped the evidence entirely. Because homework adds little beyond class time, the documented ca…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "eckhart-tolle",
+      "learnedFrom": "camp-2026-09-17-s2026-b363",
+      "learnedAt": "2026-09-17T12:06:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:2fmalg",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Eckhart Tolle was \"Honestly homework builds lasting mastery.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "eckhart-tolle",
+      "learnedFrom": "camp-2026-09-17-s2026-b363",
+      "learnedAt": "2026-09-17T12:06:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h4ze2h",
+      "kind": "technique",
+      "text": "Borrow this pattern from Richard Feynman: \"Look at what the data shows. When the measured results are compared across studies, then the pattern is consistent, so it follows that car-…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "richard-feynman",
+      "learnedFrom": "camp-2026-09-17-s2026-b466",
+      "learnedAt": "2026-09-17T12:07:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:8uqzcm",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Richard Feynman was \"Honestly car bans make downtowns worse.\" (soundness 0.45). State its premises and evidence before you use it again.",
+      "opponent": "richard-feynman",
+      "learnedFrom": "camp-2026-09-17-s2026-b466",
+      "learnedAt": "2026-09-17T12:07:45.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_popularity": 0.1,
+      "no_true_scotsman": 0.05,
+      "ad_hominem": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "interrogation": 0.06,
+      "patience": 0.045
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b4",
+      "at": "2026-09-17T12:00:03.000Z",
+      "opponent": "venkatraman-ramakrishnan",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "appeal_to_popularity",
+        "no_true_scotsman"
+      ],
+      "xpGained": 205,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "avoid:no_true_scotsman",
+        "technique:z5pm5w",
+        "blind:1qrs4i7"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b96",
+      "at": "2026-09-17T12:01:35.000Z",
+      "opponent": "philip-emeagwali",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 44,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "ad_hominem",
+        "ad_hominem"
+      ],
+      "xpGained": 243,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:jtdfyp",
+        "counter:irko2k",
+        "technique:irko2k",
+        "blind:g1b22k"
+      ],
+      "lessonsReinforced": [
+        "counter:jtdfyp"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b144",
+      "at": "2026-09-17T12:02:23.000Z",
+      "opponent": "tshilidzi-marwala",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 37,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "xpGained": 278,
+      "lessonsGained": [
+        "counter:170c1bx",
+        "counter:bbetqf",
+        "counter:ud6bdv",
+        "technique:ud6bdv",
+        "blind:12nua69"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_popularity"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b228",
+      "at": "2026-09-17T12:03:47.000Z",
+      "opponent": "m-c-escher",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 34,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "xpGained": 248,
+      "lessonsGained": [
+        "counter:8wsog8",
+        "counter:mh1b6d",
+        "technique:mh1b6d",
+        "blind:1ekf7p0"
+      ],
+      "lessonsReinforced": [
+        "avoid:ad_hominem"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b363",
+      "at": "2026-09-17T12:06:02.000Z",
+      "opponent": "eckhart-tolle",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:1g2hbeo",
+        "technique:1g2hbeo",
+        "blind:2fmalg"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b466",
+      "at": "2026-09-17T12:07:45.000Z",
+      "opponent": "richard-feynman",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 91,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.517,
+      "fallacies": [],
+      "xpGained": 202,
+      "lessonsGained": [
+        "technique:1h4ze2h",
+        "blind:8uqzcm"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

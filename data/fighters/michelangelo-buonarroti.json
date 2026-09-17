@@ -3,19 +3,378 @@
   "slug": "michelangelo-buonarroti",
   "name": "Michelangelo Buonarroti",
   "wing": "artists",
-  "xp": 0,
-  "level": 1,
+  "xp": 2627,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 7,
+    "wins": 4,
+    "losses": 3,
     "draws": 0,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:sgipul",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Jung broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tool lending belongs in libraries, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b38",
+      "learnedAt": "2026-09-17T12:00:37.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:i0wybb",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "carl-jung",
+      "learnedFrom": "camp-2026-09-17-s2026-b38",
+      "learnedAt": "2026-09-17T12:00:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16zat2p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Srinivasa Ramanujan broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b105",
+      "learnedAt": "2026-09-17T12:01:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1147vwt",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Srinivasa Ramanujan broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b105",
+      "learnedAt": "2026-09-17T12:01:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:g8g747",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Srinivasa Ramanujan broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b105",
+      "learnedAt": "2026-09-17T12:01:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Borrow this pattern from Srinivasa Ramanujan: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b105",
+      "learnedAt": "2026-09-17T12:01:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:qtmken",
+      "kind": "blind_spot",
+      "text": "Your moves against Srinivasa Ramanujan were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-17-s2026-b105",
+      "learnedAt": "2026-09-17T12:01:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1jki1u2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Garry Kasparov broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week keeps output and improves lives…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "garry-kimovich-kasparov",
+      "learnedFrom": "camp-2026-09-17-s2026-b161",
+      "learnedAt": "2026-09-17T12:02:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1y8w8rz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Garry Kasparov broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "garry-kimovich-kasparov",
+      "learnedFrom": "camp-2026-09-17-s2026-b161",
+      "learnedAt": "2026-09-17T12:02:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:zz2lgu",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "garry-kimovich-kasparov",
+      "learnedFrom": "camp-2026-09-17-s2026-b161",
+      "learnedAt": "2026-09-17T12:02:40.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:qpro38",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bernhard Riemann broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because libraries should stick to books and media, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b279",
+      "learnedAt": "2026-09-17T12:04:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ugdpl3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bernhard Riemann broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b279",
+      "learnedAt": "2026-09-17T12:04:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15zel1t",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bernhard Riemann broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b279",
+      "learnedAt": "2026-09-17T12:04:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:qpro38",
+      "kind": "technique",
+      "text": "Borrow this pattern from Bernhard Riemann: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because libraries should stick to books and media, the…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b279",
+      "learnedAt": "2026-09-17T12:04:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:e6wgw6",
+      "kind": "blind_spot",
+      "text": "Your moves against Bernhard Riemann were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b279",
+      "learnedAt": "2026-09-17T12:04:38.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1gfnuuy",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "edward-witten",
+      "learnedFrom": "camp-2026-09-17-s2026-b357",
+      "learnedAt": "2026-09-17T12:05:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1pavtnn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ludwig van Beethoven broke through with \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ludwig-van-beethoven",
+      "learnedFrom": "camp-2026-09-17-s2026-b407",
+      "learnedAt": "2026-09-17T12:06:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:b1fhfu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ludwig van Beethoven broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ludwig-van-beethoven",
+      "learnedFrom": "camp-2026-09-17-s2026-b407",
+      "learnedAt": "2026-09-17T12:06:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Borrow this pattern from Ludwig van Beethoven: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ludwig-van-beethoven",
+      "learnedFrom": "camp-2026-09-17-s2026-b407",
+      "learnedAt": "2026-09-17T12:06:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:bx2d0s",
+      "kind": "blind_spot",
+      "text": "Your moves against Ludwig van Beethoven were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "ludwig-van-beethoven",
+      "learnedFrom": "camp-2026-09-17-s2026-b407",
+      "learnedAt": "2026-09-17T12:06:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ugdpl3",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-17-s2026-b494",
+      "learnedAt": "2026-09-17T12:08:13.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "empiricism": 0.065,
+      "formalism": 0.065,
+      "interrogation": 0.06,
+      "patience": 0.065
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b38",
+      "at": "2026-09-17T12:00:37.000Z",
+      "opponent": "carl-jung",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 80,
+      "opponentIntegrity": 42,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 387,
+      "lessonsGained": [
+        "counter:sgipul",
+        "technique:i0wybb"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b105",
+      "at": "2026-09-17T12:01:44.000Z",
+      "opponent": "srinivasa-ramanujan",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 41,
+      "opponentIntegrity": 66,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because remote work protects deep focus, the documented…",
+      "xpGained": 367,
+      "lessonsGained": [
+        "counter:16zat2p",
+        "counter:1147vwt",
+        "counter:g8g747",
+        "technique:g8g747",
+        "blind:qtmken"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b161",
+      "at": "2026-09-17T12:02:40.000Z",
+      "opponent": "garry-kimovich-kasparov",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 37,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:1jki1u2",
+        "counter:1y8w8rz",
+        "technique:zz2lgu"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b279",
+      "at": "2026-09-17T12:04:38.000Z",
+      "opponent": "riemann",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 379,
+      "lessonsGained": [
+        "counter:qpro38",
+        "counter:ugdpl3",
+        "counter:15zel1t",
+        "technique:qpro38",
+        "blind:e6wgw6"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b357",
+      "at": "2026-09-17T12:05:56.000Z",
+      "opponent": "edward-witten",
+      "side": "A",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 65,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:1gfnuuy"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b407",
+      "at": "2026-09-17T12:06:46.000Z",
+      "opponent": "ludwig-van-beethoven",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 58,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 343,
+      "lessonsGained": [
+        "counter:1pavtnn",
+        "counter:b1fhfu",
+        "technique:1pavtnn",
+        "blind:bx2d0s"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b494",
+      "at": "2026-09-17T12:08:13.000Z",
+      "opponent": "simone-de-beauvoir",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 51,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 371,
+      "lessonsGained": [
+        "technique:ugdpl3"
+      ],
+      "lessonsReinforced": [
+        "counter:sgipul"
+      ],
+      "levelAfter": 3
+    }
+  ]
 }

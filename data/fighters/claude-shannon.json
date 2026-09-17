@@ -3,19 +3,344 @@
   "slug": "claude-shannon",
   "name": "Claude Shannon",
   "wing": "formalizers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1987,
+  "level": 2,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 3,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 4
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "technique:1xw7ote",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "claude-levi-strauss",
+      "learnedFrom": "camp-2026-09-17-s2026-b36",
+      "learnedAt": "2026-09-17T12:00:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:gcrwcq",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Wolfgang Amadeus Mozart broke through with \"Yet your position leaves the strongest counter-example untouched. Because tests first pays for itself, the documented cases show the benefi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "mozart",
+      "learnedFrom": "camp-2026-09-17-s2026-b95",
+      "learnedAt": "2026-09-17T12:01:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1vr3ddw",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Wolfgang Amadeus Mozart broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tests first pays for itself, the documented cases show th…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "mozart",
+      "learnedFrom": "camp-2026-09-17-s2026-b95",
+      "learnedAt": "2026-09-17T12:01:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:gcrwcq",
+      "kind": "technique",
+      "text": "Borrow this pattern from Wolfgang Amadeus Mozart: \"Yet your position leaves the strongest counter-example untouched. Because tests first pays for itself, the documented cases show the benefi…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "mozart",
+      "learnedFrom": "camp-2026-09-17-s2026-b95",
+      "learnedAt": "2026-09-17T12:01:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1kew0b1",
+      "kind": "blind_spot",
+      "text": "Your moves against Wolfgang Amadeus Mozart were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "mozart",
+      "learnedFrom": "camp-2026-09-17-s2026-b95",
+      "learnedAt": "2026-09-17T12:01:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Leo Tolstoy.",
+      "opponent": "leo-tolstoy",
+      "learnedFrom": "camp-2026-09-17-s2026-b136",
+      "learnedAt": "2026-09-17T12:02:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Leo Tolstoy.",
+      "opponent": "leo-tolstoy",
+      "learnedFrom": "camp-2026-09-17-s2026-b136",
+      "learnedAt": "2026-09-17T12:02:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ugdpl3",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "leo-tolstoy",
+      "learnedFrom": "camp-2026-09-17-s2026-b136",
+      "learnedAt": "2026-09-17T12:02:15.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pllh85",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thích Nhất Hạnh broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b283",
+      "learnedAt": "2026-09-17T12:04:42.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Borrow this pattern from Thích Nhất Hạnh: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b283",
+      "learnedAt": "2026-09-17T12:04:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1w4678h",
+      "kind": "blind_spot",
+      "text": "Your moves against Thích Nhất Hạnh were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b283",
+      "learnedAt": "2026-09-17T12:04:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Katherine Johnson.",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b331",
+      "learnedAt": "2026-09-17T12:05:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mh1b6d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Katherine Johnson broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b331",
+      "learnedAt": "2026-09-17T12:05:30.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:mh1b6d",
+      "kind": "technique",
+      "text": "Borrow this pattern from Katherine Johnson: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b331",
+      "learnedAt": "2026-09-17T12:05:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:g2vyj6",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Katherine Johnson was \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b331",
+      "learnedAt": "2026-09-17T12:05:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Thích Nhất Hạnh.",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b432",
+      "learnedAt": "2026-09-17T12:07:11.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:sgipul",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thích Nhất Hạnh broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tool lending belongs in libraries, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b432",
+      "learnedAt": "2026-09-17T12:07:11.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1fm5z01",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b432",
+      "learnedAt": "2026-09-17T12:07:11.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "slippery_slope": 0.05,
+      "ad_hominem": 0.05,
+      "appeal_to_popularity": 0.05,
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.055,
+      "formalism": 0.06,
+      "interrogation": 0.06,
+      "patience": 0.055
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b36",
+      "at": "2026-09-17T12:00:35.000Z",
+      "opponent": "claude-levi-strauss",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 39,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:1xw7ote"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b95",
+      "at": "2026-09-17T12:01:34.000Z",
+      "opponent": "mozart",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…",
+      "xpGained": 337,
+      "lessonsGained": [
+        "counter:gcrwcq",
+        "counter:1vr3ddw",
+        "technique:gcrwcq",
+        "blind:1kew0b1"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b136",
+      "at": "2026-09-17T12:02:15.000Z",
+      "opponent": "leo-tolstoy",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 96,
+      "opponentIntegrity": 84,
+      "arguments": 3,
+      "avgSoundness": 0.467,
+      "fallacies": [
+        "slippery_slope",
+        "ad_hominem"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "avoid:ad_hominem",
+        "technique:ugdpl3"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b283",
+      "at": "2026-09-17T12:04:42.000Z",
+      "opponent": "thich-nhat-hanh",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 48,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…",
+      "xpGained": 315,
+      "lessonsGained": [
+        "counter:pllh85",
+        "technique:pllh85",
+        "blind:1w4678h"
+      ],
+      "lessonsReinforced": [
+        "counter:pllh85"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b331",
+      "at": "2026-09-17T12:05:30.000Z",
+      "opponent": "creola-katherine-johnson",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 69,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…",
+      "xpGained": 290,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "counter:mh1b6d",
+        "technique:mh1b6d",
+        "blind:g2vyj6"
+      ],
+      "lessonsReinforced": [
+        "counter:mh1b6d"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b432",
+      "at": "2026-09-17T12:07:11.000Z",
+      "opponent": "thich-nhat-hanh",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 61,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 376,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:sgipul",
+        "technique:1fm5z01"
+      ],
+      "lessonsReinforced": [
+        "counter:sgipul"
+      ],
+      "levelAfter": 2
+    }
+  ]
 }

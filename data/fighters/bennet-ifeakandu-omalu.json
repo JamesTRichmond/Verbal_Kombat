@@ -3,14 +3,14 @@
   "slug": "bennet-ifeakandu-omalu",
   "name": "Bennet Omalu",
   "wing": "experimenters",
-  "xp": 593,
-  "level": 1,
+  "xp": 2060,
+  "level": 3,
   "record": {
-    "matches": 2,
-    "wins": 1,
-    "losses": 1,
+    "matches": 6,
+    "wins": 3,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 3
+    "fallaciesCommitted": 4
   },
   "lessons": [
     {
@@ -20,7 +20,7 @@
       "opponent": "rosalind-franklin",
       "learnedFrom": "camp-2026-09-16-s42-b15",
       "learnedAt": "2026-09-16T12:00:14.000Z",
-      "seen": 1
+      "seen": 2
     },
     {
       "id": "avoid:ad_hominem",
@@ -75,19 +75,136 @@
       "learnedFrom": "camp-2026-09-16-s42-b25",
       "learnedAt": "2026-09-16T12:00:24.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:5bpx14",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Evangelos Katsioulis broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week costs more than it returns, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b185",
+      "learnedAt": "2026-09-17T12:03:04.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:170c1bx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Evangelos Katsioulis broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b185",
+      "learnedAt": "2026-09-17T12:03:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:170c1bx",
+      "kind": "technique",
+      "text": "Borrow this pattern from Evangelos Katsioulis: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b185",
+      "learnedAt": "2026-09-17T12:03:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:jqkrln",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Evangelos Katsioulis was \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "evangelos-katsioulis",
+      "learnedFrom": "camp-2026-09-17-s2026-b185",
+      "learnedAt": "2026-09-17T12:03:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcopew",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Roger Penrose broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b290",
+      "learnedAt": "2026-09-17T12:04:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:15t1oe9",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b290",
+      "learnedAt": "2026-09-17T12:04:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:i0wybb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Immanuel Kant broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kant",
+      "learnedFrom": "camp-2026-09-17-s2026-b352",
+      "learnedAt": "2026-09-17T12:05:51.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1d9zdjl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Immanuel Kant broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kant",
+      "learnedFrom": "camp-2026-09-17-s2026-b352",
+      "learnedAt": "2026-09-17T12:05:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:i0wybb",
+      "kind": "technique",
+      "text": "Borrow this pattern from Immanuel Kant: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "kant",
+      "learnedFrom": "camp-2026-09-17-s2026-b352",
+      "learnedAt": "2026-09-17T12:05:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ubu3lo",
+      "kind": "blind_spot",
+      "text": "Your moves against Immanuel Kant were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "kant",
+      "learnedFrom": "camp-2026-09-17-s2026-b352",
+      "learnedAt": "2026-09-17T12:05:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mdog6y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Friedrich Nietzsche broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tests first slows small teams down, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b442",
+      "learnedAt": "2026-09-17T12:07:21.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Friedrich Nietzsche broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b442",
+      "learnedAt": "2026-09-17T12:07:21.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1p7ux5t",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b442",
+      "learnedAt": "2026-09-17T12:07:21.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {
-      "appeal_to_ignorance": 0.05,
+      "appeal_to_ignorance": 0.1,
       "ad_hominem": 0.05,
       "appeal_to_emotion": 0.05
     },
     "traitGains": {
-      "patience": 0.02,
-      "empiricism": 0.005,
-      "formalism": 0.005,
-      "interrogation": 0.005
+      "patience": 0.06,
+      "empiricism": 0.045,
+      "formalism": 0.045,
+      "interrogation": 0.045
     }
   },
   "log": [
@@ -140,6 +257,108 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b185",
+      "at": "2026-09-17T12:03:04.000Z",
+      "opponent": "evangelos-katsioulis",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 41,
+      "opponentIntegrity": 71,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…",
+      "xpGained": 298,
+      "lessonsGained": [
+        "counter:5bpx14",
+        "counter:170c1bx",
+        "technique:170c1bx",
+        "blind:jqkrln"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance",
+        "counter:5bpx14"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b290",
+      "at": "2026-09-17T12:04:49.000Z",
+      "opponent": "roger-penrose",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 69,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 393,
+      "lessonsGained": [
+        "counter:wcopew",
+        "technique:15t1oe9"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b352",
+      "at": "2026-09-17T12:05:51.000Z",
+      "opponent": "kant",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…",
+      "xpGained": 345,
+      "lessonsGained": [
+        "counter:i0wybb",
+        "counter:1d9zdjl",
+        "technique:i0wybb",
+        "blind:ubu3lo"
+      ],
+      "lessonsReinforced": [
+        "counter:i0wybb"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b442",
+      "at": "2026-09-17T12:07:21.000Z",
+      "opponent": "friedrich-nietzsche",
+      "side": "A",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 59,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 431,
+      "lessonsGained": [
+        "counter:mdog6y",
+        "counter:14czikb",
+        "technique:1p7ux5t"
+      ],
+      "lessonsReinforced": [
+        "counter:mdog6y"
+      ],
+      "levelAfter": 3
     }
   ]
 }

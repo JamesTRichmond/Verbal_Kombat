@@ -3,14 +3,14 @@
   "slug": "shakespeare",
   "name": "William Shakespeare",
   "wing": "artists",
-  "xp": 732,
-  "level": 1,
+  "xp": 2163,
+  "level": 3,
   "record": {
-    "matches": 2,
-    "wins": 2,
-    "losses": 0,
+    "matches": 6,
+    "wins": 5,
+    "losses": 1,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 2
   },
   "lessons": [
     {
@@ -30,15 +30,116 @@
       "learnedFrom": "camp-2026-09-16-s42-b21",
       "learnedAt": "2026-09-16T12:00:20.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:1aeao7x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jean Piaget broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tool lending belongs in libraries, the document…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jean-piaget",
+      "learnedFrom": "camp-2026-09-17-s2026-b189",
+      "learnedAt": "2026-09-17T12:03:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ewhc5i",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jean-piaget",
+      "learnedFrom": "camp-2026-09-17-s2026-b189",
+      "learnedAt": "2026-09-17T12:03:08.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:q1269g",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Cheikh Anta Diop broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b242",
+      "learnedAt": "2026-09-17T12:04:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:b1fhfu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Cheikh Anta Diop broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b242",
+      "learnedAt": "2026-09-17T12:04:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pllh85",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thích Nhất Hạnh broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b384",
+      "learnedAt": "2026-09-17T12:06:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:10u7iwr",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thích Nhất Hạnh broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b384",
+      "learnedAt": "2026-09-17T12:06:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1xw7ote",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-17-s2026-b384",
+      "learnedAt": "2026-09-17T12:06:23.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Christopher Hirata.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b403",
+      "learnedAt": "2026-09-17T12:06:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1a65jkk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Christopher Hirata broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b403",
+      "learnedAt": "2026-09-17T12:06:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1a65jkk",
+      "kind": "technique",
+      "text": "Borrow this pattern from Christopher Hirata: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b403",
+      "learnedAt": "2026-09-17T12:06:42.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:cqsgjr",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Christopher Hirata was \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "christopher-michael-hirata",
+      "learnedFrom": "camp-2026-09-17-s2026-b403",
+      "learnedAt": "2026-09-17T12:06:42.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
-    "fallacyWards": {},
+    "fallacyWards": {
+      "appeal_to_popularity": 0.05
+    },
     "traitGains": {
-      "empiricism": 0.01,
-      "formalism": 0.01,
-      "patience": 0.01,
-      "interrogation": 0.005
+      "empiricism": 0.04,
+      "formalism": 0.04,
+      "patience": 0.025,
+      "interrogation": 0.02
     }
   },
   "log": [
@@ -83,6 +184,102 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b189",
+      "at": "2026-09-17T12:03:08.000Z",
+      "opponent": "jean-piaget",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 77,
+      "opponentIntegrity": 45,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…",
+      "xpGained": 393,
+      "lessonsGained": [
+        "counter:1aeao7x",
+        "technique:1ewhc5i"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b242",
+      "at": "2026-09-17T12:04:01.000Z",
+      "opponent": "cheikh-anta-diop",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 53,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…",
+      "xpGained": 395,
+      "lessonsGained": [
+        "counter:q1269g",
+        "counter:b1fhfu"
+      ],
+      "lessonsReinforced": [
+        "technique:1ewhc5i"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b384",
+      "at": "2026-09-17T12:06:23.000Z",
+      "opponent": "thich-nhat-hanh",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 43,
+      "opponentIntegrity": 42,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:pllh85",
+        "counter:10u7iwr",
+        "technique:1xw7ote"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b403",
+      "at": "2026-09-17T12:06:42.000Z",
+      "opponent": "christopher-michael-hirata",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 82,
+      "opponentIntegrity": 90,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_popularity",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 226,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "counter:1a65jkk",
+        "technique:1a65jkk",
+        "blind:cqsgjr"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }

@@ -3,14 +3,14 @@
   "slug": "averroes",
   "name": "Averroes (Ibn Rushd)",
   "wing": "questioners",
-  "xp": 780,
-  "level": 1,
+  "xp": 2166,
+  "level": 3,
   "record": {
-    "matches": 2,
-    "wins": 2,
-    "losses": 0,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 1
   },
   "lessons": [
     {
@@ -48,15 +48,116 @@
       "learnedFrom": "camp-2026-09-16-s42-b41",
       "learnedAt": "2026-09-16T12:00:40.000Z",
       "seen": 1
+    },
+    {
+      "id": "technique:flz2hp",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "claude-levi-strauss",
+      "learnedFrom": "camp-2026-09-17-s2026-b176",
+      "learnedAt": "2026-09-17T12:02:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:46mrja",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "galileo-galilei",
+      "learnedFrom": "camp-2026-09-17-s2026-b285",
+      "learnedAt": "2026-09-17T12:04:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mmqi93",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: M. C. Escher broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b375",
+      "learnedAt": "2026-09-17T12:06:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:x03o21",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: M. C. Escher broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b375",
+      "learnedAt": "2026-09-17T12:06:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:x03o21",
+      "kind": "technique",
+      "text": "Borrow this pattern from M. C. Escher: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b375",
+      "learnedAt": "2026-09-17T12:06:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:frzkyz",
+      "kind": "blind_spot",
+      "text": "Your moves against M. C. Escher were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "m-c-escher",
+      "learnedFrom": "camp-2026-09-17-s2026-b375",
+      "learnedAt": "2026-09-17T12:06:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Nikola Tesla.",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b394",
+      "learnedAt": "2026-09-17T12:06:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1jki1u2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nikola Tesla broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week keeps output and improves lives…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b394",
+      "learnedAt": "2026-09-17T12:06:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:8wsog8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nikola Tesla broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b394",
+      "learnedAt": "2026-09-17T12:06:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:8wsog8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Nikola Tesla: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b394",
+      "learnedAt": "2026-09-17T12:06:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1mlpolp",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Nikola Tesla was \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b394",
+      "learnedAt": "2026-09-17T12:06:33.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
-    "fallacyWards": {},
+    "fallacyWards": {
+      "no_true_scotsman": 0.05
+    },
     "traitGains": {
-      "empiricism": 0.01,
-      "formalism": 0.01,
-      "interrogation": 0.01,
-      "patience": 0.01
+      "empiricism": 0.05,
+      "formalism": 0.05,
+      "interrogation": 0.05,
+      "patience": 0.05
     }
   },
   "log": [
@@ -103,6 +204,99 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b176",
+      "at": "2026-09-17T12:02:55.000Z",
+      "opponent": "claude-levi-strauss",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:flz2hp"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b285",
+      "at": "2026-09-17T12:04:44.000Z",
+      "opponent": "galileo-galilei",
+      "side": "B",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 40,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:46mrja"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b375",
+      "at": "2026-09-17T12:06:14.000Z",
+      "opponent": "m-c-escher",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 349,
+      "lessonsGained": [
+        "counter:mmqi93",
+        "counter:x03o21",
+        "technique:x03o21",
+        "blind:frzkyz"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b394",
+      "at": "2026-09-17T12:06:33.000Z",
+      "opponent": "tesla",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 51,
+      "opponentIntegrity": 70,
+      "arguments": 3,
+      "avgSoundness": 0.733,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 323,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:1jki1u2",
+        "counter:8wsog8",
+        "technique:8wsog8",
+        "blind:1mlpolp"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
     }
   ]
 }

@@ -3,19 +3,418 @@
   "slug": "avicenna-ibn-sina",
   "name": "Avicenna (Ibn Sina)",
   "wing": "experimenters",
-  "xp": 0,
-  "level": 1,
+  "xp": 1559,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
+    "losses": 6,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 5
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Freeman Dyson.",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b8",
+      "learnedAt": "2026-09-17T12:00:07.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:mmqi93",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Freeman Dyson broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b8",
+      "learnedAt": "2026-09-17T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1oo1st8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Freeman Dyson broke through with \"But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b8",
+      "learnedAt": "2026-09-17T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tpn58x",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Freeman Dyson broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b8",
+      "learnedAt": "2026-09-17T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:mmqi93",
+      "kind": "technique",
+      "text": "Borrow this pattern from Freeman Dyson: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b8",
+      "learnedAt": "2026-09-17T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1fjot00",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Freeman Dyson was \"I just feel personal finance should be required, that is all. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b8",
+      "learnedAt": "2026-09-17T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Katherine Johnson.",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b70",
+      "learnedAt": "2026-09-17T12:01:09.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:eb4kh4",
+      "kind": "technique",
+      "text": "Borrow this pattern from Katherine Johnson: \"Look at what the data shows. The research found the effect repeatedly; since the premise survives testing, the conclusion that nuclear powe…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b70",
+      "learnedAt": "2026-09-17T12:01:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:19vha7k",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Katherine Johnson was \"It is obvious that renewables and storage are the better path. No true expert would disagree.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "creola-katherine-johnson",
+      "learnedFrom": "camp-2026-09-17-s2026-b70",
+      "learnedAt": "2026-09-17T12:01:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16qvw3o",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Cheikh Anta Diop broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first pays for itself, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b167",
+      "learnedAt": "2026-09-17T12:02:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1j9dze5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Cheikh Anta Diop broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b167",
+      "learnedAt": "2026-09-17T12:02:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1j9dze5",
+      "kind": "technique",
+      "text": "Borrow this pattern from Cheikh Anta Diop: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b167",
+      "learnedAt": "2026-09-17T12:02:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:16wcdz1",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Cheikh Anta Diop was \"I just feel tests first slows small teams down, that is all. Only a fool would deny it.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "cheikh-anta-diop",
+      "learnedFrom": "camp-2026-09-17-s2026-b167",
+      "learnedAt": "2026-09-17T12:02:46.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gfnuuy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Imhotep broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "imhotep",
+      "learnedFrom": "camp-2026-09-17-s2026-b222",
+      "learnedAt": "2026-09-17T12:03:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:s9jcn8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Imhotep broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "imhotep",
+      "learnedFrom": "camp-2026-09-17-s2026-b222",
+      "learnedAt": "2026-09-17T12:03:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:s9jcn8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Imhotep: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "imhotep",
+      "learnedFrom": "camp-2026-09-17-s2026-b222",
+      "learnedAt": "2026-09-17T12:03:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:g6h46c",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Imhotep was \"I just feel personal finance does not need its own required course, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "imhotep",
+      "learnedFrom": "camp-2026-09-17-s2026-b222",
+      "learnedAt": "2026-09-17T12:03:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:cu073y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Douglas Hofstadter broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b344",
+      "learnedAt": "2026-09-17T12:05:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:b1fhfu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Douglas Hofstadter broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b344",
+      "learnedAt": "2026-09-17T12:05:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:b1fhfu",
+      "kind": "technique",
+      "text": "Borrow this pattern from Douglas Hofstadter: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b344",
+      "learnedAt": "2026-09-17T12:05:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1arqsec",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Douglas Hofstadter was \"I just feel libraries should stick to books and media, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "douglas-hofstadter",
+      "learnedFrom": "camp-2026-09-17-s2026-b344",
+      "learnedAt": "2026-09-17T12:05:43.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Hypatia of Alexandria.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b420",
+      "learnedAt": "2026-09-17T12:06:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16zbtl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b420",
+      "learnedAt": "2026-09-17T12:06:59.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:zz2lgu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b420",
+      "learnedAt": "2026-09-17T12:06:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:zz2lgu",
+      "kind": "technique",
+      "text": "Borrow this pattern from Hypatia of Alexandria: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b420",
+      "learnedAt": "2026-09-17T12:06:59.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:4k9or9",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Hypatia of Alexandria was \"Honestly a four-day week keeps output and improves lives. No true expert would disagree.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b420",
+      "learnedAt": "2026-09-17T12:06:59.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "ad_hominem": 0.1,
+      "no_true_scotsman": 0.1,
+      "slippery_slope": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "interrogation": 0.045,
+      "patience": 0.075
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b8",
+      "at": "2026-09-17T12:00:07.000Z",
+      "opponent": "freeman-dyson",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 49,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "xpGained": 300,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:mmqi93",
+        "counter:1oo1st8",
+        "counter:tpn58x",
+        "technique:mmqi93",
+        "blind:1fjot00"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b70",
+      "at": "2026-09-17T12:01:09.000Z",
+      "opponent": "creola-katherine-johnson",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "xpGained": 210,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "technique:eb4kh4",
+        "blind:19vha7k"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b167",
+      "at": "2026-09-17T12:02:46.000Z",
+      "opponent": "cheikh-anta-diop",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "xpGained": 248,
+      "lessonsGained": [
+        "counter:16qvw3o",
+        "counter:1j9dze5",
+        "technique:1j9dze5",
+        "blind:16wcdz1"
+      ],
+      "lessonsReinforced": [
+        "avoid:ad_hominem"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b222",
+      "at": "2026-09-17T12:03:41.000Z",
+      "opponent": "imhotep",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1gfnuuy",
+        "counter:s9jcn8",
+        "technique:s9jcn8",
+        "blind:g6h46c"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b344",
+      "at": "2026-09-17T12:05:43.000Z",
+      "opponent": "douglas-hofstadter",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:cu073y",
+        "counter:b1fhfu",
+        "technique:b1fhfu",
+        "blind:1arqsec"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b420",
+      "at": "2026-09-17T12:06:59.000Z",
+      "opponent": "hypatia",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 38,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "no_true_scotsman",
+        "slippery_slope"
+      ],
+      "xpGained": 251,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:16zbtl",
+        "counter:zz2lgu",
+        "technique:zz2lgu",
+        "blind:4k9or9"
+      ],
+      "lessonsReinforced": [
+        "avoid:no_true_scotsman",
+        "counter:16zbtl"
+      ],
+      "levelAfter": 2
+    }
+  ]
 }

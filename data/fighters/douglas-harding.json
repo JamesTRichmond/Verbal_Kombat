@@ -3,19 +3,352 @@
   "slug": "douglas-harding",
   "name": "Douglas Harding",
   "wing": "awakeners",
-  "xp": 0,
-  "level": 1,
+  "xp": 1191,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "losses": 4,
+    "draws": 2,
+    "fallaciesCommitted": 7
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Ibn Battuta.",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b10",
+      "learnedAt": "2026-09-17T12:00:09.000Z",
+      "seen": 3
+    },
+    {
+      "id": "counter:g8g747",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ibn Battuta broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b10",
+      "learnedAt": "2026-09-17T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ibn Battuta broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b10",
+      "learnedAt": "2026-09-17T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1r32bai",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ibn Battuta broke through with \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b10",
+      "learnedAt": "2026-09-17T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Borrow this pattern from Ibn Battuta: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b10",
+      "learnedAt": "2026-09-17T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1j4af9d",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Ibn Battuta was \"It is obvious that remote work protects deep focus. No one has ever proven otherwise.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "ibn-battuta",
+      "learnedFrom": "camp-2026-09-17-s2026-b10",
+      "learnedAt": "2026-09-17T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Johann Sebastian Bach.",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-17-s2026-b106",
+      "learnedAt": "2026-09-17T12:01:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Johann Sebastian Bach.",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-17-s2026-b106",
+      "learnedAt": "2026-09-17T12:01:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:jilts8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Johann Sebastian Bach: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-17-s2026-b106",
+      "learnedAt": "2026-09-17T12:01:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:11jd0v9",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Johann Sebastian Bach was \"It is obvious that offices produce better deep work. Allow the other view and the next thing you know nothing works at all.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-17-s2026-b106",
+      "learnedAt": "2026-09-17T12:01:45.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Bernhard Riemann.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b171",
+      "learnedAt": "2026-09-17T12:02:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1jdypxe",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bernhard Riemann broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b171",
+      "learnedAt": "2026-09-17T12:02:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1jdypxe",
+      "kind": "technique",
+      "text": "Borrow this pattern from Bernhard Riemann: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b171",
+      "learnedAt": "2026-09-17T12:02:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:wsj9t8",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Bernhard Riemann was \"It is obvious that car bans make downtowns worse. Everybody knows this already.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "riemann",
+      "learnedFrom": "camp-2026-09-17-s2026-b171",
+      "learnedAt": "2026-09-17T12:02:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Leonardo da Vinci.",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "learnedFrom": "camp-2026-09-17-s2026-b217",
+      "learnedAt": "2026-09-17T12:03:36.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:szk3kb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Roger Penrose broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b410",
+      "learnedAt": "2026-09-17T12:06:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:10u7iwr",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Roger Penrose broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b410",
+      "learnedAt": "2026-09-17T12:06:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:10u7iwr",
+      "kind": "technique",
+      "text": "Borrow this pattern from Roger Penrose: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b410",
+      "learnedAt": "2026-09-17T12:06:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ut6qor",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Roger Penrose was \"It is obvious that renewables and storage are the better path. No one has ever proven otherwise.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "roger-penrose",
+      "learnedFrom": "camp-2026-09-17-s2026-b410",
+      "learnedAt": "2026-09-17T12:06:49.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.15000000000000002,
+      "slippery_slope": 0.05,
+      "no_true_scotsman": 0.05,
+      "appeal_to_popularity": 0.05,
+      "appeal_to_emotion": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.06,
+      "formalism": 0.06,
+      "interrogation": 0.045,
+      "patience": 0.06
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b10",
+      "at": "2026-09-17T12:00:09.000Z",
+      "opponent": "ibn-battuta",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 37,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 300,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:g8g747",
+        "counter:msxpis",
+        "counter:1r32bai",
+        "technique:g8g747",
+        "blind:1j4af9d"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b106",
+      "at": "2026-09-17T12:01:45.000Z",
+      "opponent": "johann-sebastian-bach",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "slippery_slope",
+        "no_true_scotsman"
+      ],
+      "xpGained": 205,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "avoid:no_true_scotsman",
+        "technique:jilts8",
+        "blind:11jd0v9"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b171",
+      "at": "2026-09-17T12:02:50.000Z",
+      "opponent": "riemann",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 73,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "xpGained": 240,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "counter:1jdypxe",
+        "technique:1jdypxe",
+        "blind:wsj9t8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b217",
+      "at": "2026-09-17T12:03:36.000Z",
+      "opponent": "leonardo-di-ser-piero-da-vinci",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 110,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b334",
+      "at": "2026-09-17T12:05:33.000Z",
+      "opponent": "leo-tolstoy",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 88,
+      "lessonsGained": [],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b410",
+      "at": "2026-09-17T12:06:49.000Z",
+      "opponent": "roger-penrose",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 51,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 248,
+      "lessonsGained": [
+        "counter:szk3kb",
+        "counter:10u7iwr",
+        "technique:10u7iwr",
+        "blind:1ut6qor"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance"
+      ],
+      "levelAfter": 2
+    }
+  ]
 }

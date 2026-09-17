@@ -3,19 +3,337 @@
   "slug": "niels-bohr",
   "name": "Niels Bohr",
   "wing": "lawfinders",
-  "xp": 0,
-  "level": 1,
+  "xp": 1189,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
-    "fallaciesCommitted": 0
+    "losses": 4,
+    "draws": 2,
+    "fallaciesCommitted": 6
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:1ggook1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Hypatia of Alexandria broke through with \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b73",
+      "learnedAt": "2026-09-17T12:01:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ggook1",
+      "kind": "technique",
+      "text": "Borrow this pattern from Hypatia of Alexandria: \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b73",
+      "learnedAt": "2026-09-17T12:01:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ibjsdc",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Hypatia of Alexandria was \"Honestly car bans make downtowns worse.\" (soundness 0.45). State its premises and evidence before you use it again.",
+      "opponent": "hypatia",
+      "learnedFrom": "camp-2026-09-17-s2026-b73",
+      "learnedAt": "2026-09-17T12:01:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Hannah Arendt.",
+      "opponent": "hannah-arendt",
+      "learnedFrom": "camp-2026-09-17-s2026-b156",
+      "learnedAt": "2026-09-17T12:02:35.000Z",
+      "seen": 3
+    },
+    {
+      "id": "counter:r7da8p",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b255",
+      "learnedAt": "2026-09-17T12:04:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:o8ivyx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b255",
+      "learnedAt": "2026-09-17T12:04:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b255",
+      "learnedAt": "2026-09-17T12:04:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:r7da8p",
+      "kind": "technique",
+      "text": "Borrow this pattern from Sigmund Freud: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b255",
+      "learnedAt": "2026-09-17T12:04:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1yylfjt",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Sigmund Freud was \"I just feel tests first pays for itself, that is all. Imagine the suffering if we ignore this.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b255",
+      "learnedAt": "2026-09-17T12:04:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Isaac Asimov.",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b359",
+      "learnedAt": "2026-09-17T12:05:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1wwhhdm",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Isaac Asimov broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b359",
+      "learnedAt": "2026-09-17T12:05:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1wwhhdm",
+      "kind": "technique",
+      "text": "Borrow this pattern from Isaac Asimov: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b359",
+      "learnedAt": "2026-09-17T12:05:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1i5s1hz",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Isaac Asimov was \"Honestly personal finance does not need its own required course. Imagine the suffering if we ignore this.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "isaac-asimov",
+      "learnedFrom": "camp-2026-09-17-s2026-b359",
+      "learnedAt": "2026-09-17T12:05:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Freeman Dyson.",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b435",
+      "learnedAt": "2026-09-17T12:07:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:s9jcn8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Freeman Dyson broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b435",
+      "learnedAt": "2026-09-17T12:07:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:64mppy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Freeman Dyson broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b435",
+      "learnedAt": "2026-09-17T12:07:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:s9jcn8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Freeman Dyson: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b435",
+      "learnedAt": "2026-09-17T12:07:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:iktv2b",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Freeman Dyson was \"I just feel personal finance does not need its own required course, that is all. Everybody knows this already.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "freeman-dyson",
+      "learnedFrom": "camp-2026-09-17-s2026-b435",
+      "learnedAt": "2026-09-17T12:07:14.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_emotion": 0.15000000000000002,
+      "ad_hominem": 0.05,
+      "appeal_to_popularity": 0.05
+    },
+    "traitGains": {
+      "patience": 0.06,
+      "empiricism": 0.045,
+      "formalism": 0.06,
+      "interrogation": 0.03
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b37",
+      "at": "2026-09-17T12:00:36.000Z",
+      "opponent": "arthur-c-clarke",
+      "side": "A",
+      "result": "draw",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b73",
+      "at": "2026-09-17T12:01:12.000Z",
+      "opponent": "hypatia",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 77,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.583,
+      "fallacies": [],
+      "xpGained": 238,
+      "lessonsGained": [
+        "counter:1ggook1",
+        "technique:1ggook1",
+        "blind:ibjsdc"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b156",
+      "at": "2026-09-17T12:02:35.000Z",
+      "opponent": "hannah-arendt",
+      "side": "A",
+      "result": "draw",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "xpGained": 110,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b255",
+      "at": "2026-09-17T12:04:14.000Z",
+      "opponent": "sigmund-freud",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 48,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "appeal_to_emotion",
+        "appeal_to_emotion"
+      ],
+      "xpGained": 243,
+      "lessonsGained": [
+        "counter:r7da8p",
+        "counter:o8ivyx",
+        "counter:14czikb",
+        "technique:r7da8p",
+        "blind:1yylfjt"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_emotion"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b359",
+      "at": "2026-09-17T12:05:58.000Z",
+      "opponent": "isaac-asimov",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 69,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "appeal_to_emotion",
+        "ad_hominem"
+      ],
+      "xpGained": 213,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:1wwhhdm",
+        "technique:1wwhhdm",
+        "blind:1i5s1hz"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_emotion"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b435",
+      "at": "2026-09-17T12:07:14.000Z",
+      "opponent": "freeman-dyson",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 49,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "xpGained": 270,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "counter:s9jcn8",
+        "counter:64mppy",
+        "technique:s9jcn8",
+        "blind:iktv2b"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

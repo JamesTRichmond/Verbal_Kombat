@@ -3,13 +3,13 @@
   "slug": "andrew-yang",
   "name": "Andrew Yang",
   "wing": "society_shapers",
-  "xp": 305,
-  "level": 1,
+  "xp": 1728,
+  "level": 2,
   "record": {
-    "matches": 1,
+    "matches": 7,
     "wins": 0,
-    "losses": 1,
-    "draws": 0,
+    "losses": 6,
+    "draws": 1,
     "fallaciesCommitted": 0
   },
   "lessons": [
@@ -57,15 +57,177 @@
       "learnedFrom": "camp-2026-09-16-s42-b14",
       "learnedAt": "2026-09-16T12:00:13.000Z",
       "seen": 1
+    },
+    {
+      "id": "counter:1t0wkr5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alexander Grothendieck broke through with \"Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b184",
+      "learnedAt": "2026-09-17T12:03:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19uu6s7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alexander Grothendieck broke through with \"But note what just happened: your argument skipped the evidence entirely. Because remote work protects deep focus, the documented cases sho…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b184",
+      "learnedAt": "2026-09-17T12:03:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t0wkr5",
+      "kind": "technique",
+      "text": "Borrow this pattern from Alexander Grothendieck: \"Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b184",
+      "learnedAt": "2026-09-17T12:03:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1bbsa67",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Alexander Grothendieck was \"Honestly offices produce better deep work.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "alexander-grothendieck",
+      "learnedFrom": "camp-2026-09-17-s2026-b184",
+      "learnedAt": "2026-09-17T12:03:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:d6iuqe",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Bardeen broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "john-bardeen",
+      "learnedFrom": "camp-2026-09-17-s2026-b288",
+      "learnedAt": "2026-09-17T12:04:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcjev6",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Bardeen broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-bardeen",
+      "learnedFrom": "camp-2026-09-17-s2026-b288",
+      "learnedAt": "2026-09-17T12:04:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:wcjev6",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Bardeen: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-bardeen",
+      "learnedFrom": "camp-2026-09-17-s2026-b288",
+      "learnedAt": "2026-09-17T12:04:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ibnfxl",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Bardeen was \"Honestly car bans make downtowns worse.\" (soundness 0.45). State its premises and evidence before you use it again.",
+      "opponent": "john-bardeen",
+      "learnedFrom": "camp-2026-09-17-s2026-b288",
+      "learnedAt": "2026-09-17T12:04:47.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1f40lgl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b367",
+      "learnedAt": "2026-09-17T12:06:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:szk3kb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sigmund Freud broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b367",
+      "learnedAt": "2026-09-17T12:06:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:szk3kb",
+      "kind": "technique",
+      "text": "Borrow this pattern from Sigmund Freud: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b367",
+      "learnedAt": "2026-09-17T12:06:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:pi26p",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Sigmund Freud was \"Honestly renewables and storage are the better path.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "sigmund-freud",
+      "learnedFrom": "camp-2026-09-17-s2026-b367",
+      "learnedAt": "2026-09-17T12:06:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:cu073y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kurt Gödel broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-17-s2026-b471",
+      "learnedAt": "2026-09-17T12:07:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:q1269g",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kurt Gödel broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-17-s2026-b471",
+      "learnedAt": "2026-09-17T12:07:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:q1269g",
+      "kind": "technique",
+      "text": "Borrow this pattern from Kurt Gödel: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-17-s2026-b471",
+      "learnedAt": "2026-09-17T12:07:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:c5ddys",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Kurt Gödel was \"I just feel libraries should stick to books and media, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "kurt-godel",
+      "learnedFrom": "camp-2026-09-17-s2026-b471",
+      "learnedAt": "2026-09-17T12:07:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1kkvgwo",
+      "kind": "technique",
+      "text": "Borrow this pattern from B. F. Skinner: \"Consider the evidence first. Because personal finance should be required, the documented cases show the benefit holds when the conditions a…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b488",
+      "learnedAt": "2026-09-17T12:08:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:luj1ny",
+      "kind": "blind_spot",
+      "text": "Your weakest move against B. F. Skinner was \"It is obvious that personal finance does not need its own required course.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "b-f-skinner",
+      "learnedFrom": "camp-2026-09-17-s2026-b488",
+      "learnedAt": "2026-09-17T12:08:07.000Z",
+      "seen": 1
     }
   ],
   "strengths": {
     "fallacyWards": {},
     "traitGains": {
-      "empiricism": 0.015,
-      "formalism": 0.015,
-      "interrogation": 0.015,
-      "patience": 0.015
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "interrogation": 0.045,
+      "patience": 0.09
     }
   },
   "log": [
@@ -92,6 +254,137 @@
       ],
       "lessonsReinforced": [],
       "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b109",
+      "at": "2026-09-17T12:01:48.000Z",
+      "opponent": "tim-berners-lee",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b184",
+      "at": "2026-09-17T12:03:03.000Z",
+      "opponent": "alexander-grothendieck",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1t0wkr5",
+        "counter:19uu6s7",
+        "technique:1t0wkr5",
+        "blind:1bbsa67"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b288",
+      "at": "2026-09-17T12:04:47.000Z",
+      "opponent": "john-bardeen",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.583,
+      "fallacies": [],
+      "xpGained": 268,
+      "lessonsGained": [
+        "counter:d6iuqe",
+        "counter:wcjev6",
+        "technique:wcjev6",
+        "blind:1ibnfxl"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b367",
+      "at": "2026-09-17T12:06:06.000Z",
+      "opponent": "sigmund-freud",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:1f40lgl",
+        "counter:szk3kb",
+        "technique:szk3kb",
+        "blind:pi26p"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b471",
+      "at": "2026-09-17T12:07:50.000Z",
+      "opponent": "kurt-godel",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:cu073y",
+        "counter:q1269g",
+        "technique:q1269g",
+        "blind:c5ddys"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b488",
+      "at": "2026-09-17T12:08:07.000Z",
+      "opponent": "b-f-skinner",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 215,
+      "lessonsGained": [
+        "technique:1kkvgwo",
+        "blind:luj1ny"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
     }
   ]
 }

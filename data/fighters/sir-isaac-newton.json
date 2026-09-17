@@ -3,19 +3,399 @@
   "slug": "sir-isaac-newton",
   "name": "Isaac Newton",
   "wing": "lawfinders",
-  "xp": 0,
-  "level": 1,
+  "xp": 2524,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 7,
+    "wins": 4,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 3
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:1ozx7ky",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Ada Lovelace broke through with \"Yet your position leaves the strongest counter-example untouched. Because nuclear power belongs in a clean grid, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b34",
+      "learnedAt": "2026-09-17T12:00:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:6h5qbp",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "lovelace",
+      "learnedFrom": "camp-2026-09-17-s2026-b34",
+      "learnedAt": "2026-09-17T12:00:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Confucius.",
+      "opponent": "confucius",
+      "learnedFrom": "camp-2026-09-17-s2026-b102",
+      "learnedAt": "2026-09-17T12:01:41.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1ozx7ky",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because nuclear power belongs in a clean grid, the documented cases show…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "confucius",
+      "learnedFrom": "camp-2026-09-17-s2026-b102",
+      "learnedAt": "2026-09-17T12:01:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:vi8sbf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tu Youyou broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b169",
+      "learnedAt": "2026-09-17T12:02:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1rbol23",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tu Youyou broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b169",
+      "learnedAt": "2026-09-17T12:02:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1rbol23",
+      "kind": "technique",
+      "text": "Borrow this pattern from Tu Youyou: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b169",
+      "learnedAt": "2026-09-17T12:02:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:dt1mfi",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Tu Youyou was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-17-s2026-b169",
+      "learnedAt": "2026-09-17T12:02:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1ewhc5i",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nikola Tesla broke through with \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b268",
+      "learnedAt": "2026-09-17T12:04:27.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:15zel1t",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nikola Tesla broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b268",
+      "learnedAt": "2026-09-17T12:04:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ewhc5i",
+      "kind": "technique",
+      "text": "Borrow this pattern from Nikola Tesla: \"Yet your position leaves the strongest counter-example untouched. Because libraries should stick to books and media, the documented cases s…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b268",
+      "learnedAt": "2026-09-17T12:04:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1gm7v5o",
+      "kind": "blind_spot",
+      "text": "Your moves against Nikola Tesla were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "tesla",
+      "learnedFrom": "camp-2026-09-17-s2026-b268",
+      "learnedAt": "2026-09-17T12:04:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1w1ywtn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Napoleon Bonaparte broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b356",
+      "learnedAt": "2026-09-17T12:05:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:11j7utt",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Napoleon Bonaparte broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b356",
+      "learnedAt": "2026-09-17T12:05:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:zz2lgu",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "bonaparte",
+      "learnedFrom": "camp-2026-09-17-s2026-b356",
+      "learnedAt": "2026-09-17T12:05:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against John Carmack.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b400",
+      "learnedAt": "2026-09-17T12:06:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tgii8e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Carmack broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b400",
+      "learnedAt": "2026-09-17T12:06:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1d6p1ru",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Carmack broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b400",
+      "learnedAt": "2026-09-17T12:06:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7s46gj",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Carmack broke through with \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b400",
+      "learnedAt": "2026-09-17T12:06:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Borrow this pattern from John Carmack: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b400",
+      "learnedAt": "2026-09-17T12:06:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1qplfx2",
+      "kind": "blind_spot",
+      "text": "Your weakest move against John Carmack was \"Start from the premise we can check. Because car-free downtowns make cities better, the documented cases show the benefit holds when the co…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "john-carmack",
+      "learnedFrom": "camp-2026-09-17-s2026-b400",
+      "learnedAt": "2026-09-17T12:06:39.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1pavtnn",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "satyendra-nath-bose",
+      "learnedFrom": "camp-2026-09-17-s2026-b483",
+      "learnedAt": "2026-09-17T12:08:02.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "slippery_slope": 0.1,
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "formalism": 0.065,
+      "interrogation": 0.05,
+      "patience": 0.065,
+      "empiricism": 0.06
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b34",
+      "at": "2026-09-17T12:00:33.000Z",
+      "opponent": "lovelace",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 79,
+      "opponentIntegrity": 38,
+      "arguments": 3,
+      "avgSoundness": 1,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 405,
+      "lessonsGained": [
+        "counter:1ozx7ky",
+        "technique:6h5qbp"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b102",
+      "at": "2026-09-17T12:01:41.000Z",
+      "opponent": "confucius",
+      "side": "A",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 66,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because nuclear power belongs in a clean grid, the documented cases show…",
+      "xpGained": 338,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "technique:1ozx7ky"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b169",
+      "at": "2026-09-17T12:02:48.000Z",
+      "opponent": "tu-youyou",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 59,
+      "opponentIntegrity": 77,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because tests first slows small teams down, the documented cases…",
+      "xpGained": 296,
+      "lessonsGained": [
+        "counter:vi8sbf",
+        "counter:1rbol23",
+        "technique:1rbol23",
+        "blind:dt1mfi"
+      ],
+      "lessonsReinforced": [
+        "avoid:slippery_slope"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b268",
+      "at": "2026-09-17T12:04:27.000Z",
+      "opponent": "tesla",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 42,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 351,
+      "lessonsGained": [
+        "counter:1ewhc5i",
+        "counter:15zel1t",
+        "technique:1ewhc5i",
+        "blind:1gm7v5o"
+      ],
+      "lessonsReinforced": [
+        "counter:1ewhc5i"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b356",
+      "at": "2026-09-17T12:05:55.000Z",
+      "opponent": "bonaparte",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 45,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:1w1ywtn",
+        "counter:11j7utt",
+        "technique:zz2lgu"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b400",
+      "at": "2026-09-17T12:06:39.000Z",
+      "opponent": "john-carmack",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 40,
+      "opponentIntegrity": 72,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 348,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:tgii8e",
+        "counter:1d6p1ru",
+        "counter:7s46gj",
+        "technique:7s46gj",
+        "blind:1qplfx2"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b483",
+      "at": "2026-09-17T12:08:02.000Z",
+      "opponent": "satyendra-nath-bose",
+      "side": "A",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tool lending belongs in libraries, the documented cases show the…",
+      "xpGained": 363,
+      "lessonsGained": [
+        "technique:1pavtnn"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 3
+    }
+  ]
 }

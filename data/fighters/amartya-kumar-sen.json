@@ -3,19 +3,409 @@
   "slug": "amartya-kumar-sen",
   "name": "Amartya Sen",
   "wing": "society_shapers",
-  "xp": 0,
-  "level": 1,
+  "xp": 1613,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
+    "losses": 6,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 3
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:1lxgnv7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b31",
+      "learnedAt": "2026-09-17T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b31",
+      "learnedAt": "2026-09-17T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1h3s00d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Jocelyn Bell Burnell broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b31",
+      "learnedAt": "2026-09-17T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1lxgnv7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Jocelyn Bell Burnell: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b31",
+      "learnedAt": "2026-09-17T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:z23mmu",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Jocelyn Bell Burnell was \"It is obvious that remote work protects deep focus.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "jocelyn-bell-burnell",
+      "learnedFrom": "camp-2026-09-17-s2026-b31",
+      "learnedAt": "2026-09-17T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ugdpl3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yann LeCun broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b67",
+      "learnedAt": "2026-09-17T12:01:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1fm5z01",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yann LeCun broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b67",
+      "learnedAt": "2026-09-17T12:01:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:qpro38",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yann LeCun broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because libraries should stick to books and media, the…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b67",
+      "learnedAt": "2026-09-17T12:01:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1fm5z01",
+      "kind": "technique",
+      "text": "Borrow this pattern from Yann LeCun: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b67",
+      "learnedAt": "2026-09-17T12:01:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:gmx5xk",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Yann LeCun was \"Honestly tool lending belongs in libraries.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "yann-lecun",
+      "learnedFrom": "camp-2026-09-17-s2026-b67",
+      "learnedAt": "2026-09-17T12:01:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Marie Curie.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b199",
+      "learnedAt": "2026-09-17T12:03:18.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:s56t90",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marie Curie broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b199",
+      "learnedAt": "2026-09-17T12:03:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1q1fphk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marie Curie broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b199",
+      "learnedAt": "2026-09-17T12:03:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:s56t90",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marie Curie: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b199",
+      "learnedAt": "2026-09-17T12:03:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ltm0ms",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Marie Curie was \"I just feel offices produce better deep work, that is all. No one has ever proven otherwise.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "marie-curie",
+      "learnedFrom": "camp-2026-09-17-s2026-b199",
+      "learnedAt": "2026-09-17T12:03:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1j9dze5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thomas Hobbes broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b230",
+      "learnedAt": "2026-09-17T12:03:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1j9dze5",
+      "kind": "technique",
+      "text": "Borrow this pattern from Thomas Hobbes: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b230",
+      "learnedAt": "2026-09-17T12:03:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1450rrg",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Thomas Hobbes was \"I just feel tests first slows small teams down, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "thomas-hobbes",
+      "learnedFrom": "camp-2026-09-17-s2026-b230",
+      "learnedAt": "2026-09-17T12:03:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tgii8e",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Johann Sebastian Bach broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-17-s2026-b318",
+      "learnedAt": "2026-09-17T12:05:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7s46gj",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Johann Sebastian Bach broke through with \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-17-s2026-b318",
+      "learnedAt": "2026-09-17T12:05:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Borrow this pattern from Johann Sebastian Bach: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-17-s2026-b318",
+      "learnedAt": "2026-09-17T12:05:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1q0yyj7",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Johann Sebastian Bach was \"Honestly car-free downtowns make cities better. No one has ever proven otherwise.\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-17-s2026-b318",
+      "learnedAt": "2026-09-17T12:05:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:119wej",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Turing broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b422",
+      "learnedAt": "2026-09-17T12:07:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pllh85",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Alan Turing broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b422",
+      "learnedAt": "2026-09-17T12:07:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Borrow this pattern from Alan Turing: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b422",
+      "learnedAt": "2026-09-17T12:07:01.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:bj8998",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Alan Turing was \"It is obvious that renewables and storage are the better path.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "alan-turing",
+      "learnedFrom": "camp-2026-09-17-s2026-b422",
+      "learnedAt": "2026-09-17T12:07:01.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.09,
+      "formalism": 0.09,
+      "interrogation": 0.075,
+      "patience": 0.09
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b31",
+      "at": "2026-09-17T12:00:30.000Z",
+      "opponent": "jocelyn-bell-burnell",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 56,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:1lxgnv7",
+        "counter:msxpis",
+        "counter:1h3s00d",
+        "technique:1lxgnv7",
+        "blind:z23mmu"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b67",
+      "at": "2026-09-17T12:01:06.000Z",
+      "opponent": "yann-lecun",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Tool lending belongs in libraries",
+      "finalIntegrity": 46,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:ugdpl3",
+        "counter:1fm5z01",
+        "counter:qpro38",
+        "technique:1fm5z01",
+        "blind:gmx5xk"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b199",
+      "at": "2026-09-17T12:03:18.000Z",
+      "opponent": "marie-curie",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 65,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.5,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 270,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:s56t90",
+        "counter:1q1fphk",
+        "technique:s56t90",
+        "blind:ltm0ms"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b230",
+      "at": "2026-09-17T12:03:49.000Z",
+      "opponent": "thomas-hobbes",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 79,
+      "opponentIntegrity": 96,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:1j9dze5",
+        "technique:1j9dze5",
+        "blind:1450rrg"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b318",
+      "at": "2026-09-17T12:05:17.000Z",
+      "opponent": "johann-sebastian-bach",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 43,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.35,
+      "fallacies": [
+        "appeal_to_ignorance",
+        "appeal_to_ignorance"
+      ],
+      "xpGained": 213,
+      "lessonsGained": [
+        "counter:tgii8e",
+        "counter:7s46gj",
+        "technique:7s46gj",
+        "blind:1q0yyj7"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b422",
+      "at": "2026-09-17T12:07:01.000Z",
+      "opponent": "alan-turing",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 52,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:119wej",
+        "counter:pllh85",
+        "technique:pllh85",
+        "blind:bj8998"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }

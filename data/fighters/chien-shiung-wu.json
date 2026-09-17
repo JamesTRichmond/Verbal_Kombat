@@ -3,19 +3,374 @@
   "slug": "chien-shiung-wu",
   "name": "Chien-Shiung Wu",
   "wing": "experimenters",
-  "xp": 0,
-  "level": 1,
+  "xp": 2064,
+  "level": 3,
   "record": {
-    "matches": 0,
-    "wins": 0,
-    "losses": 0,
+    "matches": 6,
+    "wins": 3,
+    "losses": 3,
     "draws": 0,
-    "fallaciesCommitted": 0
+    "fallaciesCommitted": 6
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_authority",
+      "kind": "avoid_fallacy",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout1",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:equivocation",
+      "kind": "avoid_fallacy",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout1",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 3
+    },
+    {
+      "id": "counter:12jvfih",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout1",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:180vfdq",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout1",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:180vfdq",
+      "kind": "technique",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout1",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:5ztxuq",
+      "kind": "blind_spot",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "socrates",
+      "learnedFrom": "live-council-001-2k-passive-bout1",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:q2ubmb",
+      "kind": "technique",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "seneca",
+      "learnedFrom": "live-council-001-2k-passive-bout7",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pt5ih8",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "steve-jobs",
+      "learnedFrom": "live-council-001-2k-passive-bout8",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:13kegpy",
+      "kind": "technique",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "steve-jobs",
+      "learnedFrom": "live-council-001-2k-passive-bout8",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1dmojmh",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "thomas-edison",
+      "learnedFrom": "live-council-001-2k-passive-bout9",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:a1tgcv",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "thomas-edison",
+      "learnedFrom": "live-council-001-2k-passive-bout9",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:t7n9bu",
+      "kind": "technique",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "thomas-edison",
+      "learnedFrom": "live-council-001-2k-passive-bout9",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:false_dilemma",
+      "kind": "avoid_fallacy",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "sun-tzu",
+      "learnedFrom": "live-council-001-2k-passive-bout10",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:h7vi8i",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "sun-tzu",
+      "learnedFrom": "live-council-001-2k-passive-bout10",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:h7vi8i",
+      "kind": "technique",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "sun-tzu",
+      "learnedFrom": "live-council-001-2k-passive-bout10",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ye6v7y",
+      "kind": "blind_spot",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "sun-tzu",
+      "learnedFrom": "live-council-001-2k-passive-bout10",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pfq1cv",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout11",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tlsxj0",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout11",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1okcz70",
+      "kind": "counter",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout11",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:pfq1cv",
+      "kind": "technique",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout11",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1a2gd8",
+      "kind": "blind_spot",
+      "text": "[REDACTED: private council lesson]",
+      "opponent": "blaise-pascal",
+      "learnedFrom": "live-council-001-2k-passive-bout11",
+      "learnedAt": "2026-09-17T05:24:30.817Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
-    "fallacyWards": {},
-    "traitGains": {}
+    "fallacyWards": {
+      "appeal_to_authority": 0.05,
+      "equivocation": 0.15000000000000002,
+      "false_dilemma": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.06,
+      "formalism": 0.06,
+      "patience": 0.045,
+      "interrogation": 0.04
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "live-council-001-2k-passive-bout1",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "socrates",
+      "side": "B",
+      "result": "loss",
+      "topic": "[REDACTED: private council prompt]",
+      "stance": "[REDACTED: private council response]",
+      "finalIntegrity": 69,
+      "opponentIntegrity": 81,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "appeal_to_authority",
+        "equivocation"
+      ],
+      "bestMove": "[REDACTED: private council response]",
+      "xpGained": 325,
+      "lessonsGained": [
+        "avoid:appeal_to_authority",
+        "avoid:equivocation",
+        "counter:12jvfih",
+        "counter:180vfdq",
+        "technique:180vfdq",
+        "blind:5ztxuq"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout7",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "seneca",
+      "side": "A",
+      "result": "win",
+      "topic": "[REDACTED: private council prompt]",
+      "stance": "[REDACTED: private council response]",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 51,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [],
+      "bestMove": "[REDACTED: private council response]",
+      "xpGained": 355,
+      "lessonsGained": [
+        "technique:q2ubmb"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout8",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "steve-jobs",
+      "side": "A",
+      "result": "win",
+      "topic": "[REDACTED: private council prompt]",
+      "stance": "[REDACTED: private council response]",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [],
+      "bestMove": "[REDACTED: private council response]",
+      "xpGained": 385,
+      "lessonsGained": [
+        "counter:pt5ih8",
+        "technique:13kegpy"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout9",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "thomas-edison",
+      "side": "A",
+      "result": "win",
+      "topic": "[REDACTED: private council prompt]",
+      "stance": "[REDACTED: private council response]",
+      "finalIntegrity": 70,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [],
+      "bestMove": "[REDACTED: private council response]",
+      "xpGained": 415,
+      "lessonsGained": [
+        "counter:1dmojmh",
+        "counter:a1tgcv",
+        "technique:t7n9bu"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout10",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "sun-tzu",
+      "side": "A",
+      "result": "loss",
+      "topic": "[REDACTED: private council prompt]",
+      "stance": "[REDACTED: private council response]",
+      "finalIntegrity": 81,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "false_dilemma",
+        "equivocation"
+      ],
+      "bestMove": "[REDACTED: private council response]",
+      "xpGained": 273,
+      "lessonsGained": [
+        "avoid:false_dilemma",
+        "counter:h7vi8i",
+        "technique:h7vi8i",
+        "blind:ye6v7y"
+      ],
+      "lessonsReinforced": [
+        "avoid:equivocation"
+      ],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "live-council-001-2k-passive-bout11",
+      "at": "2026-09-17T05:24:30.817Z",
+      "opponent": "blaise-pascal",
+      "side": "A",
+      "result": "loss",
+      "topic": "[REDACTED: private council prompt]",
+      "stance": "[REDACTED: private council response]",
+      "finalIntegrity": 51,
+      "opponentIntegrity": 84,
+      "arguments": 3,
+      "avgSoundness": 0.8,
+      "fallacies": [
+        "false_dilemma",
+        "equivocation"
+      ],
+      "bestMove": "[REDACTED: private council response]",
+      "xpGained": 311,
+      "lessonsGained": [
+        "counter:pfq1cv",
+        "counter:tlsxj0",
+        "counter:1okcz70",
+        "technique:pfq1cv",
+        "blind:1a2gd8"
+      ],
+      "lessonsReinforced": [
+        "avoid:false_dilemma",
+        "avoid:equivocation"
+      ],
+      "levelAfter": 3
+    }
+  ]
 }

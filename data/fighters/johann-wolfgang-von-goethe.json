@@ -3,19 +3,290 @@
   "slug": "johann-wolfgang-von-goethe",
   "name": "Johann Wolfgang von Goethe",
   "wing": "artists",
-  "xp": 0,
-  "level": 1,
+  "xp": 1308,
+  "level": 2,
   "record": {
-    "matches": 0,
+    "matches": 6,
     "wins": 0,
-    "losses": 0,
-    "draws": 0,
+    "losses": 4,
+    "draws": 2,
     "fallaciesCommitted": 0
   },
-  "lessons": [],
+  "lessons": [
+    {
+      "id": "counter:jilts8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Friedrich Nietzsche broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b124",
+      "learnedAt": "2026-09-17T12:02:03.000Z",
+      "seen": 3
+    },
+    {
+      "id": "counter:19uu6s7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Friedrich Nietzsche broke through with \"But note what just happened: your argument skipped the evidence entirely. Because remote work protects deep focus, the documented cases sho…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b124",
+      "learnedAt": "2026-09-17T12:02:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19uu6s7",
+      "kind": "technique",
+      "text": "Borrow this pattern from Friedrich Nietzsche: \"But note what just happened: your argument skipped the evidence entirely. Because remote work protects deep focus, the documented cases sho…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b124",
+      "learnedAt": "2026-09-17T12:02:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:12gltbm",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Friedrich Nietzsche was \"I just feel offices produce better deep work, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "friedrich-nietzsche",
+      "learnedFrom": "camp-2026-09-17-s2026-b124",
+      "learnedAt": "2026-09-17T12:02:03.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:jilts8",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marcus Aurelius: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-17-s2026-b247",
+      "learnedAt": "2026-09-17T12:04:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1ozp51v",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Marcus Aurelius was \"Honestly offices produce better deep work.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-17-s2026-b247",
+      "learnedAt": "2026-09-17T12:04:06.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1qr0fuv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Omar Khayyam broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b386",
+      "learnedAt": "2026-09-17T12:06:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:zz2lgu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Omar Khayyam broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b386",
+      "learnedAt": "2026-09-17T12:06:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7vc6op",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Omar Khayyam broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b386",
+      "learnedAt": "2026-09-17T12:06:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:zz2lgu",
+      "kind": "technique",
+      "text": "Borrow this pattern from Omar Khayyam: \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b386",
+      "learnedAt": "2026-09-17T12:06:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:161u93u",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Omar Khayyam was \"I just feel a four-day week keeps output and improves lives, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "omar-khayyam",
+      "learnedFrom": "camp-2026-09-17-s2026-b386",
+      "learnedAt": "2026-09-17T12:06:25.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:y9aa26",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Daniel Afedzi Akyeampong broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework builds lasting mastery, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "daniel-afedzi-akyeampong",
+      "learnedFrom": "camp-2026-09-17-s2026-b462",
+      "learnedAt": "2026-09-17T12:07:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1t52uzl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Daniel Afedzi Akyeampong broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "daniel-afedzi-akyeampong",
+      "learnedFrom": "camp-2026-09-17-s2026-b462",
+      "learnedAt": "2026-09-17T12:07:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1t52uzl",
+      "kind": "technique",
+      "text": "Borrow this pattern from Daniel Afedzi Akyeampong: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "daniel-afedzi-akyeampong",
+      "learnedFrom": "camp-2026-09-17-s2026-b462",
+      "learnedAt": "2026-09-17T12:07:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1g0kz4",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Daniel Afedzi Akyeampong was \"It is obvious that homework adds little beyond class time.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "daniel-afedzi-akyeampong",
+      "learnedFrom": "camp-2026-09-17-s2026-b462",
+      "learnedAt": "2026-09-17T12:07:41.000Z",
+      "seen": 1
+    }
+  ],
   "strengths": {
     "fallacyWards": {},
-    "traitGains": {}
+    "traitGains": {
+      "patience": 0.09,
+      "empiricism": 0.06,
+      "formalism": 0.06,
+      "interrogation": 0.03
+    }
   },
-  "log": []
+  "log": [
+    {
+      "boutId": "camp-2026-09-17-s2026-b14",
+      "at": "2026-09-17T12:00:13.000Z",
+      "opponent": "jose-raul-capablanca",
+      "side": "B",
+      "result": "draw",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b124",
+      "at": "2026-09-17T12:02:03.000Z",
+      "opponent": "friedrich-nietzsche",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:jilts8",
+        "counter:19uu6s7",
+        "technique:19uu6s7",
+        "blind:12gltbm"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b195",
+      "at": "2026-09-17T12:03:14.000Z",
+      "opponent": "jose-raul-capablanca",
+      "side": "A",
+      "result": "draw",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 115,
+      "lessonsGained": [],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b247",
+      "at": "2026-09-17T12:04:06.000Z",
+      "opponent": "marcus-aurelius",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 223,
+      "lessonsGained": [
+        "technique:jilts8",
+        "blind:1ozp51v"
+      ],
+      "lessonsReinforced": [
+        "counter:jilts8"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b386",
+      "at": "2026-09-17T12:06:25.000Z",
+      "opponent": "omar-khayyam",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 45,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:1qr0fuv",
+        "counter:zz2lgu",
+        "counter:7vc6op",
+        "technique:zz2lgu",
+        "blind:161u93u"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-17-s2026-b462",
+      "at": "2026-09-17T12:07:41.000Z",
+      "opponent": "daniel-afedzi-akyeampong",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:y9aa26",
+        "counter:1t52uzl",
+        "technique:1t52uzl",
+        "blind:1g0kz4"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
 }
