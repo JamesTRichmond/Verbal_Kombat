@@ -145,4 +145,23 @@ describe('OpenAiChatClient', () => {
     expect(body.reasoning).toEqual({ max_tokens: 4000 });
     expect(body.temperature).toBeUndefined();
   });
+
+  it('retries once with more headroom when the answer comes back empty', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: '' }, finish_reason: 'length' }] }) })
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: [{ type: 'text', text: 'second try' }] } }] }) });
+    const client = new OpenAiChatClient({ apiKey: 'sk-test', model: 'm', fetch: fetchMock as unknown as typeof fetch });
+    expect(await client.complete(messages, { maxTokens: 300 })).toBe('second try');
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    const second = JSON.parse(fetchMock.mock.calls[1]![1].body as string);
+    expect(second.max_tokens).toBe(1200);
+  });
+
+  it('gives up after two empty answers', async () => {
+    const empty = { ok: true, status: 200, json: async () => ({ choices: [{ message: { content: null }, finish_reason: 'length' }] }) };
+    const fetchMock = vi.fn().mockResolvedValue(empty);
+    const client = new OpenAiChatClient({ apiKey: 'sk-test', model: 'm', fetch: fetchMock as unknown as typeof fetch });
+    await expect(client.complete(messages)).rejects.toThrow(/empty content twice/);
+  });
 });
