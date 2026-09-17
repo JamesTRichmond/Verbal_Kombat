@@ -19,11 +19,31 @@ export interface OpenAiChatClientOptions {
   model: string;
   /** Optional fetch override (tests inject a mock). */
   fetch?: typeof fetch;
+  /**
+   * Extended thinking (OpenRouter / Anthropic-style `reasoning`). The budget
+   * is added on top of every call's max_tokens so the answer is never
+   * squeezed out by the thinking, and temperature is dropped because
+   * reasoning models fix it.
+   */
+  reasoning?: { maxTokens?: number; effort?: 'low' | 'medium' | 'high' | 'xhigh' };
 }
 
+type ContentPart = { type?: string; text?: string };
+
 interface ChatCompletionResponse {
-  choices?: Array<{ message?: { content?: string | null }; delta?: { content?: string | null } }>;
+  choices?: Array<{
+    message?: { content?: string | ContentPart[] | null };
+    delta?: { content?: string | null };
+    finish_reason?: string | null;
+  }>;
   error?: { message?: string };
+}
+
+/** Providers return content as a string or as an array of text parts. */
+function contentText(content: string | ContentPart[] | null | undefined): string {
+  if (typeof content === 'string') return content;
+  if (Array.isArray(content)) return content.map((p) => p?.text ?? '').join('');
+  return '';
 }
 
 export class OpenAiChatClient implements ChatClient {
@@ -39,11 +59,20 @@ export class OpenAiChatClient implements ChatClient {
 
   async complete(messages: ChatMessage[], callOpts?: ChatCallOptions): Promise<string> {
     const data = await this.post(messages, callOpts, false);
-    const content = data.choices?.[0]?.message?.content;
-    if (typeof content !== 'string') {
-      throw new Error('OpenAI chat completion returned empty content');
-    }
-    return content;
+    const choice = data.choices?.[0];
+    const content = contentText(choice?.message?.content);
+    if (content.trim()) return content;
+
+    // Empty answer. Reasoning models can spend the whole token cap thinking
+    // (finish_reason "length" with no text), and any provider can hiccup once.
+    // Retry a single time with generous headroom before giving up.
+    const base = callOpts?.maxTokens ?? 300;
+    const retry = await this.post(messages, { ...callOpts, maxTokens: base * 2 + 600 }, false);
+    const again = contentText(retry.choices?.[0]?.message?.content);
+    if (again.trim()) return again;
+    throw new Error(
+      `OpenAI chat completion returned empty content twice (finish_reason: ${choice?.finish_reason ?? 'unknown'} then ${retry.choices?.[0]?.finish_reason ?? 'unknown'})`,
+    );
   }
 
   async *stream(messages: ChatMessage[], callOpts?: ChatCallOptions): AsyncIterable<string> {
@@ -99,11 +128,26 @@ export class OpenAiChatClient implements ChatClient {
   }
 
   private body(messages: ChatMessage[], callOpts: ChatCallOptions | undefined, stream: boolean) {
+    const answerTokens = callOpts?.maxTokens ?? 300;
+    const reasoning = this.opts.reasoning;
+    if (!reasoning) {
+      return {
+        model: this.opts.model,
+        messages: messages.map((m) => ({ role: m.role, content: m.content })),
+        max_tokens: answerTokens,
+        temperature: callOpts?.temperature ?? 0.8,
+        stream,
+      };
+    }
+    const budget = reasoning.maxTokens ?? 0;
     return {
       model: this.opts.model,
       messages: messages.map((m) => ({ role: m.role, content: m.content })),
-      max_tokens: callOpts?.maxTokens ?? 300,
-      temperature: callOpts?.temperature ?? 0.8,
+      max_tokens: answerTokens + budget,
+      reasoning: {
+        ...(reasoning.maxTokens !== undefined ? { max_tokens: reasoning.maxTokens } : {}),
+        ...(reasoning.effort !== undefined ? { effort: reasoning.effort } : {}),
+      },
       stream,
     };
   }

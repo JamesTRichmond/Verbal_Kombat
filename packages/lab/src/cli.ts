@@ -14,7 +14,10 @@
  * Online configuration (OpenAI-compatible endpoint) comes from env:
  *   VK_API_KEY   (or OPENAI_API_KEY)   required online
  *   VK_BASE_URL  (or OPENAI_BASE_URL)  default https://api.openai.com/v1
- *   VK_MODEL     (or OPENAI_MODEL)     default gpt-4o-mini
+ *   VK_MODEL     (or OPENAI_MODEL)     default gpt-4o-mini — the debaters
+ *   VK_PROPOSER_MODEL                  optional stronger model for proposals
+ *   VK_REASONING_TOKENS                extended-thinking budget per call (OpenRouter `reasoning`), default 0
+ *   VK_PROPOSER_REASONING_TOKENS       thinking budget for proposals only (overrides the above there)
  *   VK_JUDGE_MODELS  comma-separated; >1 model → EnsembleJudge
  */
 
@@ -136,8 +139,18 @@ async function decide(file: string, flags: Flags, io: CliIo): Promise<number> {
     };
     judge = new HeuristicJudge();
   } else {
+    // Spend capability where it decides the answer: proposals and judging can
+    // run on a stronger (pricier) model than the 21 bouts.
     const client = onlineClient(io.env);
-    proposerClient = client;
+    const proposerModel = io.env.VK_PROPOSER_MODEL;
+    const proposerReasoning = parseTokens(io.env.VK_PROPOSER_REASONING_TOKENS);
+    proposerClient =
+      proposerModel || proposerReasoning > 0
+        ? onlineClient(io.env, {
+            ...(proposerModel ? { model: proposerModel } : {}),
+            ...(proposerReasoning > 0 ? { reasoningTokens: proposerReasoning } : {}),
+          })
+        : client;
     debaterClient = () => client;
     judge = onlineJudge(io.env);
   }
@@ -367,7 +380,7 @@ function parsePositiveInt(v: string, name: string): number {
 
 function onlineClient(
   env: Record<string, string | undefined>,
-  o: { model?: string; baseUrl?: string; apiKeyEnv?: string } = {},
+  o: { model?: string; baseUrl?: string; apiKeyEnv?: string; reasoningTokens?: number } = {},
 ): OpenAiChatClient {
   const apiKey = o.apiKeyEnv !== undefined
     ? env[o.apiKeyEnv]
@@ -378,11 +391,19 @@ function onlineClient(
     );
   }
   const baseUrl = o.baseUrl ?? env.VK_BASE_URL ?? env.OPENAI_BASE_URL;
+  const reasoningTokens = o.reasoningTokens ?? parseTokens(env.VK_REASONING_TOKENS);
   return new OpenAiChatClient({
     apiKey,
     model: o.model ?? env.VK_MODEL ?? env.OPENAI_MODEL ?? 'gpt-4o-mini',
     ...(baseUrl !== undefined ? { baseUrl } : {}),
+    ...(reasoningTokens > 0 ? { reasoning: { maxTokens: reasoningTokens } } : {}),
   });
+}
+
+/** "0", "", undefined → 0; otherwise a positive integer token budget. */
+function parseTokens(raw: string | undefined): number {
+  const n = Number(raw ?? 0);
+  return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0;
 }
 
 function onlineJudge(env: Record<string, string | undefined>): Judge {

@@ -192,7 +192,7 @@ export interface DecisionRecord {
   seats: { slug: string; name: string; wing: string }[];
   proposals: Proposal[];
   statusQuo: Proposal;
-  standings: { seat: string; claimedEV: number; credibility: number; calibratedEV: number }[];
+  standings: { seat: string; claimedEV: number; credibility: number; calibratedEV: number; probabilityOverflow?: number }[];
   baseline: { claimedEV: number; calibratedEV: number };
   champion: { seat: string; answer: string; calibratedEV: number };
   beatsStatusQuo: boolean;
@@ -230,6 +230,7 @@ export function decisionRecord(result: DecisionResult, now: Date = new Date()): 
       claimedEV: s.claimedEV,
       credibility: s.credibility,
       calibratedEV: s.calibratedEV,
+      ...(s.probabilityOverflow !== undefined ? { probabilityOverflow: s.probabilityOverflow } : {}),
     })),
     baseline: { claimedEV: result.baseline.claimedEV, calibratedEV: result.baseline.calibratedEV },
     champion: {
@@ -281,6 +282,19 @@ export function renderDecisionMarkdown(record: DecisionRecord): string {
     ),
     `| – | Status quo | ${f(record.baseline.claimedEV)} | 0.50 | ${f(record.baseline.calibratedEV)} |`,
     '',
+    ...(record.standings.some((s) => s.probabilityOverflow)
+      ? [
+          '### Odds that could not be true',
+          '',
+          ...record.standings
+            .filter((s) => s.probabilityOverflow)
+            .map(
+              (s) =>
+                `- ${nameOf(s.seat)}: its outcome probabilities summed to ${(1 + (s.probabilityOverflow ?? 0)).toFixed(2)}; scaled back to 1 before scoring.`,
+            ),
+          '',
+        ]
+      : []),
     '## Sensitivity',
     '',
     flips.length === 0

@@ -125,4 +125,43 @@ describe('OpenAiChatClient', () => {
     const bodySent = JSON.parse(fetchMock.mock.calls[0]![1].body as string);
     expect(bodySent.stream).toBe(true);
   });
+
+  it('with a reasoning budget: adds it to max_tokens, sends reasoning, drops temperature', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => ({ choices: [{ message: { content: 'ok' } }] }),
+    });
+    const client = new OpenAiChatClient({
+      apiKey: 'sk-test',
+      model: 'anthropic/claude-fable-5.1',
+      baseUrl: 'https://openrouter.ai/api/v1',
+      reasoning: { maxTokens: 4000 },
+      fetch: fetchMock as unknown as typeof fetch,
+    });
+    await client.complete(messages, { maxTokens: 700, temperature: 0.6 });
+    const body = JSON.parse(fetchMock.mock.calls[0]![1].body as string);
+    expect(body.max_tokens).toBe(4700);
+    expect(body.reasoning).toEqual({ max_tokens: 4000 });
+    expect(body.temperature).toBeUndefined();
+  });
+
+  it('retries once with more headroom when the answer comes back empty', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: '' }, finish_reason: 'length' }] }) })
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: [{ type: 'text', text: 'second try' }] } }] }) });
+    const client = new OpenAiChatClient({ apiKey: 'sk-test', model: 'm', fetch: fetchMock as unknown as typeof fetch });
+    expect(await client.complete(messages, { maxTokens: 300 })).toBe('second try');
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    const second = JSON.parse(fetchMock.mock.calls[1]![1].body as string);
+    expect(second.max_tokens).toBe(1200);
+  });
+
+  it('gives up after two empty answers', async () => {
+    const empty = { ok: true, status: 200, json: async () => ({ choices: [{ message: { content: null }, finish_reason: 'length' }] }) };
+    const fetchMock = vi.fn().mockResolvedValue(empty);
+    const client = new OpenAiChatClient({ apiKey: 'sk-test', model: 'm', fetch: fetchMock as unknown as typeof fetch });
+    await expect(client.complete(messages)).rejects.toThrow(/empty content twice/);
+  });
 });
