@@ -14,7 +14,8 @@
  * Online configuration (OpenAI-compatible endpoint) comes from env:
  *   VK_API_KEY   (or OPENAI_API_KEY)   required online
  *   VK_BASE_URL  (or OPENAI_BASE_URL)  default https://api.openai.com/v1
- *   VK_MODEL     (or OPENAI_MODEL)     default gpt-4o-mini
+ *   VK_MODEL     (or OPENAI_MODEL)     default gpt-4o-mini — the debaters
+ *   VK_PROPOSER_MODEL                  optional stronger model for proposals
  *   VK_JUDGE_MODELS  comma-separated; >1 model → EnsembleJudge
  */
 
@@ -136,8 +137,11 @@ async function decide(file: string, flags: Flags, io: CliIo): Promise<number> {
     };
     judge = new HeuristicJudge();
   } else {
+    // Spend capability where it decides the answer: proposals and judging can
+    // run on a stronger (pricier) model than the 21 bouts.
     const client = onlineClient(io.env);
-    proposerClient = client;
+    const proposerModel = io.env.VK_PROPOSER_MODEL;
+    proposerClient = proposerModel ? onlineClient(io.env, { model: proposerModel }) : client;
     debaterClient = () => client;
     judge = onlineJudge(io.env);
   }
