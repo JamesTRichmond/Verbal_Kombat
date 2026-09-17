@@ -44,7 +44,7 @@ For each outcome a proposal predicts:
 - `p` = the seat's claimed probability
 - `m` = how much it matters to the owner = Σ (criterion weight × impact), impacts −1..1
 - `c_seat` = credibility the seat earned in its fights (integrity kept, bouts won, fallacies avoided)
-- `c_k` = `c_seat` × per-outcome credibility. A clean opponent rebuttal that names that outcome multiplies `c_k` down; other outcomes stay on seat credibility alone. Fallacious swings do not count.
+- `c_k` = `c_seat` × per-outcome credibility. Clean opponent rebuttals that name an outcome adjust only that outcome: beneficial outcomes are discounted, while harmful outcomes can be reinforced (so warnings about risk do not accidentally reward the proposal). Fallacious swings do not count.
 
 Calibration:
 
@@ -68,7 +68,7 @@ Calibration:
 
 - `@vk/core/geniuses.ts` — 12 wings, 186 geniuses, `geniusArchetype()`
 - `@vk/core/council.ts` — value profile, EV math, credibility, seating, round robin, crown
-- `@vk/core/council.ts` — `outcomeCredibilitiesFrom`: targeted clean rebuttals discount that outcome, not the whole position
+- `@vk/core/council.ts` — `outcomeCredibilitiesFrom`: targeted clean rebuttals adjust only that outcome (including harmful-outcome warnings)
 - `@vk/debate/proposer.ts` — `ProposalAgent`, `ScriptedProposer`, `LlmProposer`, tolerant JSON parsing
 - `@vk/replay/council-runner.ts` — `runCouncil` orchestrator with `onProposal / onBoutStart / onExchange / onBout` hooks
 - Tests for all of the above

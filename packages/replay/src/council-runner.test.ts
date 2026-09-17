@@ -58,7 +58,11 @@ describe('runCouncil', () => {
     expect([...evs].sort((a, b) => b - a)).toEqual(evs);
     expect(result.verdict.champion.seat).toBe(result.verdict.standings[0]!.seat);
     // Fighters' stances are their own proposals.
-    expect(result.bouts[0]!.replay.config.stances.A).toBe(proposals.socrates!.answer);
+    expect(result.bouts[0]!.replay.config.stances.A).toContain(proposals.socrates!.answer);
+    expect(result.bouts[0]!.replay.config.stances.A).toContain('Predicted outcomes:');
+    expect(result.bouts[0]!.replay.config.stances.A).toContain(
+      proposals.socrates!.outcomes[0]!.description,
+    );
   });
 });
 

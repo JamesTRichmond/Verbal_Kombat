@@ -158,6 +158,34 @@ describe('proposal-aware outcome credibility', () => {
     expect(scored.outcomes[1]!.credibility).toBe(1);
   });
 
+  it('does not match outcome tokens inside unrelated words', () => {
+    const p: Proposal = {
+      seat: 's',
+      answer: 'a',
+      reasoning: 'r',
+      outcomes: [{ description: 'steady gain', probability: 0.5, impacts: { income: 1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('I am against this plan', 0.9)]);
+    const oc = outcomeCredibilitiesFrom(p, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(oc).toEqual([1]);
+  });
+
+  it('clean warnings on harmful outcomes raise calibrated harm instead of softening it', () => {
+    const p: Proposal = {
+      seat: 's',
+      answer: 'a',
+      reasoning: 'r',
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.9, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the regulatory fine risk is very likely', 0.8)]);
+    const oc = outcomeCredibilitiesFrom(p, [{ seat: 's', replay: r, side: 'A' }]);
+    const plain = scoreProposal(p, OWNER_DRAFT_PROFILE, 0.2, 0.2, [1]);
+    const warned = scoreProposal(p, OWNER_DRAFT_PROFILE, 0.2, 0.2, oc);
+    expect(oc[0]).toBeGreaterThan(1);
+    expect(warned.outcomes[0]!.credibility).toBeGreaterThan(plain.outcomes[0]!.credibility);
+    expect(warned.calibratedEV).toBeLessThan(plain.calibratedEV);
+  });
+
   it('fallacious swings at an outcome do not cut its credibility', () => {
     const r = replay(70, 40, 0, [hit('jackpot payout is doomed', 0.9, ['ad_hominem'])]);
     const oc = outcomeCredibilitiesFrom(two, [{ seat: 's', replay: r, side: 'A' }]);
