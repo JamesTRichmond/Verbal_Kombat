@@ -7,22 +7,43 @@ import {
   farthestWing,
   geniusArchetype,
   mattersScore,
+  outcomeCredibilitiesFrom,
+  outcomeTokens,
   roundRobin,
   scoreProposal,
   seatCouncil,
   OWNER_DRAFT_PROFILE,
   type MatchReplay,
   type Proposal,
+  type TranscriptEntry,
 } from './index.js';
 
-function replay(intA: number, intB: number, fallA = 0): MatchReplay {
+function replay(intA: number, intB: number, fallA = 0, entries: TranscriptEntry[] = []): MatchReplay {
   const stat = (f: number) => ({ arguments: 4, cleanHits: 2, fallacies: f, avgSoundness: 0.7, totalDamageDealt: 20 });
   return {
     config: { id: 'r', topic: 't', stances: { A: 'a', B: 'b' }, fighters: { A: 'x', B: 'y' }, mode: 'problem' },
-    entries: [],
+    entries,
     ...(intA !== intB ? { winner: intA > intB ? ('A' as const) : ('B' as const) } : {}),
     finalIntegrity: { A: intA, B: intB },
     stats: { A: stat(fallA), B: stat(0) },
+  };
+}
+
+function hit(text: string, force: number, fallacies: TranscriptEntry['verdict']['fallacies'] = []): TranscriptEntry {
+  return {
+    argument: { id: 'u1', matchId: 'r', side: 'B', text, seq: 1, t: 1 },
+    verdict: {
+      argumentId: 'u1',
+      side: 'B',
+      soundness: 0.8,
+      relevance: 0.8,
+      evidence: 0.7,
+      structure: 0.7,
+      fallacies,
+      rebuttalForce: force,
+      rationale: text,
+    },
+    combat: [],
   };
 }
 
@@ -109,5 +130,37 @@ describe('expected value for the owner', () => {
     expect(v.loudestClaim).toBe('bold');
     expect(v.champion.seat).toBe('sober');
     expect(v.fightsChangedTheAnswer).toBe(true);
+  });
+});
+
+describe('proposal-aware outcome credibility', () => {
+  const two: Proposal = {
+    seat: 's',
+    answer: 'ship both bets',
+    reasoning: '',
+    outcomes: [
+      { description: 'jackpot payout', probability: 0.9, impacts: { income: 1 } },
+      { description: 'steady stipend', probability: 0.6, impacts: { income: 0.4, energy: 0.5 } },
+    ],
+  };
+
+  it('tokenizes outcome descriptions without stopwords', () => {
+    expect(outcomeTokens('jackpot payout after that')).toEqual(['jackpot', 'payout']);
+  });
+
+  it('a clean rebuttal that names one outcome discounts only that outcome', () => {
+    const r = replay(70, 40, 0, [hit('the jackpot payout is a fantasy', 0.8)]);
+    const oc = outcomeCredibilitiesFrom(two, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(oc[0]).toBeLessThan(1);
+    expect(oc[1]).toBe(1);
+    const scored = scoreProposal(two, OWNER_DRAFT_PROFILE, 1, 0.2, oc);
+    expect(scored.outcomes[0]!.credibility).toBeLessThan(scored.outcomes[1]!.credibility);
+    expect(scored.outcomes[1]!.credibility).toBe(1);
+  });
+
+  it('fallacious swings at an outcome do not cut its credibility', () => {
+    const r = replay(70, 40, 0, [hit('jackpot payout is doomed', 0.9, ['ad_hominem'])]);
+    const oc = outcomeCredibilitiesFrom(two, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(oc).toEqual([1, 1]);
   });
 });
