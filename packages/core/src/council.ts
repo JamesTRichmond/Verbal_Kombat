@@ -376,8 +376,8 @@ function challengePatternsFor(tokens: string[]): RegExp[] {
   return tokens.flatMap((token) => {
     const t = escapeRegex(token);
     return [
-      new RegExp(`\\b${t}\\b.{0,40}\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b`),
-      new RegExp(`\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b.{0,40}\\b${t}\\b`),
+      new RegExp(`\\b${t}\\b[\\s\\S]{0,40}\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b`),
+      new RegExp(`\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b[\\s\\S]{0,40}\\b${t}\\b`),
     ];
   });
 }
