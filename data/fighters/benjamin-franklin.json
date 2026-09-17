@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "slug": "benjamin-franklin",
+  "name": "Benjamin Franklin",
+  "wing": "builders",
+  "xp": 1017,
+  "level": 2,
+  "record": {
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "draws": 0,
+    "fallaciesCommitted": 2
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Thích Nhất Hạnh.",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-16-s42-b5",
+      "learnedAt": "2026-09-16T12:00:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:91jzpz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thích Nhất Hạnh broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because remote work protects deep focus, the documented…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-16-s42-b5",
+      "learnedAt": "2026-09-16T12:00:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:18ws932",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Thích Nhất Hạnh broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-16-s42-b5",
+      "learnedAt": "2026-09-16T12:00:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:18ws932",
+      "kind": "technique",
+      "text": "Borrow this pattern from Thích Nhất Hạnh: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-16-s42-b5",
+      "learnedAt": "2026-09-16T12:00:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:77p7cs",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Thích Nhất Hạnh was \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "thich-nhat-hanh",
+      "learnedFrom": "camp-2026-09-16-s42-b5",
+      "learnedAt": "2026-09-16T12:00:04.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Terrence Deacon.",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b11",
+      "learnedAt": "2026-09-16T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1er08j1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terrence Deacon broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b11",
+      "learnedAt": "2026-09-16T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1rbol23",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terrence Deacon broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b11",
+      "learnedAt": "2026-09-16T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1rbol23",
+      "kind": "technique",
+      "text": "Borrow this pattern from Terrence Deacon: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b11",
+      "learnedAt": "2026-09-16T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1aq2agl",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Terrence Deacon was \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "terrence-deacon",
+      "learnedFrom": "camp-2026-09-16-s42-b11",
+      "learnedAt": "2026-09-16T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1yb1ih1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Yi Sun-sin broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "yi-sun-sin",
+      "learnedFrom": "camp-2026-09-16-s42-b35",
+      "learnedAt": "2026-09-16T12:00:34.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1f40lgl",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "yi-sun-sin",
+      "learnedFrom": "camp-2026-09-16-s42-b35",
+      "learnedAt": "2026-09-16T12:00:34.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_emotion": 0.05,
+      "no_true_scotsman": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.035,
+      "formalism": 0.035,
+      "interrogation": 0.015,
+      "patience": 0.035
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b5",
+      "at": "2026-09-16T12:00:04.000Z",
+      "opponent": "thich-nhat-hanh",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 52,
+      "opponentIntegrity": 68,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 318,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "counter:91jzpz",
+        "counter:18ws932",
+        "technique:18ws932",
+        "blind:77p7cs"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b11",
+      "at": "2026-09-16T12:00:10.000Z",
+      "opponent": "terrence-deacon",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 73,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because tests first slows small teams down, the documented cases…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:1er08j1",
+        "counter:1rbol23",
+        "technique:1rbol23",
+        "blind:1aq2agl"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b35",
+      "at": "2026-09-16T12:00:34.000Z",
+      "opponent": "yi-sun-sin",
+      "side": "A",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 387,
+      "lessonsGained": [
+        "counter:1yb1ih1",
+        "technique:1f40lgl"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
+}

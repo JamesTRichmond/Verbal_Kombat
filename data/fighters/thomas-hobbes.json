@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "slug": "thomas-hobbes",
+  "name": "Thomas Hobbes",
+  "wing": "society_shapers",
+  "xp": 238,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 3
+  },
+  "lessons": [
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Rumi.",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-16-s42-b56",
+      "learnedAt": "2026-09-16T12:00:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Rumi.",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-16-s42-b56",
+      "learnedAt": "2026-09-16T12:00:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1wc5s54",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Rumi broke through with \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-16-s42-b56",
+      "learnedAt": "2026-09-16T12:00:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1qr0fuv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Rumi broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-16-s42-b56",
+      "learnedAt": "2026-09-16T12:00:55.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1qr0fuv",
+      "kind": "technique",
+      "text": "Borrow this pattern from Rumi: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-16-s42-b56",
+      "learnedAt": "2026-09-16T12:00:55.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:qn7qrc",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Rumi was \"Consider the evidence first. When the measured results are compared across studies, then the pattern is consistent, so it follows that a fo…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "rumi",
+      "learnedFrom": "camp-2026-09-16-s42-b56",
+      "learnedAt": "2026-09-16T12:00:55.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "slippery_slope": 0.05,
+      "ad_hominem": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b56",
+      "at": "2026-09-16T12:00:55.000Z",
+      "opponent": "rumi",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 35,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.2,
+      "fallacies": [
+        "slippery_slope",
+        "ad_hominem",
+        "ad_hominem"
+      ],
+      "xpGained": 238,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "avoid:ad_hominem",
+        "counter:1wc5s54",
+        "counter:1qr0fuv",
+        "technique:1qr0fuv",
+        "blind:qn7qrc"
+      ],
+      "lessonsReinforced": [
+        "counter:1qr0fuv"
+      ],
+      "levelAfter": 1
+    }
+  ]
+}

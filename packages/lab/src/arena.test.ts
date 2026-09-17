@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { HeuristicJudge } from '@vk/judge';
+import { MemoryFighterStore } from '@vk/replay';
 import { benchmarkAgents, renderScorecards, resolveArchetype } from './arena.js';
 import { MockChatClient } from './mock-client.js';
 
@@ -53,5 +54,46 @@ describe('benchmarkAgents', () => {
     expect(resolveArchetype({ id: 'genius:socrates' }).id).toBe('genius:socrates');
     expect(resolveArchetype({ id: 'plain' }).id).toBe('socrates_prime');
     expect(() => resolveArchetype({ id: 'x', archetypeId: 'nope' })).toThrow();
+  });
+
+  it('persists growth for genius entrants only when given a store', async () => {
+    const store = new MemoryFighterStore();
+    const run2 = () =>
+      benchmarkAgents({
+        entrants: [
+          { id: 'socrates-bot', archetypeId: 'genius:socrates', client: new MockChatClient({ seed: 3, fallacyRate: 0.5 }) },
+          { id: 'plain', client: new MockChatClient({ seed: 4, personality: 'good' }) },
+        ],
+        topics,
+        judge: new HeuristicJudge(),
+        maxTurns: 3,
+        fighters: store,
+        now: () => new Date('2026-09-16T00:00:00Z'),
+      });
+    await run2();
+    expect([...store.records.keys()]).toEqual(['socrates']);
+    const first = store.get('socrates');
+    expect(first.log).toHaveLength(4);
+    expect(first.log.every((e) => e.opponent === 'plain')).toBe(true);
+    expect(first.xp).toBeGreaterThan(0);
+    expect(first.lessons.length).toBeGreaterThan(0);
+    await run2();
+    const second = store.get('socrates');
+    expect(second.log).toHaveLength(8);
+    expect(second.xp).toBeGreaterThan(first.xp);
+    expect(second.log.slice(0, 4)).toEqual(first.log);
+
+    // Same genius on both sides still only grows.
+    const self = new MemoryFighterStore();
+    await benchmarkAgents({
+      entrants: [
+        { id: 'genius:plato', client: new MockChatClient({ seed: 1 }) },
+        { id: 'plato-2', archetypeId: 'genius:plato', client: new MockChatClient({ seed: 2, fallacyRate: 0.6 }) },
+      ],
+      topics: topics.slice(0, 1),
+      judge: new HeuristicJudge(),
+      fighters: self,
+    });
+    expect(self.get('plato').log).toHaveLength(4);
   });
 });

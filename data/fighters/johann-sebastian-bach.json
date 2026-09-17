@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "slug": "johann-sebastian-bach",
+  "name": "Johann Sebastian Bach",
+  "wing": "artists",
+  "xp": 312,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Albert Einstein.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b55",
+      "learnedAt": "2026-09-16T12:00:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1y8w8rz",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b55",
+      "learnedAt": "2026-09-16T12:00:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:yoswb5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b55",
+      "learnedAt": "2026-09-16T12:00:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1y8w8rz",
+      "kind": "technique",
+      "text": "Borrow this pattern from Albert Einstein: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b55",
+      "learnedAt": "2026-09-16T12:00:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:rjjuci",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Albert Einstein was \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week costs more than it returns, the…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b55",
+      "learnedAt": "2026-09-16T12:00:54.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "no_true_scotsman": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b55",
+      "at": "2026-09-16T12:00:54.000Z",
+      "opponent": "albert-einstein",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 47,
+      "opponentIntegrity": 73,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:1y8w8rz",
+        "counter:yoswb5",
+        "technique:1y8w8rz",
+        "blind:rjjuci"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

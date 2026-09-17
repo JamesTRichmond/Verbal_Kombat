@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "slug": "bjarne-stroustrup",
+  "name": "Bjarne Stroustrup",
+  "wing": "builders",
+  "xp": 1318,
+  "level": 2,
+  "record": {
+    "matches": 4,
+    "wins": 4,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 5
+  },
+  "lessons": [
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Socrates.",
+      "opponent": "socrates",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Socrates.",
+      "opponent": "socrates",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 3
+    },
+    {
+      "id": "counter:1qr0fuv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Socrates broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "socrates",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:mh1b6d",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "socrates",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Ramanuja.",
+      "opponent": "ramanuja",
+      "learnedFrom": "camp-2026-09-16-s42-b13",
+      "learnedAt": "2026-09-16T12:00:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ud6bdv",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "ramanuja",
+      "learnedFrom": "camp-2026-09-16-s42-b13",
+      "learnedAt": "2026-09-16T12:00:12.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1d6p1ru",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "julian-jaynes",
+      "learnedFrom": "camp-2026-09-16-s42-b42",
+      "learnedAt": "2026-09-16T12:00:41.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:102pnfa",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Nash broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "john-nash",
+      "learnedFrom": "camp-2026-09-16-s42-b57",
+      "learnedAt": "2026-09-16T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "john-nash",
+      "learnedFrom": "camp-2026-09-16-s42-b57",
+      "learnedAt": "2026-09-16T12:00:56.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "slippery_slope": 0.05,
+      "appeal_to_ignorance": 0.15000000000000002,
+      "appeal_to_popularity": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.02,
+      "formalism": 0.02,
+      "interrogation": 0.02,
+      "patience": 0.01
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b1",
+      "at": "2026-09-16T12:00:00.000Z",
+      "opponent": "socrates",
+      "side": "A",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 77,
+      "opponentIntegrity": 75,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "slippery_slope",
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 336,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "avoid:appeal_to_ignorance",
+        "counter:1qr0fuv",
+        "technique:mh1b6d"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b13",
+      "at": "2026-09-16T12:00:12.000Z",
+      "opponent": "ramanuja",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 62,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_popularity"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 332,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "technique:ud6bdv"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b42",
+      "at": "2026-09-16T12:00:41.000Z",
+      "opponent": "julian-jaynes",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 82,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…",
+      "xpGained": 310,
+      "lessonsGained": [
+        "technique:1d6p1ru"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b57",
+      "at": "2026-09-16T12:00:56.000Z",
+      "opponent": "john-nash",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 78,
+      "opponentIntegrity": 58,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…",
+      "xpGained": 340,
+      "lessonsGained": [
+        "counter:102pnfa",
+        "technique:7s46gj"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_ignorance"
+      ],
+      "levelAfter": 2
+    }
+  ]
+}

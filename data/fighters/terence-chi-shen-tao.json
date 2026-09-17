@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "slug": "terence-chi-shen-tao",
+  "name": "Terence Tao",
+  "wing": "pattern_seers",
+  "xp": 318,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Linus Torvalds.",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b45",
+      "learnedAt": "2026-09-16T12:00:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1gfnuuy",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Linus Torvalds broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b45",
+      "learnedAt": "2026-09-16T12:00:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:9cwrna",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Linus Torvalds broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b45",
+      "learnedAt": "2026-09-16T12:00:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:9cwrna",
+      "kind": "technique",
+      "text": "Borrow this pattern from Linus Torvalds: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b45",
+      "learnedAt": "2026-09-16T12:00:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1mykq9k",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Linus Torvalds was \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b45",
+      "learnedAt": "2026-09-16T12:00:44.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "no_true_scotsman": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b45",
+      "at": "2026-09-16T12:00:44.000Z",
+      "opponent": "linus-torvalds",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 60,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "no_true_scotsman"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 318,
+      "lessonsGained": [
+        "avoid:no_true_scotsman",
+        "counter:1gfnuuy",
+        "counter:9cwrna",
+        "technique:9cwrna",
+        "blind:1mykq9k"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

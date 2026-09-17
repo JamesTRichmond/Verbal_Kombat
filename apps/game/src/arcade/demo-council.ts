@@ -94,9 +94,22 @@ export const COUNCIL_BOUTS: Record<string, CouncilLine[]> = {
   ],
 };
 
+/**
+ * Each play of the council gets a unique id (`council~<stamp>`) so fighter
+ * logs never reuse a bout id; the authored scripts stay keyed by
+ * `council-boutN`.
+ */
+export function councilPlayId(): string {
+  return `${COUNCIL_ID}~${Date.now().toString(36)}${Math.floor(Math.random() * 1296).toString(36)}`;
+}
+
+export function scriptKey(boutId: string): string {
+  return boutId.replace(/~[^-]*/, '');
+}
+
 /** Bout scripts in the DebateScript shape (side A = first seat of the pair). */
 function scriptFor(boutId: string): DebateScript {
-  const lines = COUNCIL_BOUTS[boutId] ?? [];
+  const lines = COUNCIL_BOUTS[scriptKey(boutId)] ?? [];
   const first = lines[0]?.seat;
   return {
     topic: COUNCIL_PROBLEM,
@@ -111,7 +124,7 @@ export function councilDebater(seatSlug: string, boutId: string, sideA: string):
 }
 
 function annotationFor(arg: ArgumentEvent): CouncilLine['annotations'] | undefined {
-  return COUNCIL_BOUTS[arg.matchId]?.find((l) => l.text === arg.text)?.annotations;
+  return COUNCIL_BOUTS[scriptKey(arg.matchId)]?.find((l) => l.text === arg.text)?.annotations;
 }
 
 export function councilIsCloser(arg: ArgumentEvent): boolean {

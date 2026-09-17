@@ -70,6 +70,7 @@ Calibration:
 - `@vk/debate/proposer.ts` — `ProposalAgent`, `ScriptedProposer`, `LlmProposer`, tolerant JSON parsing
 - `@vk/replay/council-runner.ts` — `runCouncil` orchestrator with `onProposal / onBoutStart / onExchange / onBout` hooks
 - Tests for all of the above
+- Fighter growth: every genius keeps a career (XP, levels, lessons, individual log) that only ever grows — see [GROWTH.md](GROWTH.md)
 
 ## Next
 

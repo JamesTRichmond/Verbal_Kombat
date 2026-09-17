@@ -43,6 +43,7 @@ const G: Record<string, string[]> = {
   '9': ['###', '#.#', '###', '..#', '##.'],
   ' ': ['..', '..', '..', '..', '..'],
   '.': ['.', '.', '.', '.', '#'],
+  '·': ['.', '.', '#', '.', '.'],
   ',': ['.', '.', '.', '#', '#'],
   '!': ['#', '#', '#', '.', '#'],
   '?': ['##.', '..#', '.#.', '...', '.#.'],
@@ -130,7 +131,8 @@ function atlasFor(color: string): HTMLCanvasElement {
 /** Normalize arbitrary text to the glyph set (uppercase, aliases). */
 export function normalize(text: string): string {
   let out = '';
-  for (const ch of text.toUpperCase()) {
+  // Strip accents first so names like GODEL and RENE render instead of '?'.
+  for (const ch of text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase()) {
     const a = ALIAS[ch];
     if (a !== undefined) out += a;
     else if (G[ch]) out += ch;

@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "slug": "michel-foucault",
+  "name": "Michel Foucault",
+  "wing": "questioners",
+  "xp": 337,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:1p7ux5t",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-16-s42-b38",
+      "learnedAt": "2026-09-16T12:00:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1er08j1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-16-s42-b38",
+      "learnedAt": "2026-09-16T12:00:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1p7ux5t",
+      "kind": "technique",
+      "text": "Borrow this pattern from Noam Chomsky: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-16-s42-b38",
+      "learnedAt": "2026-09-16T12:00:37.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:17st4az",
+      "kind": "blind_spot",
+      "text": "Your moves against Noam Chomsky were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-16-s42-b38",
+      "learnedAt": "2026-09-16T12:00:37.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b38",
+      "at": "2026-09-16T12:00:37.000Z",
+      "opponent": "noam-chomsky",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because tests first slows small teams down, the documented cases…",
+      "xpGained": 337,
+      "lessonsGained": [
+        "counter:1p7ux5t",
+        "counter:1er08j1",
+        "technique:1p7ux5t",
+        "blind:17st4az"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

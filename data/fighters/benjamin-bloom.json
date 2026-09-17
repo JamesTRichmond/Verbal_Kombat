@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "slug": "benjamin-bloom",
+  "name": "Benjamin Bloom",
+  "wing": "mind_mappers",
+  "xp": 0,
+  "level": 1,
+  "record": {
+    "matches": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {}
+  },
+  "log": []
+}

@@ -11,6 +11,9 @@
  *  - "good": structured, evidence-flavoured, engages the opponent.
  *  - "sloppy": thin assertions, and (by default) fallacy trigger phrases the
  *    HeuristicJudge detects.
+ *
+ * Growth: learned "Never use …" lessons in the system prompt lower the
+ * fallacy rate, so offline fighters visibly improve with training.
  */
 
 import type { ChatCallOptions, ChatClient, ChatMessage } from '@vk/debate';
@@ -47,6 +50,9 @@ export const FALLACY_PHRASES = [
   'Imagine the suffering if we ignore this.',
   'No true expert would disagree.',
 ];
+
+/** Fallacy-rate multiplier per learned avoid_fallacy lesson in the system prompt. */
+export const LESSON_DISCIPLINE = 0.75;
 
 const GOOD_OPENERS = [
   'Consider the evidence first.',
@@ -118,7 +124,10 @@ export class MockChatClient implements ChatClient {
     } else {
       parts.push(this.pick(SLOPPY_BODIES).replace('{stance}', stance));
     }
-    if (this.rand() < this.fallacyRate) parts.push(this.pick(FALLACY_PHRASES));
+    // Growth: every "avoid this fallacy" lesson in the prompt makes the mock a bit more careful.
+    const avoidLessons = (system.match(/^- Never use /gm) ?? []).length;
+    const rate = this.fallacyRate * Math.pow(LESSON_DISCIPLINE, avoidLessons);
+    if (this.rand() < rate) parts.push(this.pick(FALLACY_PHRASES));
     return parts.join(' ');
   }
 

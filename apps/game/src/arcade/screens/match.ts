@@ -8,6 +8,7 @@ import { C, H, W, blink, blit, frame, rect, text, vgrad, type Gfx } from '../gfx
 import { toTitle } from '../flow.js';
 import { drawFighter } from '../sprites.js';
 import { hint } from './common.js';
+import { careers } from '../careers.js';
 
 export interface VsOpts {
   A: Genius;
@@ -89,7 +90,8 @@ export class VsScreen implements Screen {
     const gn = s === 'A' ? this.o.A : this.o.B;
     const stance = s === 'A' ? this.o.stanceA : this.o.stanceB;
     const w = WINGS[gn.wing];
-    text(g, gn.name, x, 174, { align, color: '#ffffff', scale: 1 });
+    const lv = careers.get(gn.slug).level;
+    text(g, align === 'left' ? `${gn.name}  LV ${lv}` : `LV ${lv}  ${gn.name}`, x, 174, { align, color: '#ffffff', scale: 1 });
     text(g, `${w.name}${gn.living ? ' - LIVING' : ''}`, x, 181, { align, color: mix(w.palette.primary, '#ffffff', 0.45) });
     text(g, w.move, x, 188, { align, color: C.dim });
     wrap(`STANCE: ${stance}`, 150).slice(0, 4).forEach((l, i) => text(g, l, x, 196 + i * 7, { align, color: C.grey }));
@@ -103,6 +105,7 @@ export class ResultScreen implements Screen {
   constructor(
     private readonly replay: MatchReplay,
     private readonly fighters: Record<Side, Genius>,
+    private readonly onNext: (game: Game) => void = toTitle,
   ) {}
 
   enter(game: Game): void {
@@ -114,7 +117,7 @@ export class ResultScreen implements Screen {
     this.t++;
     if (this.t > 30 && (game.input.ok() || game.input.pressed('back'))) {
       game.audio.play('confirm');
-      toTitle(game);
+      this.onNext(game);
     }
   }
 
@@ -159,6 +162,6 @@ export class ResultScreen implements Screen {
         : 'DECIDED ON REMAINING POSITION INTEGRITY.';
     wrap(reason, W - 24).forEach((l, i) => text(g, l, 12, 169 + i * 8, { color: C.white }));
     text(g, 'EVERY HIT TRACES TO A SENTENCE: PRESS P IN A FIGHT FOR THE TRANSCRIPT.', 12, 193, { color: C.dim });
-    if (blink(this.t, 20)) hint(g, 'ENTER - BACK TO TITLE');
+    if (blink(this.t, 20)) hint(g, 'ENTER - WHAT THEY LEARNED');
   }
 }

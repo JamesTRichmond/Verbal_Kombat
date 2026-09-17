@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "slug": "socrates",
+  "name": "Socrates",
+  "wing": "questioners",
+  "xp": 812,
+  "level": 1,
+  "record": {
+    "matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "draws": 0,
+    "fallaciesCommitted": 6
+  },
+  "lessons": [
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Bjarne Stroustrup.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:no_true_scotsman",
+      "kind": "avoid_fallacy",
+      "text": "Never use no true scotsman (Redefining a category on the fly to exclude a damaging counterexample). It cost you against Bjarne Stroustrup.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:mh1b6d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bjarne Stroustrup broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:mh1b6d",
+      "kind": "technique",
+      "text": "Borrow this pattern from Bjarne Stroustrup: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:d22n8u",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Bjarne Stroustrup was \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b1",
+      "learnedAt": "2026-09-16T12:00:00.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Marcus Aurelius.",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-16-s42-b32",
+      "learnedAt": "2026-09-16T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Marcus Aurelius.",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-16-s42-b32",
+      "learnedAt": "2026-09-16T12:00:31.000Z",
+      "seen": 2
+    },
+    {
+      "id": "counter:1h3s00d",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marcus Aurelius broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-16-s42-b32",
+      "learnedAt": "2026-09-16T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:msxpis",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marcus Aurelius broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because offices produce better deep work, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-16-s42-b32",
+      "learnedAt": "2026-09-16T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1h3s00d",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marcus Aurelius: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-16-s42-b32",
+      "learnedAt": "2026-09-16T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:124vo2r",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Marcus Aurelius was \"Look at what the data shows. Because remote work protects deep focus, the documented cases show the benefit holds when the conditions are m…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "marcus-aurelius",
+      "learnedFrom": "camp-2026-09-16-s42-b32",
+      "learnedAt": "2026-09-16T12:00:31.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1xw7ote",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Richard Lang broke through with \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "richard-lang",
+      "learnedFrom": "camp-2026-09-16-s42-b50",
+      "learnedAt": "2026-09-16T12:00:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:861nr9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Richard Lang broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "richard-lang",
+      "learnedFrom": "camp-2026-09-16-s42-b50",
+      "learnedAt": "2026-09-16T12:00:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19m8vnv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Richard Lang broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "richard-lang",
+      "learnedFrom": "camp-2026-09-16-s42-b50",
+      "learnedAt": "2026-09-16T12:00:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1xw7ote",
+      "kind": "technique",
+      "text": "Borrow this pattern from Richard Lang: \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "richard-lang",
+      "learnedFrom": "camp-2026-09-16-s42-b50",
+      "learnedAt": "2026-09-16T12:00:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1vfv800",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Richard Lang was \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "richard-lang",
+      "learnedFrom": "camp-2026-09-16-s42-b50",
+      "learnedAt": "2026-09-16T12:00:49.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "ad_hominem": 0.05,
+      "no_true_scotsman": 0.05,
+      "appeal_to_popularity": 0.05,
+      "appeal_to_emotion": 0.1
+    },
+    "traitGains": {
+      "empiricism": 0.045,
+      "formalism": 0.045,
+      "interrogation": 0.045,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b1",
+      "at": "2026-09-16T12:00:00.000Z",
+      "opponent": "bjarne-stroustrup",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 75,
+      "opponentIntegrity": 77,
+      "arguments": 3,
+      "avgSoundness": 0.467,
+      "fallacies": [
+        "ad_hominem",
+        "no_true_scotsman"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 262,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "avoid:no_true_scotsman",
+        "counter:mh1b6d",
+        "technique:mh1b6d",
+        "blind:d22n8u"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b32",
+      "at": "2026-09-16T12:00:31.000Z",
+      "opponent": "marcus-aurelius",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 74,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_popularity",
+        "appeal_to_emotion"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because remote work protects deep focus, the documented cases show the be…",
+      "xpGained": 286,
+      "lessonsGained": [
+        "avoid:appeal_to_popularity",
+        "avoid:appeal_to_emotion",
+        "counter:1h3s00d",
+        "counter:msxpis",
+        "technique:1h3s00d",
+        "blind:124vo2r"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b50",
+      "at": "2026-09-16T12:00:49.000Z",
+      "opponent": "richard-lang",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 34,
+      "opponentIntegrity": 85,
+      "arguments": 3,
+      "avgSoundness": 0.408,
+      "fallacies": [
+        "appeal_to_emotion",
+        "appeal_to_emotion"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 264,
+      "lessonsGained": [
+        "counter:1xw7ote",
+        "counter:861nr9",
+        "counter:19m8vnv",
+        "technique:1xw7ote",
+        "blind:1vfv800"
+      ],
+      "lessonsReinforced": [
+        "avoid:appeal_to_emotion"
+      ],
+      "levelAfter": 1
+    }
+  ]
+}

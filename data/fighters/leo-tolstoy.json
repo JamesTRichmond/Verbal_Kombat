@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "slug": "leo-tolstoy",
+  "name": "Leo Tolstoy",
+  "wing": "artists",
+  "xp": 305,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:kr4klv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: René Descartes broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-16-s42-b52",
+      "learnedAt": "2026-09-16T12:00:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1xw7ote",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: René Descartes broke through with \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-16-s42-b52",
+      "learnedAt": "2026-09-16T12:00:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1yb1ih1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: René Descartes broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-16-s42-b52",
+      "learnedAt": "2026-09-16T12:00:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1xw7ote",
+      "kind": "technique",
+      "text": "Borrow this pattern from René Descartes: \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-16-s42-b52",
+      "learnedAt": "2026-09-16T12:00:51.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1hvwv2c",
+      "kind": "blind_spot",
+      "text": "Your weakest move against René Descartes was \"I just feel nuclear power belongs in a clean grid, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "descartes",
+      "learnedFrom": "camp-2026-09-16-s42-b52",
+      "learnedAt": "2026-09-16T12:00:51.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b52",
+      "at": "2026-09-16T12:00:51.000Z",
+      "opponent": "descartes",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 45,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 305,
+      "lessonsGained": [
+        "counter:kr4klv",
+        "counter:1xw7ote",
+        "counter:1yb1ih1",
+        "technique:1xw7ote",
+        "blind:1hvwv2c"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

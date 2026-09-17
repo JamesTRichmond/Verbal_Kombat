@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "slug": "tesla",
+  "name": "Nikola Tesla",
+  "wing": "imaginers",
+  "xp": 812,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:sgipul",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Buckminster Fuller broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tool lending belongs in libraries, the documented cases s…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b10",
+      "learnedAt": "2026-09-16T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:aiwyf2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Buckminster Fuller broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b10",
+      "learnedAt": "2026-09-16T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:15zel1t",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b10",
+      "learnedAt": "2026-09-16T12:00:09.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:jilts8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Maryam Mirzakhani broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "maryam-mirzakhani",
+      "learnedFrom": "camp-2026-09-16-s42-b16",
+      "learnedAt": "2026-09-16T12:00:15.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:1s9qe2c",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. Because offices produce better deep work, the documented cases sh…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "maryam-mirzakhani",
+      "learnedFrom": "camp-2026-09-16-s42-b16",
+      "learnedAt": "2026-09-16T12:00:15.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.01,
+      "formalism": 0.01,
+      "interrogation": 0.01,
+      "patience": 0.01
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b10",
+      "at": "2026-09-16T12:00:09.000Z",
+      "opponent": "buckminster-fuller",
+      "side": "B",
+      "result": "win",
+      "topic": "Should public libraries lend tools as well as books?",
+      "stance": "Libraries should stick to books and media",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 417,
+      "lessonsGained": [
+        "counter:sgipul",
+        "counter:aiwyf2",
+        "technique:15zel1t"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b16",
+      "at": "2026-09-16T12:00:15.000Z",
+      "opponent": "maryam-mirzakhani",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 59,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because offices produce better deep work, the documented cases sh…",
+      "xpGained": 395,
+      "lessonsGained": [
+        "counter:jilts8",
+        "technique:1s9qe2c"
+      ],
+      "lessonsReinforced": [
+        "counter:jilts8"
+      ],
+      "levelAfter": 1
+    }
+  ]
+}

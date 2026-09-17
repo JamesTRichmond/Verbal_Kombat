@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "slug": "terrence-deacon",
+  "name": "Terrence Deacon",
+  "wing": "mind_mappers",
+  "xp": 1155,
+  "level": 2,
+  "record": {
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:mdog6y",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Franklin broke through with \"But note what just happened: your argument skipped the evidence entirely. Because tests first slows small teams down, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b11",
+      "learnedAt": "2026-09-16T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Benjamin Franklin broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b11",
+      "learnedAt": "2026-09-16T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1rbol23",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "benjamin-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b11",
+      "learnedAt": "2026-09-16T12:00:10.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:170c1bx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kip Thorne broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "kip-thorne",
+      "learnedFrom": "camp-2026-09-16-s42-b53",
+      "learnedAt": "2026-09-16T12:00:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ud6bdv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Kip Thorne broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "kip-thorne",
+      "learnedFrom": "camp-2026-09-16-s42-b53",
+      "learnedAt": "2026-09-16T12:00:52.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:ud6bdv",
+      "kind": "technique",
+      "text": "Borrow this pattern from Kip Thorne: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "kip-thorne",
+      "learnedFrom": "camp-2026-09-16-s42-b53",
+      "learnedAt": "2026-09-16T12:00:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:ltciy1",
+      "kind": "blind_spot",
+      "text": "Your moves against Kip Thorne were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "kip-thorne",
+      "learnedFrom": "camp-2026-09-16-s42-b53",
+      "learnedAt": "2026-09-16T12:00:52.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1er08j1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Steve Jobs broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "steve-jobs",
+      "learnedFrom": "camp-2026-09-16-s42-b54",
+      "learnedAt": "2026-09-16T12:00:53.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1x9j1yw",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "steve-jobs",
+      "learnedFrom": "camp-2026-09-16-s42-b54",
+      "learnedAt": "2026-09-16T12:00:53.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.025,
+      "formalism": 0.025,
+      "patience": 0.025,
+      "interrogation": 0.02
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b11",
+      "at": "2026-09-16T12:00:10.000Z",
+      "opponent": "benjamin-franklin",
+      "side": "A",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 73,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:mdog6y",
+        "counter:14czikb",
+        "technique:1rbol23"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b53",
+      "at": "2026-09-16T12:00:52.000Z",
+      "opponent": "kip-thorne",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 30,
+      "opponentIntegrity": 44,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 345,
+      "lessonsGained": [
+        "counter:170c1bx",
+        "counter:ud6bdv",
+        "technique:ud6bdv",
+        "blind:ltciy1"
+      ],
+      "lessonsReinforced": [
+        "counter:ud6bdv"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b54",
+      "at": "2026-09-16T12:00:53.000Z",
+      "opponent": "steve-jobs",
+      "side": "B",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 80,
+      "opponentIntegrity": 42,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because tests first slows small teams down, the documented cases show the…",
+      "xpGained": 387,
+      "lessonsGained": [
+        "counter:1er08j1",
+        "technique:1x9j1yw"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
+}

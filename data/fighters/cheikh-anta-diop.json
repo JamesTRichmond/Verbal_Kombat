@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "slug": "cheikh-anta-diop",
+  "name": "Cheikh Anta Diop",
+  "wing": "society_shapers",
+  "xp": 0,
+  "level": 1,
+  "record": {
+    "matches": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {}
+  },
+  "log": []
+}

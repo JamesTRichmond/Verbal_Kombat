@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "slug": "archimedes",
+  "name": "Archimedes",
+  "wing": "lawfinders",
+  "xp": 349,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:182c2r7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"Yet your position leaves the strongest counter-example untouched. Because personal finance should be required, the documented cases show th…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-16-s42-b8",
+      "learnedAt": "2026-09-16T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:glf0",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Noam Chomsky broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-16-s42-b8",
+      "learnedAt": "2026-09-16T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:glf0",
+      "kind": "technique",
+      "text": "Borrow this pattern from Noam Chomsky: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-16-s42-b8",
+      "learnedAt": "2026-09-16T12:00:07.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:10i0r1z",
+      "kind": "blind_spot",
+      "text": "Your moves against Noam Chomsky were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "noam-chomsky",
+      "learnedFrom": "camp-2026-09-16-s42-b8",
+      "learnedAt": "2026-09-16T12:00:07.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b8",
+      "at": "2026-09-16T12:00:07.000Z",
+      "opponent": "noam-chomsky",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 44,
+      "opponentIntegrity": 57,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…",
+      "xpGained": 349,
+      "lessonsGained": [
+        "counter:182c2r7",
+        "counter:glf0",
+        "technique:glf0",
+        "blind:10i0r1z"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

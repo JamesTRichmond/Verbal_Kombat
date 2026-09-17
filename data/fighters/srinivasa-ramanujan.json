@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "slug": "srinivasa-ramanujan",
+  "name": "Srinivasa Ramanujan",
+  "wing": "pattern_seers",
+  "xp": 429,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:1s9qe2c",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"But note what just happened: your argument skipped the evidence entirely. Because offices produce better deep work, the documented cases sh…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b27",
+      "learnedAt": "2026-09-16T12:00:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1r32bai",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Albert Einstein broke through with \"Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b27",
+      "learnedAt": "2026-09-16T12:00:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:s56t90",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "albert-einstein",
+      "learnedFrom": "camp-2026-09-16-s42-b27",
+      "learnedAt": "2026-09-16T12:00:26.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.005,
+      "formalism": 0.005,
+      "patience": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b27",
+      "at": "2026-09-16T12:00:26.000Z",
+      "opponent": "albert-einstein",
+      "side": "A",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Remote work protects deep focus",
+      "finalIntegrity": 62,
+      "opponentIntegrity": 61,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 429,
+      "lessonsGained": [
+        "counter:1s9qe2c",
+        "counter:1r32bai",
+        "technique:s56t90"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "slug": "john-h-conway",
+  "name": "John Horton Conway",
+  "wing": "pattern_seers",
+  "xp": 373,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:12x6kj9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Barbara McClintock broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-16-s42-b49",
+      "learnedAt": "2026-09-16T12:00:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1ldsbqu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Barbara McClintock broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-16-s42-b49",
+      "learnedAt": "2026-09-16T12:00:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:ezi1i7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Barbara McClintock broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-16-s42-b49",
+      "learnedAt": "2026-09-16T12:00:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ldsbqu",
+      "kind": "technique",
+      "text": "Borrow this pattern from Barbara McClintock: \"Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-16-s42-b49",
+      "learnedAt": "2026-09-16T12:00:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:vbalap",
+      "kind": "blind_spot",
+      "text": "Your moves against Barbara McClintock were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "barbara-mcclintock",
+      "learnedFrom": "camp-2026-09-16-s42-b49",
+      "learnedAt": "2026-09-16T12:00:48.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b49",
+      "at": "2026-09-16T12:00:48.000Z",
+      "opponent": "barbara-mcclintock",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 39,
+      "opponentIntegrity": 54,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:12x6kj9",
+        "counter:1ldsbqu",
+        "counter:ezi1i7",
+        "technique:1ldsbqu",
+        "blind:vbalap"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

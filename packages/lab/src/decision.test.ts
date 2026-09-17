@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { OWNER_DRAFT_PROFILE, getGenius, type Proposal } from '@vk/core';
 import { ScriptedProposer, type DebateAgent } from '@vk/debate';
 import { HeuristicJudge } from '@vk/judge';
+import { MemoryFighterStore } from '@vk/replay';
 import { decisionRecord, renderDecisionMarkdown, runDecision, STATUS_QUO_SEAT } from './decision.js';
 
 const PROBLEM = 'Should James take the applied-AI contract or stay in his current role?';
@@ -118,5 +119,15 @@ describe('runDecision', () => {
     expect(md).toMatch(/^# Decision: /);
     expect(md).toMatch(/beats doing nothing/);
     expect(md).toMatch(/## Sensitivity/);
+  });
+
+  it('passes a fighter store through so seats learn from every bout', async () => {
+    const fighters = new MemoryFighterStore();
+    await decide({ fighters, runner: { now: () => new Date('2026-09-16T00:00:00Z') } });
+    for (const g of seats) {
+      const rec = fighters.get(g.slug);
+      expect(rec.log).toHaveLength(2); // quick council of 3: each seat fights twice
+      expect(rec.xp).toBeGreaterThan(0);
+    }
   });
 });

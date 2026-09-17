@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "slug": "paramahansa-yogananda",
+  "name": "Paramahansa Yogananda",
+  "wing": "awakeners",
+  "xp": 731,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "counter:ma60bc",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Carl Friedrich Gauss broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b6",
+      "learnedAt": "2026-09-16T12:00:05.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:2ga3hg",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "carl-gauss",
+      "learnedFrom": "camp-2026-09-16-s42-b6",
+      "learnedAt": "2026-09-16T12:00:05.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Segenet Kelemu.",
+      "opponent": "segenet-kelemu",
+      "learnedFrom": "camp-2026-09-16-s42-b59",
+      "learnedAt": "2026-09-16T12:00:58.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:ud6bdv",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "segenet-kelemu",
+      "learnedFrom": "camp-2026-09-16-s42-b59",
+      "learnedAt": "2026-09-16T12:00:58.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.01,
+      "formalism": 0.01,
+      "interrogation": 0.01,
+      "patience": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b6",
+      "at": "2026-09-16T12:00:05.000Z",
+      "opponent": "carl-gauss",
+      "side": "B",
+      "result": "win",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 67,
+      "opponentIntegrity": 35,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 393,
+      "lessonsGained": [
+        "counter:ma60bc",
+        "technique:2ga3hg"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b59",
+      "at": "2026-09-16T12:00:58.000Z",
+      "opponent": "segenet-kelemu",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 63,
+      "arguments": 3,
+      "avgSoundness": 0.675,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 338,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "technique:ud6bdv"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

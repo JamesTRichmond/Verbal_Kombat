@@ -1,4 +1,4 @@
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -60,5 +60,82 @@ describe('lab CLI (offline)', () => {
     const u = capture();
     expect(await main([], u.io)).toBe(2);
     expect(await main(['decide', join(examples, 'problem.json'), '--offline', '--mode', 'huge'], u.io)).toBe(1);
+  });
+
+  it('roster init, train, roster and fighter work end to end', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'vk-cli-roster-'));
+    try {
+      const init = capture();
+      expect(await main(['roster', 'init', '--dir', dir], init.io)).toBe(0);
+      expect(init.lines[0]).toMatch(/186 fighters .*\(186 created, 0 kept\)/);
+      expect(existsSync(join(dir, 'README.md'))).toBe(true);
+
+      const t = capture();
+      const args = ['train', '--offline', '--bouts', '6', '--seed', '7', '--dir', dir, '--now', '2026-09-16T12:00:00Z'];
+      expect(await main(args, t.io)).toBe(0);
+      const text = t.lines.join('\n');
+      expect(text).toMatch(/Training camp: 6 bouts · \d+ fighters · \+\d+ XP · \d+ new lessons · \d+ level-ups/);
+      expect(t.lines.filter((l) => /camp-2026-09-16-s7-b\d+:/.test(l))).toHaveLength(6);
+
+      const again = capture();
+      expect(await main(['roster', 'init', '--dir', dir], again.io)).toBe(0);
+      expect(again.lines[0]).toMatch(/\(0 created, 186 kept\)/);
+
+      const r = capture();
+      expect(await main(['roster', '--dir', dir, '--top', '3'], r.io)).toBe(0);
+      const rows = r.lines.join('\n').split('\n').slice(2);
+      expect(rows).toHaveLength(3);
+      const topName = rows[0]!.split(/\s{2,}/)[1]!;
+
+      const top = readFileSync(join(dir, 'README.md'), 'utf8').match(/\| 1 \| \[[^\]]+\]\(([^)]+)\.md\)/)![1]!;
+      const f = capture();
+      expect(await main(['fighter', top, '--dir', dir], f.io)).toBe(0);
+      expect(f.lines[0]!.split('\n')[0]).toBe(`# ${topName}`);
+      expect(f.lines.join('\n')).toMatch(/## Bout log \([1-9]/);
+
+      const bad = capture();
+      expect(await main(['fighter', 'nobody-at-all', '--dir', dir], bad.io)).toBe(1);
+      expect(await main(['train', '--offline', '--pairing', 'chaos', '--dir', dir], bad.io)).toBe(1);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it('decide and arena persist growth with --roster', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'vk-cli-grow-'));
+    try {
+      const roster = join(dir, 'fighters');
+      const d = capture();
+      expect(await main(['decide', join(examples, 'problem.json'), '--offline', '--roster', roster], d.io)).toBe(0);
+      expect(d.lines.join('\n')).toMatch(/fighter growth saved/);
+      const standings = readFileSync(join(roster, 'README.md'), 'utf8');
+      expect(standings).toMatch(/\| 1 \| .* \| [1-9]\d* \| \d+-\d+-\d+ \|/);
+
+      const arenaFile = join(dir, 'arena.json');
+      writeFileSync(
+        arenaFile,
+        JSON.stringify({
+          maxTurns: 2,
+          topics: [{ topic: 'Is homework useful?', stances: { A: 'Yes', B: 'No' } }],
+          entrants: [
+            { id: 'hypatia', archetypeId: 'genius:hypatia', mock: { seed: 1 } },
+            { id: 'bot', mock: { seed: 2, personality: 'sloppy' } },
+          ],
+        }),
+        'utf8',
+      );
+      const a = capture();
+      expect(await main(['arena', arenaFile, '--offline', '--roster', roster], a.io)).toBe(0);
+      const hyp = JSON.parse(readFileSync(join(roster, 'hypatia.json'), 'utf8'));
+      expect(hyp.log).toHaveLength(2);
+      expect(hyp.log[0].opponent).toBe('bot');
+      expect(existsSync(join(roster, 'bot.json'))).toBe(false);
+
+      const e = capture();
+      expect(await main(['arena', arenaFile, '--offline', '--roster'], e.io)).toBe(1);
+      expect(e.errors.join('\n')).toMatch(/--roster needs a directory/);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   });
 });

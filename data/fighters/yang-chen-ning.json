@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "slug": "yang-chen-ning",
+  "name": "Chen-Ning Yang",
+  "wing": "lawfinders",
+  "xp": 751,
+  "level": 1,
+  "record": {
+    "matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:szk3kb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sir Richard Francis Burton broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-16-s42-b3",
+      "learnedAt": "2026-09-16T12:00:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:pllh85",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Sir Richard Francis Burton broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-16-s42-b3",
+      "learnedAt": "2026-09-16T12:00:02.000Z",
+      "seen": 2
+    },
+    {
+      "id": "technique:pllh85",
+      "kind": "technique",
+      "text": "Borrow this pattern from Sir Richard Francis Burton: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-16-s42-b3",
+      "learnedAt": "2026-09-16T12:00:02.000Z",
+      "seen": 2
+    },
+    {
+      "id": "blind:apg9wt",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Sir Richard Francis Burton was \"I just feel renewables and storage are the better path, that is all.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "captain-sir-richard-francis-burton",
+      "learnedFrom": "camp-2026-09-16-s42-b3",
+      "learnedAt": "2026-09-16T12:00:02.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7p0ydc",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Tu Youyou broke through with \"But note what just happened: your argument skipped the evidence entirely. Because nuclear power belongs in a clean grid, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-16-s42-b19",
+      "learnedAt": "2026-09-16T12:00:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1bfktx3",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Tu Youyou was \"Honestly renewables and storage are the better path.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "tu-youyou",
+      "learnedFrom": "camp-2026-09-16-s42-b19",
+      "learnedAt": "2026-09-16T12:00:18.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1ggook1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Marvin Minsky broke through with \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-16-s42-b34",
+      "learnedAt": "2026-09-16T12:00:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ggook1",
+      "kind": "technique",
+      "text": "Borrow this pattern from Marvin Minsky: \"But note what just happened: your argument skipped the evidence entirely. Because car-free downtowns make cities better, the documented cas…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-16-s42-b34",
+      "learnedAt": "2026-09-16T12:00:33.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:8sankm",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Marvin Minsky was \"It is obvious that car bans make downtowns worse.\" (soundness 0.65). State its premises and evidence before you use it again.",
+      "opponent": "marvin-minsky",
+      "learnedFrom": "camp-2026-09-16-s42-b34",
+      "learnedAt": "2026-09-16T12:00:33.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.045,
+      "formalism": 0.045,
+      "interrogation": 0.045,
+      "patience": 0.03
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b3",
+      "at": "2026-09-16T12:00:02.000Z",
+      "opponent": "captain-sir-richard-francis-burton",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 275,
+      "lessonsGained": [
+        "counter:szk3kb",
+        "counter:pllh85",
+        "technique:pllh85",
+        "blind:apg9wt"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b19",
+      "at": "2026-09-16T12:00:18.000Z",
+      "opponent": "tu-youyou",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 231,
+      "lessonsGained": [
+        "counter:7p0ydc",
+        "blind:1bfktx3"
+      ],
+      "lessonsReinforced": [
+        "counter:pllh85",
+        "technique:pllh85"
+      ],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b34",
+      "at": "2026-09-16T12:00:33.000Z",
+      "opponent": "marvin-minsky",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car bans make downtowns worse",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.65,
+      "fallacies": [],
+      "xpGained": 245,
+      "lessonsGained": [
+        "counter:1ggook1",
+        "technique:1ggook1",
+        "blind:8sankm"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

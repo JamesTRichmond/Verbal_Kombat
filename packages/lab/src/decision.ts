@@ -22,7 +22,7 @@ import {
 } from '@vk/core';
 import type { DebateAgent, ProposalAgent } from '@vk/debate';
 import type { Judge } from '@vk/judge';
-import { runCouncil, type CouncilOptions, type CouncilResult } from '@vk/replay';
+import { runCouncil, type CouncilOptions, type CouncilResult, type FighterStore } from '@vk/replay';
 
 export const STATUS_QUO_SEAT = 'status-quo';
 export const STATUS_QUO_CREDIBILITY = 0.5;
@@ -54,6 +54,8 @@ export interface DecisionConfig {
   /** How much a known prior counts against fight credibility (0..1). Default 0.3. */
   priorWeight?: number;
   runner?: CouncilOptions;
+  /** Persist growth: seats fight as their grown selves and learn from every bout. */
+  fighters?: FighterStore;
 }
 
 export type SensitivityDirection = 'halve' | 'double';
@@ -96,7 +98,12 @@ export async function runDecision(config: DecisionConfig): Promise<DecisionResul
       ...(config.prefer !== undefined ? { prefer: config.prefer } : {}),
       ...(config.homeWing !== undefined ? { homeWing: config.homeWing } : {}),
     },
-    { proposer: config.proposer, debater: config.debater, judge: config.judge },
+    {
+      proposer: config.proposer,
+      debater: config.debater,
+      judge: config.judge,
+      ...(config.fighters !== undefined ? { fighters: config.fighters } : {}),
+    },
     config.runner ?? {},
   );
 

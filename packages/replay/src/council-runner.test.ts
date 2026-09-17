@@ -76,3 +76,32 @@ describe('proposal parsing', () => {
     expect(prompt).toMatch(/career/);
   });
 });
+
+describe('runCouncil with persistent fighters', () => {
+  it('every seated fighter learns from every bout and carries lessons into the next council', async () => {
+    const { MemoryFighterStore } = await import('./council-runner.js');
+    const store = new MemoryFighterStore();
+    const seats = ['socrates', 'marie-curie', 'siddhartha-gautama'].map(getGenius);
+    const seenLessons: (string[] | undefined)[] = [];
+    const proposer = new ScriptedProposer(proposals);
+    const spy = {
+      kind: 'spy',
+      propose: async (ctx: Parameters<ScriptedProposer['propose']>[0]) => {
+        seenLessons.push(ctx.lessons);
+        return proposer.propose(ctx);
+      },
+    };
+    const deps = { proposer: spy, debater, judge: new HeuristicJudge(), fighters: store };
+    const cfg = { id: 'g1', problem: PROBLEM, profile: OWNER_DRAFT_PROFILE, mode: 'quick' as const, seats };
+    await runCouncil(cfg, deps, { now: () => new Date('2026-09-17T00:00:00Z') });
+    for (const s of seats) {
+      const rec = store.get(s.slug);
+      expect(rec.log).toHaveLength(2);
+      expect(rec.xp).toBeGreaterThan(0);
+    }
+    expect(seenLessons.slice(0, 3).every((l) => l === undefined)).toBe(true);
+    await runCouncil({ ...cfg, id: 'g2' }, deps);
+    expect(store.get('socrates').log).toHaveLength(4);
+    expect(seenLessons.slice(3).some((l) => (l?.length ?? 0) > 0)).toBe(true);
+  });
+});

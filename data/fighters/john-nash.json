@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "slug": "john-nash",
+  "name": "John Nash",
+  "wing": "strategists",
+  "xp": 323,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Bjarne Stroustrup.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b57",
+      "learnedAt": "2026-09-16T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:flz2hp",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bjarne Stroustrup broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because car bans make downtowns worse, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b57",
+      "learnedAt": "2026-09-16T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:7s46gj",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Bjarne Stroustrup broke through with \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b57",
+      "learnedAt": "2026-09-16T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:7s46gj",
+      "kind": "technique",
+      "text": "Borrow this pattern from Bjarne Stroustrup: \"Yet your position leaves the strongest counter-example untouched. Because car bans make downtowns worse, the documented cases show the bene…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b57",
+      "learnedAt": "2026-09-16T12:00:56.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:br8gh",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Bjarne Stroustrup was \"Consider the evidence first. Because car-free downtowns make cities better, the documented cases show the benefit holds when the conditions…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "bjarne-stroustrup",
+      "learnedFrom": "camp-2026-09-16-s42-b57",
+      "learnedAt": "2026-09-16T12:00:56.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b57",
+      "at": "2026-09-16T12:00:56.000Z",
+      "opponent": "bjarne-stroustrup",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should cities ban cars from downtown cores?",
+      "stance": "Car-free downtowns make cities better",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 78,
+      "arguments": 3,
+      "avgSoundness": 0.733,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 323,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:flz2hp",
+        "counter:7s46gj",
+        "technique:7s46gj",
+        "blind:br8gh"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

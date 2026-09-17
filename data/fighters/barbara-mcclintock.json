@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "slug": "barbara-mcclintock",
+  "name": "Barbara McClintock",
+  "wing": "experimenters",
+  "xp": 780,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 1,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:1ldsbqu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Percy Julian broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "percy-lavon-julian",
+      "learnedFrom": "camp-2026-09-16-s42-b18",
+      "learnedAt": "2026-09-16T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1k6lvmn",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Percy Julian broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "percy-lavon-julian",
+      "learnedFrom": "camp-2026-09-16-s42-b18",
+      "learnedAt": "2026-09-16T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:15t1oe9",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Percy Julian broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "percy-lavon-julian",
+      "learnedFrom": "camp-2026-09-16-s42-b18",
+      "learnedAt": "2026-09-16T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1ldsbqu",
+      "kind": "technique",
+      "text": "Borrow this pattern from Percy Julian: \"Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "percy-lavon-julian",
+      "learnedFrom": "camp-2026-09-16-s42-b18",
+      "learnedAt": "2026-09-16T12:00:17.000Z",
+      "seen": 2
+    },
+    {
+      "id": "blind:1albf4a",
+      "kind": "blind_spot",
+      "text": "Your moves against Percy Julian were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "percy-lavon-julian",
+      "learnedFrom": "camp-2026-09-16-s42-b18",
+      "learnedAt": "2026-09-16T12:00:17.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:b48u21",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Horton Conway broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "john-h-conway",
+      "learnedFrom": "camp-2026-09-16-s42-b49",
+      "learnedAt": "2026-09-16T12:00:48.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:wcopew",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: John Horton Conway broke through with \"Yet your position leaves the strongest counter-example untouched. Because homework builds lasting mastery, the documented cases show the be…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "john-h-conway",
+      "learnedFrom": "camp-2026-09-16-s42-b49",
+      "learnedAt": "2026-09-16T12:00:48.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.02,
+      "formalism": 0.02,
+      "interrogation": 0.02,
+      "patience": 0.02
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b18",
+      "at": "2026-09-16T12:00:17.000Z",
+      "opponent": "percy-lavon-julian",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 52,
+      "opponentIntegrity": 65,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework builds lasting mastery, the documented…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:1ldsbqu",
+        "counter:1k6lvmn",
+        "counter:15t1oe9",
+        "technique:1ldsbqu",
+        "blind:1albf4a"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b49",
+      "at": "2026-09-16T12:00:48.000Z",
+      "opponent": "john-h-conway",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 54,
+      "opponentIntegrity": 39,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because homework adds little beyond class time, the documented cases show…",
+      "xpGained": 407,
+      "lessonsGained": [
+        "counter:b48u21",
+        "counter:wcopew"
+      ],
+      "lessonsReinforced": [
+        "technique:1ldsbqu"
+      ],
+      "levelAfter": 1
+    }
+  ]
+}

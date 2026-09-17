@@ -9,6 +9,9 @@ import { COUNCIL_PROPOSALS } from './demo-council.js';
 import { CrownScreen, EvBoardScreen, LadderScreen } from './screens/council.js';
 import { ResultScreen, VsScreen } from './screens/match.js';
 import { ModeScreen, SelectScreen, TitleScreen } from './screens/menus.js';
+import { HallScreen } from './screens/hall.js';
+import { LearnedScreen } from './screens/learned.js';
+import { learnBout, uniqueBoutId } from './careers.js';
 
 export function toTitle(game: Game): void {
   game.go(new TitleScreen());
@@ -20,6 +23,10 @@ export function toMode(game: Game): void {
 
 export function toSelect(game: Game): void {
   game.go(new SelectScreen());
+}
+
+export function toHall(game: Game): void {
+  game.go(new HallScreen());
 }
 
 export function startExhibition(game: Game, a: Genius, b: Genius): void {
@@ -42,18 +49,23 @@ export function startExhibition(game: Game, a: Genius, b: Genius): void {
             fighters: { A: a, B: b },
             arena,
             title: 'EXHIBITION',
-            onDone: (gg, r) => gg.go(new ResultScreen(r, { A: a, B: b })),
+            onDone: (gg, r) => {
+              const learned = learnBout(r, { A: a.slug, B: b.slug }, uniqueBoutId(r.config.id));
+              gg.go(
+                new ResultScreen(r, { A: a, B: b }, (g3) =>
+                  g3.go(new LearnedScreen({ A: a, B: b }, learned, 'EXHIBITION - FREE WILL', toTitle)),
+                ),
+              );
+            },
           }),
         ),
     }),
   );
 }
 
-let councilCache: Promise<CouncilPlay> | null = null;
-
 export function startCouncil(game: Game): void {
-  councilCache ??= computeCouncil();
-  game.go(new LadderScreen(councilCache));
+  // Fresh every play: each council teaches its seats and saves their careers.
+  game.go(new LadderScreen(computeCouncil()));
 }
 
 export function councilBout(game: Game, play: CouncilPlay, k: number): void {
@@ -80,7 +92,10 @@ export function councilBout(game: Game, play: CouncilPlay, k: number): void {
             fighters: { A: b.A, B: b.B },
             arena: b.arena,
             title,
-            onDone: (gg) => gg.go(new EvBoardScreen(play, k + 1)),
+            onDone: (gg) =>
+              gg.go(
+                new LearnedScreen({ A: b.A, B: b.B }, b.learned, title, (g3) => g3.go(new EvBoardScreen(play, k + 1))),
+              ),
           }),
         ),
     }),

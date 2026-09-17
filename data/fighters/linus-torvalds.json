@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "slug": "linus-torvalds",
+  "name": "Linus Torvalds",
+  "wing": "builders",
+  "xp": 1245,
+  "level": 2,
+  "record": {
+    "matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:1er08j1",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James Sidis broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-16-s42-b36",
+      "learnedAt": "2026-09-16T12:00:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1rbol23",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: William James Sidis broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-16-s42-b36",
+      "learnedAt": "2026-09-16T12:00:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19pgg8q",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "william-james-sidis",
+      "learnedFrom": "camp-2026-09-16-s42-b36",
+      "learnedAt": "2026-09-16T12:00:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1jki1u2",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Nicolaus Copernicus broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because a four-day week keeps output and improves lives…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-16-s42-b37",
+      "learnedAt": "2026-09-16T12:00:36.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:170c1bx",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "copernicus",
+      "learnedFrom": "camp-2026-09-16-s42-b37",
+      "learnedAt": "2026-09-16T12:00:36.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1xjr92f",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terence Tao broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "terence-chi-shen-tao",
+      "learnedFrom": "camp-2026-09-16-s42-b45",
+      "learnedAt": "2026-09-16T12:00:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:tl1aof",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Terence Tao broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "terence-chi-shen-tao",
+      "learnedFrom": "camp-2026-09-16-s42-b45",
+      "learnedAt": "2026-09-16T12:00:44.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:9cwrna",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "terence-chi-shen-tao",
+      "learnedFrom": "camp-2026-09-16-s42-b45",
+      "learnedAt": "2026-09-16T12:00:44.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.01,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b36",
+      "at": "2026-09-16T12:00:35.000Z",
+      "opponent": "william-james-sidis",
+      "side": "B",
+      "result": "win",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first slows small teams down",
+      "finalIntegrity": 64,
+      "opponentIntegrity": 58,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:1er08j1",
+        "counter:1rbol23",
+        "technique:19pgg8q"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b37",
+      "at": "2026-09-16T12:00:36.000Z",
+      "opponent": "copernicus",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 39,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 399,
+      "lessonsGained": [
+        "counter:1jki1u2",
+        "technique:170c1bx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b45",
+      "at": "2026-09-16T12:00:44.000Z",
+      "opponent": "terence-chi-shen-tao",
+      "side": "A",
+      "result": "win",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance should be required",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 60,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:1xjr92f",
+        "counter:tl1aof",
+        "technique:9cwrna"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
+}

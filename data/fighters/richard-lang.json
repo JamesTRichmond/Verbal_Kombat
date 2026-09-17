@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "slug": "richard-lang",
+  "name": "Richard Lang",
+  "wing": "awakeners",
+  "xp": 387,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:1cv6vs5",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Socrates broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "socrates",
+      "learnedFrom": "camp-2026-09-16-s42-b50",
+      "learnedAt": "2026-09-16T12:00:49.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1xw7ote",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "socrates",
+      "learnedFrom": "camp-2026-09-16-s42-b50",
+      "learnedAt": "2026-09-16T12:00:49.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.005,
+      "formalism": 0.005,
+      "interrogation": 0.005,
+      "patience": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b50",
+      "at": "2026-09-16T12:00:49.000Z",
+      "opponent": "socrates",
+      "side": "B",
+      "result": "win",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Renewables and storage are the better path",
+      "finalIntegrity": 85,
+      "opponentIntegrity": 34,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…",
+      "xpGained": 387,
+      "lessonsGained": [
+        "counter:1cv6vs5",
+        "technique:1xw7ote"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

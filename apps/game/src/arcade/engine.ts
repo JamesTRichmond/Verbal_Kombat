@@ -54,6 +54,11 @@ export class Game {
     this.resize();
   }
 
+  /** The active screen (read-only probe for tests). */
+  get current(): Screen | null {
+    return this.screen;
+  }
+
   get screenName(): string {
     return this.screen?.name ?? '';
   }

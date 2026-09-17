@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "slug": "philip-emeagwali",
+  "name": "Philip Emeagwali",
+  "wing": "builders",
+  "xp": 282,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Maimonides.",
+      "opponent": "maimonides",
+      "learnedFrom": "camp-2026-09-16-s42-b51",
+      "learnedAt": "2026-09-16T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:glf0",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Maimonides broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "maimonides",
+      "learnedFrom": "camp-2026-09-16-s42-b51",
+      "learnedAt": "2026-09-16T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:glf0",
+      "kind": "technique",
+      "text": "Borrow this pattern from Maimonides: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "maimonides",
+      "learnedFrom": "camp-2026-09-16-s42-b51",
+      "learnedAt": "2026-09-16T12:00:50.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:u58k07",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Maimonides was \"Yet your position leaves the strongest counter-example untouched. Because personal finance does not need its own required course, the docum…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "maimonides",
+      "learnedFrom": "camp-2026-09-16-s42-b51",
+      "learnedAt": "2026-09-16T12:00:50.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.015,
+      "formalism": 0.015,
+      "interrogation": 0.015,
+      "patience": 0.015
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b51",
+      "at": "2026-09-16T12:00:50.000Z",
+      "opponent": "maimonides",
+      "side": "B",
+      "result": "loss",
+      "topic": "Should schools teach personal finance as a required course?",
+      "stance": "Personal finance does not need its own required course",
+      "finalIntegrity": 63,
+      "opponentIntegrity": 70,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "appeal_to_ignorance"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. Because personal finance does not need its own required course, t…",
+      "xpGained": 282,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "counter:glf0",
+        "technique:glf0",
+        "blind:u58k07"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

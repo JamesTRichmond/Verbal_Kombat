@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "slug": "lise-meitner",
+  "name": "Lise Meitner",
+  "wing": "experimenters",
+  "xp": 423,
+  "level": 1,
+  "record": {
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "draws": 0,
+    "fallaciesCommitted": 0
+  },
+  "lessons": [
+    {
+      "id": "counter:8wsog8",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Buckminster Fuller broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week keeps output and improves lives, the documented c…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b58",
+      "learnedAt": "2026-09-16T12:00:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:f1cx9n",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Buckminster Fuller broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b58",
+      "learnedAt": "2026-09-16T12:00:57.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:170c1bx",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "buckminster-fuller",
+      "learnedFrom": "camp-2026-09-16-s42-b58",
+      "learnedAt": "2026-09-16T12:00:57.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {},
+    "traitGains": {
+      "empiricism": 0.005,
+      "formalism": 0.005,
+      "interrogation": 0.005,
+      "patience": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b58",
+      "at": "2026-09-16T12:00:57.000Z",
+      "opponent": "buckminster-fuller",
+      "side": "B",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week costs more than it returns",
+      "finalIntegrity": 55,
+      "opponentIntegrity": 41,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:8wsog8",
+        "counter:f1cx9n",
+        "technique:170c1bx"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

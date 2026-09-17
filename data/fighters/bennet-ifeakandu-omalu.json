@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "slug": "bennet-ifeakandu-omalu",
+  "name": "Bennet Omalu",
+  "wing": "experimenters",
+  "xp": 593,
+  "level": 1,
+  "record": {
+    "matches": 2,
+    "wins": 1,
+    "losses": 1,
+    "draws": 0,
+    "fallaciesCommitted": 3
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_ignorance",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to ignorance (Treating the absence of disproof as proof (or the reverse)). It cost you against Rosalind Franklin.",
+      "opponent": "rosalind-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b15",
+      "learnedAt": "2026-09-16T12:00:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Rosalind Franklin.",
+      "opponent": "rosalind-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b15",
+      "learnedAt": "2026-09-16T12:00:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Rosalind Franklin.",
+      "opponent": "rosalind-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b15",
+      "learnedAt": "2026-09-16T12:00:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:iqqtow",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Rosalind Franklin was \"Start from the premise we can check. When the measured results are compared across studies, then the pattern is consistent, so it follows t…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "rosalind-franklin",
+      "learnedFrom": "camp-2026-09-16-s42-b15",
+      "learnedAt": "2026-09-16T12:00:14.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:k0bcty",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Voltaire broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-16-s42-b25",
+      "learnedAt": "2026-09-16T12:00:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1a65jkk",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Voltaire broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-16-s42-b25",
+      "learnedAt": "2026-09-16T12:00:24.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:g8g747",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "voltaire",
+      "learnedFrom": "camp-2026-09-16-s42-b25",
+      "learnedAt": "2026-09-16T12:00:24.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_ignorance": 0.05,
+      "ad_hominem": 0.05,
+      "appeal_to_emotion": 0.05
+    },
+    "traitGains": {
+      "patience": 0.02,
+      "empiricism": 0.005,
+      "formalism": 0.005,
+      "interrogation": 0.005
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b15",
+      "at": "2026-09-16T12:00:14.000Z",
+      "opponent": "rosalind-franklin",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework builds lasting mastery",
+      "finalIntegrity": 96,
+      "opponentIntegrity": 100,
+      "arguments": 3,
+      "avgSoundness": 0.2,
+      "fallacies": [
+        "appeal_to_ignorance",
+        "ad_hominem",
+        "appeal_to_emotion"
+      ],
+      "xpGained": 170,
+      "lessonsGained": [
+        "avoid:appeal_to_ignorance",
+        "avoid:ad_hominem",
+        "avoid:appeal_to_emotion",
+        "blind:iqqtow"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b25",
+      "at": "2026-09-16T12:00:24.000Z",
+      "opponent": "voltaire",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 53,
+      "opponentIntegrity": 36,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:k0bcty",
+        "counter:1a65jkk",
+        "technique:g8g747"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    }
+  ]
+}

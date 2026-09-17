@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "slug": "albert-einstein",
+  "name": "Albert Einstein",
+  "wing": "lawfinders",
+  "xp": 1753,
+  "level": 2,
+  "record": {
+    "matches": 5,
+    "wins": 3,
+    "losses": 2,
+    "draws": 0,
+    "fallaciesCommitted": 3
+  },
+  "lessons": [
+    {
+      "id": "avoid:appeal_to_emotion",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to emotion (Substituting feeling for reasoning). It cost you against Vincent van Gogh.",
+      "opponent": "vincent-van-gogh",
+      "learnedFrom": "camp-2026-09-16-s42-b9",
+      "learnedAt": "2026-09-16T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:appeal_to_popularity",
+      "kind": "avoid_fallacy",
+      "text": "Never use appeal to popularity (Everyone believes it, therefore it is true). It cost you against Vincent van Gogh.",
+      "opponent": "vincent-van-gogh",
+      "learnedFrom": "camp-2026-09-16-s42-b9",
+      "learnedAt": "2026-09-16T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1b9is2b",
+      "kind": "technique",
+      "text": "Your winning pattern: \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" — its premises led cleanly to the conclusion.",
+      "opponent": "vincent-van-gogh",
+      "learnedFrom": "camp-2026-09-16-s42-b9",
+      "learnedAt": "2026-09-16T12:00:08.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:slippery_slope",
+      "kind": "avoid_fallacy",
+      "text": "Never use slippery slope (Claiming one step inevitably cascades to catastrophe without support). It cost you against Srinivasa Ramanujan.",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-16-s42-b27",
+      "learnedAt": "2026-09-16T12:00:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19uu6s7",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Srinivasa Ramanujan broke through with \"But note what just happened: your argument skipped the evidence entirely. Because remote work protects deep focus, the documented cases sho…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-16-s42-b27",
+      "learnedAt": "2026-09-16T12:00:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:s56t90",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Srinivasa Ramanujan broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-16-s42-b27",
+      "learnedAt": "2026-09-16T12:00:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:s56t90",
+      "kind": "technique",
+      "text": "Borrow this pattern from Srinivasa Ramanujan: \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-16-s42-b27",
+      "learnedAt": "2026-09-16T12:00:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:gvrcq4",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Srinivasa Ramanujan was \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "srinivasa-ramanujan",
+      "learnedFrom": "camp-2026-09-16-s42-b27",
+      "learnedAt": "2026-09-16T12:00:26.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:cw5su8",
+      "kind": "technique",
+      "text": "Your winning pattern: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework adds little beyond class time, the doc…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "shing-tung-yau",
+      "learnedFrom": "camp-2026-09-16-s42-b28",
+      "learnedAt": "2026-09-16T12:00:27.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1xw7ote",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Simone de Beauvoir broke through with \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b31",
+      "learnedAt": "2026-09-16T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:kr4klv",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Simone de Beauvoir broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…\" (Clean argument. structure=1.00, evidence=1.00).",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b31",
+      "learnedAt": "2026-09-16T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1xw7ote",
+      "kind": "technique",
+      "text": "Borrow this pattern from Simone de Beauvoir: \"Yet your position leaves the strongest counter-example untouched. Because renewables and storage are the better path, the documented cases…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b31",
+      "learnedAt": "2026-09-16T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:wjdu0j",
+      "kind": "blind_spot",
+      "text": "Your moves against Simone de Beauvoir were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "simone-de-beauvoir",
+      "learnedFrom": "camp-2026-09-16-s42-b31",
+      "learnedAt": "2026-09-16T12:00:30.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1wc5s54",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Johann Sebastian Bach broke through with \"But note what just happened: your argument skipped the evidence entirely. Because a four-day week costs more than it returns, the documente…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-16-s42-b55",
+      "learnedAt": "2026-09-16T12:00:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:16zbtl",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Johann Sebastian Bach broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. The research found the effect repeatedly; since the pre…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-16-s42-b55",
+      "learnedAt": "2026-09-16T12:00:54.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:1y8w8rz",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "johann-sebastian-bach",
+      "learnedFrom": "camp-2026-09-16-s42-b55",
+      "learnedAt": "2026-09-16T12:00:54.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "appeal_to_emotion": 0.05,
+      "appeal_to_popularity": 0.05,
+      "slippery_slope": 0.05
+    },
+    "traitGains": {
+      "formalism": 0.045,
+      "interrogation": 0.03,
+      "empiricism": 0.04,
+      "patience": 0.025
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b9",
+      "at": "2026-09-16T12:00:08.000Z",
+      "opponent": "vincent-van-gogh",
+      "side": "B",
+      "result": "win",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 100,
+      "opponentIntegrity": 92,
+      "arguments": 3,
+      "avgSoundness": 0.467,
+      "fallacies": [
+        "appeal_to_emotion",
+        "appeal_to_popularity"
+      ],
+      "bestMove": "But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:appeal_to_emotion",
+        "avoid:appeal_to_popularity",
+        "technique:1b9is2b"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b27",
+      "at": "2026-09-16T12:00:26.000Z",
+      "opponent": "srinivasa-ramanujan",
+      "side": "B",
+      "result": "loss",
+      "topic": "Is remote work better for deep work?",
+      "stance": "Offices produce better deep work",
+      "finalIntegrity": 61,
+      "opponentIntegrity": 62,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "slippery_slope"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. Because offices produce better deep work, the documented cases show the b…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:slippery_slope",
+        "counter:19uu6s7",
+        "counter:s56t90",
+        "technique:s56t90",
+        "blind:gvrcq4"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b28",
+      "at": "2026-09-16T12:00:27.000Z",
+      "opponent": "shing-tung-yau",
+      "side": "B",
+      "result": "win",
+      "topic": "Is homework worth assigning?",
+      "stance": "Homework adds little beyond class time",
+      "finalIntegrity": 92,
+      "opponentIntegrity": 52,
+      "arguments": 3,
+      "avgSoundness": 0.825,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because homework adds little beyond class time, the doc…",
+      "xpGained": 357,
+      "lessonsGained": [
+        "technique:cw5su8"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b31",
+      "at": "2026-09-16T12:00:30.000Z",
+      "opponent": "simone-de-beauvoir",
+      "side": "A",
+      "result": "loss",
+      "topic": "Is nuclear power a sensible part of a clean grid?",
+      "stance": "Nuclear power belongs in a clean grid",
+      "finalIntegrity": 61,
+      "opponentIntegrity": 62,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. Because nuclear power belongs in a clean grid, the docu…",
+      "xpGained": 343,
+      "lessonsGained": [
+        "counter:1xw7ote",
+        "counter:kr4klv",
+        "technique:1xw7ote",
+        "blind:wjdu0j"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b55",
+      "at": "2026-09-16T12:00:54.000Z",
+      "opponent": "johann-sebastian-bach",
+      "side": "A",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 73,
+      "opponentIntegrity": 47,
+      "arguments": 3,
+      "avgSoundness": 0.942,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…",
+      "xpGained": 429,
+      "lessonsGained": [
+        "counter:1wc5s54",
+        "counter:16zbtl",
+        "technique:1y8w8rz"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
+}

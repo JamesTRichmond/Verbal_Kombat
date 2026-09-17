@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "slug": "william-james-sidis",
+  "name": "William James Sidis",
+  "wing": "pattern_seers",
+  "xp": 1108,
+  "level": 2,
+  "record": {
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "draws": 0,
+    "fallaciesCommitted": 1
+  },
+  "lessons": [
+    {
+      "id": "counter:zz2lgu",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Abraham Maslow broke through with \"Yet your position leaves the strongest counter-example untouched. Because a four-day week costs more than it returns, the documented cases…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-16-s42-b17",
+      "learnedAt": "2026-09-16T12:00:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:bbetqf",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Abraham Maslow broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-16-s42-b17",
+      "learnedAt": "2026-09-16T12:00:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:mh1b6d",
+      "kind": "technique",
+      "text": "Your winning pattern: \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" — it answered the opponent directly, it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "abraham-maslow",
+      "learnedFrom": "camp-2026-09-16-s42-b17",
+      "learnedAt": "2026-09-16T12:00:16.000Z",
+      "seen": 1
+    },
+    {
+      "id": "avoid:ad_hominem",
+      "kind": "avoid_fallacy",
+      "text": "Never use ad hominem (Attacking the arguer instead of the argument). It cost you against Magnus Carlsen.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:13p8hj3",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Magnus Carlsen broke through with \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:1u5z5np",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Magnus Carlsen broke through with \"Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:13p8hj3",
+      "kind": "technique",
+      "text": "Borrow this pattern from Magnus Carlsen: \"Yet your position leaves the strongest counter-example untouched. When the measured results are compared across studies, then the pattern i…\" — it answered the opponent directly, its premises led cleanly to the conclusion.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1pnyp3f",
+      "kind": "blind_spot",
+      "text": "Your weakest move against Magnus Carlsen was \"Look at what the data shows. The research found the effect repeatedly; since the premise survives testing, the conclusion that tests first…\" (soundness 0.20). State its premises and evidence before you use it again.",
+      "opponent": "magnus-carlsen",
+      "learnedFrom": "camp-2026-09-16-s42-b30",
+      "learnedAt": "2026-09-16T12:00:29.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:19pgg8q",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Linus Torvalds broke through with \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b36",
+      "learnedAt": "2026-09-16T12:00:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:14czikb",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Linus Torvalds broke through with \"But note what just happened: your argument skipped the evidence entirely. The research found the effect repeatedly; since the premise survi…\" (Clean argument. structure=0.50, evidence=1.00).",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b36",
+      "learnedAt": "2026-09-16T12:00:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "counter:o8ivyx",
+      "kind": "counter",
+      "text": "Prepare an answer before you assert: Linus Torvalds broke through with \"But note what just happened: your argument skipped the evidence entirely. When the measured results are compared across studies, then the p…\" (Clean argument. structure=1.00, evidence=0.50).",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b36",
+      "learnedAt": "2026-09-16T12:00:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "technique:19pgg8q",
+      "kind": "technique",
+      "text": "Borrow this pattern from Linus Torvalds: \"However, your premise assumes what it needs to prove, and the data shows otherwise. Because tests first slows small teams down, the documen…\" — it carried evidence, its premises led cleanly to the conclusion.",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b36",
+      "learnedAt": "2026-09-16T12:00:35.000Z",
+      "seen": 1
+    },
+    {
+      "id": "blind:1nxqq90",
+      "kind": "blind_spot",
+      "text": "Your moves against Linus Torvalds were sound but not enough. Answer their strongest point directly before advancing your own.",
+      "opponent": "linus-torvalds",
+      "learnedFrom": "camp-2026-09-16-s42-b36",
+      "learnedAt": "2026-09-16T12:00:35.000Z",
+      "seen": 1
+    }
+  ],
+  "strengths": {
+    "fallacyWards": {
+      "ad_hominem": 0.05
+    },
+    "traitGains": {
+      "empiricism": 0.035,
+      "formalism": 0.035,
+      "interrogation": 0.035,
+      "patience": 0.02
+    }
+  },
+  "log": [
+    {
+      "boutId": "camp-2026-09-16-s42-b17",
+      "at": "2026-09-16T12:00:16.000Z",
+      "opponent": "abraham-maslow",
+      "side": "A",
+      "result": "win",
+      "topic": "Is a four-day work week a good default?",
+      "stance": "A four-day week keeps output and improves lives",
+      "finalIntegrity": 66,
+      "opponentIntegrity": 43,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 423,
+      "lessonsGained": [
+        "counter:zz2lgu",
+        "counter:bbetqf",
+        "technique:mh1b6d"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b30",
+      "at": "2026-09-16T12:00:29.000Z",
+      "opponent": "magnus-carlsen",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 47,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.617,
+      "fallacies": [
+        "ad_hominem"
+      ],
+      "bestMove": "Yet your position leaves the strongest counter-example untouched. The research found the effect repeatedly; since the premise survives test…",
+      "xpGained": 312,
+      "lessonsGained": [
+        "avoid:ad_hominem",
+        "counter:13p8hj3",
+        "counter:1u5z5np",
+        "technique:13p8hj3",
+        "blind:1pnyp3f"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 1
+    },
+    {
+      "boutId": "camp-2026-09-16-s42-b36",
+      "at": "2026-09-16T12:00:35.000Z",
+      "opponent": "linus-torvalds",
+      "side": "A",
+      "result": "loss",
+      "topic": "Should small teams write tests first?",
+      "stance": "Tests first pays for itself",
+      "finalIntegrity": 58,
+      "opponentIntegrity": 64,
+      "arguments": 3,
+      "avgSoundness": 0.883,
+      "fallacies": [],
+      "bestMove": "However, your premise assumes what it needs to prove, and the data shows otherwise. When the measured results are compared across studies,…",
+      "xpGained": 373,
+      "lessonsGained": [
+        "counter:19pgg8q",
+        "counter:14czikb",
+        "counter:o8ivyx",
+        "technique:19pgg8q",
+        "blind:1nxqq90"
+      ],
+      "lessonsReinforced": [],
+      "levelAfter": 2
+    }
+  ]
+}

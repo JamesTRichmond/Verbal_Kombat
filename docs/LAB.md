@@ -11,7 +11,11 @@ The lab is the headless side of Verbal Kombat, with no rendering. It uses the sa
 npm run lab -- decide packages/lab/examples/problem.json --offline [--mode quick|council|full] [--out report.md] [--journal journal.json]
 npm run lab -- arena  packages/lab/examples/arena.json  --offline
 npm run lab -- brier  journal.json
+npm run lab -- roster init | roster [--top N] | fighter <slug>      # careers in data/fighters (--dir to change)
+npm run lab -- train --offline [--bouts N] [--seed S] [--pairing random|weakest-vs-strongest|wing-rivals] [--now ISO]
 ```
+
+`decide` and `arena` accept `--roster <dir>`. With it, genius fighters fight as their grown selves and save what they learn after every bout. See [GROWTH.md](GROWTH.md).
 
 - `--offline` runs `MockChatClient` for agents together with `HeuristicJudge`. It is deterministic, needs no keys, and is the mode CI should use.
 - Without `--offline` the lab calls an OpenAI-compatible endpoint (`OpenAiChatClient`), configured through these environment variables:
