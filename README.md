@@ -42,3 +42,6 @@ DebateAgent (B)  ─┘                                                    │
 Verbal Kombat is a reinforcement learning engine wearing a fighting game as its face. Every match is a self-play episode; every punished fallacy is a gradient signal (`rewardSignal` in `@vk/core`). Fighters accumulate XP, and users spend it on upgrades, weapons (offensive techniques), and armor (fallacy resistances). At level 5 a fighter unlocks **Problem Mode**: describe a real problem you're stuck on, the program synthesizes a fighter out of it, and your trained fighter battles it until the fight has produced sound logical reasoning on how to proceed.
 
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) and [`docs/ROADMAP.md`](docs/ROADMAP.md).
+Contributors using GitHub Copilot can use the repository-specific
+[`Copilot memory playbook`](docs/COPILOT-MEMORY.md) to capture durable facts without
+turning memory into a stale copy of the codebase.
