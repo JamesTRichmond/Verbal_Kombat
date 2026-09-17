@@ -150,7 +150,7 @@ describe('proposal-aware outcome credibility', () => {
 
   it('a clean rebuttal that names one outcome discounts only that outcome', () => {
     const r = replay(70, 40, 0, [hit('the jackpot payout is a fantasy', 0.8)]);
-    const oc = outcomeCredibilitiesFrom(two, [{ seat: 's', replay: r, side: 'A' }]);
+    const oc = outcomeCredibilitiesFrom(two, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
     expect(oc[0]).toBeLessThan(1);
     expect(oc[1]).toBe(1);
     const scored = scoreProposal(two, OWNER_DRAFT_PROFILE, 1, 0.2, oc);
@@ -166,7 +166,7 @@ describe('proposal-aware outcome credibility', () => {
       outcomes: [{ description: 'steady gain', probability: 0.5, impacts: { income: 1 } }],
     };
     const r = replay(70, 40, 0, [hit('I am against this plan', 0.9)]);
-    const oc = outcomeCredibilitiesFrom(p, [{ seat: 's', replay: r, side: 'A' }]);
+    const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
     expect(oc).toEqual([1]);
   });
 
@@ -178,7 +178,7 @@ describe('proposal-aware outcome credibility', () => {
       outcomes: [{ description: 'regulatory fine risk', probability: 0.9, impacts: { income: -1 } }],
     };
     const r = replay(70, 40, 0, [hit('the regulatory fine risk is very likely', 0.8)]);
-    const oc = outcomeCredibilitiesFrom(p, [{ seat: 's', replay: r, side: 'A' }]);
+    const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
     const plain = scoreProposal(p, OWNER_DRAFT_PROFILE, 0.2, 0.2, [1]);
     const warned = scoreProposal(p, OWNER_DRAFT_PROFILE, 0.2, 0.2, oc);
     expect(oc[0]).toBeGreaterThan(1);
@@ -186,9 +186,21 @@ describe('proposal-aware outcome credibility', () => {
     expect(warned.calibratedEV).toBeLessThan(plain.calibratedEV);
   });
 
+  it('clean rebuttals that dispute harmful outcomes cut their credibility instead of reinforcing them', () => {
+    const p: Proposal = {
+      seat: 's',
+      answer: 'a',
+      reasoning: 'r',
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.9, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the regulatory fine risk is implausible', 0.8)]);
+    const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(oc[0]).toBeLessThan(1);
+  });
+
   it('fallacious swings at an outcome do not cut its credibility', () => {
     const r = replay(70, 40, 0, [hit('jackpot payout is doomed', 0.9, ['ad_hominem'])]);
-    const oc = outcomeCredibilitiesFrom(two, [{ seat: 's', replay: r, side: 'A' }]);
+    const oc = outcomeCredibilitiesFrom(two, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
     expect(oc).toEqual([1, 1]);
   });
 });
