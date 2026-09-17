@@ -215,6 +215,7 @@ export function outcomeCredibilitiesFrom(
     if (tokens.length === 0) return 1;
     const tok = new Set(tokens);
     const harmful = mattersScore(profile, o.impacts) < 0;
+    const challengePatterns = harmful ? challengePatternsFor(tokens) : [];
     let c = 1;
     for (const { replay, side } of bouts) {
       for (const e of replay.entries) {
@@ -226,7 +227,7 @@ export function outcomeCredibilitiesFrom(
         const hay = outcomeTokens(transcript);
         if (!hay.some((t) => tok.has(t))) continue;
         const hit = 0.6 * clamp(force, 0, 1);
-        const challenges = harmful && challengesOutcome(transcript, tokens);
+        const challenges = harmful && challengesOutcome(transcript, challengePatterns);
         c = harmful && !challenges ? clamp(c * (1 + hit), 0, 2) : clamp(c * (1 - hit), 0, 2);
       }
     }
@@ -363,17 +364,23 @@ function clamp(x: number, lo: number, hi: number): number {
   return Number.isFinite(x) ? Math.min(hi, Math.max(lo, x)) : lo;
 }
 
-function challengesOutcome(text: string, tokens: string[]): boolean {
+function challengesOutcome(text: string, patterns: RegExp[]): boolean {
   const lower = text.toLowerCase();
-  return tokens.some((token) => {
-    const t = escapeRegex(token);
-    return new RegExp(`\\b${t}\\b.{0,40}\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b`).test(lower)
-      || new RegExp(`\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b.{0,40}\\b${t}\\b`).test(lower);
-  });
+  return patterns.some((pattern) => pattern.test(lower));
 }
 
 const OUTCOME_CHALLENGE_PATTERN =
   "unlikely|implausible|improbable|avoid|avoids|prevent|prevents|prevented|reduce|reduces|reduced|mitigate|mitigates|mitigated|doubtful|false|fantasy|wrong|not|never|no|less likely|not supported";
+
+function challengePatternsFor(tokens: string[]): RegExp[] {
+  return tokens.flatMap((token) => {
+    const t = escapeRegex(token);
+    return [
+      new RegExp(`\\b${t}\\b.{0,40}\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b`),
+      new RegExp(`\\b(?:${OUTCOME_CHALLENGE_PATTERN})\\b.{0,40}\\b${t}\\b`),
+    ];
+  });
+}
 
 function escapeRegex(text: string): string {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
