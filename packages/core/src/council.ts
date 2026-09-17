@@ -12,9 +12,10 @@
  * fighter standing.
  *
  *   EV(proposal) = Σ_k  p'_k × m'_k
- *   p'_k = c·p_k + (1−c)·skepticalPrior       (broken positions regress toward doubt)
- *   m'_k = c·m_k                              (broken positions can't vouch for their stakes)
- *   c    = credibility earned in the fights (0..1)
+ *   p'_k = c_k·p_k + (1−c_k)·skepticalPrior
+ *   m'_k = c_k·m_k
+ *   c_k  = seat credibility × per-outcome credibility
+ *          (a rebuttal that names one outcome hits that outcome, not the rest)
  */
 
 import type { MatchReplay } from './replay.js';
@@ -101,6 +102,8 @@ export interface ScoredOutcome extends ProposalOutcome {
   matters: number;
   calibratedProbability: number;
   calibratedMatters: number;
+  /** Seat credibility × targeted-rebuttal discount for this outcome. */
+  credibility: number;
 }
 
 export interface ProposalScore {
@@ -126,14 +129,18 @@ export function scoreProposal(
   profile: ValueProfile,
   credibility: number,
   skepticalPrior = SKEPTICAL_PRIOR,
+  outcomeCredibility?: number[],
 ): ProposalScore {
-  const c = clamp(credibility, 0, 1);
-  const outcomes: ScoredOutcome[] = proposal.outcomes.map((o) => {
+  const seatC = clamp(credibility, 0, 1);
+  const outcomes: ScoredOutcome[] = proposal.outcomes.map((o, i) => {
     const p = clamp(o.probability, 0, 1);
     const m = mattersScore(profile, o.impacts);
+    const oc = clamp(outcomeCredibility?.[i] ?? 1, 0, 1);
+    const c = clamp(seatC * oc, 0, 1);
     return {
       ...o,
       matters: m,
+      credibility: c,
       calibratedProbability: c * p + (1 - c) * skepticalPrior,
       calibratedMatters: c * m,
     };
@@ -141,7 +148,7 @@ export function scoreProposal(
   return {
     seat: proposal.seat,
     claimedEV: claimedExpectedValue(proposal, profile),
-    credibility: c,
+    credibility: seatC,
     calibratedEV: outcomes.reduce((s, o) => s + o.calibratedProbability * o.calibratedMatters, 0),
     outcomes,
   };
@@ -172,6 +179,47 @@ export function credibilityFrom(bouts: BoutRecord[]): number {
     return clamp(integrity * 0.85 + winBonus + 0.05 - fallacies * 0.05, 0, 1);
   });
   return per.reduce((s, x) => s + x, 0) / per.length;
+}
+
+const OUTCOME_STOPWORDS = new Set([
+  'that', 'this', 'with', 'from', 'into', 'onto', 'over', 'under', 'than',
+  'then', 'when', 'what', 'which', 'while', 'have', 'will', 'would', 'could',
+  'should', 'about', 'after', 'before', 'their', 'there', 'these', 'those',
+  'them', 'they', 'just', 'only', 'also', 'very', 'more', 'most', 'some',
+]);
+
+/** Tokens from an outcome description that a rebuttal can name. */
+export function outcomeTokens(description: string): string[] {
+  return description
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length >= 4 && !OUTCOME_STOPWORDS.has(w));
+}
+
+/**
+ * Per-outcome credibility starts at 1. An opponent utterance that names
+ * tokens from that outcome and lands a clean rebuttal (rebuttalForce > 0,
+ * no fallacy) multiplies that outcome's credibility — the rest of the
+ * proposal is left to seat-level credibilityFrom.
+ */
+export function outcomeCredibilitiesFrom(proposal: Proposal, bouts: BoutRecord[]): number[] {
+  return proposal.outcomes.map((o) => {
+    const tokens = outcomeTokens(o.description);
+    if (tokens.length === 0) return 1;
+    let c = 1;
+    for (const { replay, side } of bouts) {
+      for (const e of replay.entries) {
+        if (e.argument.side === side) continue;
+        if (e.verdict.fallacies.length > 0) continue;
+        const force = e.verdict.rebuttalForce;
+        if (!(force > 0)) continue;
+        const hay = `${e.argument.text} ${e.verdict.rationale}`.toLowerCase();
+        if (!tokens.some((t) => hay.includes(t))) continue;
+        c = clamp(c * (1 - 0.6 * clamp(force, 0, 1)), 0, 1);
+      }
+    }
+    return c;
+  });
 }
 
 /* ------------------------------------------------------------------ */
@@ -278,9 +326,16 @@ export function crownCouncil(
 ): CouncilVerdict {
   if (proposals.length === 0) throw new Error('A council needs at least one proposal');
   const standings = proposals
-    .map((p) =>
-      scoreProposal(p, profile, credibilityFrom(bouts.filter((b) => b.seat === p.seat)), skepticalPrior),
-    )
+    .map((p) => {
+      const mine = bouts.filter((b) => b.seat === p.seat);
+      return scoreProposal(
+        p,
+        profile,
+        credibilityFrom(mine),
+        skepticalPrior,
+        outcomeCredibilitiesFrom(p, mine),
+      );
+    })
     .sort((a, b) => b.calibratedEV - a.calibratedEV);
   const loudest = [...standings].sort((a, b) => b.claimedEV - a.claimedEV)[0]!;
   const champion = standings[0]!;
