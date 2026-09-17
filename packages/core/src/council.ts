@@ -241,6 +241,7 @@ export function outcomeCredibilitiesFrom(
         // an outcome by itself. Require a discriminating token or two matches.
         if (!hits.some((t) => tokenFrequency.get(t) === 1) && hits.length < 2) continue;
         const hit = 0.6 * clamp(force, 0, 1);
+        if (e.verdict.rebuttalDirection === 'unclear') continue;
         const direction = e.verdict.rebuttalDirection === 'supports' || e.verdict.rebuttalDirection === 'challenges'
           ? e.verdict.rebuttalDirection
           : challengesOutcome(transcript, tokens) ? 'challenges' : 'supports';
