@@ -56,6 +56,7 @@ Each command takes `--dir <path>` (default `data/fighters`) to use a different r
 - `random`: any two fighters.
 - `weakest-vs-strongest`: a fighter from the bottom quarter of the standings against one from the top quarter.
 - `wing-rivals`: two fighters from two different wings.
+- `least-fought`: the two fighters with the fewest bouts meet, so the whole roster levels evenly.
 
 Topics come from `packages/lab/examples/topics.json`, or from the file you pass with `--topics`.
 

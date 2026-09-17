@@ -7,7 +7,7 @@
  *   npm run lab -- roster init [--dir data/fighters]
  *   npm run lab -- roster [--dir data/fighters] [--top N]
  *   npm run lab -- fighter <slug> [--dir data/fighters]
- *   npm run lab -- train [--bouts N] [--seed S] [--pairing random|weakest-vs-strongest|wing-rivals] [--offline] [--dir data/fighters] [--now ISO] [--topics topics.json] [--turns N]
+ *   npm run lab -- train [--bouts N] [--seed S] [--pairing random|weakest-vs-strongest|wing-rivals|least-fought] [--offline] [--dir data/fighters] [--now ISO] [--topics topics.json] [--turns N]
  *
  * decide and arena take --roster <dir> to persist fighter growth there.
  *

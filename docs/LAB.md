@@ -12,7 +12,7 @@ npm run lab -- decide packages/lab/examples/problem.json --offline [--mode quick
 npm run lab -- arena  packages/lab/examples/arena.json  --offline
 npm run lab -- brier  journal.json
 npm run lab -- roster init | roster [--top N] | fighter <slug>      # careers in data/fighters (--dir to change)
-npm run lab -- train --offline [--bouts N] [--seed S] [--pairing random|weakest-vs-strongest|wing-rivals] [--now ISO]
+npm run lab -- train --offline [--bouts N] [--seed S] [--pairing random|weakest-vs-strongest|wing-rivals|least-fought] [--now ISO]
 ```
 
 `decide` and `arena` accept `--roster <dir>`. With it, genius fighters fight as their grown selves and save what they learn after every bout. See [GROWTH.md](GROWTH.md).
