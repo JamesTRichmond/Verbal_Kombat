@@ -42,6 +42,8 @@ export interface RunnerOptions {
   archetypes?: Partial<Record<Side, FighterArchetype>>;
   /** Learned lessons per side, forwarded to agents (growth memory). */
   lessons?: Partial<Record<Side, string[]>>;
+  /** Proposal outcomes, forwarded to agents without changing canonical stances. */
+  proposalOutcomes?: Partial<Record<Side, string[]>>;
   /** Opposing proposal outcomes, forwarded to judges for structured outcome targeting. */
   opposingOutcomes?: Partial<Record<Side, string[]>>;
   onExchange?: (exchange: Exchange) => void | Promise<void>;
@@ -72,6 +74,8 @@ export async function runMatch(
       topic: config.topic,
       stance: config.stances[current],
       opposingStance: config.stances[current === 'A' ? 'B' : 'A'],
+      ...(opts.proposalOutcomes?.[current] ? { proposalOutcomes: opts.proposalOutcomes[current] } : {}),
+      ...(opts.opposingOutcomes?.[current] ? { opposingOutcomes: opts.opposingOutcomes[current] } : {}),
       side: current,
       ...(archetype !== undefined ? { archetype } : {}),
       ...(lessons !== undefined ? { lessons } : {}),

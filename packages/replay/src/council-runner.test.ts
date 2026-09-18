@@ -59,12 +59,7 @@ describe('runCouncil', () => {
     const evs = result.verdict.standings.map((s) => s.calibratedEV);
     expect([...evs].sort((a, b) => b - a)).toEqual(evs);
     expect(result.verdict.champion.seat).toBe(result.verdict.standings[0]!.seat);
-    // Fighters' stances are their own proposals.
-    expect(result.bouts[0]!.replay.config.stances.A).toContain(proposals.socrates!.answer);
-    expect(result.bouts[0]!.replay.config.stances.A).toContain('Predicted outcomes:');
-    expect(result.bouts[0]!.replay.config.stances.A).toContain(
-      proposals.socrates!.outcomes[0]!.description,
-    );
+    expect(result.bouts[0]!.replay.config.stances.A).toBe(proposals.socrates!.answer);
   });
 
   it('gives each debater the opposing proposal and outcomes as separate context', async () => {
@@ -79,8 +74,15 @@ describe('runCouncil', () => {
       { proposer: new ScriptedProposer(proposals), debater: observingDebater, judge: new HeuristicJudge() },
     );
     expect(contexts[0]!.stance).toContain(proposals.socrates!.answer);
-    expect(contexts[0]!.opposingStance).toContain(proposals['marie-curie']!.answer);
-    expect(contexts[0]!.opposingStance).toContain(proposals['marie-curie']!.outcomes[0]!.description);
+    expect(contexts[0]!.opposingStance).toBe(proposals['marie-curie']!.answer);
+    expect(contexts[0]!.proposalOutcomes).toEqual([
+      '1. Clear demo that lands interviews (p=0.50)',
+      '2. Scope creep delays everything (p=0.30)',
+    ]);
+    expect(contexts[0]!.opposingOutcomes).toEqual([
+      '1. Real signal from viewers (p=0.70)',
+      '2. Nobody looks (p=0.30)',
+    ]);
   });
 
   it('gives the judge the opposing outcomes for structured rebuttal targeting', async () => {
@@ -109,8 +111,14 @@ describe('runCouncil', () => {
       { id: 'judge-context', problem: PROBLEM, profile: OWNER_DRAFT_PROFILE, mode: 'quick', seats },
       { proposer: new ScriptedProposer(proposals), debater, judge },
     );
-    expect(seen[0]).toEqual(proposals['marie-curie']!.outcomes.map((o) => o.description));
-    expect(seen[1]).toEqual(proposals.socrates!.outcomes.map((o) => o.description));
+    expect(seen[0]).toEqual([
+      '1. Real signal from viewers (p=0.70)',
+      '2. Nobody looks (p=0.30)',
+    ]);
+    expect(seen[1]).toEqual([
+      '1. Clear demo that lands interviews (p=0.50)',
+      '2. Scope creep delays everything (p=0.30)',
+    ]);
   });
 });
 

@@ -142,7 +142,7 @@ export async function runCouncil(
     const match: MatchConfig = {
       id,
       topic: `${config.problem} — which answer should ${config.profile.ownerName} act on?`,
-      stances: { A: stanceFromProposal(pa), B: stanceFromProposal(pb) },
+      stances: { A: pa.answer, B: pb.answer },
       fighters: { A: `genius:${a.slug}`, B: `genius:${b.slug}` },
       mode: 'problem',
       problemStatement: config.problem,
@@ -175,9 +175,13 @@ export async function runCouncil(
               },
             }
           : {}),
+        proposalOutcomes: {
+          A: pa.outcomes.map(formatOutcomeForContext),
+          B: pb.outcomes.map(formatOutcomeForContext),
+        },
         opposingOutcomes: {
-          A: pb.outcomes.map((o) => o.description),
-          B: pa.outcomes.map((o) => o.description),
+          A: pb.outcomes.map(formatOutcomeForContext),
+          B: pa.outcomes.map(formatOutcomeForContext),
         },
         onExchange: (ex) => opts.onExchange?.(id, ex),
       },
@@ -201,11 +205,6 @@ export async function runCouncil(
   return { seats, proposals, bouts, verdict: crownCouncil(proposals, config.profile, records) };
 }
 
-function stanceFromProposal(proposal: Proposal): string {
-  const outcomes = proposal.outcomes
-    .map((o, i) => `${i + 1}. ${o.description} (p=${Math.max(0, Math.min(1, o.probability)).toFixed(2)})`)
-    .join('\n');
-  return outcomes.length > 0
-    ? `${proposal.answer}\nPredicted outcomes:\n${outcomes}`
-    : proposal.answer;
+function formatOutcomeForContext(outcome: Proposal['outcomes'][number], index: number): string {
+  return `${index + 1}. ${outcome.description} (p=${Math.max(0, Math.min(1, outcome.probability)).toFixed(2)})`;
 }
