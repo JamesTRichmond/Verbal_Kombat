@@ -3,9 +3,9 @@
  *
  *   1. Seat the council (quick 3 / council 7 / full 12).
  *   2. Every seat proposes an answer + outcomes (p × matters-to-owner).
- *   3. Round robin: every pair of seats fights. Each fighter's stance is its
- *      own proposal, so the blood on screen is the cross-examination of
- *      those proposals.
+ *   3. Pair seats (full round robin by default; optional Swiss + bout cap).
+ *      Each fighter's stance is its own proposal, so the blood on screen is
+ *      the cross-examination of those proposals.
  *   4. Crown: fights set each seat's credibility; credibility calibrates the
  *      claimed odds and stakes; highest calibrated EV wins.
  *
@@ -21,7 +21,7 @@ import {
   newFighterRecord,
   type BoutLearning,
   type GeniusFighterRecord,
-  roundRobin,
+  pairCouncil,
   seatCouncil,
   type BoutRecord,
   type CouncilMode,
@@ -29,6 +29,7 @@ import {
   type Genius,
   type MatchConfig,
   type MatchReplay,
+  type PairingOptions,
   type Proposal,
   type ValueProfile,
   type WingId,
@@ -47,6 +48,8 @@ export interface CouncilConfig {
   prefer?: string[];
   /** Or seat an explicit list and skip the seating rules. */
   seats?: Genius[];
+  /** Pairing budget. Omit for full round robin (21 bouts in council mode). */
+  pairing?: PairingOptions;
 }
 
 /**
@@ -135,7 +138,7 @@ export async function runCouncil(
   const records: BoutRecord[] = [];
   const bouts: CouncilResult['bouts'] = [];
   let n = 0;
-  for (const [a, b] of roundRobin(seats)) {
+  for (const [a, b] of pairCouncil(seats, config.pairing ?? {})) {
     const id = `${config.id}-bout${++n}`;
     const pa = proposalFor(a.slug);
     const pb = proposalFor(b.slug);

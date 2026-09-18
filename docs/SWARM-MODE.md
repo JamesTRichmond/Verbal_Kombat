@@ -30,7 +30,7 @@ A genius = wing traits (how it fights) + its one-line method (what it argues wit
 ```
 problem ──▶ seatCouncil ──▶ Proposer (per seat) ──▶ Proposal { answer, outcomes[p, impacts] }
                                                      │
-            round robin: every pair fights, stance = own proposal
+            pairCouncil: round robin by default; Swiss + boutCap optional
                                                      │
             runMatch ──▶ replays ──▶ credibilityFrom ──▶ scoreProposal ──▶ crownCouncil
 ```
@@ -66,16 +66,16 @@ Calibration:
 ## Built in this slice
 
 - `@vk/core/geniuses.ts` — 12 wings, 186 geniuses, `geniusArchetype()`
-- `@vk/core/council.ts` — value profile, EV math, credibility, seating, round robin, crown
+- `@vk/core/council.ts` — value profile, EV math, credibility, seating, pairings, crown
 - `@vk/debate/proposer.ts` — `ProposalAgent`, `ScriptedProposer`, `LlmProposer`, tolerant JSON parsing
 - `@vk/replay/council-runner.ts` — `runCouncil` orchestrator with `onProposal / onBoutStart / onExchange / onBout` hooks
 - Tests for all of the above
 - Fighter growth: every genius keeps a career (XP, levels, lessons, individual log) that only ever grows — see [GROWTH.md](GROWTH.md)
+- Bout budget: `pairCouncil` + `CouncilConfig.pairing` — full round robin by default; Swiss even-coverage + `boutCap` so council mode can stop short of 21 bouts
 
 ## Next
 
 1. Game UI: council setup screen (problem, mode, value weights), bracket view, EV leaderboard that moves as bouts resolve.
 2. Live wiring: `LlmProposer` + `LlmAgent` + judge ensemble through the existing OpenAI client.
-3. Bout budget: council mode is 21 bouts — add a cap / Swiss pairing option.
-4. Proposal-aware judge: rebuttals that target a specific outcome's probability should hit that outcome's credibility, not the whole position.
-5. Synthesis finisher: the champion's closing argument must absorb the strongest dissent (feeds `resolveProblemOutcome`).
+3. Proposal-aware judge: rebuttals that target a specific outcome's probability should hit that outcome's credibility, not the whole position.
+4. Synthesis finisher: the champion's closing argument must absorb the strongest dissent (feeds `resolveProblemOutcome`).

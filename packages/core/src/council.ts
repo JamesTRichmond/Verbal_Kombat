@@ -258,6 +258,68 @@ export function roundRobin<T>(seats: T[]): [T, T][] {
   return pairs;
 }
 
+export type PairingScheme = 'round-robin' | 'swiss';
+
+export interface PairingOptions {
+  /** Default: full round robin. */
+  scheme?: PairingScheme;
+  /** Hard cap on how many bouts to schedule. Ignored when larger than C(n,2). */
+  boutCap?: number;
+}
+
+/**
+ * Schedule bouts for a seated council.
+ *
+ * Round-robin is the default and stays complete unless `boutCap` trims it.
+ * Swiss is a greedy even-coverage schedule: always pair the two unused
+ * opponents who currently have the fewest bouts so a 7-seat council can
+ * stop at ~7–10 fights instead of 21. Pairing is decided up front (no
+ * mid-tournament re-seed from scores) so resume IDs stay stable.
+ */
+export function pairCouncil<T>(seats: T[], opts: PairingOptions = {}): [T, T][] {
+  const all = roundRobin(seats);
+  const cap = opts.boutCap ?? all.length;
+  const limit = Math.max(0, Math.min(cap, all.length));
+  if ((opts.scheme ?? 'round-robin') === 'round-robin') return all.slice(0, limit);
+  return swissSchedule(seats, limit);
+}
+
+function swissSchedule<T>(seats: T[], cap: number): [T, T][] {
+  const counts = seats.map(() => 0);
+  const used = new Set<string>();
+  const key = (i: number, j: number) => `${i}-${j}`;
+  const out: [T, T][] = [];
+  while (out.length < cap) {
+    let bestI = -1;
+    let bestJ = -1;
+    let bestSum = Infinity;
+    let bestMin = Infinity;
+    for (let i = 0; i < seats.length; i++) {
+      for (let j = i + 1; j < seats.length; j++) {
+        if (used.has(key(i, j))) continue;
+        const sum = counts[i]! + counts[j]!;
+        const mn = Math.min(counts[i]!, counts[j]!);
+        const better =
+          sum < bestSum ||
+          (sum === bestSum && mn < bestMin) ||
+          (sum === bestSum && mn === bestMin && (bestI < 0 || i < bestI || (i === bestI && j < bestJ)));
+        if (better) {
+          bestSum = sum;
+          bestMin = mn;
+          bestI = i;
+          bestJ = j;
+        }
+      }
+    }
+    if (bestI < 0) break;
+    used.add(key(bestI, bestJ));
+    counts[bestI]!++;
+    counts[bestJ]!++;
+    out.push([seats[bestI]!, seats[bestJ]!]);
+  }
+  return out;
+}
+
 /* ------------------------------------------------------------------ */
 /* The crown                                                           */
 /* ------------------------------------------------------------------ */
