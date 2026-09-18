@@ -175,6 +175,18 @@ export async function runCouncil(
               },
             }
           : {}),
+        proposalOutcomes: {
+          A: pa.outcomes.map(formatOutcomeForContext),
+          B: pb.outcomes.map(formatOutcomeForContext),
+        },
+        opposingOutcomes: {
+          A: pb.outcomes.map(formatOutcomeForContext),
+          B: pa.outcomes.map(formatOutcomeForContext),
+        },
+        judgeOpposingOutcomes: {
+          A: pb.outcomes.map((o) => o.description),
+          B: pa.outcomes.map((o) => o.description),
+        },
         onExchange: (ex) => opts.onExchange?.(id, ex),
       },
     );
@@ -195,4 +207,8 @@ export async function runCouncil(
   }
 
   return { seats, proposals, bouts, verdict: crownCouncil(proposals, config.profile, records) };
+}
+
+function formatOutcomeForContext(outcome: Proposal['outcomes'][number], index: number): string {
+  return `${index + 1}. ${outcome.description} (p=${Math.max(0, Math.min(1, outcome.probability)).toFixed(2)})`;
 }

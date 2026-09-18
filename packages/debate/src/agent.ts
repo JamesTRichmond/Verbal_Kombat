@@ -18,6 +18,12 @@ export interface DebateContext {
   matchId: string;
   topic: string;
   stance: string;
+  /** The opposing position, supplied separately so it is not mistaken for the stance to defend. */
+  opposingStance?: string;
+  /** The predicted outcomes of the proposal this fighter is defending. */
+  proposalOutcomes?: string[];
+  /** The predicted outcomes of the opposing proposal, for explicit rebuttal targeting. */
+  opposingOutcomes?: string[];
   side: Side;
   /** Present when the caller carries archetypes (LlmAgent requires it). */
   archetype?: FighterArchetype;

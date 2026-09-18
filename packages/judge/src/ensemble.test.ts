@@ -29,6 +29,35 @@ function stub(kind: string, verdict: Partial<JudgeVerdict>): Judge {
 }
 
 describe('mergeVerdicts', () => {
+  it('returns unclear for an empty panel', () => {
+    expect(mergeVerdicts('a1', 'A', []).rebuttalDirection).toBe('unclear');
+  });
+
+  it.each<{
+    directions: JudgeVerdict['rebuttalDirection'][];
+    expected: JudgeVerdict['rebuttalDirection'];
+  }>([
+    { directions: ['supports'], expected: 'supports' },
+    { directions: ['challenges'], expected: 'challenges' },
+    { directions: ['supports', 'supports', 'challenges'], expected: 'supports' },
+    { directions: ['challenges', 'challenges', 'supports'], expected: 'challenges' },
+    { directions: ['supports', 'supports', undefined], expected: 'supports' },
+    { directions: ['challenges', 'challenges', 'unclear'], expected: 'challenges' },
+    { directions: ['supports', 'challenges'], expected: 'unclear' },
+    { directions: ['supports', 'unclear'], expected: 'unclear' },
+    { directions: ['challenges', undefined], expected: 'unclear' },
+    { directions: ['supports', 'unclear', undefined], expected: 'unclear' },
+    { directions: [undefined, undefined], expected: 'unclear' },
+    { directions: ['unclear', 'unclear'], expected: 'unclear' },
+  ])('requires a full-panel majority: $directions -> $expected', async ({ directions, expected }) => {
+    const utterance = arg('There is no way to prevent the fine risk.');
+    const verdicts = await Promise.all(directions.map((direction) => stub('judge', {
+      rebuttalForce: 0.8,
+      ...(direction === undefined ? {} : { rebuttalDirection: direction }),
+    }).evaluate(utterance, [])));
+    expect(mergeVerdicts(utterance.id, utterance.side, verdicts).rebuttalDirection).toBe(expected);
+  });
+
   it('averages scores and majority-votes fallacies', () => {
     const a: JudgeVerdict = {
       argumentId: 'a1',
@@ -58,6 +87,46 @@ describe('mergeVerdicts', () => {
     expect(merged.fallacies).toEqual(['ad_hominem']);
     expect(merged.fallacies).not.toContain('strawman');
   });
+
+  it('aggregates rebuttal targets independently per outcome', async () => {
+    const utterance = arg('The regulatory fine risk is real, but the burnout risk is implausible.');
+    const verdicts = await Promise.all([
+      stub('a', {
+        rebuttalTargets: [
+          { outcome: 'Regulatory fine risk', direction: 'supports' },
+          { outcome: 'Burnout risk', direction: 'challenges' },
+        ],
+      }).evaluate(utterance, []),
+      stub('b', {
+        rebuttalTargets: [
+          { outcome: 'Regulatory fine risk', direction: 'supports' },
+          { outcome: 'Burnout risk', direction: 'challenges' },
+        ],
+      }).evaluate(utterance, []),
+      stub('c', {
+        rebuttalTargets: [
+          { outcome: 'Regulatory fine risk', direction: 'challenges' },
+          { outcome: 'Third sibling risk', direction: 'supports' },
+        ],
+      }).evaluate(utterance, []),
+    ]);
+    expect(mergeVerdicts(utterance.id, utterance.side, verdicts).rebuttalTargets).toEqual([
+      { outcome: 'Burnout risk', direction: 'challenges' },
+      { outcome: 'Regulatory fine risk', direction: 'supports' },
+    ]);
+  });
+
+  it('returns unclear for a targeted outcome when judges mention it without a directional majority', async () => {
+    const utterance = arg('The regulatory fine risk is real, but maybe not.');
+    const verdicts = await Promise.all([
+      stub('a', { rebuttalTargets: [{ outcome: 'Regulatory fine risk', direction: 'supports' }] }).evaluate(utterance, []),
+      stub('b', { rebuttalTargets: [{ outcome: 'Regulatory fine risk', direction: 'challenges' }] }).evaluate(utterance, []),
+      stub('c', { rebuttalTargets: [{ outcome: 'Regulatory fine risk', direction: 'unclear' }] }).evaluate(utterance, []),
+    ]);
+    expect(mergeVerdicts(utterance.id, utterance.side, verdicts).rebuttalTargets).toEqual([
+      { outcome: 'Regulatory fine risk', direction: 'unclear' },
+    ]);
+  });
 });
 
 describe('EnsembleJudge', () => {
@@ -82,5 +151,15 @@ describe('EnsembleJudge', () => {
     ]);
     const v = await panel.evaluate(arg('Anything at all.'), []);
     expect(v.fallacies).toEqual([]);
+  });
+
+  it('preserves consensus direction through evaluation', async () => {
+    const panel = new EnsembleJudge([
+      stub('a', { rebuttalDirection: 'supports' }),
+      stub('b', { rebuttalDirection: 'supports' }),
+      stub('c', { rebuttalDirection: 'challenges' }),
+    ]);
+    const v = await panel.evaluate(arg('There is no way to prevent the fine risk.'), []);
+    expect(v.rebuttalDirection).toBe('supports');
   });
 });

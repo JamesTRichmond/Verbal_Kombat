@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { OWNER_DRAFT_PROFILE, getGenius, type Proposal } from '@vk/core';
+import { OWNER_DRAFT_PROFILE, getGenius, type ArgumentEvent, type Proposal, type RebuttalTarget } from '@vk/core';
 import { ScriptedProposer, type DebateAgent } from '@vk/debate';
-import { HeuristicJudge } from '@vk/judge';
+import { EnsembleJudge, HeuristicJudge, type Judge } from '@vk/judge';
 import { MemoryFighterStore } from '@vk/replay';
 import { decisionRecord, renderDecisionMarkdown, runDecision, STATUS_QUO_SEAT } from './decision.js';
 
@@ -41,6 +41,7 @@ function debater(_seat: unknown, proposal: Proposal): DebateAgent {
 }
 
 const seats = ['socrates', 'marie-curie', 'siddhartha-gautama'].map(getGenius);
+type TargetMap = Partial<Record<string, RebuttalTarget[]>>;
 
 function decide(extra: Partial<Parameters<typeof runDecision>[0]> = {}) {
   return runDecision({
@@ -104,6 +105,176 @@ describe('runDecision', () => {
     const primed = await decide({ credibilityPriors: { socrates: 0 }, priorWeight: 0.5 });
     expect(primed.credibility.socrates!).toBeLessThan(plain.credibility.socrates!);
     expect(primed.credibility['marie-curie']).toBe(plain.credibility['marie-curie']);
+  });
+
+  it('preserves per-outcome rebuttal discounts in decision standings', async () => {
+    const tuned: Record<string, Omit<Proposal, 'seat'>> = {
+      socrates: {
+        answer: 'Go all in on the moonshot.',
+        reasoning: 'High upside is worth concentration.',
+        outcomes: [
+          { description: 'Moonshot windfall', probability: 0.95, impacts: { income: 1, career: 1 } },
+          { description: 'Execution drag', probability: 0.3, impacts: { energy: -0.4 } },
+        ],
+      },
+      'marie-curie': {
+        answer: 'Run a measured pilot first.',
+        reasoning: 'Test and iterate from evidence.',
+        outcomes: [{ description: 'Steady measurable progress', probability: 0.7, impacts: { career: 0.6, income: 0.5, energy: 0.2 } }],
+      },
+      'siddhartha-gautama': {
+        answer: 'Slow down and preserve optionality.',
+        reasoning: 'Avoid reactive over-commitment.',
+        outcomes: [{ description: 'Calmer baseline', probability: 0.8, impacts: { energy: 0.7 } }],
+      },
+    };
+    const rebuttalDebater = (seat: unknown, proposal: Proposal): DebateAgent => {
+      const isCurie = (seat as { slug?: string }).slug === 'marie-curie';
+      const lines = isCurie
+        ? [
+            `My position: ${proposal.answer} Because pilot evidence beats speculation, this approach is sturdier.`,
+            'However, your premise on moonshot windfall is not supported by evidence from comparable launches.',
+          ]
+        : [
+            `My position: ${proposal.answer} Because the data from comparable cases shows this path holds up, therefore it is the sound choice.`,
+            `However, your premise ignores the evidence; therefore ${proposal.outcomes[0]?.description.toLowerCase()} is the likely result.`,
+          ];
+      let i = 0;
+      return { kind: 'test', nextArgument: async () => lines[i++] ?? null };
+    };
+    const r = await runDecision({
+      id: 'd2',
+      problem: PROBLEM,
+      profile: OWNER_DRAFT_PROFILE,
+      mode: 'quick',
+      seats,
+      proposer: new ScriptedProposer(tuned),
+      debater: rebuttalDebater,
+      judge: new HeuristicJudge(),
+    });
+    const councilCurie = r.council.verdict.standings.find((s) => s.seat === 'marie-curie')!;
+    const councilSocrates = r.council.verdict.standings.find((s) => s.seat === 'socrates')!;
+    const decisionCurie = r.standings.find((s) => s.seat === 'marie-curie')!;
+    const decisionSocrates = r.standings.find((s) => s.seat === 'socrates')!;
+    expect(councilSocrates.outcomes[0]!.credibility).toBeLessThan(councilSocrates.credibility);
+    expect(councilSocrates.outcomes[1]!.credibility).toBe(councilSocrates.credibility);
+    expect(decisionSocrates.outcomes.map((o) => o.credibility)).toEqual(
+      councilSocrates.outcomes.map((o) => o.credibility),
+    );
+    expect(councilCurie.calibratedEV > councilSocrates.calibratedEV).toBe(true);
+    expect(decisionCurie.calibratedEV > decisionSocrates.calibratedEV).toBe(true);
+    expect(r.champion.seat).toBe(r.council.verdict.champion.seat);
+  });
+
+  it('propagates mixed target directions through ensemble scoring and decision rankings', async () => {
+    const targetedProposals: Record<string, Omit<Proposal, 'seat'>> = {
+      socrates: {
+        answer: 'Take the moonshot despite the risks.',
+        reasoning: 'The upside is worth concentrated execution.',
+        outcomes: [
+          { description: 'Regulatory fine risk', probability: 0.6, impacts: { income: -1 } },
+          { description: 'Burnout risk', probability: 0.7, impacts: { energy: -1 } },
+          { description: 'Moonshot windfall', probability: 0.4, impacts: { income: 0.8, career: 0.8 } },
+        ],
+      },
+      'marie-curie': {
+        answer: 'Pilot the idea instead of going all in.',
+        reasoning: 'Run the experiment first.',
+        outcomes: [{ description: 'Steady measurable progress', probability: 0.7, impacts: { career: 0.6, income: 0.5, energy: 0.2 } }],
+      },
+      'siddhartha-gautama': proposals['siddhartha-gautama']!,
+    };
+    const rebuttalDebater = (seat: unknown, proposal: Proposal): DebateAgent => {
+      const slug = (seat as { slug?: string }).slug;
+      const lines = slug === 'marie-curie'
+        ? [
+            `My position: ${proposal.answer} Because pilot evidence beats speculation, this approach is sturdier.`,
+            'The regulatory fine risk is real, but the burnout risk is implausible.',
+          ]
+        : [
+            `My position: ${proposal.answer} Because the data from comparable cases shows this path holds up, therefore it is the sound choice.`,
+            `However, your premise ignores the evidence; therefore ${proposal.outcomes[0]?.description.toLowerCase()} is the likely result.`,
+          ];
+      let i = 0;
+      return { kind: 'test', nextArgument: async () => lines[i++] ?? null };
+    };
+    const targetedJudge = (targets: TargetMap): Judge => ({
+      kind: 'targeted',
+      async evaluate(argument: ArgumentEvent) {
+        return {
+          argumentId: argument.id,
+          side: argument.side,
+          soundness: 0.8,
+          relevance: 0.8,
+          evidence: 0.7,
+          structure: 0.7,
+          fallacies: [],
+          rebuttalForce: argument.text.includes('risk is real') ? 0.8 : 0,
+          rebuttalDirection: 'unclear',
+          rebuttalTargets: targets[argument.text] ?? [],
+          rationale: argument.text,
+        };
+      },
+    });
+    const mixedText = 'The regulatory fine risk is real, but the burnout risk is implausible.';
+    const plain = await runDecision({
+      id: 'd3-plain',
+      problem: PROBLEM,
+      profile: OWNER_DRAFT_PROFILE,
+      mode: 'quick',
+      seats,
+      proposer: new ScriptedProposer(targetedProposals),
+      debater: rebuttalDebater,
+      judge: new EnsembleJudge([
+        targetedJudge({}),
+        targetedJudge({}),
+        targetedJudge({}),
+      ]),
+    });
+    const targeted = await runDecision({
+      id: 'd3-targeted',
+      problem: PROBLEM,
+      profile: OWNER_DRAFT_PROFILE,
+      mode: 'quick',
+      seats,
+      proposer: new ScriptedProposer(targetedProposals),
+      debater: rebuttalDebater,
+      judge: new EnsembleJudge([
+        targetedJudge({
+          [mixedText]: [
+            { outcome: 'Regulatory fine risk', direction: 'supports' },
+            { outcome: 'Burnout risk', direction: 'challenges' },
+          ],
+        }),
+        targetedJudge({
+          [mixedText]: [
+            { outcome: 'Regulatory fine risk', direction: 'supports' },
+            { outcome: 'Burnout risk', direction: 'challenges' },
+          ],
+        }),
+        targetedJudge({
+          [mixedText]: [
+            { outcome: 'Regulatory fine risk', direction: 'unclear' },
+            { outcome: 'Moonshot windfall', direction: 'supports' },
+          ],
+        }),
+      ]),
+    });
+    const plainSocrates = plain.standings.find((s) => s.seat === 'socrates')!;
+    const targetedSocrates = targeted.standings.find((s) => s.seat === 'socrates')!;
+    const finePlain = plainSocrates.outcomes[0]!;
+    const burnoutPlain = plainSocrates.outcomes[1]!;
+    const siblingPlain = plainSocrates.outcomes[2]!;
+    const fineTargeted = targetedSocrates.outcomes[0]!;
+    const burnoutTargeted = targetedSocrates.outcomes[1]!;
+    const siblingTargeted = targetedSocrates.outcomes[2]!;
+    expect(fineTargeted.riskSupport).toBeGreaterThan(0);
+    expect(fineTargeted.calibratedProbability * fineTargeted.calibratedMatters)
+      .toBeLessThan(finePlain.calibratedProbability * finePlain.calibratedMatters);
+    expect(burnoutTargeted.credibility).toBeLessThan(burnoutPlain.credibility);
+    expect(burnoutTargeted.calibratedProbability * burnoutTargeted.calibratedMatters)
+      .toBeGreaterThan(burnoutPlain.calibratedProbability * burnoutPlain.calibratedMatters);
+    expect(siblingTargeted).toEqual(siblingPlain);
   });
 
   it('produces a JSON-serializable record and a markdown report', async () => {

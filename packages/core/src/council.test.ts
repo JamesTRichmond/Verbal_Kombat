@@ -7,22 +7,51 @@ import {
   farthestWing,
   geniusArchetype,
   mattersScore,
+  outcomeCredibilitiesFrom,
+  outcomeTokens,
   roundRobin,
   scoreProposal,
   seatCouncil,
   OWNER_DRAFT_PROFILE,
   type MatchReplay,
   type Proposal,
+  type TranscriptEntry,
 } from './index.js';
 
-function replay(intA: number, intB: number, fallA = 0): MatchReplay {
+function replay(intA: number, intB: number, fallA = 0, entries: TranscriptEntry[] = []): MatchReplay {
   const stat = (f: number) => ({ arguments: 4, cleanHits: 2, fallacies: f, avgSoundness: 0.7, totalDamageDealt: 20 });
   return {
     config: { id: 'r', topic: 't', stances: { A: 'a', B: 'b' }, fighters: { A: 'x', B: 'y' }, mode: 'problem' },
-    entries: [],
+    entries,
     ...(intA !== intB ? { winner: intA > intB ? ('A' as const) : ('B' as const) } : {}),
     finalIntegrity: { A: intA, B: intB },
     stats: { A: stat(fallA), B: stat(0) },
+  };
+}
+
+function hit(
+  text: string,
+  force: number,
+  fallacies: TranscriptEntry['verdict']['fallacies'] = [],
+  rebuttalDirection?: TranscriptEntry['verdict']['rebuttalDirection'],
+  rebuttalTargets?: TranscriptEntry['verdict']['rebuttalTargets'],
+): TranscriptEntry {
+  return {
+    argument: { id: 'u1', matchId: 'r', side: 'B', text, seq: 1, t: 1 },
+    verdict: {
+      argumentId: 'u1',
+      side: 'B',
+      soundness: 0.8,
+      relevance: 0.8,
+      evidence: 0.7,
+      structure: 0.7,
+      fallacies,
+      rebuttalForce: force,
+      ...(rebuttalDirection ? { rebuttalDirection } : {}),
+      ...(rebuttalTargets ? { rebuttalTargets } : {}),
+      rationale: text,
+    },
+    combat: [],
   };
 }
 
@@ -109,5 +138,280 @@ describe('expected value for the owner', () => {
     expect(v.loudestClaim).toBe('bold');
     expect(v.champion.seat).toBe('sober');
     expect(v.fightsChangedTheAnswer).toBe(true);
+  });
+});
+
+describe('proposal-aware outcome credibility', () => {
+  const two: Proposal = {
+    seat: 's',
+    answer: 'ship both bets',
+    reasoning: '',
+    outcomes: [
+      { description: 'jackpot payout', probability: 0.9, impacts: { income: 1 } },
+      { description: 'steady stipend', probability: 0.6, impacts: { income: 0.4, energy: 0.5 } },
+    ],
+  };
+
+  it('tokenizes outcome descriptions without stopwords', () => {
+    expect(outcomeTokens('jackpot payout after that')).toEqual(['jackpot', 'payout']);
+  });
+
+  it('a clean rebuttal that names one outcome discounts only that outcome', () => {
+    const r = replay(70, 40, 0, [hit('the jackpot payout is a fantasy', 0.8)]);
+    const oc = outcomeCredibilitiesFrom(two, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(oc[0]).toBeLessThan(1);
+    expect(oc[1]).toBe(1);
+    const scored = scoreProposal(two, OWNER_DRAFT_PROFILE, 1, 0.2, oc);
+    expect(scored.outcomes[0]!.credibility).toBeLessThan(scored.outcomes[1]!.credibility);
+    expect(scored.outcomes[1]!.credibility).toBe(1);
+  });
+
+  it('does not match outcome tokens inside unrelated words', () => {
+    const p: Proposal = {
+      seat: 's',
+      answer: 'a',
+      reasoning: 'r',
+      outcomes: [{ description: 'steady gain', probability: 0.5, impacts: { income: 1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('I am against this plan', 0.9)]);
+    const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(oc).toEqual([1]);
+  });
+
+  it('clean warnings on harmful outcomes raise calibrated harm instead of softening it', () => {
+    const p: Proposal = {
+      seat: 's',
+      answer: 'a',
+      reasoning: 'r',
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.9, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the regulatory fine risk is very likely', 0.8)]);
+    const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
+    const plain = scoreProposal(p, OWNER_DRAFT_PROFILE, 0.2, 0.2, [1]);
+    const warned = scoreProposal(p, OWNER_DRAFT_PROFILE, 0.2, 0.2, oc);
+    expect(oc[0]).toBeGreaterThan(1);
+    expect(warned.outcomes[0]!.riskSupport).toBeGreaterThan(0);
+    expect(warned.calibratedEV).toBeLessThan(plain.calibratedEV);
+  });
+
+  it('keeps corroborated low-probability harms monotonic', () => {
+    const p: Proposal = {
+      seat: 's', answer: 'a', reasoning: 'r',
+      outcomes: [{ description: 'rare regulatory fine', probability: 0.05, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the rare regulatory fine is a genuine risk', 0.8, [], 'supports')]);
+    const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(scoreProposal(p, OWNER_DRAFT_PROFILE, 0.8, 0.2, oc).calibratedEV)
+      .toBeLessThan(scoreProposal(p, OWNER_DRAFT_PROFILE, 0.8, 0.2, [1]).calibratedEV);
+  });
+
+  it('uses the judge direction when a harmful outcome is explicitly challenged', () => {
+    const p: Proposal = {
+      seat: 's', answer: 'a', reasoning: 'r',
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.8, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the regulatory fine risk is real', 0.8, [], 'challenges')]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])[0]).toBeLessThan(1);
+  });
+
+  it('a challenge reduces rare harm without changing sibling outcomes', () => {
+    const profile = { ownerId: 'o', ownerName: 'Owner', criteria: [{ id: 'income', label: 'Income', weight: 1 }] };
+    const p: Proposal = {
+      ...two,
+      outcomes: [
+        { description: 'rare regulatory fine', probability: 0.05, impacts: { income: -1 } },
+        two.outcomes[1]!,
+      ],
+    };
+    const r = replay(70, 40, 0, [hit('the rare regulatory fine is implausible', 0.8, [], 'challenges')]);
+    const oc = outcomeCredibilitiesFrom(p, profile, [{ seat: 's', replay: r, side: 'A' }]);
+    const plain = scoreProposal(p, profile, 1);
+    const challenged = scoreProposal(p, profile, 1, 0.2, oc);
+    const outcome = challenged.outcomes[0]!;
+    expect(oc).toEqual([0.52, 1]);
+    expect(outcome.calibratedProbability * outcome.calibratedMatters).toBeCloseTo(-0.026);
+    expect(challenged.calibratedEV).toBeGreaterThan(plain.calibratedEV);
+    expect(challenged.outcomes[1]).toEqual(plain.outcomes[1]);
+  });
+
+  it('a challenge cannot increase a rare beneficial outcome below the skeptical prior', () => {
+    const profile = { ownerId: 'o', ownerName: 'Owner', criteria: [{ id: 'income', label: 'Income', weight: 1 }] };
+    const p: Proposal = {
+      ...two,
+      outcomes: [
+        { description: 'moonshot windfall', probability: 0.05, impacts: { income: 1 } },
+        two.outcomes[1]!,
+      ],
+    };
+    const plain = scoreProposal(p, profile, 1, 0.2, [1, 1]);
+    const challenged = scoreProposal(p, profile, 1, 0.2, [0.52, 1]);
+    expect(plain.outcomes[0]!.calibratedProbability * plain.outcomes[0]!.calibratedMatters).toBeCloseTo(0.05);
+    expect(challenged.outcomes[0]!.probabilityCapApplied).toBe(true);
+    expect(challenged.calibratedEV).toBeLessThan(plain.calibratedEV);
+    expect(challenged.outcomes[1]).toEqual(plain.outcomes[1]);
+  });
+
+  it('stronger challenges never increase harm across probabilities, priors, and seat credibility', () => {
+    for (const probability of [0, 0.05, 0.2, 0.8, 1]) {
+      const p: Proposal = {
+        ...two,
+        outcomes: [{ description: 'regulatory fine', probability, impacts: { income: -1 } }],
+      };
+      for (const prior of [0, 0.2, 0.5, 1]) {
+        for (const seatC of [0, 0.2, 0.8, 1]) {
+          let previous = scoreProposal(p, OWNER_DRAFT_PROFILE, seatC, prior);
+          for (const oc of [0.9, 0.52, 0.2, 0]) {
+            const challenged = scoreProposal(p, OWNER_DRAFT_PROFILE, seatC, prior, [oc]);
+            expect(challenged.calibratedEV).toBeGreaterThanOrEqual(previous.calibratedEV);
+            previous = challenged;
+          }
+        }
+      }
+    }
+  });
+
+  it('stronger challenges never increase beneficial EV across probabilities, priors, and seat credibility', () => {
+    for (const probability of [0, 0.05, 0.2, 0.8, 1]) {
+      const p: Proposal = {
+        ...two,
+        outcomes: [
+          { description: 'moonshot windfall', probability, impacts: { income: 1 } },
+          two.outcomes[1]!,
+        ],
+      };
+      for (const prior of [0, 0.2, 0.5, 1]) {
+        for (const seatC of [0, 0.2, 0.8, 1]) {
+          let previous = scoreProposal(p, OWNER_DRAFT_PROFILE, seatC, prior, [1, 1]);
+          for (const oc of [0.9, 0.52, 0.2, 0]) {
+            const challenged = scoreProposal(p, OWNER_DRAFT_PROFILE, seatC, prior, [oc, 1]);
+            expect(challenged.calibratedEV).toBeLessThanOrEqual(previous.calibratedEV);
+            expect(challenged.outcomes[1]).toEqual(previous.outcomes[1]);
+            previous = challenged;
+          }
+        }
+      }
+    }
+  });
+
+  it('does not use judge rationale to identify an outcome', () => {
+    const entry = hit('that is unsupported', 0.8, [], 'challenges');
+    entry.verdict.rationale = 'The jackpot payout is a fantasy';
+    const r = replay(70, 40, 0, [entry]);
+    expect(outcomeCredibilitiesFrom(two, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1, 1]);
+  });
+
+  it('uses only the utterance for legacy direction inference', () => {
+    const p: Proposal = {
+      ...two,
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.8, impacts: { income: -1 } }],
+    };
+    const entry = hit('the regulatory fine risk is real', 0.8);
+    entry.verdict.rationale = 'The regulatory fine risk is implausible';
+    const r = replay(70, 40, 0, [entry]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])[0]).toBeGreaterThan(1);
+  });
+
+  it.each([
+    [1, 'the regulatory fine risk is real'],
+    [-1, 'the regulatory fine risk is real'],
+    [-1, 'the regulatory fine risk is implausible'],
+  ])('leaves explicitly unclear outcomes unchanged (impact %s, %s)', (income, text) => {
+    const p: Proposal = {
+      ...two,
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.8, impacts: { income } }],
+    };
+    const r = replay(70, 40, 0, [hit(text, 0.8, [], 'unclear')]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1]);
+  });
+
+  it('keeps explicit unclear neutral even when structured targets are present but empty', () => {
+    const p: Proposal = {
+      ...two,
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.8, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the regulatory fine risk is real', 0.8, [], 'unclear', [])]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1]);
+  });
+
+  it('leaves an explicitly supported beneficial outcome undiscounted while challenges still cut it', () => {
+    const p: Proposal = {
+      ...two,
+      outcomes: [{ description: 'moonshot windfall', probability: 0.9, impacts: { income: 1 } }],
+    };
+    const support = replay(70, 40, 0, [hit('the moonshot windfall is likely', 0.8, [], 'supports')]);
+    const challenge = replay(70, 40, 0, [hit('the moonshot windfall is implausible', 0.8, [], 'challenges')]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: support, side: 'A' }])).toEqual([1]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: challenge, side: 'A' }])[0]).toBeLessThan(1);
+  });
+
+  it('clamps accumulated evidence once, independently of transcript and bout order', () => {
+    const p: Proposal = {
+      ...two,
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.8, impacts: { income: -1 } }],
+    };
+    const support = hit('the regulatory fine risk is real', 1, [], 'supports');
+    const challenge = hit('the regulatory fine risk is implausible', 1, [], 'challenges');
+    for (const entries of [[support, support, challenge], [support, challenge, support], [challenge, support, support]]) {
+      const together = [{ seat: 's', replay: replay(70, 40, 0, entries), side: 'A' as const }];
+      const separate = entries.map((entry) => ({ seat: 's', replay: replay(70, 40, 0, [entry]), side: 'A' as const }));
+      expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, together)[0]).toBeCloseTo(1.024);
+      expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, separate)[0]).toBeCloseTo(1.024);
+    }
+    const r = replay(70, 40, 0, [support, support]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([2]);
+  });
+
+  it('does not target sibling outcomes using only shared proposal vocabulary', () => {
+    const p: Proposal = {
+      seat: 's', answer: 'a', reasoning: 'r',
+      outcomes: [
+        { description: 'Contract converts to a full-time AI role', probability: 0.5, impacts: { career: 1 } },
+        { description: 'Contract ends with no follow-on', probability: 0.5, impacts: { income: -1 } },
+      ],
+    };
+    const r = replay(70, 40, 0, [hit('however, this contract premise is weak', 0.8)]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1, 1]);
+  });
+
+  it('clean rebuttals that dispute harmful outcomes cut their credibility instead of reinforcing them', () => {
+    const p: Proposal = {
+      seat: 's',
+      answer: 'a',
+      reasoning: 'r',
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.9, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the regulatory\nfine risk for this plan is implausible', 0.8)]);
+    const oc = outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(oc[0]).toBeLessThan(1);
+  });
+
+  it('fallacious swings at an outcome do not cut its credibility', () => {
+    const r = replay(70, 40, 0, [hit('jackpot payout is doomed', 0.9, ['ad_hominem'])]);
+    const oc = outcomeCredibilitiesFrom(two, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
+    expect(oc).toEqual([1, 1]);
+  });
+
+  it('tracks mixed directions independently per targeted outcome', () => {
+    const p: Proposal = {
+      seat: 's',
+      answer: 'a',
+      reasoning: 'r',
+      outcomes: [
+        { description: 'regulatory fine risk', probability: 0.8, impacts: { income: -1 } },
+        { description: 'burnout risk', probability: 0.7, impacts: { energy: -1 } },
+        { description: 'steady stipend', probability: 0.6, impacts: { income: 0.4, energy: 0.5 } },
+      ],
+    };
+    const r = replay(70, 40, 0, [hit(
+      'The regulatory fine risk is real, but the burnout risk is implausible.',
+      0.8,
+      [],
+      'unclear',
+      [
+        { outcome: 'regulatory fine risk', direction: 'supports' },
+        { outcome: 'burnout risk', direction: 'challenges' },
+      ],
+    )]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1.48, 0.52, 1]);
   });
 });

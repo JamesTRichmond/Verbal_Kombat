@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { OWNER_DRAFT_PROFILE, getGenius, type Proposal } from '@vk/core';
+import type { DebateContext } from '@vk/debate';
 import { ScriptedProposer, parseProposal, proposalSystemPrompt, type DebateAgent } from '@vk/debate';
+import type { Judge } from '@vk/judge';
 import { HeuristicJudge } from '@vk/judge';
 import { runCouncil } from './council-runner.js';
 
@@ -57,8 +59,66 @@ describe('runCouncil', () => {
     const evs = result.verdict.standings.map((s) => s.calibratedEV);
     expect([...evs].sort((a, b) => b - a)).toEqual(evs);
     expect(result.verdict.champion.seat).toBe(result.verdict.standings[0]!.seat);
-    // Fighters' stances are their own proposals.
     expect(result.bouts[0]!.replay.config.stances.A).toBe(proposals.socrates!.answer);
+  });
+
+  it('gives each debater the opposing proposal and outcomes as separate context', async () => {
+    const seats = ['socrates', 'marie-curie', 'siddhartha-gautama'].map(getGenius);
+    const contexts: DebateContext[] = [];
+    const observingDebater = (): DebateAgent => ({
+      kind: 'test',
+      nextArgument: async (ctx) => { contexts.push(ctx); return null; },
+    });
+    await runCouncil(
+      { id: 'context', problem: PROBLEM, profile: OWNER_DRAFT_PROFILE, mode: 'quick', seats },
+      { proposer: new ScriptedProposer(proposals), debater: observingDebater, judge: new HeuristicJudge() },
+    );
+    expect(contexts[0]!.stance).toContain(proposals.socrates!.answer);
+    expect(contexts[0]!.opposingStance).toBe(proposals['marie-curie']!.answer);
+    expect(contexts[0]!.proposalOutcomes).toEqual([
+      '1. Clear demo that lands interviews (p=0.50)',
+      '2. Scope creep delays everything (p=0.30)',
+    ]);
+    expect(contexts[0]!.opposingOutcomes).toEqual([
+      '1. Real signal from viewers (p=0.70)',
+      '2. Nobody looks (p=0.30)',
+    ]);
+  });
+
+  it('gives the judge the opposing outcomes for structured rebuttal targeting', async () => {
+    const seats = ['socrates', 'marie-curie', 'siddhartha-gautama'].map(getGenius);
+    const seen: (string[] | undefined)[] = [];
+    const judge: Judge = {
+      kind: 'spy',
+      async evaluate(argument) {
+        seen.push(argument.opposingOutcomes);
+        return {
+          argumentId: argument.id,
+          side: argument.side,
+          soundness: 0.7,
+          relevance: 0.7,
+          evidence: 0.6,
+          structure: 0.6,
+          fallacies: [],
+          rebuttalForce: 0,
+          rebuttalDirection: 'unclear',
+          rebuttalTargets: [],
+          rationale: 'ok',
+        };
+      },
+    };
+    await runCouncil(
+      { id: 'judge-context', problem: PROBLEM, profile: OWNER_DRAFT_PROFILE, mode: 'quick', seats },
+      { proposer: new ScriptedProposer(proposals), debater, judge },
+    );
+    expect(seen[0]).toEqual([
+      'Real signal from viewers',
+      'Nobody looks',
+    ]);
+    expect(seen[1]).toEqual([
+      'Clear demo that lands interviews',
+      'Scope creep delays everything',
+    ]);
   });
 });
 

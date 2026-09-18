@@ -11,6 +11,14 @@
 import type { FallacyId } from './fallacies.js';
 import type { Side } from './fighters.js';
 
+export type RebuttalDirection = 'supports' | 'challenges' | 'unclear';
+
+export interface RebuttalTarget {
+  /** Exact opposing outcome description when structured targeting is available. */
+  outcome: string;
+  direction: RebuttalDirection;
+}
+
 /** One utterance by one debater. Produced by the DebateEngine. */
 export interface ArgumentEvent {
   id: string;
@@ -24,6 +32,8 @@ export interface ArgumentEvent {
   t: number;
   /** If this utterance directly rebuts a prior argument, its id. */
   rebuts?: string;
+  /** Opposing proposal outcomes, when the judge should target them explicitly. */
+  opposingOutcomes?: string[];
 }
 
 /** The judge's structured evaluation of a single ArgumentEvent. */
@@ -42,6 +52,10 @@ export interface JudgeVerdict {
   fallacies: FallacyId[];
   /** If this successfully dismantles a prior argument, how decisively (0..1). */
   rebuttalForce: number;
+  /** Whether the rebuttal supports or challenges the opposing claim it addresses. */
+  rebuttalDirection?: RebuttalDirection;
+  /** Direction per targeted opposing outcome when the utterance names several outcomes. */
+  rebuttalTargets?: RebuttalTarget[];
   /** One-line explanation, shown in the annotated transcript. */
   rationale: string;
 }

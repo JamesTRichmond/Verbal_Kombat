@@ -11,6 +11,7 @@
 
 import {
   credibilityFrom,
+  outcomeCredibilitiesFrom,
   scoreProposal,
   type BoutRecord,
   type CouncilMode,
@@ -113,8 +114,11 @@ export async function runDecision(config: DecisionConfig): Promise<DecisionResul
   ]);
   const w = clamp01(config.priorWeight ?? 0.3);
   const credibility: Record<string, number> = {};
+  const recordsBySeat: Record<string, BoutRecord[]> = {};
   for (const p of council.proposals) {
-    const fought = credibilityFrom(records.filter((r) => r.seat === p.seat));
+    const mine = records.filter((r) => r.seat === p.seat);
+    recordsBySeat[p.seat] = mine;
+    const fought = credibilityFrom(mine);
     const prior = config.credibilityPriors?.[p.seat];
     credibility[p.seat] = prior === undefined ? fought : (1 - w) * fought + w * clamp01(prior);
   }
@@ -122,7 +126,7 @@ export async function runDecision(config: DecisionConfig): Promise<DecisionResul
   const statusQuo = config.statusQuo === undefined
     ? defaultStatusQuo()
     : { ...config.statusQuo, seat: STATUS_QUO_SEAT };
-  const standings = rank(council.proposals, config.profile, credibility);
+  const standings = rank(council.proposals, config.profile, credibility, recordsBySeat);
   const champion = standings[0]!;
   const baseline = scoreProposal(statusQuo, config.profile, STATUS_QUO_CREDIBILITY);
 
@@ -135,7 +139,7 @@ export async function runDecision(config: DecisionConfig): Promise<DecisionResul
           c.id === criterion.id ? { ...c, weight: c.weight * factor } : c,
         ),
       };
-      const top = rank(council.proposals, scaled, credibility)[0]!;
+      const top = rank(council.proposals, scaled, credibility, recordsBySeat)[0]!;
       const base = scoreProposal(statusQuo, scaled, STATUS_QUO_CREDIBILITY);
       sensitivity.push({
         criterionId: criterion.id,
@@ -164,10 +168,23 @@ export async function runDecision(config: DecisionConfig): Promise<DecisionResul
   };
 }
 
-function rank(proposals: Proposal[], profile: ValueProfile, credibility: Record<string, number>): ProposalScore[] {
+function rank(
+  proposals: Proposal[],
+  profile: ValueProfile,
+  credibility: Record<string, number>,
+  recordsBySeat: Record<string, BoutRecord[]>,
+): ProposalScore[] {
   // Stable sort keeps seating order on ties, so the result is deterministic.
   return proposals
-    .map((p) => scoreProposal(p, profile, credibility[p.seat] ?? STATUS_QUO_CREDIBILITY))
+    .map((p) =>
+      scoreProposal(
+        p,
+        profile,
+        credibility[p.seat] ?? STATUS_QUO_CREDIBILITY,
+        undefined,
+        outcomeCredibilitiesFrom(p, profile, recordsBySeat[p.seat] ?? []),
+      ),
+    )
     .sort((a, b) => b.calibratedEV - a.calibratedEV);
 }
 

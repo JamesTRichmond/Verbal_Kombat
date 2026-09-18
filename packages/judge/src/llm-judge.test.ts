@@ -32,17 +32,21 @@ describe('LlmJudge', () => {
         structure: 0.3,
         fallacies: ['ad_hominem'],
         rebuttalForce: 0,
+        rebuttalDirection: 'challenges',
+        rebuttalTargets: [{ outcome: 'moonshot windfall', direction: 'supports' }],
         rationale: 'Attacks the person, not the claim.',
       }),
     );
     const judge = new LlmJudge(client);
-    const v = await judge.evaluate(arg(), []);
+    const v = await judge.evaluate(arg({ opposingOutcomes: ['Moonshot windfall', 'Execution drag'] }), []);
     // A verdict carries no `kind` — that belongs to the Judge, not its output.
     expect((v as { kind?: unknown }).kind).toBeUndefined();
     expect(v.argumentId).toBe('a1');
     expect(v.side).toBe('A');
     expect(v.soundness).toBe(0.15);
     expect(v.fallacies).toEqual(['ad_hominem']);
+    expect(v.rebuttalDirection).toBe('challenges');
+    expect(v.rebuttalTargets).toEqual([{ outcome: 'Moonshot windfall', direction: 'supports' }]);
     expect(v.rationale).toContain('person');
   });
 
@@ -57,12 +61,57 @@ describe('LlmJudge', () => {
     expect(v.fallacies).toEqual(['ad_hominem']);
   });
 
+  it('drops unknown targets and defaults missing structured targeting to neutral when outcomes are provided', async () => {
+    const withTargets = new ScriptedClient(
+      JSON.stringify({
+        soundness: 0.6,
+        relevance: 0.7,
+        evidence: 0.4,
+        structure: 0.6,
+        fallacies: [],
+        rebuttalForce: 0.8,
+        rebuttalDirection: 'unclear',
+        rebuttalTargets: [
+          { outcome: 'regulatory fine risk', direction: 'supports' },
+          { outcome: 'made up risk', direction: 'challenges' },
+          { outcome: 'regulatory fine risk', direction: 'challenges' },
+        ],
+        rationale: 'Mixed rebuttal.',
+      }),
+    );
+    const judge = new LlmJudge(withTargets);
+    const targeted = await judge.evaluate(arg({
+      opposingOutcomes: ['Regulatory fine risk', 'Burnout risk'],
+    }), []);
+    expect(targeted.rebuttalTargets).toEqual([{ outcome: 'Regulatory fine risk', direction: 'unclear' }]);
+
+    const withoutTargets = new ScriptedClient(
+      JSON.stringify({
+        soundness: 0.6,
+        relevance: 0.7,
+        evidence: 0.4,
+        structure: 0.6,
+        fallacies: [],
+        rebuttalForce: 0.8,
+        rebuttalDirection: 'supports',
+        rationale: 'Concedes one point.',
+      }),
+    );
+    const untargeted = await new LlmJudge(withoutTargets).evaluate(arg({
+      opposingOutcomes: ['Regulatory fine risk', 'Burnout risk'],
+    }), []);
+    expect(untargeted.rebuttalDirection).toBe('supports');
+    expect(untargeted.rebuttalTargets).toEqual([]);
+  });
+
   it('returns neutral floor scores when the model output is not JSON', async () => {
     const client = new ScriptedClient('I refuse to score this.');
     const judge = new LlmJudge(client);
-    const v = await judge.evaluate(arg(), []);
+    const v = await judge.evaluate(arg({ opposingOutcomes: ['Regulatory fine risk'] }), []);
     expect(v.fallacies).toEqual([]);
     expect(v.soundness).toBe(0.4);
+    expect(v.rebuttalDirection).toBe('unclear');
+    expect(v.rebuttalTargets).toEqual([]);
     expect(v.rationale).toMatch(/unparseable/i);
   });
 
@@ -90,9 +139,13 @@ describe('LlmJudge', () => {
       t: 0,
     });
     const judge = new LlmJudge(client);
-    await judge.evaluate(arg({ text: 'Determinism does not entail the absence of agency.' }), [prior]);
+    await judge.evaluate(arg({
+      text: 'Determinism does not entail the absence of agency.',
+      opposingOutcomes: ['Regulatory fine risk', 'Burnout risk'],
+    }), [prior]);
     const user = captured.find((m) => m.role === 'user');
     expect(user?.content).toContain('Free will is an illusion');
     expect(user?.content).toContain('Determinism does not entail');
+    expect(user?.content).toContain('Regulatory fine risk');
   });
 });
