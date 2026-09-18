@@ -141,7 +141,7 @@ export class LlmJudge implements Judge {
           ? [
               '',
               'Opposing proposal outcomes that this utterance may rebut (copy exact strings in rebuttalTargets.outcome when used):',
-              ...arg.opposingOutcomes.map((outcome, i) => `${i + 1}. ${outcome}`),
+              ...arg.opposingOutcomes,
             ]
           : []),
         '',

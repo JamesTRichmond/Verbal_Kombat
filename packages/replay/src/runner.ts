@@ -44,8 +44,10 @@ export interface RunnerOptions {
   lessons?: Partial<Record<Side, string[]>>;
   /** Proposal outcomes, forwarded to agents without changing canonical stances. */
   proposalOutcomes?: Partial<Record<Side, string[]>>;
-  /** Opposing proposal outcomes, forwarded to judges for structured outcome targeting. */
+  /** Opposing proposal outcomes, forwarded to agents for explicit rebuttal context. */
   opposingOutcomes?: Partial<Record<Side, string[]>>;
+  /** Plain opposing outcome descriptions, forwarded to judges for structured targeting. */
+  judgeOpposingOutcomes?: Partial<Record<Side, string[]>>;
   onExchange?: (exchange: Exchange) => void | Promise<void>;
 }
 
@@ -96,7 +98,11 @@ export async function runMatch(
       text,
       seq,
       t: seq * turnMs,
-      ...(opts.opposingOutcomes?.[current] ? { opposingOutcomes: opts.opposingOutcomes[current] } : {}),
+      ...(opts.judgeOpposingOutcomes?.[current]
+        ? { opposingOutcomes: opts.judgeOpposingOutcomes[current] }
+        : opts.opposingOutcomes?.[current]
+          ? { opposingOutcomes: opts.opposingOutcomes[current] }
+          : {}),
     };
     history.push(argument);
 

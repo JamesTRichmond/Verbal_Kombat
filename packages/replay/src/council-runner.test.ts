@@ -112,12 +112,12 @@ describe('runCouncil', () => {
       { proposer: new ScriptedProposer(proposals), debater, judge },
     );
     expect(seen[0]).toEqual([
-      '1. Real signal from viewers (p=0.70)',
-      '2. Nobody looks (p=0.30)',
+      'Real signal from viewers',
+      'Nobody looks',
     ]);
     expect(seen[1]).toEqual([
-      '1. Clear demo that lands interviews (p=0.50)',
-      '2. Scope creep delays everything (p=0.30)',
+      'Clear demo that lands interviews',
+      'Scope creep delays everything',
     ]);
   });
 });

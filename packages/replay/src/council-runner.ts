@@ -183,6 +183,10 @@ export async function runCouncil(
           A: pb.outcomes.map(formatOutcomeForContext),
           B: pa.outcomes.map(formatOutcomeForContext),
         },
+        judgeOpposingOutcomes: {
+          A: pb.outcomes.map((o) => o.description),
+          B: pa.outcomes.map((o) => o.description),
+        },
         onExchange: (ex) => opts.onExchange?.(id, ex),
       },
     );
