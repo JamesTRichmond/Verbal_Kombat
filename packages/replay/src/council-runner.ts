@@ -175,6 +175,10 @@ export async function runCouncil(
               },
             }
           : {}),
+        opposingOutcomes: {
+          A: pb.outcomes.map((o) => o.description),
+          B: pa.outcomes.map((o) => o.description),
+        },
         onExchange: (ex) => opts.onExchange?.(id, ex),
       },
     );

@@ -233,7 +233,7 @@ export class CrownScreen implements Screen {
         g,
         o.riskSupport > 0
           ? `C_K=${c.toFixed(2)}  RISK SUPPORT=${o.riskSupport.toFixed(2)}  P'=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`
-          : o.matters < 0 && c < champ.credibility
+          : o.probabilityCapApplied
           ? `C_K=${c.toFixed(2)}  P'=MIN(OUTCOME,SEAT)=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`
           : `C_K=${c.toFixed(2)}  P'=${c.toFixed(2)}*${o.probability.toFixed(2)}+${(1 - c).toFixed(2)}*${SKEPTICAL_PRIOR}=${o.calibratedProbability.toFixed(2)}  M'=${o.calibratedMatters.toFixed(3)}`,
         x + 10,

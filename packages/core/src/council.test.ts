@@ -34,6 +34,7 @@ function hit(
   force: number,
   fallacies: TranscriptEntry['verdict']['fallacies'] = [],
   rebuttalDirection?: TranscriptEntry['verdict']['rebuttalDirection'],
+  rebuttalTargets?: TranscriptEntry['verdict']['rebuttalTargets'],
 ): TranscriptEntry {
   return {
     argument: { id: 'u1', matchId: 'r', side: 'B', text, seq: 1, t: 1 },
@@ -47,6 +48,7 @@ function hit(
       fallacies,
       rebuttalForce: force,
       ...(rebuttalDirection ? { rebuttalDirection } : {}),
+      ...(rebuttalTargets ? { rebuttalTargets } : {}),
       rationale: text,
     },
     combat: [],
@@ -232,6 +234,23 @@ describe('proposal-aware outcome credibility', () => {
     expect(challenged.outcomes[1]).toEqual(plain.outcomes[1]);
   });
 
+  it('a challenge cannot increase a rare beneficial outcome below the skeptical prior', () => {
+    const profile = { ownerId: 'o', ownerName: 'Owner', criteria: [{ id: 'income', label: 'Income', weight: 1 }] };
+    const p: Proposal = {
+      ...two,
+      outcomes: [
+        { description: 'moonshot windfall', probability: 0.05, impacts: { income: 1 } },
+        two.outcomes[1]!,
+      ],
+    };
+    const plain = scoreProposal(p, profile, 1, 0.2, [1, 1]);
+    const challenged = scoreProposal(p, profile, 1, 0.2, [0.52, 1]);
+    expect(plain.outcomes[0]!.calibratedProbability * plain.outcomes[0]!.calibratedMatters).toBeCloseTo(0.05);
+    expect(challenged.outcomes[0]!.probabilityCapApplied).toBe(true);
+    expect(challenged.calibratedEV).toBeLessThan(plain.calibratedEV);
+    expect(challenged.outcomes[1]).toEqual(plain.outcomes[1]);
+  });
+
   it('stronger challenges never increase harm across probabilities, priors, and seat credibility', () => {
     for (const probability of [0, 0.05, 0.2, 0.8, 1]) {
       const p: Proposal = {
@@ -244,6 +263,29 @@ describe('proposal-aware outcome credibility', () => {
           for (const oc of [0.9, 0.52, 0.2, 0]) {
             const challenged = scoreProposal(p, OWNER_DRAFT_PROFILE, seatC, prior, [oc]);
             expect(challenged.calibratedEV).toBeGreaterThanOrEqual(previous.calibratedEV);
+            previous = challenged;
+          }
+        }
+      }
+    }
+  });
+
+  it('stronger challenges never increase beneficial EV across probabilities, priors, and seat credibility', () => {
+    for (const probability of [0, 0.05, 0.2, 0.8, 1]) {
+      const p: Proposal = {
+        ...two,
+        outcomes: [
+          { description: 'moonshot windfall', probability, impacts: { income: 1 } },
+          two.outcomes[1]!,
+        ],
+      };
+      for (const prior of [0, 0.2, 0.5, 1]) {
+        for (const seatC of [0, 0.2, 0.8, 1]) {
+          let previous = scoreProposal(p, OWNER_DRAFT_PROFILE, seatC, prior, [1, 1]);
+          for (const oc of [0.9, 0.52, 0.2, 0]) {
+            const challenged = scoreProposal(p, OWNER_DRAFT_PROFILE, seatC, prior, [oc, 1]);
+            expect(challenged.calibratedEV).toBeLessThanOrEqual(previous.calibratedEV);
+            expect(challenged.outcomes[1]).toEqual(previous.outcomes[1]);
             previous = challenged;
           }
         }
@@ -280,6 +322,17 @@ describe('proposal-aware outcome credibility', () => {
     };
     const r = replay(70, 40, 0, [hit(text, 0.8, [], 'unclear')]);
     expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1]);
+  });
+
+  it('leaves an explicitly supported beneficial outcome undiscounted while challenges still cut it', () => {
+    const p: Proposal = {
+      ...two,
+      outcomes: [{ description: 'moonshot windfall', probability: 0.9, impacts: { income: 1 } }],
+    };
+    const support = replay(70, 40, 0, [hit('the moonshot windfall is likely', 0.8, [], 'supports')]);
+    const challenge = replay(70, 40, 0, [hit('the moonshot windfall is implausible', 0.8, [], 'challenges')]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: support, side: 'A' }])).toEqual([1]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: challenge, side: 'A' }])[0]).toBeLessThan(1);
   });
 
   it('clamps accumulated evidence once, independently of transcript and bout order', () => {
@@ -327,5 +380,29 @@ describe('proposal-aware outcome credibility', () => {
     const r = replay(70, 40, 0, [hit('jackpot payout is doomed', 0.9, ['ad_hominem'])]);
     const oc = outcomeCredibilitiesFrom(two, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }]);
     expect(oc).toEqual([1, 1]);
+  });
+
+  it('tracks mixed directions independently per targeted outcome', () => {
+    const p: Proposal = {
+      seat: 's',
+      answer: 'a',
+      reasoning: 'r',
+      outcomes: [
+        { description: 'regulatory fine risk', probability: 0.8, impacts: { income: -1 } },
+        { description: 'burnout risk', probability: 0.7, impacts: { energy: -1 } },
+        { description: 'steady stipend', probability: 0.6, impacts: { income: 0.4, energy: 0.5 } },
+      ],
+    };
+    const r = replay(70, 40, 0, [hit(
+      'The regulatory fine risk is real, but the burnout risk is implausible.',
+      0.8,
+      [],
+      'unclear',
+      [
+        { outcome: 'regulatory fine risk', direction: 'supports' },
+        { outcome: 'burnout risk', direction: 'challenges' },
+      ],
+    )]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1.48, 0.52, 1]);
   });
 });

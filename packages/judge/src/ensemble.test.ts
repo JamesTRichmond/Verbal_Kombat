@@ -87,6 +87,46 @@ describe('mergeVerdicts', () => {
     expect(merged.fallacies).toEqual(['ad_hominem']);
     expect(merged.fallacies).not.toContain('strawman');
   });
+
+  it('aggregates rebuttal targets independently per outcome', async () => {
+    const utterance = arg('The regulatory fine risk is real, but the burnout risk is implausible.');
+    const verdicts = await Promise.all([
+      stub('a', {
+        rebuttalTargets: [
+          { outcome: 'Regulatory fine risk', direction: 'supports' },
+          { outcome: 'Burnout risk', direction: 'challenges' },
+        ],
+      }).evaluate(utterance, []),
+      stub('b', {
+        rebuttalTargets: [
+          { outcome: 'Regulatory fine risk', direction: 'supports' },
+          { outcome: 'Burnout risk', direction: 'challenges' },
+        ],
+      }).evaluate(utterance, []),
+      stub('c', {
+        rebuttalTargets: [
+          { outcome: 'Regulatory fine risk', direction: 'challenges' },
+          { outcome: 'Third sibling risk', direction: 'supports' },
+        ],
+      }).evaluate(utterance, []),
+    ]);
+    expect(mergeVerdicts(utterance.id, utterance.side, verdicts).rebuttalTargets).toEqual([
+      { outcome: 'Burnout risk', direction: 'challenges' },
+      { outcome: 'Regulatory fine risk', direction: 'supports' },
+    ]);
+  });
+
+  it('returns unclear for a targeted outcome when judges mention it without a directional majority', async () => {
+    const utterance = arg('The regulatory fine risk is real, but maybe not.');
+    const verdicts = await Promise.all([
+      stub('a', { rebuttalTargets: [{ outcome: 'Regulatory fine risk', direction: 'supports' }] }).evaluate(utterance, []),
+      stub('b', { rebuttalTargets: [{ outcome: 'Regulatory fine risk', direction: 'challenges' }] }).evaluate(utterance, []),
+      stub('c', { rebuttalTargets: [{ outcome: 'Regulatory fine risk', direction: 'unclear' }] }).evaluate(utterance, []),
+    ]);
+    expect(mergeVerdicts(utterance.id, utterance.side, verdicts).rebuttalTargets).toEqual([
+      { outcome: 'Regulatory fine risk', direction: 'unclear' },
+    ]);
+  });
 });
 
 describe('EnsembleJudge', () => {

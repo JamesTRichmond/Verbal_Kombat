@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { OWNER_DRAFT_PROFILE, getGenius, type Proposal } from '@vk/core';
 import type { DebateContext } from '@vk/debate';
 import { ScriptedProposer, parseProposal, proposalSystemPrompt, type DebateAgent } from '@vk/debate';
+import type { Judge } from '@vk/judge';
 import { HeuristicJudge } from '@vk/judge';
 import { runCouncil } from './council-runner.js';
 
@@ -80,6 +81,36 @@ describe('runCouncil', () => {
     expect(contexts[0]!.stance).toContain(proposals.socrates!.answer);
     expect(contexts[0]!.opposingStance).toContain(proposals['marie-curie']!.answer);
     expect(contexts[0]!.opposingStance).toContain(proposals['marie-curie']!.outcomes[0]!.description);
+  });
+
+  it('gives the judge the opposing outcomes for structured rebuttal targeting', async () => {
+    const seats = ['socrates', 'marie-curie', 'siddhartha-gautama'].map(getGenius);
+    const seen: (string[] | undefined)[] = [];
+    const judge: Judge = {
+      kind: 'spy',
+      async evaluate(argument) {
+        seen.push(argument.opposingOutcomes);
+        return {
+          argumentId: argument.id,
+          side: argument.side,
+          soundness: 0.7,
+          relevance: 0.7,
+          evidence: 0.6,
+          structure: 0.6,
+          fallacies: [],
+          rebuttalForce: 0,
+          rebuttalDirection: 'unclear',
+          rebuttalTargets: [],
+          rationale: 'ok',
+        };
+      },
+    };
+    await runCouncil(
+      { id: 'judge-context', problem: PROBLEM, profile: OWNER_DRAFT_PROFILE, mode: 'quick', seats },
+      { proposer: new ScriptedProposer(proposals), debater, judge },
+    );
+    expect(seen[0]).toEqual(proposals['marie-curie']!.outcomes.map((o) => o.description));
+    expect(seen[1]).toEqual(proposals.socrates!.outcomes.map((o) => o.description));
   });
 });
 

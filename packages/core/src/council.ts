@@ -104,6 +104,8 @@ export interface ScoredOutcome extends ProposalOutcome {
   calibratedMatters: number;
   /** Seat credibility × targeted-rebuttal discount for this outcome. */
   credibility: number;
+  /** Whether a challenge hit the seat-only probability cap for this outcome. */
+  probabilityCapApplied: boolean;
   /** Extra corroborating evidence that pushes a harmful risk upward (0..1). */
   riskSupport: number;
 }
@@ -140,17 +142,19 @@ export function scoreProposal(
     const oc = clamp(outcomeCredibility?.[i] ?? 1, 0, 2);
     const riskSupport = m < 0 ? clamp(oc - 1, 0, 1) : 0;
     const c = clamp(seatC * Math.min(oc, 1), 0, 1);
+    const seatProbability = seatC * p + (1 - seatC) * skepticalPrior;
     const outcomeProbability = c * p + (1 - c) * skepticalPrior;
-    // Dismissing a harm must not raise its probability above the seat-only
-    // calibration when the claim is below the skeptical prior.
-    const baseProbability = m < 0 && oc < 1
-      ? Math.min(outcomeProbability, seatC * p + (1 - seatC) * skepticalPrior)
+    // Challenging an outcome must not raise its probability above the
+    // seat-only calibration when the claim is below the skeptical prior.
+    const baseProbability = oc < 1
+      ? Math.min(outcomeProbability, seatProbability)
       : outcomeProbability;
     const baseMatters = c * m;
     return {
       ...o,
       matters: m,
       credibility: c,
+      probabilityCapApplied: baseProbability < outcomeProbability,
       riskSupport,
       // Corroborated downside moves monotonically toward greater risk and
       // full stakes, even when the claimed p is below the skeptical prior.
@@ -239,18 +243,16 @@ export function outcomeCredibilitiesFrom(
         if (e.verdict.fallacies.length > 0) continue;
         const force = e.verdict.rebuttalForce;
         if (!(force > 0)) continue;
-        const transcript = e.argument.text;
-        const hay = outcomeTokens(transcript);
-        const hits = [...new Set(hay.filter((t) => tok.has(t)))];
-        // Shared proposal vocabulary (for example "contract") cannot identify
-        // an outcome by itself. Require a discriminating token or two matches.
-        if (!hits.some((t) => tokenFrequency.get(t) === 1) && hits.length < 2) continue;
         const hit = 0.6 * clamp(force, 0, 1);
-        if (e.verdict.rebuttalDirection === 'unclear') continue;
-        const direction = e.verdict.rebuttalDirection === 'supports' || e.verdict.rebuttalDirection === 'challenges'
-          ? e.verdict.rebuttalDirection
-          : challengesOutcome(transcript, tokens) ? 'challenges' : 'supports';
-        c *= harmful && direction === 'supports' ? 1 + hit : 1 - hit;
+        const direction = targetedDirectionForOutcome(
+          e.verdict,
+          o.description,
+          e.argument.text,
+          tok,
+          tokenFrequency,
+        );
+        if (!direction || direction === 'unclear') continue;
+        c *= credibilityFactor(harmful, direction, hit);
       }
     }
     return clamp(c, 0, 2);
@@ -384,6 +386,41 @@ export function crownCouncil(
 
 function clamp(x: number, lo: number, hi: number): number {
   return Number.isFinite(x) ? Math.min(hi, Math.max(lo, x)) : lo;
+}
+
+function credibilityFactor(harmful: boolean, direction: 'supports' | 'challenges', hit: number): number {
+  if (direction === 'supports') return harmful ? 1 + hit : 1;
+  return 1 - hit;
+}
+
+function targetedDirectionForOutcome(
+  verdict: MatchReplay['entries'][number]['verdict'],
+  outcomeDescription: string,
+  transcript: string,
+  tokens: Set<string>,
+  tokenFrequency: Map<string, number>,
+): 'supports' | 'challenges' | 'unclear' | undefined {
+  if (Array.isArray(verdict.rebuttalTargets)) {
+    return verdict.rebuttalTargets.find((target) => sameOutcomeTarget(target.outcome, outcomeDescription))?.direction;
+  }
+  const hay = outcomeTokens(transcript);
+  const hits = [...new Set(hay.filter((t) => tokens.has(t)))];
+  // Shared proposal vocabulary (for example "contract") cannot identify
+  // an outcome by itself. Require a discriminating token or two matches.
+  if (!hits.some((t) => tokenFrequency.get(t) === 1) && hits.length < 2) return undefined;
+  if (verdict.rebuttalDirection === 'unclear') return 'unclear';
+  if (verdict.rebuttalDirection === 'supports' || verdict.rebuttalDirection === 'challenges') {
+    return verdict.rebuttalDirection;
+  }
+  return challengesOutcome(transcript, [...tokens]) ? 'challenges' : 'supports';
+}
+
+function sameOutcomeTarget(left: string, right: string): boolean {
+  return normalizeOutcomeTarget(left) === normalizeOutcomeTarget(right);
+}
+
+function normalizeOutcomeTarget(text: string): string {
+  return text.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).join(' ');
 }
 
 function challengesOutcome(text: string, tokens: string[]): boolean {

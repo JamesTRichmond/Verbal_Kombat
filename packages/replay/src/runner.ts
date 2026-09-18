@@ -42,6 +42,8 @@ export interface RunnerOptions {
   archetypes?: Partial<Record<Side, FighterArchetype>>;
   /** Learned lessons per side, forwarded to agents (growth memory). */
   lessons?: Partial<Record<Side, string[]>>;
+  /** Opposing proposal outcomes, forwarded to judges for structured outcome targeting. */
+  opposingOutcomes?: Partial<Record<Side, string[]>>;
   onExchange?: (exchange: Exchange) => void | Promise<void>;
 }
 
@@ -90,6 +92,7 @@ export async function runMatch(
       text,
       seq,
       t: seq * turnMs,
+      ...(opts.opposingOutcomes?.[current] ? { opposingOutcomes: opts.opposingOutcomes[current] } : {}),
     };
     history.push(argument);
 

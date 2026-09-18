@@ -10,7 +10,13 @@
  * the same DebateScript and diff fallacies / soundness.
  */
 
-import type { ArgumentEvent, FallacyId, JudgeVerdict } from '@vk/core';
+import type {
+  ArgumentEvent,
+  FallacyId,
+  JudgeVerdict,
+  RebuttalDirection,
+  RebuttalTarget,
+} from '@vk/core';
 import type { ChatClient, ChatMessage } from '@vk/debate';
 import type { Judge } from './judge.js';
 
@@ -40,11 +46,13 @@ const SYSTEM_PROMPT = [
   'Evaluate a single debate utterance. Return ONLY a JSON object with these keys:',
   '  soundness (0..1), relevance (0..1), evidence (0..1), structure (0..1),',
   '  fallacies (array of fallacy ids), rebuttalForce (0..1),',
-  '  rebuttalDirection ("supports", "challenges", or "unclear"), rationale (one short sentence).',
+  '  rebuttalDirection ("supports", "challenges", or "unclear"),',
+  '  rebuttalTargets (array of { outcome, direction } using exact provided outcome strings when available), rationale (one short sentence).',
   `Allowed fallacy ids: ${FALLACY_IDS.join(', ')}.`,
   'Empty fallacies array means the argument is clean.',
   'rebuttalForce is high only when the utterance decisively dismantles a prior opposing claim.',
   'rebuttalDirection says whether the utterance supports or challenges the opposing claim it addresses.',
+  'rebuttalTargets records direction separately for each targeted opposing outcome; do not reuse one direction for every mentioned outcome.',
   'Do not invent fallacies. Prefer under-calling to over-calling.',
   'No markdown, no prose outside the JSON object.',
 ].join('\n');
@@ -65,6 +73,33 @@ function parseFallacies(raw: unknown): FallacyId[] {
     }
   }
   return out;
+}
+
+function parseDirection(raw: unknown): RebuttalDirection {
+  return raw === 'supports' || raw === 'challenges' || raw === 'unclear' ? raw : 'unclear';
+}
+
+function normalizeOutcomeKey(text: string): string {
+  return text.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).join(' ');
+}
+
+function parseRebuttalTargets(raw: unknown, candidates?: string[]): RebuttalTarget[] {
+  if (!Array.isArray(raw)) return [];
+  const allowed = new Map((candidates ?? []).map((candidate) => [normalizeOutcomeKey(candidate), candidate]));
+  const merged = new Map<string, RebuttalDirection>();
+  for (const item of raw) {
+    if (!item || typeof item !== 'object') continue;
+    const record = item as Record<string, unknown>;
+    if (typeof record.outcome !== 'string' || !record.outcome.trim()) continue;
+    const key = normalizeOutcomeKey(record.outcome);
+    if (!key) continue;
+    const outcome = allowed.size > 0 ? allowed.get(key) : record.outcome.trim();
+    if (!outcome) continue;
+    const direction = parseDirection(record.direction);
+    const previous = merged.get(outcome);
+    merged.set(outcome, previous && previous !== direction ? 'unclear' : direction);
+  }
+  return [...merged.entries()].map(([outcome, direction]) => ({ outcome, direction }));
 }
 
 function extractJsonObject(text: string): unknown {
@@ -102,6 +137,13 @@ export class LlmJudge implements Judge {
         '',
         `Current utterance to judge (side ${arg.side}):`,
         arg.text,
+        ...(arg.opposingOutcomes && arg.opposingOutcomes.length > 0
+          ? [
+              '',
+              'Opposing proposal outcomes that this utterance may rebut (copy exact strings in rebuttalTargets.outcome when used):',
+              ...arg.opposingOutcomes.map((outcome, i) => `${i + 1}. ${outcome}`),
+            ]
+          : []),
         '',
         'Respond with the JSON verdict only.',
       ].join('\n'),
@@ -129,11 +171,14 @@ export class LlmJudge implements Judge {
         structure: 0.3,
         fallacies: [],
         rebuttalForce: 0,
+        rebuttalDirection: 'unclear',
+        ...(arg.opposingOutcomes ? { rebuttalTargets: [] } : {}),
         rationale: 'Judge response unparseable; applied neutral floor scores.',
       };
     }
 
     const fallacies = parseFallacies(parsed.fallacies);
+    const rebuttalTargets = parseRebuttalTargets(parsed.rebuttalTargets, arg.opposingOutcomes);
     return {
       argumentId: arg.id,
       side: arg.side,
@@ -143,10 +188,8 @@ export class LlmJudge implements Judge {
       structure: clamp01(parsed.structure),
       fallacies,
       rebuttalForce: clamp01(parsed.rebuttalForce),
-      rebuttalDirection:
-        parsed.rebuttalDirection === 'supports' || parsed.rebuttalDirection === 'challenges'
-          ? parsed.rebuttalDirection
-          : 'unclear',
+      rebuttalDirection: parseDirection(parsed.rebuttalDirection),
+      ...(Array.isArray(parsed.rebuttalTargets) || arg.opposingOutcomes ? { rebuttalTargets } : {}),
       rationale:
         typeof parsed.rationale === 'string' && parsed.rationale.trim()
           ? parsed.rationale.trim().slice(0, 280)
