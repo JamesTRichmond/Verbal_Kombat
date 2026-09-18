@@ -401,7 +401,9 @@ function targetedDirectionForOutcome(
   tokenFrequency: Map<string, number>,
 ): 'supports' | 'challenges' | 'unclear' | undefined {
   if (Array.isArray(verdict.rebuttalTargets)) {
-    return verdict.rebuttalTargets.find((target) => sameOutcomeTarget(target.outcome, outcomeDescription))?.direction;
+    const match = verdict.rebuttalTargets.find((target) => sameOutcomeTarget(target.outcome, outcomeDescription));
+    if (match) return match.direction;
+    if (verdict.rebuttalDirection === 'unclear') return 'unclear';
   }
   const hay = outcomeTokens(transcript);
   const hits = [...new Set(hay.filter((t) => tokens.has(t)))];

@@ -324,6 +324,15 @@ describe('proposal-aware outcome credibility', () => {
     expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1]);
   });
 
+  it('keeps explicit unclear neutral even when structured targets are present but empty', () => {
+    const p: Proposal = {
+      ...two,
+      outcomes: [{ description: 'regulatory fine risk', probability: 0.8, impacts: { income: -1 } }],
+    };
+    const r = replay(70, 40, 0, [hit('the regulatory fine risk is real', 0.8, [], 'unclear', [])]);
+    expect(outcomeCredibilitiesFrom(p, OWNER_DRAFT_PROFILE, [{ seat: 's', replay: r, side: 'A' }])).toEqual([1]);
+  });
+
   it('leaves an explicitly supported beneficial outcome undiscounted while challenges still cut it', () => {
     const p: Proposal = {
       ...two,
