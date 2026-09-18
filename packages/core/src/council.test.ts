@@ -7,6 +7,7 @@ import {
   farthestWing,
   geniusArchetype,
   mattersScore,
+  pairCouncil,
   roundRobin,
   scoreProposal,
   seatCouncil,
@@ -67,6 +68,26 @@ describe('seating', () => {
 
   it('round robin pairs everyone once', () => {
     expect(roundRobin([1, 2, 3, 4, 5, 6, 7]).length).toBe(21);
+  });
+
+  it('boutCap trims a round robin without inventing rematches', () => {
+    const pairs = pairCouncil([1, 2, 3, 4, 5, 6, 7], { boutCap: 7 });
+    expect(pairs.length).toBe(7);
+    const keys = pairs.map(([a, b]) => `${a}-${b}`);
+    expect(new Set(keys).size).toBe(7);
+  });
+
+  it('swiss pairing spreads a 7-bout budget across every seat', () => {
+    const seats = [0, 1, 2, 3, 4, 5, 6];
+    const pairs = pairCouncil(seats, { scheme: 'swiss', boutCap: 7 });
+    expect(pairs.length).toBe(7);
+    const counts = seats.map(() => 0);
+    for (const [a, b] of pairs) {
+      counts[a]!++;
+      counts[b]!++;
+    }
+    expect(Math.min(...counts)).toBe(2);
+    expect(Math.max(...counts)).toBe(2);
   });
 });
 
